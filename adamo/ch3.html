@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>They&#x27;re On Our Side</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch2.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html" selected>They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+            </select>
+            <a href="ch4.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">They&#x27;re On Our Side</h1>
+    <div class="chapter-content">
+        <p>It had been over a week since Tali joined the Normandy. Even though she knew it was alright for her to go anywhere on the ship, she still preferred to spend most of her time in engineering. She enjoyed working on the Normandy&#x27;s engines and learning everything she could about them, even when she wasn&#x27;t on duty. She also greatly enjoyed that Shepard would come down to check up on her every day, and they&#x27;d spend time talking together. It seemed odd that Shepard spent so much time with her, but she didn&#x27;t care—she just enjoyed having a friend to chat with.</p>
+        <p>Tali told her a lot about the quarian people. She talked about their culture and history, and explained other things such as what the flotilla was like, why they go off on pilgrimages, and the strong bonds of family that form as a result of their lifestyles. Having grown up without a family of her own, Shepard enjoyed hearing about the bonds between quarians. They depended on each other for survival; they were all family, no matter what clan or ship they came from.</p>
+        <p>Despite the difficulties of their lives, Shepard couldn&#x27;t help but imagine that the typical quarian was likely happier, or at least more at peace, than members of other races. They had little, but what they did have, they truly valued and appreciated. Quarians just seemed like a special race in that regard.</p>
+        <p>She noticed there was a slight parallel between them and the krogan, who were another race that had suffered a major catastrophe which threatened their very survival. While the krogan had let the devastation of the genophage scatter and weaken them, the quarians had responded in the opposite way to their plight. They had become unified and bound together by their exile, refusing to just give up and die.</p>
+        <p>Something else Tali discussed were quarian immune systems. She explained how the sterile environment of the flotilla had severely weakened them. Back on their home world, quarian immune systems had developed to generally adapt to microbes rather than combat them, but living aboard sterile ships had ruined their immune system&#x27;s adaptability. In their current form, their immune system would likely have dangerous allergic reactions to foreign bacteria. It took them long periods of time to adjust to the presence of foreign microbial matter.</p>
+        <p>Tali&#x27;s family was another topic that got brought in their conversations. She eventually mentioned to Shepard that her father was an admiral—one of the highest positions of authority among the quarians. It was one of the reasons she had received particularly extensive military training before her pilgrimage, and it was also why she felt pressured to bring back a very special pilgrimage gift; expectations for her were high. Anything below excellence would be a major disappointment to her father, Rael. Shepard asked about her mother as well, but was sad to hear that she had died when Tali was only seventeen, due to a virus outbreak on the flotilla.</p>
+        <p>During their talks, specifically when Tali discussed her parents, she had hoped Shepard would bring up her own family and discuss her life growing up on Earth. She was curious about her upbringing. Unfortunately for her, she never brought up anything dealing with her childhood or even her life before joining the Alliance. Anything she said about herself, dealt with events during her military career. It was clear to her she didn&#x27;t want to discuss the details of her difficult life on Earth, so she avoided pressing her for information despite her curiosity.</p>
+        <p>So far, Tali had been having an enjoyable time on the Normandy, despite the initial doubt and feeling of alienation she had her first day. She had gotten familiar with many of the crewmembers, who were all typically polite and treated her well. And of course, she particularly enjoyed the time she spent with her new friend, Shepard. For the most part, Tali was happy on the Normandy.</p>
+        <p>Her only concerns were that she&#x27;d occasionally feel homesick, and the fact that she had a lot of difficulty going to sleep. The Normandy was extremely quiet, and sleeping in her assigned sleeper pod further drowned out the little noise the ship made. To a quarian, a quiet ship was terrifying—it typically meant that an air filter, or some other important life-support machine, had broken down. Twenty-two years of living aboard an ancient, rundown vessel had conditioned her to fall asleep to the loud, roaring sound of old machines in the distant background.</p>
+        <p>Tali was currently inside the Normandy&#x27;s elevator as it ascended to the upper part of the ship. After it reached the crew deck and she stepped out, she could overhear a conversation going on in the mess hall, which was right behind the elevator shaft.</p>
+        <p>&quot;Now that you mention it, I have noticed she&#x27;s been spending a lot of time down there,&quot; A voice said. Tali recognized it—it was the voice of Staff Lieutenant Kaidan Alenko.</p>
+        <p>&quot;I hope it&#x27;s to keep an eye on her. I don&#x27;t trust her,&quot; A second voice said. She recognized it too. It was the voice of Navigator Pressly; Shepard&#x27;s Executive Officer, the second-in-command aboard the Normandy.</p>
+        <p>Tali remembered seeing her next to the galaxy map of the CO&#x27;s station in the CIC, when she first came aboard. She remembered she was the one that gave her a particularly unsettling look of distrust; it was the same expression she had already seen several times during her pilgrimage.</p>
+        <p>Tali didn&#x27;t move far from the elevator. She just stepped to her left and stood close to the shaft as she listened to their conversation.</p>
+        <p>&quot;I really don&#x27;t see why you&#x27;re worried about her,&quot; Kaidan said, &quot;I&#x27;ve talked with her. She&#x27;s seems like a decent person. You really shouldn&#x27;t be so worried.&quot;</p>
+        <p>&quot;You know I don&#x27;t hate aliens. I just don&#x27;t trust having them onboard a prototype Alliance frigate like the Normandy—not the turian, not the krogan, not the asari we picked up a day ago, and especially not the quarian.&quot;</p>
+        <p>The way he said &#x27;quarian&#x27; gave Tali a sick feeling in her stomach. She sighed quietly and shook her head, feeling numb as her mind processed what she was hearing.</p>
+        <p>&quot;Wait, what&#x27;s so bad about quarians?&quot; Kaidan asked. &quot;Ever since the geth incident, they haven&#x27;t done anything wrong. They seem to just keep to themselves.&quot;</p>
+        <p>&quot;My problem is their reputation. They&#x27;ve been known to hack into systems and steal technology . How do we know she isn&#x27;t sending schematics of the Normandy&#x27;s tech back to her people? It&#x27;s classified Alliance information! What if she even steals some of our advanced components before leaving?&quot;</p>
+        <p>Ever since she left the flotilla, Tali had been well prepared to face hate and racism. She had been warned that most of the galaxy looked down on quarians, and that she should expect some racism against her. She was also warned not to act against it. It was better—and safer—if she ignored whatever she encountered. Tali had always followed the advice, never acting against the looks of distrust and the racist comments she had experienced since she started her pilgrimage, despite the temptation to do so. She just accepted it as a fact of life. But this time was different.</p>
+        <p>Perhaps it was because she felt empowered by the positive mood of everything going so well thus far on the Normandy, or maybe it was something as simple as being cranky from her lack of sleep. But hearing Pressly&#x27;s words made her feel livid. She wasn&#x27;t going to tolerate racism this time.</p>
+        <p>Tali stormed around the elevator shaft, from the side that led to the med-bay, and stood before the table in the mess hall. She saw Kaidan and Pressly sitting there by themselves.</p>
+        <p>&quot;Listen you bosh&#x27;tet, I am NOT a thief!&quot; She yelled out, pointing at Pressly. &quot;I&#x27;ve never once stolen anything! Nothing! And I don&#x27;t intend on stealing anything from the Normandy!&quot;</p>
+        <p>Kaidan and Pressly just looked at her, stunned at her sudden outburst. Tali continued her tirade, &quot;I&#x27;m sick of people like you treating us like this! Quarians are not thieves! We are not beggars! We are resourceful and we make do with what others throw away, but we DO NOT STEAL! And if you don&#x27;t believe me, then you can just go to hell!&quot;</p>
+        <p>There was a short period of silence. Pressly didn&#x27;t know what to say. Tali then turned around and quickly walked away, heading towards the elevator. She went back to the engineering deck.</p>
+        <p>Right afterwards, Shepard came out of her private quarters nearby and approached the mess hall, &quot;What the hell just happened? What was all that yelling?&quot;</p>
+        <p>Kaidan looked at Pressly, and waited for him to respond. As far as Kaidan was concerned, he had nothing to do with what just happened. Pressly hesitated, sighed, and said, &quot;I was conversing with Kaidan, and I simply expressed my concern about having a quarian down in engineering. Apparently she overheard, and… got upset.&quot;</p>
+        <p>&quot;Damn it, Pressly,&quot; Shepard said. &quot;We&#x27;ve been over this. I already told you, you don&#x27;t need to worry about her. She&#x27;s trustworthy.&quot; She sighed, shaking her head.</p>
+        <p>&quot;I apologize, Commander. It wasn&#x27;t my intention to cause an issue. I&#x27;m the XO, it&#x27;s my job to be concerned over what happens in the Normandy. But I didn&#x27;t mean to upset her.&quot;</p>
+        <p>&quot;Noted,&quot; Shepard said. &quot;Don&#x27;t worry about it. I&#x27;ll talk to her. Just make sure this doesn&#x27;t happen again. Not with her, or any of the other non-human crew members.&quot;</p>
+        <p>&quot;Understood, Commander,&quot; Pressly replied.</p>
+        <p>. . .</p>
+        <p>Down in engineering, Tali was standing in front of her work terminal, attempting to distract herself with some mundane maintenance and calibrations. Her anger was quickly fading, but it was being replaced with melancholy. Not just because she had once again observed racism against her people, but because she realized what she had done. She had shouted at an officer aboard the ship she was serving on. She insulted and verbally attacked the second-in-command of the ship. Discipline for her misconduct was inevitable.</p>
+        <p>&quot;Hey, Tali?&quot; Adams said, suddenly disrupting Tali&#x27;s thoughts. She felt a knot in her stomach—she knew Adams was going to bring up something about what had just happened. &quot;The Commander just messaged me. She wants you to go to her quarters. Said she needs to talk to you.&quot;</p>
+        <p>Oh Keelah. What have I done. She wants to see me in private? This is bad. Why did I have to lose my temper like that. Keelah… what if she wants me to leave?</p>
+        <p>&quot;Thank you, Adams. I, I&#x27;ll… see you later,&quot; She said quietly, and moved away from her terminal. She walked back to the elevator in an uneasy step.</p>
+        <p>The pace of her walking quickened as she moved past the mess hall, and she made sure not to look in its direction—she didn&#x27;t want a confrontation by Pressly. She didn&#x27;t even know if he was still there; she completely avoided looking at the table.</p>
+        <p>Tali was then standing before the door to Shepard&#x27;s quarters. Nervously, she held her hands together for a moment, before lifting quietly knocking.</p>
+        <p>&quot;Come in,&quot; was heard from the other side.</p>
+        <p>She opened the door, and took a deep breath as she stepped forward, continuing to hold her hands together as she walked into the quarters of her commanding officer. She kept her head tilted down slightly as she stepped inside. The door closed behind her.</p>
+        <p>Tali realized she had never been in here before, and took a quick second to scan the room. She noticed an alcove in the far end of it, which contained her bed, as well as a small desk. Near the center of the room was a round table with two chairs, and next to the door was another desk, which was where Shepard currently sat. She also noticed that her room was slightly noisier than other parts of the ship. It was clear why—the walled area to the left of the alcove obviously housed some of the Normandy&#x27;s systems.</p>
+        <p>&quot;Hi, Shepar—I mean… sir. Um, Adams said you wanted to speak to me…&quot; She muttered quietly; nervously.</p>
+        <p>&quot;Yes I do,&quot; Shepard said as she stood up, &quot;And I&#x27;m sure you know what it&#x27;s about,&quot; she added as she walked towards the round table near the center of her quarters, and sat down in one of the two chairs around it. She gestured with her hand for Tali to sit in the other one.</p>
+        <p>&quot;I&#x27;m so sorry,&quot; Tali preemptively apologized as she sat down on the other chair, which was about a quarter of the table away from Shepard. She rested her arms on her thighs after sitting down, and continued wringing her fingers. &quot;I shouldn&#x27;t have yelled at Pressly and insulted him like that. He&#x27;s an officer on this ship—it, it wasn&#x27;t my place to act like that. I… it won&#x27;t happen again. I promise.&quot;</p>
+        <p>Shepard thought about her words for a brief moment. Then, in a strangely upbeat tone, she said, &quot;I just realized something. I don&#x27;t know your age. How old are you, Tali?&quot;</p>
+        <p>My age? Keelah, she&#x27;s going to talk to me about maturity, &quot;I&#x27;m twenty-two… ma&#x27;am.&quot;</p>
+        <p>&quot;That seems about right,&quot; Shepard responded. Tali didn&#x27;t know if that was an insult or a compliment. &quot;That&#x27;s a good age. It&#x27;s how old I was when I fought in the Skyllian Blitz. I&#x27;m twenty-nine, by the way, in case you were wondering. The Blitz was seven years ago.&quot;</p>
+        <p>Tali suddenly realized that she knew about the event she was talking about. She remembered hearing about it when it happened. Even though she was there to likely be disciplined, she had to bring up that she knew about The Blitz, now that she made the connection.</p>
+        <p>&quot;Wait… I remember that. I saw it on a news vid. That was you wasn&#x27;t it?&quot; Tali asked. &quot;It hadn&#x27;t occurred to me. But you are the human that stopped that attack.&quot;</p>
+        <p>Shepard laughed quietly and asked, &quot;You heard about it at the time? On the flotilla?&quot;</p>
+        <p>&quot;The flotilla is always wary of pirates and slavers, since they attack us sometimes. They&#x27;re our biggest external threat. When that human colony got attacked by the biggest banding of pirates ever, and the entire attack failed thanks to one human, it was news even on the flotilla. I remember watching the news vid about it with my mother. I was fifteen at the time.&quot;</p>
+        <p>Tali paused for a moment, and then continued, &quot;I can&#x27;t believe that was you. It doesn&#x27;t surprise me at all, of course, but… it&#x27;s just so amazing you were able to do that.&quot;</p>
+        <p>&quot;Yeah. I guess it was,&quot; Shepard said, strangely lacking any real sense of pride. There was a long period of silence, and then she finally said, &quot;We can talk about that later. It&#x27;s not why I called you up,&quot; Shepard changed back to the original topic.</p>
+        <p>Tali gulped silently as the distraction of recalling Shepard&#x27;s past accomplishment faded, and she was suddenly reminded why she was there. She squeezed her hands together tightly, and nervously waited for Shepard to speak again.</p>
+        <p>&quot;I know Pressly said some negative things about quarians,&quot; Shepard said.</p>
+        <p>&quot;Yes… he said we were thieves. He said he was worried I would send back information about the Normandy to the flotilla,&quot; Tali said quietly. Her head was tilted down as she spoke.</p>
+        <p>&quot;And none of that is true, right?&quot;</p>
+        <p>&quot;Of course not!&quot; Tali immediately responded, looking up at her, &quot;We&#x27;re not thieves. I&#x27;m not a thief. I&#x27;ve never stolen anything. And I would never, ever steal anything from the Normandy, or you.&quot;</p>
+        <p>&quot;I know, Tali. I know you&#x27;re not a thief,&quot; Shepard said. &quot;And based on what you&#x27;ve told me about your people, I genuinely believe thievery is not part of your culture, either. There&#x27;s just a lot of misconceptions and misunderstanding.&quot;</p>
+        <p>&quot;Yes, that&#x27;s exactly right! Most people just don&#x27;t know how we quarians really are.&quot;</p>
+        <p>&quot;And there you go. The heart of the problem is ignorance. Racism is hatred born from ignorance. You cure the ignorance, and the hatred dies. The racism dies. Getting upset and yelling doesn&#x27;t help at all. It just makes it worse.&quot;</p>
+        <p>&quot;That&#x27;s… you&#x27;re right, ma&#x27;am. That&#x27;s very true.&quot;</p>
+        <p>There was a short moment of silence while Tali pondered her words.</p>
+        <p>&quot;Anyway, look, Tali. I&#x27;m not going to order either you or Pressly to apologize to the other. You two need to fix this on your own. If his assumptions about quarians are wrong, then talk to him and cure his ignorance about your people. I do not want this to happen again.&quot;</p>
+        <p>&quot;I… yes. I, understand.&quot; Tali responded in a somewhat somber tone. She didn&#x27;t like the idea of interacting with Pressly again, though she knew Shepard was right. &quot;I, I guess I can talk to him... I&#x27;ll try so this doesn&#x27;t happen again.&quot;</p>
+        <p>&quot;Come on, don&#x27;t give me that tone,&quot; Shepard said, now smiling. &quot;I know how you love to talk about your people. Hell, it&#x27;s all you talk about when I check up on you in engineering.&quot;</p>
+        <p>Her teasing made Tali feel a lot better. &quot;The flotilla has been my whole life until now. It&#x27;s all I really have to talk about,&quot; she admitted.</p>
+        <p>&quot;I know. And It&#x27;s okay. I enjoy hearing you talk,&quot; Shepard confessed, and quickly clarified, &quot;About your people, I mean.&quot;</p>
+        <p>Tali noticed her slipup, and though she wasn&#x27;t sure if it meant what she hoped it did, she still smiled under her mask. &quot;Thanks.&quot;</p>
+        <p>After a brief awkward silence, Tali said, &quot;So… I—this is what you wanted to talk to me about, right? We&#x27;re, uh, done?&quot;</p>
+        <p>&quot;Yes, I suppose we are. You can leave. If you want to.&quot;</p>
+        <p>&quot;Do you… um, want me to go?&quot; Tali asked, and found herself hoping to hear her say no. She really liked the idea of staying in Shepard&#x27;s private quarters and spending time with her, talking.</p>
+        <p>Shepard smiled at her, and answered in a quiet, tender voice, &quot;No, not really. Why don&#x27;t you stay for a while and tell me some more about the flotilla?&quot;</p>
+        <p>&quot;Oh… Yes. Alright. I&#x27;ll do that,&quot; Tali responded. She tried not to show it, but it was obvious she was glad to hear her request.</p>
+        <p>She was once again wringing her hands together, but this time it was for a far different, and happier, reason.</p>
+        <p>. . .</p>
+        <p>Hours had passed since the incident between Tali and Pressly. After spending a while talking with Shepard in her quarters, Tali had decided to go and talk to Pressly so as to resolve the issue, like Shepard wanted. As she walked up the stairs that led to the CIC to find Pressly, she realized she was doing this more to please Shepard than to actually resolve the issue.</p>
+        <p>She finally reached the top of the stairs, and stepped into the CIC. She saw Pressly working on his terminal near the galaxy map.</p>
+        <p>&quot;Pressly? Do you have a moment?&quot; Tali asked as she approached him.</p>
+        <p>Pressly looked up from his terminal and turned to look at her. After a short hesitation he sighed and said, &quot;Yes. Look, I&#x27;m sorry about what I said earlier. I didn&#x27;t mean to upset you.&quot;</p>
+        <p>&quot;I apologize too… for yelling at you and insulting you. But I didn&#x27;t come here to look for an apology,&quot; Tali paused for a second before continuing, &quot;I, I just want you to understand. About me… about quarians.&quot;</p>
+        <p>Tali thought for a moment, and after taking in a deep breath she began her explanation.</p>
+        <p>&quot;Our lives aren&#x27;t easy. We&#x27;re forced to live on a flotilla of ships; many of which are very old. Ever since we were exiled by the geth three hundred years ago, we&#x27;ve been close to extinction, with no one to help us. We spend our entire lives just a hull breach away from death. The fleet is always in need of resources and materials to keep our ships running. It&#x27;s why our pilgrimages are so important. Do you know about our pilgrimages?&quot;</p>
+        <p>&quot;No, I don&#x27;t,&quot; Pressly hesitantly admitted.</p>
+        <p>&quot;It&#x27;s a rite of passage. We&#x27;re sent out on our own into the galaxy, to find something of value to bring back to the fleet. I&#x27;m on my pilgrimage right now, in fact. And just like all other quarians before me, I&#x27;m looking for something to help my people—my family.&quot;</p>
+        <p>Tali paused to gather her thoughts and continued.</p>
+        <p>&quot;And there&#x27;s something very important about our pilgrimage gifts that you should be aware of. They can&#x27;t be anything that caused harm to anyone for us to acquire. We&#x27;re not allowed to bring back anything that was stolen. I just wanted you to know that.&quot;</p>
+        <p>Pressly didn&#x27;t know what to say. He just stood there, in thought over her words.</p>
+        <p>&quot;Thank you for sharing that with me,&quot; he said. &quot;I didn&#x27;t really know any of that. You&#x27;ve… given me some things to think about.&quot;</p>
+        <p>&quot;Thank you for listening to me,&quot; Tali said. &quot;I just want you to understand. I&#x27;m going to head to engineering for a while. I&#x27;ll… see you later, Pressly.&quot;</p>
+        <p>Pressly gave her a quick nod as she walked away, and pondered over her words as he watched her leave. After a brief moment of considering what she said, Pressly picked up his datapad and began to write in his journal.</p>
+    </div>
+</body>
+</html>

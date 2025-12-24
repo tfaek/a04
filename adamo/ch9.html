@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mission Can&#x27;t Fail!</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch8.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html" selected>The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+            </select>
+            <a href="ch10.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">The Mission Can&#x27;t Fail!</h1>
+    <div class="chapter-content">
+        <p>Shepard&#x27;s eyes opened. The sudden trembling and impact noise of magnetic couplers attaching to the Normandy, which reverberated throughout the ship, had woken her. She knew that they had just docked at the Citadel.</p>
+        <p>She looked over at her side, where Tali still lay asleep in much the same position she was in before they had dozed off hours ago. Shepard could tell her eyes were closed from the lack of lightly glowing dots behind her mask. A slight shuffling was her only response to the Normandy&#x27;s docking.</p>
+        <p>If it were possible, Shepard would have just gone back to sleep with her. But she knew that wasn&#x27;t an option—she needed to see the Councilors and warn them about Saren heading to the Conduit on Ilos. Still, she took a moment to look at her before getting up. An involuntary smile appeared on her face as she watched over her, and decided not to wake her. She looked too relaxed and at peace for her to wake her up.</p>
+        <p>As she stood up, Tali shuffled more intensely than before, but the two dots behind her mask never appeared. She remained asleep as Shepard got up and walked out of her quarters.</p>
+        <p>. . .</p>
+        <p>Shepard stepped off the elevator in C-Sec Academy, pushing a four-wheeled flatbed cart. On top of the cart were two metal crates full of various weapons, ammo and weapon mods, and other assorted equipment. She proceeded to push the cart down the hallway that lead to the C-Sec Requisitions office.</p>
+        <p>&quot;Commander Shepard, it&#x27;s been a while. What&#x27;s all this?&quot; asked the turian requisitions officer from behind his desk as Shepard approached.</p>
+        <p>&quot;During my travels I&#x27;ve salvaged a lot of gear. This is the stuff I don&#x27;t need. I was hoping to sell them to you,&quot; answered Shepard as she parked the cart next to the desk.</p>
+        <p>The requisitions officer picked up one of the assault rifles from the crates and looked it over. He wasn&#x27;t particularly scrutinous as he studied it; his only concern was that it wasn&#x27;t a waste of his time. Satisfied with its quality, he put it down on his desk and momentarily glanced over the rest of the equipment.</p>
+        <p>&quot;Not bad stuff, Commander. All this should be worth a small fortune. Just give me a moment to scan them into the system.&quot;</p>
+        <p>&quot;How long will it take? I have a meeting scheduled with the Council in about forty minutes.&quot;</p>
+        <p>&quot;Don&#x27;t worry, it won&#x27;t take nearly that long,&quot; the turian answered, beginning the process of scanning the equipment with his omni-tool.</p>
+        <p>It wasn&#x27;t long before most of the larger equipment had gotten scanned, and the requisitions officer was scanning the smaller items that had shifted to the bottom of the crate. During his scans of the smaller items he pulled out an omni-tool. It was an old Bluewire model.</p>
+        <p>&quot;Hah, this thing is old. You might be able to purchase a—what&#x27;s that popular human drink? Coffee? With what it&#x27;s worth,&quot; he amusingly commented, and held it up for Shepard to see.</p>
+        <p>Shepard immediately recognized it. It was the omni-tool Tali had been using when they first met. She must have thrown it in with the spare equipment after I gave her a newer model. &quot;Actually, I&#x27;d like to hold on to that.&quot;</p>
+        <p>The turian found it unusual. Why would she want to keep this piece of crap? he wondered to himself, but he wasn&#x27;t curious enough to ask. He simply handed it to Shepard, who looked at it for a moment before smiling to herself and putting it in her pocket. The requisitions officer just kept scanning items.</p>
+        <p>. . .</p>
+        <p>During the meeting with the Councilors, Shepard had gotten betrayed. The Councilors refused to send any forces to Ilos to stop Saren, and Ambassador Udina made sure the Normandy got grounded, preventing them from leaving for Ilos to stop Saren themselves. Fortunately, it wasn&#x27;t long before Captain Anderson spoke with Shepard, and proposed a plan to free the Normandy.</p>
+        <p>&quot;Be ready, Anderson should be reaching Udina&#x27;s office in about ten minutes,&quot; Shepard said as she stood behind Joker&#x27;s seat at the Normandy&#x27;s bridge. Both of them had their attention focused on the docking indicator of the console in front of Joker. It was currently red, which indicated they were locked in place. Upon turning green, it would mean that the Normandy is free, and they&#x27;d be able to escape the Citadel.</p>
+        <p>&quot;Do you really think the Captain will get the Normandy unlocked?&quot; asked Joker.</p>
+        <p>&quot;If anyone can pull it off, it&#x27;s him.&quot;</p>
+        <p>&quot;I still can&#x27;t believe Udina screwed us like that and grounded the Normandy. It&#x27;s all bullshit.&quot;</p>
+        <p>&quot;He&#x27;s convinced that the reapers aren&#x27;t real, just like the Councilors are. They believe Saren&#x27;s threat is limited to just his influence over the geth. I almost wish that were true.&quot;</p>
+        <p>Joker didn&#x27;t have anything to say. He just agreed with silence. There was a lull in their conversation, and during it he decided to kill some time—as well as get some information—knowing that several minutes remained before the Normandy would be potentially freed. &quot;So, where&#x27;s Tali?&quot;</p>
+        <p>&quot;She&#x27;s down in Engineering, ensuring everything goes smoothly during our escape.&quot;</p>
+        <p>Joker smirked to himself. &quot;You answered that really easily. Would you be able to tell me what all the other crew members are doing right now, too?&quot;</p>
+        <p>&quot;What are you trying to say?&quot;</p>
+        <p>&quot;Nothing, Commander…&quot;</p>
+        <p>A full minute passed with neither saying anything. Joker then abruptly asked, &quot;So…what&#x27;s she look like under that mask?&quot;</p>
+        <p>Shepard sighed, and shook her head with a smirk on her face. She knew a question like that would pop up any moment. &quot;I wouldn&#x27;t know.&quot;</p>
+        <p>&quot;You don&#x27;t? Oh—I&#x27;ve heard about how much time you two spend being all buddy buddy, so I figured you guys had a thing going. Sorry.&quot;</p>
+        <p>&quot;Oh, we do,&quot; Shepard answered in a nonchalant way, &quot;I just haven&#x27;t seen her face yet.&quot;</p>
+        <p>Joker turned his head around and looked at Shepard, surprised by her sudden and casual revelation. Shepard just kept staring straight ahead at the console with a very subtle smile on her face.</p>
+        <p>Suddenly the docking indicator shifted from red to green. The Normandy was now unlocked. &quot;We&#x27;re free! Get us out of here, now!&quot; Shepard ordered, patting Joker&#x27;s chair with her hand. Joker immediately turned his head back towards his console, and maneuvered the Normandy out of the docking area. In mere seconds, it was fully turned around and flying at top speed away from the Citadel.</p>
+        <p>&quot;Great job, Joker,&quot; Shepard commended, and then turned around, proceeding to walk down the CIC. Joker turned his head back around, and watched her walking away. He smiled, happy for both her and Tali.</p>
+        <p>. . .</p>
+        <p>As Shepard sat at the desk next to the entrance of her quarters, the door suddenly opened and Tali stepped forth. Shepard looked up and saw her, greeting her only with a smile.</p>
+        <p>&quot;So… now we&#x27;re fugitives on the run? Never a dull moment with you, is there Shepard?&quot; Tali said in a playful manner as she stepped close to her.</p>
+        <p>&quot;There&#x27;s an old saying: All that is necessary for the triumph of evil is for good women to do nothing. Udina and the Council left us no choice.&quot;</p>
+        <p>&quot;I understand, but stealing a ship?&quot; Tali continued, now obviously teasing, &quot;That&#x27;s a capital offense among my people. What sort of woman have I gotten myself involved with?&quot;</p>
+        <p>Shepard grinned at Tali, and then reached forward and grabbed her waist. She pulled her down towards her, so that she sat down on her lap. Tali laughed quietly, and scooted in closely, leaning against her and placing her arms around her neck. Shepard then said in a lighthearted way, &quot;Capital offense or not, I know you love the excitement.&quot;</p>
+        <p>&quot;Who said I didn&#x27;t?&quot;</p>
+        <p>There was a quiet moment after her comment, in which the two just looked at each other, enjoying each other&#x27;s presence. Tali broke the quiet by sighing softly and saying, &quot;We&#x27;re near the end, aren&#x27;t we Shepard? It won&#x27;t be long before we reach Ilos, where Saren is—where the Conduit is.&quot;</p>
+        <p>&quot;Yes we are. I wish he didn&#x27;t have such a head start.&quot;</p>
+        <p>&quot;Don&#x27;t be worried. I know you&#x27;ll be able to stop him—you&#x27;re the only who can.&quot;</p>
+        <p>&quot;You were pretty close on Virmire,&quot; commented Shepard, and then added, &quot;That reminds me. I want to show you something.&quot; She placed her hand on her side, and gently encouraged her off her lap. Once she was up, she stood up and walked over to the desk near her bed, where she grabbed an unusual looking weapon.</p>
+        <p>&quot;Check this shotgun out, tell me what you think,&quot; she said as she returned back to her and held it out for her.</p>
+        <p>She took it, and began to eagerly look it over. The entire weapon was black and dark gray, with red indicator lights signifying it was disarmed. The design was unique, and it was unlike any other weapon Tali had seen before. It was also surprisingly light, but felt extremely solid and sturdy. The weapon was obviously made out of the finest materials, put together with extreme craftsmanship.</p>
+        <p>&quot;Wow, this is amazing. The mass accelerator on this thing is massive for its size, and so is the heat sink,&quot; Tali noted as she continued moving it around in her hands, studying it from all angles. Just then she noticed the inscription on its side: &#x27;HMWSG.&#x27; &quot;I&#x27;ve never heard of this model before. I don&#x27;t even know who manufactures it.&quot;</p>
+        <p>&quot;That&#x27;s because it&#x27;s a prototype model, and only available to Spectres. These models are the most advanced weapons in the galaxy.&quot;</p>
+        <p>&quot;Keelah, I envy you, Shepard. You&#x27;re going to be a terror with this thing,&quot; she said and attempted to hand it back to her. Shepard didn&#x27;t accept it—she just gently pushed it back toward her.</p>
+        <p>&quot;I&#x27;m not, but you are. It&#x27;s yours, Tali.&quot;</p>
+        <p>&quot;What? Shepard I—thank you—but I can&#x27;t accept this! Just how much did this cost?&quot;</p>
+        <p>&quot;You don&#x27;t want to know… but don&#x27;t worry about that. Shortly after we docked on the Citadel, I went to the requisitions officer in C-Sec and sold a bunch of the salvaged equipment we didn&#x27;t need.&quot;</p>
+        <p>&quot;I… I shouldn&#x27;t—you take it, Shepard. You&#x27;re the leader, and the best fighter. You should have the best weapon.&quot;</p>
+        <p>&quot;I appreciate the thought, but I had enough credits to purchase a few of these Spectre weapons—including a gorgeous assault rifle for myself. Now please, take the shotgun. I bought it specifically with you in mind.&quot;</p>
+        <p>Tali looked down at it for a moment, and back up at Shepard. She then placed it on the circular table, and approached Shepard. &quot;Thank you… I&#x27;ve never received something so… extravagant before. It feels… strangely nice, having something so valuable and special.&quot;</p>
+        <p>&quot;I know what you mean…&quot; Shepard said with a light smirk as she placed her hands on Tali&#x27;s lower back, and gently pulled her forward against her. Tali instinctively placed her hands on the sides of Shepard&#x27;s arms, and looked at her eyes. She knew she was referring to her.</p>
+        <p>They stood there for a long time, simply staring at each other as their hands caressed the other. As the moment progressed, and Tali stared at Shepard eyes—her face—she realized she wanted nothing more than to feel her lips pressed against hers. She wanted her first kiss.</p>
+        <p>As if reading her mind, Shepard slowly asked, &quot;So... what exactly would happen if you took off your mask…?&quot;</p>
+        <p>&quot;I would kiss you…&quot;</p>
+        <p>Her voice was soft and relaxed, yet sultry. There was a very subtle, but noticeable hunger in her words. Shepard was surprised by her response, but glad to hear it; a slight chill ran down her spine.</p>
+        <p>&quot;That sounds really nice… but it wasn&#x27;t what I meant. Would you get sick?&quot;</p>
+        <p>&quot;There&#x27;s really no way for me to know what would happen,&quot; she began to respond. &quot;I already still have a reaction from my injury the other day. Maybe it won&#x27;t make a difference… or maybe it&#x27;ll get worse. I just don&#x27;t know.&quot;</p>
+        <p>Shepard let out a loud sigh, and her hands on her body relaxed. She stared at her with a concerned expression on her face, until finally a weak, weary smile appeared.</p>
+        <p>&quot;Part of me tells me to remove your mask, look upon your face for the first time, and kiss you. It tells me these could be our last moments alive, and that we should make the best of it. But I can&#x27;t listen to that voice right now, Tali. The entire galaxy is riding on our success—I cannot let any of my actions be the result of pessimism; the possibility of failing cannot exist in my mind. I need to believe that we&#x27;ll win.</p>
+        <p>&quot;And besides that, you&#x27;re already sick and we can&#x27;t afford to risk your health any further. What if we&#x27;re stuck fighting for days on Ilos, and your illness becomes an issue? What if we do succeed, but you die from a reaction? I can&#x27;t—I don&#x27;t want to think about that. We just can&#x27;t do this now, without you being ready.&quot;</p>
+        <p>Tali looked at Shepard for a brief moment after her words. She then wrapped her arms around her, and gave her a tight hug. &quot;You&#x27;re right, Shepard. About everything. The entire galaxy is counting on us, and we can&#x27;t let what we want risk this mission.&quot;</p>
+        <p>&quot;We will defeat Saren. And then when you&#x27;re ready, we&#x27;ll be together. I promise you that.&quot;</p>
+    </div>
+</body>
+</html>

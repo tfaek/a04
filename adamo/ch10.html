@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I&#x27;ll Wait Until You&#x27;re Ready</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch9.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html" selected>I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+            </select>
+            <a href="ch11.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">I&#x27;ll Wait Until You&#x27;re Ready</h1>
+    <div class="chapter-content">
+        <p>&quot;Go!&quot; was Shepard&#x27;s final word as a large fragment of Sovereign impacted her location at the top of Citadel Tower.</p>
+        <p>There was little movement and sound after the chaos of the impact had ended. The only movements were the flickering shadows cast by scattered flames, and the hovering clouds of smoke and dust. The crackling of fires were the only noises to be heard. What was once the heart of galactic civilization now lay in ruins—the very seat of the Council had been reduced to a mess of collapsed structures and debris of a now dead Reaper. Neither Shepard or her team could be seen or heard amidst the destruction.</p>
+        <p>Footsteps finally interrupted the eerie quiet that had dominated the top of Citadel Tower ever since the battle with Saren ended; since the impact of Sovereign&#x27;s debris. It was Captain Anderson, leading a small team of rescue workers. They quickly began searching among the rubble for the team that had made Sovereign&#x27;s defeat possible—for the ones responsible for effectively saving the galaxy.</p>
+        <p>Within a small pocket underneath some collapsed structure they found their first survivors. The first person that the rescue worker saw was a female quarian. His mind took a split second to process the fact that it was the first quarian he had ever seen, and based on their rarity it seemed unusual to find one in such a place. But none of that mattered right now—he took her arm and helped her up. At the same time, Captain Anderson crouched into the pocket and helped up another survivor, a turian whom he was acquainted with. Both survivors were somewhat disoriented from the impact, but alive and with no major injuries.</p>
+        <p>&quot;Take it easy. It&#x27;s over—you&#x27;re safe now,&quot; assured Captain Anderson. There was clear joy in his voice over seeing them alive. Suddenly, he realized that Shepard was not among them. &quot;Where&#x27;s the Commander?&quot;</p>
+        <p>His question instantly reminded Tali of the last image she remembered seeing: a rapidly approaching piece of Sovereign smashing into the large window near where Shepard had been standing. She turned her head to look in the direction of where the impact had occurred, and witnessed the horrific mess of mangled structure and piled debris where Shepard had been standing.</p>
+        <p>&quot;She—she was over there! We have to find her!&quot; Tali responded as she quickly scampered forth toward the ruins, momentarily losing balance at the start of her run.</p>
+        <p>The others could only stare at the large pile of rubble and wreckage with pessimism. It didn&#x27;t seem possible for Shepard to have been able to survive what had impacted the area. Inwardly, Tali knew this too—it wasn&#x27;t optimism that fueled her will to search, but denial.</p>
+        <p>Tali reached the concentration of rubble where Shepard had last been seen, and immediately felt overwhelmed. She didn&#x27;t know where to start or what to do. Most of the debris was far too large and heavy for anyone to even move. She fidgeted trying to figure something out, her frustration rapidly escalating, until suddenly it evaporated and got replaced by desperation and depression. The grim reality that Shepard was likely dead began to sink in.</p>
+        <p>Tali dropped down to her knees, staring straight ahead at the immovable, mixed ruins of the Citadel&#x27;s debris and the fragments of Sovereign. Her eyes began to water. &quot;Please… please be alive, Shepard,&quot; she mumbled to herself. &quot;I can&#x27;t… lose you. Please…&quot; Her head lowered down, which caused a tear to roll down her cheek.</p>
+        <p>Captain Anderson looked at her from where he stood, several meters back. He sighed, his mind also accepting the thought that Shepard had not survived.</p>
+        <p>Suddenly, there was a noise from beyond the rubble and wreckage—it was the unmistakable noise of debris being disturbed. Tali immediately looked up, and for a split second caught a glimpse of movement somewhere behind the rubble. She stood up and intensely scanned with her eyes, trying to look between any cracks or openings of the piled debris.</p>
+        <p>Shepard appeared near the top of the wreckage. Her face covered in dust, her armor dented and scratched; but she was standing there. She was alive.</p>
+        <p>As she looked on at the rescue workers and Anderson, at her living team—Tali particularly—all she could do was smile. Her smile rapidly grew into a grin as she walked down a level part of the debris toward her friends, limping slightly from an injured leg.</p>
+        <p>The moment she reached the ground, she found herself and Tali tightly hugging each other, laughing with joy. Saren—and the Reapers—had been defeated. At least for now.</p>
+        <p>. . .</p>
+        <p>Shepard stepped out of Flux&#x27;s female restroom and walked down the small hallway that lead back to the club. Stepping through the door, she reentered the restaurant area and maneuvered through the tables and chairs, making her way back to the table she had been sitting at with her team mates.</p>
+        <p>The popular club was in a different state than it normally would be. Its typical high energy dance music wasn&#x27;t playing, the dance floor was devoid of people, and the entire club was nowhere near as crowded as it would have been just one week ago.</p>
+        <p>&quot;Tali left while you were using the little Spectre&#x27;s room,&quot; Garrus informed Shepard as she reached the table and sat down. He took a sip of the drink he held in his hand.</p>
+        <p>&quot;That doesn&#x27;t surprise me. She&#x27;s seemed distant all night—probably felt alienated sitting here with us. She couldn&#x27;t eat any of the food we ordered or even have any drinks.&quot;</p>
+        <p>&quot;That does sound like it would suck,&quot; Ashley commented, joining in the conversation, &quot;But it&#x27;s not like we had anywhere else to go for our get-together before leaving tomorrow. This is the only place that&#x27;s even open.&quot;</p>
+        <p>&quot;Did Tali say anything before leaving?&quot; Shepard asked the group.</p>
+        <p>&quot;All she said was that she was going to go get some rest,&quot; answered Liara T&#x27;Soni. &quot;It did seem as if she had something on her mind.&quot;</p>
+        <p>Shepard grabbed her drink, causing the ice in the glass to jingle in tandem with the movement of her hand, and finished what was left with one quick swallow. &quot;Sounds like she headed back to the ship, then. I&#x27;m going to see what&#x27;s troubling her. It&#x27;s getting late, anyway,&quot; she said as she stood up from the table. &quot;Remember, we leave at 1400 tomorrow. Goodnight everyone.&quot;</p>
+        <p>After the others said their goodbyes, Shepard walked away and left the club, eventually entering a ward of the Citadel.</p>
+        <p>A week had passed since the Battle of the Citadel, and things were noticeably different now. The Wards were nowhere near as crowded as they normally would be. The attack was still fresh on the minds of people, and fear still lingered within them. Most people stayed home, feeling safer in their dwellings. Many businesses were also still temporarily closed, and the continuous commute of people traveling to and from their jobs was nowhere to be seen.</p>
+        <p>The airspace of the citadel was different as well. Far fewer cars were traveling the airways, but the biggest difference was the lack of ship traffic. Civilians ships were all grounded, and no one was allowed to enter or leave the Citadel without proper authorization. The only ships to be seen were C-Sec patrol scouts, as well as Alliance cruisers and frigates. All actively patrolling and guarding the Citadel.</p>
+        <p>Throughout the five wards of the Citadel were tens of thousands of rescue workers and salvage teams, still actively clearing rubble caused by the attack. Many buildings had been destroyed, and debris from wrecked ships had rained all around the Citadel. Numerous bulldozers and other heavy machinery were continuously moving on the streets, still pushing and clearing rubble.</p>
+        <p>After a few minutes of walking Shepard reached her destination, C-Sec Academy, where the elevator that led to the Normandy&#x27;s docking bay could be found. C-Sec Academy was eerily quiet and empty. Many officers had been killed during the attack, and all who remained were required to be out on patrol as much as possible.</p>
+        <p>The elevator took her up to the docking bay, and she approached the ship. She immediately noticed Tali. She stood near the end of the docking area, her hands on the rail as she leaned against it. Shepard couldn&#x27;t tell if she was staring at the ship, or the view of the Wards below.</p>
+        <p>As she approached her, the line-of-sight between Shepard&#x27;s eyes and Widow—the star near the Citadel—was disrupted by Tali&#x27;s head. The intense light of the star shone through the opaque glass of Tali&#x27;s faceplate, and Shepard saw a clear silhouette of her face from a profile perspective. It only lasted a second, but it was enough for Shepard&#x27;s mind to create a clear visual memory. A small smile appeared on Shepard&#x27;s face; an involuntary reaction.</p>
+        <p>&quot;There&#x27;s a nice view up here, isn&#x27;t there?&quot; Shepard commented as she approached and stood next to Tali, joining her. &quot;I&#x27;ve never really taken the time to admire it.&quot; For a split second, Shepard felt déjà vu as she remembered the time they stared out at the setting sun on Virmire together.</p>
+        <p>&quot;It was nicer before the attack. It&#x27;s hard to imagine it&#x27;s already been a week since that happened. These last several days have been crazy.&quot;</p>
+        <p>&quot;This week really has been hectic. There was so much work to do, plus the interviews and questions just didn&#x27;t stop. Things will get back to normal after we leave tomorrow to hunt down the remaining geth forces outside the Veil.&quot;</p>
+        <p>After her comment, Tali leaned away from the rail and looked right at her.</p>
+        <p>&quot;There&#x27;s something I&#x27;ve been wanting to tell you,&quot; she muttered. Shepard found herself unable to deduce from her tone of voice and body language if she should expect good or bad news.</p>
+        <p>&quot;I had a feeling something was on your mind. Is something wrong, Tali?&quot;</p>
+        <p>&quot;Do you remember that night, when we told each other how we felt?&quot;</p>
+        <p>&quot;Of course,&quot; Shepard answered, smiling warmly at her. She stepped closer, and cautiously placed her hand on the side of her waist; her reaction to her gesture would give her a clue as what to expect.</p>
+        <p>Tali raised her hands and placed them on the sides of Shepard&#x27;s shoulders, gently holding unto her arms. It was a positive reaction, and Shepard felt relieved.</p>
+        <p>&quot;And do you remember… how you asked if I would go back and complete my pilgrimage, or stay with you on the Normandy, after we stopped Saren? And I couldn&#x27;t choose at the time?&quot;</p>
+        <p>Shepard&#x27;s relief evaporated, and she felt knot in her stomach. It was obvious now—she had finally made a decision. While Shepard was anxious to find out what she had chosen, she couldn&#x27;t help but feel nervous over the possibility that she might leave. &quot;I take it you&#x27;ve decided?&quot;</p>
+        <p>&quot;Yes,&quot; she answered, staring into her eyes. &quot;It&#x27;s a very big decision, and I&#x27;ve thought about it a lot this week. And every time I did, I imagined what my people would say—how my father would react. It scared me to think about it. But I also thought about how the time I&#x27;ve spent with you has been the happiest of my life. There is no one back on the Fleet that makes me feel like you do.</p>
+        <p>&quot;Putting my happiness above what&#x27;s best for my people is a very selfish thing. No quarian should ever act like that. But that&#x27;s not the case here—because I realized that staying with you, is what&#x27;s best for my people. I remembered how you said the work I&#x27;m doing with you to stop the Reapers is more important than anything any other quarian has ever done.</p>
+        <p>&quot;And it&#x27;s true. We did stop Sovereign, but the others are still out there, somewhere, and we need to make sure they can never threaten us. Maybe after seeing the Citadel attacked by a Reaper leading a fleet of geth, my people will understand my decision. And if they don&#x27;t, it doesn&#x27;t matter. I&#x27;m staying with you, Shepard. That&#x27;s what I&#x27;ve chosen, and I know it&#x27;s the right choice.&quot;</p>
+        <p>Shepard&#x27;s face, which had been focused and tense at the start of Tali&#x27;s words, had warmed and turned into a smile by the end. &quot;I can&#x27;t tell you how happy it makes me to hear that, Tali. But are you sure this is what you—&quot;</p>
+        <p>Tali interrupted her by placing a finger on her lips. She got closer to her, and placed her hands on her upper back, so as to hold her close. &quot;I&#x27;m sure.&quot;</p>
+        <p>Shepard silently laughed to herself in joy, and after a brief period of absorbing the happiness of the moment she asked, &quot;I&#x27;m curious, what&#x27;s going to happen with that geth data I gave you?&quot;</p>
+        <p>&quot;I still plan on giving it to my people. It&#x27;s important that they get it. However, it&#x27;s too much of a risk to send it over the extranet, so maybe next time we&#x27;re on shore leave or whenever there&#x27;s time, I&#x27;ll book passage on another ship to deliver it and then come back.&quot;</p>
+        <p>&quot;Book passage on another ship?&quot; Shepard said in a playful tone of disbelief, with a smirk on her face, &quot;Are you forgetting your girlfriend is the commanding officer of the galaxy&#x27;s most advanced frigate?&quot;</p>
+        <p>Tali laughed happily at her comment. Not only was she glad to hear her be willing to take her to the Fleet, she felt butterflies in her stomach from hearing Shepard refer to herself as her girlfriend. She had never been in a relationship with anyone, and relished being reminded that she was now in one. &quot;I suppose you have a point, Captain Shepard…&quot;</p>
+        <p>&quot;Thanks, but I, uh, actually never did reach that rank.&quot;</p>
+        <p>&quot;You&#x27;re the commanding officer of the Normandy. You&#x27;re a Captain to me. My Captain, now…&quot; Tali squeezed with her arms and gave her a hug. Shepard returned her embrace.</p>
+        <p>While they hugged, Shepard said, &quot;When we have the time, I&#x27;ll make sure we visit the Fleet so you can give them that data.&quot;</p>
+        <p>&quot;Thank you. You know, you&#x27;re going to be the first non-quarian to ever visit the flotilla.&quot; Tali commented as their hug ended.</p>
+        <p>&quot;That hadn&#x27;t occurred to me. Will they let an Alliance vessel near the Fleet?&quot;</p>
+        <p>&quot;Once I confirm it&#x27;s me and that we&#x27;re safe, they&#x27;ll let us in. And besides, everyone&#x27;s no doubt already heard about you and what you did here on the Citadel. I&#x27;m sure my people will be excited to have you there.&quot;</p>
+        <p>&quot;This mission couldn&#x27;t have been a success without you. I hope they&#x27;ll be aware of that.&quot;</p>
+        <p>Tali smiled under her mask, and gave her another, quicker hug. After it ended, they held both their hands together as they looked at each other, until Tali finally said, &quot;Let&#x27;s go to our quarters. There&#x27;s something else I want to tell you, Captain.&quot;</p>
+        <p>Shepard found her usage and emphasis of the word &#x27;captain&#x27; unusual that time. But she responded with just a smile as they both began to walk toward the docking bridge connecting to the Normandy&#x27;s airlock. They held hands as they walked.</p>
+        <p>It only took them a moment to walk through the Normandy and reach their quarters on the crew deck. After the door closed behind them, Shepard turned and faced Tali, curious about what she wanted to discuss. &quot;What was it you wanted to tell me?&quot;</p>
+        <p>Tali took a deep breath, and after a few seconds of composing her thoughts she said, &quot;It&#x27;s customary among my people for us to offer a gift to the captain of a vessel whose crew we join.&quot;</p>
+        <p>Shepard immediately mentally prepared to tell her she didn&#x27;t need to give her anything, but she continued talking before she could say anything.</p>
+        <p>&quot;I don&#x27;t have anything I can give you. However… there is something I want to share with you…&quot; she said quietly, with faint nervousness in her words now. She got in very close, and whispered in a low, soft voice, &quot;Myself…&quot;</p>
+        <p>Shepard&#x27;s eyebrows raised slightly in surprise. &quot;Are… you saying you want to…?&quot;</p>
+        <p>Tali nodded her head and said, &quot;Yes, Shepard. I want us to… be together… I want you to see my face. I want to feel your skin on mine…&quot;</p>
+        <p>&quot;That really sounds wonderful, Tali. But what about your health?&quot;</p>
+        <p>&quot;There are ways I can temporarily improve my immune system; immuno-boosters, antibiotic injections, things like that. I don&#x27;t really know right now, but I&#x27;ll do some research. I just need some time to figure something out.&quot;</p>
+        <p>&quot;Is there anything I can do to help?&quot;</p>
+        <p>&quot;No, Shepard—but you&#x27;ve already done so much. You&#x27;ve been so patient with me.&quot;</p>
+        <p>Shepard smiled at her and said, &quot;You&#x27;re worth it, Tali, and you always will be.&quot; She paused for a moment, and then added, &quot;Whenever you&#x27;re ready, I&#x27;ll be here for you.&quot;</p>
+        <p>&quot;I&#x27;ll figure something out,&quot; Tali responded. &quot;I promise.&quot;</p>
+    </div>
+</body>
+</html>
