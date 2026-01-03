@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Want to be With You</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch16.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html" selected>I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+            </select>
+            <a href="ch18.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">I Want to be With You</h1>
+    <div class="chapter-content">
+        <p>The Kodiak shuttle broke through Haestrom&#x27;s atmosphere and approached the Normandy, which was now in orbit around the planet. The Normandy had ascended to an orbital position shortly after neutralizing the geth, where it could keep better watch for geth dropships approaching the planet. Shepard and Tali were on the shuttle together, by themselves, sitting on opposite sides and facing each other.</p>
+        <p>After the Normandy&#x27;s intervention and rescue of the quarian team, Shepard and her team had landed on the surface via the shuttle and made contact with them. They learned of Tali&#x27;s location, and after a few minutes of walking, found her and the quarian science team.</p>
+        <p>All of the quarians were grateful for the assistance provided by Shepard and her ship. Between delays suffered from malfunctioning equipment and the geth attack, they knew the mission would have been a disaster if she hadn&#x27;t arrived when she did. Still, many of them were curious how Shepard knew about their mission. Shepard&#x27;s answer was both a lie and a true statement.</p>
+        <p>She told them that the organization sponsoring her current mission had learned about their mission on Haestrom through its own information network, and informed her so she could recruit Tali for her team. This was true; the Illusive Man did forward a dossier on Tali&#x27;Zorah, which informed her that she was on Haestrom. What Shepard didn&#x27;t tell the quarians, was that she received the dossier at a late time, when she was already in the Dholen system, approaching Haestrom. No one knew that Shepard&#x27;s timely arrival was thanks to Tali giving her specific details of the mission.</p>
+        <p>Since Tali and the other scientists still needed some more time to finish their data collection, Shepard let her team return to the ship while they waited. Shepard stayed on the planet with Tali and the other quarians. After they finally finished, Tali told the others that she was not going to go with them; she was going to join Shepard. The quarians departed with the data they came for, and the Normandy&#x27;s shuttle was sent back to pick up Shepard and Tali.</p>
+        <p>The short trip had been strangely quiet thus far. Tali looked at Shepard as she sat across from her. She had a subtle smile on her face; she looked happy, relaxed, and content; she didn&#x27;t need to say anything. Tali was also happy, and excited, to join her team. But at the same time, she felt nervous knowing she would be joining a mostly Cerberus crew. She felt comfort in knowing that Shepard was the one in charge; she remembered how the Cerberus people with her on Freedom&#x27;s Progress followed her orders, and released Veetor at her command. Still, she didn&#x27;t look forward to the eventual looks of distrust and hate that would no-doubt be on the faces of the Cerberus crewmembers as they looked at her.</p>
+        <p>From Tali&#x27;s seat, which faced forward in the direction the shuttle traveled, she suddenly caught a glimpse of the Normandy. She leaned to her right so as to be at a better angle to view it. While on Haestrom, she wasn&#x27;t able to see the Normandy from where she had been working, so this was the first time she saw it.</p>
+        <p>&quot;Wow, you weren&#x27;t kidding when you said your ship was an upgraded version of the Normandy. It looks amazing!&quot; she said. &quot;And Cerberus built it? Just how were they able to replicate it? I thought it was an Alliance prototype.&quot;</p>
+        <p>&quot;My guess is that they somehow managed to acquire the original Normandy designs, but I don&#x27;t know,&quot; she answered. &quot;Cerberus has a lot of resources. More than I ever imagined. And it&#x27;s frightening how vast their information network is.&quot;</p>
+        <p>&quot;I know you need resources to stop the Reapers, but are you sure that Cerberus can be trusted? You remember the sick experiments we discovered they were conducting.&quot;</p>
+        <p>&quot;I&#x27;ve grown to trust many of the crewmembers. They honestly weren&#x27;t what I was expecting; it&#x27;s almost like they don&#x27;t even know they&#x27;re in Cerberus. But Cerberus&#x27; leader—The Illusive Man—I don&#x27;t trust him.&quot;</p>
+        <p>&quot;Do you think he&#x27;ll betray you?&quot;</p>
+        <p>&quot;Not for the time being. But sometime down the road, when I either stop being useful or just piss him off enough, I fully expect him to try something.&quot;</p>
+        <p>&quot;You? Stop being useful? I can&#x27;t see that happening,&quot; Tali said in a playful, teasing way. &quot;But making him angry; that seems like something you would do.&quot;</p>
+        <p>Shepard grinned, silently laughing to herself. Her little teasing remarks were something she had missed a lot. It made her happy to hear one. After a short moment she said, &quot;I&#x27;ve missed you. It seems… silly for me to say that—from my perspective it&#x27;s only been a short time—but I have missed you a lot since we met back on Freedom&#x27;s Progress.&quot;</p>
+        <p>Tali thought for a short while about how to respond. &quot;I missed you too, Shepard. I&#x27;m really happy to be joining you again. It feels so much like old times.&quot; She paused for a brief moment, &quot;You&#x27;re the only reason I&#x27;m here, joining a Cerberus vessel.&quot;</p>
+        <p>There was somewhat of an awkward silence after her comment.</p>
+        <p>This was one of the times Shepard really wished she wasn&#x27;t wearing a mask. She had always told herself she didn&#x27;t really care what her face looked like. She knew quarians had a similar resemblance to humans; the biggest difference was the ears. I fell for someone whose face I&#x27;ve never seen—so what her face looks like exactly, really doesn&#x27;t matter, is what she always thought. But this particular moment, she wanted to be able to look at her face; just so she could read her facial expressions, and better understand what was going through her mind. There were a lot of things she wanted to talk about, but being unable to read the subtle facial expressions a person involuntarily makes while speaking made her feel handicapped. It made her feel as if she were on a mission, ill prepared and lacking intel.</p>
+        <p>Suddenly, the view of space outside the window disappeared, replaced with the image of a metal hull. They realized they were now entering the Normandy&#x27;s bay, which took care of the awkward moment, for now.</p>
+        <p>&quot;Looks like we&#x27;re here,&quot; Shepard said. &quot;This ship is a lot larger than the original Normandy, with several more decks. Want me to show you around?&quot;</p>
+        <p>&quot;I&#x27;d like that.&quot;</p>
+        <p>. . .</p>
+        <p>Doctor Chakwas sat at her desk in the med-bay, killing time by reading from her private terminal. It had been a relatively uneventful day, aside from her earlier preparations of the med-bay, in case some injured quarians were brought to her. Ultimately, no one needed medical attention.</p>
+        <p>As the healthcare professional of the Normandy, she was required to tend to any medical emergencies at any point in the day, but she still served a regular shift like any other crewmember. During which, she would be inside the med-bay. Most of the time, she didn&#x27;t have much to do, besides the occasional examination or minor treatment. Although her shift was currently over, she preferred to stay in the med-bay. It was a quiet and peaceful place. As far as she was concerned, the med-bay was her private quarters. In a short while, she would go get some sleep.</p>
+        <p>She heard the med-bay door open. Turning her head, she saw Shepard step inside.</p>
+        <p>&quot;Hello, Commander. Is there something I can do for you?&quot; she greeted as she swiveled her chair to face her.</p>
+        <p>&quot;Good evening, doc,&quot; Shepard said as she approached. &quot;I was wondering… do you have a moment? To talk?&quot;</p>
+        <p>From the tone of Shepard&#x27;s voice, it seemed as if she had something on her mind. She wasn&#x27;t there for a typical friendly chat; something was bothering her. &quot;Of course.&quot;</p>
+        <p>&quot;Thanks. I have a lot on my mind, and I don&#x27;t really know who else I could talk to about this,&quot; she said. Shepard didn&#x27;t feel close enough to any of the Cerberus people to discuss what was on her mind with. It was going to be either Garrus, Joker, or Chakwas, and of those choices, Chakwas was by far the best option.</p>
+        <p>Shepard thought for a moment on how to start. With a sharp exhale, she sat down on the empty chair near Chakwas and faced her.</p>
+        <p>&quot;It&#x27;s about Tali,&quot; she finally said.</p>
+        <p>&quot;Where is she, by the way? I haven&#x27;t seen her since you were showing her around the ship earlier. It&#x27;s wonderful to have her back onboard. I remember how close you two were.&quot;</p>
+        <p>&quot;In sleeper pod seven,&quot; she muttered, then clarified, &quot;She was tired, from her mission. She wanted to get some rest.&quot;</p>
+        <p>&quot;Is everything alright, Commander? You seem troubled.&quot;</p>
+        <p>&quot;I… I don&#x27;t know,&quot; she said, &quot;It feels weird to talk about this. I&#x27;m not very used to it—usually I&#x27;m the one who listens to other people&#x27;s problems.&quot; She paused for a moment, then continued, &quot;Since I woke up from my coma—or whatever I was in—I&#x27;ve missed her a lot. I thought I was finally wrapping my mind around the fact that I was gone for two years, but now that she&#x27;s back on the ship, it&#x27;s really hit me that I&#x27;ve really been gone that long.&quot;</p>
+        <p>&quot;What do you mean?&quot;</p>
+        <p>&quot;She&#x27;s… different, somewhat. Don&#x27;t get me wrong, she&#x27;s still the same great girl I remember, but there&#x27;s… there&#x27;s all these little things I notice. Everything from her voice to her personality; nothing major, but different enough to notice. She&#x27;s older, more mature now. It&#x27;s really sinking in that two years have passed; that she&#x27;s lived these two years without me in her life. And I&#x27;m worried.&quot;</p>
+        <p>&quot;About what?&quot; she asked attentively. It was very unusual to see the Commander like this. She had always seemed so immovable; someone always unfazed by any emotional or mental stress.</p>
+        <p>&quot;Worried… that she&#x27;s moved on. She&#x27;s here on this ship, and we&#x27;ve been getting along great so far, but it bothers me to know I can&#x27;t do something as simple as walk up behind her and put my arms around her, like I use to,&quot; she explained. &quot;A while ago when she asked for a sleeper pod to get some rest, it really got to me—she used to sleep in my quarters! I know I shouldn&#x27;t expect things to be like they were two years ago, but I can&#x27;t seem to help it, and it&#x27;s driving me insane. It makes me feel… weak. I don&#x27;t know, I&#x27;ve just never been through anything like this before.</p>
+        <p>&quot;I&#x27;m twenty-nine, or thirty-one—I don&#x27;t even know how the fuck old I am anymore—I&#x27;ve known other girls in the past. But, damn it. Tali&#x27;s the first one I&#x27;ve ever felt this way about. The first one that I&#x27;ve ever dreaded losing.&quot;</p>
+        <p>Shepard let out a loud sigh. Not only was she clearly troubled, it was obvious she felt embarrassed talking about all this. She simply wasn&#x27;t someone accustomed to this type of thing.</p>
+        <p>Chakwas paid close attention as Shepard spoke. While she was primarily a healthcare specialist, she did have some training in psychology. And with that last statement of hers, she had an epiphany. It suddenly became clear why Shepard felt so troubled now; why the thought of having lost Tali as someone who was more than just a friend bothered her so much.</p>
+        <p>Chakwas had read Shepard&#x27;s psychological profile in the past, on the original Normandy. She was well aware that Shepard grew up without parents; without a family. That knowledge was a major contributor to what she just realized, but the other half of the equation appeared just now, as she heard her briefly mention past girlfriends.</p>
+        <p>In all the time they spent together, both now and on the original Normandy. In all their talks. In all the conversations she overheard as the crew ate together in the mess hall… Shepard had never once mentioned anyone she knew from her past. She never brought up past friends, or even talked about girlfriends. It genuinely felt as if she had never even met anyone before she joined the original Normandy. To Chakwas&#x27; knowledge, Shepard had no real friends beyond the crew.</p>
+        <p>And that was what she realized; Shepard was someone who had never let anyone get close. She was always friendly and would often chat with others, but it was clear now that she had never really let anyone in. An upbringing devoid of any real emotional attachment had long resulted in her putting up a hard, carefully controlled outer shell, which prevented her from ever getting very close to anyone—to her, subconsciously, people were unreliable and potential betrayals. It was a defense mechanism; one that was necessary during her youth, and stuck with her well into her adult life.</p>
+        <p>But Tali had been the exception. She lowered her defenses for her, and let her in. The core of her being had for the first time experienced an actual, intimate, emotional connection with another person. The vast majority of people experience that type of connection during their youth, even if they don&#x27;t realize it, with their parents or even siblings. But for Shepard, Tali was the first. And the thought of having lost her, greatly troubled her in a very deep way.</p>
+        <p>It&#x27;s strange, seeing her like this, Chakwas thought to herself. She&#x27;s always seemed so invincible and indomitable; devoid of the weaknesses so often prevalent among people. And yet, it&#x27;s evident now more than ever: despite everything she&#x27;s done—everything she&#x27;s capable of—she is, ultimately, just a woman. A human being.</p>
+        <p>&quot;Commander… I don&#x27;t think I could ever quite imagine what you&#x27;ve been through, with losing two years of your life. But I understand your concern; your fear that you may have lost that special connection you shared with Tali&#x27;Zorah. Have you discussed any of this with her? It seems like you haven&#x27;t, and it&#x27;s something you need to do.&quot;</p>
+        <p>&quot;I&#x27;m aware of that, and that&#x27;s partly why I&#x27;m so bothered by this—I know I need to talk to her about it, but I&#x27;m—&quot; Shepard sighed, hesitating before continuing, &quot;...afraid. That she&#x27;ll say no; that she&#x27;s moved on.</p>
+        <p>&quot;I&#x27;ve never felt this way before. I&#x27;ve never been afraid to discuss a problem, and try and solve it with words. It&#x27;s just not like me. Damn I feel pathetic.&quot;</p>
+        <p>&quot;You shouldn&#x27;t. What you&#x27;re experiencing is normal. It&#x27;s healthy. It would be a greater concern if you didn&#x27;t feel any fear. This just shows how much you care for her,&quot; Chakwas said. &quot;Give her some time; get a better feel for what she&#x27;s thinking. If you haven&#x27;t talked to her about this, for all you know, she feels the same way as you do.&quot;</p>
+        <p>Despite Chakwas&#x27; comforting words, Shepard continued to feel awkward and embarrassed about all this. This conversation with her was ultimately futile; she already knew she simply needed to talk with Tali, and discuss this with her. But for the time being, she just needed someone to voice her concerns to. She needed an ear to vent to.</p>
+        <p>&quot;You&#x27;re right,&quot; Shepard finally said. &quot;I just have to talk to her. Maybe in a few days, or something. When she&#x27;s settled into the ship and I have a better feel for what&#x27;s going on through her mind.&quot;</p>
+        <p>Shepard stood up from her chair, preparing to leave. &quot;Thank you,&quot; she said, &quot;For hearing me out. I do feel better, getting some of this off my chest. Thanks again, and have a good evening, doc.&quot;</p>
+        <p>&quot;You too, Commander. And I&#x27;m sure everything will work out,&quot; Chakwas said as Shepard began to walk away.</p>
+        <p>&quot;Commander,&quot; she called out just before she exited the med-bay. She turned around and looked at her, &quot;Don&#x27;t forget, she is on the ship. She dropped everything going on her life to join us—to join you. You&#x27;re the only reason she&#x27;s here. I think that says a lot about how she feels.&quot;</p>
+        <p>Shepard smiled, and proceeded to exit the med-bay.</p>
+        <p>. . .</p>
+        <p>Shepard stood under the showerhead in her private bathroom, the hot water flowing down her body. Her hand was up against the wall, and her head tilted downward. The water sprayed against her shoulder and the back of her neck. She had been in the shower longer than she normally would be. She wanted to enjoy the soothing feel of warmth pouring down her skin. It was relaxing, which was something she needed.</p>
+        <p>After finishing her shower, Shepard got dressed in some pants and an undershirt. It was late, so she intended to go to sleep soon. She turned off the light of her aquarium, which instantly deprived her quarters of the typical blue illumination it cast. Only the light of the lamp next to her bed remained, which she dimmed to about half. With a datapad in hand, she sat down on the comfortable chair to the left of her bed. She would go to sleep in a while, but for now, she felt like reading something.</p>
+        <p>Over the years, Shepard had spent much of her free time reading. She rarely read fiction; she preferred to study military texts and history. She had read many military treatises, books, manuals, guides… all covering the concepts of war, military, and strategy. It was all to make her a better leader and soldier. But tonight was different. She felt troubled, and wanted something to bring her peace, something to put her mind at ease.</p>
+        <p>She navigated through her datapad and found the book she wanted. It was her favorite piece of fiction, a novel over three-hundred years old: Les Misérables. It was a story of an ex-convict, Jean Valjean, who was shown mercy when he deserved none, and received a second chance at life; one that he did not squander. It was a tale that had long appealed to Shepard.</p>
+        <p>A while passed as Shepard read. Eventually, her eyes started to feel heavy, and she contemplated bookmarking the next page and turning off her datapad, so as to finally get some sleep.</p>
+        <p>Just then, there was a light knock at the door of her quarters. Shepard&#x27;s sleepiness instantly disappeared.</p>
+        <p>&quot;Come in,&quot; she said, her eyes focusing at the door, curious as to who was there. It was rare for anyone to come see her at her quarters, especially at this hour. Generally, if someone needed to talk to her, they would use the communicator.</p>
+        <p>The door opened, and into the dimly lit room stepped an instantly familiar figure. It was the person Shepard most wanted to be there. It was Tali.</p>
+        <p>She approached in a slow, somewhat cautious and nervous way. She briefly scanned the room as she walked toward Shepard. It was the first time she had seen it, but she kept her attention on her. She held her hands together as she approached.</p>
+        <p>Shepard was somewhat confused by her presence—she had gone to bed over two hours ago, and she was sure she would have been sleeping by now. But regardless, it made her very happy to see her. Even in the dim light, she looked beautiful in her snug enviro-suit, decorated by purple fabric elegantly wrapped around her body. The light from the lamp glinted on the shiny purple glass of her mask.</p>
+        <p>&quot;I couldn&#x27;t sleep,&quot; she admitted quietly, stopping several meters away from Shepard. &quot;I&#x27;m not, um… disturbing you, am I?&quot;</p>
+        <p>Shepard smiled. She stood up, and tossed her datapad aside where it landed on her bed. She stepped closer to Tali and said, &quot;Not in the slightest. I&#x27;m happy to see you.&quot;</p>
+        <p>She gestured with her hand for her to sit on the nearby sectional couch. She did, and she sat down as well, in the section perpendicular to her.</p>
+        <p>&quot;You couldn&#x27;t fall asleep?&quot; she asked.</p>
+        <p>&quot;No. I&#x27;m tired, and I even feel sleepy, but I couldn&#x27;t doze off,&quot; she responded. &quot;I thought maybe if you weren&#x27;t busy, we could… talk, a little. I always enjoyed spending time with you.&quot;</p>
+        <p>&quot;I liked spending time with you too,&quot; Shepard said. &quot;I should warn you, unlike on the old Normandy, this time my quarters are in pretty much the quietest part of the ship,&quot; she commented, in a slightly amused tone.</p>
+        <p>&quot;I figured as much when you mentioned it was on the ship&#x27;s top deck,&quot; Tali said. There was a brief moment of silence, and she added, &quot;I should confess… the extra noise back on the original Normandy was comforting, sure, but... it wasn&#x27;t the main reason I slept so well in your quarters.&quot; She sounded somewhat embarrassed by her confession.</p>
+        <p>Shepard smiled at her again; she was happy to hear her talk about their past times together. &quot;If we&#x27;re confessing things, I should confess something too,&quot; she said, &quot;That first time I offered for you to sleep in my quarters, and I said it was just so you could get a good rest before that mission on Maji… well, it wasn&#x27;t the only reason. I was fond of you, and just liked the idea of you resting in my quarters.&quot;</p>
+        <p>Tali giggled quietly and said, &quot;I always thought it seemed a little too friendly of you.&quot; A short period of time passed, and Tali asked, &quot;So, you… you really had feelings for me, at that time? That was only short time after I had joined the Normandy—well before we told each other how we felt.&quot;</p>
+        <p>&quot;Yes,&quot; Shepard said. &quot;Could you blame me? You&#x27;re wonderful.&quot;</p>
+        <p>Tali sighed, and thought for a moment before finally saying, &quot;You know, I never really understood what you saw in me… Someone like you—I just don&#x27;t understand why you&#x27;d want to be with me instead of… well, anyone who isn&#x27;t a quarian.&quot;</p>
+        <p>Shepard had never liked it when she brought this topic up. Tali implied that she wasn&#x27;t good enough for her, or that there were others that could make her happier. Not only was it something she didn&#x27;t agree with, but it actually made her angry.</p>
+        <p>&quot;Tali, listen,&quot; she began to explain. &quot;I fell in love with you because you made me happy. It&#x27;s that simple.&quot;</p>
+        <p>&quot;That&#x27;s not really a reason.&quot;</p>
+        <p>&quot;Yes, it is. It&#x27;s the best reason there could be,&quot; she said. &quot;It seems as if you believe there should be a very specific reason why I&#x27;ve always been so drawn to you, but there isn&#x27;t. Instead, there&#x27;s like a million little things about you that I like. In short—you&#x27;ve always just made me happy. You gave me peace.&quot;</p>
+        <p>There was a period of silence. Tali didn&#x27;t know what to say. Shepard then broke the silence and continued, &quot;Did I ever tell you about how the time right before I met you was the most stressful of my life?&quot;</p>
+        <p>&quot;No, you didn&#x27;t—what was wrong?&quot;</p>
+        <p>&quot;A lot. Just a few days before we met, there was the attack on Eden Prime by the geth.&quot;</p>
+        <p>&quot;Yes, I remember hearing of that.&quot;</p>
+        <p>&quot;Eden Prime by itself was a horrific place—it was an absolute massacre. Civilian bodies everywhere. Husks impaled on dragon&#x27;s teeth. Learning of Saren&#x27;s betrayal. I even lost a team member under my command: a young corporal named Richard Jenkins. Up until that time, it was possibly the worst—and most bizarre—mission I had ever been on.</p>
+        <p>&quot;But that wasn&#x27;t all. Near the end of that mission, I encountered a prothean beacon; the one we were sent to recover in the first place. It touched my mind and filled it with… images so vivid and frightening, I can&#x27;t even describe. The things I saw—people being slaughtered by machines. Flesh dripping down machinery and being fused with it. Those images… until the Reapers are stopped, those images will continue to haunt me.</p>
+        <p>&quot;Then I met the Council. They didn&#x27;t believe me; not about my visions, or about Saren. My Spectre candidacy was jeopardized. It even almost felt like I was being mocked by them. There I was, trying to warn them about the approaching storm, and they didn&#x27;t believe me. I was powerless to do anything until I could prove Saren was responsible for Eden Prime—and how could I possibly prove his betrayal? I needed to hunt him down to prove what he was doing, but I couldn&#x27;t go after him until I had proof. I felt trapped.&quot;</p>
+        <p>Shepard looked at Tali and a very small, weak smile appeared on her face. &quot;And then I learn about a quarian who had evidence that implicated Saren. I found her, and from the first moment I spoke with her, all my fears and concerns instantly disappeared. Just like that.&quot; Shepard paused for a moment, and then asked, &quot;Do you remember on Virmire, where I mentioned how you always managed to bring me peace and tranquility?&quot;</p>
+        <p>Tali just nodded. She wouldn&#x27;t dare disturb her talking with words of her own.</p>
+        <p>&quot;Well, you&#x27;ve been like that for me since the very minute we met,&quot; she said, staring at her eyes. &quot;You brought me peace when we met. And when we got close, you brought me happiness. More so than anyone I have ever known.&quot;</p>
+        <p>Shepard inhaled, and sighed sharply. It was time to say what she had been afraid to say, until now. &quot;You&#x27;re my best friend—the person I&#x27;ve cared the most about in my life. These last couple weeks, knowing that two years had passed since we were together, have been so hard on me. We were so close, and I&#x27;m just afraid that you moved on. That you aren&#x27;t interested in being together anymore. That… I lost you. I don&#x27;t want that. I… want to be with you.&quot;</p>
+        <p>Shepard paused. It felt like she should say more, but she knew nothing else to say. All she could do was sit there, and wait for Tali&#x27;s response. Wait for her judgment.</p>
+        <p>Only a few seconds passed before there was any response from her, but it felt like an eternity. She simply stood up without saying a word, approached her, and sat next to her on the edge of the couch. Her body was oriented in her direction so as to face her.</p>
+        <p>&quot;I spent two years thinking you were dead,&quot; she began to say, &quot;I thought my feelings for you had faded in that time. But since you came back, and I saw you on Freedom&#x27;s Progress, I realized they were still there—they were always there. They had only been locked away.&quot; She paused for a second, and said, &quot;I wanted to do this two years ago…&quot;</p>
+        <p>With those words, she reached up, and removed her mask.</p>
+        <p>The first thing Shepard felt was confusion and surprise. It was something she did not expect. But that feeling disappeared in an infinitesimal amount of time. She was looking at her face. Her face.</p>
+        <p>This was the first time Shepard had ever seen it. It had the youthful appearance expected of someone her age. Her skin was smooth; it looked very soft and sensitive. She had a very pretty face, but there was nothing particularly extravagant about it. Her eyes looked gentle and loving, but behind them was a hint of sadness; of the difficulty and hardships of her life. But they also had a certain strength and determination to them. Overall, she looked exactly as Shepard imagined. She found her beautiful.</p>
+        <p>She smiled.</p>
+        <p>In the mere seconds that passed after her mask came off, she interrupted her admiration of her face by leaning and pressing her lips against hers. She closed her eyes the moment their lips touched.</p>
+        <p>Whatever attempt at restraint Tali intended as she kissed her, instantly disappeared as she experienced her first kiss. The imaginings and daydreams throughout her life of what kissing was like could not compare to the actual experience. How soft lips felt, and the way they seemingly never wanted to let go of each other. It was incredible. The passion of their kiss rapidly escalated.</p>
+        <p>Caught up in the moment, she leaned against her, with her hands pushing against her shoulders. Shepard let her body weight push her back until she was on her back. Their lips parted for only a second as Tali positioned herself on top, one leg on each side, and eagerly continued to kiss her.</p>
+        <p>Shepard&#x27;s hands moved to Tali&#x27;s back and pushed downward, gently yet firmly pressing her body against hers. Soft, quiet moans involuntarily escaped Tali&#x27;s mouth. The feeling of her body being squeezed against hers only encouraged her desirous, hungry kissing. This was the first time she had ever kissed anyone, and although she technically knew nothing about it, it didn&#x27;t matter. It felt far too wonderful for her to possibly be doing it wrong.</p>
+        <p>A while passed, and intensity of their kiss calmed down. Finally, their lips parted. A few quick, soft kisses were exchanged afterwards, and Tali opened her eyes again. They instantly locked with Shepard&#x27;s, who were only a few inches away.</p>
+        <p>She suddenly felt embarrassed at how she let herself get carried away. With a quiet, nervous laugh she said, &quot;I&#x27;m sorry, I don&#x27;t know what came ov—&quot;</p>
+        <p>Shepard interrupted her by kissing her lips again, softly and tenderly. Tali moaned from her sudden gesture, and closed her eyes as she reciprocated.</p>
+        <p>Their eyes opened again, and they smiled at each other. Shepard slowly brought her hand to her face, and very gently caressed her cheek with the tips of her fingers. Tali wasn&#x27;t accustomed to feeling her skin touched like that, it almost seemed to tickle her, but she loved it. She exhaled softly from pleasure.</p>
+        <p>&quot;After you took your mask off,&quot; Shepard said in a relaxed, gentle voice, &quot;You didn&#x27;t give me a chance to tell you that that you look beautiful.&quot;</p>
+        <p>Tali giggled softly and smiled. It meant a great deal to her to be told that. Showing her face to her was the most significant act of trust and love she had ever done in her life. Her positive response to it filled her with an almost overwhelming happiness.</p>
+        <p>&quot;You really think so?&quot; she asked happily.</p>
+        <p>Shepard found her question very cute. It was evident she just wanted to hear her compliment her face some more, and it was very unlike her to ever fish for compliments like that. It was obvious how much she enjoyed her comment on her appearance; how much it meant to her that she found her attractive.</p>
+        <p>&quot;I know so,&quot; she answered. &quot;I&#x27;m going to be very sad when you put your mask on again. First thing tomorrow, we need to find you a clear one.&quot;</p>
+        <p>With a quiet laugh, Tali said, &quot;I don&#x27;t want anyone to see my face,&quot; she leaned in closer to her, &quot;Except for you…&quot; She pressed her lips with hers again.</p>
+        <p>This was another long, intimate kiss. Shepard&#x27;s hands roamed up and down Tali&#x27;s back as she lay on top of her. Their heads moved slightly during their kiss; as their lips gently sucked on one another.</p>
+        <p>Their kiss ended, and a short while passed in which both of them simply looked at each other, enjoying each other&#x27;s presence. However, the earlier comment about her mask had planted a thought in Shepard&#x27;s mind. She wanted to ignore it and enjoy the moment, but the logical part of her brain demanded an answer.</p>
+        <p>She finally asked, &quot;Isn&#x27;t this dangerous to your health? Having your mask off and kissing like this?&quot;</p>
+        <p>&quot;I have some extra-strength antibiotics. And this room is a relatively small, controlled environment,&quot; she answered. &quot;I don&#x27;t think my reaction will be too bad, but… I fully expect to have a big fever tomorrow.&quot;</p>
+        <p>Shepard sighed quietly. She wanted this moment to continue, to keep looking at her face and kissing her soft, sweet lips. But she knew that wasn&#x27;t the right thing to do. &quot;Tali…&quot; she said, &quot;I wish this moment could go on; that I could keep looking at your face like this. But I don&#x27;t want to risk your health any further.&quot;</p>
+        <p>&quot;I… understand,&quot; she responded. Her voice was sad, but understanding. She knew this was dangerous. &quot;I&#x27;ll put my mask back on.&quot;</p>
+        <p>Tali started to get up off her, but abruptly stopped. She looked at her for just a moment, and suddenly threw her arms around her and came in for one last, long kiss. After it ended, neither of them really wanted to stop. They kissed each other with several small, quick pecks for a short while.</p>
+        <p>Finally, they gave each other what was truly the last kiss—for now, at least—and she got up off her, standing up in front of the couch. The mask had fallen to the ground, which she picked up and brought back to her helmet, locking it in place.</p>
+        <p>She turned and found Shepard sitting on the couch, typing into her omni-tool. Tali sat down right next to her, and leaned her head against her shoulder. &quot;What are you doing?&quot; she asked.</p>
+        <p>Shepard turned her head and looked at her. She smiled, and answered, &quot;Clearing you from the hot-bunking schedule. You can forget about sleeping in pod seven tonight.&quot;</p>
+        <p>With that, Shepard stood up and took Tali&#x27;s hand, helping her up. She guided her over to her bed, where they laid down together.</p>
+        <p>Tali cuddled in closely in the position she had always enjoyed, her head resting against her shoulder and with her arms around her. She was finally back in Shepard&#x27;s arms; the place she spent two years believing she would never be again.</p>
+        <p>Shepard held her close and tightly, greatly content over everything that had transpired. Her fear and concern had been alleviated, and the person she loved most in the galaxy was with her again, resting, snuggled in her arms.</p>
+    </div>
+</body>
+</html>

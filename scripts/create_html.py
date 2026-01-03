@@ -197,7 +197,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         input_dir = sys.argv[1]
     else:
-        input_dir = "../outputs/rekindling"
+        input_dir = "outputs/rekindling"
     
     # Optional: custom HTML filename
     if len(sys.argv) > 2:

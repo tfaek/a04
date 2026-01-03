@@ -6,16 +6,16 @@
 # As of 2025-12-26, it doesn't quite work. 
 #
 # USAGE:
-#   From the src/ directory:
-#     python regender_v1.py [input_directory]
+#   From the project root directory:
+#     python src/regender_v1.py [input_directory]
 #
 #   Examples:
-#     python regender_v1.py                    # Uses default: ../inputs/rekindling
-#     python regender_v1.py ../inputs/adamo    # Process adamo chapters
-#     python regender_v1.py ../inputs/custom   # Process custom directory
+#     python src/regender_v1.py                    # Uses default: inputs/rekindling
+#     python src/regender_v1.py inputs/adamo       # Process adamo chapters
+#     python src/regender_v1.py inputs/custom      # Process custom directory
 #
-#   Output will be saved to ../outputs/{directory_name}/
-#   Analysis logs will be saved to ../outputs/analysis_log/
+#   Output will be saved to outputs/{directory_name}/
+#   Analysis logs will be saved to outputs/analysis_log/
 ####### 
 
 from openai import OpenAI
@@ -35,12 +35,12 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         input_dir = Path(sys.argv[1])
     else:
-        input_dir = Path("../inputs/rekindling")
+        input_dir = Path("inputs/rekindling")
     
     # Derive output directory from input directory name
     input_name = input_dir.name
-    output_dir = Path("../outputs") / input_name
-    analysis_dir = Path("../outputs/analysis_log")
+    output_dir = Path("outputs") / input_name
+    analysis_dir = Path("outputs/analysis_log")
     
     # Create directories
     output_dir.mkdir(exist_ok=True, parents=True)

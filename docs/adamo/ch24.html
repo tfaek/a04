@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Effects</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch23.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html" selected>Virus Effects</option>
+            </select>
+            <button class="nav-button" disabled>Next →</button>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Virus Effects</h1>
+    <div class="chapter-content">
+        <p>&quot;I didn&#x27;t know geth built stations this large,&quot; Tali said in quiet awe, as she looked down a vast room through a window, within the twenty kilometer long Heretic Station. It went on as far as her eyes could see.</p>
+        <p>&quot;That room likely spans the entire length of this station.&quot; Legion commented.</p>
+        <p>Shepard recalled what she had read about this place before their mission began, and said, &quot;According to Cerberus&#x27; intel on this station, this was originally a quarian creation. Is that right?&quot;</p>
+        <p>&quot;Yes. This station is of Creator origin. They called it Haratar,&quot; Legion answered.</p>
+        <p>This station was created by my people? We built things like this? Keelah, I never knew… Tali thought to herself.</p>
+        <p>&quot;After the Morning War, creators stripped this station of any useful technology and resources. They abandoned it. Heretics later claimed it and restructured it. Organics use space inefficiently. The interior was reconstructed and upgraded. The exterior hull is all that remains of the original station.&quot;</p>
+        <p>Shepard took a moment to look down the room Tali had been staring, which looked like an unending tunnel. She then said &quot;Let&#x27;s keep moving,&quot; and the three continued on their mission.</p>
+        <p>They progressed through the large space station, moving toward the Reaper datacore that contained the virus they had come to eliminate. They frequently encountered isolated sever nodes, as well as mobile geth platforms, which proved to be of little challenge to them. The technical expertise of both Tali and Legion gave them a significant advantage over their synthetic foes.</p>
+        <p>When they had first arrived, their intent was to simply destroy the station, both eliminating the Reaper virus and severely weakening the heretics&#x27; numbers. But shortly after their arrival, Legion&#x27;s analysis of the Reaper datacore became complete, and a second option presented itself. Legion informed Shepard that he would be able to use the heretics&#x27; own weapon against them, causing them to be reprogrammed to reject their machine gods, and rejoin the geth collective in opposing the Reapers.</p>
+        <p>As they traversed and battled their way through the station, Legion had been attempting to build consensus on whether to destroy the heretics, or rewrite them. Eventually, they reached their destination: the Reaper datacore, and it was time to make a decision. However, Legion had still not been able to reach consensus. Five hundred and seventy-three of its processes favored rewrite, and five hundred and seventy-one favored destruction. Legion left the decision up to Shepard.</p>
+        <p>Shepard considered it for a while, and ultimately decided to rewrite the heretics. In her eyes, it meant more allies would be available to help against what she felt was an inevitable battle with the Reapers. She noticed Tali gave no real opinion on the decision; she simply stated that either way, these geth wouldn&#x27;t be a problem. She was glad to see that Tali didn&#x27;t object to making the geth collective stronger, but deep down inside, she wondered if Tali probably would have considered it safer to destroy the heretics. The fact that Tali didn&#x27;t openly object, however, was a big indicator of her possible growing acceptance of the geth.</p>
+        <p>After a heated battle to defend the datacore while the virus was modified, and a narrowing escape from the station, they returned to the Normandy. As it flew away from Heretic Station, the superstructure let out a massive electromagnetic pulse, broadcasting the altered virus to all other heretic stations within proximity. The same weapon that the heretics sought to use against the geth had been turned around on them. The Reapers lost a large number of their servants.</p>
+        <p>Back aboard the Normandy, after only a short period of time after the completion of the mission aboard Heretic Station, Legion learned that the quarians had performed various weapons tests and were discussing potentially attacking the geth. Aware of this, Legion began the process of building consensus on whether or not to attempt to scan Tali&#x27;s omni-tool and acquire relevant data on the flotilla, so as to warn the rest of its kind.</p>
+        <p>As it built consensus, its memories of the discussion it had with Tali&#x27;Zorah shortly after its arrival on the Normandy were accessed by every one of its processes. They took into consideration her willingness to attempt to contact the geth, so as to negotiate how the quarians could be allowed back unto their homeworld, peacefully.</p>
+        <p>Legion finished building consensus and the majority of its processes judged that, since both Creator-Tali&#x27;Zorah and Shepard-Commander were interested in contacting the geth collective for peaceful purposes, relaying the information at this point was not necessary. It would not attempt to scan her omni-tool and transmit the data.</p>
+        <p>. . .</p>
+        <p>Some days passed since the rewriting of the heretic geth, and Shepard currently stood at her private terminal in the Normandy&#x27;s CIC. There was little left to do now. The ship had been upgraded with all the tech they could access, and all of the team&#x27;s personal matters had been taken care of; everyone was committed and focused on the mission. It was only a matter of waiting for the Reaper IFF installation to be completed.</p>
+        <p>Shepard had decided that they would go on one last mission, in order to make better use their time as they waited. It wasn&#x27;t a particularly important assignment, but it would be their last chance to acquire potentially useful resources, weapons, or technology before attacking the Collectors directly.</p>
+        <p>While Shepard read through some information on the upcoming mission, she received a message from Joker.</p>
+        <p>&quot;Hey Commander, Good news. Looks like the reaper IFF is finally hooked up and ready to go.&quot;</p>
+        <p>&quot;That is not entirely accurate, Mr. Moreau,&quot; EDI said. &quot;The device is powered, but it is causing some unusual instability in other systems. I recommend a more thorough analysis before we attempt to use it.&quot;</p>
+        <p>&quot;We can&#x27;t put our mission on hold forever. How long will this take?&quot; Shepard asked.</p>
+        <p>&quot;A full scan? Who knows with this thing,&quot; Joker answered. &quot;Maybe you better take the shuttle for your next mission. I&#x27;ll make sure we&#x27;re up and running when you get back.&quot;</p>
+        <p>&quot;Alright, I&#x27;ll give the order for the team to assemble at the shuttle, shortly,&quot; Shepard said, and went back to looking over the information she had been reading. A brief period of time passed, when she heard the elevator door behind her open.</p>
+        <p>&quot;Shepard!&quot; a voice yelled. It was Zaeed Massani. &quot;Jessie is missing! My goddamn rifle is MISSING!&quot; The infuriated, veteran mercenary shouted as he approached Shepard, standing right in front of her.</p>
+        <p>Shepard was well aware how much that old rifle meant to Zaeed. Shepard had spent time with Zaeed in the starboard cargo area, and listened to many of his stories of the missions he had been on during his long career as a mercenary and bounty hunter. Jessie was a constant in nearly every one of his tales. Although it had stopped functioning years ago, and was little more than a mere lucky charm now, Zaeed perpetually spoke fondly of Jessie, as if it were a deceased loved one, who had shared in all the danger of his life.</p>
+        <p>When Zaeed had told her of how Jessie suddenly stopped working on one particular mission, and no one he took it to afterwards was able to fix it, Shepard actually found herself genuinely feeling sorry for him. Zaeed had described Jessie&#x27;s retiring as the saddest day of his life.</p>
+        <p>&quot;What happened?&quot; Shepard asked with sincere confusion over its absence. &quot;It&#x27;s not in the starboard cargo area?&quot;</p>
+        <p>&quot;Don&#x27;t you think I looked there already?&quot; Zaeed irritably answered. &quot;I looked all over the damned place! It isn&#x27;t there!&quot;</p>
+        <p>&quot;Zaeed, try and calm down,&quot; Shepard said, holding up her hands slightly. &quot;Have you checked the armory? Maybe somebody took it there. It is a weapon, after all.&quot;</p>
+        <p>&quot;It damn well better be there,&quot; Zaeed growled, and the two proceeded to walk to the armory. They searched the room, but it was quickly obvious it wasn&#x27;t there. The old, rust-crusted rifled covered in dents and scratches would have instantly been noticeable among the new, modern weapons throughout the armory.</p>
+        <p>&quot;She isn&#x27;t here!&quot; Zaeed angrily shouted, as he slammed the door of the weapons locker he had been searching.</p>
+        <p>&quot;Zaeed, I know how much your rifle means to you, but you need to relax,&quot; Shepard said, once again trying to calm him down, as they proceeded to exit the armory and walk back into the CIC. &quot;It has to be somewhere on the ship. We&#x27;ll ask the rest of the team if anyone has seen it.&quot;</p>
+        <p>&quot;I&#x27;m telling you right now,&quot; Zaeed said, stopping near the galaxy map with Shepard, and pointing at her in sync with his words. &quot;When I find out who took Jessie, I&#x27;m going to rip their goddamn arms out of their—&quot;</p>
+        <p>Zaeed was interrupted as the nearby elevator door open. Tali stepped forth out of the elevator. She carried a very familiar, old rifle in her hands. She had Jessie.</p>
+        <p>&quot;Zaeed, there you are,&quot; she said in a friendly tone, which was in stark contrast to Zaeed&#x27;s previous, harsh growling. She approached him and Shepard. &quot;I&#x27;ve been looking for you.&quot;</p>
+        <p>Once in front of them, she held up Zaeed&#x27;s beloved rifle, and said, &quot;I noticed your old weapon earlier, while I was throwing some trash out. I fixed it up for you. Here you go.&quot;</p>
+        <p>Zaeed stared down in disbelief at what she held in her hands. It was Jessie, as beautiful as the day he first found it. All the dirt and rust had even been meticulously scraped off. It shined with a subtle luster he hadn&#x27;t seen in years. He gently took it from Tali&#x27;s hands.</p>
+        <p>&quot;You… fixed Jessie? She actually works?&quot; He asked in shock as he gazed at his treasured weapon; it looked exactly as it did the day he first found it. He then looked up, directly at Tali, and said, &quot;But, how? I&#x27;ve had dozens of techs look at her. They all told me there was nothing that could be done.&quot;</p>
+        <p>&quot;Zaeed, I&#x27;m a quarian,&quot; she proudly answered, almost sounding amused.</p>
+        <p>Shepard looked at Tali with a pleased grin, feeling very proud of her genius girlfriend. She walked over to Tali and put her arm around her waist, holding her closely. Tali returned the gesture. Shepard then said to Zaeed, &quot;She&#x27;s just being modest. Even among her people, she&#x27;s an absolute tech genius. You&#x27;ll never meet a better engineer. You should have had her look at Jessie sooner, Zaeed.&quot; She ended her statement by giving Tali a light squeeze with her arm.</p>
+        <p>Zaeed looked back down at his rifle briefly, and in a quiet voice, which was somewhat unusual to be heard from him, he said, &quot;Thank you… Tali. I won&#x27;t forget this.&quot; It took some difficulty for him speak those words; he was someone who was not accustomed to sincerely thanking another person, or feeling as deeply grateful as he did now. Fixing Jessie was the kindest thing anyone had ever done for him.</p>
+        <p>He then abruptly brought his hand up to his left eye—his real eye—and gave it a quick, outward stroke. &quot;Something in my eye,&quot; he mumbled, &quot;excuse me.&quot; He then quickly walked passed them and entered the elevator. He departed.</p>
+        <p>Once Zaeed was gone, Shepard looked right at Tali, still smiling, and said, &quot;Do you realize what you&#x27;ve done?&quot;</p>
+        <p>&quot;What do you mean?&quot;</p>
+        <p>&quot;I&#x27;m never going to be able to get him to use another weapon again. He&#x27;s going to ignore every swap weapon order I give him from this point on,&quot; Shepard lightheartedly said.</p>
+        <p>Amused, Tali said, &quot;I had no idea that old weapon meant so much to him. I just saw a broken piece of tech, and figured I&#x27;d fix it.&quot;</p>
+        <p>&quot;Are you kidding? You should listen to his stories about it,&quot; Shepard said, then quickly added, &quot;on second thought, don&#x27;t. You&#x27;ll be stuck listening to him for hours.&quot;</p>
+        <p>After a quick laugh, Tali said, &quot;I&#x27;m going to head down to Engineering for a bit. But I&#x27;ll make sure to steer clear of the starboard cargo area, just in case he starts shooting that thing.&quot;</p>
+        <p>&quot;Actually, babe, head over to the shuttle. We&#x27;re going to go on a mission soon, and we&#x27;re all going to take the shuttle. I was just about to give the order, when Zaeed came in yelling about Jessie.&quot;</p>
+        <p>&quot;Alright, Shepard,&quot; Tali responded. &quot;I&#x27;ll get my things and head down there. How come we&#x27;re taking the shuttle, though?&quot;</p>
+        <p>&quot;Something about the IFF causing unusual interference. Joker recommended we take the shuttle, so a thorough scan can be performed on the Normandy.&quot;</p>
+        <p>Tali then went to the armory to pick up her weapons, and Shepard told EDI to inform the team. She then went up to her quarters to put on her combat gear.</p>
+        <p>. . .</p>
+        <p>A short time after the team had been instructed to meet by the shuttle, Shepard walked through the cargo area, equipped with her armor and weapons. As she approached the shuttle, she noticed that thus far only two members of the team had arrived: Tali and Legion. It was no surprise to her that they were the first to arrive. Tali had been informed of their mission first, earlier in the CIC, and Legion no doubt responded to the command to meet by the shuttle with machine-like efficiency.</p>
+        <p>&quot;It&#x27;ll just be a moment before the others get here,&quot; Shepard commented as she reached them.</p>
+        <p>A minute passed with the three waiting by the shuttle, and Garrus showed up. He approached, and greeted them. Shortly after his arrival, Garrus said, &quot;Hey Commander, I think we may have a small problem.&quot;</p>
+        <p>&quot;What is it, Garrus?&quot; Shepard inquired.</p>
+        <p>&quot;The entire team is coming along, right?&quot; Garrus asked.</p>
+        <p>&quot;That&#x27;s right.&quot;</p>
+        <p>&quot;Well, the shuttle can only seat twelve people. There are thirteen of us.&quot;</p>
+        <p>Shepard thought for a moment. Then, with a smirk, she said, &quot;That won&#x27;t be a problem. Tali can just sit on my lap during the ride.&quot; She glanced at her right after her comment, continuing her smirk.</p>
+        <p>&quot;As nice as that may sound to you,&quot; Tali responded, in a playful, snarky way, &quot;I don&#x27;t think I&#x27;d be very comfortable sitting like that for the entire trip.&quot;</p>
+        <p>&quot;Well, I&#x27;m sorry, Tali,&quot; Shepard said, making no effort to sound sincere, &quot;but you heard the math. There aren&#x27;t enough seats to go around. You&#x27;re just going to have to sit with me.&quot;</p>
+        <p>&quot;Shepard-Commander,&quot; Legion chimed in, &quot;We do not experience discomfort. No seat is required. We can remain standing during shuttle transport.&quot;</p>
+        <p>&quot;Thanks, Legion,&quot; Tali said.</p>
+        <p>&quot;Yeah. Thanks…&quot; Shepard grumbled.</p>
+        <p>Garrus just laughed quietly.</p>
+        <p>Over the next few minutes, the rest of the team trickled into the cargo area, and gathered around the shuttle. It wasn&#x27;t long before all of them were inside, and the shuttle prepared to take off.</p>
+        <p>&quot;We&#x27;re heading out,&quot; Shepard said to Joker over the communicator. &quot;The ship&#x27;s all yours. Take care of her.&quot;</p>
+        <p>. . .</p>
+        <p>Some hours had passed, and the crowded shuttle was travelling through the vast emptiness of space. Tali sat at the end of one of the rows of seats, right next to the window, with Shepard sitting next to her. She was leaned against her slightly, as she looked out at the stars.</p>
+        <p>Shepard and Tali were mostly quiet, as they sat together, enjoying the relaxing ride within the shuttle. Most of the team members were passing the time by engaging in conversation with one another. The various discussions going on filled the shuttle with the low, perpetual murmur of chatting. Thane and Garrus were discussing preferred sniper rifles, and comparing past sniping accomplishments. Kasumi attempted small talk with a somewhat disinterested Jacob. Grunt enthusiastically listened to Zaeed&#x27;s various tales of past, violent battles. And various other topics were discussed among the others.</p>
+        <p>Shepard was content simply sitting next to Tali, feeling her body slightly leaning against hers, as she listened in on the others&#x27; conversations. At one point, Tali rested her head against her shoulder, but kept herself oriented to be able to stare out the cosmos beyond the window.</p>
+        <p>Suddenly, the ongoing conversations within the shuttle were interrupted by the shuttle&#x27;s VI. &quot;Incoming message from the Normandy.&quot;</p>
+        <p>&quot;Shepard, the Normandy has been attacked,&quot; the message said. It was EDI.</p>
+        <p>All talk came to a complete halt, and looks of confusion were now on the faces of everyone, as they attentively listened.</p>
+        <p>The message continued, &quot;The Reaper IFF broadcasted the Normandy&#x27;s location to the Collectors, and also implanted a virus into the ship&#x27;s computers, which disabled propulsion and prevented escape. The Collectors boarded the ship and abducted the crew. Mr. Moreau and I were successful in retaking control and purging the ship of hostiles, however everyone else is gone. The entire crew has been abducted. Please return quickly, Shepard.&quot;</p>
+        <p>After the message ended, complete silence filled the shuttle, and all the looks of confusion that had initially been on the faces of the team, were completely gone.</p>
+        <p>Now, only looks of anger, abhorrence, and loathing, could be seen.</p>
+    </div>
+</body>
+</html>

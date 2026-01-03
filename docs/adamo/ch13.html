@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Wish Shepard Were Here</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch12.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html" selected>I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+            </select>
+            <a href="ch14.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">I Wish Shepard Were Here</h1>
+    <div class="chapter-content">
+        <p>Tali lay on a small, single-person sleeping pad with her hands resting on top of her stomach, fingers intertwined. She stared up at the bolted metallic plates that made up the ceiling of where she now lived: a cubicle within the crew deck of the Neema.</p>
+        <p>As standard for the Neema, her cubicle was composed of three steel walls, each one roughly ten feet long. Her cubicle was very lightly furnished, and completely undecorated; there were no tapestries or colored fabric on the walls, and the cubicle&#x27;s entrance was devoid of any hanging cloth. The only furniture inside were her sleeping pad in one of the corners, a metal desk in the opposite corner, two metal chairs, and a vid screen on the rear wall. All of it was in there already when she moved in today.</p>
+        <p>All quarian ships had a trading deck; an area where quarians could leave items they no longer wanted or required, and pick up items they did need. Tali could go to the trading deck of the Neema to acquire the extra items and furnishings she would eventually need, but for the moment her mind was busy elsewhere. As she lay there on her sleeping pad, staring up at the ceiling in a numb emotional state, she thought about Shepard, and how she had lost her forever.</p>
+        <p>Only a few days ago, what was to be the happiest day of her life turned into the most tragic. The ship that was her home, the Normandy, was destroyed. And along with its destruction came the death of the woman she loved. The hours she spent floating in space inside the escape pod, lamenting the loss of Shepard, were the worst of her life.</p>
+        <p>Eventually, in response to the distress beacon the Normandy sent out before its destruction, an Alliance ship appeared and rescued the survivors. They were taken to the Citadel, where they were all interviewed not only by the Alliance, but by C-Sec; after all, a Council Spectre had been killed. This mandated an official report to be filled out by C-Sec and presented to the Council.</p>
+        <p>Between the lack of a body, and the desire of both the Alliance and the Council to downplay Shepard&#x27;s death, only a small, private ceremony was held in her remembrance on the Presidium. Tali was enraged at their attempt to downplay her death. As far as she was concerned, not only did they all owe her their lives, but she was a good, wonderful woman who deserved so much better than their pathetic ceremony.</p>
+        <p>After the interviews for the investigation were conducted, and the funeral ceremony was over, it was time for the crew of the Normandy to say goodbye to each other and go their separate ways. The Alliance personnel were simply given new postings and transferred to other ships, while the non-Alliance members were given the choice of where to be taken. With Shepard gone, there was only once place for Tali to go: back to her lifelong home, the Migrant Fleet.</p>
+        <p>She had arrived at the Neema only a few hours ago, via a small shuttle provided to her, and presented its captain with the geth data Shepard had given to her as her pilgrimage gift. The captain gladly accepted her gift, and immediately welcomed her to his crew. Not only was he amazed by her gift, but the simple fact that she was Tali&#x27;Zorah—the quarian who helped take down Saren during the battle of the Citadel—was more than enough reason for him to want her aboard his ship.</p>
+        <p>As Tali lay in her cubicle, thinking about the recent events of her life, her thoughts were suddenly interrupted as she saw a figure appear at the uncovered entrance. She turned her head, and instantly recognized who it was based on her posture, and the pattern and style of the fabric adorning her envirosuit; it was Admiral Shala&#x27;Raan vas Tonbay.</p>
+        <p>&quot;Auntie Raan,&quot; Tali said as she got up from her sleeping pad, her voice a mixture of pleasant surprise and weariness. They approached each other and greeted with a hug. &quot;You came to visit me.&quot;</p>
+        <p>&quot;Tali&#x27;Zorah vas Neema, I&#x27;m so glad to see you,&quot; Raan greeted, &quot;I apologize that I wasn&#x27;t here for your gift presentation to the captain, but you alerted us of your return with such short notice!&quot; Raan said apologetically, and then asked, &quot;Was your father there, at least?&quot;</p>
+        <p>Tali sighed and quietly said, &quot;No. He wasn&#x27;t.&quot;</p>
+        <p>&quot;He had been looking forward to your return ever since you left. I&#x27;m sure he had a good reason.&quot;</p>
+        <p>&quot;He always does.&quot;</p>
+        <p>There was a period of awkward silence after their brief exchange over her father&#x27;s absence. Shala&#x27;Raan then changed the subject, &quot;The Neema&#x27;s captain assigned you your own living area? That is wonderful. You&#x27;ll have so much space to yourself!&quot; Raan commented as she looked around at the empty cubicle.</p>
+        <p>&quot;It feels selfish to have my own room. I offered to share a living space with someone else, but he insisted.&quot;</p>
+        <p>&quot;You deserve it. I heard about the gift you presented; no one has ever brought back anything that could prove to be so vital to our people. And you didn&#x27;t even have to bring a gift! What you did at the Citadel was amazing. Everyone heard about how you were part of the team that stopped that turian leading the geth. We are all so proud of you.&quot;</p>
+        <p>Raan mentioning the Battle of the Citadel immediately conjured up images of Shepard from that day. Tali remembered how they ran up the outside of Citadel Tower. The entire sky above them was the vast grid of lights and moving dots that made up the cities that existed on the Citadel&#x27;s Wards. And in the distance in front of them, was Sovereign. A massive, lumbering beast, with its tentacle-like arms slowly swaying in the weightlessness of space.</p>
+        <p>But there was no fear during that battle. Not with Shepard leading. On that particular day, she had fought through everything they encountered with the tenacity she thought only existed in stories and myths of ancient, legendary heroes. No matter how many geth troopers or tank-bred krogan warlords attacked them, Shepard outmatched them all in every way. And when Saren&#x27;s flesh melted away, revealing a synthetic avatar under the control of Sovereign, Shepard was the only one in the squad who could consistently keep up with its blisteringly fast movements. The near infinite computing power of the Reaper&#x27;s mind, calculating in nanoseconds the most effective actions and probable outcomes, was still defeated by her.</p>
+        <p>Tali blinked her eyes and cleared her thoughts. &quot;Thank you…&quot; she responded in a soft mutter; her melancholy very noticeable.</p>
+        <p>Since the moment they had greeted, Raan could tell something was wrong. Tali&#x27;s typical positivity was completely absent; the strangeness of its absence augmented by the fact that this was supposed to be a happy time for her. Raan strongly suspected she knew the cause of Tali&#x27;s depression, but she knew it would be best to ask. &quot;You&#x27;re not yourself, Tali. What&#x27;s wrong?&quot;</p>
+        <p>Tali didn&#x27;t respond, unsure of how to answer. It was impossible to answer without explaining everything that had happened; how she had become involved in a relationship with a human during her pilgrimage. She had no idea how Raan would react to that.</p>
+        <p>&quot;I heard about what happened to the human whose crew you were part of—the one with you on the Citadel. I heard that she passed,&quot; Raan commented.</p>
+        <p>&quot;They never found her body. She… she could still be alive…&quot;</p>
+        <p>Raan sighed and put her hand on Tali&#x27;s shoulder, &quot;Tali, you have spent your entire life among the stars. You know that when someone is lost to the void of space, their bodies are rarely found.&quot;</p>
+        <p>&quot;I know… I just—I want for her to be alive so much…&quot; A quick, soft gasp escaped Tali&#x27;s mouth as she attempted to hold back her tears.</p>
+        <p>It was now completely obvious to Raan. She was more than just Tali&#x27;s captain during her pilgrimage. And she was likely more than just her friend. &quot;This human, she… meant a lot to you, didn&#x27;t she?&quot;</p>
+        <p>Tali didn&#x27;t have words to respond with. She only nodded her head.</p>
+        <p>&quot;You and her were… close?&quot;</p>
+        <p>Tali nodded her head again, this time more intensely than before. She had been trying to keep herself from crying, but by the end of her nod she couldn&#x27;t hold it in anymore. She started to quietly weep. Tali felt embarrassed, and partly afraid; Raan was the closest thing she had to a loving parent, and she was worried that Raan would show disapproval of her interspecies relationship. Tali lacked the strength to argue and defend her choice at the moment.</p>
+        <p>There was instant relief as Raan gently placed her hands on Tali&#x27;s shoulders, and said in a soft, comforting voice, &quot;I didn&#x27;t know. I am so sorry, Tali. I&#x27;m so sorry for your loss.&quot;</p>
+        <p>Tali placed her arms around Raan, and they both hugged as Tali continued to cry, now more intensely. As she cried, all she could stutter out was, &quot;I loved her so much…&quot;</p>
+        <p>Raan sighed loudly, sad to see her so upset. She then thought carefully about what to say.</p>
+        <p>&quot;I have known you since you were born, Tali. It pains me so much to see you this upset; to know you have lost somebody you cared for. I wish there were words I could say that would cure your sadness, but I know such words do not exist.</p>
+        <p>&quot;So instead, I&#x27;ll say what you already know; what you already learned long ago, when your mother passed away: the pain will eventually fade away by itself. Your heart will never fully heal—that is the risk of giving a piece of it to somebody else, there is a chance you&#x27;ll never get it back—but it will heal enough.</p>
+        <p>&quot;And a day will come in which thoughts of the one you lost won&#x27;t bring sadness, but happiness. Happiness, as you think back to all the good times you spent with her; as you think back to what it was about her that made you love her so.&quot;</p>
+        <p>Tali sniffled quietly as her weeping began to end, and she whispered softly, &quot;Thank you, Auntie. Thank you so much.&quot;</p>
+        <p>A short moment passed in silence. Although Raan knew Tali&#x27;s sadness would remain for a long time, she also knew how Tali could at least be given some temporary relief. Raan walked over to one of the chairs and sat down. She gestured for Tali to sit on the other one and said, &quot;Come. Tell me about her.&quot;</p>
+        <p>Tali walked over and stood in front of the available chair, &quot;You want to know about her?&quot;</p>
+        <p>&quot;Of course I do, Tali! She was your first love. I want to know who she was, what kind of person she was, what it was about her that won your heart. Tell me everything.&quot;</p>
+        <p>A quick, quiet half-laugh escaped Tali&#x27;s mouth and she sat down, holding her hands together, &quot;I… I don&#x27;t really know where to start. There was so much good about her. Shepard was so… she was an amazing person.&quot;</p>
+        <p>&quot;Start where she started. Where was she born? What kind of family did she come from?&quot;</p>
+        <p>&quot;Shepard was born on the human home world.&quot;</p>
+        <p>&quot;What is it called?&quot; Raan interrupted, &quot;I don&#x27;t know much about humans; when I went on my own pilgrimage, they weren&#x27;t even known to exist.&quot;</p>
+        <p>&quot;Their home world is called Earth. She grew up in one of its cities, but she didn&#x27;t have a family… she was an orphan. She had a really rough time when she was young—she never liked to talk about it.&quot;</p>
+        <p>&quot;I can understand. It must have been difficult for her to live like that.&quot;</p>
+        <p>&quot;It was. It took so long for her to tell me anything about her upbringing. She always liked to hear me tell her about life here on the flotilla, though.&quot;</p>
+        <p>&quot;How was it that you two met?&quot;</p>
+        <p>&quot;Well… I&#x27;ll spare you the details for now, but I got into some… trouble, on the Citadel. Some people were trying to, well, kill me. I got into a firefight with them, and then she came out of nowhere. She saved me.&quot;</p>
+        <p>&quot;I don&#x27;t know what&#x27;s worse, the fact that people were trying to kill you, or that I&#x27;m not very surprised by that,&quot; Raan joked, ignoring the seriousness of her story for now. &quot;But what an amazing way for two people to meet.&quot;</p>
+        <p>&quot;I was so happy and excited when she accepted my offer to join her crew! I couldn&#x27;t believe how amazing and advanced her ship was. It was a dream come true to serve on a ship like that,&quot; Tali said enthusiastically. Raan grinned under her mask; just as she expected, talking about Shepard and reliving memories of her were making Tali happy, and giving her relief from her mourning. If only for a little while.</p>
+        <p>&quot;Oh Keelah… I just remembered how only a short time after I joined her ship,&quot; Tali continued her tale, &quot;I yelled at her second-in-command, Pressly. I even called him a bosh&#x27;tet.&quot;</p>
+        <p>&quot;Tali&#x27;Zorah! You insulted a commanding officer of a ship?&quot; Raan said in a pretend disciplinary voice; it was obvious she was amused by the story.</p>
+        <p>&quot;Well, he said some things he shouldn&#x27;t have. But we patched things up. We even became friends.&quot; After a pause, Tali then said in a noticeably more somber voice, &quot;He also died when our ship got attacked.&quot; She sighed.</p>
+        <p>&quot;What did Shepard do after you yelled at this Pressly?&quot; Raan asked, trying to keep Tali focused on remembering the times before she lost Shepard.</p>
+        <p>&quot;Oh, I was terrified when I got called to her quarters. She had been really great to me since I met her, but I still didn&#x27;t know her all that well at the time. I was so scared of what she&#x27;d say—I thought she was going to ask me to leave her ship.&quot;</p>
+        <p>&quot;What happened?&quot;</p>
+        <p>&quot;She… she wasn&#x27;t mad at all. She understood, and just wanted it to not happen again. I was so relieved at how she handled it.&quot;</p>
+        <p>Tali sighed happily during her recollection and added, &quot;She was always like that; she always tried to handle problems with words first. And she was good at it, too,&quot; she suddenly laughed, &quot;We had this krogan on our team. One time he was really angry—you know how krogan are when they&#x27;re upset—and after only a few minutes of talking, Shepard got him to calm down.&quot;</p>
+        <p>&quot;That is impressive. She must have been very eloquent.&quot;</p>
+        <p>&quot;She really was.&quot;</p>
+        <p>Tali suddenly remembered another story she wanted to tell her, &quot;Oh, here&#x27;s something that was funny. Our ship had this ground vehicle called the Mako. It was designed for rapid deployment—it would be dropped from the ship at a high altitude, and then it used thrusters to slow its descent. However, Shepard never warned me that it got on the ground that way. So the first time I went riding in it, and I saw her drive us off the ship, and we started to plummet to the ground…&quot;</p>
+        <p>&quot;Oh no!&quot; Raan laughed as she concluded how frightening it must have been for Tali.</p>
+        <p>Tali also laughed, &quot;Once we were on the ground, I was pretty mad at her for not warning me. Although, looking back, it really was pretty funny.&quot;</p>
+        <p>&quot;It sounds like you two had a lot of wonderful times together. I can see why you fell in love with her.&quot;</p>
+        <p>&quot;Yes,&quot; Tali said in a somewhat distant tone; Raan&#x27;s comment triggered a thought in her mind. After a short while, she added, &quot;It&#x27;s easy to see why I fell in love with her. But… I&#x27;ll never really understand why she wanted me.&quot;</p>
+        <p>&quot;What do you mean, Tali? You are a wonderful girl.&quot;</p>
+        <p>&quot;Well, it&#x27;s just that, she was so… she was wonderful, dashing, and famous. She could have had any man she wanted; someone who wasn&#x27;t a quarian, trapped in a suit. I just don&#x27;t understand why she wanted… me. I can&#x27;t think of any one thing about me, that would have made her want me.&quot;</p>
+        <p>&quot;But that is a good thing,&quot; Raan said, and Tali looked at her, eager for an explanation, &quot;How could a relationship work between you two if she only loved you for &#x27;one thing&#x27;? She loved you for the person that you are; she saw through your suit, and fell in love with the wonderful girl under it. You two were meant to be together. It is that simple, Tali&#x27;Zorah.&quot;</p>
+        <p>&quot;No, we weren&#x27;t…&quot; Tali&#x27;s voice was one again ripe with sadness, and her eyes rapidly watered, &quot;If we were, she&#x27;d still be—I, I wouldn&#x27;t have lost her…&quot; The tears in her eyes once again broke free, and she began to cry.</p>
+        <p>Raan sighed, realizing she should have picked her words better. &quot;You didn&#x27;t lose her, Tali. She was taken from you.&quot; Raan placed her hand on Tali&#x27;s shoulder to give her some comfort, and decided to let Tali finish her crying; she needed to let it out, and mourn her lost love.</p>
+        <p>Tali wept for a short while longer, until she inhaled sharply a few times so as to stop herself. &quot;I&#x27;m sorry,&quot; she mumbled quietly as she stopped, &quot;I just miss her so much. It isn&#x27;t fair… she was a good person, she deserves to be alive.&quot;</p>
+        <p>&quot;It is regrettable how often those who deserve to live are the ones that perish before their time. But at least she will be remembered, and loved; she&#x27;ll never truly be gone as long as you remember her.&quot; Raan was aware how fruitless her words would be in giving Tali solace, but it was all that she could say.</p>
+        <p>&quot;Do you have a holo of her, at least?&quot; Raan asked.</p>
+        <p>&quot;Yes, on my omni-tool. I have a few.&quot;</p>
+        <p>&quot;Why don&#x27;t we go to the trading deck and look for a holo emitter, then? That way you can have her picture on your desk, at least. Your living space is in desperate need of some items, anyway—you don&#x27;t even have curtains to cover the entry.&quot;</p>
+        <p>&quot;I know I need some things… I just haven&#x27;t felt like worrying about it now.&quot;</p>
+        <p>&quot;Come on, Tali, let&#x27;s go. Maybe it&#x27;ll help you feel better.&quot;</p>
+        <p>&quot;I don&#x27;t really feel like it…&quot; Tali said hesitantly.</p>
+        <p>&quot;It&#x27;ll do you good. It&#x27;ll take your mind off your grief. When you were a child you loved to go to the trading deck and look through the many different items. I remember when you first got your suit… you spent so many hours looking for just the right cloth to decorate it how you wanted,&quot; Raan said fondly as she recalled the memories of Tali&#x27;s youth. &quot;I&#x27;m sure you&#x27;ll spend even more time decorating your new home.&quot;</p>
+        <p>Tali sighed quietly in defeat, &quot;I suppose I should… I need to at least get something to cover the entry. Some privacy would be nice.&quot;</p>
+        <p>&quot;I&#x27;m glad you changed your mind. I&#x27;m sure it&#x27;ll help you feel better. Let&#x27;s go,&quot; Raan said as she stood up from her chair, and began to walk out of the cubicle.</p>
+        <p>Tali stood up as well and asked in a soft voice, &quot;Auntie?&quot;</p>
+        <p>&quot;Yes?&quot;</p>
+        <p>Tali was grateful for the time Raan had spent with her, and for all her kind words. She wanted to explain all that to her and thank her, but in the end all she found herself able to mutter was a mere &quot;Thank you.&quot;</p>
+        <p>The two left Tali&#x27;s cubicle, and walked together toward the elevator that would take them to the Neema&#x27;s trading deck.</p>
+        <p>It would still be a long time before Tali&#x27;s broken heart would heal, but she knew Raan was right. She needed to get her mind off the pain, and spending time acquiring some necessities for her living space would help; at least for now.</p>
+        <p>After all, this ten by ten foot living area aboard the Neema was her home now. And would likely remain so for the rest of her life.</p>
+    </div>
+</body>
+</html>

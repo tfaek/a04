@@ -92,7 +92,7 @@ wheels = [
 ]
 
 [[package]]
-name = "fanfic"
+name = "a04"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It&#x27;s Me</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch14.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html" selected>It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+            </select>
+            <a href="ch16.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">It&#x27;s Me</h1>
+    <div class="chapter-content">
+        <p>A UT-47 Kodiak shuttle flew over the now abandoned human colony of Freedom&#x27;s Progress, quickly descending unto a clear area and landing. As its engines powered down, its side door opened and from it emerged Commander Shepard, leading Cerberus operatives Miranda Lawson and Jacob Taylor. It was their mission to investigate this colony, and discover why all the colonists had mysteriously vanished.</p>
+        <p>It was night time on the colony, and an unsettling, eerie sensation hung in its cool, dry air. It was strange to see a colony that looked so lived-in to be completely devoid of all signs of life. All the noises expected to be heard in such a populated area—the sounds of vehicles, the voices of friends and neighbors conversing—were completely absent. Aside from their own footsteps, the only noise that could be heard as Shepard and her team progressed through the colony was the low, subtle hum of the outdoor lights, which had been programmed by their now absent masters to automatically turn on upon nightfall.</p>
+        <p>It wasn&#x27;t long before the quiet was suddenly replaced by the ferocious roaring of gunfire. Shepard and her team ran into a small group of security mechs, which—strangely—attacked them. It was unusual not only because they were human, but also because they hadn&#x27;t done anything that would have registered as hostile action to a security mech&#x27;s default programming.</p>
+        <p>The three well trained, experienced humans easily dispatched the security mechs, and continued in their search of the colony. At one point, they entered one of the trailer-sized housing units, and as they walked inside Shepard abruptly halted. She held her hand up, telling her team behind her to also stop.</p>
+        <p>&quot;Looks like we may not be alone here,&quot; she said, nodding towards a few destroyed security mechs on the ground. Their bodies had holes and dents from standard mass accelerator weapons.</p>
+        <p>&quot;Unlikely. We&#x27;re the only ones that know this colony got attacked,&quot; Miranda refuted, and then continued so as to explain the presence of the destroyed security mechs, &quot;These mechs were likely destroyed by whatever attacked these colonists.&quot;</p>
+        <p>Shepard stepped deeper into the room, slowly and carefully looking around for clues as to what destroyed the mechs. Miranda&#x27;s explanation made sense, but her instincts told her something was off; and she had long learned to trust her instincts. Something on the ground suddenly caught her eye: a spent thermal clip. She walked over to it and picked it up. Since the rigid material of her hard-suit&#x27;s gloves prevented any tactile sensation, she was unable to determine if it was still hot. She took off her helmet with her other hand and attached it to a small strip of fabric hanging from her suit&#x27;s belt, letting it dangle from her waist. She then held the thermal clip close to her cheek.</p>
+        <p>&quot;It&#x27;s giving off heat. This thermal clip is fresh,&quot; she said as she turned and addressed the others. At the same time, she gently placed the clip on top of a nearby table; dropping it back on the ground would&#x27;ve created extra, unnecessary noise.</p>
+        <p>&quot;How can that be? Nobody&#x27;s supposed to know this place got hit, except us,&quot; Jacob said, instinctively tightening the grip on his heavy pistol.</p>
+        <p>&quot;It could be anyone. Maybe even a remnant of whoever attacked this colony. It&#x27;s likely they saw our shuttle and know we&#x27;re here, so be on alert.&quot; Shepard turned back around, and continued to walk. This time more alert and at a steadier pace.</p>
+        <p>As they progressed further into the colony, they encountered other groups of destroyed security mechs, as well as more fresh thermal clips. At one point they crossed through the inside of another living unit, and as soon as they exited its rear entrance, they could hear nearby gunfire. It was coming from the area beyond the large, opened metal doorway a short distance away. Inside, a small group of quarians were engaging a massive YMIR Battle Mech; and losing.</p>
+        <p>&quot;Quarians?&quot; Shepard said in surprise.</p>
+        <p>&quot;What are quarians doing here? You don&#x27;t think they&#x27;re responsible for the missing colonists, do you?&quot; Jacob asked. It was obvious he wasn&#x27;t very familiar with the race.</p>
+        <p>&quot;No.&quot; Shepard instantly responded.</p>
+        <p>&quot;It&#x27;s highly unlikely,&quot; Miranda added, almost at the same time as Shepard&#x27;s response. &quot;Quarians tend to keep to themselves, and there have been no records of their fleet being anywhere near the attacked colonies.&quot;</p>
+        <p>&quot;Either way, they&#x27;re getting annihilated by that heavy mech. We have to help them,&quot; Shepard said.</p>
+        <p>&quot;Why bother?&quot; Miranda nonchalantly argued, &quot;They&#x27;re obviously only here to loot the colony. They&#x27;re no use to us. We should take advantage of their distraction and move past the heavy mech.&quot;</p>
+        <p>For a second, Shepard gave her a mixed look of disappointment and anger. She then grabbed her helmet and put it back on as she ran toward the battle zone. Just before reaching the large entryway of the area, she observed that only a female quarian remained alive. She had just been pushed out from behind her cover by the concussive force of one of the mech&#x27;s rockets, and it was just about to finish her off with a torrent from its assault cannons.</p>
+        <p>. . .</p>
+        <p>&quot;Everyone hold up! We&#x27;ve got company,&quot; Tali&#x27;Zorah said as a shuttle roared overhead, and descended some distance away behind the various structures of the colony. Between the design of the shuttle, and the writing on its side, Tali recognized that it was of human origin, &quot;Humans.&quot;</p>
+        <p>It was Prazza, however, who had noticed the gold and black symbol on the shuttle&#x27;s side. &quot;It had the Cerberus insignia on it! It&#x27;s a Cerberus shuttle!&quot; he exclaimed.</p>
+        <p>Over the last two years, quarians had grown to despise the Cerberus organization. Not only was their pro-humanity, anti-alien agenda enough to warrant hate from any non-human race, but their attack on the Migrant Fleet—which involved Cerberus operatives actually entering a flotilla ship, and shooting quarian civilians—felt like a very personal attack upon the quarian people. Since the three hundred years of their exile, no race, government, or pirate group had ever attacked the Migrant Fleet in such an intimate way. None of the races in the galaxy, as a whole, had more animosity toward Cerberus than the quarians.</p>
+        <p>&quot;Orders, Miss Zorah?&quot; one of the quarian marines asked, now that the shuttle&#x27;s affiliation had been revealed.</p>
+        <p>Prazza immediately responded, &quot;I say we ambush the Cerberus bastards.&quot;</p>
+        <p>&quot;That&#x27;s not your decision, Prazza,&quot; Tali said, agitated by Prazza&#x27;s insubordination, &quot;Our mission is to find Veetor, not engage Cerberus. We keep moving to Prazza&#x27;s location. Everyone stay alert in case we run into them, but don&#x27;t engage without my command.&quot;</p>
+        <p>Prazza couldn&#x27;t stand the fact that both him and his squad had been put under the command of Tali&#x27;Zorah. As far as he was concerned, the only reason she had command was because she was some admiral&#x27;s daughter. Even orders that he agreed with, he hated taking, simply out of principle.</p>
+        <p>He was on the brink of speaking out against her command, but he bit his tongue and did as told. The group continued moving forward in Veetor&#x27;s direction. Along the way they encountered a few more groups of security mechs, which they dispatched without much difficulty. Eventually, the group of quarians reached a large set of steel doors. Scans showed that Veetor was just beyond.</p>
+        <p>&quot;I&#x27;ll open the doors,&quot; Prazza said as he approached the door control, preparing his omni-tool.</p>
+        <p>&quot;Stop!&quot; Tali instructed, looking down at her omni-tool. &quot;According to my scans, Veetor is just beyond, but I&#x27;m also picking up something else. It&#x27;s much larger than any of the security mechs we&#x27;ve encountered.&quot;</p>
+        <p>&quot;And?&quot;</p>
+        <p>&quot;Veetor reprogrammed all of the colony&#x27;s defenses to attack anyone on sight. We should go around and use a side-entrance. We can&#x27;t just rush in there.&quot;</p>
+        <p>&quot;Listen, Zorah,&quot; Prazza said defiantly. &quot;In case you forgot, there are Cerberus members here. For all we know, they&#x27;re aware that Veetor is here and have come to take him! We can&#x27;t waste our time. We need to hurry!&quot;</p>
+        <p>&quot;No, you listen, Prazza. I&#x27;m the one in command, and I gave you an order. If you can&#x27;t follow orders, then just go wait on the ship!&quot;</p>
+        <p>&quot;You&#x27;re only in charge because of your daddy. This is my squad, and we don&#x27;t need you here. You can stay here and get killed by Cerberus if you want, but we&#x27;re going in there, and we&#x27;re going to finish this mission.&quot;</p>
+        <p>&quot;Please, Prazza. Don&#x27;t be an idiot,&quot; Tali responded, her voice heavier with concern than anger.</p>
+        <p>Prazza ignored her, and addressed the others, &quot;All of you, get ready. I&#x27;m opening this door. We go in, grab Veetor, and then we leave.&quot; He punched a command into his omni-tool, and the large door before them opened.</p>
+        <p>Between the fact that Prazza had been their squad leader until this mission, and the concern of a potential encounter with Cerberus operatives, the entire quarian squad sided with Prazza, ignoring Tali&#x27;s command. They all followed him inside, into the large open area encircled with modular living units.</p>
+        <p>Tali felt both vexed and betrayed. They can get themselves killed if they want. I&#x27;m going to finish this mission, with or without them, she thought to herself as she turned away so as to begin searching for an alternative way to reach Veetor. Suddenly, she heard gunfire, followed by a loud explosion.</p>
+        <p>Just as she turned her head toward the others, she saw two dead, limp quarian bodies tumble briefly on the ground; the explosion of a rocket had killed them. She then saw the source of the rocket.</p>
+        <p>A massive security mech emerged from the side of one of the living units, each of its footsteps causing vibrations on the ground as it walked. This was the first time Tali had ever seen a YMIR Heavy Mech, and it was a terrifying sight. It seemed as tall as a Geth Prime, but bulkier and more heavily armored. It was covered in plates of thick, bone-white armor, and it was obvious from the shots fired at it by the quarian squad that it was also very heavily shielded.</p>
+        <p>Watching the colossal killing machine unleash a torrent of automatic mass accelerator fire upon her own people was too much; Tali couldn&#x27;t ignore them. Although the squad had betrayed and disobeyed her—and in doing so, inadvertently resulted in their current fight for survival—Tali was incapable of simply leaving them to their doom. Against her better judgment, she decided to help them.</p>
+        <p>It was instantly obvious that attempting to destroy the mech with her weapon would be unrealistic. It was far too well armored and shielded to be brought down by the tiny, sand-grain sized metal slugs launched by her shotgun. Only heavy weapons made sense against such an enemy, which the squad woefully lacked. The only solution would be to attempt to hack into its systems and either disable it or alter its programming to stop its attacks. Tali prepared her omni-tool and ran into the battle zone, taking cover behind some large metal crates, so as to be within hacking range.</p>
+        <p>Now close enough, she immediately began the process of trying to take control of its systems. The other quarians were engaging the heavy mech, which kept it distracted from attacking her, but she&#x27;d still frequently move her eyes away from the omni-tool and look at the mech, staying updated on its current actions. As she scanned its systems and attempted to break in, something she feared quickly became evident. Both its shields and heavy armor blocked much of the electromagnetic spectrum that her omni-tool was capable of transmitting data in, preventing her from properly hacking into it. As long as the shields and armor stayed up, she wouldn&#x27;t be able to override most of its major systems.</p>
+        <p>I can alter these systems here, which might give me some access to its shields. Then I may be able to drain them enough so I can hack into its power systems and disable it. She raised her eyes once more, and saw the last remaining quarian of her squad die as he got ripped to pieces by the mech&#x27;s heavy assault fire. Her time was now up. The mech, which was now maybe thirty feet away, oriented itself in Tali&#x27;s direction and raised the arm that launched rockets.</p>
+        <p>There was a flash of light as it launched a rocket, and Tali jumped away from her cover just as it exploded behind her. She was just far enough to prevent injury from the rocket&#x27;s blast radius, but its concussive force was still enough to send her rolling and tumbling on the ground a few extra feet. The chaos of the moment caused her shotgun to become unattached from her suit and bounce away, skittering on the concrete ground until it was far out of reach.</p>
+        <p>Tali lay on the ground, face down. She raised her head up and saw the mech. It stood there, gazing at her with its emotionless red optical sensor. It lifted its other arm, preparing to fire its automatic assault canon. It was impossible to run away in time, and there was no nearby cover. It was over, the mech had won. She realized that her life would now end.</p>
+        <p>As she looked on at her mechanical, emotionless killer, knowing this was the last moment of her life, Tali&#x27;s fear suddenly and completely evaporated. She became aware of one simple, yet strange fact: she didn&#x27;t care. Except for a brief moment two years ago, her entire life had been devoid of any real happiness or passion, and there was no indication that it would ever get better. Both Shepard and her mother would always be gone, she would never have the type of father she wanted, and her people would never return home.</p>
+        <p>There was once a time where she had hope for a better future. Hope that she would share her life with someone special. Hope that her people would get their planet back. Hope that she would one day live in her own house on the Homeworld, breathing its fresh air with no mask in the way. But with Shepard gone—with no one to share her life with, no one to stop the Reapers&#x27; inevitable return—all but a small spark of the once abundant hope she once had, became extinguished. And now, as she saw the inevitably of her life&#x27;s end, that last spark of hope, what had kept her pushing forward all this time, suddenly disappeared.</p>
+        <p>And with that spark gone, all that was left was blackness. Life had no meaning; death didn&#x27;t matter.</p>
+        <p>A single gunshot was heard, and the YMIR&#x27;s shields flashed as they deflected the shot. But that one gunshot was enough to add a new entry to the YMIR&#x27;s list of hostiles; one at a higher priority than the unarmed quarian on the ground before it. The mech began to turn to assess the new threat.</p>
+        <p>It took a second for Tali to register what had happened, but just then she saw the source of the mysterious attack upon the mech. A human female clad in heavy armor had entered the area, and was sprinting toward the mech; she was obviously one of the Cerberus operatives that had recently arrived. Tali was dumbfounded by the sight. Not only did it seem strange for such a heavily armored person to be moving so fast, she also couldn&#x27;t understand her course of action. She was running toward the colossal, indestructible mech, as if she intended to ram into it.</p>
+        <p>The mech completed its rotation, and was now facing its new target. Just a split second before it opened fire and unleashed a barrage of assault fire upon the mysterious, seemingly irrational human—who was now mere meters away, with no intent on slowing down—the human dropped to the ground, sliding feet-first under the mech. With little traction between the hard, ablative material of her armor and the concrete ground, she slid effortlessly underneath the mech, between its legs. Grabbing at the mech&#x27;s heel to instantly halt her sliding, she jumped to her feet, now behind the mech, and clutched at one of the crevices of its mechanical back. She pulled herself up, and climbed up until she reached its shoulders.</p>
+        <p>It suddenly became clear what the human was doing; she was exploiting the heavy mech&#x27;s only weaknesses, which were its slow speed and complete lack of maneuverability. Not only was she now on the inside of the mech&#x27;s shields, which meant they couldn&#x27;t deflect her attacks, the mech was utterly incapable of getting her off its back. Its arms couldn&#x27;t maneuver enough to touch her, and its movements were far too slow to shake her off. All of the mech&#x27;s defenses and power suddenly accounted for nothing.</p>
+        <p>With her left arm holding unto the heavy mech&#x27;s head, the human pulled out her heavy pistol and shot it three times, point blank at its optic sensor. The tempered glass instantly cracked and fractured, and after the human discarded her pistol, she reached behind her back and grabbed a disc shaped object: a high explosive grenade. She clutched her hand around it, and with a loud grunt, punched into the mech&#x27;s head through the damaged optic sensor. She pulled out her fist, leaving the grenade inside.</p>
+        <p>The human then turned and jumped away from the Mech, just as its head split open from the explosion; all the circuitry within utterly destroyed. She landed on the ground and rolled for a short distance before jumping up to her feet. The mech&#x27;s self-destruct protocol initiated, and with an intense flash of light its entire body suddenly exploded. The explosion sent a shockwave of heated air outward from it, and even through the insulated material of her suit, Tali could feel it.</p>
+        <p>For a brief moment after the explosion, the human stood in place with her back to the smoldering wreckage of the mech. She finally turned around and walked in Tali&#x27;s direction. As she approached her, Tali felt something very unusual.</p>
+        <p>Spending their lives inside suits that completely covered their appearance had long forced quarians to become adept at reading body language and recognizing body types. As the human approached her, Tali felt a sudden rush of déjà vu. Her posture, her height, the subtle nuances of her body movements; they were all eerily familiar to Tali. She could swear that she had seen this same human before.</p>
+        <p>The human suddenly stopped. Something on the ground caught her attention.</p>
+        <p>. . .</p>
+        <p>Shepard felt a powerful push as the shockwave of air from the exploding YMIR mech hit her from behind. It wasn&#x27;t enough to cause her to lose balance, but it was noticeable, as was its heat. The entire back of her combat armor suddenly felt warm.</p>
+        <p>After taking a very brief moment to catch her breath, she turned and saw the last remaining quarian, still on the ground, a distance away. As she began to approach her to see if she was alright, she stood up, slowly and cautiously, keeping her eyes fixed on Shepard. It was likely that her current affiliation with an anti-alien organization was enough to keep her distrustful of her, even though she had just saved her life.</p>
+        <p>As she got up and stood on her feet, Shepard felt a rush of déjà vu as she looked at her. Just like Tali, she had a stunningly beautiful and curvy body, accentuated by a snug enviro-suit. Unlike Tali, however, her suit was far more beautifully decorated. A long, single piece of purple fabric covered her head as a hood, leading to her upper back, then crossing along the front of her torso above her pelvis, before finally terminating as it wrapped around the middle of her thighs. Her suit was an absolute work of art.</p>
+        <p>While approaching the quarian, something on the ground caught her eye. She froze in place, completely in shock at what she saw: a black and dark-gray colored, HMWSG Spectre shotgun.</p>
+        <p>She stepped to it, kneeled down, and picked it up. As Shepard stared at it, she noticed it had been heavily modified. It was apparent that its internal heat sink had been removed, and in its place was installed a device that allowed it to use the now standard thermal clips.</p>
+        <p>&quot;It was a gift,&quot; the female quarian a short distance away said, in a cautious voice; she was clearly aware of how odd it would seem for a quarian to possess a Spectre-exclusive weapon, even if it was an older model.</p>
+        <p>Shepard had never felt a bigger chill run up her spine in her life. It was Tali&#x27;s voice. This female quarian she just saved, was Tali&#x27;Zorah. Shepard looked up from the shotgun, and simply stared at her in awe. As she looked, she also noticed that Miranda and Jacob were now entering the area. She raised her hand in their direction, signaling them to halt. Tali noticed her gesture, and looked in the direction she had raised her hand at. She tensed up slightly, seeing two more Cerberus agents.</p>
+        <p>As Shepard approached her, she carried the shotgun in both hands in a non-threatening way. She stopped a short distance in front of Tali, and held it out for her to take. As she took it, she said in a quiet voice, &quot;I know. I was the one who gave it to you.&quot;</p>
+        <p>Tali had always been a reasonably strong willed woman, but for the first time in her life, she felt the sudden rush of lightheadedness before a faint. The words she just heard, and the voice she heard them in, told her something that was utterly impossible: this human was Shepard. She took a quick, nervous step back.</p>
+        <p>Shepard then reached up and removed her combat helmet. Instead of attaching it to her suit&#x27;s belt, this time she let it drop to the ground. It hit the ground at the same time as Tali&#x27;s shotgun. For the first time in her life, Shepard&#x27;s eloquence had completely failed her; she had no idea what to say, as Tali stared at her now revealed face. All she could muster was a weary smile.</p>
+        <p>&quot;S-Shepard…?&quot; Tali asked, in utter shock at the ghost in front of her, &quot;Is that—you&#x27;re… alive…?&quot;</p>
+        <p>&quot;It&#x27;s me, Tali.&quot;</p>
+        <p>Tali stared for a few more seconds in confusion and awe, her mind processing all the possible reasons for how Shepard, someone who had died two years ago, now stood before her. There was only one possible explanation. Only one thing made sense.</p>
+        <p>She suddenly threw her hands against Shepard&#x27;s chest, pushing her as hard as she could. &quot;You… you bastard!&quot; she yelled with all the anger and rage her voice could carry, &quot;You&#x27;ve been alive all this time? And you never contacted me? How—how could you treat me like that! Do you have any idea what I went through, thinking you were dead? I TRUSTED you! I… I loved you!&quot;</p>
+        <p>Tears began to roll down from Tali&#x27;s eyes as she yelled. Not of sadness, nor of happiness, but of anger and distress. She couldn&#x27;t believe Shepard had let her suffer so much; that she didn&#x27;t care enough about her to tell her the truth in the two years she spent believing her to be gone. It felt like the biggest betrayal of her life.</p>
+        <p>&quot;I was dead!&quot; Shepard immediately snapped in response. Tali&#x27;s rage momentarily paused as she waited for her to elaborate. &quot;When the Normandy got attacked, I did die! But Cerberus recovered my body, and they spent the last two years bringing me back. I only regained consciousness today.&quot;</p>
+        <p>&quot;But—how… They brought you back? How can that be possible…?&quot;</p>
+        <p>&quot;Look at my face, Tali,&quot; Shepard said in a calmer voice, as she stared determinately at Tali&#x27;s eyes, &quot;Look at my scars, see how they glow. Synthetic implants—they used a lot of them to bring me back. But I&#x27;m still the same person, and I&#x27;m telling you the truth.&quot;</p>
+        <p>Tali stared at her face, still confused and in shock. She then very slowly—cautiously—raised her hand, and lightly placed the tips of her fingers on her face. Her fingers stroked downwards, over the glowing scars. Though the material of her suit took away much of her sense of touch, she was just barely able to feel the inconsistency of her skin caused by the mysterious glowing, orange scars.</p>
+        <p>She retreated her hand, continuing to stare at her; at her eyes. The eyes that always told her the truth—eyes she had always trusted. All she could now mutter was a quiet and soft: &quot;I&#x27;m… I&#x27;m sorry, that I yelled at you. I… I didn&#x27;t know…&quot;</p>
+        <p>Upon hearing Tali&#x27;s words, Shepard felt a wave of relief wash over her. &quot;It&#x27;s okay,&quot; she said tenderly, &quot;There was no way you could have known.&quot;</p>
+        <p>She then smiled at her. It was a smile Tali remembered well. The same, comforting smile that had always told her everything would be alright; that she didn&#x27;t need to worry. The same smile she always saw on her face whenever she relieved any of her fears or concerns. It was the most pleasant thing she had seen in two years.</p>
+        <p>&quot;I still can&#x27;t believe…&quot; she began to say in a voice of quiet awe, before suddenly exclaiming, &quot;Oh Shepard, you… you&#x27;re alive!&quot; Tali&#x27;s voice broke, and she began to cry.</p>
+        <p>Shepard opened her arms slightly, offering a hug. She would&#x27;ve wanted to simply wrap her arms around her and embrace her, but she decided it was best to give her the option. Seeing her back from the dead was obviously a tremendous shock to her still, and she needed to be careful with her actions.</p>
+        <p>Tali immediately accepted her gesture, and threw her arms around her as her cry of joy and happiness continued. They held each other tightly.</p>
+        <p>&quot;You know how—&quot; Tali sniffled, interrupting her own sentence, &quot;…how when you&#x27;re in a dream, and you tell yourself, &#x27;this can&#x27;t be really happening,&#x27; and that&#x27;s when you wake up? I feel that so much now! But—but… I&#x27;m not waking up! This is real!&quot; her crying intensified, and she sobbed loudly as they held each other.</p>
+        <p>Amid the joyous, emotional moment Shepard and Tali were sharing; as Shepard held Tali tightly while she cried with her helmet pressed down against her shoulder, Shepard just then noticed that both Miranda and Jacob were nowhere to be seen. She assumed they wandered off, continuing to look for clues of what happened to the colony; it seemed the most likely thing. But she really didn&#x27;t care right now. For the first time in her military career, the mission could wait.</p>
+        <p>After a short while, they both pulled away from their hug, and looked at each other. They both began to laugh quietly as they stared at each other, the joy of the moment unable to be contained by mere smiles.</p>
+        <p>&quot;What are you doing here, anyway? You didn&#x27;t abduct these colonists, did you?&quot; Shepard joked during their quiet, joyful laughs.</p>
+        <p>&quot;Hah, no,&quot; Tali began to answer, still happily crying, though not as intensely as before. Shepard found it cute that she actually answered the question. She sniffled again, and continued &quot;We came here to rescue a young quarian on his pilgrimage. He sent a distress call not that long ago—he&#x27;s the one who reprogrammed these security mechs. But what about you? How did you end up here?&quot;</p>
+        <p>&quot;After I awoke, I spoke with Cerberus&#x27; leader. He believes the Reapers are behind these attacks on human colonies, and wanted me to come here and investigate.&quot;</p>
+        <p>Shepard&#x27;s mentioning of Cerberus immediately made Tali feel disturbed, as she remembered the Cerberus shuttle that had brought her here; that it was Cerberus who brought her back. She didn&#x27;t like hearing Shepard mention she was working with them. At all. And it greatly troubled her. &quot;Cerberus… they&#x27;re really the ones who brought you back? And you&#x27;re taking orders from their leader? Does that mean you&#x27;ve—you haven&#x27;t… joined them, have you, Shepard?&quot;</p>
+        <p>The concern in Tali&#x27;s voice was very noticeable. She had even backed away slightly as she asked her question. Seeing her concern, Shepard gave her a reassuring smile and said, &quot;How could I possibly join an organization that hates non-humans, when someone I care so much about isn&#x27;t a human? No, Tali, I haven&#x27;t joined them, and I never will, regardless of what they did for me. I&#x27;m only working with them for now to stop these attacks on human colonies.&quot;</p>
+        <p>Greatly relieved, Tali sighed and said, &quot;Good. I&#x27;m really glad to hear that.&quot;</p>
+        <p>A short while passed, and the moment was suddenly interrupted as they heard yelling coming from the other side of the area. It was Miranda and Jacob, walking out of one of the modular living units with a male quarian.</p>
+        <p>&quot;N-No! No no no no! It&#x27;s not safe out here! The monsters will get us! We have to hide! We have to go back inside!&quot; the quarian fearfully yelled.</p>
+        <p>&quot;That&#x27;s Veetor! What are they doing?&quot; Tali urgently said, and ran toward them. Shepard followed.</p>
+        <p>&quot;Commander, we found out who&#x27;s been attacking our colonies. You&#x27;re not going to believe this,&quot; Jacob said as both Shepard and Tali reached them.</p>
+        <p>&quot;While you were busy with your… reunion,&quot; Miranda said, eyeing Tali for a mere second,&quot; Jacob and I investigated the area. We found this quarian, who managed to piece together security footage of the attack. The Collectors are the ones responsible.&quot;</p>
+        <p>&quot;Th-the monsters! That&#x27;s why we have to hide, before they return!&quot; Veetor exclaimed, still traumatized over what he had seen.</p>
+        <p>&quot;The Collectors? I&#x27;ve heard of them… didn&#x27;t think they actually existed,&quot; Shepard commented. &quot;You said we have actual footage of the attack?&quot;</p>
+        <p>&quot;Yes, as well as various energy readings that the quarian got with his omni-tool,&quot; Miranda confirmed, and then added &quot;Still, we should take him with us so he can be properly interviewed.&quot;</p>
+        <p>&quot;What? No!&quot; Tali immediately objected, &quot;He&#x27;s sick! He needs medical attention, not an interrogation!&quot;</p>
+        <p>&quot;We just want to ask him a few questions. He&#x27;ll be returned to your people, unharmed,&quot; Jacob assured.</p>
+        <p>Tali immediately turned to Shepard and said, &quot;Shepard, please—don&#x27;t let them take Veetor. Take the footage and data he recorded, but let me take him back to the fleet so he can be treated.&quot;</p>
+        <p>Shepard took only a second to consider Tali&#x27;s request, and then turned to the others and said, &quot;Look at him, he&#x27;s obviously traumatized. I doubt we can learn anything useful from him. He&#x27;s already helped us tremendously by getting us footage and data of what happened. Veetor goes home.&quot;</p>
+        <p>&quot;Very well, Commander,&quot; Miranda responded. Although she showed no real emotion over Shepard&#x27;s decision, she could tell she wasn&#x27;t particularly happy about it. &quot;Regardless, we got what we came for. We should leave quickly before the Alliance shows up.&quot;</p>
+        <p>Shepard felt sadness as she was reminded that they had to go; she wanted to stay, and keep speaking to Tali. But she also knew Miranda was correct, and that it would be a mistake to stick around for long. &quot;You two head back to the ship, I&#x27;ll join you shortly.&quot;</p>
+        <p>&quot;Just remember, the Illusive Man doesn&#x27;t want us to be here longer than necessary,&quot; Miranda responded, indirectly asking Shepard to hurry up. She began to walk away in the direction of their shuttle, and Jacob followed her, but not before giving Shepard a quick salute.</p>
+        <p>Tali knew exactly why Shepard sent her team without her, and she followed suit, &quot;Veetor,&quot; she said gently as she addressed the traumatized quarian, &quot;Why don&#x27;t you go back inside and gather your belongings? I&#x27;m going to take you back home to the fleet soon. Wait for me inside.&quot;</p>
+        <p>Veetor just nervously nodded his head, and quickly went back inside the structure. Shepard and Tali were once again alone.</p>
+        <p>After a brief moment of silence Shepard said, &quot;I wish we had more time, we have some catching up to do—I have catching up to do. There isn&#x27;t anything for me to tell you about.&quot;</p>
+        <p>&quot;I still can hardly believe that you&#x27;re alive—that I&#x27;m actually talking to you,&quot; Tali said, her voice once again heavy with awe. She then sighed and added, &quot;It was so hard… knowing I had l lost you forever.&quot;</p>
+        <p>&quot;I&#x27;m so sorry you had to go through that.&quot; Although Shepard knew what happened wasn&#x27;t her fault, and that there was nothing she could&#x27;ve, she still felt saddened, and somewhat responsible, for the grief Tali no doubt endured after she died.</p>
+        <p>&quot;It wasn&#x27;t your fault,&quot; she whispered quietly.</p>
+        <p>A short, quiet moment passed and Shepard said, &quot;I know you&#x27;ve probably moved on and settled into a new life, but how about it; will you join me on my mission? I would really like to have Tali&#x27;Zorah nar Rayya at my side,&quot; Shepard ended her comment with a warm smile.</p>
+        <p>Tali laughed quietly, &quot;I&#x27;m Tali&#x27;Zorah vas Neema now. I joined the Neema when I returned to my people.&quot;</p>
+        <p>&quot;I take it that geth data helped you complete your pilgrimage then?&quot; Shepard avoided bringing up how rejoining her people was a consequence of her death. She wanted this moment to be happy.</p>
+        <p>&quot;Yes, it did. Thank you…&quot;</p>
+        <p>&quot;I&#x27;m glad; that means you didn&#x27;t beat me up in vain when you took it,&quot; Shepard joked, and they both chuckled quietly. She then asked her question again, &quot;Will you join me?&quot;</p>
+        <p>&quot;I… can&#x27;t right now,&quot; Tali responded; Shepard felt a sudden surge of disappointment. &quot;I want to, but I can&#x27;t. I have a mission of my own I need to take care of first. It&#x27;s very important.&quot;</p>
+        <p>&quot;What is it?&quot;</p>
+        <p>Tali hesitated for a brief moment, &quot;It&#x27;s against the rules for me to say, but we&#x27;re alone, and you&#x27;ve always been someone I can trust. There&#x27;s this old quarian colony called Haestrom. There&#x27;s something unusual about the star it orbits, so the Admiralty is going to send me with a team to take readings from the planet&#x27;s surface.&quot;</p>
+        <p>&quot;It&#x27;s an old quarian colony? Aren&#x27;t all the former quarian colonies in geth space now?&quot;</p>
+        <p>&quot;Yes,&quot; Tali said pensively, &quot;That should tell you how serious this is.&quot;</p>
+        <p>&quot;Tali, that&#x27;s suicide! No one ever returns from geth space!&quot;</p>
+        <p>&quot;Believe me, I know how dangerous it is. And that&#x27;s why I can&#x27;t leave this mission to somebody else. We&#x27;re hoping that if we take a small force, we&#x27;ll avoid detection long enough to take our readings and leave.&quot;</p>
+        <p>&quot;When is this mission going to take place?&quot;</p>
+        <p>&quot;They haven&#x27;t told me yet. I just know it&#x27;ll be soon.&quot;</p>
+        <p>&quot;Promise me that when you find out, you&#x27;ll let me know. I want to help you.&quot;</p>
+        <p>&quot;Shepard, I can&#x27;t ask you to do that.&quot;</p>
+        <p>&quot;You didn&#x27;t. It&#x27;s something I need to do. You&#x27;ve been at my side for many of my missions. I have to repay the favor. Now please, promise me you&#x27;ll contact me when you find out when you&#x27;re going.&quot;</p>
+        <p>Tali stared at Shepard&#x27;s eyes for a short while. She didn&#x27;t want to drag her along on a potentially suicidal mission, but she remembered her well enough to know that she wasn&#x27;t going to drop this. &quot;I promise.&quot;</p>
+        <p>&quot;Use my old Extranet address to contact me,&quot; Shepard said, content that she agreed.</p>
+        <p>There was another period of peaceful silence. Suddenly, an urgent message came through Shepard&#x27;s communicator; it was Miranda. &quot;We just got word that an Alliance scout is on its way. We have to leave soon, Commander.&quot;</p>
+        <p>&quot;I&#x27;m on my way,&quot; Shepard responded. She looked at Tali and sighed, knowing it was finally time to part ways.</p>
+        <p>&quot;We need to leave. An Alliance scout is heading this way. You should leave too.&quot;</p>
+        <p>&quot;I understand. I&#x27;ll get Veetor, then.&quot;</p>
+        <p>They looked at each other awkwardly, both of them unsure what was appropriate for their goodbye. Finally, Tali put her arms around Shepard and hugged her, &quot;You owe me so many of these, you bosh&#x27;tet,&quot; she mumbled quietly.</p>
+        <p>With a squeeze, their hug ended, and they said their final goodbyes. As Shepard walked away, she pondered over everything that had occurred. Many of her concerns had been alleviated; she had reunited with Tali, and she showed no concern over her synthetic implants. And despite her anger at her initial belief that she had been alive all this time, she was now obviously overjoyed to see her again.</p>
+        <p>Her meeting with Tali had gone well, but Shepard remained aware that their relationship was not the same as it was—from her perspective—just yesterday. It would take some time to rebuild. And that was fine with her.</p>
+        <p>She&#x27;s worth it, she thought to herself as she walked, with a subtle smile on her face.</p>
+    </div>
+</body>
+</html>

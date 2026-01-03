@@ -1,0 +1,163 @@
+Can You Join Me Now?
+
+"Tell me, Kelly, how would you like to do something really important? Something that could make all the difference in our mission to stop the Collectors?" Shepard asked from her command position in the Normandy SR-2's Command Information Center. Her eyes remained glued to the holographic display before her that currently showed the planet she was scanning for resources.
+
+Kelly laughed nervously from her nearby console, "You know I'm always eager to assist you Commander, but I'm not… qualified to operate the CO station controls," she responded, making no attempt to hide that she simply didn't want to participate in the arduous, repetitious task of probing for resources.
+
+"Yeah, of course you're not," Shepard mumbled quietly, her eyes focused on the trembling, occasionally spiking scan lines of the planet scanning software.
+
+"You should take a break. You've been scanning that planet for hours."
+
+"We're still low on resources from upgrading our main guns yesterday. But you're right, I'll take a break soon."
+
+Nearly two weeks had passed since Shepard was been given command of the Normandy SR-2, and things were finally starting to feel normal; like they did before the collector attack two years ago. The new Normandy was larger in size, had a built-in artificial intelligence, and was overall more advanced, but it bore many similarities to its predecessor, including its appearance and general layout. This familiarity helped Shepard a lot in getting over the sudden pause her life had taken.
+
+It also helped her to see familiar faces around the ship. Seeing Helmsman Jeff "Joker" Moreau, Doctor Chakwas, and Garrus Vakarian on a daily basis almost made it feel like she was in the same place in her life as she was two years ago. Almost. And although the rest of the crew were people she didn't initially know, she found them all to be enjoyable, professional people; seemingly devoid of any significant xenophobia, which was something she originally feared knowing she had a Cerberus crew. Yeoman Kelly Chambers, engineers Gabriella "Gabby" Daniels and Kenneth Donnelly, Mess Sergeant Rupert Gardner, and even the ship's artificial intelligence "EDI" were among the many crewmembers she was beginning to consider friends.
+
+But despite how well everything was going on her new ship, with her new crew, there was still a significant piece missing. There was somebody else she wanted on the ship, and it would never feel like the old Normandy until she joined.
+
+Shepard's message inbox had several messages from Tali'Zorah vas Neema. Since the night they reunited, which now felt so long ago, she made sure to keep in constant contact with her. She didn't go too deeply into any specific topics among their messages; she just typed what was sufficient to keep her on her mind; to remind her that she wanted her to be part of her life. She wanted to save as much as possible for in-person—she wanted to hear everything in her voice. Shepard had always loved her voice and the way she spoke. It had what she could only be describe as subtle, reverberating effect, as if it somehow echoed in her own throat. It sounded beautiful, exotic, and otherworldly; it sounded angelic.
+
+Her voice wasn't the only reason she wanted to wait until they could speak in person before fully catching up and discussing more serious matters. Speaking to her in person would allow her to get a feel for what was going on through her mind in regards to her. They had a joyous reunion, but despite her own perception of the passage of time, she was well aware that two years had passed for Tali. Two years is a long time to spend believing a person to be dead. Shepard was smart enough to know she shouldn't expect their relationship to continue exactly where it had left off.
+
+"You just received a new message at your private terminal, Commander," Kelly informed from her console. Shepard was glad to have an excuse to interrupt her resource scanning.
+
+She walked down the ramp of the galaxy map's control station and stood before her console.
+
+From: ANONYMOUS
+
+To: Commander Shepard
+
+Subject: I promised
+
+Where we watched a sun set together.
+
+There was more to the message, but everything below that single line of text was heavily encrypted, represented as an assortment of gibberish and random symbols. It needed an encryption key to be decrypted and become legible.
+
+Shepard smiled. She instantly realized who the message was from, and what the encryption key was. She typed it out in the key field: v-i-r-m-i-r-e
+
+The block of gibberish suddenly became legible, revealing longitudinal coordinates for the surface of the planet Haestrom, in the Dholen system. Also in the message was a time and date, written in Galactic Standard Time. It was obvious why Tali had gone through the effort of sending the message encrypted and anonymously—this was sensitive, classified mission-related information of the quarian military.
+
+Shepard noticed that the date was for today, and the time was in just a few hours. This is really short notice. I hope we can make it in time, she thought to herself as she walked back up the ramp that led to the galaxy map, and plotted the new course.
+
+"Joker," she said into her communicator, "I'm punching in a new location. I need you to get us there ASAP."
+
+"Aye aye, Commander."
+
+. . .
+
+A small quarian scout ship flew through the Dholen system. Its path was simple: a straight line from the mass relay to the planet Haestrom. Its engines were offline, and had been for a while; it relied on its initial thrust of acceleration—and Newton's First Law of Motion—for its locomotion through space. Occasionally its thrusters would initiate in low-powered bursts for course correction, as it approached its destination.
+
+Like most quarian ships, the shuttle was anything but modern. The metal plating that made up its interior walls had long lost its metallic luster, and various makeshift repairs were evident throughout its hull. The ship was older than any of its current passengers.
+
+The passenger area of the ship, which made up the bulk of its mass, had two seats at the front; one on each side of the hallway entrance that led to the cockpit. Both seats were oriented to face back toward the other passengers. Along the length of each side wall was a row of ten seats, both sides facing the other. At the two seats up front sat Mission Leader Tali'Zorah and Squad Leader Kal'Reegar. In the rest of the seats were a squad of one dozen quarian marines, and three non-military, yet still armed, scientists. The lack of engine noise gave the shuttle an unsettling quiet, so many of them were conversing among themselves as they waited to arrive at their destination.
+
+"Listen up everybody," Kal'Reegar said, instantly bringing all ongoing conversations to a halt, "We'll be arriving soon. You've all been briefed, so I expect all of you to understand your duties, but we're going to go over it again to make sure it sticks. This is a high-risk operation—you all need to be at your best.
+
+"When we land, we're going to break up into two groups: the science team and the combat team. Myself, Gan, and Hodda will be the security escort of the science team. The rest of you will be in the combat team, under command of Ren.
+
+"If we're lucky, we'll be able to finish and leave without encountering any geth. I don't expect us to have such luck. If we do engage the geth, it'll be the job of the combat team to keep the battle on the outer parts of the colony, away from the science team. They can't do their work if they're getting shot at. The science team must stay alive, Tali'Zorah specifically.
+
+"You'll all need to keep the geth forces occupied as long as possible. If you start getting overwhelmed, you'll have no choice but to fall back into the colony where the various structures can provide better cover. In a worst case scenario, we'll all fall back to the fortified Observatory deep within the colony. Let's hope it doesn't come to that." To conclude his briefing, he asked, "Any questions?"
+
+After a short moment of silence, one of the quarian marines spoke up. "I know we won't have any ship support, but why not? If this mission is so important that they're sending us into geth territory, why no air support?"
+
+"For the same reason our engines are off and we're running low-emission," Tali said, answering the marine's question, "To avoid detection as long as possible. It's why we're using the smallest ship possible for this mission. This way we at least have a chance to avoid engaging any geth."
+
+"Any other questions?" Reegar asked. After a few seconds of silence, he turned to Tali and said, "We're all ready, ma'am, and we'll be arriving soon. If there's anything you want to say to the team, now is the time."
+
+Tali stood up and spoke, "I know many of you are unhappy about this mission. We've been sent into geth territory to collect data on some aging star. I wish I could tell you why the Admiralty considers this important enough to risk all our lives, but I don't know. All we can do is have faith that they know what's best, and that what we learn about this aging star will one day save lives. Everyone do your best and stay safe. Keelah se'lai."
+
+"Keelah se'lai," responded the others in unison.
+
+. . .
+
+"Dropship! Take cover!"
+
+Just after the warning, a bombardment was unleashed upon the combat team by a geth dropship as it flew over them in a swooping movement. Rocks and debris flew everywhere as the dirt ground erupted into a cloud of dust.
+
+The quarian marines were all behind some ancient, low-height stone walls which they used as cover near the outskirt of the colony. Just as was planned, they were bunkered down a distance away from the science team, keeping the bulk of the battle from interfering with the research and data they were gathering. The geth were now pouring into the area, pushing against the quarian marines. There was even a Colossus among the geth, which proved nearly indestructible with its repair protocol. The quarians would have to fall back, deeper into the colony soon.
+
+After the explosions of the bombardment, the world was a dark blur to combat team leader Sato'Ren. Still shell-shocked, he laid on his back on the ground; the shots being fired in the background sounded distant and muffled. As his vision returned, the first thing he noticed amid the blurry darkness of his vision was the intense, brightly glowing star in the sky. That star was why he was on this planet, leading a small team to defend against an overwhelming enemy force. That star was the reason they were all going to die.
+
+Sato'Ren had always been a good soldier. He listened to his superiors and followed their orders, never questioning their command. He understood the important concept that as a mere soldier, he wasn't expected to properly see the big picture. Those who could see it were the leaders; the people in charge, who looked down from their safe haven, and made the decisions around it. He always had to believe they knew what was ultimately best, even if it meant soldiers like him were the ones forced to face the often-gruesome small picture.
+
+He didn't understand why he was on this planet. He didn't understand why he had been sent to this terrible world guarded by the machines that nearly murdered their entire race. What could it possibly matter to the Admiralty that a star was aging quickly? It wasn't their star, and it likely never would be. Sato had always been ready to sacrifice his life if it was for the good of his people. He just couldn't understand how recording data of some dying star could ever possibly benefit the Migrant Fleet.
+
+But that didn't matter. He was a good soldier, and he had always been aware that his leaders would one day require for him to contribute to the big picture by adding a dot to it; one painted with his own blood. Off in the distance behind the geth forces, the dropship was turning, preparing to come in again for another bombing sweep. The whole team would not survive another bombardment. He realized this was now the time for him to contribute that dot to the big picture, even if he didn't understand why it had to be done; why his life had to be sacrificed.
+
+He jumped up to his feet and got behind cover, quickly yelling, "That dropship is coming again for another attack! Everyone get ready to fall back into the colony! I'm going to give you all covering fire!" He positioned himself with his assault rifle above their cover, and clenched his teeth, preparing to draw the attacks of the enemy so the others could escape and continue the mission.
+
+But just as he was about to yell the command to retreat, and sacrifice himself, something amazing caught his eye.
+
+An intense, blue beam sliced through the sky and impacted the incoming dropship. With a bright explosion, the dropship broke up into numerous pieces and large chunks, each with its edges glowing red hot from the intense heat of the beam. Bright orange, melted metal rained down from the destroyed dropship along with its numerous smoldering fragments, all impacting the ground behind the geth platoon.
+
+The quarians, surprised and confused, all turned their heads and looked up to find the origin of the mysterious attack that had so easily destroyed the mightiest of their enemy. They heard it just before they saw it: a large frigate descended from the sky, the high-pitched roaring sound of its engines intensified as it approached. It finally stopped and hovered above them. The origin of this ship, and how it managed to arrive without its heat emissions being detected, was a complete mystery. But that didn't matter right now; it was here to help. It began to unleash hell upon the geth platoon.
+
+The geth ground forces opened fire at the newly arrived enemy. Their attacks were futile; not only were its shields still up, the hull was far too thick to be affected by small weapon fire. The frigate oriented itself so its main guns pointed in their direction. Instead of a single beam like earlier, it fired several small bursts, each one causing massive destruction as it impacted the ground, sending plumes of dust erupting into the air; rocks and gravel flew in all directions. Geth troopers directly hit by the bright blue pulses were instantly disintegrated; the others near the points of impacts were destroyed by the shockwaves and intense heat. The Colossus was among those that suffered a direct hit. Its armor instantly failed, and its entire body was completely incinerated. The main gun of the frigate was unlike anything the quarians had ever seen; it struck with an indescribable amount of power and heat.
+
+In conjunction with the main gun attacks, the GARDIAN laser turrets on the underside of the ship also attacked the geth forces. The lasers quickly focused on individual geth troopers, causing them to burst into pieces; the result of their bodies being rapidly superheated, causing all gases and moisture within them to expand. The geth bodies popped into several pieces which all sizzled from the lingering heat applied by the lasers.
+
+In a short period of time the geth forces were nearly eradiated. The entire area had a cloud of dust looming over it from the heavy ordinance of the frigate. The gunfire coming from the geth forces was nearly gone. As the quarians looked on, several of them began to cheer as they watched their enemy being utterly devastated. And although Sato knew that the mysterious, yet welcomed, interloper likely saved all their lives, he couldn't ignore the strangeness of its presence. He contacted his superior officer to inform him.
+
+"Squad Leader Reegar, do you copy?" He said into his communicator, loudly so as to be heard over roaring engines of the ship above.
+
+"I'm here, what is it?"
+
+"You won't believe this—there's a frigate here, and it's completely decimating the geth forces!"
+
+"What? We weren't supposed to receive any air support. Our sensors haven't even detected any frigate-class ships in the area."
+
+"I don't know what to tell you sir, but I'm looking right at it. It's hovering directly over us. We were just about to fall back when it destroyed the geth dropship, and it's currently wiping out their ground forces."
+
+"Is it one of ours?"
+
+"No sir. It's definitely alien."
+
+"No one else is supposed to be here, but if they're taking out the geth, we can't really complain. I'll check with Tali'Zorah and see if she knows anything about this."
+
+. . .
+
+Deep within the colony, a distance away from the main group of marines, was the science team. It was a small group lead by Tali'Zorah, with an equally small marine escort led by Kal'Reegar. They were currently waiting for a core sample to be extracted from the hard, rocky ground beneath their feet. The intense solar energy from the dying sun in the sky had fried the machinery they brought with them. Tali remembered how Shepard had once improvised with mining equipment herself, and she was able to do something similar. With some long abandoned mining machines left there by their ancestors, they were able to keep progressing with their mission. The machinery growled loudly as it drilled into the ground.
+
+Despite both the danger of being in geth space, and the urgency of her work, Tali still had to take a moment to absorb the fact that she stood on what was once a quarian colony. Haestrom was a place where many quarian ancestors had worked and lived, their heads uncovered and free. The sun of the once normal star would shine upon their skin, and the air of the planet would be unfiltered and raw in their lungs. When her people last walked upon the ground she now stood, they were a significant part of the galactic community; a race numbering in the billions, with a history of almost two thousand years of space travel. But now, that was all gone. This world served as a mere echo of her people's past.
+
+All around her was something she thought she'd never see in person, something that almost felt like a paradox: quarian architecture. It was different than the architecture of other races. There were no sleek, curved, and elegant designs like would be seen among asari architecture. The buildings weren't superfluously fortified like krogan structures. And they didn't radiate the feeling of power and empire as often was the case with human designs. Instead, the architecture of her people was simple, practical, and efficient. She took pride in the work of her people, despite its simple nature; in her experience with engineering, simple designs and concepts always proved to be the most reliable.
+
+Experiencing this colony first-hand often conjured up thoughts of what it would be like to return to her homeworld. Dwelling too long on the thought of returning to the planet that gave rise to her people could easily cause her eyes to moisten and tear. Her father had once promised to build her a house on their homeworld. Although her mind told her it was a silly promise, one that could never be kept, she completely ignored that voice in her head. It was a promise she kept close to her heart; one she wanted too much to come true.
+
+The thought of having her own house almost made her feel guilty with indulgence. Separate rooms for sleeping and preparing food, private sanitation rooms, the ability to look out a window and see a sky; it all seemed so luxurious and indulgent, yet so wonderful. But even beyond all that was what having a house on the homeworld represented: the end of an almost unbearable punishment, for a mistake made long ago by people who had all perished.
+
+It could happen in my life-time, she thought to herself. If the geth are serving the Reapers, and with Shepard working to stop them, maybe the homeworld will be returned to my people. Somehow…
+
+A little smile appeared on Tali's face as she thought of both her homeworld and Shepard. It wasn't a new imagining, and it almost seemed silly to think about, but she couldn't prevent the image that appeared in her mind: the two of them one day living together on her planet. It was an old daydream, a remnant from the time they were together, yet she found herself hoping for it once again. If luck were a tangible resource, there wouldn't be enough of it in the galaxy to trade in for such a thing to happen; for the two to live together, in a house, on the quarian homeworld. It was just too impossible to ever happen. But dreams were free—she could imagine it and dream about it if she wanted. Her imagination could at least give her a taste of what it would be like.
+
+"I can't believe this is working," one of the quarian scientists commented, completely derailing Tali's train of thought. He spoke loud enough to be heard over the noisy drilling. "Using some of the abandoned mining machinery to get these core samples was a great idea. I thought this mission was over when the sun fried our equipment."
+
+"To be honest, it wasn't really my idea," Tali responded, also speaking loudly. "A good friend of mine did something similar a couple years back, with an abandoned mining laser."
+
+Shepard… I wish she were here. That she could see this amazing place with me.
+
+Just then, she noticed Kal'Reegar approaching her location from his nearby security post. She could tell he had urgent news by his brisk, determined manner of walking.
+
+"Is something wrong, Reegar?" she asked, addressing him.
+
+"Yes… and no. The combat team has been engaging a platoon of geth—"
+
+"How are they doing?" she interrupted to ask. She was genuinely concerned about them.
+
+"They were getting overwhelmed. In fact, they were just about to fall back when an unidentified frigate appeared and began to wipe out the geth forces," he answered. "What I don't understand is why the ship wasn't picked up by our sensors, or how they even knew we were here. Don't get me wrong, I'm not picky about help in getting those synthetic bastards off our backs, but none of this makes any sense."
+
+Tali knew the exact answers to both of those questions. She knew it was Shepard who had arrived, and from their past extranet messages she had learned that she was in command of an advanced version of the Normandy, which explained why heat emissions weren't detected. But she couldn't tell Reegar any of that. Even though she knew Shepard was completely trustworthy, she was well aware that revealing the details of such an important mission—one assigned directly by the Admiralty—was absolutely forbidden. Reegar was a friend, and she knew he would understand why she revealed critical mission details to her former Captain, but it was best if he didn't know. That way, he wouldn't have to lie on his mission report.
+
+"The ship must have stealth capabilities," Tali explained. "During my pilgrimage, I was crew of a ship with the ability to store its emissions in sinks throughout its hull. This ship that's helping us out must have the same ability."
+
+"Come to think of it, I remember you mentioned something about that before. But I still don't understand how they knew we were here."
+
+"That's a good question. My guess is that after the geth attack on the Citadel, the mass relays connecting to the Perseus Veil have been closely monitored. It's possible our ship was detected going in, and someone decided to follow us."
+
+Reegar paused for a short while after her hypothetical explanation, clearly thinking it over. Finally he said, "That makes sense. I don't know who's crazy enough to jump into this hell with us, but I do know that they saved our lives. Like I told Ren, I'm not going to complain. I'm going back to my post; I'll keep you updated on the situation, ma'am." He turned around and walked back to his security post.
+
+Shepard's not crazy, Tali thought to herself, continuing the conversation in her mind. She had a sly grin under her mask. She's just very brave. The way she jumps head-first into fights is something I love about her. It's how we first met.
+
+And just like when we met back on the Citadel, I intend to join her crew after this.

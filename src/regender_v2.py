@@ -6,16 +6,16 @@
 # As of 2025-12-26, it's the best approach to ensure consistency and context-aware changes.
 #
 # USAGE:
-#   From the src/ directory:
-#     python regender_v2.py [input_directory]
+#   From the project root directory:
+#     python src/regender_v2.py [input_directory]
 #
 #   Examples:
-#     python regender_v2.py                      # Uses default: ../inputs/adamo
-#     python regender_v2.py ../inputs/rekindling # Process rekindling chapters
-#     python regender_v2.py ../inputs/custom     # Process custom directory
+#     python src/regender_v2.py                      # Uses default: inputs/adamo
+#     python src/regender_v2.py inputs/rekindling    # Process rekindling chapters
+#     python src/regender_v2.py inputs/custom        # Process custom directory
 #
-#   Output will be saved to ../outputs/{directory_name}/
-#   Verification logs will be saved to ../outputs/verification_log/
+#   Output will be saved to outputs/{directory_name}/
+#   Verification logs will be saved to outputs/verification_log/
 ####### 
 
 from openai import OpenAI
@@ -60,6 +60,7 @@ Rules:
 - DO NOT change "Shepard" or "Commander Shepard" - leave last name references unchanged
 - Remove/adapt masculine-only traits (beard, etc.)
 
+Sometimes the change creates repeated pronouns, for example: "Several minutes passed with them lying together, with her on top of her." (the original sentence was "Several minutes passed with them lying together, with her on top of him"). If you see such an example of repeated pronouns, please change the second pronoun to a more appropriate alternative (like a name or a noun - him refers to Shepard, her refers to Tali/the Quarian in this specific example). 
 
 **CRITICAL RULES**:
 - Return the COMPLETE text with all changes applied
@@ -188,12 +189,12 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         input_dir = Path(sys.argv[1])
     else:
-        input_dir = Path("../inputs/adamo")
+        input_dir = Path("inputs/adamo")
     
     # Derive output directory from input directory name
     input_name = input_dir.name
-    output_dir = Path("../outputs") / input_name
-    verification_dir = Path("../outputs/verification_log")
+    output_dir = Path("outputs") / input_name
+    verification_dir = Path("outputs/verification_log")
     
     # Create directories
     output_dir.mkdir(exist_ok=True, parents=True)

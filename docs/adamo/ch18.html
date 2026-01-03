@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I&#x27;ll Help</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch17.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html" selected>I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+            </select>
+            <a href="ch19.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">I&#x27;ll Help</h1>
+    <div class="chapter-content">
+        <p>Tali&#x27;s eyes opened. She was on Shepard&#x27;s bed, lying on her side and facing the left side of the room. The first thing she noticed upon waking was that Shepard was no longer in bed, her arms were absent of her body. The second thing, were the symptoms of her illness.</p>
+        <p>Tali felt pressure in her head, which gave her a headache. She recognized that this was from congested sinuses. She also had a sore, itchy throat which she would soon need a cough to satisfy. There was also a feeling of warmth; a light fever. Despite the unpleasantness of her symptoms, she considered them to be relatively mild and was grateful that her reaction wasn&#x27;t worse. It would take a few days to feel normal again, but that was alright. Exposing her face to Shepard and kissing her had been incredible. Her current sickness was worth it.</p>
+        <p>The emotions of the previous night were still rich and vivid in her mind. It felt as if she spent the whole night dreaming of what had happened; her mind&#x27;s way of organizing and sorting the new, amazing experience. Her lips still seemed to tingle from the feeling of pressing with another&#x27;s for the first time. It had been wonderful, and she found herself looking forward to her illness clearing up, more so that she could experience another night like the previous, than for the sake of the illness being gone.</p>
+        <p>Tali rolled to her back and stretched. A few quiet pops escaped from her joints, and she grunted quietly at the apex of her stretch, just before all her muscles suddenly relaxed and she sighed. Staring up at the ceiling of Shepard&#x27;s quarters, she noticed the small window on it, which gave a view of the outside. The deep blackness speckled with stars she expected to see wasn&#x27;t there. Instead, she saw a clear sky reminiscent of a garden world&#x27;s atmosphere. The Normandy was docked on some planet. She didn&#x27;t know where they were, but she didn&#x27;t really care.</p>
+        <p>&quot;Good morning… beautiful,&quot; was heard from off to the side. It was Shepard, sitting on the couch with her datapad in hand. She was dressed in a standard crew uniform. It was evident that she had been awake for a while.</p>
+        <p>Tali had always found it cute how Shepard rarely wore an officer uniform. On the original Normandy she always wore a regular, navy-colored shirt with dark pants, just like the crewmembers. Meanwhile, most of the ship officers—like Navigator Pressly and Engineer Adams—all wore Alliance officer uniforms. She liked Shepard&#x27;s decision in her attire; it was an example of the type of leader she was. She always took charge, but she never lorded her authoritative position over the rest of the crew. It reminded her of how captains on the Migrant Fleet were rarely subject to preferred conditions. They typically lived in living spaces the same size as everyone else, and received no preferential treatment with rationed supplies.</p>
+        <p>&quot;Hello, Shepard… uh, good morning,&quot; Tali greeted in response, awkwardly. The phrase &#x27;good morning&#x27; wasn&#x27;t common among quarians, but it was one she noticed was fairly common among humans. She had heard her use it several times before, but this was the first time she said it herself.</p>
+        <p>Shepard smiled at her response. She also noticed her voice sounded slightly nasally and congested, which instantly reminded her that she had likely gotten sick from removing her mask the previous night.</p>
+        <p>&quot;How do you feel?&quot; she asked as she stood up, approached the bed, and sat on its edge.</p>
+        <p>Tali reached forward and grabbed at Shepard&#x27;s shoulders, pulling her down so that she fell unto the bed with her. Shepard chuckled quietly, and positioned herself more comfortably at Tali&#x27;s side. They lay cuddled together, staring up at the ceiling.</p>
+        <p>&quot;I feel okay,&quot; Tali said. &quot;I have a mild fever and some congestion, but it&#x27;s nothing too serious.&quot;</p>
+        <p>&quot;Are you sure you&#x27;re alright?&quot;</p>
+        <p>&quot;I&#x27;m sure. I should be back to normal in a few days.&quot;</p>
+        <p>&quot;Good,&quot; she responded, &quot;I was a little worried. It&#x27;s why I didn&#x27;t wake you up.&quot;</p>
+        <p>She gave her a light squeeze with her arms. There was a short period of silence as they lay together, staring up at the ceiling; at the sky visible through the window up top. Occasionally a small ship would zoom by some distance above them.</p>
+        <p>&quot;Where are we, by the way?&quot; Tali asked.</p>
+        <p>&quot;Illium—it&#x27;s an asari colony. We have a lot to do here, so we&#x27;re going be here a while.&quot;</p>
+        <p>&quot;I&#x27;ve heard of this world,&quot; she said, &quot;The corporations here aren&#x27;t too fond of the Migrant Fleet. They spend a lot of resources to keep it away.&quot;</p>
+        <p>The tone of Tali&#x27;s voice wasn&#x27;t particularly emotional during her statement. It was obvious she didn&#x27;t really want to talk about it, but was merely making a comment.</p>
+        <p>&quot;That reminds me,&quot; Shepard said, &quot;I got an interesting message from the Migrant Fleet&#x27;s Admiralty a short while ago. From someone called Rael&#x27;Zorah. Know him?&quot; She asked in a playful way; it was obvious she knew who it was.</p>
+        <p>&quot;My father messaged you?&quot; Tali asked in surprise. &quot;What did he say?&quot;</p>
+        <p>&quot;It was just a confirmation that your request to be transferred to my command has been approved. And a warning to me that he expects you be treated well, and no harm come to you,&quot; Shepard answered.</p>
+        <p>&quot;Don&#x27;t pay too much attention to him. He&#x27;s just being a little overprotective.&quot;</p>
+        <p>&quot;I sent a reply letting him know that his little girl was just fine, aside from the fever she got from me. Should I have not done that?&quot;</p>
+        <p>&quot;What?&quot; Tali responded in shock.</p>
+        <p>Shepard just laughed and said, &quot;Relax! It was a joke. I wouldn&#x27;t say something like that to him—I don&#x27;t need the entire Migrant Fleet chasing me down.&quot;</p>
+        <p>&quot;You bosh&#x27;tet, don&#x27;t joke like that!&quot;</p>
+        <p>Shepard&#x27;s laugh ended and she asked, &quot;By the way… did you ever mention to him how close we were during your pilgrimage? The way he worded his message—I just got the feeling he suspects something.&quot;</p>
+        <p>&quot;No, I never told him we were together. But I wouldn&#x27;t be surprised if he does suspect something. Over these last two years I often mentioned you and our missions together.&quot; Tali then placed her hand on Shepard&#x27;s face and gently held her cheek, &quot;I couldn&#x27;t help but speak fondly of you.&quot;</p>
+        <p>Shepard smiled and placed her hand on top of hers. She kissed the palm of her small, gloved hand.</p>
+        <p>There was a period of blissful silence after Shepard&#x27;s gesture as they continued to lie together, holding each other and enjoying one another&#x27;s presence.</p>
+        <p>&quot;So,&quot; Shepard said, &quot;How do you think your dad will feel about you having a human girlfriend?&quot;</p>
+        <p>&quot;Keelah… I don&#x27;t even want to think about it,&quot; Tali responded. &quot;Don&#x27;t get me wrong, it&#x27;s not like my father has anything against humans, it&#x27;s just—I don&#x27;t think he&#x27;d be happy with me being in a relationship with anyone.&quot;</p>
+        <p>&quot;I understand. Hopefully whenever I meet him, it&#x27;ll be under good terms.&quot;</p>
+        <p>. . .</p>
+        <p>The time passed since Tali joined the Normandy, and in that time much was done to progress the mission to stop the Collectors. The Normandy received more upgrades, new team members were recruited, and now they were even spending time on clearing the personal matters of individual team members to ensure their focus and loyalty to the mission.</p>
+        <p>Shepard in particular felt content with how things were currently developing. The time directly after her awakening had been a bitter one. The confusion of knowing she had been brought back from the dead, the unsettling feeling of knowing she was working with a terrorist organization, and the unhappy encounter she had with former teammate Ashley Williams on the colony of Horizon had fueled sadness and pessimism within her.</p>
+        <p>But the time around Tali&#x27;s rejoining of the Normandy had marked a turning point. Not only did her presence greatly brighten Shepard&#x27;s days, some real progress was happening toward their mission. Shepard knew that stopping the Collectors would always remain a dangerous task, but she was finally feeling hopeful and confident that her team could pull it off.</p>
+        <p>In the time that passed, whenever Tali felt healthy enough and there weren&#x27;t any upcoming ground missions, she would remove both her mask and helmet for her in their quarters. Those nights were few and rare, but Tali relished each one. They were blissful times; she loved being alone with her, her head fully uncovered. Seeing her smile whenever her mask came off always filled Tali with joy, but the best part was getting to feel her lips press with hers; getting to feel the warm breath from her nostrils gently tickle her face.</p>
+        <p>There had been one night in particular that was special. They sat together on the sectional couch of their quarters, Tali&#x27;s head uncovered. Shepard asked if she could take a holo with her omni-tool of her exposed face. Initially, she said no. She didn&#x27;t like the idea of a holo of her face existing. But Shepard insisted, and promised that only her eyes would ever see it; she would even encrypt the file on her omni-tool, so only she could access it. Tali finally agreed, and Shepard took the holo.</p>
+        <p>The image captured that night was heartwarming and beautiful. It was a holo of just their faces. Tali was on the left and Shepard on the right. Their heads were close together, to the point that their cheeks touched. They both smiled happily and blissfully, with their eyes looking straight ahead at the omni-tool used to take the image. Anyone who did not know them or their story, could look at the holo captured that night, and smile at how obviously in love the human woman and quarian female subjects were. At how happy they were with one another. There was a deep, profound happiness on their faces. One that revealed that they were among the fortunate few in the galaxy who had truly found their other half.</p>
+        <p>Shepard was now currently in the antechamber before her quarters; the small, empty area that separated the entrance of her quarters and the elevator door. She was there with Mordin, and they were busy installing a decontamination unit into the area. It was among the numerous spare parts and devices held in a small storage room of the cargo bay.</p>
+        <p>Once fully installed, it would automatically sweep the antechamber with a sterilizing beam of light—very reminiscent of the Normandy&#x27;s airlock—whenever someone tried to enter Shepard&#x27;s quarters. By performing a decontamination cycle before either her or Tali entered, the interior of their quarters would be much safer for Tali to be without her mask on. The only germs that would be inside their quarters, would be theirs.</p>
+        <p>The idea for this had been in Shepard&#x27;s mind for a while. She recalled Tali&#x27;s words that first time she removed her mask, which now felt so long ago: &quot;…this room is a relatively small, controlled environment.&quot; She was right, her cabin was indeed a well controlled environment. Like many of the doors throughout the Normandy, including the ones found on the elevator shaft, the door of her quarters was designed to form an airtight seal whenever it closed. This safety mechanism was found throughout all sections of the ship, which allowed individual rooms to be sealed off in case of a hull breach. It was standard design among all spacefaring vessels.</p>
+        <p>In addition to this, fresh, sterilized air was already perpetually flowing into her quarters through vents connected to the Normandy&#x27;s life-support systems. The life-support systems constantly cycled the air throughout the ship, keeping it at approximately 79% nitrogen and 21% oxygen. During which, it would also purify and sterilize the air, removing all pathogens and dust before venting it back into the ship.</p>
+        <p>Since the air of her quarters was constantly being purified by the ship (albeit slowly), and it had a small antechamber that could effectively act as an airlock, it had occurred to Shepard to install the decontamination unit in the antechamber. The decontamination cycle would kill any microbes that happened to be on Shepard&#x27;s skin and clothes, or the outside of Tali&#x27;s suit, before they entered the cabin. This meant that the only germs inside their quarters would be the bacteria naturally produced by their bodies.</p>
+        <p>Their quarters would effectively become the equivalent of a linked suit environment.</p>
+        <p>Shepard had discussed this with Mordin, who agreed it was a good idea. He mentioned how it eliminated all variables beyond the bacteria produced by Shepard&#x27;s own body. Tali would still have to adapt to her, and until her immune system got accustomed to her germs she would continue to experience illness from exposing herself to her, but it was significantly safer and healthier than being exposed to air that could potentially have bacteria and microbial matter from anywhere and anyone.</p>
+        <p>There were only two downsides: they would have to wait ten seconds for the decontamination cycle to complete every time before entering, and no one else would be allowed to enter their quarters.</p>
+        <p>No one else ever comes up here anyway, Shepard told herself. And besides, she&#x27;s worth it. She&#x27;s worth an extra ten second wait a few times a day, and so much more.</p>
+        <p>Shepard and Mordin were just finishing the installation of the decontamination unit. While Mordin was first and foremost a biologist, he did have some engineering knowledge and was able to help Shepard with the relatively simple installation. Tali would have been the most ideal person for the job, given her wizardry with engineering and technology, but Shepard wanted it to be a surprise for her.</p>
+        <p>&quot;There!&quot; Mordin said, stepping down from one of the two A-frame ladders that they used to install the new machine on the ceiling. Shepard had helped lift it into place and lock it in, but Mordin configured it and installed it into the Normandy&#x27;s systems. &quot;Should do it. Installation complete.&quot;</p>
+        <p>&quot;Let&#x27;s give it a test,&quot; Shepard said as she hit the green holographic control pad of her door. Immediately, the decontamination unit initiated, and there was a mechanical hum as a bright plane of light swept at a steady pace throughout the entire antechamber, from top to bottom. Only after it finished did the door open.</p>
+        <p>&quot;That was perfect. Syncing it into the Normandy&#x27;s door system worked beautifully. I owe you one, Mordin.&quot;</p>
+        <p>&quot;Nonsense, happy to help!&quot; Mordin said. &quot;Tali&#x27;Zorah important to mission. Want to see her healthy, happy.&quot;</p>
+        <p>&quot;Thanks just the same,&quot; Shepard said as she began to pick up the tools they had used. &quot;I&#x27;m going to take this stuff back to the cargo bay, then I&#x27;m going to get Tali to come up here so she can see this for herself. She&#x27;s going to love it.&quot;</p>
+        <p>&quot;Will return to lab then,&quot; Mordin said as he began to approach the elevator door. He stopped, turned, and said, &quot;When you have time, come by lab. Would like to offer some… medical advice, on relations with Tali&#x27;Zorah.&quot;</p>
+        <p>Shepard smiled, amused. It was obvious what he was referring to.</p>
+        <p>.</p>
+        <p>Shepard had put away the tools and ladders used for the installation, and was now entering Engineering to find Tali. She entered through Engineering&#x27;s left entrance, since the left side was where Tali&#x27;s terminal was, and where she could typically be found. As she expected, Tali was standing in front of it. But something seemed off. She stood in an unusual pose, with her hands resting on top of the console, and her head tilted down.</p>
+        <p>Shepard approached and placed her arms around her waist from behind, her fingers lightly interlocking as her hands rested on her abdomen. Her reaction to this approach had always been to stop what she was doing, place her hands on top of Shepard&#x27;s, and lean her body back against hers, relaxing and enjoying her hold. But this time, she reacted differently. Quickly, she turned around and placed her hands on Shepard&#x27;s arms, tensely holding them and looking at her eyes.</p>
+        <p>&quot;Shepard, I&#x27;m glad you&#x27;re here,&quot; she said with noticeable concern in her voice. &quot;I may need your help.&quot;</p>
+        <p>&quot;What&#x27;s wrong, Tali?&quot; Shepard asked.</p>
+        <p>&quot;I just received a message from the Admiralty,&quot; she said, her fingers gripping slightly tighter on her arms. &quot;I&#x27;m being accused of treason against the Migrant Fleet.&quot;</p>
+        <p>&quot;…I&#x27;m scared, Shepard.&quot;</p>
+    </div>
+</body>
+</html>

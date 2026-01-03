@@ -29,11 +29,11 @@ def create_chapter_html_files(input_dir, output_subdir=None):
     
     input_path = Path(input_dir)
     
-    # Determine output directory: public/{output_subdir or input_dir_name}/
+    # Determine output directory: docs/{output_subdir or input_dir_name}/
     if output_subdir is None:
         output_subdir = input_path.name
     
-    output_path = Path("../public") / output_subdir
+    output_path = Path("docs") / output_subdir
     output_path.mkdir(parents=True, exist_ok=True)
     
     # Get all text files sorted naturally (ch1, ch2, ..., ch10, ch11, ch12)
@@ -240,9 +240,9 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         input_dir = sys.argv[1]
     else:
-        input_dir = "../outputs/rekindling"
+        input_dir = "outputs/rekindling"
     
-    # Optional: output subdirectory name (will be placed under public/)
+    # Optional: output subdirectory name (will be placed under docs/)
     if len(sys.argv) > 2:
         output_subdir = sys.argv[2]
     else:

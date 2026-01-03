@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Deserved Better</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch19.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html" selected>You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+            </select>
+            <a href="ch21.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">You Deserved Better</h1>
+    <div class="chapter-content">
+        <p>Shala&#x27;Raan stood at her position on the top podium among the admiralty, carefully observing Commander Shepard and Tali&#x27;Zorah vas Normandy. They had arrived from the Alarei a mere moment ago. She was greatly relieved to see them back alive, but now, as the trial continued and she had just asked if they had found any evidence of Tali&#x27;s innocence, a knot was growing in her stomach. They were hesitating to answer.</p>
+        <p>Raan knew that Rael&#x27;Zorah had been performing tests with geth parts on the Alarei, though she did not know any specifics. She also knew that if anyone could be trusted with the safety of the Migrant Fleet, it was Tali. She was convinced Tali was innocent, and was fully expecting them to have found something that proved that. There was no reason for their hesitation.</p>
+        <p>Shepard stepped fourth, and with one final moment of hesitation, she answered.</p>
+        <p>&quot;We found nothing on the Alarei…&quot;</p>
+        <p>&quot;Very well,&quot; Admiral Zaal&#x27;Koris quickly said, &quot;Then we proceed with the voting.&quot;</p>
+        <p>&quot;You didn&#x27;t let me finish, Admiral,&quot; Shepard responded. Since the moment the trial had began, Shepard had been annoyed by Koris&#x27; treatment of Tali. He had some good ideas toward peace with the geth, but Shepard found him excessively rude to Tali; it genuinely seemed as if he wanted her to get exiled, even with no evidence of her doing anything wrong.</p>
+        <p>&quot;As I was saying,&quot; Shepard continued, &quot;We found nothing on the Alarei. But I have evidence: Tali&#x27;Zorah herself.&quot;</p>
+        <p>Koris was about to interrupt so as to call out the asinine claim, but Shepard continued speaking, louder and bolder so she wouldn&#x27;t be interrupted. &quot;When I met Tali on the Citadel, she gave me an audio recording taken from a geth&#x27;s memory core that proved Saren was a traitor. By doing so, we were able to hunt down Saren and stop him before he could call in the Reapers. Think about that carefully for a minute. Tali is directly responsible for preventing a Reaper invasion. She saved every person in the galaxy. That alone should be all the evidence you need.</p>
+        <p>&quot;But her accomplishments don&#x27;t stop there. She joined my crew, and together we traveled throughout the galaxy, disrupting all of Saren&#x27;s plans. It all finally culminated on the Citadel itself, where we ascended Citadel Tower and faced Saren ourselves. Tell me, has anyone here fought in the Battle of the Citadel? Where any of you there?&quot;</p>
+        <p>Shepard paused a moment, waiting a second before continuing her harangue. &quot;Tali was, and she helped defeat Saren! Tali&#x27;Zorah saved the Citadel that day, just like she saved the Alarei today.&quot;</p>
+        <p>&quot;We are all aware of Tali&#x27;Zorah&#x27;s accomplishments,&quot; Koris said. &quot;But I fail to see what relevance any of this—&quot;</p>
+        <p>&quot;None of you are even interested in Tali, are you?&quot; Shepard interrupted Koris, deliberately ignoring the change of subject he was attempting. &quot;This trial is about the geth. It has nothing to do with her!&quot;</p>
+        <p>&quot;This trial has nothing to do with the geth!&quot; Koris immediately refuted.</p>
+        <p>&quot;Wrong, Admiral!&quot; Shepard snapped. &quot;I spoke with all of you earlier. You—&quot; she pointed at Koris, &quot;Want to create sympathy for the geth. Gerrel wants to go to war. Xen wants to try and enslave them. None of you care about Tali! Your attempt at garnering support for your political views is the only reason I&#x27;m standing here, wasting my time defending an innocent person!&quot;</p>
+        <p>Shepard paused a moment, collecting her thoughts before continuing. The admirals stood there, dumbfounded by Shepard&#x27;s calling out, unable to come up with a way to refute her claims.</p>
+        <p>Shepard continued her defense, &quot;My people believe in a legal right known as &#x27;innocent until proven guilty.&#x27; That is true justice; a person shouldn&#x27;t have to prove their innocence. It&#x27;s their guilt that should be proven. And none of you have any proof that Tali brought dangerous material to the Fleet.</p>
+        <p>&quot;And yet, I can keep speaking for hours, giving example after example of Tali&#x27;s ability, competence, and loyalty and love of the Migrant Fleet. Of how she showed the galaxy the value of the quarian people.&quot; With one final pause, she concluded, &quot;I can&#x27;t think of stronger evidence than that.&quot;</p>
+        <p>Finally, Shepard stopped talking, and simply stood in the defendant&#x27;s spot, looking up at the admirals. She stood in a confident posture; one that communicated to all, that she expected no less than Tali&#x27;s complete exoneration. It wasn&#x27;t long before the admirals started to cast their votes.</p>
+        <p>While the others voted, Raan stood unmoving and silent, keeping her eyes on Shepard, reflecting on all she just witnessed from her. At the very start of her speech, when she mentioned they found nothing on the Alarei, Raan had found herself feeling absolutely furious. She knew damn well that they found something and that they were holding it back for Rael&#x27;s sake. All the effort she had gone through, to get the others to agree in giving Tali the chance to clear her name by attempting to reclaim the Alarei, would have been in vain.</p>
+        <p>But she observed as Shepard defended Tali. She had spoken of Tali&#x27;s numerous achievements, reminding everyone of all she had done for the quarian people. Her words were bold and confident, as was her body language. She used her arms to put emphasis on her claims, and casually paced back and forth during her speech; her way of keeping everyone&#x27;s attention focused on her, and demonstrating the passion that fueled her defense of Tali.</p>
+        <p>It was now, at the end of her valiant defense of Tali&#x27;Zorah, that it finally became clear to Raan that this human, who was born countless light-years away from the Migrant Fleet, was truly the one for Tali. Tali&#x27;s love of her became entirely justified, and it was clear that she truly loved Tali in return. For a brief moment, Raan found herself wishing Tali&#x27;s mother were alive, just so she could see the woman her daughter had found.</p>
+        <p>The votes concluded, and the verdict was sent to Raan&#x27;s omni-tool. She lifted her arm, and read the result.</p>
+        <p>&quot;Tali&#x27;Zorah, in light of your history of service and numerous accomplishments, we do not find sufficient evidence to convict. You are cleared of all charges.&quot;</p>
+        <p>Shepard grinned under her mask, greatly relieved as her concern and worry for Tali instantly vanished. She looked at Tali, wanting to cheer with joy and hug her, but she turned back to the admirals as Raan kept speaking.</p>
+        <p>&quot;Captain Shepard,&quot; she said, while typing into her omni-tool, &quot;Please accept these gifts in appreciation for representing one of our people.&quot;</p>
+        <p>&quot;With all due respect, Admiral,&quot; Shepard responded, &quot;I didn&#x27;t represent one of your people. I represented one of mine.&quot;</p>
+        <p>With the trial seemingly over, Shepard felt eager to walk away from the defendant&#x27;s spot and talk with Tali in private over everything that happened. She was just about to turn when—</p>
+        <p>&quot;Commander Shepard,&quot; Koris asked, his voice completely interrupting the joyous moment, &quot;If you don&#x27;t mind, there is something I would like to ask you.&quot;</p>
+        <p>The other admirals, who were preparing to vacate their positions on the judgment platform, stopped and stood at their places, waiting to see what Koris wanted to ask. All the joy of the moment came to an instant pause. Shepard felt an uneasy feeling deep inside, worried over what the admiral was about to ask.</p>
+        <p>&quot;What is it, Admiral?&quot;</p>
+        <p>&quot;Not long ago, the Admiralty sent a team on a mission to the planet Haestrom,&quot; Koris began to say. With those words, Shepard felt like somebody had just punched her in the stomach. &quot;You are, of course, aware of this; you were there.&quot;</p>
+        <p>Koris continued, &quot;Mere hours before the Haestrom mission, an anonymous, encrypted message was sent to your ship from the Migrant Fleet.&quot;</p>
+        <p>&quot;What?&quot; Han&#x27;Gerrel asked, &quot;What are you talking about?&quot;</p>
+        <p>&quot;I take the safety of our flotilla very seriously, Admiral Gerrel&quot; Koris said. &quot;When I read the mission report from Haestrom, and it mentioned a Cerberus vessel intervening in a top secret mission assigned by our Admiralty board, I opened an investigation.&quot;</p>
+        <p>&quot;Shepard already explained to the marines how she learned of the mission,&quot; Gerrel said. &quot;It was on their mission report.&quot;</p>
+        <p>&quot;It&#x27;s true,&quot; Shepard said. &quot;As I explained on Haestrom, the organization I&#x27;m currently working with—&quot;</p>
+        <p>&quot;Cerberus, correct?&quot; Koris interrupted.</p>
+        <p>&quot;Yes,&quot; Shepard answered tensely, some annoyance noticeable in her voice, &quot;Though I am not a member, they are sponsoring my mission to stop attacks on human colonies by the Collectors, who are agents of the Reapers.&quot; Shepard made sure to mention the Reapers, well aware that the quarians believed in their existence.</p>
+        <p>&quot;As I was saying,&quot; Shepard continued, once again using the true statement that served as a lie, that she told the quarians on Haestrom. &quot;Cerberus&#x27; leader sent me a dossier on Tali&#x27;Zorah, which specified she was on Haestrom. I&#x27;m building a team to stop the Collectors, and I&#x27;m in need of skilled people such as her.&quot; She then added, &quot;If you don&#x27;t believe me, I can forward you the dossier he sent me.&quot;</p>
+        <p>&quot;That won&#x27;t be necessary, Commander,&quot; Koris said. Unlike Raan, who referred to Shepard as &#x27;captain,&#x27; Koris made sure to call her &#x27;commander.&#x27; It was a subtle manipulation to downplay her authority to the other quarians. &quot;That explanation never sat well with me, so I took the liberty of initiating an investigation, which was well within my authority as an admiral. The investigation found that mere hours before the mission, an encrypted message originating from the Migrant Fleet—likely the Neema—had been sent to your ship.&quot;</p>
+        <p>Koris waited a short moment before continuing, letting that information sink in for everyone in the room. He then said, &quot;Would you mind telling us, what the contents of that message were?&quot;</p>
+        <p>Shepard hesitated a moment, carefully thinking on how to best deal with the question. She decided to do what any good lawyer would do in a similar situation; avoid answering it. &quot;I wasn&#x27;t aware that a second trial had started, Admiral,&quot; she said. &quot;I&#x27;m sorry, but I&#x27;m not under any obligation to reveal the details of my ship&#x27;s communications.&quot;</p>
+        <p>Tali felt a big relief from hearing her response. She knew she was absolutely correct; with no evidence, this wasn&#x27;t a trial, and she didn&#x27;t need to answer.</p>
+        <p>&quot;You are correct,&quot; Koris calmly responded. &quot;You don&#x27;t have to answer. Although, the investigation team has assured me it&#x27;s only a short matter of time before they crack the message, and determine the person behind its origin. If the contents of it are what I suspect, then it won&#x27;t be very long before Tali&#x27;Zorah has to return to defend herself once again. Now, are you sure you&#x27;d rather not spare the effort, and handle this now, while you&#x27;re here?&quot;</p>
+        <p>Shepard wondered what would be best to do. She wished she could discuss it with Tali, but that was impossible at the moment. She knew even turning her head to glance at Tali would be a major indicator that the secret message sent was indeed from her, and that it contained—</p>
+        <p>&quot;I sent it,&quot; Tali suddenly said, &quot;I told Shepard about the Haestrom mission.&quot;</p>
+        <p>Shepard snapped her head in Tali&#x27;s direction. Tali just stared forward, looking straight at the admirals. Throughout the room, there was an eruption of murmurs from the people observing.</p>
+        <p>&quot;So you admit that you leaked classified mission information to a Cerberus vessel?&quot; Koris asked. He had a smirk under his mask; he knew it was all over for her.</p>
+        <p>&quot;No. I admit that I told a friend,&quot; Tali answered defiantly. &quot;A friend I trust with my life. A friend that has battled more geth than anyone in this room. And I&#x27;m glad I did—my decision saved quarian lives!&quot;</p>
+        <p>&quot;We can&#x27;t really know that for sure,&quot; Koris refuted. &quot;But what we do know, is that you leaked classified military information, that had been entrusted to you by the Admiralty. You broke a law, punishable only by exile. You admitted it yourself, and I propose we put this to a vote, right now.&quot;</p>
+        <p>Tali lowered her head momentarily, then looked back up at the admirals. She asked, her voice now low-spirited and ripe with melancholy, &quot;Why are you doing this, Koris? What have I done to make you dislike me so much?&quot;</p>
+        <p>Gerrel turned to Koris and said in almost a whisper, &quot;Don&#x27;t do this, Zaal. This isn&#x27;t right.&quot;</p>
+        <p>Koris ignored Gerrel and answered Tali, &quot;I don&#x27;t hate you, Tali&#x27;Zorah; I hate your ideals—the same ones that your father had. People like you would love nothing more to than to wipe out the geth; the people we already wronged before. And in attempting to meet that goal, you would see our entire fleet burn in the skies above our homeworld!&quot;</p>
+        <p>&quot;I get it,&quot; Shepard said, her voice doing little to hide her vexation, &quot;This is just like the trial. This has nothing to do with Tali—you&#x27;re doing this purely for your damned political agenda!&quot;</p>
+        <p>&quot;Ultimately, that is irrelevant,&quot; Koris answered. &quot;What matters is that Migrant Fleet law was broken, which Tali&#x27;Zorah freely admitted to. We can&#x27;t ignore that. We can&#x27;t send the message that our laws can be broken, just because someone is afraid of a mission. Do we really want to establish precedent for ignoring our military commands?</p>
+        <p>&quot;What if there is war, like some of you want, and other military officers believe it alright to freely discuss our plans with outsiders? What if there is peace, like we should all be striving for, and some overzealous malcontents ignore our laws and attack the geth, shattering our peace?</p>
+        <p>&quot;The last person we found guilty of treason was Anora&#x27;Vanya vas Selani. Similarly, she had leaked classified information to others outside the fleet. Should we allow ourselves to be lenient on Tali&#x27;Zorah, just because she was the daughter of an Admiral? No! As Shepard herself said, &#x27;innocent until proven guilty,&#x27; and there is no greater proof of guilt than confession. Tali&#x27;Zorah admitted that she committed a crime, before a panel of admirals and a room full of witnesses! That&#x27;s all that is relevant, and we are putting this to a vote, right now!&quot;</p>
+        <p>Koris was aware that the others in the plaza would likely be unhappy if she were exiled for all this, but that ultimately didn&#x27;t matter. There were over seventeen million quarians in the flotilla, and nearly all of them would only learn the specific, official details: Tali&#x27;Zorah leaked classified Migrant Fleet information, and was exiled because of it.</p>
+        <p>Immediately after Koris finished speaking, Admiral Daro&#x27;Xen raised her omni-tool and typed in a vote. Xen wasn&#x27;t interested in any of this. She felt completely indifferent to both Tali&#x27;Zorah and Zaal&#x27;Koris&#x27; motivation for exiling her. She had plans of her own, and she had grown very impatient with all these matters regarding the incompetent daughter of the now dead Rael&#x27;Zorah. All she wanted to do right now, was go to the Alarei and see for herself exactly what experiments with the geth had taken place.</p>
+        <p>Right after Xen&#x27;s vote, Han&#x27;Gerrel casted his own vote. He had his own political motivation for not wanting Tali to be exiled. But right now, politics didn&#x27;t matter. What mattered was exonerating the daughter of his deceased best friend; exonerating the person he had known since she was a little girl, scampering about the clean rooms of the Rayya, always curious and eager to learn. It didn&#x27;t matter to him at all that she had admitted to committing a serious infraction of their laws; he felt she had made the right choice.</p>
+        <p>Finally, Zaal&#x27;Koris brought his right hand to his left forearm, so as to cast his vote. His hand stopped just above his omni-tool, where it hovered as he hesitated momentarily. He tilted his head up slightly, and looked at Tali&#x27;Zorah as she stood in the defendant&#x27;s spot below him, quiet and unmoving. Though her voice was silent, her body language spoke loudly. All the fear and sadness within her was painfully obvious in how she stood: her posture humble, her head low, and her hands held together nervously.</p>
+        <p>Though the votes were anonymous, Koris knew the others well enough to know how they voted: one vote for exile, and one against it. And since the outcome didn&#x27;t have to be unanimous, his vote would be the deciding one. With one tap of his finger, he would decide her fate.</p>
+        <p>I truly am sorry it has to be like this, he thought to himself, as if speaking to Tali, but it is for the best of our race. The ideals of people like you and your father to reclaim our homeworld would doom our race to extinction. The homeworld is lost forever. We must forget about it. We must move on.</p>
+        <p>His head tilted back up as his gazed returned to his omni-tool, and he casted his vote.</p>
+        <p>There was complete silence throughout the room. Shala&#x27;Raan&#x27;s omni-tool received the verdict, and as the one presiding over the admirals, it was once again her job to view the result and announce the decision, though she feared the outcome.</p>
+        <p>With a quiet sigh inaudible to anyone but herself, Raan lifted her arm and looked at her omni-tool.</p>
+        <p>She saw the decision. For an immeasurably small amount of time, Raan&#x27;s mind flashed back to twenty-four years ago, when she held a small baby girl in her arms, crying loudly after being taken from her mother, as she was placed in a protective environmental bubble.</p>
+        <p>&quot;Tali&#x27;Zorah vas Normandy,&quot; Shala&#x27;Raan said slowly and dolefully, &quot;As a result of revealing top-level mission information with an unauthorized third-party, you are hereby found guilty of treason against the quarian people, and sentenced to exile. Tali&#x27;Zorah, you have six hours to leave. Would you like to request any personal possessions from the Fleet?&quot;</p>
+        <p>&quot;No, Admiral…&quot; Tali answered, her voice wavering from her restrained emotions, &quot;I have everything I need here.&quot;</p>
+        <p>&quot;Very well. Go in peace, Tali&#x27;Zorah vas Normandy. Keelah se&#x27;lai.&quot;</p>
+        <p>There was complete silence throughout the room for a short while after Raan&#x27;s words.</p>
+        <p>&quot;Well, that&#x27;s that, then,&quot; Tali muttered quietly, as she turned and looked at Shepard. She stood unmoving, her body very tense, still facing the admirals.</p>
+        <p>She said in a low, quiet growl, &quot;After everything she has done for all of you, this is how you treat her?&quot; It was just barely loud enough to capture the attentions of the admirals, who looked at her, expecting her to continue speaking.</p>
+        <p>There was a time when Shepard had little discipline. A time during her adolescence when she easily gave in to her youthful rage, and lashed out against anyone who she felt deserved it, without regard of the potential consequences. Sometimes it had saved her life, sometimes it had nearly cost it.</p>
+        <p>After Shepard joined the Alliance, it quickly became evident that, despite the chaos a soldier may often be subjected to, there was no place for unrestrained fury. It had very little value to a soldier, and even less to a commanding officer. Discipline always had to stay in control. Lack of discipline had killed more soldiers throughout the ages than any weapon.</p>
+        <p>But despite how well she had suppressed all her youthful tendencies to submit herself to the wills of fury and rage, a small flicker of that youthful fury had always remained. And now, it was on the brink of breaking free of its cage of discipline.</p>
+        <p>Shepard&#x27;s right hand was formed into a tense fist. The knuckles under the rigid material of her hard-suit&#x27;s glove were white from the intensity of her grip. She wanted nothing more than to run to the platform before her, where the admirals stood, and slam her fist into the faceplate of Admiral Zaal&#x27;Koris, hearing the loud crack of his visor shattering.</p>
+        <p>But it was not meant to be. Despite the intensity in which her fury currently burned within her, there was still too much discipline embedded into her being. The rational part of her mind kept her under physical control; it explained to her that attacking the admiral would not help Tali. If she truly loved her, she would not make things worse for her by aggravating the situation, just to satisfy some primal lust for revenge.</p>
+        <p>She unclenched her fist, and decided to use her words, instead.</p>
+        <p>With a voice saturated with anger and rage she said, &quot;I want all of you—the admirals, everyone in this room—to take a damn good look at her,&quot; she pointed at Tali, &quot;See her? See this quarian? Her name will be remembered among your people, well after all of you have been forgotten. Well after your bones have turned to dust.</p>
+        <p>&quot;The quarian people will get their homeworld back, one day, and I promise you, it will be thanks to her. And on that day, I&#x27;m coming back here, with a fist full of soil from your planet, and I&#x27;m going to rub it on your fucking faces.&quot;</p>
+        <p>She turned to Tali and said, &quot;Come on Tali, let&#x27;s get out of here.&quot; She turned around and began to walk away. Tali followed, and they exited the room, leaving it in utter silence.</p>
+        <p>No one said anything, no one moved. A feeling of shame lingered in the air among the various witnesses. After a short moment, the dismal silence that filled the room was interrupted with footsteps as Shala&#x27;Raan quickly stepped down from her podium and ran after them.</p>
+        <p>Raan found them in the empty corridor, a short distance from the docking bridge that connected to their ship. &quot;Wait!&quot; she called out.</p>
+        <p>Tali stopped first and turned around. Shepard also stopped and turned, but only after noticing Tali did.</p>
+        <p>&quot;What is it, Shala?&quot; Tali asked. Her voice wasn&#x27;t angry or sad, but weak, tired, and weary.</p>
+        <p>&quot;I wanted to say that I am so sorry for everything that has happened, Tali. I had no idea that Zaal&#x27;Koris had started that investigation. I didn&#x27;t know of his intentions.&quot;</p>
+        <p>&quot;It&#x27;s not your fault,&quot; Tali responded. Her voice now with noticeable sadness.</p>
+        <p>Raan looked at Shepard and said, &quot;You are all she has now, Captain Shepard. Please, take care of her… please be good to her.&quot;</p>
+        <p>&quot;Shepard has always been good to me!&quot; Tali immediately snapped, &quot;From the very first day I met her, she has treated me better than anyone!&quot;</p>
+        <p>Realizing she chose the wrong words, Raan said, &quot;I am sorry. It wasn&#x27;t my intention…&quot;</p>
+        <p>Tali didn&#x27;t want to discuss any of this. It was taking a great effort to keep her emotions restrained, and she just wanted to retreat back to the Normandy. With a wavering voice that made it obvious she was fighting the urge to cry, she said, &quot;Goodbye, Auntie Raan,&quot; and turned around. Shepard also turned, and they continued walking, entering the docking bridge.</p>
+        <p>Tali took one last look at the Rayya&#x27;s interior before proceeding. Her eyes fixed with Shala&#x27;Raan&#x27;s, who still stood there in the corridor, looking at her. They looked upon each other for the last time, and Tali entered the docking bridge. The door closed behind her, sealing her off from her people forever. The noise of the door closing seemed to sound louder than normal.</p>
+        <p>They entered the Normandy&#x27;s airlock, and an automatic decontamination cycle initiated. Ever since they left the Rayya&#x27;s plaza where the trial had taken place, Shepard had seemed strangely quiet and distant to Tali. But suddenly, in a fit of rage she took off her helmet and threw it hard against the floor. The unexpected action and noise caught Tali off guard, startling her.</p>
+        <p>&quot;God damn it!&quot; Shepard yelled, and slammed her right fist fiercely against the airlock wall. The hard material of her glove made a very loud pang sound, which reverberated intensely within the small area.</p>
+        <p>Tali jumped from the much louder noise of Shepard&#x27;s attack on the wall. She had never seen an outburst from her like that; she had never seen her so angry. Shepard had her back to Tali, and held herself against the wall with her left arm. Tali nervously stepped closer, and gingerly placed her hand on Shepard&#x27;s shoulder, while maintaining some distance. She wasn&#x27;t actually worried that Shepard would hurt her, but all instincts told her to be careful with someone who was so worked up.</p>
+        <p>Shepard turned her head and looked at Tali. She instantly recognized Tali&#x27;s cautious stance; the way she kept her distance, how cautiously her hand rested on her shoulder. It was the body language of a scared person. Tali was afraid, because of her. It was something she never wanted to see.</p>
+        <p>Anger and sadness rarely stray far from each other, and as Shepard looked at Tali, and observed her current caution in regards to her, her anger instantly disappeared. It got replaced with remorse and sadness, as she remembered that she was the one in pain. She was the one who had lost her father today. She was the one who just got exiled by her people. Raan was right: she was all Tali had right now, and she had to be there for her. She couldn&#x27;t let her anger prevent that.</p>
+        <p>&quot;Tali,&quot; she said in a gentle, remorseful voice, turning to face her, &quot;I&#x27;m sorry.&quot;</p>
+        <p>Tali&#x27;s concern immediately disappeared as she witnessed her changed mood. She stepped closer and placed her hands on her arms, standing right in front of her. She said in a quiet voice, &quot;Please don&#x27;t be upset, Shepard.&quot; She paused briefly, &quot;Despite everything that has happened, I&#x27;m still so fortunate. I&#x27;m where I should be, here on the Normandy. With the person I should be with… you.&quot;</p>
+        <p>&quot;It&#x27;s just that—this is my fault! Not only did I fail as your defense councilor, I&#x27;m directly responsible for your exile. If I hadn&#x27;t made you promise to tell me about your missi—&quot;</p>
+        <p>&quot;No, Shepard—no,&quot; Tali immediately interrupted, &quot;Don&#x27;t you dare apologize for your help on Haestrom. If you saved even one life by arriving when you did, then it was worth my exile. And you did. For all we know, you saved all of us, including me.&quot;</p>
+        <p>Shepard stood in silence as she thought about her words, looking at her faintly glowing eyes. A very small, weary smile appeared on her face and she said, &quot;I&#x27;m the one who&#x27;s supposed to be cheering you up, not the other way around.&quot;</p>
+        <p>Tali moved her hands from Shepard&#x27;s arms and wrapped her arms around her torso, embracing her. She said, &quot;I&#x27;m tired of today—of all the negativity and bad things that happened. This day has been so… you know how it&#x27;s been, you were right there with me the whole time, by my side. You were the only one there for me, through it all. And right now, I&#x27;d rather just—I want to forget about today.&quot;</p>
+        <p>&quot;I understand,&quot; Shepard said, &quot;Would you like to just go to our quarters and get some rest?&quot;</p>
+        <p>The suggestion sounded wonderful to Tali. While she often enjoyed to bury herself with work whenever she was depressed or upset, as a way of keeping her mind busy, right now she wanted nothing more than to go to their quarters with her, and relax in peace. She answered, &quot;Yes… as long as my captain comes with me.&quot;</p>
+        <p>Shepard smiled in response.</p>
+        <p>. . .</p>
+        <p>Shepard and Tali exited the Normandy&#x27;s elevator on the top deck, where their cabin was. They stood in the small antechamber that separated the elevator with their quarters. As Shepard approached the door and tapped its green, holographic control pad so as to open it, a decontamination cycle initiated from the sterilization unit on the ceiling, that had been installed earlier that very day. She had completely forgotten about it.</p>
+        <p>&quot;What&#x27;s going on?&quot; Tali abruptly asked, looking around as a plane of light descended down the antechamber. This was the first time she had come up to their quarters since Shepard and Mordin had installed the device, so she was surprised by the strange occurrence.</p>
+        <p>&quot;I completely forgot,&quot; Shepard said. &quot;I had the idea to install a sterilizer into this small area. You know, to keep our cabin cleaner for you. I talked with Mordin about it, and he thought it was a good idea. Commented it eliminated all variables besides the germs my own body outputs. He helped me install it, in fact.&quot;</p>
+        <p>The decontamination cycle finished, and the door opened. But Tali didn&#x27;t step inside, she just stood there, staring at Shepard.</p>
+        <p>&quot;It&#x27;s supposed to make our cabin like a linked suit environment,&quot; Shepard mumbled in a somewhat awkward way. She wasn&#x27;t sure what to make of Tali&#x27;s lack of a reaction.</p>
+        <p>Finally, she spoke, &quot;You… really did this, for me?&quot; It was obvious by the way she spoke that she was very touched.</p>
+        <p>&quot;Of course I did, Tali,&quot; Shepard answered, &quot;I know suited life is difficult—I hope this makes things a little easier on you.&quot;</p>
+        <p>&quot;This, this is so… thank you, Shepard. Thank you…&quot;</p>
+        <p>Shepard said, &quot;I&#x27;m really glad you&#x27;re happy with it, Tali, but it&#x27;s not that big of a deal. It wasn&#x27;t hard to install, and we had a spare airlock sterilizer in storage.&quot;</p>
+        <p>&quot;Yes it is,&quot; she responded. &quot;You care so much about me. You showed it today more than ever. You stood up for me during the trial. You fought by my side on the Alarei, and helped me find my father. You listened to my wishes when I asked you not to show the admirals that evidence. And you refused to tell the admirals about the Haestrom message I had sent you.&quot;</p>
+        <p>Tali paused for a moment, and continued, &quot;And now, I find out you did this, and inconvenienced yourself just to make our quarters a better home for me.&quot;</p>
+        <p>Shepard smiled at her and said, &quot;Waiting a few seconds to enter the cabin is hardly an inconvenience, especially if it&#x27;s better for your health. Come on, let&#x27;s go inside; I want to get out of this heavy equipment.&quot;</p>
+        <p>Shepard went inside. Tali stood in the antechamber a brief moment longer. She looked up at the sterilization unit on the ceiling, then looked at Shepard as she approached her clothes and equipment locker. She stepped inside as well.</p>
+        <p>She sat down on their couch, and quietly looked at Shepard as she began to take her gear off. She was in a pensive mood, her mind reflecting on everything that had happened throughout the day; on everything that Shepard had done for her.</p>
+        <p>Shepard removed the different sections of her combat armor, until she was finally left in just the clothes she wore underneath: a regular crewmember shirt and pants.</p>
+        <p>&quot;I&#x27;m going to take a quick shower,&quot; she said as she grabbed a towel and some fresh clothes from her locker. It was common for her to shower after missions that involved combat. Between her combat armor, heavy weapon, and assortment of standard weapons, she carried a great deal of weight. The constant movement and running involved with combat always caused her to get sweaty easily.</p>
+        <p>Shepard walked toward the private bathroom of their quarters briskly, wanting to be quick with her shower so as to rejoin Tali soon. The door closed behind her, and there was complete silence in the room, aside from the typical background hum of the Normandy. Tali now, for the first time since the whole ordeal with the trial began, found herself alone. She leaned back against the backrest of the couch, and stared blankly at an upwards angle. Her mind was full of the day&#x27;s events, and she pondered them, reflecting on the day.</p>
+        <p>It had started out normal enough; she had woken up with Shepard, to the sound of music playing from the holographic alarm clock next to the bed. They awoke in a spooning position, with Shepard behind Tali, her arms around her. After briefly sharing their morning together, they went about their different tasks aboard the ship.</p>
+        <p>It wasn&#x27;t long into the day when she had received that terrible message telling her that she was being tried for treason. Just remembering how she felt after reading it, made her feel sick in her stomach. She also remembered how only a short time after reading it, Shepard coincidentally came to visit her. It had been a great relief to tell her about it.</p>
+        <p>Then after a few painful hours of worry and concern, they had reached the flotilla, and the nature of her trial was revealed. Everything she heard from the admiralty was like a stab at her heart, and then on the Alarei, the bitterness she had been experiencing instantly multiplied a hundred fold, as she kneeled before the corpse of her father, and saw that even in his final words, he refused to be the kind of father she longed for.</p>
+        <p>The entire day had been exhausting, with bad news unrelentingly falling upon her; every minute that passed seemed to make things worse. But there was a sudden moment of reprieve, of happiness and joy. It was when Shepard stood before the admiralty and defended her with an amazing righteous fury. Positive words and accolades poured out from her heart as she passionately defended her in the absence of presenting true evidence. Tali had never heard anyone speak like that on her behalf.</p>
+        <p>Finally, after all she suffered, the negativity of the day had come to a halt with Shepard&#x27;s speech.</p>
+        <p>Until Koris spoke, and everything utterly collapsed. In such a short manner of time, she found herself exiled—she would never see her people again. Her lifelong home was now gone.</p>
+        <p>Tali sighed, and tilted her head back slightly. Just then her eyes caught the window on the ceiling of the cabin. Outside of it she could see numerous ships of the Migrant Fleet hovering above. She realized that this was the last time she would ever see the flotilla.</p>
+        <p>Her eyes watered slightly, but not enough to give birth to tears. She blinked a few times to clear her eyes. She took great solace in knowing that though she had lost the Migrant Fleet, she still at least had a home. A home she loved.</p>
+        <p>She whispered quietly to herself, &quot;…vas Normandy.&quot; That was her name now, and testament to the fact that the Normandy had truly become her home. Shepard was now truly her captain, yet so much more.</p>
+        <p>Raan&#x27;s words echoed in Tali&#x27;s mind; Shepard was all she had now. But that was alright, she was all she needed. Since the day they met, she had always been there for her, and this day had been no exception. From the moment it had started, she had been there with her, helping her in every possible way. She had shared this day with her, and all the negativity that came with it. Back on the airlock, it even seemed as if she was more upset and troubled over her exile than she was.</p>
+        <p>Tali felt tired and weary from all the distress and agony the day had subjected her to. Both her father&#x27;s pathetic message and her exile had left her with a distant feeling of being unloved, deep in her core. She wanted reprieve from it; she wanted to feel happy. If there was anything good to be taken from the entire day, it was the fact that it was now at this moment, as she considered everything Shepard had done for her, more obvious than ever how much she loved her. It&#x27;s always easy to tell a person that you love them during pleasant times, but Shepard, by facing all the tribulations of the day at her side, showed her she loved her.</p>
+        <p>And now, upon realizing all this, Tali came to a decision; one that caused a subtle tingle in her stomach. She decided she was going to show her how much she loved her.</p>
+        <p>Tali stood up, and initiated both an immune-booster shot and a high-dosage antibiotic injection from her suit. She then walked over to the small desk next to the couch, which had been her own private desk since she moved into the cabin, and opened one of its drawers. Inside was a small bottle that contained herbal supplements; the same kind that she had purchased two years ago.</p>
+    </div>
+</body>
+</html>
