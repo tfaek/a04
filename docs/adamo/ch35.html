@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epilogue</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch34.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+                <option value="ch25.html">It&#x27;s Been a Long Journey</option>
+                <option value="ch26.html">We&#x27;re a Team</option>
+                <option value="ch27.html">Ah Yes, Reapers</option>
+                <option value="ch28.html">I Deserve Better Than This</option>
+                <option value="ch29.html">So What&#x27;s the Next Step?</option>
+                <option value="ch30.html">I Can&#x27;t Believe That Worked.</option>
+                <option value="ch31.html">Home</option>
+                <option value="ch32.html">They Had Old Souls</option>
+                <option value="ch33.html">Are You Insane?</option>
+                <option value="ch34.html">I Can Bludgeon Pretty Hard</option>
+                <option value="ch35.html" selected>Epilogue</option>
+            </select>
+            <button class="nav-button" disabled>Next →</button>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Epilogue</h1>
+    <div class="chapter-content">
+        <p>Deep in an empty, uninhabited star system drifted a strange looking vehicle. Its outer hull was scorched and its structure warped. A few deep gashes could be found throughout, but overall it looked smooth and polished. The once hard edges of its design had been grinded down to soft, smooth curves. Its engines had long run out of fuel, with only enough left to keep its life support systems running.</p>
+        <p>&quot;Ouch!&quot; exclaimed Shepard. &quot;Be gentle!&quot;</p>
+        <p>&quot;If you didn&#x27;t want me to pull bullets out of you,&quot; Tali said, extracting a deformed piece of metal out of Shepard&#x27;s shoulder. &quot;You shouldn&#x27;t have gotten shot so many times.&quot;</p>
+        <p>There was a makeshift bed on the floor of the shuttle&#x27;s main cargo area, made from thermal blankets found among the emergency supplies. Shepard laid on it with her shirt off. Various bandages and wounds sealed with medi-gel could be found throughout her body. There was a particularly large bandage on her head, above her temple. Tali sat on the ground next to her, hovering over her as she treated with her wounds.</p>
+        <p>Shepard placed her hand on Tali&#x27;s face, and she briefly stopped working to look at her.</p>
+        <p>&quot;Even when you&#x27;re tearing at my flesh with hot tweezers, you look beautiful,&quot; she said with a smile.</p>
+        <p>She gave her a quick peck on her lips before sealing her wound with the tube of medi-gel and slapping a bandage on it. Shepard again winced in pain.</p>
+        <p>&quot;That was the last one,&quot; she said as she laid down next to her. &quot;It&#x27;s no wonder that Bennett guy kicked your butt. You had all those bullets in you.&quot;</p>
+        <p>&quot;He did not kick my butt,&quot; Shepard said. &quot;Also, I had been fighting tons of Cerberus agents and mechs before I even got to him. It was hardly an even fight.&quot;</p>
+        <p>&quot;Yes, yes,&quot; said Tali. &quot;I know, sweetheart. I know…&quot;</p>
+        <p>&quot;I took out a YMIR mech too.&quot;</p>
+        <p>&quot;I know…&quot;<br>
+        She kissed her cheek, and there was a period of quiet as they both lay there, staring up at the ceiling. Tali came in closer, cuddling against Shepard. &quot;Thank you for coming for me. You almost got… you know. I&#x27;m so sorry that I let them—&quot;</p>
+        <p>&quot;Tali, shh,&quot; Shepard whispered. &quot;None of that. This is the most peace I&#x27;ve had in a while. We have a few hours before the team arrives to pick us up. Let&#x27;s just enjoy this time while we can.&quot;</p>
+        <p>She sighed happily, letting more time pass before saying anything.</p>
+        <p>&quot;So what&#x27;s going to happen when they pick us up?&quot; she asked.</p>
+        <p>&quot;We&#x27;ll get back on our mission to stop the Reapers. But not before I get a huge talking-to from Miranda, I imagine.&quot; They both laughed.</p>
+        <p>&quot;There&#x27;s so much opposition,&quot; Tali said. &quot;Cerberus, the Council… Keelah, how will our small group stop the Reapers, with so much against us?&quot;</p>
+        <p>Shepard turned to her side, facing her. &quot;Didn&#x27;t I just say none of that?&quot;</p>
+        <p>&quot;Hah, sorry.&quot;</p>
+        <p>&quot;Woman, you owe me big time,&quot; Shepard said, &quot;I wonder how you can you possibly ever thank me…&quot;</p>
+        <p>Tali laughed. &quot;Oh don&#x27;t you worry. As soon as we&#x27;re back in our quarters… well, I just hope you&#x27;re rested up by then. I&#x27;m going to be &#x27;thanking&#x27; you for many, many hours… &quot; she said slyly.</p>
+        <p>&quot;Uhhh, how much longer exactly until the Normandy gets here? &#x27;Few minutes right?&quot;</p>
+        <p>&quot;Oh, I dunno, maybe three or four hours…&quot;</p>
+        <p>&quot;You know, we don&#x27;t really need to be in our quarters, this shuttle does have a built in decontaminator. Just saying…&quot;</p>
+        <p>&quot;On this hard &#x27;bed&#x27;? With cold metal all around? Sorry, you just have to wait.&quot;</p>
+        <p>A period of time passed as they lay quietly in each other&#x27;s arms.</p>
+        <p>&quot;I can hear your heart,&quot; Tali whispered.</p>
+        <p>&quot;Hm?&quot;</p>
+        <p>&quot;I&#x27;m not sure if humans just have loud hearts, or if yours is especially loud, but I can always hear your heart so clearly when you hold me like this.&quot;</p>
+        <p>Shepard smiled.</p>
+        <p>&quot;Humans are so different than all other species,&quot; Tali said. &quot;It&#x27;s hard to believe that the same race that could produce someone like you could also produce the people in Cerberus.&quot;</p>
+        <p>&quot;Every race has good and bad people.&quot;</p>
+        <p>&quot;You women are different though. You vary so much. You&#x27;re special. I think you were meant to stop the reapers. It&#x27;s what humans were created to do.&quot; Tali lifted her head off Shepard&#x27;s shoulder and looked into her eyes. &quot;It will be a human that kills Harbinger. It&#x27;s going to be you.&quot;</p>
+        <p>Shepard placed her hand behind her head and inched her closer.</p>
+        <p>&quot;None of that,&quot; she whispered and pressed her lips with hers and kissed her.</p>
+        <p>Their lips parted. Tali opened her eyes. &quot;I love you.&quot;</p>
+        <p>&quot;I love you too.&quot;</p>
+        <p>.</p>
+        <p>Many more trials and hardships waited for Shepard and Tali. They faced great dangers together and suffered many close calls. But at the end of it all, their hard work and sacrifices were rewarded. They had earned their future; one without any fear of the Reapers or Cerberus, or any other evil horrors of the galaxy.</p>
+        <p>They earned their wedding, the starry night sky of Rannoch, and the gentle song of the ocean.</p>
+        <p>The End</p>
+        <p>. . .</p>
+        <p>. . .</p>
+        <p>. . .</p>
+        <p>PostScript</p>
+        <p>I can&#x27;t believe it&#x27;s been so long since I started this story. I also can&#x27;t believe I haven&#x27;t finished it in all this time. I feel I owe all my readers an apology for that. Things sure have changed a lot from that night (passed midnight, I believe) I started writing this story, back in May of 2010. I began it for one simple reason: I was blown away by Tali in Mass Effect 2, and wanted more Tali content than I could get from canon sources. In a way, I wrote this story for me.</p>
+        <p>I do regret I was never able to use all the ideas I had in store. I had some really cool stuff prepared for what would be this story&#x27;s equivalent of Mass Effect 3. I think the ending I had in mind—especially the final clash between Shepard and Harbinger—would have made you guys proud. Sadly, I don&#x27;t imagine I&#x27;ll ever get to it. After four years, I guess I have lost a lot of my passion for the Mass Effect universe. And to be honest, for a while now I&#x27;ve been dreaming of creating my own universes.</p>
+        <p>Writing this story, though it won&#x27;t get completed, has been one of the best experiences of my life. It&#x27;s been immensely rewarding and I&#x27;ve gotten a great amount of pride from it. Thank you all for the hundreds of positive reviews and your kind words. I still can&#x27;t believe it&#x27;s over 160,000 words long. Going by Wikipedia&#x27;s definition of a novel by word count, that&#x27;s enough for over three books (albeit small ones). I know there&#x27;s much larger fics out there, but I just never imagined I would write something this big. Now that I&#x27;m retiring Adamo, I have aspirations to work on other, original stories. Maybe ones that will get published? That would be a dream come true. I hope I&#x27;m up to the challenge. Despite the positive and wonderful reviews from so many of you, I know that there is much room for me to improve and grow.</p>
+        <p>Thank you, everyone who has read this story. I hope all of you enjoyed it. It wasn&#x27;t easy to decide to end it without a proper conclusion to the story, but after two years of inactivity, I at least wanted it to end with a final &#x27;hurrah!&#x27; You guys deserved that much at least. Tali&#x27;s capture and solo rescue by Shepard was something I wanted to include in this story for a very, very long time. I think the idea of Shepard storming the Cord-Hislop building was actually something I thought of before even starting Adamo (there might be some old posts on the Bioware forums about it). And yes, I&#x27;ll admit—I was a bit inspired by Cowboy Bebop.</p>
+        <p>One last time, thank you everyone. This has been an amazing journey.</p>
+        <p>. . .</p>
+        <p>Some random, fun, and/or interesting facts about Adamo:</p>
+        <p>-The title, Adamo, is a Latin word meaning &quot;To fall in love with, find pleasure in.&quot;</p>
+        <p>-Nearly all chapters, with just a few exceptions, were named after dialog wheel options from the games.</p>
+        <p>-At the end of Chapter 3, Pressly begins to write on his datapad journal. This was a reference to his datapad that you find in the Normandy wreck in Mass Effect 2.</p>
+        <p>-Near the start of Chapter 4, Shepard is found humming a song she doesn&#x27;t know. It was going to be revealed at the very ending of the story, during a flashback to her youth that it was a song sang by her real mother. The song was going to be &quot;Twinkle Twinkle Little Star.&quot; It may seem unlikely that Shepard wouldn&#x27;t be able to identify it her whole life, but I guess the idea was that by the late 2100s the song was somewhat unknown.</p>
+        <p>-My personal favorite chapter is Chapter 15, &quot;It&#x27;s Me.&quot; Although, it&#x27;s followed very closely by Chapter 30, &quot;I Can&#x27;t Believe That Worked.&quot;</p>
+        <p>-The vast majority of this story was written on a small netbook. A portion of one of the later chapters was actually written on my phone.</p>
+        <p>-Grunt loving prune juice was indeed a reference to Worf from Star Trek.</p>
+        <p>-At the end of Chapter 11, Tali asks Shepard what &quot;Elysium&quot; stands for. She responds that it&#x27;s was where the souls of dead heroes went. This was foreshadowing her death in the next chapter, although that&#x27;s probably kind of obvious.</p>
+        <p>-I was very tempted to name Chapter 12 as &quot;I should go&quot; (this was the chapter where Shepard died). However, the chapter was meant to be very serious and sad. The comical connotations of the &quot;I should go&quot; reference just didn&#x27;t fit the chapter. I kept it similar though!</p>
+        <p>-I generally avoided describing Tali&#x27;s appearance so people could imagine her to look however they wanted (back before her appearance was described). There were some pretty exotic theories for how quarians looked, but I suspected that they were pretty human-like, based on what we could see in the games and how quarians were described in the books.</p>
+        <p>-One of my plans for the Mass Effect 3 phase of the story was Tali finding on old quarian bipedal tank (a mech), and piloting it. Eventually bringing it aboard the ship.</p>
+        <p>-One of my biggest plans for Mass Effect 3 was going to be them discovering a &quot;friendly&quot; Reaper, crash-landed in some vacant star system.. It wasn&#x27;t going to be a repentant Reaper or anything like that. It was going to be an agent of chaos. Basically, it was a failed prothean Reaper, who did not accept the logic of the Reapers (This was discovered by the other Reapers after its construction was mostly complete. At which point they tried to destroy it, deeming it to be &#x27;faulty&#x27;). It was going to explain that the Reapers, by attempting to preserve races from extinction by immortalizing them in Reaper bodies, were in fact-in a way-the &quot;good&quot; guys (It turns out that this was partly the purpose of the Reapers, as per the Mass Effect 3 ending ). This reaper on the other hand, wanted the chaos of the universe. It wanted see races fail and die out, or advance at rampant levels.</p>
+        <p>-Way back, I had originally envisioned having Kai Leng be the top Cerberus Agent guarding Tali. This was before it was known he would even be a Mass Effect 3 character, since I had read the Retribution novel (in which he was actually a pretty badass character). While it was still possible to have confronted Shepard in the Cord-Hislop building, and in a way I wanted a familiar character to be there as the main opposition, I decided against it because it doesn&#x27;t seem like the fanbase takes him very seriously after Mass Effect 3.</p>
+        <p>-Since Mass Effect 2, I&#x27;ve felt that the story (both the games, and this fic) have lacked a type of &quot;Lieutenant&quot; for the Reapers. Basically, a successor to Saren. Someone to make the fight against them personal and give them some kind of a face. I was going to have this Saren 2.0 in my version of Mass Effect 3. It was going to be a yahg, since—going by the Shadow Broker, anyway—they&#x27;re the most overpowered race in the galaxy.</p>
+        <p>Visit my profile for a link to download Adamo as an EPUB, MOBI, or PDF ebook.</p>
+    </div>
+</body>
+</html>

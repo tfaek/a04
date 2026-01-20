@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ah Yes, Reapers</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch26.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+                <option value="ch25.html">It&#x27;s Been a Long Journey</option>
+                <option value="ch26.html">We&#x27;re a Team</option>
+                <option value="ch27.html" selected>Ah Yes, Reapers</option>
+                <option value="ch28.html">I Deserve Better Than This</option>
+                <option value="ch29.html">So What&#x27;s the Next Step?</option>
+                <option value="ch30.html">I Can&#x27;t Believe That Worked.</option>
+                <option value="ch31.html">Home</option>
+                <option value="ch32.html">They Had Old Souls</option>
+                <option value="ch33.html">Are You Insane?</option>
+                <option value="ch34.html">I Can Bludgeon Pretty Hard</option>
+                <option value="ch35.html">Epilogue</option>
+            </select>
+            <a href="ch28.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Ah Yes, Reapers</h1>
+    <div class="chapter-content">
+        <p>&quot;Are you sure we have time? We don&#x27;t want to be late for the meeting with the Council,&quot; Tali said as she followed Shepard through C-Sec Academy.</p>
+        <p>&quot;Don&#x27;t worry, the meeting isn&#x27;t for a little while,&quot; Shepard responded. &quot;And it&#x27;ll be quick. I just want to see what they&#x27;ve gotten in stock. Might as well do it while we&#x27;re here.&quot;</p>
+        <p>They entered a hallway, and proceeded through it in the direction of the C-Sec requisitions office. Tali asked, &quot;Was this where you bought my shotgun?&quot;</p>
+        <p>&quot;That&#x27;s right,&quot; Shepard answered with a small smile. &quot;Hey, maybe we&#x27;ll find you a new one.&quot;</p>
+        <p>&quot;Thanks, but that&#x27;s not necessary,&quot; Tali said. &quot;There&#x27;s no way I&#x27;ll part with my current one. With all the modifications I&#x27;ve done, I bet it&#x27;s just as good, if not better, than anything they have now.&quot;</p>
+        <p>They reached their destination, and as they entered the office Shepard saw a familiar face. The current requisitions officer was the very same turian she had done business with over two years ago.</p>
+        <p>&quot;Can I help—Commander Shepard, is that you?&quot; the officer asked, surprised, from behind his desk.</p>
+        <p>&quot;It&#x27;s been a long time,&quot; Shepard greeted as she approached and shook hands.</p>
+        <p>&quot;This is a surprise. I had heard you were dead,&quot; the officer said.</p>
+        <p>&quot;It&#x27;s a long story,&quot; Shepard said. &quot;But as you can see I&#x27;m alive, and I&#x27;m still a Spectre. I&#x27;d like to look at your Spectre equipment.&quot;</p>
+        <p>&quot;Sure thing, Commander,&quot; the turian said as he got up and walked toward the storage room to the side. Shepard and Tali followed him in. The room was full of various pieces of equipment; body armor, weapons, weapon modifications, and other assorted items, all neatly organized on racks and shelves. The turian walked past it all until he reached the end of the room, where he typed into a control pad next to a wall of sturdy metal shutters. They then automatically slid open, revealing advanced, Spectre-exclusive prototype weapons.</p>
+        <p>&quot;We&#x27;ve gotten some nice things since the last time you were here,&quot; the turian said. Shepard and Tali looked over the weapons; all of them were that familiar black and dark grey color, with red indicator lights.</p>
+        <p>While she wasn&#x27;t quite the gun nut that Shepard was, Tali found herself looking at them, curious about them from an engineering and tech perspective. Tali picked up one of the shotguns to look it over.</p>
+        <p>&quot;I&#x27;m sorry, miss,&quot; the turian said, &quot;you&#x27;re not authorized to handle these.&quot;</p>
+        <p>&quot;She&#x27;s with me,&quot; Shepard immediately stated, looking right at the turian.</p>
+        <p>After some hesitation, the turian said, &quot;My apologies.&quot;</p>
+        <p>Tali didn&#x27;t say anything. She looked over the shotgun a short while longer, and placed it back, not particularly impressed. From what she could tell, it was largely the same as her current one. The biggest difference was that it was specifically designed to use thermal clips, and it of course lacked her various modifications. She was a bit curious about some of the other weapons before her, mainly the handgun, but she chose not to inspect them; she didn&#x27;t want to cause any problems with the requisitions officer.</p>
+        <p>&quot;What is that,&quot; Shepard enthusiastically said, her eye suddenly caught by a weapon near the end of the rack. In its collapsed form, it resembled an intricate, long and solid tube, very reminiscent of her old M-98 Widow.</p>
+        <p>&quot;That&#x27;s the HMWAM anti-material rifle,&quot; the turian answered.</p>
+        <p>Shepard approached it and picked it up. With a look of being pleasantly surprised, she asked, &quot;How much does this thing weigh? I had a very similar weapon, and this is noticeably lighter.&quot;</p>
+        <p>&quot;About thirty-two kilograms,&quot; the turian said. &quot;The weapon you say you had—was it an M-9x?&quot;</p>
+        <p>&quot;That&#x27;s right, an M-98,&quot; Shepard answered, now holding the weapon in its opened form, momentarily staring down the sight.</p>
+        <p>&quot;This rifle was actually modeled after anti-material rifles such as the M-9x line,&quot; the turian explained. &quot;However, it has a few design tweaks, and it&#x27;s built with the same advanced alloy as other HMW weapons, so it&#x27;s quite light. But between its top of the line mass accelerator and the frictionless materials used for the interior of the barrel, it packs one hell of a punch.&quot;</p>
+        <p>As Tali watched Shepard looking it over, she teased, &quot;I&#x27;m glad these weapons are rustproof, because you&#x27;re getting drool all over it.&quot;</p>
+        <p>Amused, Shepard responded, &quot;I can&#x27;t help it. This weapon is the second sexiest thing in this room.&quot; She gave Tali a little smirk.</p>
+        <p>The turian was silently taken back by the comment, immediately realizing what Shepard meant. He felt surprised—almost shocked—to realize that Shepard and this female quarian were a couple.</p>
+        <p>He wondered whether he should say something, but ultimately chose not to comment on it. &quot;I&#x27;m guessing you&#x27;re interesting in buying it?&quot; the turian asked, referring to the anti-material rifle Shepard still held.</p>
+        <p>&quot;Very interested. Let me see how much it co—&quot; Shepard looked at the small display that listed the price, below where the rifle had been hanging. Her jaw nearly dropped.</p>
+        <p>&quot;Tali… how much do you think we could get if we sold the Normandy?&quot; she asked.</p>
+        <p>&quot;Oh come on, it can&#x27;t be that expen—&quot; Tali looked at the price, &quot;Keelah…&quot;</p>
+        <p>Shepard collapsed the rifle into its compact form, and placed it back. She said, &quot;I&#x27;ll come back in a few years when I have enough.&quot;</p>
+        <p>The turian laughed and said, &quot;I&#x27;m sorry, Commander. If it&#x27;s any consolation, I&#x27;ve always thought it was stupid that you Spectres had to buy your own equipment.&quot;</p>
+        <p>&quot;I mentioned the same thing over two years ago,&quot; Tali said.</p>
+        <p>After a quick goodbye, Shepard and Tali departed from the storage room and left the requisitions office.</p>
+        <p>As they were walking through C-Sec again, Tali said, &quot;It&#x27;s too bad we couldn&#x27;t afford to buy you that weapon. I could tell you really wanted it.&quot;</p>
+        <p>&quot;We could,&quot; Shepard said. &quot;But it wouldn&#x27;t be right to spend so much on something for myself.&quot;</p>
+        <p>&quot;What? We actually have that many credits?&quot;</p>
+        <p>&quot;Our… former employer,&quot; Shepard said, preferring to avoid mentioning Cerberus or its leader within C-Sec, &quot;provided funding after our successful missions. We also earned a lot through salvage. So we actually have a quite a few hundred thousand credits.&quot;</p>
+        <p>&quot;Shepard you should have bought it then,&quot; Tali said. &quot;You deserve it.&quot;</p>
+        <p>&quot;Thank you Tali, but I wouldn&#x27;t feel comfortable spending that much on a weapon. We still need to pay for supplies and the repairs being done on the Normandy. Not to mention that if the Council still refuses to accept the truth about the Reapers, we&#x27;ll be on our own.&quot;</p>
+        <p>They stepped into the elevator that would take them up to the Presidium. Tali then said, &quot;I&#x27;m sure they&#x27;ll listen this time. We managed to record so much data from the Collector base; we have proof that the Collectors were building a Reaper. They can&#x27;t ignore that. It proves that Sovereign wasn&#x27;t a geth creation, like everyone has been saying.&quot;</p>
+        <p>&quot;I hope so,&quot; Shepard said.</p>
+        <p>As the elevator ascended, Tali asked, &quot;By the way, didn&#x27;t you want Garrus to come with us to see the Council? Where is he?&quot;</p>
+        <p>&quot;He had some things to take care of. He said he&#x27;d meet us by the entrance to Citadel Tower.&quot;</p>
+        <p>A short period of time passed during the elevator ride. Shepard looked at Tali, and with a smile she said, &quot;Do you remember when we first met, Tali? We took this same elevator to reach the human embassy, after that fight in the alley.&quot;</p>
+        <p>Tali turned and stepped closer. She stood in front of her and placed her hands on her upper arms, standing very close and looking right at her eyes. She said, &quot;How could I forget? That was the best day of my life; it was when I met you…&quot;</p>
+        <p>Shepard placed her hands on Tali&#x27;s lower back, lightly pressing her body against Tali&#x27;s. She then leaned her head down slightly, and bumped her forehead against the top of Tali&#x27;s helmet. They then simply stared at each other&#x27;s eyes for a long time, smiling, not saying a word.</p>
+        <p>&quot;Embarrassed. It was not my intention to intrude,&quot; a monotone voice suddenly said from the side. The elevator had reached the Presidium, and an elcor stood at the now opened doors.</p>
+        <p>Tali and Shepard both laughed quietly and pulled away. &quot;We were just on our way,&quot; Shepard said as the two exited the elevator.</p>
+        <p>&quot;Happily amused. Have a pleasant day, you two,&quot; the elcor said as he lumbered into the elevator.</p>
+        <p>Tali and Shepard were now walking inside the Presidium, the vast ring of the Citadel that held all five wards together. High above them was its blue, partly cloudy artificial sky, and off to their side was the lake that spanned the length of the ring. Various trees could be seen around it, and the perpetual splashing sound of its fountains could clearly be heard, as well as the occasional tweeting of birds.</p>
+        <p>They walked together, hand in hand, and Shepard noticed how Tali kept staring at the lake as they moved. She said, &quot;I remember the first time you were up here… you were so impressed by that lake.&quot;</p>
+        <p>&quot;I still am,&quot; she said. &quot;Building a lake like that on a space station is incredible. We had nothing like this back on the flotilla. The liveships have vast fields of agriculture within their multiple levels, but there are no lakes or rivers in them. The crops are all watered with automated irrigation systems.&quot;</p>
+        <p>Something suddenly occurred to Shepard, after hearing Tali mention the lack of bodies of water among the flotilla ships. She asked, &quot;Tali… do you know how to swim?&quot;</p>
+        <p>&quot;What?&quot; she asked, caught off guard by the strange question. &quot;Why do you ask?&quot;</p>
+        <p>&quot;It just occurred to me because you said you didn&#x27;t have anything like this on the flotilla,&quot; she answered, and then asked again, &quot;so, do you?&quot;</p>
+        <p>&quot;Um…&quot; she mumbled, sounding embarrassed, &quot;I, uh… there&#x27;s no reason for us to be taught how to… no. No I don&#x27;t…&quot;</p>
+        <p>Shepard chuckled quietly, more so because of how cute Tali was when embarrassed, than because she didn&#x27;t know how to swim. With their relationship having blossomed, and the two of them now so close, it had been a long time since she saw Tali embarrassed like that around her. She had always found it adorable.</p>
+        <p>&quot;I don&#x27;t see why that amuses you,&quot; Tali said in a slightly defensive tone. &quot;It&#x27;s not like there&#x27;s ever been a need for me to learn.&quot;</p>
+        <p>&quot;I just thought your reaction was cute,&quot; Shepard said. &quot;But, there&#x27;s no reason for you to be embarrassed. Hell, how many of our team can swim? Grunt was raised in a small tank, and I&#x27;m not even sure if krogan can swim. Legion would sink like a rock. It would be suicide for Thane to go swimming. Jack probably never learned, either.&quot;</p>
+        <p>Feeling better, Tali briefly giggled and said, &quot;You&#x27;ve figured out our team&#x27;s only weakness: water. Let&#x27;s hope the Reapers don&#x27;t find out and build some kind of aquatic base.&quot;</p>
+        <p>A short moment later they reached the entrance of Citadel Tower, and met with Garrus, who was already there, sitting on a nearby bench as he waited.</p>
+        <p>&quot;Garrus, do you know how to swim?&quot; Shepard asked.</p>
+        <p>&quot;Uh… what?&quot; Garrus said, baffled by the random question. &quot;Well, yeah, I know how to swim. Although turians aren&#x27;t as effective at it as humans. Why do you ask?&quot;</p>
+        <p>Amused, Shepard said, &quot;Just curious.&quot;</p>
+        <p>Garrus shrugged, and the three stepped into the elevator that would take them to the top of Citadel Tower, were the Council awaited.</p>
+        <p>After it began its ascent, Garrus asked, &quot;So, Shepard, why exactly do you want us to come with you for your meeting with the Councilors?&quot;</p>
+        <p>&quot;They&#x27;re politicians,&quot; Shepard answered. &quot;Diplomacy with politicians is an interesting thing. Subtle actions, gestures, and manipulations can mean just as much as words with them. I think having you two with me will help our case.&quot;</p>
+        <p>&quot;How so?&quot;</p>
+        <p>&quot;Having other people to reinforce what I say about the Reapers may help. I suddenly don&#x27;t sound so crazy if I have others to back up my claims; it&#x27;s like having witnesses. But there&#x27;s a reason I wanted you two specifically. You guys were with me when this whole mess with the Reapers started. The Councilors will remember that it was Tali&#x27;s evidence that implicated Saren, and they&#x27;ll remember your prior investigation to bring him down, too. And probably most importantly of all, it was you two who were with me when we battled Saren up here.&quot;</p>
+        <p>Shepard continued, &quot;It&#x27;s been so long since all this happened... maybe if they see us all still together, fighting for the same cause, they&#x27;ll believe us.&quot;</p>
+        <p>There was a moment of silence. Tali stood near the rear glass wall of the elevator, with her hands on the rail. They were about a third of the way to the top, and they had a magnificent view of the wards beyond. &quot;It really has been a long time, hasn&#x27;t it?&quot; she asked. &quot;Keelah, it feels like so long ago. So much has happened since our mission to stop Saren.&quot;</p>
+        <p>Shepard stepped closer and joined her in admiring the view. She said, &quot;It&#x27;s funny how we&#x27;re in the same place as when all this started, well over two years ago. Ascending this tower, preparing to make our case before the Councilors. It&#x27;s like we&#x27;ve come full circle.&quot;</p>
+        <p>&quot;At least there&#x27;s no Saren this time,&quot; commented Garrus.</p>
+        <p>Garrus&#x27; words resonated in Shepard&#x27;s mind, triggering a train of thought which, to Shepard&#x27;s dismay, was not new to her.</p>
+        <p>Maybe there is, she thought to herself.</p>
+        <p>The view of the Citadel wards beyond the glass suddenly became an unfocused blur as Shepard&#x27;s eyes focused on her own reflection. Before her was a Spectre riddled with cybernetic implants, and who knew of the existence of the Reapers. A Spectre who travelled in a sentient starship, had a potential cure for the genophage, made contact with the rachni, and was even allied with a geth.</p>
+        <p>So many parallels with her…</p>
+        <p>Her eyes then suddenly shifted to the reflection of Tali, next to her own. She looked at the woman she loved, as she stood there in her black suit, wrapped in a purple veil, with a steady light-blue light below her glossy, purple mask.</p>
+        <p>No... I&#x27;m nothing like Saren. He gave up, but I never will. I&#x27;ll never bow before the Reapers.</p>
+        <p>Shepard&#x27;s mind suddenly snapped away from her current thoughts, as she heard Garrus&#x27; voice.</p>
+        <p>&quot;So, Tali, you really didn&#x27;t miss these elevator rides?&quot; Garrus asked, alluding to a previous discussion they once had.</p>
+        <p>&quot;No,&quot; Tali responded. &quot;And like the last time you brought this up, I&#x27;m ending this conversation.&quot;</p>
+        <p>&quot;But these rides are an opportunity to share! Especially now that you don&#x27;t have your shotgun with you,&quot; Garrus said, clearly amused. &quot;Come on… tell me again about your immune system.&quot;</p>
+        <p>&quot;My Spectre girlfriend can tell you about it,&quot; she said.</p>
+        <p>Garrus then responded, slightly mumbling, &quot;I&#x27;m not actually worried, but, uh, maybe it is best if we drop this topic for now…&quot;</p>
+        <p>Shepard chuckled quietly at their exchange. Suddenly, after her recent bleak thoughts, she found herself feeling happy and optimistic again. She was happy that Tali and Garrus were with her. They were her best friends, and a reminder of everything worth fighting for. They had shared the entire span of their fight against the Reapers, alongside her.</p>
+        <p>The elevator came to a stop and they stepped out, now at the top of Citadel Tower. A small distance from the elevator, they saw a security gate and two turian C-Sec officers.</p>
+        <p>&quot;A security gate? That wasn&#x27;t here before,&quot; Tali noted as they approached.</p>
+        <p>&quot;There&#x27;s been a lot of paranoia after the geth attack,&quot; Garrus said. &quot;It doesn&#x27;t surprise me at all.&quot;</p>
+        <p>They reached it and Shepard said to the two officers, &quot;Hello, I have a meeting with the Council.&quot;</p>
+        <p>&quot;Go on through, one at a time,&quot; one of the officers said, gesturing toward the scanning gate. Shepard stepped through first, and its alarm sounded.</p>
+        <p>&quot;Are you carrying firearms of any kind?&quot; the officer asked, although it was clear by the casual civilian clothing Shepard currently wore, that she had nothing on her.</p>
+        <p>&quot;No,&quot; Shepard answered. &quot;I do have some cybernetic medical implants. Do you think that may be the cause?&quot;</p>
+        <p>&quot;It&#x27;s unlikely, these scanners are programmed to identify and ignore all standard medical implants,&quot; the officer responded.</p>
+        <p>&quot;My implants aren&#x27;t exactly standard,&quot; Shepard confessed. The turian then approached and scanned her with his omni-tool.</p>
+        <p>After a few seconds, he said, &quot;I see. I don&#x27;t know what most of this stuff is, but I&#x27;m not picking up anything that looks dangerous. And according to this, you&#x27;re a Spectre. Go on through, ma&#x27;am.&quot;</p>
+        <p>After Shepard stepped through, Garrus did so as well, with no incident. Tali then attempted to pass, but the gate alarm sounded once again.</p>
+        <p>&quot;Don&#x27;t worry about it. Go on through, miss,&quot; the turian said after looking at her briefly, and noting she carried no weapons. &quot;You&#x27;re the first quarian I&#x27;ve seen up here, but these security gates are notorious for false positives with quarians. Something about your exo-suits messes up their readings.&quot;</p>
+        <p>&quot;I can see that happening,&quot; Tali said as she passed through. She then asked, &quot;I&#x27;m curious, does it happen with volus?&quot;</p>
+        <p>The turian answered, &quot;No. Their exo-suits are nearly always commercially manufactured, so the scanners come preconfigured to recognize them.&quot;</p>
+        <p>&quot;That makes sense,&quot; she said.</p>
+        <p>Once they had cleared the security gate, they proceeded through the great chamber before them. It had been repaired of all the damage caused by the geth, and looked the same as it had the first time they came up. Dimly lit, with various illuminated trees planted throughout, and diplomats and politicians walking about, many conversing with one another. Off in the distance, straight ahead, was the large window behind where the Councilors would stand, shining brightly from Widow, the nearby star. The Council meeting area was their destination, but not before they climbed up several stairs.</p>
+        <p>As they walked through the chamber, they found Councilor Anderson waiting at the foot of the final stairs that needed to be ascended.</p>
+        <p>&quot;Commander, it&#x27;s good to see you again,&quot; Anderson said as he saw Shepard and her team approaching. They shook hands. &quot;Let me be the first to say welcome back, and congratulations on your successful mission.&quot;</p>
+        <p>&quot;Thank you Anderson. I&#x27;m glad to be here,&quot; Shepard greeted in return.</p>
+        <p>Anderson had reacquainted with Garrus not that long ago, during the time between Shepard&#x27;s awakening and Tali&#x27;s rejoining of the Normandy. But this was the first time Anderson had seen Tali in over two years, and he remembered that Shepard and her had been close by the end of their mission to stop Saren.</p>
+        <p>&quot;Tali&#x27;Zorah,&quot; Anderson said, sounding pleasantly surprised to see her. He also shook her hand. &quot;It&#x27;s been a long time.&quot;</p>
+        <p>&quot;Thank you, Councilor Anderson,&quot; she responded.</p>
+        <p>&quot;The Commander still has you running around the galaxy with her, huh?&quot;</p>
+        <p>&quot;Ha, yeah. But despite how often I get shot at because of her, there&#x27;s nowhere else I&#x27;d rather be.&quot; Tali looked at Shepard briefly, who looked back and smiled.</p>
+        <p>&quot;I&#x27;m glad you feel that way. Against the Reapers, Shepard&#x27;s going to need you, Garrus, and anyone else she can talk into helping her.&quot; Anderson said.</p>
+        <p>&quot;That&#x27;s why we&#x27;re here, Anderson,&quot; Shepard said. &quot;I&#x27;m hoping that with all the data we recovered from the Collector base, we&#x27;ll finally be able to convince the other Councilors of the Reapers&#x27; existence. Can you tell me what their thoughts on the data are?&quot;</p>
+        <p>&quot;Unfortunately, no,&quot; Anderson answered. &quot;I just got back myself. I&#x27;ve been on Earth the last few days, attending some meetings with delegates of the UNAS and EU. Udina&#x27;s still there, in fact; he can&#x27;t get enough of that stuff.&quot;</p>
+        <p>&quot;Good, he can stay on Earth,&quot; Shepard said. &quot;That way I know I&#x27;ll never have to deal with him again.&quot;</p>
+        <p>Anderson chuckled and asked, &quot;You really have no interest in ever visiting Earth, Commander?&quot;</p>
+        <p>&quot;None whatsoever. I got enough of Earth during my childhood; I can&#x27;t imagine ever having a good enough reason to go there again.&quot;</p>
+        <p>Tali was well aware that Shepard had little love for her home world, but as she listened to her talk about it, she still felt a bit saddened. It was hard for her to imagine anyone speak negatively about their own planet.</p>
+        <p>&quot;I suppose I can&#x27;t blame you,&quot; Anderson said; he was aware of Shepard&#x27;s rough childhood. He then decided to change subject, and discuss the upcoming meeting. &quot;Tell me, what was it you discovered from the Collectors? What do you plan on telling the rest of the Council?&quot;</p>
+        <p>&quot;We discovered a few things, but most significant of all was their reason for abducting the colonists. They were melting down their bodies to create some grey, organic goo, which they then used in the construction of a Reaper; a human Reaper.&quot;</p>
+        <p>&quot;Damn…&quot; Anderson whispered in restrained horror. &quot;And you say you acquired actual data and analysis on all this? There&#x27;s no way the other Councilors will be able to ignore you this time.&quot;</p>
+        <p>&quot;I hope you&#x27;re right. I don&#x27;t know what else we can do to convince them that the Reapers are real. But just in case, I&#x27;m going to avoid jumping straight into a discussion about them. Maybe it&#x27;ll be best to warm them up first.&quot;</p>
+        <p>&quot;True enough,&quot; Anderson said, then looked over his shoulder in the direction of the top of the stairs. &quot;Come on, the meeting will start soon. Let&#x27;s get ready. I&#x27;m going to stand with you.&quot;</p>
+        <p>The whole group then walked up the final flight of stairs and stood in the speaker&#x27;s area before the Councilors; the same area they stood when Shepard became a Spectre. The same area where their mission to stop the Reapers began. And the same area where they faced off against Saren, well over two years ago.</p>
+        <p>After a short wait, the other three Councilors—the asari, the turian, and the salarian—gathered on the far side of the room, each one at their personal consoles. The asari was in the middle, the turian on the left, and the salarian on the right.</p>
+        <p>The asari was the first to speak. &quot;Commander Shepard, we are glad to see that you have returned safely, and that your affiliation with Cerberus has been brought to an end. We are also pleased to see your colleagues, Garrus Vakarian and Tali&#x27;Zorah, still with you and well. We haven&#x27;t forgotten their efforts in aiding you to stop Saren.&quot;</p>
+        <p>&quot;Indeed,&quot; said the salarian councilor. &quot;We also congratulate you on successfully discovering the true source of the attacks on your human colonies, and putting an end to them.&quot;</p>
+        <p>&quot;Thank you, Councilors,&quot; Shepard responded. She stood proudly; upright and with her hands held behind her back.</p>
+        <p>&quot;With all that said,&quot; the turian councilor now spoke, &quot;was it really necessary to completely wipe out the Collectors? I&#x27;m sure you were eager to vindicate the attacks on your colonies, but do you feel that gave you the right to decide the fate of an entire people?&quot;</p>
+        <p>The asari councilor appended, &quot;I would have to agree. Was there no other way? We know so little about the Collectors.&quot;</p>
+        <p>Once again, Shepard found herself particularly annoyed by the turian councilor. She said, &quot;When I let the rachni live, this same Council was unhappy over my decision. It seems that any decision I could have made would have been met with disapproval.</p>
+        <p>&quot;But I digress. No, Councilors, there was no other way. The Collectors needed to be wiped out. They were building a Reaper; and in doing so, they had abducted hundreds of thousands of colonists. We estimated that millions more would have been necessary for its completion. Destroying their base—their homeworld—was our only solution. Have you looked over the data we gathered from it?&quot;</p>
+        <p>&quot;Yes we have,&quot; the asari said. &quot;What you provided proved most fascinating. And enlightening.&quot;</p>
+        <p>The salarian then said, &quot;The analysis you provided over what the Collectors were constructing showed a number of structural similarities to some of the salvage we recovered from Sovereign. Our scientific advisors are confident that they do in fact share a similar origin.</p>
+        <p>&quot;There is something I am curious about, however, and I&#x27;d like your opinion on it. Despite the similarities, what you encountered among the Collectors appeared to be vastly smaller than Sovereign; in fact, it doesn&#x27;t appear that it could have been functional as a starship. What is your take on this?&quot;</p>
+        <p>&quot;After our mission, my ship&#x27;s—&quot; Shepard began to say, but paused, deciding it was not a good idea to tell the Council that the Normandy contained an illegal AI. &quot;…science team, hypothesized that what we saw was only the very core of the Reaper. Possibly the Reaper&#x27;s central computer; something to that effect. Once completed, it would have been housed inside a massive shell such as Sovereign&#x27;s, complete with weapons and engines.&quot;</p>
+        <p>&quot;Very good, Commander,&quot; the asari said. &quot;Our advisors hypothesized something similar after their comparisons with Sovereign&#x27;s wreckage.&quot;</p>
+        <p>There was a brief period in which the councilors privately spoke to each other.</p>
+        <p>The asari then turned back to Shepard and said, &quot;The last time you were here, you tried to tell us that Sovereign was not a geth creation. We dismissed your claims because there was no other logical explanation for its origin. We were aware that certain things didn&#x27;t quite add up, specifically in regards to the difference in its design and weaponry, compared to the geth cruisers that aided in the attack. But since nothing we recovered suggested that Sovereign was so advanced as to be beyond the geth&#x27;s technological abilities, we decided it was a creation of theirs.</p>
+        <p>&quot;However, Commander Shepard, with the data and evidence you provided us, you have shown us that we were wrong. It doesn&#x27;t happen often, but it&#x27;s always unfortunate when we have to accept that we have made a mistake.&quot;</p>
+        <p>Shepard listened to the asari, unable to hide the smile on her face. She was happy; excited. Finally, after everything, the Council seemed to have been convinced of the truth. For a moment, Shepard glanced at Anderson, who glanced back, smiling proudly at her.</p>
+        <p>&quot;Thanks to your efforts,&quot; the asari continued, &quot;we now know that it was in fact the Collectors who built Sovereign. We still don&#x27;t know exactly how it came into the possession of Saren and the geth, but with the Collectors gone, we can at least know we won&#x27;t be threatened in such a way again.&quot;</p>
+        <p>Shepard&#x27;s optimistic smile instantly vanished. A look of confusion and disbelief painted her face.</p>
+        <p>&quot;What?&quot; she muttered, and then said loudly, &quot;No! No, that&#x27;s not right at all. The Collectors didn&#x27;t build Sovereign! The Collectors were just puppets of the Reapers!&quot;</p>
+        <p>The Councilors were visibly surprised by Shepard&#x27;s statement.</p>
+        <p>&quot;You&#x27;re still perpetuating that nonsense that the Reapers are a race of sentient starships?&quot; the turian asked.</p>
+        <p>&quot;This is surprising, Commander,&quot; the asari added. &quot;You yourself have provided the evidence that the machines you refer to as Reapers are simply dreadnaughts created by the Collectors. You have even witnessed one being constructed by them, in person.&quot;</p>
+        <p>The turian then said, &quot;Frankly, I&#x27;m baffled that you still submit yourself to Saren&#x27;s obvious hoax. You proved it yourself: the &#x27;Reapers,&#x27;&quot; the turian used his fingers to quote the word; Shepard&#x27;s left eye involuntarily twitched at seeing the gesture, &quot;...are nothing but advanced creations of the Collectors. Your belief that they&#x27;re actually a race of sentient starships waiting in dark space, intent on wiping out all organic life, is nothing but a myth.&quot;</p>
+        <p>&quot;It&#x27;s not a myth!&quot; Tali snapped. &quot;I can back up everything Shepard has told you. So can Garrus. The Reapers are real, and they&#x27;re a threat to us all!&quot;</p>
+        <p>Garrus also spoke up for Shepard. &quot;It&#x27;s true. We spoke with Sovereign on Virmire, and on Ilos we spoke with a prothean VI. Not to mention that during our mission to stop the Collectors, we encountered numerous Collector drones under the direct control of a Reaper called Harbinger, who we believe is their leader.&quot;</p>
+        <p>&quot;You should listen to these three,&quot; Anderson stated. &quot;They&#x27;re the ones who hunted down Saren. They&#x27;re the ones who followed his trail and encountered everything he encountered. And they&#x27;re the ones who put in an end to his plans, right here, in this very room. You need to have faith in them.&quot;</p>
+        <p>&quot;We assure you, Councilor Anderson,&quot; the salarian said, &quot;we have not forgotten the sacrifices Commander Shepard and her team have made for both our sake, and for the rest of the galaxy.&quot;</p>
+        <p>&quot;With that said,&quot; the asari then said, speaking directly to Anderson, &quot;you yourself are part of this Council. You know how we must do things. We cannot act on something like this with mere testimony, even from people such as Shepard and her colleagues. We need solid evidence to make drastic decisions, and all the evidence we have been provided, points to something very different than what the Commander believes.&quot;</p>
+        <p>Anderson then said, &quot;How do you account for everything they encountered and witnessed? Both on their mission to stop Saren, and the Collectors? They&#x27;re not liars, and you can&#x27;t ignore that.&quot;</p>
+        <p>&quot;I believe it can be very simply explained,&quot; the asari answered. &quot;At some point, Saren made contact with the Collectors, and managed to acquire Sovereign from them. He then used it to manipulate the geth into believing his fictitious tale that it was a member of a race of other sentient machines; the pinnacle of the geth&#x27;s own kind. He deceived the geth, just as he deceived you, Commander,&quot; she gestured at Shepard, &quot;and the rest of your team.&quot;</p>
+        <p>The turian then added, also speaking directly to Shepard, &quot;Everything you&#x27;ve encountered—the supposed communication with Sovereign on Virmire, the VI on Ilos—they were all obviously manufactured by Saren to make his deception all the more convincing.&quot;</p>
+        <p>There was a brief period of quiet. Shepard stared up at the Councilors, her face tense, silently communicating her obvious frustration.</p>
+        <p>The asari broke the brief quiet, and said, &quot;Commander Shepard, there is a wise human principle known as &#x27;Occam&#x27;s Razor.&#x27; It states that the simplest explanation is often the correct one. Perhaps you should consider that.&quot;</p>
+        <p>&quot;Don&#x27;t insult me,&quot; Shepard stated with noticeable contempt. &quot;I know what Occam&#x27;s Razor is, and your interpretation isn&#x27;t even accurate. The simplest explanation can only be the correct one when it actually explains everything. If you had only seen what I&#x27;ve seen—&quot;</p>
+        <p>&quot;We haven&#x27;t, Commander,&quot; the turian immediately interrupted. &quot;Perhaps if you could complete a single mission without detonating some kind of nuclear device, or wiping out an entire race, we might have more to go on than just your dreams and the testimonies of your subordinates.&quot;</p>
+        <p>Fuck you, asshole. Fuck you.</p>
+        <p>Shepard thought, then sighed quietly, attempting to calm herself down. She subtly shook her head and said, &quot;I wish I could be surprised. Before this meeting, I wanted to be optimistic that this Council would finally open their eyes to the truth, but deep down inside, I expected something like this. After everything I&#x27;ve done—everything I&#x27;ve sacrificed—you still refuse to believe me. I don&#x27;t need this; this meeting is done. I need to go and prepare. The Reapers are coming, and someone has to try and stop them.&quot;</p>
+        <p>An interval passed, and the asari, making little attempt to hide her own impatience, simply stated, &quot;Very well, Commander. This meeting is adjourned.&quot;</p>
+        <p>With the meeting officially over, Shepard immediately turned around and walked away from the speaker&#x27;s position, descending the stairs. Tali quickly followed, aware of how disappointed and frustrated she must feel.</p>
+        <p>&quot;I&#x27;m so sorry,&quot; she said once they were at the bottom of the immediate stairs. &quot;I can&#x27;t believe they still refuse to believe you.&quot;</p>
+        <p>Shepard stopped and turned. She exhaled quietly, and said in a surprisingly calm voice, &quot;Thanks, Tali, but it doesn&#x27;t matter. Part of me expected something like this; it&#x27;s frustrating, but this isn&#x27;t the first time I&#x27;ve had to listen to their blind nonsense. However, like I said, it doesn&#x27;t matter. We don&#x27;t need them.&quot;</p>
+        <p>After also descending the stairs, Anderson said, &quot;I&#x27;m sorry, Commander. I wish I had known what their stance was on all this before the meeting, so I could have prepared you.&quot;</p>
+        <p>&quot;Don&#x27;t worry about it, Anderson. We&#x27;ve come this far without them,&quot; Shepard responded. &quot;But I&#x27;m glad you&#x27;re on the Council, at least.&quot;</p>
+        <p>&quot;Yeah, for all the good it&#x27;s done you so far,&quot; Anderson said sarcastically. &quot;An individual councilor doesn&#x27;t have much authority with these matters; decisions need to be made by the group as a whole. I can&#x27;t help you much, but I&#x27;ll try and keep them off your back. You&#x27;re still technically a Spectre, so you&#x27;re subject to their orders, but I&#x27;ll make sure they don&#x27;t give you any assignments to distract you from your true mission.&quot;</p>
+        <p>&quot;A Spectre…&#x27;&quot; Shepard said in a scoffing voice. &quot;I can&#x27;t remember the last time being a Spectre has helped me any. All it ever seems good for these days is the occasional store discount and intimidating people.&quot;</p>
+        <p>&quot;Your status might come in handy now that you aren&#x27;t restricted to the Terminus systems anymore,&quot; Anderson said. &quot;Tell me, what are your plans? How do you plan to stop the Reapers? What allies do you think you can gather?&quot;</p>
+        <p>&quot;Unfortunately, right now, I have no idea what the Reapers are planning. As far as I know, all their servants have been wiped out. How they intend to return from dark space is a mystery to me. That was one of the reasons I had wanted to be backed by the Council; they have countless resources and a substantial intelligence network. They would have been able to monitor for anything unusual that could give us a clue as to what the Reapers are planning.&quot;</p>
+        <p>&quot;That&#x27;s true, Shepard,&quot; Garrus said, &quot;but don&#x27;t forget; we have access to everything the Shadow Broker knows. That can help us.&quot;</p>
+        <p>Anderson looked at Shepard with a look of sudden confusion, &quot;You know the Shadow Broker?&quot;</p>
+        <p>&quot;We accomplished a lot the last few months, during our mission to stop the Collectors,&quot; Shepard explained. &quot;Among our travels, we became friends with the Shadow Broker. Or I should say… the Shadow Broker became our friend.&quot;</p>
+        <p>Anderson took the hint from Shepard&#x27;s intentionally vague comment. He said, &quot;Well, if you truly know the Shadow Broker—and can trust him—then that right there can be a powerful ally. But Commander, you can&#x27;t battle something like the Reapers with just information. If the Reapers attack, the Council will be too slow to react. We&#x27;ll need everything we can muster to have any chance to stop them. We all saw what a single one did to all of the Citadel&#x27;s fleets.&quot;</p>
+        <p>&quot;You&#x27;re right, Anderson, we&#x27;ll need firepower to stop them,&quot; Shepard said. &quot;We&#x27;ll need fleets; entire armies. Fortunately, I have quite a few potential allies. The quarians and the geth, for example. The two of them are actually aware of the existence of the Reapers, and they probably have the greatest number of ships in the galaxy.&quot;</p>
+        <p>Tali, who had already been paying attention to the conversation, suddenly became even more attentive to Shepard&#x27;s words.</p>
+        <p>&quot;The quarians? The geth?&quot; Anderson said, with a far greater look of confusion than when he heard of their connection with the Shadow Broker. &quot;I&#x27;m sorry, Commander, but I don&#x27;t see how they can be of help. The quarians don&#x27;t have a world; they would be reluctant in throwing their ships—effectively their homes—at the Reapers. And the geth… aren&#x27;t the geth and the Reapers on the same side?&quot;</p>
+        <p>&quot;Not exactly,&quot; Shepard began to explain. &quot;During my mission I learned that the geth were actually divided into two separate factions. One that worshipped the Reapers, and one that opposes them. The ones that were allied with the Reapers—heretics, they were called—were the ones who attacked the Citadel. As far as I know, however, they&#x27;ve all effectively been neutralized. Some of them may still exist, but their numbers should be too low to be of any significant threat.</p>
+        <p>&quot;As for the quarians, you&#x27;re right in that their ships are also their homes, and that they&#x27;re not currently in a position to help combat the Reapers. But that&#x27;s why I want to try and negotiate peace between them and the geth. If they can get their planet back, they&#x27;ll have a true home, and a place to shelter their non-combatants; loss of many of their ships won&#x27;t be nearly as catastrophic for them.</p>
+        <p>&quot;But even beyond just the quarians and the geth, I have other potential allies. You remember Wrex? He&#x27;s unifying the krogan clans on Tuchanka, and he knows just as well as I do how big of a threat the Reapers are. And then there are the rachni. I haven&#x27;t had much contact with the rachni queen I spared back on Noveria, but I believe she and her children will join our cause.&quot;</p>
+        <p>Anderson shook his head slightly, almost looking amused. He said, &quot;Quarians and geth? Krogan and rachni? You mean to tell me you intend to unite and unify these races that have historically hated each other; that have killed billions of each other in war?&quot;</p>
+        <p>&quot;History is full of examples of former enemies uniting against a common foe. These races—these people, that the galaxy has turned their backs on; that are hated, despised, and misunderstood by everyone… in the end, it will be they who stand up and defend us. They will be the ones that save the very galaxy that rejected them. They are our only hope.&quot;</p>
+        <p>Anderson looked at Shepard with a face now full of pride. He placed his hand on Shepard&#x27;s shoulder, and said, &quot;True enough, Commander. It&#x27;s crazy, but if anyone can pull this off, it&#x27;s you. Godspeed.&quot;</p>
+        <p>&quot;Thank you, Anderson,&quot; Shepard responded. &quot;My crew has shore leave while the ship is being repaired—they earned a break—but it won&#x27;t be long before we&#x27;re back out there, and we find a way to stop the Reapers, permanently.&quot;</p>
+    </div>
+</body>
+</html>

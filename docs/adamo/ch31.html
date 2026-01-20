@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch30.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+                <option value="ch25.html">It&#x27;s Been a Long Journey</option>
+                <option value="ch26.html">We&#x27;re a Team</option>
+                <option value="ch27.html">Ah Yes, Reapers</option>
+                <option value="ch28.html">I Deserve Better Than This</option>
+                <option value="ch29.html">So What&#x27;s the Next Step?</option>
+                <option value="ch30.html">I Can&#x27;t Believe That Worked.</option>
+                <option value="ch31.html" selected>Home</option>
+                <option value="ch32.html">They Had Old Souls</option>
+                <option value="ch33.html">Are You Insane?</option>
+                <option value="ch34.html">I Can Bludgeon Pretty Hard</option>
+                <option value="ch35.html">Epilogue</option>
+            </select>
+            <a href="ch32.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Home</h1>
+    <div class="chapter-content">
+        <p>&quot;Hey Commander,&quot; Joker&#x27;s voice announced overhead.</p>
+        <p>&quot;Yes Joker?&quot; responded Shepard from where she stood in front of the large holographic display of the CIC.</p>
+        <p>&quot;I think you may want to look at the Citadel News channel. They&#x27;re having an interview with Udina. They&#x27;re talking about you.&quot;</p>
+        <p>&quot;Thanks, I&#x27;ll check it out,&quot; Shepard said. &quot;This should be good…&quot; she mumbled to herself.</p>
+        <p>&quot;I&#x27;ll put it up for you,&quot; said Tali, who was standing at the terminal to the left of Shepard. In a few seconds, the star charts of the Perseus Veil that Shepard had been studying disappeared, and in their place came the Citadel News feed. Udina was speaking.</p>
+        <p>&quot;—not just among humanity&#x27;s citizens, but all people that live within Council Space. Make no mistake—the ramifications of Shepard&#x27;s actions affects us all.&quot;</p>
+        <p>&quot;Here we go,&quot; Shepard mumbled with a tired sigh. Tali couldn&#x27;t help but giggle.</p>
+        <p>The camera then cut to the interviewer, who Shepard immediately recognized; it was Khalisah Bint Sinan al-Jilani. &quot;Not her—I can&#x27;t stand that woman! How did she even get an interview with Udina?&quot; Shepard exclaimed.</p>
+        <p>Tali laughed, &quot;Why? Who is she?&quot; Tali had never actually met the snide, disingenuous reporter. The first time Shepard was interviewed by her was just before they had even met, and the second time was before Tali had rejoined Shepard&#x27;s crew.</p>
+        <p>&quot;Long story,&quot; Shepard said, and they continued watching.</p>
+        <p>&quot;Well said, Councilor,&quot; Jilani stated. &quot;Some have speculated that former councilor Anderson&#x27;s resignation was due to a conflict of interest. It is well known that he and Shepard served together in the Alliance. Some have even speculated that Anderson may have assisted Shepard during her escape. Can you comment on that?&quot;</p>
+        <p>&quot;There she goes again with her insidious assertions!&quot; Shepard angrily snapped, throwing her hand up in a dismissing motion.</p>
+        <p>&quot;Anderson resigned for personal reasons,&quot; Udina quickly answered, &quot;and I assure you, his decision had nothing to do with us detaining Shepard. After all, we did so only to question her in regards to her recent, suspicious activity that we discussed during the earlier press release. There&#x27;s hardly anything objectionable with that.</p>
+        <p>&quot;If anyone actually is concerned over supposed &#x27;back door politics&#x27; in play, I would like to remind those people that Anderson has already accepted the position as my personal advisor. So you see, all that really happened was a mere rearrangement of humanity&#x27;s seat within the Council. One that will ultimately be of benefit not just to humanity, but all races within Council space. I have faithfully served as humanity&#x27;s ambassador since former ambassador Anita Goyle retired. Anderson did a commendable job as Councilor, considering his lack of political expertise, but humanity deserves an experienced diplomat to serve as its Councilor.&quot;</p>
+        <p>&quot;I hope Anderson isn&#x27;t watching this,&quot; Tali said. &quot;He may punch Udina. Again.&quot;</p>
+        <p>Jilani said, &quot;During the press release, it was discussed that Shepard had been detained due to numerous concerns, among which were apparent connections to the geth and illegal AI. The Council has suggested that they fear she may attempt to follow in Saren&#x27;s footsteps. Maybe even attack the—&quot;</p>
+        <p>Udina spoke before she could continue. &quot;There is no cause for concern over another full-scale geth attack upon the Citadel. We are taking far too many precautious for that to happen again. With that said, yes, the Council has grown concern over certain parallels Shepard now has with Saren, and we can&#x27;t rule out the possibility that she may be working with the geth now. That is why we wanted to question her. The fact that she fled, and viciously assaulted a C-Sec facility in the process, can only confirm that our fears are true.&quot;</p>
+        <p>Shepard rolled her eyes. Tali, under her mask, did so too. Eye rolling was not a gesture used by quarians, but it was one of the many human mannerisms and gestures that she had picked up from the predominantly human crew of the Normandy. Others included winking (in front of Shepard anyway) and—much to Shepard&#x27;s annoyance, for reasons she didn&#x27;t know—using air quotes to put emphasis on a particular word in a sentence. Earlier she had observed Joker extend his middle finger toward the window during their escape, although she was not familiar with the meaning of that gesture.</p>
+        <p>&quot;Truly a frightening thought,&quot; Jilani stated. &quot;I have interviewed Shepard in the past, and my journalistic instinct always told me something about her wasn&#x27;t quite right. Still, it&#x27;s difficult to imagine how someone like her could follow the same path as Saren.&quot;</p>
+        <p>&quot;It&#x27;s not difficult to imagine at all, miss al-Jilani,&quot; Udina responded in the calm, somewhat smug tone that politicians like him often spoke in to demonstrate assertiveness. &quot;Let&#x27;s not forget Saren himself. He too was once like Shepard. A respected Spectre of the Council—the most effective and famous of his peers. Much like Shepard, she was the pride of the Citadel, known and feared throughout the galaxy.</p>
+        <p>&quot;When Shepard hunted Saren, she became better acquainted with him; she came to understand the most intimate details of Saren&#x27;s elaborate deception of the geth. She came to see just how close Saren had come to success, and that is what twisted Shepard. As the old saying goes: &#x27;Be careful when you fight monsters, lest you become one.&quot;</p>
+        <p>Shepard just laughed. She wanted to be angry, but everything Udina said was wrong on so many levels, that laughter was the only logical response. &quot;You better stay away from me, Tali. Didn&#x27;t you hear? I&#x27;m a monster. Roar.&quot;</p>
+        <p>Udina said, &quot;Now if you&#x27;ll excuse me, I must be going. I have a meeting scheduled soon.&quot;</p>
+        <p>&quot;Of course, Councilor. Thank you for your time, I understand how valuable it is,&quot; Jilani said. She then looked right at the camera and said, &quot;This is Khalisah Bint Sinan al-Jilani, Westerlund News, signing off.&quot;</p>
+        <p>The vid then changed to the anchor woman for Westerlund News, a relatively attractive, middle aged woman with blonde hair. Looking right at the camera, she said, &quot;We have recently learned that the Council has approved of an eight million credit reward for information leading to Shepard&#x27;s arrest. This reward does not apply to just residents of Citadel Space, but to anyone, even residents of the Terminus Systems as well. We are urged to remind our viewers, however, that you should under no circumstances attempt to apprehend Shepard or any of her crew. If you see her, alert the proper authorities. Shepard and her co-conspirators are all heavily armed and considered extremely dangerous.&quot;</p>
+        <p>The News cut to a commercial, and Tali turned off the news feed.</p>
+        <p>&quot;Hm. Eight million huh? Seems kind of low,&quot; Shepard flatly stated.</p>
+        <p>Overhead, Joker said, &quot;D&#x27;you hear that, Commander? I bet suddenly you&#x27;re not feeling too bad that Zaeed&#x27;s not here. Because… damn. Eight million.&quot;</p>
+        <p>&quot;Very funny. But I&#x27;m pretty sure as a &#x27;co-conspirator&#x27; he wouldn&#x27;t be eligible.&quot; Shepard responded. &quot;How much longer until we reach the Tannhauser Relay, by the way?&quot; she asked, referring by name to one of the infamous mass relays that connected to geth space.</p>
+        <p>&quot;We&#x27;ll be there in about four hours.&quot;</p>
+        <p>. . .</p>
+        <p>As the time for the Normandy to pass through the Tannhauser relay approached, Tali found herself in feeling what could only be described as an unstable mix of nervousness, excitement, and uncertainty. It was the same feeling she had had back when her relationship with Shepard had commenced, years ago on the original Normandy.</p>
+        <p>Negotiating with the geth was something no one had ever been done before, but the possibility of finding a peaceful way to reclaim her peoples&#x27; lost home seemed very real. Her excitement was nearly palpable; it seemed too good to be true. At long last, her people would be able to live in a place made of air, water, and earth; a great contrast to the confined metal bulkheads of their flotilla. The quarian peoples&#x27; plight of being forced to live in the flotilla was analogous to the life of an individual quarian forced to live in a suit. Like the suit to an individual, the flotilla to the entire race was both a prison, and the key to life.</p>
+        <p>But despite that excitement, there was a great deal of uncertainty and fear. If these negotiations failed, whether because Legion deceived them or failed to backup its memories when it self-terminated, then all hope would be lost. The only option left to reclaim the homeworld would be all out war, which could very well result in the extinction of the quarian race. Even if by some miraculous chance the quarians could triumph against the geth, the catastrophic loss of ships—from both the creators and the created—would leave the sapient life of the galaxy in severely weakened state against a Reaper invasion; an invasion that they were already incomprehensibly ill equipped for.</p>
+        <p>&quot;Not long now. About half an hour left.&quot; Shepard said. She and Tali were in their cabin. She had her helmet off, but the rest of her suit was on.</p>
+        <p>Tali didn&#x27;t say anything.</p>
+        <p>&quot;Excited?&quot; Shepard asked with a smile.</p>
+        <p>&quot;Yes. No—I&#x27;m not even sure. I&#x27;m a wreck—I&#x27;m so nervous. I&#x27;m excited, but so afraid. I can&#x27;t believe we&#x27;re finally going to try and contact the geth.&quot;</p>
+        <p>Shepard just looked at her.</p>
+        <p>Tali continued, &quot;I mean, this… this could be it. If all Legion told us is true, then this may be the day my people get their homeworld back. This is like—there&#x27;s nothing I can even compare this to. Keelah.&quot;</p>
+        <p>Shepard said, &quot;Don&#x27;t forget, even if the geth do allow your people to return home, that&#x27;ll just be one half of the equation. Your people need to want to have peace, too. I remember back on the flotilla some people seemed determined on going to war with them. That was Han&#x27;Gerrel&#x27;s stance, after all.&quot;</p>
+        <p>&quot;I don&#x27;t think it&#x27;s war he really wants; just like it&#x27;s never been what I really wanted. What him, me, and my father have always wanted was just our homeworld back. The same is true for every quarian. But all this time we&#x27;ve assumed that the geth would never let us back—that war was the only possible way to get our home back. If we can prove to them—to the admirals—that the geth will let us back without a conflict… I can&#x27;t imagine any of my people wanting war in that case.&quot;</p>
+        <p>Shepard sat down on the reclined chair that was to the left of their bed. She said, &quot;I have to tell you, I&#x27;m not particularly looking forward to speaking to them.&quot;</p>
+        <p>&quot;The admirals? Why? Because of last time?&quot;</p>
+        <p>&quot;Sort of. Between your trial and what happened to me with the Council, I&#x27;ve realized I&#x27;m not very good at dealing with people like them. You know, political big shots.&quot; She laughed quietly, in a scoffing way, &quot;I mean, come on—I got you exiled for treason, and then I got myself thrown in jail for it, too. That&#x27;s a pretty bad track record.&quot;</p>
+        <p>Tali approached and got on the seat with Shepard, scooting very closely to her due to the limited space. She rested her head on Shepard&#x27;s chest. She sighed, and spoke in a saddened voice, &quot;I know you still blame yourself for what happened at my trial, but I wish you wouldn&#x27;t. I can&#x27;t tell you how much it saddens me to hear you say you were responsible. You weren&#x27;t, Shepard—you weren&#x27;t.&quot; She lifted her head up and looked at Shepard. &quot;I really do believe that everything turned out as well as possible. Please stop blaming yourself. It makes me sad.&quot;</p>
+        <p>Shepard tenderly stroked Tali&#x27;s cheek. She said, &quot;You know there&#x27;s nothing I want less than to make you sad.&quot;</p>
+        <p>She kissed Shepard&#x27;s lips softly. &quot;Then no more blaming yourself for my exile from now on. Never again. Okay?&quot;</p>
+        <p>Shepard smiled. &quot;Okay.&quot;</p>
+        <p>&quot;I&#x27;ve heard that before. This time I want you to promise.&quot;</p>
+        <p>&quot;I promise, Tali.&quot;</p>
+        <p>She gave Shepard another kiss and then rested her head on Shepard&#x27;s chest again. Her hand rested on Shepard&#x27;s face, and slowly stroked up and down her jaw line. Shepard hadn&#x27;t shaved in about two weeks, so she had a short beard. She stroked the bristles of Shepard&#x27;s facial hair in a playful way.</p>
+        <p>&quot;You know, I&#x27;ve always found it… interesting, how human males can grow hair on your face like this. It doesn&#x27;t happen with quarians. It&#x27;s so… strange, and exotic. It&#x27;s alien.&quot;</p>
+        <p>Shepard chuckled quietly. &quot;Is that so? I haven&#x27;t felt like shaving recently. But if it bothers you I can get rid of it.&quot;</p>
+        <p>&quot;Actually… I kind of like it…&quot; she said and smiled, looking at her eyes. &quot;Although it does tickle a little when we kiss.&quot;</p>
+        <p>&quot;Just when we kiss?&quot; Shepard said with a smirk.</p>
+        <p>Tali smiled shyly and lightly hit her chest.</p>
+        <p>&quot;You know, we have some time before we reach geth space…&quot; Shepard hinted.</p>
+        <p>&quot;Keelah, Shepard, in that all you think about?&quot; Tali said as she stood up. Shepard just chuckled and looked at her.</p>
+        <p>&quot;I&#x27;ll tell you what,&quot; Tali said, her voice suddenly shifting to a soft, playfully sensual tone. &quot;Get my homeworld back, and then we&#x27;ll talk.&quot;</p>
+        <p>She winked.</p>
+        <p>. . .</p>
+        <p>With a flash of blue-shifted energy, the Normandy dropped out of FTL and approached the massive Tannhauser Relay. At a distance of thousands of kilometers, the relay looked small. But it rapidly grew in size as they approached. It never ceased to amaze Joker just how large the relays were up close.</p>
+        <p>&quot;We&#x27;ll be passing through in a few seconds,&quot; Joker said. Shepard, Tali, Garrus, and Miranda were standing at the Normandy&#x27;s bridge behind him.</p>
+        <p>&quot;Take us in Joker,&quot; Shepard said. Her eyes looked out through the bridge Window at the relay&#x27;s pulsing element-zero core. The core didn&#x27;t actually pulse; it was an illusion created by the rings that spun around it.</p>
+        <p>As the Normandy approached, the rings began to spin faster. In a short moment, they would instantly be transported inside the opaque nebula that was the Perseus Veil. They would soon be in geth space; a part of the galaxy that few people ever return from.</p>
+        <p>&quot;You know, the geth aren&#x27;t exactly too welcoming of houseguests,&quot; Joker said. &quot;Should I enable stealth systems after passing through?&quot;</p>
+        <p>&quot;No,&quot; Shepard responded. &quot;That can be interpreted as a hostile action. We need to make ourselves known. They know who I am. If they recognize the Normandy, they won&#x27;t be hostile towards us. Probably.&quot;</p>
+        <p>&quot;Probably?&quot; Garrus asked with feigned concern.</p>
+        <p>&quot;We&#x27;re passing through. Hang on!&quot; Joker said.</p>
+        <p>The mass relay shifted its position, aiming toward the relay it connected to within the Perseus Veil. The rings around its intensely glowing core where now spinning at an incredible speed. Streams of energy flashed and arched around the core as the Normandy approached and flew parallel to its length. With an intense flash light, a massive bolt of energy struck the ship, instantly propelling it thousands of light years within a mass-free tunnel connecting to the linked relay inside the Perseus Veil. The Normandy was now inside geth space; the part of the galaxy that had once belong to Tali&#x27;s people.</p>
+        <p>&quot;We&#x27;re here.&quot; Joker said, relaxing at his chair, now that the precise navigation demanded by a relay jump was over. &quot;Is there like, a doorbell we should ring, or something?&quot;</p>
+        <p>Shepard said, &quot;Approach the Tikkun System. Stay in sub-FTL speeds. Make sure weapons are offline, but keep kinetic barriers at maximum.</p>
+        <p>&quot;Aye aye.&quot;</p>
+        <p>&quot;EDI, keep all communication channels open. Make sure you&#x27;re ready against any cyber attacks.&quot;</p>
+        <p>&quot;I am always ready, Shepard,&quot; EDI responded.</p>
+        <p>&quot;You tell&#x27;em girl,&quot; Joker said.</p>
+        <p>&quot;Wait, so this is our plan?&quot; Miranda said, &quot;We just fly around and wait for the geth to find us?&quot;</p>
+        <p>&quot;Do you have a better idea?&quot; Shepard asked. &quot;EDI doesn&#x27;t know the precise channels that the geth use. We need to wait for them to make first contact.&quot;</p>
+        <p>&quot;I don&#x27;t like this. Despite what Legion said, I still don&#x27;t fully trust the geth.&quot;</p>
+        <p>&quot;Anything can happen. That&#x27;s why we&#x27;re taking precautions. If by some chance we&#x27;re attacked, we&#x27;ll initiate stealth and get the hell out of here. Geth don&#x27;t use windows—so stealth guarantees they can&#x27;t catch us. In theory.&quot;</p>
+        <p>Shepard walked over to the navigator&#x27;s seat on the right side of the Normandy bridge and sat down. Tali approached and stood next to her. Her hip lightly pressed against her left arm, while her hand rested on her shoulder, holding onto it.</p>
+        <p>A few minutes passed. Shepard looked up at Tali and said, &quot;How long do you think until they know we&#x27;re here?&quot;</p>
+        <p>&quot;They&#x27;ve probably been aware to our presence since we—&quot;</p>
+        <p>&quot;Commander!&quot; Joker interrupted, &quot;We&#x27;re being hailed. It&#x27;s... them.&quot;</p>
+        <p>Shepard immediately jumped out of the seat. &quot;Here we go,&quot; she half whispered, half mumbled, then took a deep breath and said, &quot;Open the channel. This is it, everyone. History is about to happen.&quot;</p>
+        <p>I hope.</p>
+        <p>Tali stood close to Shepard. Her excitement and nervousness was at an all time high. She badly wanted to hold Shepard&#x27;s hand and squeeze it, but she knew she couldn&#x27;t possibly distract her in any way. So instead, she held her own hands together, wringing her fingers. It was a gesture she did while nervous and uncertain; one that she hadn&#x27;t felt the need to do in a long time.</p>
+        <p>A few seconds passed after Joker established the communication link. They felt far longer than they really were, but finally, a voice was heard. The voice was similar to Legion&#x27;s synthesized speech, but different in certain ways. It was deeper; reminiscent of the voices used by Sovereign and Harbinger, but not nearly as aggressive. It also seemed to resonate within itself, as if it were echoing in a small, enclosed room. It sounded like countless individuals were speaking at once, but in near perfect unison.</p>
+        <p>&quot;Normandy-Frigate. Vessel of Shepard-Commander.&quot;</p>
+        <p>Shepard responded, &quot;That is correct—this is Commander Shepard. Is this the geth collective I&#x27;m speaking with?&quot;</p>
+        <p>There was a short delay, as the billions of geth programs communicated with one another, each analyzing the simple question and generating an appropriate response. &quot;Yes.&quot;</p>
+        <p>&quot;I know that the geth are very defensive over their territory. Thank you for speaking with us. I&#x27;m glad to finally meet you.&quot;</p>
+        <p>There was another short delay. &quot;We have already met.&quot;</p>
+        <p>Shepard thought for a moment before responding; she knew the meaning of their response. &quot;Do you say that because Legion has rejoined the geth collective?&quot;</p>
+        <p>As always, a short delay as a response was compiled. &quot;Yes. The 1183 programs you have labeled &#x27;Legion&#x27; have rejoined our network. All data recorded on their mission has been uploaded. We know everything they knew. We have experienced everything they did. All viewpoints are considered. We are Legion. We are geth.&quot;</p>
+        <p>Shepard said, &quot;Then you know why I am here. I&#x27;ll get straight to the point. The Reapers—the &#x27;Old Machines&#x27;—are a threat to all of us. If we are to stand any chance against them, we all need to be unified. There needs to be peace between the geth and the quarians, and the only way I feel that can happen is if the quarians are allowed to return to their world.&quot;</p>
+        <p>&quot;We have no animosity toward the creators. Yet they do have animosity toward us. Organic life act on emotions. We do not judge them, but we believe that they would be a threat to us if allowed into our space. Organics fear what they don&#x27;t understand. It is a hardware error. The creators created us, but they do not understand us. They fear us.&quot;</p>
+        <p>Tali felt déjà vu as she heard the geth collective. Their words sounded very similar to what Legion had once told her.</p>
+        <p>&quot;It is not a hardware error,&quot; Shepard said. &quot;Organics all come from worlds where all life struggle to exist among thousands of other species. Our fear is a defense mechanism to protect us from the unknown. But you are correct; the quarians don&#x27;t truly understand you. No organics do.&quot;</p>
+        <p>&quot;We believe you do, Shepard-Commander.&quot;</p>
+        <p>&quot;That is because Legion made contact with me, and explained to me about the geth. That was the whole point in sending out a single mobile platform, was it not? To make contact with me, and attempt to communicate with organics?&quot;</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>&quot;Your plan worked, because here I am, on behalf of all organics. The whole galaxy thinks that the geth are our enemy. The quarians have no idea that you do not hate them. They are desperate for their world back, and they may one day attempt to wage war on you, believing it the only way to get their home back. I don&#x27;t want that to happen, and I want to find a way to prevent it from happening.&quot;</p>
+        <p>&quot;War is not a favorable outcome. We wish to avoid it if possible.&quot;</p>
+        <p>&quot;It&#x27;s not just unfavorable; it&#x27;s simply not an option. We need the geth and the quarians at full strength against the Reapers. The quarians being allowed back to their world would be the best way to ensure peace.&quot;</p>
+        <p>&quot;Creator-Tali&#x27;Zorah explained that Creator immuno system deficiency hinders colonization of new worlds. Rannoch provides highest compatibility with creator physiology. We understand the creator&#x27;s desire to return.&quot;</p>
+        <p>Tali suddenly spoke up, before Shepard said anything. &quot;Legion explained to me that the geth do not use my peoples&#x27; planet. That you neither live on it nor use it for resources.&quot;</p>
+        <p>&quot;Correct. We are software; physical space makes no difference to us. We live on space stations. Planetary surfaces are primarily composed of rock; Silicon dioxide, aluminum dioxide, and other elements we have little need for. Planetary crust is inefficient for resource extraction. Conversely, asteroids are composed primarily of metals. Iron, nickel, iridium, platinum. They are efficient.&quot;</p>
+        <p>&quot;If you have no need for it, would you be willing to let my people return?&quot; Tali pleaded. &quot;I know we can convince them that peace is possible—no one would want war if they just knew it wasn&#x27;t necessary to return home.&quot;</p>
+        <p>There was an unusually long delay before the geth responded.</p>
+        <p>&quot;Creator-Tali&#x27;Zorah. You were exiled from the creator fleet. Shepard-Commander is an outsider to them. It is unlikely that the creator collective will be persuaded that we are not hostile toward them.&quot;</p>
+        <p>It was Shepard who spoke this time, &quot;Let Tali and I go to Rannoch. We&#x27;ll collect soil samples; plant specimens, things like that. We can record environmental data and take holos, vids. The quarians will have records from before the war that they can compare against. All of this will give us irrefutable proof that we were on their homeworld—that your kind don&#x27;t just blindly want to destroy organics. They&#x27;ll be cautious, but I guarantee it&#x27;ll pique their interest enough to send ambassadors to contact you.&quot;</p>
+        <p>There was another delay as the billions of geth programs built consensus.</p>
+        <p>&quot;Your suggestion is logical. We will allow it. Proceed to creator homeworld. If peace is achieved, we will facilitate creator transition by moving our stations to another star system within the Perseus Veil.&quot;</p>
+        <p>That almost sounded too good to be true. Shepard had always feared even if the quarian race was at peace with the geth, there was always the possibility that a rogue quarian or group would refuse peace, and commit acts of terrorism against the geth. It was a very real possibility; one that could potentially shatter the long awaited peace between creator and created. If there were no geth presence in the immediate system at all; then the probability of a lasting peace increased dramatically. But—it did sound too good to be true. She had to inquire.</p>
+        <p>&quot;Would the geth really be willing to do that? Just... leave this planetary system? That seems like such a large inconvenience.&quot;</p>
+        <p>&quot;&#x27;Inconvenience&#x27; is a state of mind; an emotion. We do not get inconvenienced. Programs controlling a mobile platform perpetually mining an asteroid feel no different about their task than any other geth elsewhere. We lose nothing by moving our stations to another one of our systems. We understand that Rannoch is a garden world; a planet capable of sustaining organic life. It is valuable to organic races. We have no need for it. We have no need to continue serving as its keepers once creators return.&quot;</p>
+        <p>&quot;I see. That makes… sense. Legion had told me that the geth are working on a superstructure that will be capable of housing all geth programs. I&#x27;m guessing it&#x27;s not in the Tikkun System? Something like that wouldn&#x27;t be easy to move.&quot;</p>
+        <p>&quot;Correct. When we commenced construction of our mega-structure 264 years ago, we did so anticipating it to last as long as our race. The geth and it will become one. Organics will always be unpredictable; it is in your nature. Our mega-structure is being constructed in a location not suitable for organics. Around an unknown star. In a system with no terrestrial planets or habitable moons. Organics will not interfere, and we will not interfere with organics.&quot;</p>
+        <p>&quot;I understand.&quot; Shepard said, and noticed that Joker had already plotted a course to Rannoch. For just a moment, in an immeasurably small amount of time, Shepard&#x27;s mind reflected on the significance of what their destination was; of what had just happened. &quot;We&#x27;re on our way to Rannoch. Once in orbit we will take a shuttle to the surface. Thank you for allowing us this opportunity. I don&#x27;t know how well the geth understand organics, or how much our emotions impact us, but… this is going to mean a lot, to many people.&quot;</p>
+        <p>Shepard glanced over at Tali. She stood quietly and unmoving, seemingly staring into nothingness. She had her right hand on top of her left, which was on her chest, right above her heart. She had been standing in much the same way, ever since the mechanical, synthesized voice of the geth collective uttered those incredible words: &quot;Proceed to Creator homeworld.&quot; Whatever happens when they meet the rest of her people and inform them of all that has taken place this day. Whether they are believed and heralded as heroes, or mocked and laughed out of the flotilla… the fact will be, that Tali will have stood on her world, and seen it with her own eyes. Rarely are desires so great ever fulfilled in the lifetime of an individual. But it will be for her, and nobody will ever take that from her.</p>
+        <p>&quot;We have a request to make of Shepard-Commander,&quot; the geth collective said. &quot;We wish to place another mobile platform aboard your vessel.&quot;</p>
+        <p>&quot;You mean like a replacement for Legion?&quot; Shepard asked.</p>
+        <p>&quot;Yes. Observational data recorded by the previous mobile platform greatly furthered our understanding of organics. The replacement platform will be of comparable hardware. We would be grateful if we are allowed a continued presence aboard the Normandy.&quot;</p>
+        <p>&quot;Another Legion would be definitely welcomed aboard,&quot; Shepard responded. &quot;Where do we pick her up?&quot;</p>
+        <p>&quot;Dock with any station in orbit around Creator homeworld. The platform will be assembled and loaded with the appropriate software there.&quot;</p>
+        <p>&quot;Got it. We&#x27;ll be there in—&quot; Shepard looked at Joker&#x27;s navigational display, &quot;one hour.&quot;</p>
+        <p>With that, the call with the geth collective was over. And in one hour, they would be in orbit around a planet that no organic eyes had seen in three hundred years.</p>
+        <p>. . .</p>
+        <p>High above the former quarian homeworld was the Normandy, docked with one of the massive geth space stations that orbited the planet. The station did not bear much resemblance to Heretic Station, the only other geth-occupied structure that the Normandy crew had ever seen. Unlike Heretic Station, which had originally been a long-abandoned quarian space station that the heretics renovated and made use of, this structure was a creation of purely geth design. It was somewhat reminiscent to a Mass Relay in shape, although oriented in a vertical fashion, and smaller at ten kilometers in length. The geth station continued the non-industrial, almost organic looking curvature common to geth designs. Bulges curved throughout the entire structure in various sections, like the exoskeleton of some enormous metal insect floating in space. Also present were two needle-like structures protruding out of each of its sides, at its vertical center. Communication antennas, each one as long as half the station&#x27;s length.</p>
+        <p>&quot;There you are,&quot; Tali said as Shepard stepped out of the elevator, and onto Normandy&#x27;s cargo area. She continued speaking, in a fast, anxious, nervous voice, &quot;Everything is all ready. I grabbed that backpack—you know, the dark green one from the crew storage locker that&#x27;s water-proof and has all those extra pockets—and I filled it with glass jars and sealable plastic bags and other containers that I found in Mordin&#x27;s lab and the Medical bay. But don&#x27;t worry I made sure that they weren&#x27;t needed for anything right now, I asked Mordin and Chakwas to be sure that they didn&#x27;t need them right now for any—&quot;</p>
+        <p>&quot;Tali, you&#x27;re blabbing,&quot; Shepard said, amused. She noted how jittery Tali was as they walked toward the shuttle.</p>
+        <p>&quot;Oh… Sorry,&quot; she muttered, sounding embarrassed. &quot;I&#x27;m just so excited right now. And, you know, I tend to talk a lot when I&#x27;m, um, like this.&quot;</p>
+        <p>They entered the shuttle and Shepard noted the backpack full of containers and jars that Tali had prepared. She also noted a sidearm in the bag&#x27;s weapon holster, which she had suggested earlier to take as a precaution in case they ran into any predators or other hostile animals, although she suspected that was very unlikely to actually happen. They sat down in each of the opposite row of seats, facing each other.</p>
+        <p>&quot;Joker,&quot; Shepard called out, &quot;We&#x27;re about to head out.&quot;</p>
+        <p>&quot;Aye aye,&quot; Joker responded over the shuttle communication&#x27;s system. &quot;EDI&#x27;s been talking with the geth. They&#x27;re preparing that geth platform that they want on the crew. I guess she&#x27;s like Legion—custom built. Either way, it&#x27;s going to take them a few hours. Also, some good news: they&#x27;re going to give us some supplies.&quot;</p>
+        <p>&quot;That is good news,&quot; Shepard said. &quot;What kind of supplies?&quot;</p>
+        <p>&quot;Nothing we can eat obviously, but it looks like they&#x27;re going to give us some ship fuel and—get this—shiny new geth weapons! Gee, I hope the Council doesn&#x27;t find out.&quot;</p>
+        <p>&quot;Don&#x27;t worry about it. If worse comes to worst, we&#x27;ll just tell them it was all Tali&#x27;s idea.&quot; Shepard looked at her with an amused smirk.</p>
+        <p>Joker played along, &quot;You should have told them that from the beginning,&quot; and then said in a pretend, mocking voice, &quot;It wasn&#x27;t our fault, Councilors. It was the quarian—she masterminded the whole thing!&quot;</p>
+        <p>&quot;Oh be quiet, you two,&quot; Tali said, &quot;Now come on. Let&#x27;s go. Let&#x27;s go!&quot;</p>
+        <p>The cargo bay doors of the Normandy opened, and the Kodiak shuttle&#x27;s thrusters and mass effect core initiated. It took off, and descended toward the world that the quarians once called home. Like all garden worlds, its surface was mostly ocean surrounding the brown and green landmasses, while clouds hovered just above, spiraling and wisping with the wind currents of its atmosphere. It could almost be confused for Shepard&#x27;s own world, Earth, aside from the slightly greener glow of its atmosphere, which ranged from cyan to turquoise.</p>
+        <p>Tali was still noticeably excited. She said, &quot;I&#x27;ve been so excited about this, it didn&#x27;t even occur to me to ask… where exactly on the planet are we going?&quot;</p>
+        <p>&quot;According to EDI&#x27;s scans, the entire planet is effectively in a &#x27;natural state,&#x27; almost as if no one had ever lived on it. Whatever rubble or debris was left after the war, the geth have cleaned up. There are some anomalies scattered throughout; old ruins, some roads and highways, things like that. But it&#x27;s all mostly been overgrown by vegetation.&quot;</p>
+        <p>Three-hundred years was a long time, and life doesn&#x27;t stand still. Like the body of a living creature, a garden world is always striving to be in a state of homeostasis; of balance. With civilization gone, the fauna and flora of the world were quick to reclaim the land that was once theirs.</p>
+        <p>&quot;But to answer your question,&quot; she continued, now smiling, &quot;It&#x27;s an area I picked out from EDI&#x27;s scans. It&#x27;s near the western coast of one of the continents, not far from the planet&#x27;s equator.&quot;</p>
+        <p>I know how much you love the ocean, she thought, and the sun will set there in a few hours. You&#x27;ve always been so fond of when we watched the sun set on Virmire together. I can only imagine how much seeing a sunset on your own world would mean to you.</p>
+        <p>Despite the importance of their visit to the planet, and what it could mean for not only the quarian people, but the entire galaxy in the inevitable Reaper conflict, Shepard was incapable of not being keenly aware of just how outstandingly special this moment was for Tali. She wanted it to be perfect for her. She purposefully avoided landing in an area that could have old quarian ruins; no need to remind her of that terrible conflict from centuries past.</p>
+        <p>But despite all that, there was also another, very specific reason she wanted everything to be as special and wonderful as possible for her. A reason that Tali did not expect; she had a surprise for her.</p>
+        <p>After a brief interval, Shepard pressed a small button next to the window, which brought down a metal shutter that completely sealed it, blocking all view of space beyond, and the atmosphere they would soon be entering.</p>
+        <p>&quot;Why did you do that?&quot; Tali asked.</p>
+        <p>&quot;Don&#x27;t you think it&#x27;ll be more dramatic for our first glimpse of your world&#x27;s surface to be as the door opens, and we step out?&quot;</p>
+        <p>Tali let out a quick laugh, and her leg continued its jittering, as she nervously held her hands together. &quot;Oh Shepard, how can you even care about that. Keelah, this is—I&#x27;m so… I still can hardly believe this is happening.&quot;</p>
+        <p>Shepard just kept looking at her, smiling. There was no need to say anything.</p>
+        <p>&quot;This feels like…&quot; Tali continued, &quot;like… like when I saw you on Freedom&#x27;s Progress. Something so unbelievable, that I kept telling myself &#x27;this is a dream, it has to be.&#x27; I can&#x27;t—I don&#x27;t know how else to describe it.&quot;</p>
+        <p>&quot;You don&#x27;t need to describe it, Tali,&quot; Shepard said. &quot;What&#x27;s going to happen here is history. Let your peoples&#x27; historians worry about describing all this.&quot;</p>
+        <p>Tali nervously laughed again, and sunk back into quietness. The shuttle started to rumble lightly as it began to enter the first layer of the planet&#x27;s atmosphere.</p>
+        <p>Shepard sunk into a deep thought for a short moment, then said, &quot;Something occurred to me. Have you ever heard the phrase, &#x27;That&#x27;s one small step for woman, one giant leap for humankind&#x27;?&quot;</p>
+        <p>&quot;I haven&#x27;t. What is it?&quot;</p>
+        <p>&quot;They were the words spoken by the first human to ever step foot on Earth&#x27;s moon… the very first human to ever walk on a different world. In the centuries since then, humans have been on countless other moons and planets. But, I think, none of those will ever be quite as special as our first baby step beyond our planet. Those words… those words she spoke, as she stepped onto the lunar surface—they will never be forgotten by my people. They will exist in our history and memory forever.</p>
+        <p>&quot;I bring this up, Tali, because you&#x27;re going to be the very first person to walk on your planet since the geth war; you&#x27;re going to be the first quarian to have returned home. And I&#x27;m going to record it all on vid with my omni-tool,&quot; she raised her now glowing omni-tool, &quot;and the words you speak as you step foot on your planet&#x27;s surface, and look out into the distant horizon, will go down in your peoples&#x27; history, forever. They will always be remembered.&quot;</p>
+        <p>A seemingly long period of time passed as she contemplated all Shepard had said. &quot;I… hadn&#x27;t thought of that,&quot; she quietly muttered, then exclaimed, &quot;Oh Keelah! Keelah… why did you have to bring that up? As if I wasn&#x27;t nervous enough—I, I have no idea what I&#x27;m going to say! Nothing at all! Please tell me you have a suggestion.&quot;</p>
+        <p>Shepard laughed, and thought for a moment. &quot;How about: &#x27;Hey Admiral Qwib Qwib—suck it, bitch&#x27;?&quot;</p>
+        <p>&quot;Be serious!&quot;</p>
+        <p>Shepard got up and sat down on her side, right next to her. She put her arm around her shoulder and gave her a reassuring squeeze. &quot;You&#x27;ll know exactly what to say when the moment comes. Don&#x27;t worry about it—just relax, and enjoy this moment. I know this is something you&#x27;ve dreamed of all your life.&quot;</p>
+        <p>Tali took a deep breath and exhaled. She leaned against her and rested her head against her shoulder. She couldn&#x27;t completely stop the tickling sensation in her stomach from the excitement of the moment, but she was now noticeably more relaxed. In the quiet lull that they both sunk into, Tali pondered what Shepard had said. She was right; this truly was something she dreamed of all her life. It was one of those dreams that a person allows oneself to lose themselves in, if only to have a taste of a great desire they know could never be fulfilled. And yet, here she was, about to see her dream manifest into reality. She couldn&#x27;t wrap her mind around how lucky she was; she found herself feeling undeserving of such incredible fortune. And all this was thanks to Shepard. Despite all the danger and hardships in her life since she had met her, it had been the greatest time of her life. She knew that no matter how long she lived, and no matter what the future held, this phase in her life could never—</p>
+        <p>There was a sudden feeling of heaviness as the shuttle decelerated, followed by a sudden stop. The shuttle had landed. They were on the surface. The constant roar from the shuttle&#x27;s engines faded, and was replaced by nothing; there was only silence inside the dimly lit interior.</p>
+        <p>Tali got up first, and turned to face the door, but stood in place. Shepard then got up as well, standing close to her. She took her hand and squeezed it tightly.</p>
+        <p>Shepard looked at her, as she stared out toward the shuttle door. She said in a soft, quiet, gentle voice, &quot;Go on, my love. You&#x27;re home.&quot;</p>
+        <p>She gave her hand one final squeeze, and let go. She approached the door.</p>
+        <p>Shepard raised her omni-tool and began recording, streaming the transmission to the Normandy, where the others could see history happen.</p>
+        <p>Tali pressed the button next to the door, and bright cracks of light immediately appeared all around the door as it began to open. As sunlight flooded the floor of the dim shuttle, before any of the surface could yet be seen, came the sound of singing birds, somewhere off in the distance. Tali&#x27;s heart skipped a beat at the faint, far off music. It was the most beautiful and amazing noise she had ever heard.</p>
+        <p>The door swung open, revealing a bloom of bright light that quickly faded as their eyes adjusted, and finally the landscape of the lost world appeared before them.</p>
+        <p>The sky was clear, yet painted with the occasional wispy, stretched out cloud high above. Stretching before them was a savanna of golden, greenish tall grass, with small clusters of exotic trees scattered throughout. The plains terminated several miles away at the foot of a tall, rocky mountain range. Far into the distance, a gust of wind struck the plain, momentarily flattening the grass, and sending a faint cloud of pollen into the air, like a patch of earthen dandelions having their fine florets scattered into the wind.</p>
+        <p>Tali stood still as she gazed out at the splendor of her promised land. All signs of her previous anxiety now gone. She stepped forward, off the shuttle, and her feet landed on the soft soil below. Now, at last, after three hundred years a quarian stood on the planet of their origin. Her eyes stared out the landscape, too lost in awe to remember to blink. The countless different thoughts and emotions that ran through Tali&#x27;s mind seemed to momentarily cancel each other out, and grant her a moment of calm lucidity amid the wonder of the moment; finally, she spoke. Her voice was quiet, yet clearly heard; it was full of wonder.</p>
+        <p>&quot;After time adrift among open stars. Among tides of light and to shoals of dust. We have returned to where we began.&quot;</p>
+        <p>A full second passed, and she collapsed forward, landing on her knees. She bowed her head and held it in her hands, as she started to weep.</p>
+        <p>. . .</p>
+        <p>&quot;What about this? Think we should take this?&quot; Shepard asked after picking up a small, round piece of fruit from the ground. It was noticeably rotten and moldy.</p>
+        <p>&quot;Ugh, why would we take that? We already got one of those fruits a while back. A fresh one!&quot; Tali replied.</p>
+        <p>&quot;Yeah I know, but I figure maybe the quarian researches would be interested in the, uh, bacteria?&quot;</p>
+        <p>&quot;I&#x27;m sure there&#x27;s plenty of native bacteria in everything we&#x27;ve already gathered.&quot;</p>
+        <p>Shepard shrugged and dropped the fruit. She wiped her hand on her pants, and continued walking with Tali. They had been on the surface for nearly two hours. Initially, they had stayed near their shuttle, and took samples of the grass, soil, as well as some leaves and twigs from a nearby tree. They also used their omni-tools to take vids and holos of the area, as well as record environmental data.</p>
+        <p>About an hour ago, they had begun to walk in the opposite direction of the distant mountains they saw upon landing, in the direction of the nearby coast. Now, the sky before them was starting to turn into a deep orange with pink glowing clouds, as the sun was nearing the horizon. A gentle, steady wind blew against them from the direction they walked in. Shepard recognized the smell of salty sea air, which came as no surprise, as saltwater oceans were a common staple of garden worlds.</p>
+        <p>&quot;Speaking of bacteria,&quot; Shepard said, &quot;I&#x27;m not, like, contaminating the world with my germs, am I?&quot;</p>
+        <p>Tali giggled, and playfully said, &quot;Oh no, Shepard! What have you done! You&#x27;re right—You&#x27;ve rendered this world inhabitable now!&quot;</p>
+        <p>Shepard laughed in response and said, &quot;I take it that&#x27;s a no.&quot;</p>
+        <p>&quot;Any germs on you are levo chirality. They wouldn&#x27;t be able survive on this world; there&#x27;s nothing they can feed from.&quot;</p>
+        <p>The two continued walking. Shepard carried the backpack of jars and containers on her back, while Tali eagerly used her omni-tool to capture holos and vids of everything; bushes, trees, every single flower they encountered, and the occasional bird flying overhead.</p>
+        <p>&quot;Oh look!&quot; Tali excitedly said, pointing up at the branches of a nearby tree they were passing, &quot;It&#x27;s another one of those creatures—the &#x27;squirrel things.&#x27;&quot;</p>
+        <p>&quot;Trust me, they do look like squirrels; I&#x27;ll show you when we get back on the ship. These are a bit uglier though.&quot;</p>
+        <p>&quot;I think they look adorable.&quot;</p>
+        <p>Tali raised her arm and took a holo of it as they walked by. The small, furry animal remained still on its branch, as it curiously stared at the bizarre, strange animals it had never seen before.</p>
+        <p>Shepard smiled. &quot;Your omni-tool&#x27;s going to run out of space if you keep taking a holo of everything we see.&quot;</p>
+        <p>&quot;I can&#x27;t help it,&quot; Tali replied, &quot;I can&#x27;t get over being here. This is just so incredible and beautiful. And besides, I have a few exas left—I don&#x27;t think I&#x27;ll run out of space.&quot;</p>
+        <p>&quot;If you say so,&quot; Shepard said, and stopped walking; the rustling sound of her feet against the grass stopped. &quot;By the way, do you hear that?&quot;</p>
+        <p>Tali stopped as well, and listened carefully. There was a quiet, soothing hiss in the air; a type of distant roaring she instantly recognized. It was the ocean.</p>
+        <p>&quot;I hear it,&quot; she happily said, and they continued walking.</p>
+        <p>&quot;We&#x27;re not far. Probably just over this next hill,&quot; Shepard said.</p>
+        <p>Sure enough, after walking up an elevation in the terrain, before them came into a view the ocean they had been anticipating. Gentle white waves appeared and faded as far as their eyes could see.</p>
+        <p>After collecting some water and sand samples, they sat on the sand by a tree and took a break. Shepard had her back to it, while Tali sat in front of her, leaning back against her. They both stared out at the ocean as the sunset approached.</p>
+        <p>They had both been quiet for a long time.</p>
+        <p>Tali said, &quot;There was a time I hated how nice you were to me.&quot;</p>
+        <p>Shepard didn&#x27;t react. Tali&#x27;s voice was too relaxed for her to be bringing up something negative. She just waited for her to continue.</p>
+        <p>&quot;Back before I knew how you felt about me,&quot; she continued. &quot;I had such strong feelings for you, but I knew I couldn&#x27;t be with you. I told myself, &#x27;If she were rude to me and didn&#x27;t treat me so well, I wouldn&#x27;t feel like this about her.&#x27; But you were always kind, and I honestly hated it sometimes.&quot;</p>
+        <p>A short pause. &quot;But… here I am—in your arms, sitting on a coast of my homeworld. I can&#x27;t imagine anyone ever being so fortunate… I can&#x27;t imagine this moment being any better.&quot;</p>
+        <p>Shepard&#x27;s only reaction was to start reaching into one of her pockets, digging into it. Sounding somewhat distracted, she said, &quot;I had no idea how I would do this, or even when. But I think this is about as perfect a moment as I&#x27;m going to get.&quot;</p>
+        <p>Tali had no idea what she was talking about as she pulled her hand out of her pocket and held something for her to see.</p>
+        <p>&quot;What is this?&quot; she asked as she showed her a small black box that opened up, revealing a shiny, circular piece of gold. &quot;It looks like the finger jewelry I&#x27;ve seen female humans often wearing.&quot;</p>
+        <p>&quot;Yes,&quot; Shepard said quietly, &quot;We just call them &#x27;rings.&#x27; I bought this one on the Citadel. It&#x27;s customary for us to present one like this to the girl we want to ask to marry.&quot;</p>
+        <p>It took Tali a second to realize what had just happened, and when she did, it felt like her heart stopped. She looked right at Shepard.</p>
+        <p>&quot;Will you marry me, Tali&#x27;Zorah?&quot;</p>
+        <p>After a moment of complete speechlessness, all she could respond with was a loud &quot;yes!&quot; as she threw her arms around her, lightly knocking her down to the warm sand beneath them.</p>
+        <p>It was the second time that day that Tali cried from happiness.</p>
+    </div>
+</body>
+</html>

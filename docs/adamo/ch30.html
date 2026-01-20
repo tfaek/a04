@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Can&#x27;t Believe That Worked.</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch29.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+                <option value="ch25.html">It&#x27;s Been a Long Journey</option>
+                <option value="ch26.html">We&#x27;re a Team</option>
+                <option value="ch27.html">Ah Yes, Reapers</option>
+                <option value="ch28.html">I Deserve Better Than This</option>
+                <option value="ch29.html">So What&#x27;s the Next Step?</option>
+                <option value="ch30.html" selected>I Can&#x27;t Believe That Worked.</option>
+                <option value="ch31.html">Home</option>
+                <option value="ch32.html">They Had Old Souls</option>
+                <option value="ch33.html">Are You Insane?</option>
+                <option value="ch34.html">I Can Bludgeon Pretty Hard</option>
+                <option value="ch35.html">Epilogue</option>
+            </select>
+            <a href="ch31.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">I Can&#x27;t Believe That Worked.</h1>
+    <div class="chapter-content">
+        <p>It&#x27;s now or never. I can do this. It&#x27;s for Shepard.</p>
+        <p>Tali inhaled a deep breath, and stepped through the entrance right in front of her. She was now inside the C-Sec station that served as the face for the jail where Shepard was being kept. Inwardly she was terrified; any number of things could go wrong. But outwardly, she held her head high, her back was straight, and her arms confidently swung back and forth in sync with her brisk, steady steps. It was all an act; a necessary one to deceive the C-Sec officers into thinking she was there to serve as Shepard&#x27;s defense advocate. After all, if she were a person truly capable of serving as one&#x27;s legal defense, she would be knowledgeable enough in Citadel law to not only not be intimidated by any C-Sec officer, but have a certain aura of arrogance around her. In the game of law, she was supposedly one of the few who had read and studied the rules.</p>
+        <p>In her hand she carried a datapad loaded with the type of software and files one would expect an attorney to have; a commercial office suite, extra-net bookmarks to Citadel law sites, dummy files, and various other programs needed in a legal profession (Ironically, the office suite had been pirated from the extra-net). She brought the datapad for no purpose other than to make her act look more convincing, but she found herself harnessing it as a source of confidence. She couldn&#x27;t wear any kind of business attire, like a real attorney would surely wear, so the datapad was the closest thing she had to a disguise.</p>
+        <p>While the datapad she carried was a source of confidence, the very different objects she kept hidden throughout her suit were a constant drain of it. Among the contraband she smuggled were two flash bang grenades that she kept together in one of her suit&#x27;s hidden pockets, as well as the small tactical cloak devices she kept attached to the back of her helmet, concealed by her purple hood. She also carried two stun guns, which were attached to her back, underneath a loose fold of the adorning purple fabric that wrapped around her torso and legs. While the flash bangs had been provided by Kasumi, the stun guns had been acquired from an obscure weapons dealer in the wards. Like most conventional weaponry, they operated by shaving a small, grain-sized slug from a metal block. The slug was then charged with a powerful charge of static electricity as it was fired. The charge would then be transferred to the target upon impact, incapacitating her. Unlike standard weaponry, however, the stun guns did not incorporate a mass accelerator. With no means to lower the mass of the projectiles, they were fired at a speed that was comparatively very slow, and had an effective range of no more than ten meters. This also meant that the slugs were non-lethal; even at extremely close proximities, they could barely pierce the skin.</p>
+        <p>The lobby of the station Tali was now inside of had a partition wall that spanned the width of the room, effectively sealing off the rest of the station. In its center was an opening that served as a desk for the turian behind it, and off to the side was a hallway entrance, guarded by a security gate and another turian. As Tali approached the front desk, she could just barely feel her smuggled items pressing against her through the suit material, yet she was very much consciously aware of them. The tactile sensation of their presence was very subtle, but her mind greatly augmented their feel; they were a burning reminder of how risky this was, and how close she was to at any moment getting into very big trouble.</p>
+        <p>&quot;I&#x27;m about to talk to someone,&quot; Tali said in a very low whisper that was inaudible beyond her helmet. &quot;Here we go.&quot;</p>
+        <p>&quot;Stay alert. Don&#x27;t let them see you nervous,&quot; Miranda quickly responded through her communicator. She was outside the C-Sec station with Jacob, sitting at a nearby bench, pretending to be tourists admiring the Presidium. Thane was outside too, but true to his word, he was nowhere to be seen.</p>
+        <p>&quot;Good luck,&quot; Jacob added. &quot;You can do it.&quot;</p>
+        <p>After a few more steps, Tali finally reached the front desk of the C-Sec facility. The turian behind it had been busily working on his private terminal, and only just now noticed Tali&#x27;s presence. He looked at her, and his mandibles widened ever so slightly; a reflex to the unusual sight of the quarian standing before his desk. Tali noted the holographic badge on his chest, which read, &#x27;CITADEL SECURITY, P-08177. Agaptus Felix, Captain.&#x27;</p>
+        <p>Knowing she had to play the part of a determined, confident legal attorney, she quickly spoke up, before the turian could inquire as to her presence. &quot;I am Jane Shepard&#x27;s defense advocate,&quot; she blurted out in a somewhat awkward way. She immediately composed herself, and continued, now with a firmer tone of voice. &quot;I&#x27;m here to see my client.&quot;</p>
+        <p>&quot;You&#x27;re Shepard&#x27;s advocate?&quot; the turian said. &quot;Spectre Shepard&#x27;s advocate?&quot;</p>
+        <p>&quot;That is correct.&quot;</p>
+        <p>&quot;Uh, but you&#x27;re a… I&#x27;ve never seen…&quot;</p>
+        <p>Tali had expected all along to be doubted because she was a quarian, and she had feared how she would react to it. But now that it finally happened, she found herself not feeling nervous or scared or intimidated, but angry. Why was it so surprising for a quarian to be an attorney? Because of the suit? Because of the flotilla? None of that affected a person&#x27;s ability to practice law in any way. Her vexation at the turian&#x27;s prejudice ended up being an ally; it empowered her to speak boldly, and strengthen her act. &quot;Listen, I&#x27;ve gotten that same damn look from C-Sec officers throughout all the years of my legal practice. All you need to know is that I am registered as her legal advocate, and if you hinder my ability to communicate with my client because of my race, you&#x27;ll not only be in violation of her basic rights, you&#x27;ll be in violation of numerous Citadel anti-prejudice laws.&quot;</p>
+        <p>&quot;Alright, lady, calm down!&quot; the turian immediately responded. &quot;I meant no offense. I&#x27;ve just never seen a quarian be someone&#x27;s defense advocate before.&quot;</p>
+        <p>Yes! He bought it!</p>
+        <p>&quot;Well, now you have,&quot; Tali said. &quot;Now please, can I be taken to my client?&quot;</p>
+        <p>&quot;One moment,&quot; the turian said as he typed into his terminal, looking up Shepard&#x27;s file. After a few seconds he looked up at Tali and said, &quot;Tali… Zorah, nar... Rayya?&quot; He spoke her name slowly, somewhat intimidated by it, and fearful he would mispronounce it and offend her again.</p>
+        <p>&quot;That is correct.&quot;</p>
+        <p>The turian typed a few more things, and then said to her. &quot;Alright, you&#x27;re cleared for entrance. Just go on through that gate over there. A couple of my officers will escort you to your client&#x27;s cell,&quot; the turian said, pointing toward the security gate off to the side.</p>
+        <p>&quot;Thank you,&quot; Tali said, and briskly walked toward the gate.</p>
+        <p>The rest of the Presidium team had a channel open with Tali, so they were able to listen in on everything that she both said and heard. As she departed from the front desk, Jacob said, &quot;I gotta admit, you would&#x27;ve fooled me, too.&quot;</p>
+        <p>Miranda also added, &quot;Good job, but stay focused. That security gate will be your real test.&quot;</p>
+        <p>Tali knew Miranda was right; the security gate would truly be what decided the success of this plan. If she could get through it, she knew she would be in the clear. She felt a knot in her stomach from her nervousness, but at the same time, her success with the turian captain left her feeling highly confident and excited. With the right words and some acting, she had been able to convince him that she was actually an experienced attorney. And now, as she approached the gate, she would need to act again; she would have to convince the guard at the gate that the inevitable security alert was merely a false positive.</p>
+        <p>. . .</p>
+        <p>&quot;Everyone, I just got word. Tali is now inside the C-Sec station,&quot; Garrus said, speaking to the entire Normandy crew. They were gathered around, hidden out of sight in an alley near the docking bay where the Normandy was kept.</p>
+        <p>&quot;So what now?&quot; Joker asked.</p>
+        <p>&quot;Kasumi, Grunt, Jack, and I are going to move toward the Normandy and make sure the coast is clear. Mordin, you stay with the Normandy crew and keep an eye on them,&quot; Garrus said.</p>
+        <p>&quot;Will do,&quot; Mordin responded.</p>
+        <p>&quot;Once it&#x27;s confirmed to be cleared, Kasumi and I will try and hack into the docking bay controls and shut down the magnetic couplers. While we&#x27;re working on that, Grunt and Jack will keep watch while all of you get ready by the police line to enter the Normandy. EDI will let us in at any time, but the moment we cross that police line, C-Sec will be alerted. So it&#x27;s imperative we don&#x27;t cross it until just before the couplers are disabled.&quot;</p>
+        <p>Joker said, &quot;This is probably a dumb question, but can&#x27;t we just crawl under the line?&quot;</p>
+        <p>&quot;No,&quot; Garrus answered. &quot;The holographic police line is just there as a visual element. The sensors of its projectors will detect if anyone crosses past them, or even just tampers with them at all.&quot;</p>
+        <p>&quot;Figures,&quot; Joker said. &quot;At least I won&#x27;t have to hear EDI make a joke about me crawling back to her or something.&quot;</p>
+        <p>Garrus continued with the instructions, &quot;I&#x27;m going to recap, to make sure everyone is clear on this. The Citadel will be alerted when we either cross the line, or disable the couplers. However, we also have to wait until we hear that Tali has freed Shepard. Ideally, we&#x27;ll steal the Normandy just as she&#x27;s freed, and arrive on the Presidium just as they make their escape from the jail.&quot;</p>
+        <p>&quot;What about the Citadel&#x27;s defensive guns?&quot; Joker asked.</p>
+        <p>&quot;That&#x27;s up to you and EDI. For what it&#x27;s worth, I have faith you&#x27;ll keep us alive.&quot;</p>
+        <p>&quot;Great…&quot;</p>
+        <p>&quot;I actually wouldn&#x27;t worry too much about them. They probably won&#x27;t risk collateral damage by firing at us, especially if we stay close to the structure,&quot; Garrus said, remembering back to when his orders to shoot down Dr. Saleon were ignored out of fear of hurting civilians. &quot;Alright guys, looks like we&#x27;re ready. Let&#x27;s move out,&quot; he instructed, and proceeded to exit the alley with Grunt, Kasumi, and Jack following him. &quot;The Normandy is just this way.&quot;</p>
+        <p>After walking down another alley and turning a corner, the Normandy came into view. As did something unexpected, that looked very much out of place. There was a group of about four people standing near the Normandy&#x27;s airlock entrance, with a fifth one operating a forklift, transporting a large EMP generator toward the Normandy. What made the sight bizarre, was that the people were all humans. And none of them were wearing a C-Sec uniform.</p>
+        <p>. . .</p>
+        <p>The red lights on top of the security gate flashed in conjunction with its loud, blaring alert sound.</p>
+        <p>&quot;Stand back, miss,&quot; the C-Sec officer said as he turned off the gate alarm, and proceeded to look at its vid display.</p>
+        <p>Continuing her act as the impatient defense advocate, Tali let out a loud, annoyed grunt and said, &quot;I hate when this happens. It happens all the time.&quot;</p>
+        <p>&quot;I&#x27;m getting some unusual readings,&quot; the officer said as he looked at the screen, then abruptly said in a stern voice, &quot;Stand right there. Don&#x27;t move.&quot;</p>
+        <p>&quot;What&#x27;s the problem?&quot;</p>
+        <p>The officer approached and activated his omni-tool, scanning Tali&#x27;s body in a single up-to-down motion. After looking at his omni-tool, he said, &quot;According to this I&#x27;m picking up some weapons&#x27; grade battery packs, as well as the oxidizing agent potassium perchlorate, which is a common component of certain explosives. Care to explain this, miss?&quot;</p>
+        <p>Now was the time for Tali to put on her best performance; it all depended on her pulling this off. Sounding as annoyed as ever, she said, &quot;Oh Keelah… you have got to be kidding me. Seriously? Don&#x27;t you know anythingabout quarians? I know there aren&#x27;t meant of us here on the Citadel, but I figured some kind of basic education on all races would be standard for C-Sec.&quot;</p>
+        <p>Tali sighed with frustration and continued, &quot;You&#x27;re surprised that there are battery packs within my suit? What do you think powers my suit&#x27;s life support systems? See this blinking speech indicator?&quot; she tapped the blinking, pale blue light of her mask&#x27;s mouthpiece, &quot;What do you think powers it? It isn&#x27;t magic! And an &#x27;oxidizing agent used in explosives&#x27;? Are you serious? Of course there&#x27;s an oxidizing agent in my suit—how do you think I breathe? Do you see any air tanks hanging from my suit? The oxidizer mixes with nitrogen to produce breathable air!&quot; Tali wasn&#x27;t even sure if what she said made any sense. But the officer looked young, and the fact that he was stuck with the lowly position of guarding the gate was an indicator he was of poor rank, and probably not very experienced at all.</p>
+        <p>The guard was caught off guard and intimidated by Tali&#x27;s frustrated act and legitimate sounding explanations. She was correct in that he knew next to nothing about her race, and he knew he couldn&#x27;t dispute any of what she said. &quot;Uh… I see. Perhaps I should call the captain,&quot; he said awkwardly.</p>
+        <p>&quot;Don&#x27;t bother, I&#x27;ll do it for you,&quot; Tali said and then turned, facing in direction of the front desk. She called out loudly, &quot;Captain Felix, will you come here, please? I&#x27;m having a problem with one of your officers.&quot; She then turned back to the guard, folding her arms and looking right at him as she waited for the captain to arrive. The turian was noticeably embarrassed.</p>
+        <p>&quot;What&#x27;s the problem?&quot; Felix said as he arrived at the gate.</p>
+        <p>&quot;You tell me, captain,&quot; Tali said, still standing in her annoyed stance. &quot;Why am I being treated like a criminal? Your officer here doesn&#x27;t seem to understand that these gates have a tendency to give false positives on quarians. He doesn&#x27;t understand that unlike the volus, our suits aren&#x27;t made from common, commercially manufactured parts that the gates can easily recognize. And because of this, I&#x27;m being impeded from servicing my client. This is feeling a lot like racial discrimination, captain.&quot;</p>
+        <p>&quot;Sir, let me explain,&quot; the guard said. &quot;The security gate detected some—&quot;</p>
+        <p>&quot;Did it detect any mass accelerators?&quot; Felix curtly interrupted.</p>
+        <p>&quot;No, but—&quot;</p>
+        <p>&quot;Then we don&#x27;t need to worry. Let her through. The last thing we need is another incident.&quot;</p>
+        <p>Oh Keelah! I can&#x27;t believe my act worked! Hah! Wait, what did he mean by that? &quot;Thank you. But what do you mean by &#x27;another incident&#x27;?&quot;</p>
+        <p>&quot;Your client… she got assaulted by a krogan in the cafeteria a few hours ago,&quot; Felix reluctantly answered. He then quickly added, &quot;But don&#x27;t worry, she wasn&#x27;t hurt at all. Took her all of five seconds to take him out; none of my guards ever saw anything like it.&quot;</p>
+        <p>&quot;Good. Be grateful Shepard wasn&#x27;t hurt in your jail, Captain&quot; Tali said. &quot;Now please, take me to her. The sooner I see her, the sooner I can get her out of here.&quot;</p>
+        <p>Tali&#x27;s double entendre was entirely accidental, and she immediately felt herself flush with heat and nervousness; a comment like that was just too close. &#x27;The sooner I see her, the sooner I can get her out of here?&#x27; Keelah, what&#x27;s wrong with me? I need to pick my words more carefully than that.</p>
+        <p>&quot;I&#x27;m glad you&#x27;re so confident in your skill as an advocate,&quot; Felix said, &quot;because I really don&#x27;t like the idea of someone like Shepard getting thrown in prison. I sincerely hope she is innocent.&quot;</p>
+        <p>Phew.</p>
+        <p>The C-Sec captain then called two of his officers over, and instructed them to escort Tali to Shepard&#x27;s cell. Tali was beaming with excitement. She had done it. She was now officially within C-Sec, and she had managed to smuggle in the cloaking devices, the stun guns, and the flash bangs.</p>
+        <p>Now it&#x27;s just a matter of being taken to Shepard, freeing her from her cell, and escaping. What could possibly go wrong?</p>
+        <p>. . .</p>
+        <p>&quot;EDI, who are those people just outside the ship?&quot; Garrus quickly asked into his communicator, staying out of view, along with the rest of his team.</p>
+        <p>&quot;I am not aware of anyone outside the ship, Garrus,&quot; EDI answered. &quot;They must be standing beyond the viewing range of the airlock camera.&quot;</p>
+        <p>&quot;They&#x27;re Cerberus,&quot; Jack said with a note of disdain in her voice.</p>
+        <p>&quot;How do you know?&quot; asked Garrus.</p>
+        <p>&quot;Call it a hunch.&quot;</p>
+        <p>Garrus switched to Miranda&#x27;s channel on his communicator and asked, &quot;Miranda, Garrus here. There&#x27;s a group of people outside the Normandy. It looks like they&#x27;re planning on infiltrating it, but they&#x27;re not C-Sec; we think they&#x27;re Cerberus.&quot;</p>
+        <p>&quot;I have no doubt that they are,&quot; Miranda answered. &quot;This doesn&#x27;t surprise me at all—I should have seen it coming. The Illusive Man must be trying to take back the Normandy while he has the chance.&quot;</p>
+        <p>&quot;That&#x27;s not going to happen,&quot; Garrus said, then turned back to the team. He said, &quot;Miranda&#x27;s confident that they are Cerberus, and they&#x27;re trying to take the Normandy. But we&#x27;re obviously not going to give them the chance.&quot;</p>
+        <p>&quot;Please tell me we can kill them,&quot; Jack said.</p>
+        <p>&quot;If they&#x27;re Cerberus, you can do whatever you want to them for all I care,&quot; Garrus responded as he detached his assault rifle from his back and armed it. Grunt chuckled in a quiet growl of amusement, eagerly anticipating the prospect of a battle.</p>
+        <p>The team then proceeded to step out from the alley, and calmly approached the mysterious group of humans, not wanting to open fire without some kind of confirmation that they were hostile. However, the moment that the group noticed them, they yelled some things amongst each other, and one immediately tossed a grenade in the team&#x27;s direction. Right as he threw it, they all took cover behind the now stopped forklift.</p>
+        <p>Garrus and the others jumped behind some nearby metal storage crates, which provided them cover from the shrapnel of the grenade, as well as from the gunfire that suddenly erupted from the humans.</p>
+        <p>&quot;Cerberus or not, these idiots are ground meat!&quot; Grunt yelled as he grabbed his shotgun.</p>
+        <p>&quot;Agreed,&quot; Garrus responded, loud enough to be heard over the roaring of gunfire impacting their cover. He turned and looked at Jack, &quot;I&#x27;ll give you covering fire. Use your biotic push to topple over that forklift they&#x27;re using for cover!&quot;</p>
+        <p>&quot;Got it!&quot; Jack responded.</p>
+        <p>The moment there was a pause in the gunfire, Garrus quickly leaned over his cover and unleashed a deadly torrent of fire from his assault rifle. The enemy group immediately leaned behind the forklift. That was Jack&#x27;s cue. She pulsed with a wave of blue biotic energy, and unleashed a powerful push. The entire forklift suddenly toppled over and fell. Two of the humans failed to react quickly enough and were crushed by the heavy machine and its large payload. The other three ran out in time, sprinting away toward the nearest available cover, but they didn&#x27;t make it half way before the combined shots of Grunt&#x27;s shotgun, Kasumi&#x27;s submachine gun, and Garrus&#x27; assault rifle tore through their shields, and then their flesh, killing them.</p>
+        <p>&quot;That&#x27;s all of them right?&quot; Kasumi asked as they got up from behind their cover.</p>
+        <p>&quot;It was just those five, but stay on alert, there might be more,&quot; Garrus said. &quot;Move in, check the bodies. See if they have any identification.&quot;</p>
+        <p>The group quickly moved toward the toppled over forklift, their weapons still drawn. They saw the limbs of one man, and half the torso of a woman, sticking out from underneath the forklift, confirming that the biotic push had indeed killed them. They then checked the dead bodies a short distance away. They found no formal identification on any of them, but there was one thing that very strongly suggested that they were indeed Cerberus.</p>
+        <p>&quot;This one has an M-22 Eviscerator shotgun, like the ones we got from Cerberus&quot; Garrus noted. &quot;They violate certain weapon treaties, so no militaries use them. As far as I know, only Cerberus equips agents with them.&quot;</p>
+        <p>&quot;I knew it,&quot; Jack said. &quot;My hunches are never wrong.&quot;</p>
+        <p>&quot;They must have been trying to steal the Normandy—take advantage that it was empty, like Miranda said. I&#x27;m glad we got here when we did,&quot; Garrus said.</p>
+        <p>&quot;What now?&quot; Grunt asked.</p>
+        <p>&quot;This changes nothing, we proceed as planned. Kasumi and I will try and hack into the docking bay controls. You two, keep on alert in case more Cerberus shows up. It probably won&#x27;t happen, but if any C-Sec arrive, don&#x27;t kill them; it wouldn&#x27;t look good for Shepard if any C-Sec die during her escape.&quot;</p>
+        <p>&quot;So what are we supposed to do?&quot; Jack asked.</p>
+        <p>Joker spoke up through the communicator, &quot;How about you and Kasumi distract them by stripping down to bra and panties for a tickle fight?&quot;</p>
+        <p>Kasumi laughed at his comment, but Jack said, &quot;How about me and you get into a real fight, glass-bones?&quot;</p>
+        <p>&quot;Ouch…&quot; Kasumi said.</p>
+        <p>. . .</p>
+        <p>The gate of metal bars rattled loudly as it slid to the side, granting entrance to one of the jail&#x27;s wings. Numerous prison cells lined the entire length of the area now before Tali. She knew that this was the wing where Shepard was kept; inside one of these cells she was waiting, completely unaware of her impending salvation.</p>
+        <p>&quot;Just down this way, ma&#x27;am,&quot; one of the two C-Sec officers said as they continued forward, &quot;Almost there. She&#x27;s near the end.&quot; The gate automatically closed behind them. The sound of its locking mechanism clasping as it closed was loud, and resonated in the quiet wing. Once the echo faded, their footsteps became the only noise that was heard.</p>
+        <p>Tali had tried to acquire schematics of the jail before her mission began, but they proved impossible to find in the short time she had available. Since arriving and being escorted through the jail, she had been carefully paying attention to as much of the layout of the building as she could. Pass that initial security gate there had been a long hallway, with numerous doors on each of its side; entrances to C-Sec offices, interrogation rooms, staff locker rooms, and even an armory. She had also passed some elevators which granted access to the other levels of the C-Sec facility. Those other levels did not concern her.</p>
+        <p>At the end of that first long hallway was a small room, which served as a reception area to the jail section of the department. Past it was another, shorter hallway that finally connected to the jail. She knew she had finally reached the jail when greeted by a gate of metal bars, which served as checkpoints throughout the jail, separating the major sections. Tali observed that the lead turian of her escort unlocked them—as well as all doors—by using his omni-tool.</p>
+        <p>The first area she had entered of the jail was a type of large hub, two stories tall. A sectioned-off cafeteria took up most of it on one side, but there were various entrances throughout. Most appeared to be to lead to other wings, but she also noted entrances to the recreation area and the infirmary. The infirmary entrance was a pair of thin, dual doors designed to easily swing open in either direction, and they were located next to the entry of the hall she had been led through, as they continued to progress. After passing another door and making a turn, she finally reached the gate that led into the jail wing that she was now in.</p>
+        <p>As they walked, she noted that the wing seemed completely empty. She casually mentioned, &quot;Doesn&#x27;t seem like you guys have much of an overpopulation problem.&quot;</p>
+        <p>One of the officers stated, &quot;Not a lot of crime here on the Presidium.&quot;</p>
+        <p>The walk down the wing felt like an eternity, but finally, what Tali most wanted to see finally came into view. Shepard sat on the bed of her jail cell, behind a wall of bars, already looking out in their direction, curious about the footsteps. She immediately jumped out of her bed upon seeing Tali.</p>
+        <p>She approached and placed her hands on the bars. With a look of utter confusion, she asked, &quot;It&#x27;s great to see you, but what are you doing here?&quot;</p>
+        <p>&quot;I&#x27;m you&#x27;re defense advocate, Shepard,&quot; she said.</p>
+        <p>Upon hearing her response, her face transformed from surprised-confused, to amused-confused.</p>
+        <p>&quot;My defense advocate? What? Since when do you know anything about—&quot;</p>
+        <p>&quot;Of course I am, Shepard!&quot; Tali immediately interrupted her, afraid that she would blow her cover, &quot;I know everything I need to know to get you through your trial; I&#x27;ve studied law for years. Trust me, you&#x27;ll go free thanks to me.&quot; She put extra emphasis on her last sentence, hoping she&#x27;d get the hint.</p>
+        <p>Keelah, I love her, but she can really be dense sometimes!</p>
+        <p>Shepard wasn&#x27;t quite sure what Tali was up to. The possibility that she was here to break her out crossed her mind, but she immediately dismissed it. How could she break me out by herself? It would be impossible. Nevertheless, she could tell Tali was planning something that relied on the guards believing she was her advocate, so she played along. &quot;Oh… Oh! Sorry,&quot; she laughed, as if embarrassed, &quot;I got mixed up. I thought you were somebody else. The masks—they make it hard to identify quarians. You&#x27;re Tali&#x27;Zorah right? The advocate I assigned?&quot;</p>
+        <p>At least she catches on quick… I can&#x27;t wait to get her out of here and kiss her again.</p>
+        <p>&quot;That&#x27;s right,&quot; Tali happily responded. She turned to the lead officer. &quot;Open the cell, please. I have much I need to discuss with my client.&quot; She held up her datapad in sync with her words.</p>
+        <p>&quot;Very well, one moment,&quot; the officer replied. He held up his omni-tool before the electronic lock of the gate, and typed a few commands. The locking mechanism released, and the door automatically began to slide open.</p>
+        <p>&quot;Thank you, officer,&quot; Tali calmly said. Then, in a sudden and swift movement, she reached behind her back and slipped her hands under the purple fabric, pulling out the two stun guns. Before the guards even noticed, she brought them up to the side of their necks and fired. There were two flashes of light and loud crackles from the electrical shocks. The two turians dropped to the ground as their nervous systems were instantly overwhelmed by the sudden jolt of electricity. They groaned on the floor, almost unconscious and completely incapacitated.</p>
+        <p>&quot;Holy—!&quot; Shepard shouted in surprise, &quot;Tali, what are you doing?&quot; she said, taken aback by her sudden attack.</p>
+        <p>&quot;What does it look like, you bosh&#x27;tet?&quot; Tali replied as she stepped forward and gave her a quick hug. &quot;I&#x27;m getting you out of here. We planned it all out. Come on, we don&#x27;t have time!&quot; She quickly handed a stun gun to Shepard, as well as one of the two flash bangs.</p>
+        <p>&quot;Tali, there&#x27;s no way we&#x27;ll make it out of here with just these,&quot; Shepard said.</p>
+        <p>&quot;We also have these,&quot; Tali said as she pulled back her hood, reached behind her helmet, and pulled out the two tactical cloak generators. She clipped one to her suit and handed the other to Shepard.</p>
+        <p>&quot;Damn. How did you sneak all this stuff in?&quot;</p>
+        <p>&quot;I&#x27;ll tell you when we&#x27;re out,&quot; Tali answered as she grabbed the omni-tool from the lead turian; it could be used to easily unlock the gates throughout the jail.</p>
+        <p>Shepard and Tali then proceeded to run down the corridor of the empty wing. Shepard laughed and said, &quot;This plan is so crazy. Who the hell came up with it?&quot;</p>
+        <p>&quot;I did,&quot; Tali answered in a slightly smug way, &quot;And it&#x27;ll work. You can thank me once we&#x27;re free.&quot;</p>
+        <p>&quot;Hey, I wasn&#x27;t complaining. Like Wrex once said, &#x27;Sometimes crazy is the best way to go.&#x27;&quot;</p>
+        <p>. . .</p>
+        <p>&quot;Mordin, bring the crew to the ship,&quot; Garrus urgently said over the communicator. &quot;Tali just freed Shepard. We need to go, and soon!&quot;</p>
+        <p>After his command, Garrus went back to working on his omni-tool. No Cerberus or C-Sec had shown up since they arrived, but things had not been going smoothly. Both Kasumi and him were busily trying to figure out a way to free the Normandy, but so far, they had had little success in hacking into mechanical docking bay arms that kept the ship firmly in place. Kasumi worked at a nearby computer terminal, while Garrus worked on his omni-tool, next to her.</p>
+        <p>Jack approached and said, &quot;If she&#x27;s gotten Shepard out of her cell, why aren&#x27;t we on our way already? What&#x27;s the hold up?&quot;</p>
+        <p>&quot;They have this thing locked down tight,&quot; Kasumi replied with her eyes glued to her screen, as her fingers quickly danced on the virtual keyboard. &quot;It&#x27;s a real challenge to do this from a mere public terminal.&quot;</p>
+        <p>&quot;As far as we can tell,&quot; Garrus added, also keeping his attention focused to his omni-tool, &quot;the signal keeping the Normandy grounded is being sustained from some C-Sec network. We may not be able to override the command. That&#x27;s why I&#x27;m trying to hack into the power controls of the docking bay and cut power to the couplers. I really thought that freeing the Normandy would be easier than this.&quot;</p>
+        <p>The crew had arrived and were now crowded near the airlock entrance, being careful not to cross the holographic police line. Mordin walked over to Garrus and Kasumi, also curious over their current status. Grunt approached as well.</p>
+        <p>&quot;Something wrong?&quot; Mordin asked, &quot;If Tali&#x27;Zorah freed Shepard, we need to move. Can&#x27;t be late for pickup.&quot;</p>
+        <p>&quot;I know, I know—believe me,&quot; Garrus responded, frustrated. &quot;We&#x27;re having some trouble disabling the couplers.&quot;</p>
+        <p>&quot;You&#x27;ve been trying to hack those things since we got here,&quot; Grunt scoffed. &quot;It&#x27;s taking too long!&quot;</p>
+        <p>Garrus kept his attention focused on his omni-tool, but he responded, &quot;If you can think of a way to free the Normandy, then be my guest.&quot;</p>
+        <p>Grunt glanced over at the two mechanical arms that stretched out from the docking bay, keeping the Normandy fixed in place by way of the magnetic couplers at their end. &quot;I&#x27;ll get us out of here,&quot; Grunt said, and walked away, back in the direction of the Normandy crew.</p>
+        <p>Aside from a minor scoff and shake of his head, Garrus completely ignored Grunt, staying focused on his hacking. Suddenly, an alarm started to sound from the C-Sec holographic police line emiters. Garrus looked up, and saw that Grunt had crossed it, and was running into the Normandy.</p>
+        <p>&quot;Grunt!&quot; Garrus yelled, &quot;What are you—son of a bitch! Damn it. Everybody, get in the Normandy! Take your stations! Now we really need to hurry!&quot;</p>
+        <p>&quot;Why do you think he did that?&quot; Kasumi asked, briefly looking up from the terminal.</p>
+        <p>&quot;Because he&#x27;s an idiot, and thought it would be fun to alert every single C-Sec officer on the Citadel.&quot;</p>
+        <p>The entire crew entered the Normandy, and were proceeding to take their places within. Just then, Grunt emerged from airlock, and in his hands he held Shepard&#x27;s M-100 Grenade Launcher, taken from the armory. Garrus glanced at him for a second, looked back down at his omni-tool, then immediately looked back up in a double take, realizing what he had seen.</p>
+        <p>He urgently said, &quot;Wait, what are you—whoa!&quot;</p>
+        <p>With sudden, repeated thoomps, grenades rapidly flung out of the large weapon in Grunt&#x27;s hands, each leaving a faint, smoky trail over the path of their trajectory before impacting the first mechanical arm of the docking bay, powerfully exploding on impact. Grunt fired at the joint in the middle of the arm, knowing that joints were always a weak spot. The docking arm managed to stay in one piece despite the bombardment, but the repeated explosions badly damaged it, bending it and causing the electrical wiring inside to explode in a brilliant fireworks display of electrical sparks. The first magnetic coupler lost power, and was now off-line.</p>
+        <p>&quot;You&#x27;ll blow a hole in the ship!&quot; Garrus yelled.</p>
+        <p>Grunt ignored him and began to lob grenades at the second and final docking arm. &quot;The ship can still fly with a hole in it!&quot; he said, grinning; reveling in his reckless abandon.</p>
+        <p>After a series of more explosions, there was another flash of electrical sparks, and the last magnetic coupler went offline. The ship floated in place, now completely free.</p>
+        <p>&quot;Easy,&quot; Grunt said as he strapped the grenade launcher to his back.</p>
+        <p>Garrus looked over the ship&#x27;s hull, and was relieved to see that it hadn&#x27;t suffered any damage. He awkwardly said, &quot;Well… the ship&#x27;s not damaged. But that was too risky. We could have figured out another way.&quot;</p>
+        <p>Grunt shrugged, &quot;Why hack something when you can just blow it to pieces?&quot;</p>
+        <p>. . .</p>
+        <p>&quot;Past this door there&#x27;s a corridor. We should activate our cloaks to run through it,&quot; Tali said. &quot;You know, In case we run into someone, or if there are security cameras—damn it, I should have looked out for security cameras; it slipped my mind.&quot;</p>
+        <p>&quot;Don&#x27;t worry about it,&quot; Shepard said. &quot;There is another problem though, once we cross the hall we&#x27;ll be in the central hub of the jail. Our cloaks will need a recharge by then, and that area is the one place we absolutely need stealth.&quot;</p>
+        <p>&quot;You&#x27;re right… wait, I remember I saw the infirmary next to this hallway&#x27;s entrance. Maybe we can hide in there to let our cloaks recharge?&quot;</p>
+        <p>Shepard thought for a second, then said, &quot;You&#x27;re right, I remember seeing it too. That should work—not much that could threaten us in there.&quot;</p>
+        <p>&quot;Alright, I&#x27;ll get this door open, get ready!&quot; Tali said, and raised her arm. Using the turian&#x27;s omni-tool, she unlocked door before them. They both turned on their cloaking fields just before it opened, and ran down the hallway. They held each other&#x27;s hands as they ran; a way to keep from getting separated, since they couldn&#x27;t see each other. Sure enough, there was a small security camera above the door at the far end of the hall. Fortunately, Shepard and Tali were completely invisible, aside from the minor distortion and warping of light created by the cloak generators where their bodies should be. Their footsteps could clearly be heard, but thankfully, the hallway was currently empty.</p>
+        <p>They exited the hallway and found themselves in the jail&#x27;s central area, but immediately turned, and ran into the infirmary, through its loosely swinging, dual doors. Just in time; their cloaks turned off as they entered, and they materialized back into view.</p>
+        <p>&quot;I don&#x27;t think anyone saw us,&quot; Shepard said, looking through the small window of one of the infirmary doors. &quot;Once the cloaks recharge we can—&quot;</p>
+        <p>&quot;Who are you? Where did you come from!&quot; was suddenly heard shouted from the other side of the infirmary. It was a salarian physician. &quot;What are you doing here?&quot; he demanded, as he emerged from behind a curtained-off section at the end of the infirmary.</p>
+        <p>&quot;Shh!&quot; Shepard immediately tried to shush him, and said, &quot;We&#x27;ll go, just give us a second—&quot;</p>
+        <p>&quot;You&#x27;re escapees! Guards! Guards!&quot; the doctor started to yell.</p>
+        <p>Tali immediately shot him with her stun gun. Since the projectile was slow moving and charged with a high voltage of static electricity, it was clearly visible as a quickly moving orb of light. With a sudden, jerking spasm, the salarian dropped to the ground.</p>
+        <p>&quot;Good call,&quot; Shepard said with a smirk, and turned back to look out the window. A group of officers were starting to quickly walk in the direction of the infirmary, from the other side of the large, central room.</p>
+        <p>&quot;Damn it, we&#x27;re going to have some company soon.&quot;</p>
+        <p>&quot;That voice!&quot; a deep, strangely familiar voice growled from behind the curtains, where the salarian had earlier emerged from. A large figure appeared. It was a krogan, with his head covered in medical wrapping and with two glowing, cybernetic implants in place of his eyes.</p>
+        <p>&quot;Oh shit!&quot; Shepard yelled, &quot;I thought you were dead!&quot;</p>
+        <p>It was the same krogan that Shepard had nearly killed earlier. &quot;It&#x27;s you! Rrrrraaaaaarr!&quot; the krogan roared, and began to run toward Shepard and Tali.</p>
+        <p>Shepard fired her stun gun, as Tali&#x27;s was still recharging. It impacted the charging krogan, and somewhat broke his stride, but it did not stop him. His secondary, fluid-based nervous system granted him a high tolerance to paralyzing effects.</p>
+        <p>&quot;Let&#x27;s get out of here!&quot; Tali shouted. Both their tactical cloaks were now recharged, and they activated them just as they ran out. They pushed through the swinging doors and almost crashed right into the group of C-Sec officers, which were now just outside, but they managed to dodge them and swerve around them.</p>
+        <p>The officers were taken aback by the doors swinging open, seemingly by themselves. But just before they could realize what had happened, the doors flew open again—this time much more intensely—as the krogan smashed through, ramming into them.</p>
+        <p>&quot;Where are you?&quot; the krogan yelled as he rampaged through the officers, knocking them over while at the same time, completely oblivious to them. &quot;You can&#x27;t hide from me!&quot;</p>
+        <p>Shepard and Tali just ran to the other side of the area, toward the locked, metal bar gate that would lead them back to the front of the entire complex. As they ran, the station-wide alarm started to blare. They didn&#x27;t know if it was because C-Sec had learned of Shepard&#x27;s escape, or because of the rampaging krogan behind them, busy with the multiple officers attempting to take him down. Either way, every officer in the station was now on alert. They had to be quick.</p>
+        <p>Shepard briefly looked back as they neared the gate, and saw that the Krogan was finally getting subdued by the officers, and thankfully, won&#x27;t be a further problem. The two of them then reached the gate, and down the short hall past it was the jail reception area, where a small group of officers were approaching. &quot;Look away!&quot; Shepard said to Tali as she tossed her flash bang through the metal bars at them. Both of them averted their eyes just as the grenade exploded with a superbly bright flash and loud bang sound. Even though it detonated several meters ahead of them, their ears still rang from the blast.</p>
+        <p>Tali quickly unlocked the gate just as their cloak faded, and they ran through the crowd of disoriented officers, who were stumbling around in a blind, confused sate. They soon found themselves in the long hallway that eventually connected to the front lobby of the station. A turian officer ran out of the nearby armory door, but Shepard immediately shot him with her stun gun. Tali recognized the turian as the same one who had been guarding the gate earlier. She felt both amused, and sorry for him, as he collapsed onto the floor.</p>
+        <p>&quot;In here!&quot; Shepard said as they ran into the armory. &quot;We can let our cloaks recharge.&quot;</p>
+        <p>Through the overhead speaker system, they suddenly heard a warning. &quot;Escapees, officers are now authorized to use deadly force. Surrender immediately and peacefully.&quot;</p>
+        <p>&quot;That doesn&#x27;t sound good,&quot; Shepard said.</p>
+        <p>Tali spoke into her communicator, &quot;We&#x27;re not far from the entrance, but things are heating up. What&#x27;s it look like up front?&quot;</p>
+        <p>It was Thane who replied, &quot;I have a clear view. There&#x27;s a group amassing in the lobby. They&#x27;re going to block you from escaping.&quot;</p>
+        <p>Miranda added, &quot;If you&#x27;re near the front, we can use our biotics to neutralize the officers without killing them.&quot;</p>
+        <p>&quot;Alright, do it,&quot; Tali said, &quot;We&#x27;ll be out very soon!&quot;</p>
+        <p>As soon as Tali ended her call, Shepard enthusiastically said, &quot;Look what I found.&quot; Tali turned to her and saw that she held a large, collapsed, black and gray rifle in her hands. It took her only a split second to recognize it. It was an HMWAM anti-material rifle, the same type that Shepard had seen at the requisitions office two weeks ago, that she wanted as a replacement for the M-98 Widow she had left behind on the Collector Base, but couldn&#x27;t afford. Shepard was smiling as she held it.</p>
+        <p>She almost couldn&#x27;t believe that she bothered with such a thing at a time like this. Almost. &quot;Shepard, this isn&#x27;t the time—oh forget it,&quot; Tali said, &quot;Our cloaks are recharged, let&#x27;s go.&quot;</p>
+        <p>&quot;Right,&quot; Shepard said as she strapped her new weapon over her shoulder with a gun strap she had grabbed from a nearby shelf. &quot;Throw your flash bang down the hall and we&#x27;ll make a run for it.&quot;</p>
+        <p>She did as Shepard said, and they ran out after enabling their cloaks again. Sure enough, there had been a few officers in the hall, blocking the path, who were now all disoriented and temporarily immobilized by the stun grenade. They ran past them, and reached the end of the hallway, where on its side was the entrance that led to the front lobby of the station. Inside was a large group of C-Sec, guns drawn, pointing right at the entry to the hallway. Shepard and Tali had some seconds left on their cloak—enough time to run past without being seen—but as they entered the lobby a red light flashed and a loud alarm sounded. It was the security gate, and like Thane had earlier said, it would not be fooled by tactical cloak. Tali had completely forgotten about it.</p>
+        <p>Bosh&#x27;tet!</p>
+        <p>&quot;Stay right there!&quot; an officer yelled, loudly and intensely, &quot;Cloaks off or we&#x27;ll open fire! Cloaks off!&quot;</p>
+        <p>Shepard and Tali abruptly stopped and stood in place. They quickly disabled their cloaks as instructed, and held up their hands, dropping their stun guns. They both let out a disappointed sigh of defeat. They couldn&#x27;t believe they had been caught. They were so close to escaping, the front entrance was right—</p>
+        <p>Miranda and Jacob suddenly ran in through the front entrance, their bodies pulsing with biotic energy as they let loose on the group of officers. Instantly, all the officers were either floating helplessly through the air, or being tossed like ragdolls. Shepard and Tali immediately recommenced running, heading toward Miranda and Jacob. They all ran out the door together.</p>
+        <p>&quot;We&#x27;re out and we got Shepard!&quot; Miranda quickly said into her communicator, &quot;We need a pickup, now! Thane, where are you?&quot;</p>
+        <p>&quot;Above you,&quot; Thane responded, as he landed right behind the group as they ran by. He had been on top of one of the Presidium trees, near the C-Sec station, where he had a good view through the scope of his sniper rifle. As soon as he landed, he threw a biotic push, which stopped a small group of officers that were just now attempting to leave the station in pursuit of them.</p>
+        <p>&quot;Thanks for the jailbreak,&quot; Shepard said to the group, as they all ran parallel to the Presidium lake, toward a bridge that stretched over it. While rapidly approaching the bridge, Shepard said, &quot;What now, though? How are we going to get out of here? I heard something about a pickup—&quot;</p>
+        <p>A loud blast, high above, both interrupted Shepard and answered her question. They all looked up at the source of the noise, and saw a large explosion erupting from the artificial sky of the Presidium. A large section of the holographic sky distorted for a split second before suddenly disappearing. Various metal plates and structural beams began to fall from the sky.</p>
+        <p>&quot;Get under the bridge!&quot; Shepard yelled. They all ran under it as the various metal debris fell nearby, mostly into the lake, sending huge, white plumes of water roaring up into the air. After a brief interval the water fell back down as an intense rain. The team was still under the bridge, but water poured all around them on both sides of it. Thane held his hand over his mouth and nose to avoid breathing in the moisture.</p>
+        <p>Amid the intensity of the moment from both the falling structural debris and the pouring water, Shepard noticed something peculiar fall near them. It was smooth, wet, and silvery; glistening as it flopped up and down on the wet Presidium grass. Shepard looked at it with a confused expression. &quot;That&#x27;s… a fish,&quot; she mumbled, &quot;That bastard groundskeeper lied to me.&quot;</p>
+        <p>Perplexed, Tali asked, &quot;What the hell are you talking about, Shepard?&quot;</p>
+        <p>&quot;Nothing—don&#x27;t worry about it.&quot;</p>
+        <p>The roaring of the Normandy&#x27;s engines filled the air as it rapidly descended from the Presidium sky, positioning itself between the bridge and the C-Sec station. Trees cracked and snapped against the Normandy&#x27;s thick, metal underbelly as it steadily lowered, getting into place low enough to the ground so that the team could enter through its cargo hold. There were some C-Sec officers on the opposite side of the ship, but they had all stopped in their tracks in the presence of the large, powerful frigate. They stared at it in awe, knowing their weapons were utterly useless against the vessel. No one had ever seen anything like it: a frigate hovering inside the Presidium!</p>
+        <p>Once the ship was low enough, the entire team ran out from under the bridge and jumped into the cargo bay door. &quot;We have to leave, pronto! They&#x27;re closing the Citadel!&quot; Joker said through the Normandy&#x27;s internal announcement system. They were astonished to hear that the Citadel was actually being closed in an effort to keep them from escaping.</p>
+        <p>Now with Shepard, Tali, Miranda, Jacob, and Thane were all safely inside, the Normandy ascended to escape through the large hole it had carved in the Presidium&#x27;s sky. They were all overjoyed to be onboard the ship; Shepard especially wanted to cheer and shout for joy, but she knew it wasn&#x27;t quite over yet. The ship still had to escape.</p>
+        <p>With the Citadel closing, which would leave it as an impenetrable, inescapable cylinder, Joker piloted the ship toward the distant top of Presidium Tower. Since it was located at the very center of the diameter of the Presidium, it would have the largest opening available for the longest time. It was their best chance to escape before the arms finished folding in and completely sealed up the entire superstructure.</p>
+        <p>&quot;Based on the speed of the closing arms and our own velocity,&quot; EDI said to Joker, &quot;We&#x27;ll have an opening of no more than a few hundred—&quot;</p>
+        <p>&quot;I don&#x27;t want to hear it!&quot; Joker snapped, intensely looking at his vid display as he piloted the ship.</p>
+        <p>Shepard and the others from the Presidium ran toward the bridge of the ship, joining Joker and EDI. Upon seeing the display of the rapidly closing Citadel, Tali said, &quot;Oh Keelah, we&#x27;re not going to make it!&quot;</p>
+        <p>&quot;Yes we are! Hold on!&quot; Joker said. The Normandy soared up toward the center of the great Citadel ring. After a sharp turn, it flew past the very top of the Presidium Tower.</p>
+        <p>&quot;See you later, you sons of bitches!&quot; Joker shouted in excitement, extending his middle finger in the direction of the bridge&#x27;s side window, toward Presidium Tower—toward the Council—as they zoomed past it. It was impossible for them to see the gesture, but that didn&#x27;t make it any less satisfying. The Citadel was now nearly completely closed, but the Normandy managed shoot out through the tiny remaining opening just seconds before it closed.</p>
+        <p>Everyone aboard the ship cheered and shouted in celebration; everybody from the group in the bridge, to the crew in the CIC, to the engineers down on the fourth deck. They had done it. Before them now was the great vastness of space, and behind them, the rapidly shrinking cylinder that the Citadel now was.</p>
+        <p>Finally and decidedly concluding their grand escape, the Normandy jumped into the safety of FTL travel.</p>
+        <p>Now able to relax, Joker sighed loudly. He turned to Shepard, and asked &quot;Where to, Commander?&quot;</p>
+        <p>Shepard smirked. &quot;The Perseus Veil.&quot;</p>
+    </div>
+</body>
+</html>

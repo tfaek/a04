@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>They Had Old Souls</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch31.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+                <option value="ch25.html">It&#x27;s Been a Long Journey</option>
+                <option value="ch26.html">We&#x27;re a Team</option>
+                <option value="ch27.html">Ah Yes, Reapers</option>
+                <option value="ch28.html">I Deserve Better Than This</option>
+                <option value="ch29.html">So What&#x27;s the Next Step?</option>
+                <option value="ch30.html">I Can&#x27;t Believe That Worked.</option>
+                <option value="ch31.html">Home</option>
+                <option value="ch32.html" selected>They Had Old Souls</option>
+                <option value="ch33.html">Are You Insane?</option>
+                <option value="ch34.html">I Can Bludgeon Pretty Hard</option>
+                <option value="ch35.html">Epilogue</option>
+            </select>
+            <a href="ch33.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">They Had Old Souls</h1>
+    <div class="chapter-content">
+        <p>&quot;You keep staring at your ring,&quot; Shepard said, smiling. She and Tali were in the shuttle, flying back up to the Normandy.</p>
+        <p>&quot;It&#x27;s so beautiful. I&#x27;ve never had anything like it. I&#x27;ve always thought gold was a beautiful metal, but it&#x27;s so rare on the flotilla. We only ever used it on the electronics that require its conduction properties.&quot;</p>
+        <p>&quot;Did your people ever use gold for jewelry?&quot; Shepard asked.</p>
+        <p>&quot;Yes. I&#x27;ve seen old images and artwork depicting gold jewelry. Some of it was so extravagant,&quot; Tali answered. She looked at her ring again, which was on the third finger of her left hand, per Shepard&#x27;s suggestion. &quot;By the way, when are we going to... I mean, when is the... you know, wedding?&quot;</p>
+        <p>&quot;To be honest, I haven&#x27;t thought of that,&quot; Shepard said and laughed to herself. &quot;I really have no idea when or where. Part of me thinks we probably shouldn&#x27;t until... all of this, is taken care of.&quot;</p>
+        <p>&quot;Yeah, you&#x27;re right,&quot; Tali responded. &quot;But know that whatever is waiting for us in the future, I&#x27;m so happy about this. Whenever we do get married, I want it to be a day I can look up at the sky, knowing that there aren&#x27;t any reapers up there.&quot;</p>
+        <p>Shepard smiled in reply, and Tali went back to admiring her ring. It wasn&#x27;t much longer before the shuttle docked with the Normandy. Shepard grabbed the bag full of samples as they stood up and exited the shuttle.</p>
+        <p>Upon entering the docking bay, both were struck by a bizarre sight, one that instantly triggered a sudden sense of threat and danger. There was a geth colossus in the docking bay. It was deactivated and in its huddled in, collapsed form.</p>
+        <p>&quot;Hey EDI...&quot; Shepard said, her eyes glued to the colossus.</p>
+        <p>&quot;Yes, Shepard?&quot; EDI responded.</p>
+        <p>&quot;I don&#x27;t know if you noticed, but there seems to be a geth colossus in the docking bay.&quot;</p>
+        <p>&quot;That is an auxiliary unit for the new Legion,&quot; EDI said. &quot;It is only a hardware platform. Legion can transfer its software to it whenever we have need of its ground capabilities.&quot;</p>
+        <p>Shepard smiled. &quot;Nice. That could come in handy.&quot;</p>
+        <p>&quot;Where is Legion, anyway?&quot; Tali asked. &quot;I&#x27;m curious what it looks like now.&quot;</p>
+        <p>&quot;Legion is currently on Deck 3, conversing with some crew mates,&quot; EDI answered. &quot;Its hardware looks much the same as the old model, but with no large hole in its chassis.&quot;</p>
+        <p>Just then, Shepard saw something emerge that was a thousand times more unexpected than the geth colossus, and infinitely more terrifying. A turian on a geth glider, swooping towards them. Saren!</p>
+        <p>It was Garrus.</p>
+        <p>&quot;Oh my god, Garrus,&quot; Shepard said as Garrus landed in front of her. &quot;You scared the crap out of me—you looked like Saren there for a moment.&quot;</p>
+        <p>&quot;Oh come on,&quot; he responded, stepping off the glider. &quot;I know humans have a hard time telling us turians apart, but even with these scars I&#x27;m not that ugly.&quot;</p>
+        <p>Shepard looked down at the glider. &quot;So the geth gave us one of these, too,&quot; she said as she curiously put her foot on it.</p>
+        <p>&quot;As if the council doesn&#x27;t think you&#x27;re enough like Saren...&quot; Tali said.</p>
+        <p>&quot;I&#x27;ll avoid flying around the Presidium with it,&quot; Shepard said, now standing on it. &quot;How do I work this thing, anyway?&quot;</p>
+        <p>&quot;You don&#x27;t,&quot; Garrus said. &quot;At least not with those boots. You need mag-boots, otherwise... well, it can be a long way down.&quot;</p>
+        <p>&quot;Good point. I&#x27;ll try it out later.&quot;</p>
+        <p>The three began walking toward the elevator. Garrus asked, &quot;By the way, how was it down there? I see you brought some samples, but did things go as planned?&quot;</p>
+        <p>&quot;See for yourself,&quot; Shepard said, smiling, as she lifted Tali&#x27;s hand to show the ring.</p>
+        <p>&quot;Wait, you knew she was planning this?&quot; Tali asked Garrus.</p>
+        <p>&quot;Of course I did,&quot; Garrus responded. &quot;Asking a woman to be your mate is scarier than any suicide mission. You don&#x27;t think Shepard would go on another one of those without having me watch her back, do you?&quot;</p>
+        <p>The three laughed together as they reached the elevator.</p>
+        <p>. . .</p>
+        <p>The Normandy was on its way toward the Migrant Fleet. The trip was taking several days, given the fleet&#x27;s location in a star system far from a mass relay. The rest of the crew had become aware of Tali and Shepard&#x27;s engagement, and they were happy for them.</p>
+        <p>Shepard sat in the port lounge, conversing with Garrus and reflecting on recent events. There had been a lull in their conversation, which Garrus then interrupted.</p>
+        <p>&quot;Can I ask you something?&quot; he asked.</p>
+        <p>&quot;Didn&#x27;t give me much of a choice there, Garrus,&quot; Shepard said with a smirk.</p>
+        <p>&quot;Very funny. I was wondering, and don&#x27;t take this the wrong way, don&#x27;t you think you proposed a little soon? You two haven&#x27;t been together that long. Many people go years before deciding whether or not to become a mated pair.&quot;</p>
+        <p>Shepard smiled slightly to herself, staring blankly out the window into space. A long enough time passed that Garrus found himself feeling uncomfortable. He was just about to say something—anything—when Shepard interrupted the awkward silence.</p>
+        <p>&quot;I don&#x27;t know. Maybe,&quot; Shepard said. &quot;I like to tell myself that when you find the right one, you just know. But I suspect that everyone whose in love thinks that. Does that mean I can&#x27;t trust my own feelings and thoughts? Hey... maybe that&#x27;s what being indoctrinated is like.&quot;</p>
+        <p>Shepard paused a moment, then said, &quot;Maybe it was too soon, but it doesn&#x27;t feel like it to me. I&#x27;ve had to make some really tough decisions these last few years, Garrus. Who to save on Virmire; whether to trust Cerberus or not; destroy or salvage the collector base. And a thousand more. Rarely was I completely sure about any of them. But this—wanting Tali in my life, forever—this is different. This is something I am sure about.&quot;</p>
+        <p>After a brief pause, Garrus stood up and walked toward the bar. &quot;Many people find mates in their lives, but only lucky sons of bitches that defy the odds find their true kindred spirits. And nobody defies the odds better than you, Shepard. This calls for a drink.&quot;</p>
+        <p>Shepard smiled. &quot;I don&#x27;t know what kind of ceremony Tali would want, but do you know anything about human marriages?&quot;</p>
+        <p>&quot;Not really, besides there being a large cake and some kind of big party for the bride prior to the wedding that tests infidelity,&quot; Garrus answered from the bar as he prepared some drinks. He then came back and handed a glass to Shepard. He mumbled to himself, &quot;I hope I didn&#x27;t get these mixed up...&quot;</p>
+        <p>&quot;Well, read up on them,&quot; responded Shepard. &quot;You&#x27;re going to be my best woman.&quot;</p>
+        <p>&quot;Best woman? Me?&quot; said Garrus as he sat back down. &quot;I don&#x27;t know what that means, but it sure sounds like me.&quot;</p>
+        <p>. . .</p>
+        <p>&quot;There are the patrol ships,&quot; Joker said. &quot;Like clockwork.&quot;</p>
+        <p>&quot;You are entering a restricted area. Identify.&quot; The male quarian voice said over the Normandy&#x27;s comm system. It was standard procedure for quarian navy patrols to confront any ship that got within a certain proximity to the Migrant Fleet.</p>
+        <p>&quot;This is Commander Shepard of the Normandy. I have been to the flotilla before. I have important business to discuss with the admiralty.&quot;</p>
+        <p>There was a delay.</p>
+        <p>&quot;We have sent your request to our superiors. Maintain your distance until noted otherwise.&quot;</p>
+        <p>&quot;Understood,&quot; Joker said. &quot;They seemed friendlier last time.&quot;</p>
+        <p>&quot;Back then I had an authorization phrase that let us pass as soon as it was verified,&quot; Tali said. &quot;Not so, now.&quot;</p>
+        <p>&quot;How long do you think until they let us in?&quot; Shepard asked.</p>
+        <p>&quot;It could take a while. An admiral&#x27;s authorization is required in this case, since it&#x27;s a matter of fleet safety.&quot;</p>
+        <p>&quot;They&#x27;d be rolling out the red carpet for us if they knew what we had to tell them,&quot; Joker said.</p>
+        <p>&quot;No kidding,&quot; said Shepard.</p>
+        <p>&quot;I just wish quarians had clear masks so I could see their faces when you tell them you were on their home planet,&quot; Joker said. &quot;Speaking of faces... I heard about what you told the admirals after Tali&#x27;s trial. Something about rubbing Rannoch dirt in their faces. Uh... you&#x27;re not really going to do that today, are you Commander? Ordinarily I&#x27;d be all for it, but these are quarians—it could kill them.&quot;</p>
+        <p>Joker then quickly looked at Tali and added, &quot;No offense.&quot;</p>
+        <p>&quot;It&#x27;s tempting, believe me, but it probably won&#x27;t be good for negotiation,&quot; Shepard responded.</p>
+        <p>&quot;By the way, are you worried at all that they may want to turn us in for that eight million reward?&quot; Joker asked, half joking, half serious.</p>
+        <p>&quot;The fleet could buy a lot of supplies with that much money...&quot; Tali said, fully joking.</p>
+        <p>Shepard laughed. &quot;I&#x27;m not worried. A planet is worth a lot more than eight million credits.&quot;</p>
+        <p>Several minutes passed. &quot;We&#x27;re being contacted by a ship called the Tonbay,&quot; Joker said.</p>
+        <p>&quot;That&#x27;s Admiral Shala&#x27;Raan&#x27;s ship,&quot; Tali said.</p>
+        <p>&quot;Put her through,&quot; said Shepard.</p>
+        <p>After a few seconds, Raan&#x27;s voice was heard. &quot;Captain Shepard, is that really you? Is Tali with you?&quot;</p>
+        <p>&quot;It&#x27;s me, Admiral. Tali&#x27;s here with me,&quot; Shepard responded.</p>
+        <p>&quot;I am glad to hear you two are alright. I&#x27;ve been worried. But why is it that you are here?&quot;</p>
+        <p>&quot;I&#x27;m here to make your day. I need to speak to the admiralty.&quot;</p>
+        <p>Raan seemed surprised by the request. &quot;That will be difficult to arrange. The other admirals may not want to speak to you after last our last meeting. Tali being in exile also complicates things due to...&quot;</p>
+        <p>Raan kept talking, but Shepard stopped paying attention and said, &quot;EDI, forward the admiral the environmental scans you took of Rannoch while in orbit. In fact, go ahead and send all the data you captured. Holos and all.&quot;</p>
+        <p>&quot;What is all this?&quot; Raan asked after a short moment. &quot;This looks like... no, it cannot be. Ancestors, this can&#x27;t be what it looks like.&quot;</p>
+        <p>&quot;It is, Admiral,&quot; Shepard said, unable to hide a hint of pride in her voice. &quot;And that&#x27;s just the tip of the iceberg. Wait until you see the stuff we gathered on the surface.&quot;</p>
+        <p>&quot;The... surface?&quot; Raan whispered in awe.</p>
+        <p>&quot;I was there, auntie Raan,&quot; Tali said. &quot;I stood on the homeworld, the land of our people. I saw it with my own eyes.&quot;</p>
+        <p>There was a period of silence.</p>
+        <p>&quot;I&#x27;ll let the oth—&quot; Raan&#x27;s voice broke, fighting back overwhelming emotion, &quot;the others know, right away.&quot;</p>
+        <p>. . .</p>
+        <p>&quot;You look very beautiful,&quot; Tali said. &quot;Maybe you should wear that officer&#x27;s uniform more often.&quot;</p>
+        <p>&quot;Maybe you&#x27;re use to wearing something so... snug, but I&#x27;m not,&quot; Shepard responded. They were standing near the bridge, in front of the airlock. &quot;Feels like I can barely move in this thing.&quot;</p>
+        <p>&quot;The docking cradle is connecting now,&quot; EDI said. &quot;The quarian admirals will be joining us soon.&quot;</p>
+        <p>&quot;How did you get them to agree to have this meeting here on the Normandy, anyway?&quot; Tali asked.</p>
+        <p>&quot;Let&#x27;s just say that they were very eager to learn more about our visit to Rannoch. I figured we could use the home field advantage for once.&quot;</p>
+        <p>&quot;&#x27;Home field&#x27;?&quot; Tali asked.</p>
+        <p>&quot;It&#x27;s a human expression. It comes from—&quot;</p>
+        <p>Pressurization noises could be heard coming from the airlock, alerting them that the quarians were just about to enter.</p>
+        <p>&quot;I&#x27;ll explain later. Here we go,&quot; Shepard said quietly.</p>
+        <p>&quot;Good luck.&quot;</p>
+        <p>&quot;To both of us.&quot;</p>
+        <p>The airlock then opened, and into view came the familiar suits of the four admirals. With them was a squad of well armed quarian marines, lead by none other than Kal&#x27;Reegar. Shepard found herself wanting to greet the fellow soldier who she had fought along side with on Haestrom, but knew that would be highly unprofessional. She was on duty after all.</p>
+        <p>&quot;Greetings, admirals. Welcome to the Normandy.&quot; Shepard said in a calm, cool style. Tali was already proud of her, not letting their past encounter with the admirals interfere with this important meeting.</p>
+        <p>&quot;Hello again, Captain Shepard vas Normandy. Thank you for inviting us to your ship,&quot; Admiral Raan said, once again proving to be the de facto leader of the group.</p>
+        <p>&quot;You have a marvelous ship here, Captain,&quot; said Admiral Han&#x27;Gerrel.</p>
+        <p>&quot;Thank you, Admiral,&quot; Shepard responded. &quot;I can arrange a tour of the ship after our meeting if you&#x27;d like.&quot;</p>
+        <p>&quot;That won&#x27;t be necessary, but thanks all the same.&quot;</p>
+        <p>&quot;If you don&#x27;t mind,&quot; Admiral Daro&#x27;Xen said, &quot;we are all quite eager to learn how exactly you were supposedly allowed access to the homeworld by the geth.&quot;</p>
+        <p>&quot;Of course,&quot; Shepard said. &quot;This way to the conference room.&quot;</p>
+        <p>The group walked behind Shepard as she led them through the CIC, Mordin&#x27;s lab, and toward the conference room. Tali walked near Shepard, but kept behind her. The admirals resisted the temptation to admire the elegant interior of the Normandy too much, but the marines couldn&#x27;t help delight at the amazing engineering that surrounded them. Many of them had never seen a ship that was so new and state of the art.</p>
+        <p>During the short walk Tali couldn&#x27;t help but notice how Admiral Koris hadn&#x27;t spoken a word. Which was fine by her, as she still held strong resentment toward him for effectively being the one who got her exiled from the fleet. Part of her was curious what he thought about all of this, and that part wished he had said something since boarding the Normandy to give her a clue, but she ultimately didn&#x27;t care.</p>
+        <p>In the conference room Shepard took position at the head of the table, with Tali near her on one of the sides. The admirals gathered around the table, with the marines closer to the walls. After everyone got settled in place, Shepard reached below the table and pulled up the bag that contained the numerous flora specimens and soil samples gathered on Rannoch.</p>
+        <p>Shepard opened a container and poured a little bit of Rannoch dirt into her hand.</p>
+        <p>She said, &quot;This is soil that we gathered on the planet Rannoch. I believe last time we spoke, I made a particular threat in regards to this stuff.&quot;</p>
+        <p>The quarian marines tensed up as the admirals got into slightly defensive stances.</p>
+        <p>&quot;But I don&#x27;t like to live in the past. I never have.&quot; she said, and let the dirt drop onto the table. She padded her hands together to brush off the excess.</p>
+        <p>Shala&#x27;Raan was the one to ask what every quarian besides Tali in the room was waiting to learn. &quot;How is it you were you able to get all this?&quot;</p>
+        <p>&quot;It was simple. We asked the geth,&quot; Shepard answered, and left a short pause for that to sink in. &quot;In fact, Tali even brought up peace between your two peoples with them, as well as your world being returned.&quot;</p>
+        <p>&quot;That is absurd,&quot; Admiral Han&#x27;Gerrel said. &quot;What would the geth care about peace? Why would they be willing to abandon what is effectively their world now?&quot;</p>
+        <p>&quot;Perhaps you don&#x27;t know them as well as you think you do,&quot; Admiral Koris said to Gerrel.</p>
+        <p>&quot;Of course I do,&quot; he replied. &quot;I&#x27;ve spent my whole life studying our past battles with them.&quot;</p>
+        <p>&quot;They nearly annihilated our race,&quot; Daro&#x27;Xen said. &quot;They assisted a Reaper in attacking the Citadel. They have never shown anything but hostility toward any organic being. I believe by now, we know the geth quite well. They are incredible machines; adaptive, intelligent, and ruthless, but machines nonetheless. Machines that seem all too eager to do away with organics.&quot;</p>
+        <p>&quot;That is where you&#x27;re wrong, Admiral,&quot; Shepard said. &quot;I used to assume the same about them. Hell, I&#x27;ve personally destroyed more geth in battle than probably anyone in this room. But all my assumptions about them changed when I made contact with Legion.&quot;</p>
+        <p>&quot;Legion?&quot;</p>
+        <p>&quot;Legion, that&#x27;s your cue. Come in,&quot; Shepard called out. There was the sound of the armory-side door being opened, followed by footsteps synchronized to the whirring sounds of servos. Legion came into the room.</p>
+        <p>Immediately all the quarians jumped to attention, gasping amongst themselves. The marines instinctively raised their weapons toward the geth platform staring at them with its bright optic sensor.</p>
+        <p>&quot;What the hell is this?&quot; Admiral Raan exclaimed.</p>
+        <p>&quot;Everyone, relax,&quot; Shepard said. &quot;Its name is Legion. It helped us against the Collectors.&quot;</p>
+        <p>&quot;It is also thanks to Legion that we were allowed on the homeworld,&quot; Tali added.</p>
+        <p>There was a moment of uneasy quiet.</p>
+        <p>&quot;How?&quot; Koris asked, being the first to speak up. &quot;How was all this possible?&quot; He asked Shepard, but he was staring at Legion.</p>
+        <p>Shepard and Tali then proceeded to explain everything about Legion. From the improved hardware that granted it intelligence beyond that of a mere varren, to its mission to make contact with Shepard. They also explained about the geth heretics and the true geth. The admirals had numerous questions, and Legion answered all of them. Shepard found herself feeling déjà vu; so many of their questions mirrored her own from when she first met Legion.</p>
+        <p>&quot;If everything this geth says is true... Ancestors—after so long, our people may yet stand on our homeworld again,&quot; said Raan. &quot;Without the need of any blood being spilled.&quot;</p>
+        <p>&quot;That&#x27;s all well and good,&quot; Han&#x27;Gerrel said, &quot;If, what this geth said is true. But it would be foolish of us to just walk into the Perseus Vail unprepared. Everything this geth has told us makes it all sound too easy. It could be a trap, and if the trap in sprung, there goes our entire race. We need to have all our ships armed and ready for battle.&quot;</p>
+        <p>&quot;A trap?&quot; Koris said. &quot;How can you even say that? Did you pay any attention to what this geth had to say?&quot;</p>
+        <p>&quot;No, Gerrel is right.&quot; Shepard said. &quot;Not about the geth; I know they can be trusted. But the quarians need to be prepared for battle.&quot;</p>
+        <p>Shepard continued. &quot;I care deeply about the quarian people, but the truth is, the most important reason that there needs to be peace between the quarians and geth is so that we have a chance against the Reapers. They&#x27;re on their way, and you two have the largest fleets around. If we as a galaxy can&#x27;t stand up to them together, then none of this will matter. We&#x27;ll all be dead; humans, quarian, and geth.</p>
+        <p>&quot;So if it&#x27;ll make your people feel better, go ahead and arm your ships. In fact, I&#x27;ll even forward you the schematics for thannix cannons. You won&#x27;t need it for the geth, but you will need it for the reapers.&quot;</p>
+        <p>&quot;It&#x27;s too soon for us to make any decisions regarding fleet preparation,&quot; Raan said. &quot;But rest assured that we&#x27;ll take everything you said under advisement; we&#x27;re well aware that Sovereign was not a geth ship. For now, we have a great deal to discuss with the Conclave. Let us conclude this meeting and get back to the fleet so as to inform the others about all we have learned.&quot;</p>
+        <p>&quot;Very well, Admiral. I&#x27;ll escort you back to your ship,&quot; Shepard said. &quot;Feel free to take these Rannoch samples with you.&quot;</p>
+        <p>&quot;Would you be willing to let this platform come with us?&quot; Daro&#x27;Xen asked. &quot;There is a great deal more we could learn about the geth from it.&quot;</p>
+        <p>&quot;I don&#x27;t know what you intend to learn from it, Admiral, but it&#x27;s out of the question. Legion stays here.&quot; Shepard&#x27;s response was noticeably stern.</p>
+        <p>&quot;Thank you, Shepard-Commander,&quot; Legion replied. &quot;It is our preference to stay aboard the Normandy.</p>
+        <p>&quot;Very well,&quot; Daro&#x27;Xen responded.</p>
+        <p>Raan then said, &quot;Before we go, I want to thank you and Tali—and you as well, uh, &#x27;Legion&#x27;—for everything you&#x27;ve shown us today. This meeting could very well be the most important moment in the history of the quarian people.&quot;</p>
+        <p>With that, the quarians prepared to leave. One of the marines picked up the bag full of Rannoch samples as the others began exiting the room. Admiral Koris did not.</p>
+        <p>&quot;May I have a moment with you, Tali&#x27;Zorah?&quot; he asked before she left with Shepard and the others.</p>
+        <p>Tali remained in the room, and soon it was just the two of them.</p>
+        <p>&quot;What is it you want?&quot; Tali asked. Her voice had a tone of impatience. And with good reason; despite the meeting they were just in, this was still the man who was responsible for her exile. She did not care for him.</p>
+        <p>Koris hesitated before responding.</p>
+        <p>&quot;I... want to apologize. For everything. It wasn&#x27;t right—how I treated you. Not just in getting you exiled, but in everything I said about you during that trial. You didn&#x27;t deserve any of that. This meeting proves it.&quot;</p>
+        <p>Tali had her arms crossed as she listened to him. &quot;Are we done, then?&quot;</p>
+        <p>&quot;I don&#x27;t expect you to forgive me, and that is fine. I just want you to understand, I never had anything against you personally. I was desperately trying to steer the rest of the fleet from war. I knew where your father stood in regards to the geth, and I knew your views were much the same as his.&quot;</p>
+        <p>Tali didn&#x27;t say anything.</p>
+        <p>&quot;We try to keep this a secret, but I&#x27;m sure you know already. The fleet is dying. Gradual damage to our oldest ships is occurring faster than we can gather the resources to repair them. That includes the liveships; for three centuries they&#x27;ve fed our people. We&#x27;re desperate for a home now more than ever. And due to that desperation we&#x27;ve been closer to war with the geth now more than ever. Fighting them could prove to be our extinction, and I&#x27;m the only admiral who strongly opposes it.&quot;</p>
+        <p>&quot;And do you think that excuses you? For disgracing me and banishing me from the rest of my people? You could have found some other way of making your point!&quot;</p>
+        <p>&quot;No. It doesn&#x27;t excuse me. And yes, I suppose I could have.&quot;</p>
+        <p>Korris walked toward the door of the room, where Tali stood near. He stopped, and said, &quot;Your father and I never agreed on most things. But I worked with him for many years. I knew him well. He was always proud of you. And he would be proud of you more than ever, today. Goodbye, Tali&#x27;Zorah.&quot;</p>
+        <p>. . .</p>
+        <p>The day was nearly over and Shepard was headed toward her cabin to retire for the evening. It had been an eventful day, especially after the meeting with the quarians. The Normandy remained within the flotilla, and she was frequently contacted by various ships. Often she was asked questions about the geth, but there were also technology and resource exchanges. Shepard was able to unload a large quantity of unneeded palladium, which for some reason the Normandy always seemed to have an excess of.</p>
+        <p>Shepard had also been informed by Raan that the Normandy had been registered with the migrant fleet database of ships, and it would now be allowed to come and go as she pleased. It made Shepard happy that the Normandy was accepted among the flotilla. First the geth, and now the quarians; she may have lost all allies in council space, but her list of new allies was starting to grow.</p>
+        <p>Shepard walked into her cabin and found Tali inside. Shepard had noticed earlier that she stayed behind to talk to Koris, though she didn&#x27;t know exactly why. She rightly assumed it had something to do with her past trial, but she hadn&#x27;t brought it up with her yet.</p>
+        <p>&quot;Shepard, I just got a message from Raan. You&#x27;re not going to believe this.&quot;</p>
+        <p>&quot;What happened? Is something wrong?&quot;</p>
+        <p>&quot;No—just the opposite.&quot; She paused a moment. &quot;I&#x27;ve been pardoned by the Admiralty... I&#x27;m no longer exiled.&quot;</p>
+        <p>Shepard&#x27;s jaw dropped, and her expression immediately turned into a joyful grin. &quot;Tali, that&#x27;s wonderful news! I can&#x27;t tell you how happy that makes me feel.&quot;</p>
+        <p>&quot;Me too... I don&#x27;t think it&#x27;s fully sunk in yet.&quot;</p>
+        <p>Shepard put her arm around Tali and gave her a squeeze. &quot;I guess getting the quarian homeworld back goes a long way with the admirals, huh? Raan must&#x27;ve had no problem getting the others to change their minds after today.&quot;</p>
+        <p>&quot;It wasn&#x27;t Raan,&quot; Tali said. &quot;It was Koris who proposed pardoning my exile.&quot;</p>
+    </div>
+</body>
+</html>

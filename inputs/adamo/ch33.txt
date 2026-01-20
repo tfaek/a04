@@ -1,0 +1,487 @@
+Are You Insane?
+
+"What are we going to do about supplies? We've put this off for too long. We're getting dangerously low," Miranda said. She sat at one of the mess hall tables, where she, Shepard, Joker, Jacob, Tali, and Garrus were having senior crew meeting.
+
+"I feared so. How low?" Shepard asked.
+
+"EDI," Miranda called out.
+
+EDI answered, "We are low on all life support liquids. Oxygen is at 8%, Nitrogen at 11%, and Hydrogen at 21%. L-Protein based food is at 6%, whereas D-Protein based food is at 39%. It is recommended that we restock all supplies within one week."
+
+"One week?" said Jacob. "Damn, how'd we let things get this bad?"
+
+"We haven't had the chance to resupply," answered Shepard. "Back on the Citadel I had bought supplies for the ship since we no longer had Cerberus backing. But we were forced to flee before delivery was complete, and since we're wanted fugitives, there aren't many places we can go. Any suggestions?"
+
+"We're wanted by the Citadel, right?" Jacob asked. "Maybe we can get supplies somewhere in the Terminus systems?"
+
+"That would not be a good idea," said Garrus. "The eight million credit reward extends to anyone in the galaxy. The terminus systems would be even more dangerous. They'd be all over us the second they realize who we are. Not a lot of ships the Normandy can be mistaken for out there."
+
+"It's twelve million credits now, by the way," Joker said. "I saw it on the news. The Citadel approved a higher reward the other day."
+
+Jacob whistled and shook his head. "Damn that's a lot of cash."
+
+"Hey Shepard," Tali said, "How about we just turn you in and use the money to bribe the Reapers to leave us alone?"
+
+"Very funny," Shepard said. "Now come on, any more ideas where to get supplies? We can't go through any Council Space supply channels, and apparently the Terminus Systems are even more dangerous."
+
+"What about the quarians? We were there just there a few weeks ago," said Jacob. "Maybe they can help us out."
+
+"The fleet is usually very tight on ship supplies," Tali explained. "They wouldn't be able to spare much."
+
+"No one besides the dextro crew members would be able to eat any of their food anyway," added Miranda. "It also isn't a good idea to interact much with the quarian fleet. We could put them at risk of conflict with the Council if our presence were found out."
+
+"Maybe the geth could give us some supplies?" suggested Shepard. "Not food obviously, but the liquid gasses?"
+
+EDI responded to Shepard's suggestion. "The geth do use liquid oxygen for oxidation of fuel in propulsion systems, but have little need for nitrogen and hydrogen. We need all three for the life support system to produce breathable air and water."
+
+"There's got to be somewhere friendly to us that we can get all the supplies we need," said Shepard. "Maybe one of the colonies we saved? How about Elysium? I've gotten supplies there before and they seem to like me a lot."
+
+"I remember hearing there were some protests there after you were tried with treason," Garrus commented.
+
+"Elysium is one of our oldest and most populated colonies," said Miranda. "It has a significant Alliance presence, especially after the Collector attacks. Suffice it to say, it's too risky."
+
+"Here's a suggestion," said Joker. "How about our good friend the Shadow Broker? I'm sure she has a lot of resources at her disposal."
+
+"Unfortunately we're unable to contact her at the moment." Shepard said. "Her headquarters is undergoing a move. Not long after our Citadel escape I got a message from her, stating that she had to relocate her base ship and she would be shutting off all communications during the relocation. Apparently Cerberus activity had increased greatly after our escape, and her location was no longer safe."
+
+There was a moment of quiet as everyone tried to think of a possible location to resupply the ship.
+
+"I have an idea," Tali said, interrupting the silence. "What about that small settlement we saved back when hunting Saren? The one with the Thorian. What was it called again? Something-Hope?"
+
+"Zhu's Hope," Shepard stated. It was clear from his tone that he liked the idea. "I helped them out again recently with some medical contracts too."
+
+"That might work," Miranda said.
+
+"Yeah, I like it," added Garrus.
+
+"Me too," said Shepard. "They're small and out of the way, and they're technically not under direct Alliance or Citadel jurisdiction since they're a private colony owned by ExoGeni. If we're in and out quickly, we should be fine. We probably won't be able to go back, but a full resupply should last us a few months. If there aren't any objections, I'll send Shiala an encrypted message right away."
+
+No one objected, and Shepard got up to go to his private terminal.
+
+"I think Shiala has a bit of a thing for him, so at least we know we can trust her," Garrus commented to the group.
+
+"Wait, what?" Tali said.
+
+Garrus laughed and said, "Oh don't worry. I'm pretty sure Shepard like quarians more than asari. The green ones, anyway."
+
+. . .
+
+Through the settlement of Zhu's Hope walked Eugene Thomas. His strides were fast, long, and steady; he was in a hurry, but didn't want to attract attention with running. To the colony, he was merely one of the half dozen dockworkers sent by the Cord-Hislop Aerospace Corporation about three years ago, coincidentally, after Thorian incident on the colony. It was a strange group; all of them somewhat introverted, often staying inside the small warehouse they operated near the edge of the settlement. Rarely did they interact with the residents of the colony, and when they did, they always seemed distant.
+
+Eugene entered the warehouse and walked past the main floor, where ship parts and machining equipment was scattered about. Most of it, strangely, gathering dust from lack of use. At the back he reached a plain, unassuming door, which unusually had a very sophisticated and high-tech security panel. After scanning his passcard, punching in a code, and passing a DNA scan, he entered. Inside were large computer banks, sophisticated lab equipment, and the rest of his co-workers.
+
+"Mona," he said to the woman seated in front of a terminal, "Contact the Illusive man. Right now."
+
+.
+
+"Fortunately we have most of the supplies you need. We have already begun loading them onto your ship," said Shiala, the former follower of Matriarch Benezia.
+
+"Thank you," said Shepard. "This is a big help. There aren't many places that I can go to resupply my ship. I probably won't be able come back here after this."
+
+"You don't need to thank me," Shiala said. "Both I and the entire colony of Zhu's Hope are still in your debt for all you did for us. And for what it's worth, I never believed what the Council has said about you. These supplies are the least we could do for you. I just wish we were able to provide everything on your requisition list."
+
+"What is it we're missing?"
+
+"Nothing vital. Just a few highly specific things, such as," Shiala looked at her datapad, "Five gallons of... prune juice? I'm not even sure what that is."
+
+"Prune juice? Who put that on our list?"
+
+"I believe it was Grunt," Tali said as she exited the Normandy's cargo door, dodging dockworkers pushing hand trucks of supplies up the ramp. The ship kept its mass effect core running to lower its mass, and allow it to be docked to the colony. It would also help the ship take off quickly if it needed to. "Back on the Citadel a bartender offered it to him. After reluctantly tasting it, he proclaimed it was "the drink of a warrior" and fell in love with it."
+
+Shepard responded with brief quizzical look and changed the subject. "I'm glad you're here," he said as Tali approached. "Are there any engineering parts we need while we're here?"
+
+"Nothing major, no, but it's always good to have some backup components."
+
+Shiala said, "There is a young quarian merchant that came here a several months ago. He specializes in selling salvaged tech and parts. His kiosk is just outside the main dock entrance, if you want to see."
+
+"Yeah? Thanks, I think I'll check it out." Tali said and walked toward dock exist. Shepard stayed behind to oversee the supplies being loaded. Tali was curious about the merchant. It was clear that the quarian was on his pilgrimage, but she found it strange as all pilgrimages were called off as the migrant fleet wanted to start preparations for returning to Rannoch.
+
+Tali found the kiosk, and saw the young male quarian who ran it. "Hey," she greeted.
+
+Despite the mask, it was obvious he was surprised at the presence of another quarian.
+
+"Oh wow, another quarian. Hello there. Hi. Did you come here for your pilgrimage too?" he asked as he put down the piece of tech he was working on.
+
+"Actually, I finished my pilgrimage a couple years ago. I'm just looking for some parts for my ship. But what about you, why are you here? Weren't all pilgrimages called off?"
+
+"They were, but I figured I'd stay here a little longer until I sell this stuff. I can at least take back more money than I left with." answered the quarian.
+
+"How'd you end up on this colony?" asked Tali.
+
+"Well, I had originally gone to Omega, but the money I had got stolen within a few days and I was stuck there. I ran a salvage shop, kinda like this one, to try and make some money, but it wasn't going very well until a human helped me out.
+
+"I guess you could say he made a good impression on me, because after I left Omega I decided I'd continue my pilgrimage on a human colony. And what better than one built on ancient Prothean structures?"
+
+"I see. Your pilgrimage reminds me of mine. You could say that I was also having some... trouble, until I was helped out by a human. I'm actually here looking for some parts for his ship."
+
+"What are you looking for?" asked the quarian merchant.
+
+"I was wondering if you had some CP-2 alignment coils and T-grade conduits."
+
+"Sounds like you're on a top of the line ship. My stuff isn't exactly, uh, high-end... But, while I don't have those exact coils, I have ones that might be compatible, depending on your ship of course, back at my storage. You'll have to look at them yourself. We can go if you want, it's just a short distance into the settlement."
+
+"Sure, let's go."
+
+As they walked, Tali took a moment to observe the settlement. It was hard to believe this was the same place she had been to, two years prior. Last time she had seen this colony, she was dodging hostile geth and brutally combating Thorian creepers. Everything was different now. There was no smoke, no fire, no combat, no—
+
+There was a flash of light and a loud crackle. Kenn collapsed to the ground.
+
+"That was the wrong quarian, you idiot!" was heard shouted off to the side. Tali turned and saw a group of humans. One of them had a stun gun.
+
+Tali reached behind her back to grab her shotgun, but there was nothing there; she wasn't armed. The group of humans approached her cautiously.
+
+"Shepard, I need your help," She said into her helmet communicator. There was no acknowledgement. "Shepard. Normandy… Anybody!"
+
+"Don't waste your time," said one of the humans. They were getting closer. "Gene there is carrying a signal scrambler."
+
+Tali noticed in her visor's heads-up display that all communications were indeed being blocked.
+
+"Make is easy on yourself. Just come with us," said the same human. He was probably their leader. "Don't wanna end up like that one down there." He nodded his head in Kenn's direction, but kept his gaze focused on Tali.
+
+Tali got into a defensive stance. "Who are you? What do you want from me?"
+
+"We don't have time for this," said a different one of the humans. "Zap her and let's get out of here before we're caught."
+
+"I can't yet. It takes time to recharge," said the human holding the stun gun.
+
+"Forget it, just grab her then!"
+
+The group approached her, confident that they'd be able to take her easily. She was an unarmed woman, and her quarian frame granted her a smaller upper body than a human female. But despite her diminutive build, she was highly battle hardened and experienced in combat with some of the worst horrors the galaxy has ever produced. This was something her attackers did not take into consideration. They grossly underestimated her.
+
+Once one of them was in range, she quickly brought her left leg up and kicked him hard in the stomach, knocking him back. In the same motion, she pulled out the knife that she kept strapped to her ankle. Without a break in the flow, she swung her knife and slashed the throat of the next nearest attacker. He grabbed his throat in reaction, but collapsed as he blacked out from the drop in blood pressure to the brain.
+
+One of the attackers managed to grab her right forearm, in an attempt to neutralize the arm wielding her knife. She instantly just transferred the lethal weapon to her left hand and stabbed the grabber in the eye. As he dropped, the bone of his eye socket caught the blade and leveraged the knife out of her hand.
+
+Tali let out a loud, grunting oomph, as one of them rammed into her from behind, grappling her tightly. Using the solid metal exterior of her helmet as a weapon, she started to swing her head back, reverse head-butting her grabber. He grunted in pain with each hit, but refused to let go. Meanwhile, she kicked one of the remaining attackers as he tried to come at her from in front. The metal heal of her boot impacted him right on the jaw. Teeth fell to the ground as he grasped his bleeding mouth.
+
+There was then another flash and loud crackling noise, and Tali's body went limp. The stun gun had finished recharging and brought an end to Tali's onslaught. The assailants had won, but it was a pyrrhic victory. Two of them were dead, and the others were bloodied and badly injured.
+
+. . .
+
+"Shepard, I am detecting approaching Alliance vessels," said EDI through Shepard's communicator. "They just entered the system and will be here in twelve minutes."
+
+This was a surprise. "Alliance doesn't normally patrol here. Somebody must have tipped them off," said Shepard. He had been busy helping load the supplies. He sighted. "That's gratitude for you. Well, we got most of the supplies we needed, let's get out of here."
+
+With the last possible supplies loaded, Shepard said goodbye in a hurry to Shiala and some of the Zhu's Hope dockworkers that had helped load the supplied.
+
+"ETA five minutes, Shepard." EDI informed.
+
+Shepard was now in the Normandy's walking through the cargo area as its door closed behind him. "We've just finished down here, let's go. Is the crew accounted for?" Shepard asked as he approached the elevator.
+
+"No she is not. The rest of the crew is aboard the ship."
+
+"Tali, where are you?" Shepard said into his communicator, "We need to leave, now." There was no response.
+
+"Tali?"
+
+Again, nothing.
+
+"EDI, locate Tali." Shepard said.
+
+After a brief interval, EDI said, "I sent out a location ping, but there was no response from her communicator or onboard suit computer. I cannot locate her."
+
+"What the hell? Where can she be?"
+
+"Four minutes, Shepard," announced EDI.
+
+"We're not leaving without her."
+
+"I have a suggestion. I can take the ship into orbit and engage stealth to avoid being detected. We can then monitor the settlement until we find her, and pick her up in the shuttle."
+
+Shepard hesitated as he thought about her suggestion. "Alright," he said with a sigh. "Let's do that."
+
+The Normandy entered orbit with its stealth systems engaged. Shortly after, the Alliance ships showed up. A period of time passed as they continued to try to locate Tali.
+
+"Any sign of her?" Shepard asked. He was in the CIC.
+
+"Not yet," EDI answered.
+
+"What the hell…" Shepard shook his head. "In the meantime, what can you tell me about the Alliance ships?"
+
+"They seem to be specifically outfitted to counter the Normandy," EDI began to explain. "I tried analyzing them, but all vital systems are not networked. Cyber-attacks are impossible. They are also equipped with long range light sensors that can be used to detect us, should we enter their direct line of sight. We've been keeping distance from them for this reason."
+
+Two hours passed, and Shepard's impatience reached its boiling point. "It's been too long. I'm not waiting anymore. I'm going to take a team down there and look for her. Call Jacob and Miranda, I want human crewmates to avoid standing out." He began walking toward the elevator to go and prepare.
+
+"Commander, there's a call coming in." Joker announced.
+
+Shepard stopped and immediately asked, "Is it Tali?"
+
+"No, but—"
+
+"Then it can wait," Shepard interrupted.
+
+"Commander, it's... the Illusive Man."
+
+Shepard's stomach twisted into a knot as he filled with dread. Right then, he knew that the worst paranoia his mind could conjure up had just been validated. It was Cerberus. They were responsible for Tali's disappearance.
+
+"Transfer it to the comm room," he said as he stormed into the conference room.
+
+The call connected and a holographic projection emerged, but it wasn't the Illusive Man that Shepard saw. Instead, it was a type of surveillance camera footage within a small, elongated room with iron bars sectioning off the end of it, forming a compact, almost claustrophobic prison cell. There were no windows anywhere, and the walls were laden with unpainted concrete. The entire room was dim, with only one apparent light source in the middle of its ceiling. The prison cell at the end was particularly dark.
+
+Nothing happened for several seconds, but then came a dreadful sight that sickened Shepard as much as it enraged him. There was no audio, but Shepard saw Tali struggling as several men forced her through the room and into the cell at the end, slamming the door behind her. She immediately got up and grabbed the thick metal bars, yelling something at the men as they left, but nothing could be heard.
+
+The transmission ended, and into view came the Illusive Man. His synthetic, steely-blue eyes seemed particularly bright. Shepard had watched his beloved quarian soul mate struggle as she was thrown into a tiny cage. He wished he could attack the hologram and rip it apart. He hated everything about the man he saw before him: his expensive, designer clothing. His well-groomed hair. And especially that damned cigarette between his middle and index fingers.
+
+"What have you done with her, you damned son of a bitch?"
+
+The Illusive Man just took a slow, calm drag of his cigarette. He was in that position he loved to be in, where he held all the cards and had all the power.
+
+"Answer me!" Shepard shouted.
+
+The Illusive Man waited another short, tactical delay.
+
+"You don't have to worry," he finally said. "Tali'Zorah is unharmed, and will remain so, for the time being."
+
+That relieved some of Shepard's distress, but he was no less worried. "Why did you take her?"
+
+"I'm sure you have a lot of questions. Don't worry, I'll tell you everything. You're going to have a big decision ahead of you, so it's important that you have all the details."
+
+Shepard didn't know what he meant by that, but his mind didn't dwell on it. He just wanted to know how to get Tali back.
+
+"I had a small team on Zhu's Hope," the Illusive Man explained. "I placed them there right after the discovery of the Thorian, so that they could study its spores and their effects. We never learned much from them, but after nearly three years, they finally reported something of interest."
+
+The Illusive man continued. "They informed me that your ship was there, being resupplied. I couldn't believe my good fortune. I had no ships in the area that were capable of handling the Normandy, and I couldn't risk losing you again. So I alerted the Alliance. They could respond faster, and if they managed to capture your ship, then it's effectively the same as me capturing it. However, I knew that was unlikely. And so, I instructed the team there to find a way to gain some kind of leverage on you. Anything they could get. I'm very pleased with them. I never imagined that they would get something as good as your beloved quarian playmate."
+
+"Leverage? Leverage for what?"
+
+"The Normandy." The Illusive Man took another drag of his cigarette, calm as ever, as of what he had just said was of no concern.
+
+Shepard's face turned from a tense, impatient scowl to a look of confusion and puzzlement upon hearing the Illusive Man's answer.
+
+"Are you serious? The Normandy?"
+
+"I am always serious. Don't ever forget that."
+
+"No, you're not—you can't be. If you want to take the Normandy from me, you're either a complete and utter fool, or you're a joking." Shepard couldn't understand why the Illusive Man would go to such measures for the Normandy. The only reason for it seemed to be spite.
+
+"Why shouldn't I want the Normandy? It is mine. I paid for it. I built it. I own it. It was lent to you so you had a means of stopping the Collectors. I had even intended to let you keep it as long as we worked together to stop the Reaper threat. But you chose a different path, and now I want what's mine returned."
+
+"You surprise me," said Shepard. "There's a lot about you I don't like. But I never figured you to be the type to jeopardize something as important as stopping the Reapers, for the sake of petty revenge. For all your faults, I figured you at least had some integrity. I was wrong. You have none."
+
+"This is about stopping the Reapers." The Illusive Man was never one to let his emotional state be influenced by others, but having his integrity challenged was something he didn't stand for.
+
+"Then why!" Shepard shouted. "Why? Why go through these lengths to take the Normandy from me? Why steal Tali away from me, just to use her as some kind of bargaining chip? You spent billions bringing me back. You gave me a ship, a crew, equipment—all so I could fight the Reapers. I am the best hope that you or anyone has to unify the galaxy so we can stand up to them and stop them. For God's sake, I brought peace between the geth and the quarians! We're that much more ready for the Reapers, thanks to me and this ship. And now you want to take it away? Tell me, why?"
+
+The Illusive Man firmly struck his cigarette against his ash tray, putting it out.
+
+"Because I misjudged you," he said. His voice was no longer calm and collected, but cold and impatient. "I always knew you were idealistic and likely wouldn't stay with Cerberus, but I still believed that you could be counted on to make the right decisions. Smart decisions, like using the enemy's own weapons—their own technology—against them. Instead, you chose to destroy it.
+
+"During the second world war, when the Allied forces uncovered Nazi nuclear energy research, did they burn it out of fear? No, they used it. That Collector Base could have led to our Manhattan Project. It could have been what turned the tide in this war. It could have given us access to Reaper technology, and taught us how they work. How they communicate. How they think. That base could have been the key to unlocking the ability to control them! With that base, we had a potential resource that no other species had before us. We could have broken that cycle. The possibilities were limitless.
+
+"But you threw it all away out of fear. You think bringing peace between the quarians and geth means anything? That it will change anything? That's like believing that peace between some two warring Mayan villages could have made any difference in stopping the invading Conquistadores.
+
+"That is why I need the Normandy. It was built with some of the only available Reaper technology. Not just EDI, but the Reaper IFF that is integrated into its system. That IFF is key to sending salvage ships to gather whatever is left of the opportunity you squandered. Getting the Normandy back is my priority now. It is why I was the one who let the Council become aware of EDI and Legion's presence aboard the ship, which lead to your subsequent arrest. And it is also why I now have Tali'Zorah. If you want her back, you have seventy-two hours to return the ship to me."
+
+"You son of a bitch," Shepard said. "You were responsible for my arrest? Despite everything I've done to stop the Reapers? You really thought it was a good idea to have me sitting in a prison cell when the Reapers arrived?"
+
+Shepard remembered hearing from the crew that there were Cerberus members trying to steal the Normandy while it was impounded at the Citadel. It suddenly made sense.
+
+"I could have easily arranged your escape at any time, if the Reapers came and you were needed for the fight. You see, Shepard, fighting is all you're good for. You proved you have no other value beyond that. Certainly not when it comes to making tough decisions. Ultimately, you're nothing more than a good attack dog. You're set loose upon a target and you kill it. It's all you know, and nothing more can be expected from you. And what do you do with a dog when you don't need it? You keep it in a cage."
+
+The Illusive Man revealed something few had ever seen. It was almost non-existent, but it was there: a smile.
+
+"A dog, huh?" Shepard said. "You're going to see just what happens when you back a dog into a corner."
+
+"Seventy-two hours," The Illusive Man said. "Any longer, and I can't guarantee that she remains unharmed."
+
+The call ended, and the Illusive Man's holographic image disappeared. Shepard stood there, his face twisted with rage and hatred. He slammed his hand against the table of the conference room.
+
+"EDI, call the crew here. Now."
+
+Shepard stood in place with his hands now pressed against the table. His eyes were unblinking. The anger he experienced was rapidly dissipating, being replaced only with despair and concern for his loved one. There was nothing he wanted more than for Tali to be safe. The dark parts of his mind—the evil demons in the mind, that like to taunt one with worst thoughts imaginable—tried to conjure images of Tali suffering and being tortured, but Shepard consciously refused to allow any such images.
+
+The Illusive Man had left Shepard with two choices. He could either leave Tali to her fate and continue his work against the Reapers, or rescue her by giving up the Normandy, which would bring an end to his entire mission. Both options were unacceptable, and he was hoping that his crew would find a solution to this. A way out.
+
+The first person to arrive was Legion. The punctuality of the geth platform was never a surprise.
+
+"Have you discovered the whereabouts of Creator Tali'Zorah?" It asked.
+
+"Yes. I have." Shepard answered, not moving much from his defeated stance, his arms holding him up as he leaned on the table. "I'll fill you in when the others arrive."
+
+Minutes passed and more of the crew came in. Eventually they were all there and gathered around the conference table. Shepard had EDI replay the entire call he had had with the Illusive Man. He didn't want to have to explain what had happened.
+
+Miranda was the first to speak. "I feel I owe you an apology, Commander," she said. "I wasn't aware that Cerberus had a team on Zhu's Hope, but I should have guessed that the Thorian would have been an interest to the Illusive Man. Enough so that he would have kept a team there."
+
+"Nobody could have known." Shepard said. "All I'm interested in is getting Tali back. Without giving up the Normandy. That's why we're here. Suggestions?"
+
+"The answer is obvious," Garrus said. "We find out where Tali is being kept and go get her. Screw the Illusive Man's deal. We play by our own rules, not his."
+
+Shepard looked at Miranda. "Any idea where he might have taken her?"
+
+"No. I'm afraid not." Miranda answered.
+
+"Cerberus could have taken her to a hundred different places," added Jacob.
+
+"Shepard," EDI spoke up, "I have been analyzing the call you had with the Illusive Man. It turns out that the feed of Tali was broadcasted live, directly from its source. It was not pre-recorded."
+
+"Can you find its origin?" Shepard asked.
+
+"Yes. It is heavily encrypted and has been routed through numerous comm buoys in attempt to hide its point of origin, but I will be able to trace it back to its source. It will only be a short moment."
+
+"This is great news," Jacob said. "Having an AI on our side can be pretty sweet."
+
+"Now it's just a matter of time before we can get her back," Garrus said. "I almost feel sorry for the poor bastards they have guarding her."
+
+"No…" Miranda said. "This isn't right. It doesn't add up." Her words brought a quick pause to the elevating optimism in the room. "This is too easy. The Illusive Man wouldn't make a mistake like this. If he didn't want us to know her location, we wouldn't know."
+
+"We agree with Miranda," Legion said. "Cerberus is EDI's creator. They would know her capabilities. They would not have risked giving up Creator Tali'Zorah's location unless it granted them an advantage. It could be a trap."
+
+Shepard knew that what they said made sense. "Have you figured out where Tali is?" He asked EDI.
+
+There was a short delay as EDI finished up her calculations.
+
+"Yes," EDI said. "The feed originated from a Cord-Hislop network system. Shepard… this is surprising. She is on Earth. Within the Cord-Hislop Aerospace corporate headquarters."
+
+"What?" Shepard asked in surprise. "Earth? Why Earth?"
+
+Upon hearing EDI's revelation that Tali was on Earth, it all became clear to Miranda. She now understood why it had been so easy to locate Tali, despite the heavy encryption and apparent attempt to try and keep it a secret. Miranda had worked with the Illusive Man for too long. She knew exactly how he thought.
+
+"The Illusive Man wants us to try and rescue her," Miranda stated. "He's counting on us to attempt a rescue. He knows we would never willingly give up the Normandy. And he knows you would never abandon Tali without a fight. He wants us to try and rescue her. And he wants it on his terms."
+
+"But why take her to Earth?" Garrus asked.
+
+"Because that is the one place we have no hope of successfully rescuing her. If he had taken her to some Cerberus base, it would have been of little difficulty for us to assault the base and rescue her. But by being kept on an Earth city, in a corporate center in the middle of a metropolis, we not only have to deal with the Alliance defenses around the planet, but also with local law enforcement. Not to mention Cerberus' own security forces in the Cord-Hislop building. The Normandy wouldn't even be able to enter the Sol System undetected. Both Cerberus and the Alliance monitor every ship that passes through the Charon Relay."
+
+"I take it our stealth won't help?" Shepard asked.
+
+"No. Relay monitoring includes visual sensors."
+
+"What if we don't take the Normandy?" Shepard suggested. "We can take the shuttle, or maybe even book passage on some kind of commercial ship."
+
+"The shuttle won't work. As it is a military vehicle it would draw attention. And even if we took private, unregistered transportation to Earth, only the human team members could go. The alien crew would draw immediate attention on the surface. You also have to consider that this team would be completely cut off with no support, and a very high chance of either getting killed or captured."
+
+There was an uneasy quiet in the room. Miranda then said what many were now thinking. "Shepard, I… I truly am sorry, and I wish I didn't have to be the one to say this, but I don't see any way of rescuing her that doesn't put us at an unrealistic risk. If she were being kept anywhere else, but Earth is—"
+
+"I don't want to hear it!" Shepard snapped, "There is a way to get her back. And we will find it. We're not leaving her. We can't. Not with Cerberus." Images of the horrific monstrosities that Cerberus has done in the past flashed through Shepard's mind. "We are not leaving this room without a plan to get her back."
+
+"Shepard's right," Garrus said. "She's one of us, and this team is all about doing the impossible. We'll figure something out."
+
+"With all due respect, Commander," said Jacob. "I think Miranda is right. We just don't have any options. Think about it. Getting her back would mean slipping past the Alliance, local city authorities, and storming a skyscraper full of Cerberus security. And that's just to get to her. How the hell would we even get off the planet at that point with no Normandy support?"
+
+"Yeah well, I don't care what the Cheerleader thinks," Jack said. "A few of us can sneak in, and we're not going to be stopped by some Cerberus assholes or the local pigs."
+
+"I agree that we can do it," said Garrus, "But we need to find a way without killing local law enforcement. They're not involved in this."
+
+"Not this again," Miranda said. "I remember hearing the same thing when Shepard was held on the Presidium. Innocent people are going to die. Get over it. Don't make an impossible mission even more impossible."
+
+Arguments exchanged back and forth, rapidly escalating in intensity. It wasn't long before the discussion had exploded into a heated debate between all the crew members. Half of them placed all emphasis on loyalty to each other; good odds or bad, they weren't going to leave one of their own behind. They have accomplished so much—defied the odds so many times—how could they fail now?
+
+"She is one of us! We don't leave our people behind!"
+
+The other half were remorseful, and they truly did not want to abandon Tali, but felt the risk was too great. They weren't afraid for themselves; they were just as loyal as any of the others. However, they felt the highest priority was to prepare for the Reapers. What if Shepard and the other human team mates were killed on Earth? What would happen if the Normandy were captured in the attempt? What if the Normandy's loss and the failure of their mission led to the Reapers winning, and wiping out trillions of lives? All for the sake of one?
+
+"If we lose the Normandy, we lose our ability to gather allies and prepare! How can we fight the Reapers without the Normandy?"
+
+No answer felt right.
+
+Amidst the arguing and debating that raged within the conference room, there was one who now remained completely quiet. The man most affected by this stood there, staring blankly at the table. He listened to the arguments. They all contradicted each other, yet they each made sense in their own way. Occasionally someone would call his name. "Shepard." He'd look at them as they talked, but gave no acknowledgment before going back to blankly staring into oblivion. He just thought. He pondered deeply. His mind racing through all possibilities and outcomes. Hoping the right answer would come. Any answer. He needed something.
+
+One finally came.
+
+"She has a small scar."
+
+Shepard's words came out as a mumble, but they were enough to draw everyone's attention. Everyone trailed off from whatever they were saying, and looked at Shepard.
+
+"She has a small scar on her shoulder. Her left one. On the back." He didn't look at anyone as he talked. "I asked her once how she got it. She smiled at me and said it was the best thing that ever happened to her."
+
+Shepard looked at Garrus. A weary smile appeared on Shepard's face, as his thoughts formed before his words. "Do you remember Dr. Chloe? And how we learned about Tali through her? How Tali had been shot by Saren's men and went to Chloe for treatment?"
+
+Garrus responded with a single nod.
+
+"That scar on her shoulder was where she got hit."
+
+Shepard whispered quietly, "God I love her." His eyes grew glossy and moist.
+
+There was a period of silence before he continued. "I have been afraid of this moment since I first started getting feelings for her. Way back, before many of us here had ever even met each other. Back on the first Normandy. I never spoke of it. I never dwelled on it. I never wanted to think of it. But deep in my mind, I always feared that a day would come where I had to choose between our mission... and her.
+
+"Shamefully, I admit this: I was always afraid that I would do right thing and choose the mission, and not her. I feared that I would choose the lives of countless men, women, children... families, over her. I didn't want that. I wanted to not care about them and just choose her. I wanted to let the mission fail, just for her. I've been afraid to do the right thing. Fear of doing the right thing... that is the worst form of cowardice."
+
+Shepard went silent for a moment. His lips felt dry, and his throat ached. It was as if he had spoken for too long, with his mouth devoid of any moisture. He swallowed before continuing. His eyes were unsteady.
+
+"I've chosen to do the right thing. The mission takes priority over everything. We won't give Cerberus the ship back, and sending a rescue team just has too much of a chance to fail. Too many people... too much is riding on this ship and this team. We… we will not go after Tali."
+
+There was silence in the room after Shepard's decision was heard.
+
+"I'll be in my quarters," Shepard said. "I'd rather not be disturbed."
+
+Shepard uneasily turned around to head towards the door. He didn't make it half way before he heard someone speak.
+
+"I never thought this would happen." It was Garrus. "But I have lost my respect for you. I never thought you could turn your back on a team member, or your own family. You just did both."
+
+Shepard didn't turn around or respond. He continued walking.
+
+"She went back for you!" Garrus shouted. "You had given up on yourself when you were arrested. But she didn't give up on you. Look at you, giving up again! You're not the same man I used to know."
+
+Garrus continued, "She rescued you when it were captured! She risked everything! Did you forget that?"
+
+Shepard stopped once more.
+
+"No, Garrus. I didn't forget that," he said. "Believe me. I didn't forget."
+
+The door closed behind him as he walked away.
+
+. . .
+
+Some time passed since Shepard had made his decision. It might have been an hour. Maybe two. No one felt like keeping track of time. A quiet, somber feel permeated throughout the ship. No one discussed what had happened, or whether or not Shepard made the right call. Even those who were not in favor of a rescue found themselves saddened by the final decision to leave Tali with Cerberus. They may have agreed with Shepard's choice, but it still didn't change the fact that a great tragedy had occurred. One of their own was now doomed to torture and death.
+
+Of all crew members, there was one who felt most betrayed by the choice Shepard had made. He had observed his leader, his best friend, and his brother—all in one—give up on who was like a sister to him.
+
+Garrus stood in the main battery of the ship, keeping his mind off things by calibrating the ship's Thanax cannons. In the past he had gotten teased by the others for how much time he spent on this task. Because of that, and the fact that the powerful gun was as well calibrated as it could be, it had been a while since he had spent time in this dark, red-lit part of the ship. But now he just needed somewhere quiet to be, where he could keep his mind occupied.
+
+His concentration, if there even really was any, was broken as the doors opened, temporarily flooding the room with white light which left as quickly as it came as the doors sealed back up. Garrus heard footsteps behind him, but he didn't turn around. He didn't need to. He knew who it was.
+
+"I don't suppose you've come here to tell me you changed your mind," Garrus said, his hands still working at the console.
+
+"No, Garrus," Shepard said. "I haven't changed my mind."
+
+Garrus stopped, putting his hands on the console's sides. "Yeah. I didn't think so."
+
+Garrus turned around, looking Shepard in the eyes. Shepard just stared back. A seemingly long time passed before one of them spoke.
+
+"I'm sorry about Tali," Garrus finally said. "I know you loved her."
+
+"I still do. She's not gone yet."
+
+"She will be."
+
+Shepard didn't say anything; his only response was to briefly look away. Garrus regretted saying what he did.
+
+"I understand your decision," Garrus admitted. "I understand it. Part of me even knows that it's probably the right thing. It's the same part that tells me it's okay to let thousands die, if it means millions live. It's that ruthless calculus of war."
+
+Garrus continued, "I guess what really has me shook up, is that I have lost faith."
+
+"In me?"
+
+"In us," Garrus clarified. "I was continuously amazed by what we could do. We pulled off some crazy things. Things that were by all intents and purposes impossible, like finding Ilos and destroying the Collector home world. I know how much more powerful the Reapers are than us. But for the longest time, it didn't matter. I had this type of blind faith that you would still lead us to victory. It felt like there's nothing we couldn't do; like nothing in this whole universe could get in our way. But today we were beaten by some scumbag and his cowardly group of humans, hiding in the shadows. If they beat us so easily... we have no hope to stop the Reapers. We never really had any, did we?"
+
+Shepard stepped closer and placed his hand on Garrus' shoulder.
+
+"There was never much hope," Shepard said. "But there was always some. And there still is. Even if it's nothing but a tiny glimmer surrounded by darkness. It's still something. Sometimes that's enough."
+
+"Not this time," Garrus said, turning back away.
+
+Shepard looked at him and said, "I haven't told you this, but you're a great source of hope for me, Garrus. I know that if anything ever happened to me, you could still lead this group. You're every bit as good a leader and a warrior as me. Maybe even better. All you have ever lacked is some confidence in yourself. Real confidence, not those little jokes you like to say about yourself.
+
+"I say this with all sincerity: I'm not very worried about my own life so long as you're here. You proved you've got what it takes to lead this team if something happens to me. If I die before the Reapers are stopped, that will be the thought that eases my death. That Garrus can carry on this mission. He can lead the team. He can stop the Reapers."
+
+Garrus turned back around, but didn't know what to say.
+
+"Hey, what's the matter with you, Shepard?" He finally said. "Don't talk like that. You sound like you're expecting to die or something."
+
+"Maybe I am. Who even knows what the future holds," Shepard said. "I guess with what's happened with Tali... things don't look so bright anymore." There was an interval of time before Shepard continued. "I'm going to go. I need to be by myself for a while."
+
+Garrus responded with a nod. Just as Shepard was about to leave, Garrus said, "I'm sorry about what I yelled earlier. I was upset."
+
+"No Garrus," Shepard said, "You were completely right."
+
+Shepard left the room and proceeded to take the elevator up to his quarters. Now with his privacy, sitting on his bed, he accessed his omni-tool to pull up that holo he had taken of himself with Tali, what felt like a very long time ago. In the holo, both of their cheeks pressed together, and they smiled blissfully at the camera. The image had been taken back at an easier, happier time... somewhere between Shepard's reincarnation and Tali's exile. Things were so much simpler back then. Cerberus was still an ally and the Reapers seemed far away.
+
+Shepard slowly brought his fingers up and ever so gently caressed the holographic image of Tali's face. He could almost imagine the warm feel of her soft skin. That skin of hers... it was either from years of living in a sterile suit, or perhaps just her natural quarian physiology, but her skin was the softest thing Shepard had ever felt. Nothing ever came close.
+
+He whispered quietly, "Don't worry my love. You're going to be okay."
+
+He turned off the holo and stood up, calling out for EDI.
+
+"Yes Shepard?" She responded.
+
+"I'm going to need your help."

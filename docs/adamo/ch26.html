@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We&#x27;re a Team</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch25.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+                <option value="ch25.html">It&#x27;s Been a Long Journey</option>
+                <option value="ch26.html" selected>We&#x27;re a Team</option>
+                <option value="ch27.html">Ah Yes, Reapers</option>
+                <option value="ch28.html">I Deserve Better Than This</option>
+                <option value="ch29.html">So What&#x27;s the Next Step?</option>
+                <option value="ch30.html">I Can&#x27;t Believe That Worked.</option>
+                <option value="ch31.html">Home</option>
+                <option value="ch32.html">They Had Old Souls</option>
+                <option value="ch33.html">Are You Insane?</option>
+                <option value="ch34.html">I Can Bludgeon Pretty Hard</option>
+                <option value="ch35.html">Epilogue</option>
+            </select>
+            <a href="ch27.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">We&#x27;re a Team</h1>
+    <div class="chapter-content">
+        <p>&quot;Hey Commander, we&#x27;re getting a call from the Illusive Man.&quot; Joker said over the Normandy&#x27;s communicator. &quot;Should I even bother patching it through?&quot;</p>
+        <p>&quot;Go ahead, Joker,&quot; Shepard answered. &quot;I&#x27;m curious to see just how pissed he is.&quot;</p>
+        <p>Shepard proceeded toward the Normandy&#x27;s communications room. Like much of the rest of the ship, it was heavily damaged, with multiple wires and tubes hanging from the ceiling and occasional electrical sparks popping into existence. The damage present in the room was yet another testament of the severity and danger of the mission that had ended only a short moment ago.</p>
+        <p>After pushing a collapsed metal beam out of her way, Shepard approached the communications control panel. The already dim lighting of the room faded to darkness as the table in the center descended, and Shepard&#x27;s body was scanned to emit a holographic projection to the Illusive Man. Shepard saw Cerberus&#x27; leader appear before her, sitting at his glass desk with a cigarette in hand, which was no surprise.</p>
+        <p>What was unusual, however, was the different vista that appeared behind him this time. The typical star that Shepard had seen before was now gone. In its place was what appeared to be a very blue star, likely a type of white dwarf.</p>
+        <p>Hm, he must have moved his station, Shepard thought to herself, noting the different star. How did he move a space station to another star in such a short period of—</p>
+        <p>&quot;Shepard,&quot; the Illusive Man said curtly, &quot;you&#x27;re making a habit of costing me more than time and money.&quot;</p>
+        <p>Here we go. &quot;Too many lives were lost at that base. I&#x27;m not sorry it&#x27;s gone.&quot;</p>
+        <p>&quot;The first of many lives. The technology from that base could have secured human dominance in the galaxy, against the Reapers and beyond.&quot;</p>
+        <p>&quot;Human dominance, or just Cerberus?&quot;</p>
+        <p>&quot;Strength for Cerberus is strength for every human. Cerberus is humanity. I should have known you&#x27;d choke on the hard decisions. Too idealistic from the start.&quot;</p>
+        <p>&quot;I&#x27;m not looking for your approval,&quot; Shepard responded. &quot;From now on, I&#x27;m doing things my way, whether you agree with me or not.&quot;</p>
+        <p>&quot;Don&#x27;t turn your back on me, Shepard. I made you; I brought you back from the dead!&quot; the Illusive Man said as he stood up from his desk, noticeably worked up.</p>
+        <p>&quot;And I did what you wanted; what you brought me back for. I stopped the Collectors, and I&#x27;m going to stop the Reapers. My way. I&#x27;m done with you, and with Cerberus.&quot;</p>
+        <p>The Illusive Man sat back down and took a drag of his cigarette so as to calm himself. He exhaled and said, &quot;If that&#x27;s how you feel, Shepard, that&#x27;s fine. I&#x27;ll send you coordinates where you can return my ship.&quot;</p>
+        <p>Shepard laughed and said, &quot;I&#x27;m sorry, I&#x27;m having trouble hearing you. I&#x27;m getting a lot of bullshit on this line.&quot;</p>
+        <p>&quot;Don&#x27;t try my patience. That ship is my property. Like I&#x27;ve said from the start, you&#x27;re free to go your own way any time you wish. But that doesn&#x27;t mean you can take my property with you.&quot;</p>
+        <p>&quot;Wow, you&#x27;re serious, aren&#x27;t you? All that talk about the importance of stopping the Reapers, and you want to take away my best tool to fight them? And don&#x27;t give me that garbage about it being your property. I know this has nothing to do with money—you could afford to build ten more Normandys if you wanted. What&#x27;s the real reason you want it back?&quot;</p>
+        <p>&quot;That ship is unique.&quot;</p>
+        <p>Why, because of EDI? Why would he care so much about her? The only other thing unique to this ship is the— &quot;I get it,&quot; Shepard said. &quot;You want the Normandy for the Reaper IFF that&#x27;s now integrated into its systems. Why, so you can send teams through the Omega-4 relay and attempt to salvage that base&#x27;s remains? Forget it. Harbinger is coming and he won&#x27;t be alone—I need this ship to stop him.&quot;</p>
+        <p>The Illusive Man didn&#x27;t respond. He just stared intensely at Shepard with his steely-blue, synthetic eyes. &quot;Joker, lose this channel,&quot; Shepard said as she turned around and walked away. The holographic display disappeared a second later, and the lights came back on.</p>
+        <p>Shepard stepped out of the communications room with a small, satisfied smile. She felt happy, having told off the Illusive man and finally broken ties with Cerberus. She felt free.</p>
+        <p>&quot;EDI,&quot; she said out loud, &quot;tell everybody to assemble at the mess hall. I want to say a few things.&quot;</p>
+        <p>&quot;Very well, Shepard,&quot; EDI responded.</p>
+        <p>Overhead, Shepard heard EDI&#x27;s ship-wide announcement as she walked through the armory. She stepped into the CIC, and walked toward the elevator. Despite the crew having been rescued a short while ago, the CIC was empty. EDI was still handling the crew&#x27;s responsibilities, and Shepard knew most of them were already in the lower decks, either recovering from their traumatic ordeal aboard the Collector Base, or helping clear some of the debris scattered throughout the damaged ship.</p>
+        <p>She called the elevator, but there was a noticeable wait before it arrived. When the door opened, she saw Tali inside. She was coming down from their quarters on the top deck.</p>
+        <p>&quot;I heard the announcement,&quot; she said as Shepard stepped inside. &quot;What&#x27;s up?&quot;</p>
+        <p>&quot;There&#x27;s just some things I want to say to the team.&quot; Shepard answered. &quot;I want to talk to them in person.&quot;</p>
+        <p>As the door closed, Shepard noticed Tali held her right wrist with her left hand, and was rubbing it gently. &quot;Is something wrong with your wrist, Tali?&quot; she asked.</p>
+        <p>&quot;Yes there is, and it&#x27;s all your fault,&quot; Tali answered in teasing way. &quot;It&#x27;s completely bruised. If you had squeezed any harder when you grabbed me during that fall, you probably would have broken it.&quot;</p>
+        <p>The door opened and they stepped out into the crew deck as Shepard responded. &quot;Tali… seeing you sliding down that platform was the scariest thing I saw in that entire base.&quot;</p>
+        <p>Tali felt a little disappointed that she responded to her obvious tease with a serious response, but she understood that Shepard probably didn&#x27;t want to make light of how she had almost died. Shepard must have felt the same way as she did, when she saw Shepard nearly fall off the Normandy&#x27;s airlock. She didn&#x27;t say anything.</p>
+        <p>As they walked to the mess area, Shepard asked, &quot;How are you feeling, by the way?&quot; She referred to her health in regards to their intimate experience together, before going through the Omega-4 relay. Hours had passed since then, and a reaction would be noticeable by now.</p>
+        <p>&quot;A little sick,&quot; she replied, &quot;but I&#x27;m okay. I&#x27;m well enough to help out around the ship.&quot;</p>
+        <p>At the mess area there were already several members of the crew as Shepard and Tali approached. They waited a few minutes longer as the others arrived, gathering around them.</p>
+        <p>Once everyone was there, Shepard finally started to talk. &quot;I called you all together because there&#x27;s a few things I need to say.&quot;</p>
+        <p>She continued, &quot;First of all, I want to tell you that I&#x27;m extremely proud of all of you. Everyone here did their job admirably. No one else in the galaxy could have pulled off what we did. We&#x27;ve been a team since we started on this mission to stop the Collectors, and today we succeeded thanks to our teamwork. Because of us, the Reapers have been set back once again. After everything we&#x27;ve accomplished today, I&#x27;m now more confident than ever that we&#x27;ll succeed in stopping them.&quot;</p>
+        <p>Shepard paused a moment. &quot;Unfortunately, however, our mission today wasn&#x27;t without some loss. As all of you already know, Zaeed Massani didn&#x27;t make it. He was injured during our battle with the human Reaper, and during our escape he chose to stay behind and hold off the Collectors that were chasing us, so that I could get away. He sacrificed himself for me, and I will never forget that.</p>
+        <p>&quot;Zaeed and I never really saw eye to eye on a lot of things. Back on that refinery on Zorya, I thought he was going to going to completely quit on us when Vido got away, due to my decision to focus on saving the workers. We settled things, but I know that it always bothered him that Vido escaped.&quot;</p>
+        <p>Shepard then briefly chuckled and said, &quot;And there was also Zaeed&#x27;s obsession with Jessie, his old rifle, which always seemed silly to me. But, I have to admit; after having to leave my favorite weapon behind on the Collector Base, I think I can relate to how he felt.&quot;</p>
+        <p>There was a period of silence before Shepard continued speaking. She wasn&#x27;t sure what else to say, and decided to move on. &quot;He&#x27;ll be missed, but he&#x27;ll always be remembered,&quot; she said, and after a reflective pause, changed the subject.</p>
+        <p>She continued, &quot;The main reason I called you all here, is to let you know that I have broken ties with Cerberus. Back on the Collector Base, I had the choice of either destroying the base or keeping it; I chose to destroy it. I know some of you agree with my decision, and some of you don&#x27;t. It was ultimately my call, and I believe I did the right thing.</p>
+        <p>&quot;However, the Illusive Man disagrees, and during my recent talk with him, I decided to finally break all affiliation with him and his group. I&#x27;m telling you this, because I know many of you are members of Cerberus, and it&#x27;s possible not all of you are interested in leaving them.</p>
+        <p>&quot;We are currently on our way to the Citadel for repairs, and also because I intend to contact the Council, hoping that all the data and information we recorded from the Collector Base is enough to convince them that the Reapers are real. When we arrive at the Citadel, if any of you wish to leave my command and rejoin Cerberus, you will be free to do so. The same goes for any members of the team that were recruited to stop the Collectors; you all have the option to leave. But I sincerely hope none of you do. I urge you all to stay, and keep fighting.&quot;</p>
+        <p>There was another moment of silence after Shepard&#x27;s words. This time, it was Mess Sergeant Rupert Gardner who broke the quiet. &quot;Commander, when we were all trapped inside those pod things back with the Collectors, it was you who came for us, not the Illusive Man. I know I can&#x27;t speak for everyone here, but I&#x27;m sticking with you. I ain&#x27;t leaving.&quot;</p>
+        <p>Throughout the crew emerged various positive murmurs and words of agreement</p>
+        <p>&quot;Kenneth and I are staying too,&quot; Gabriella Daniels said, loud enough to be heard over the others.</p>
+        <p>&quot;Aye,&quot; Kenneth agreed, &quot;this ship would fall apart without us. Especially since you never let Tali get any work done in engineering…&quot;</p>
+        <p>Laughter erupted from the crewmembers, along with a few occasional whistles and hollers. Shepard laughed as well, and placed her arm around Tali&#x27;s waist, who had been standing close to her. She also giggled quietly, although she felt embarrassed from the sudden attention, and blushed under her mask.</p>
+        <p>&quot;I don&#x27;t think you&#x27;ll need to worry about losing any of us, Commander,&quot; Doctor Chakwas said, with a distinctly warm smile on her mature, slightly wrinkled face.</p>
+        <p>&quot;I hope so,&quot; Shepard responded. &quot;I&#x27;ve grown attached to all of you, and I want all of you to keep helping win against the Reapers.&quot;</p>
+        <p>After her words, the noise from the rest of the team died down. Shepard then said, &quot;Well, that&#x27;s mostly all I wanted to say. You can all go back to—you know what, forget about your duties; forget about the repairs and clearing the debris. Let&#x27;s worry about that when reach the Citadel. Our mission was a success; this is a time for celebration. Come on, let&#x27;s serve some drinks and food, and enjoy ourselves. What do you all say?&quot;</p>
+        <p>The crowd cheered in agreement. &quot;Way ahead of you, Commander!&quot; Gardner said as he walked toward his cooking area. &quot;I&#x27;ll get some food going right away.&quot;</p>
+        <p>&quot;Great idea, Shepard,&quot; Garrus said, and then turned to Jacob. &quot;Hey Jacob, help me bring some drinks,&quot; Jacob nodded in agreement, and the two went walking toward the portside observation deck to bring drinks from the bar.</p>
+        <p>Shepard then called out, &quot;EDI, why don&#x27;t you play some music?&quot;</p>
+        <p>&quot;Very well, Shepard,&quot; she responded. A second later, from the overhead speaker system was heard:</p>
+        <p>&quot;Daisy, Daisy, give me your answer, do,</p>
+        <p>I&#x27;m half crazy all for the love of you…&quot;</p>
+        <p>Complete silence filled the room, and everyone stood still, staring blankly at the ceiling.</p>
+        <p>&quot;That was a joke,&quot; EDI said.</p>
+        <p>&quot;That&#x27;s not funny, EDI!&quot; Joker yelled. &quot;Not funny, AT ALL!&quot;</p>
+        <p>. . .</p>
+        <p>Shepard sat quietly at the couch in her cabin, leaning forward with a glass of wine in her hand. Only about two hours had passed since the celebration started. Although it was still in full swing, and she was actually the one who had initiated it, Shepard left the group early so as to have some peace and tranquility.</p>
+        <p>It wasn&#x27;t uncommon for her to feel somewhat tired after missions, and the mission earlier on the Collector homeworld had been one of the most exhausting ones of her life, both mentally and physically. During the celebration, she had been relatively inactive. Aside from dancing with Tali for a while, she had spent much of it just sitting at one of the tables, sipping her drink, calmly observing the others as she relaxed, deep in thought, reflecting over recent events. Zaeed&#x27;s loss, the damage the ship had suffered, parting from Cerberus, and whatever the future may hold, were all on her mind.</p>
+        <p>She took a sip of her wine, and placed the glass on the table in front of her. A short while later, the door to the cabin opened, and she saw Tali approach. She smiled to herself, and looked forward to hearing her voice, which always had the seemingly miraculous ability to bring her peace and happiness.</p>
+        <p>&quot;Is everything okay?&quot; Tali asked as she approached. &quot;You seemed a little distant during the get-together; you left in the middle of it.&quot;</p>
+        <p>Tali had actually enjoyed the celebration a lot. Seeing the whole crew together, socializing with one another, was something that appealed to her. Being among a crowd of people that had a real sense of family was very reminiscent to the best parts of her upbringing on the flotilla.</p>
+        <p>&quot;I&#x27;m alright, sweetie,&quot; Shepard answered with a light smile. &quot;I just feel a little drained after everything that happened today.&quot;</p>
+        <p>Tali sat down next to her and leaned in close, placing her hands on her shoulders. She began to rub them gently. &quot;Baby I didn&#x27;t know you were tired,&quot; she said in a sweet voice. &quot;I wouldn&#x27;t have made you dance with me if I knew.&quot;</p>
+        <p>&quot;Don&#x27;t be silly, dancing with you was the most fun I had since… well, since right before our mission,&quot; she said with a smirk, referring to their earlier intimacy, and Tali giggled in response. &quot;Besides, I&#x27;m not really physically tired. It&#x27;s just some missions are a little taxing on me, mentally, and this one was really took its toll. I have to pull my weight with the combat like everybody else, but I also need to lead and give instructions; I have to pay attention to so many things. Not to mention everything we saw on that base. I just felt like I needed some peace.</p>
+        <p>&quot;I&#x27;m also feeling a little worried about what will happen when we reach the Citadel. It&#x27;s hard to imagine the Council ignoring us this time, after all the data we gathered from the Collectors. But sometimes it just feels so hopeless with them.&quot;</p>
+        <p>Tali stopped rubbing her shoulders, and scooted in closely, leaning against her with her arm around her waist. &quot;Don&#x27;t worry about that now,&quot; she said. &quot;Like you said earlier, this moment should be for celebration—for happiness. For you especially; you&#x27;ve worked so hard to stop the Collectors, and we&#x27;ve finally done it.&quot;</p>
+        <p>Shepard smiled from Tali&#x27;s comforting words, finding herself feeling a bit better already. She grabbed her glass of wine, and took a final gulp, finishing it. As she was about to put it down, she stopped, looked at the glass for a second, and then turned to look at Tali.</p>
+        <p>&quot;I just realized something,&quot; she said, &quot;I have never seen you drink.&quot;</p>
+        <p>Tali laughed and said, &quot;No, I guess you haven&#x27;t—I&#x27;ve never drank anything alcoholic before. Such drinks were rare on the flotilla, and drinking anything besides water requires taking my mask off.&quot;</p>
+        <p>Shepard poured a small amount of wine in the glass, and said, &quot;You can take your mask off in here. Go ahead, give it a try.&quot; While not all alcoholic drinks were universally safe for both levo and dextro chirality races, most of them were, including the wine Shepard was now offering Tali.</p>
+        <p>&quot;I really shouldn&#x27;t take my mask off right now. It&#x27;s only been a few hours since we… you know.&quot;</p>
+        <p>&quot;Tali, you&#x27;re not fooling me,&quot; Shepard said. &quot;I&#x27;ve seen you take your mask off in here while sick many times before. Come on, give it a taste.&quot;</p>
+        <p>&quot;And how do I know you&#x27;re not just trying to get me drunk?&quot; Tali asked in teasing, playful way. &quot;I&#x27;ve seen vids where women get women they&#x27;re interested in drunk…&quot;</p>
+        <p>Shepard laughed quietly and leaned in close to her, reaching up for her mask and removing it. They shared a soft kiss right after. &quot;As cute as you would be a little drunk, I know that&#x27;s hardly necessary for us to have fun together…&quot; she said with a subtle smirk, and Tali instinctively bit her lower lip, attempting to conceal her smile. &quot;And besides, you&#x27;re not going to get drunk from a quarter glass of wine,&quot; she added, and held up the glass for her to take.</p>
+        <p>She took it gingerly, and brought it to her lips, taking a small sip. She noticed it left a somewhat sour and bitter taste in the back of her tongue as she swallowed it. It was interesting to her that while the wine was fairly cool, as soon as it reached her stomach, it felt very warm. She was also surprised at how quickly she felt some slight lightheadedness; it was almost instant.</p>
+        <p>She took another sip, and placed the glass down on the table in front of them. She said, &quot;Honestly… I don&#x27;t see the appeal. I think I&#x27;ll stick with water.&quot;</p>
+        <p>Shepard chuckled and said, &quot;Well, this is pinot noir, so I&#x27;m not surprised you don&#x27;t like it. I&#x27;m not even sure why I was drinking it.&quot;</p>
+        <p>After a brief moment, Tali got up and gently pushed down on Shepard&#x27;s shoulders, encouraging her to lie down on her back. She then crawled on top of her, and began to run her hand through her hair as she hovered right above her. With her face very close to hers, she said, &quot;I might as well have something I do like, before putting my mask back on…&quot;</p>
+        <p>Tali closed her eyes and leaned in, letting her lips make contact with Shepard&#x27;s, for a long and enjoyable kiss.</p>
+    </div>
+</body>
+</html>

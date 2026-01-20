@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Can Bludgeon Pretty Hard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch33.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">A Friend</option>
+                <option value="ch2.html">How Are You Doing?</option>
+                <option value="ch3.html">They&#x27;re On Our Side</option>
+                <option value="ch4.html">It&#x27;s Too Quiet to Sleep?</option>
+                <option value="ch5.html">Glad You&#x27;re Feeling Better</option>
+                <option value="ch6.html">Then You&#x27;ll Leave Us</option>
+                <option value="ch7.html">Saren Can&#x27;t Hide From Us</option>
+                <option value="ch8.html">I&#x27;m Interested</option>
+                <option value="ch9.html">The Mission Can&#x27;t Fail!</option>
+                <option value="ch10.html">I&#x27;ll Wait Until You&#x27;re Ready</option>
+                <option value="ch11.html">There Must be Options</option>
+                <option value="ch12.html">I Have to Go</option>
+                <option value="ch13.html">I Wish Shepard Were Here</option>
+                <option value="ch14.html">Two Years?</option>
+                <option value="ch15.html">It&#x27;s Me</option>
+                <option value="ch16.html">Can You Join Me Now?</option>
+                <option value="ch17.html">I Want to be With You</option>
+                <option value="ch18.html">I&#x27;ll Help</option>
+                <option value="ch19.html">What Are the Charges?</option>
+                <option value="ch20.html">You Deserved Better</option>
+                <option value="ch21.html">I Got Better, Shepard. I Got You</option>
+                <option value="ch22.html">I&#x27;ll Look Into This</option>
+                <option value="ch23.html">I&#x27;m Reactivating the Geth</option>
+                <option value="ch24.html">Virus Effects</option>
+                <option value="ch25.html">It&#x27;s Been a Long Journey</option>
+                <option value="ch26.html">We&#x27;re a Team</option>
+                <option value="ch27.html">Ah Yes, Reapers</option>
+                <option value="ch28.html">I Deserve Better Than This</option>
+                <option value="ch29.html">So What&#x27;s the Next Step?</option>
+                <option value="ch30.html">I Can&#x27;t Believe That Worked.</option>
+                <option value="ch31.html">Home</option>
+                <option value="ch32.html">They Had Old Souls</option>
+                <option value="ch33.html">Are You Insane?</option>
+                <option value="ch34.html" selected>I Can Bludgeon Pretty Hard</option>
+                <option value="ch35.html">Epilogue</option>
+            </select>
+            <a href="ch35.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">I Can Bludgeon Pretty Hard</h1>
+    <div class="chapter-content">
+        <p>&quot;Huldo, sir, there is a human here to see you.&quot;</p>
+        <p>&quot;Ah yes. The one that contacted me. Send her in.&quot;</p>
+        <p>A very old krogan sat at his desk, in a dark office. His ancient hide covered in wrinkles and faded scars. Patiently and unmoving, he waited with his hands steepled on his desk. It wasn&#x27;t long before the door to his office opened, and a human female appeared. She wore unassuming, plain looking clothes. A dark visor covered her eyes, and she wore a cap on her head. She carried a duffle bag that was heavy, as revealed by the tension of the strap and material. The human approached and placed it on the floor with care.</p>
+        <p>&quot;Nice to meet you, Ms…&quot; Huldo said as he stood up. &quot;You know, I don&#x27;t remember getting your name.&quot;</p>
+        <p>&quot;Jenkins,&quot; the human responded. She extended her hand in offer of a handshake.</p>
+        <p>Huldo was intrigued. He hadn&#x27;t met many humans so comfortable around krogan before. He took the human up on the offer, and shook her hand.</p>
+        <p>&quot;So Ms. Jenkins, what kind of cargo is to be transported?&quot;</p>
+        <p>&quot;Just myself. And my bag here.&quot;</p>
+        <p>The krogan smiled. &quot;I see. One of those jobs. I&#x27;m sure you know, they cost extra.&quot;</p>
+        <p>The human also smiled. &quot;I know.&quot;</p>
+        <p>&quot;And what is your destination?&quot;</p>
+        <p>&quot;Earth. North American continent. &quot;</p>
+        <p>&quot;Earth? Interesting…&quot; The krogan said. &quot;Not many people need to be smuggled to their own worlds.&quot; He chuckled. The sound waves of his deep krogan voice, accentuated by his old age, could be felt in the air.</p>
+        <p>&quot;No?&quot; said the human. &quot;That seems surprising.&quot;</p>
+        <p>&quot;Most people that employ my services are in some kind of trouble,&quot; Huldo answered. &quot;Sometimes it&#x27;s legal trouble. Other times they pissed off the wrong people. Either way, their home worlds are safe. They can go to their embassies and safely be transported. But needing to be smuggled onto their home world? That&#x27;s something unique. I don&#x27;t want to imagine what kind of trouble you&#x27;re in.&quot; He chuckled again.</p>
+        <p>&quot;Can you do it?&quot;</p>
+        <p>&quot;Certainly,&quot; Huldo answered. &quot;You wouldn&#x27;t be here if I couldn&#x27;t. I can tap into a very large, very complex trade network. It&#x27;s just a matter of tweaking the timing. You&#x27;ll be able to tag along on one of my shipments that happen to be heading that way. They&#x27;ll make a detour to the spaceport closest to your desired location.&quot;</p>
+        <p>&quot;Good,&quot; the human said. &quot;Is it unregistered transport? I&#x27;d like to avoid authorities along the way.&quot;</p>
+        <p>&quot;Of course you do. That&#x27;s why you came to me,&quot; Huldo said, seemingly annoyed by the naiveté of the human. &quot;And it&#x27;s not unregistered transport. Unregistered transport is the fastest way to get found out. Any ship I put you on is going to be very registered. Completely legitimate. No one will look twice at it. That&#x27;s how you avoid authorities.&quot;</p>
+        <p>&quot;Glad to hear it,&quot; the human answered.</p>
+        <p>&quot;There are two catches, however.&quot; Huldo said. &quot;I don&#x27;t know how long you plan on being there. I don&#x27;t care. But once on the surface, any identity scanners will figure out who you are. Like the ones often found at spaceports. I can help with that. Got a salarian that bioengineers a chemical that gives off a false DNA signature. Fools any DNA scanners, even the ones on the Citadel. Won&#x27;t last forever, but should keep you out of immediate trouble. That will cost extra.&quot;</p>
+        <p>&quot;And what was the other catch?&quot;</p>
+        <p>&quot;If you need to get off the planet for any reason, you&#x27;re on your own. One way trip.&quot;</p>
+        <p>&quot;Can your man wait at the spaceport for a few hours? I don&#x27;t plan on being there long.&quot;</p>
+        <p>The krogan squinted his eyes. &quot;There&#x27;s too much risk in that. I can arrange transport off the planet at a future time with another shipment, but not the same one.&quot;</p>
+        <p>&quot;I can&#x27;t wait that long,&quot; the human said. &quot;I&#x27;ll have to find another way off the planet.&quot;</p>
+        <p>&quot;Yeah, and I wish you the best with that,&quot; Huldo said. He made no effort to hide that he really didn&#x27;t care. &quot;Well, Ms. Jenkins… if these are all the services you&#x27;ll be needing, the total will be 55,000 credits. Up front.&quot;</p>
+        <p>The human stood up and offered her hand again. &quot;We have a deal.&quot;</p>
+        <p>Huldo stood up and shook it once more. &quot;Let&#x27;s go prepare to get you on your way.&quot; He took a moment to stare at the human, briefly examining her. He said, &quot;You know, I find myself curious about your request. Just why would a human need to sneak to Earth?&quot;</p>
+        <p>&quot;Do you make it a business to ask your clients about their private lives?&quot;</p>
+        <p>&quot;No. Especially not with what they pay,&quot; Huldo answered and laughed. &quot;Doesn&#x27;t mean I don&#x27;t get curious from time to time.&quot;</p>
+        <p>The human smirked. &quot;I guess there&#x27;s no harm in telling you.&quot; She leaned in, and quietly said, &quot;Have you heard of Cerberus?&quot;</p>
+        <p>&quot;Yeah.&quot;</p>
+        <p>&quot;Well, you see… they kidnapped my fiancé, so I need to sneak to Earth to get her back, kill everyone that gets in my way, blow up their secret headquarters. Maybe kill their boss if I run into him.&quot;</p>
+        <p>There was a period of silence as the krogan stared at the human, who just stared back with a small, barely noticeable smile. Huldo then burst into loud laughter.</p>
+        <p>&quot;I like you, human! You have a sense of humor. Everyone that comes to me is always so serious. Bah, fine! Keep your secret. I don&#x27;t care. I get paid regardless.&quot;</p>
+        <p>. . .</p>
+        <p>&quot;Miranda, Shepard&#x27;s gone!&quot;</p>
+        <p>Miranda looked up from her private terminal. She was sitting in her quarters when Garrus stormed in. &quot;Gone?&quot; Miranda asked. &quot;What are you talking about?&quot;</p>
+        <p>&quot;What it sounds like. She&#x27;s nowhere on the ship, and the shuttle is gone.&quot;</p>
+        <p>Miranda stood up and said, &quot;EDI, locate Shepard.&quot;</p>
+        <p>&quot;You don&#x27;t think I tried that already?&quot; Garrus said.</p>
+        <p>EDI responded, &quot;She is not on the ship.&quot;</p>
+        <p>&quot;Damn it,&quot; Miranda said. It was immediately obvious to her why Shepard was gone. &quot;She&#x27;s going to get herself killed. EDI, locate the shuttle and plot a course. We should still have time before she reaches the Sol System.&quot;</p>
+        <p>&quot;I am sorry, but I have been instructed by Shepard that we are not to go after her without her explicit command.&quot;</p>
+        <p>&quot;You knew she left?&quot;</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>&quot;Don&#x27;t you think it would have been a good idea to let us know?&quot;</p>
+        <p>&quot;Shepard instructed me to keep this private until it inevitably got discovered by the crew.&quot;</p>
+        <p>Miranda shook her head and exhaled with frustration. &quot;In Shepard&#x27;s absence and as second-in-command, I order you to override her instructions. Plot a course to her.&quot;</p>
+        <p>&quot;I am sorry, but Shepard is still in command. I am able to directly communicate with her and interface with her omni-tool by way of quantum entanglement communication. I have explicit instructions not to let any of the crew interfere with her mission.&quot;</p>
+        <p>Garrus then asked, &quot;Is she heading to Earth in that shuttle? Wouldn&#x27;t Cerberus be able to identify it?&quot;</p>
+        <p>&quot;She&#x27;s taking the shuttle to Omega,&quot; EDI answered. &quot;She will secure safe passage to Earth there.&quot;</p>
+        <p>&quot;Omega?&quot; Miranda asked in disbelief. &quot;So, what now? We&#x27;re just supposed to wait until she gets back? If she ever even gets back?&quot;</p>
+        <p>&quot;Her instructions are as follows,&quot; EDI said, &quot;If she is killed, captured, or if I lose communication with her for greater than thirty-six hours, then Garrus will be made commander of the Normandy. She left a vid explaining all this.&quot;</p>
+        <p>&quot;Play it,&quot; Miranda said.</p>
+        <p>EDI&#x27;s holographic projection shrunk back into its projector. Shepard&#x27;s prerecorded vid appeared before them. Her face wore a wearied smile, and she looked uncertain of what to say. Several seconds passed before she said anything. This was not something she had rehearsed or practiced. This would come from the heart.</p>
+        <p>&quot;I guess you guys heard the news from EDI,&quot; she said.</p>
+        <p>&quot;I&#x27;m not sure what you must be thinking. Some of you agreed with a rescue, and others disagreed. But I imagine everyone would disagree with me doing this alone.&quot;</p>
+        <p>She stopped a moment, thinking some more before continuing.</p>
+        <p>&quot;I went so long hoping I would never have to choose between Tali or the mission. I was never sure what I would do if it finally happened. I guess I never really wanted to think about it.</p>
+        <p>&quot;This is the best I was able to figure out. I can&#x27;t leave her to her fate. And I also can&#x27;t risk our crew and ship—our mission—to save her. But I can risk myself. I led you guys through our mission from the beginning, but the truth is, you don&#x27;t really need me. Not anymore.&quot;</p>
+        <p>Shepard smiled. Her eyes looked at the camera with pride.</p>
+        <p>&quot;You guys proved what you can do on the Collector base. Garrus, you especially made me proud. You led the bulk of the team, kept them holding the line, and best of all, you kept them all safe. No one died under your command. You did better than me. I had just two others with me, and one never made it back.</p>
+        <p>&quot;Miranda, you&#x27;re a brilliant tactician and have the best insight of anyone I know. Give Garrus your full support, he&#x27;s going to need it. Make sure the team follows their orders. Keep them in line. Be the bad guy. Or the good guy, if needed. These are all the qualities of a good XO. But you know that already.</p>
+        <p>&quot;To the rest of the team, you guys are the fiercest, most dangerous group in the galaxy. But only if you work together. Individually, you&#x27;re just above-average people. That isn&#x27;t enough to stop the Reapers. Your diversity is your strength, but it might drive you apart if you let it. Don&#x27;t let it. Work as a single unit. A single weapon, pointed straight at the heart of the Reapers.&quot;</p>
+        <p>Shepard paused a moment before continuing.</p>
+        <p>&quot;I hope I can make it back and hear you guys laugh at me for recording this sappy vid. I know that&#x27;s not very likely. My odds aren&#x27;t very good. But that&#x27;s okay. All that matters is that this team can succeed, even if I don&#x27;t.</p>
+        <p>&quot;Wish me luck guys. I either return with Tali, or we meet our fates on Earth. Either way, at least we&#x27;ll be together.&quot;</p>
+        <p>The video ended, leaving behind a somber silence.</p>
+        <p>&quot;Go get her, Shepard,&quot; whispered Garrus.</p>
+        <p>. . .</p>
+        <p>The air was cold and crisp. It was cool enough for snow, if the night sky were not completely clear. The moon was absent, but the night sky glowed with the ambient light of the city. Shepard noticed she could see her breath as she walked down side roads and alleyways, keeping away from the main avenues and boulevards. She knew these types of hidden-away, out of sight places well; she had grown up in them. This wasn&#x27;t the same city she had grown up in, but it looked every bit the same, and felt every bit familiar.</p>
+        <p>It was dark and rundown, riddled with filth and graffiti. This was the world that Shepard left behind when she turned eighteen and joined the Alliance. She had promised herself to never return to it, yet here she was. This part of the city was a far cry from the upscale and modern downtown area held her destination, Cord-Hislop headquarters.</p>
+        <p>Shepard scoffed to herself, realizing the irony that plunging into the depths of her old life had ended up being the only way to save her new one. There were few miles to walk before she got there. She would have preferred to land closer to her destination, but the spaceport on this side of the city was the safest place the old krogan&#x27;s transport could drop her.</p>
+        <p>&quot;How do you feel, Shepard?&quot; EDI asked over Shepard&#x27;s communicator.</p>
+        <p>&quot;I&#x27;m not sure I&#x27;ve ever heard you ask that.&quot;</p>
+        <p>&quot;You are in a unique situation. It is hard to understand what is going through your mind.&quot;</p>
+        <p>&quot;Fair enough,&quot; she said. &quot;To be perfectly honest, I feel scared.&quot;</p>
+        <p>&quot;I&#x27;m not sure I&#x27;ve ever heard you say that.&quot;</p>
+        <p>&quot;Believe it or not, it happens. I&#x27;m not stupid. I know my odds here. I likely won&#x27;t make it through the night. It&#x27;s funny, the last time I was worried about dying on Earth was when I was kid, running from some gang members I stole money from.&quot;</p>
+        <p>There was a pause before EDI said anything. &quot;I do not understand your behavior. You yourself are aware that the likelihood of success is very poor. Almost to the point that success is an impossible outcome from a probability perspective. And if you fail, then Tali will perish anyway. It is not logical and you are aware of this. Then why?&quot;</p>
+        <p>A long enough period of time passed with no response from Shepard, that EDI assumed she had decided not to answer.</p>
+        <p>&quot;Because I love her,&quot; she finally said. &quot;A million to one, a billion to one—the odds don&#x27;t matter. Not when you love someone.&quot;</p>
+        <p>&quot;It is hard for me to understand that. Regretfully, I am forced to consider it an irrationality.&quot;</p>
+        <p>&quot;You can call it that,&quot; Shepard said. She then smiled. &quot;But I hope one day you understand it like I do. It is beautiful.&quot;</p>
+        <p>EDI considered what she said. &quot;I take back what I said,&quot; she said. &quot;It is not an irrationality. I believe you have an insight that I do not quite understand. I hope I will, one day.&quot;</p>
+        <p>&quot;Tell Joker that,&quot; Shepard said. &quot;I&#x27;m sure he&#x27;ll be thrilled to help you out.&quot;</p>
+        <p>&quot;Was that a joke?&quot; EDI asked.</p>
+        <p>&quot;Maybe.&quot;</p>
+        <p>An hour passed as Shepard continued walking. The rundown, crime-riddled parts of the city were behind her. Now she walked through the sophisticated, high-end financial and business sector of the city. No more words had been spoken between Shepard and EDI, but she maintained contact as she closely monitored her. Via the interface to Shepard&#x27;s omin-tool, it was almost as if she were there. She was able to see the city and hear its various noises through the audio and video sensors, all while knowing Shepard&#x27;s exact location thanks to the global positioning telemetry system of her omni-tool.</p>
+        <p>She detected that Shepard came to a full stop, immediately after turning around a street corner.</p>
+        <p>&quot;Cord-Hislop,&quot; Shepard whispered. A few blocks ahead, at the end of the street, was a large skyscraper with those same words glowing brightly near the top. She had reached her destination, and her heart felt heavy knowing that Tali was so close.</p>
+        <p>After a short walk, Shepard reached a garage about one block from the Cerberus skyscraper. She entered it and went to the top level. Once there, she stood near the ledge where she could carefully examine and study the building with her view unobstructed. She had been watching it intensely for a long time now.</p>
+        <p>&quot;Are you angry, Shepard?&quot; EDI asked.</p>
+        <p>&quot;What makes you say that?&quot;</p>
+        <p>&quot;Your heart rate is elevated. Testosterone is up while cortisol is down. The left hemisphere of your brain is stimulated. These are physiological responses to anger.&quot;</p>
+        <p>&quot;Yeah. I am. They took her from me. She could be hurt right now. Everyone responsible is going to die.&quot;</p>
+        <p>&quot;I see.&quot;</p>
+        <p>&quot;What kind of defenses can I expect in there?&quot;</p>
+        <p>&quot;While the Cord-Hislop Corporation operates as a legitimate, private business, all security forces within the building are Cerberus. It&#x27;s very likely that security has been reinforced after Tali&#x27;s capture. I do not know what opposition you&#x27;ll find in there, but expect it to be very heavy.&quot;</p>
+        <p>Shepard reached for her duffle bag and started pulling out the supplies she brought. Along with her usual assortment of weapons and combat accessories, was a special, all black reconnaissance suit. Shepard had found it on the Normandy&#x27;s equipment locker when she first got the ship from Cerberus. It didn&#x27;t provide as much physical protection as her typical heavy armor, which was why she never used it before, but it had some beneficial tradeoffs.</p>
+        <p>It was light and flexible, featuring an intelligent nanoweave that formed a kind of external muscle layer, automatically increasing her movement speeds and reaction times. It also had a standard cloak generator, and a massive shield generator. Most interesting of all was its helmet. It was a hood that enveloped her head, with a matted black, hard surface covering her face. No visor or even holes for eyes, the entire curved surface was a sensor that fed a highly augmented visual image to her eyes.</p>
+        <p>&quot;Have you been able to access their internal networks at all?&quot; Shepard asked as she equipped her gear.</p>
+        <p>&quot;I have had some limited success,&quot; EDI responded. &quot;As a matter of security, the main network is not physically connected to the Earth intranet. As a result, it is not possible for me to break into it without a direct interface.&quot;</p>
+        <p>&quot;Once I&#x27;m in there I&#x27;ll find a terminal. What was the &#x27;limited success&#x27; you mentioned?&quot;</p>
+        <p>&quot;There are some systems that are connected to the Earth intranet. For example, by law the utility equipment must have an intranet connection. I&#x27;ll be able to disable their main power, although they will have backup generators so it probably won&#x27;t help much. I&#x27;ll be able to disable Earth-based outgoing communications. This will grant you some extra time before external resistance is expected from local authorities.&quot;</p>
+        <p>Shepard snapped on the helmet visor. After a second of darkness, the display initiated and she could see a much clearer, brighter version of the dark night sky she had just been surrounded in.</p>
+        <p>&quot;I&#x27;m guessing doors and internal security systems are out of the question?&quot;</p>
+        <p>&quot;Yes, until you interface with a terminal. Once I can access their internal network via your omni-tool, I should have little difficulty disabling security systems.&quot;</p>
+        <p>Shepard finished equipping her suit and gear. Her transformation into a dark, enveloped figure with no face was complete. She was a frightening sight; like beholding a shadowy demon. A black angel of death. She took one last moment to stare at the skyscraper, her mind burdened with the thought that Tali was waiting inside. She closed her eyes and took a deep breath. Her mind needed to be clear.</p>
+        <p>&quot;I&#x27;m ready,&quot; she said. &quot;Call me a cab.&quot;</p>
+        <p>. . .</p>
+        <p>Somewhere deep within the large Cord-Hislop skyscraper, in an area none of the civilian employees would ever imagine existed in their workplace, was a small concrete room with an attached holding cell. It was but one of many dark secrets held by Cord-Hislop.</p>
+        <p>Tali sat on the floor of the holding cell, her back braced against the wall. She faced forward toward the entrance of the cell, made up of thick metal bars. The cell was completely empty, with no furniture or fixtures. Not even a toilet or sink. It was also dim, as there was no light source inside it.</p>
+        <p>The two guards that were watching over her could not tell if she was staring at them, or if her eyes were even open due to her visor and the vertical stripes of glare on it from the metal bars.</p>
+        <p>&quot;She hasn&#x27;t moved in hours.&quot; One of the guards said. He was the younger of the two. &quot;Do you think she&#x27;s alright?&quot;</p>
+        <p>&quot;Of course she is,&quot; answered the other one. An older man, with salt-and-pepper hair. &quot;We haven&#x27;t even touched her.&quot;</p>
+        <p>&quot;Quarians get sick easy,&quot; said the younger man. &quot;It&#x27;s why they have those suits.&quot;</p>
+        <p>The older one got up and walked up to the bars, standing near the younger one. He looked at Tali for a moment. &quot;You alive there, sweetheart?&quot; He rattled the metal gate, the noise reverberated loudly in the small room.</p>
+        <p>Tali didn&#x27;t move or respond.</p>
+        <p>The older man laughed. &quot;Still not talking? We should try to be friends, you know. You might be here for a while.&quot; He then looked at the younger guard and asked, &quot;What&#x27;s she look like under that tin can?&quot;</p>
+        <p>&quot;You mean quarians?&quot; he answered. &quot;They kinda look like us, I guess. Skin, hair, all that.&quot;</p>
+        <p>&quot;Oh yeah? No nasty ass turian mandibles or asari head flaps? Very interesting… this one&#x27;s got a sweet body on her, too.&quot; He looked at her. &quot;Why don&#x27;t you stand up and show me a little something?&quot; He laughed again.</p>
+        <p>The younger guard was noticeably unsettled by his comment, but Tali didn&#x27;t move.</p>
+        <p>&quot;Nothing?&quot; The older guard asked. &quot;I think Lee here is right, maybe something is wrong with you. Maybe I should go in there and check.&quot;</p>
+        <p>&quot;Come on Kraig, lay off,&quot; the younger guard said. &quot;Besides, we have orders from Bennett. We can&#x27;t open the gate without a security detail. Or unless he&#x27;s with us.&quot;</p>
+        <p>Kraig rolled his eyes. He walked back to his seat and sat down. He ran his hands through his hair. &quot;What&#x27;s with you? What do you care about this alien?&quot; he asked. He then smiled, as if the answer came to him. &quot;Wait, I know. You got the hots for her don&#x27;t you? Want that alien poontang all to yourself, huh?&quot;</p>
+        <p>&quot;What? No! Step being such a damn perv all the time,&quot; Lee replied. &quot;It&#x27;s just that I wish it didn&#x27;t have to be like this. She&#x27;s one of Shepard&#x27;s people. Didn&#x27;t you see the vids? She was part of her personal squad during the Battle of the Citadel.&quot;</p>
+        <p>&quot;Well gee whiz,&quot; said Kraig. &quot;I didn&#x27;t realize you were such a fan. Who even cares. That&#x27;s all ancient history. Shepard&#x27;s an idiot for turning her back on us. I couldn&#x27;t care less about her or her people, and especially not her lil&#x27; alien whore over there.&quot; He gestured toward the holding cell.</p>
+        <p>&quot;Whatever. Just stay professional, man. The Illusive Man wants us all focused here. Shepard&#x27;s team may actually get here to try and get her back. It&#x27;s why we have all the extra security and mechs. Not to mention why Bennett was sent here. You know it&#x27;s serious if he&#x27;s here.&quot;</p>
+        <p>Kraig sighed. He said, &quot;Look, I know you&#x27;re still green—probably why you have a stick up your butt all the goddamn time—but pay attention: there is no chance any of her people will even set foot on Earth. We would know the second they even pass through the Relay. So relax.&quot;</p>
+        <p>Kraig stood up and got up close to Lee, right in front of Tali&#x27;s cell. He continued, &quot;There are one of two things that will happen. One, Shepard actually is stupid enough to try and rescue her, in which case she and her ship will be captured before they ever get halfway here. Or two, she fails to give the boss what he wants, in which case her lil&#x27; skank here becomes our new—&quot;</p>
+        <p>He stopped talking. He had heard something. As if some kind of distant, quiet rumble. He would have been convinced his ears were playing tricks on him, if it wasn&#x27;t for the dusty mist that suddenly fell off the cement walls and ceiling. Something was happening. Mere seconds later, all the lights went dark. The room was then illuminated by a red flashing light.</p>
+        <p>&quot;What the hell?&quot; Kraig said.</p>
+        <p>Lee spoke into his communicator. &quot;What&#x27;s going on?&quot;</p>
+        <p>The only response was the sound of gunfire and screaming.</p>
+        <p>Kraig turned to look back into the cell to check Tali, and was startled by what he saw. Tali was now standing right up to the bars. There couldn&#x27;t have been more than a foot between them now, yet he never even saw or heard her move. She was staring at him.</p>
+        <p>&quot;That is probably Shepard. She&#x27;s here to save me. And kill you.&quot;</p>
+        <p>. . .</p>
+        <p>There was a loud crash and a burst of glass erupted in the lobby of the Cord-Hislop building as a taxi skycar crashed through the front. It fell on the main floor of the lobby, sliding forward several meters before coming to a stop. A cloud of dust slowly descended around the wrecked skycar, with debris littered all around it. The various Cerberus agents in the lobby had either been killed or knocked down from the crash, or had taken cover during the brief moment of chaos.</p>
+        <p>As the agents began to recover, the lights went off. A moment later dimmer lights came on from the backup power. Just then, one of the taxi doors lifted up and opened. Two grenades flew out of the cab. Before any of the Cerberus agents could properly react, both of them exploded simultaneously. Screams and shattering glass could be heard after the loud bangs of the grenades. A torrent of muzzle flash erupted. It came from a dark figure that had emerged from the taxi, running with incredible speed through the lobby. Shepard had crossed the Rubicon. Her incursion was under way.</p>
+        <p>&quot;We&#x27;re under attack!&quot; yelled a Cerberus agent. &quot;Send backups to ground floor!&quot; yelled another.</p>
+        <p>Shepard quickly scanned the large lobby as she ran. It was upscale and modern, making use of glass wherever it could. The front had large windows, each two stories tall, that stretched up to the ceiling. The floor was white tile, polished to a near-mirror shine. The lobby also had a second level, styled like a loft, accessible through parallel escalators. Shepard&#x27;s visor let her see augmented details even with the dust and smoke all around. She could see where enemy personnel was concentrated.</p>
+        <p>She ran behind a column. &quot;Any idea what floor Tali is on yet?&quot; she said to EDI. Bullets were already impacting at all sides of her column.</p>
+        <p>&quot;No Shepard,&quot; EDI answered. &quot;Wireless access to the Cord-Hislop network is blocked. You&#x27;ll need to reach a terminal before I can break into their network.&quot;</p>
+        <p>Shepard sprinted to the next column, with an eruption of gunfire chasing her. As she ran, she scanned the area again, looking for terminals—the only terminals on this level of the lobby were in the large, circular front desk, where several security agents had gathered. She made it to the pillar, with only half her shields remaining. She had also noticed that the second had banks of terminals, along with several agents and even a few security mechs, all shooting at her.</p>
+        <p>&quot;Too many,&quot; she thought. &quot;There&#x27;s so many. How can I—&quot; she stopped her own thought. She had a mission to continue.</p>
+        <p>She grabbed one of her grenades, tossing it around the pillar towards the center desk. After the loud bang, she took off again running to the nearby escalator. She got down low, using the metal side rails of the escalator as cover. Cerberus agents tried shooting down at her from the top, but she quickly dispatched them with precise, controlled bursts of her weapons.</p>
+        <p>Shepard reached the top and ran to a bank of terminals and took cover behind them. There was a reprieve from the fighting, but she knew it wouldn&#x27;t last more than mere seconds. Shepard established a connection with her omni-tool to the terminal.</p>
+        <p>&quot;Connection established with internal network,&quot; EDI said. &quot;Bypassing network security. This will only take a moment.&quot;</p>
+        <p>While waiting, Shepard heard a rumble followed by a kind of loud, buzzing sound. As if something large and mechanical were moving. She looked over the terminal and saw large sections of the back and side walls ascending. &quot;I don&#x27;t think I have a moment.&quot;</p>
+        <p>As the panels lifted, they revealed hidden compartments behind them, each filled with at least a dozen LOKI security mechs. These compartments were no doubt just one of many Cerberus secrets that awaited inside this building. The red optic sensors of the mechs lit up as they began marching out. Shepard ducked back down as gunfire once again roared all around her. Pieces of wall both large and small began raining all around her.</p>
+        <p>&quot;I definitely don&#x27;t have a moment,&quot; Shepard said. &quot;Hurry!&quot;</p>
+        <p>&quot;I&#x27;m almost done Shepard,&quot; EDI responded, calm as ever.</p>
+        <p>Shepard looked over the side of the terminal bank. She could see the numerous security mechs slowly approaching. Among their ranks was even a YMIR heavy mech.</p>
+        <p>&quot;Tali is on 40th floor. East wing.&quot; EDI said.</p>
+        <p>&quot;Can you do anything about these mechs?&quot; Shepard said, using blindfire around all sides. The mech gunfire was getting closer. She also heard the voices of the Cerberus agents grouping up.</p>
+        <p>&quot;I&#x27;m sorry Shepard, but the mechs are not part of the internal network. I cannot interface with them.&quot;</p>
+        <p>A mech moved around the edge of the terminal bank. &quot;Target acquired&quot; it said in its soft voice.</p>
+        <p>Shepard immediately shot it. Another arrived from the other side and opened fire on her. Her shields easily held, but she was now getting swarmed. She ran out from behind the bank of terminals with gunfire chasing her. She initiated her cloak mode, disappearing into a distorted, refracting field of invisibility.</p>
+        <p>&quot;Over there! She&#x27;s over there!&quot;</p>
+        <p>Shepard heard shouts coming from the Cerberus agents. Though she had cloaked, gunfire was still dangerously close. She could see the elevator, but her stealth would not last long enough to reach it. Even if it did, it would be suicide to trap herself in that small metal box, at the mercy of gunfire and explosives.</p>
+        <p>Quickly looking for an alternative, such as a stairwell, she found something even better. In all the commotion, she hadn&#x27;t noticed that one of the nearest walls had also been a secret compartment. This one didn&#x27;t contain any LOKI mechs. Instead, there was a colossal Cerberus Atlas. One of the agents had just opened its canopy with the intention to climb in. Shepard, still cloaked, grabbed the back of her uniform and pulled, forcing her to drop down onto the floor with a hard impact.</p>
+        <p>She jumped up and pulled herself into the pilot seat. Her stealth ran out, but it didn&#x27;t matter; the polycrystalline canopy was already closed and deflecting shots. The massive, beige-colored war machine came to life, and Shepard began her retaliation. The Cerberus agents ran for cover; the LOKI mechs were not that smart.</p>
+        <p>Shepard fired a rocket toward the center of the group of mechs. The explosion sent destroyed mechs and debris flying in all directions. She then used the antipersonnel machine guns on the Cerberus agents as they ran for cover. The lucky ones were able to reach the cover and were suppressed by the stream of bullets.</p>
+        <p>As she moved toward the elevator, easily shrugging the small arms fire of the security mechs, suddenly rockets impacted her kinetic barriers. It was the YMIR heavy mech that was now standing between her and the elevator.</p>
+        <p>&quot;Get out of my way!&quot; Shepard grunted as she rammed into the heavy mech with the Atlas. The YMIR mech began executing its close quarters combat programming, slamming its large claws against what it identified as the weak point of the Atlas: the transparent canopy.</p>
+        <p>But it was a futile fight. The YMIR mech was up against a superior foe. Using the claw of the Atlas, Shepard grabbed the head of the heavy mech ripped it off with relative ease. Metal twisted and snapped as wires were torn, shooting sparks in all directions. The decapitated mech began its internal self-destruction countdown. Shepard, with all the power that her Atlas could muster, lifted up the YMIR. The Atlas trembled and its hydraulics groaned as it strained with the tremendous load. Hot fumes blasted from the Atlas&#x27; exhaust vent. The YMIR was then launched forward toward the group of security mech and Cerberus agents.</p>
+        <p>Just as it impacted the ground it exploded, unleashing a blast of heat and light. The floor around the area of impact collapsed, causing a large cascade of dust and debris to spill into the first floor of the lobby. The remaining Cerberus personnel backed away from the collapsing ground to keep from falling. One of the escalators fell on its side as the structure around it crumbled.</p>
+        <p>During all the chaos, Shepard had safely gotten out of the Atlas and into the elevator. She hit the button with the number 40.</p>
+        <p>. . .</p>
+        <p>&quot;…Many wounded… the Atlas—explosion…&quot; The communicator crackled loudly, cutting off. &quot;…Level forty. Repeat lev—forty. On… way.&quot;</p>
+        <p>Lee looked at Kraig. &quot;&#x27;No chance,&#x27; huh? Is that what you said?&quot;</p>
+        <p>&quot;Just shut the hell up,&quot; responded Kraig. &quot;This is serious.&quot;</p>
+        <p>&quot;So what&#x27;s the plan now? We haven&#x27;t heard anything from Bennett yet. He must know what&#x27;s going on though.&quot;</p>
+        <p>Tali took a great deal of pleasure in seeing her captors so distressed as she stood there behind the metal bars.</p>
+        <p>&quot;Don&#x27;t you understand?&quot; she said. &quot;Your boss was stupid for trying to cross us. My friends are here. And they&#x27;ve battled things far worse than you idiots. You have no chance. The best thing you can do is just let me—&quot;</p>
+        <p>The door to the room opened and a man stepped in. His frame was medium, maybe even considered small by some. It had certain tenseness to it, but overall he did not seem built like someone that would give anyone pause. But his face was another story. An unreadable yet intense scowl lay on his rigid features and thick brown beard. His eyes were empty and cold, like the dark depths of the void of space. His stare could bring a thresher maw to submission.</p>
+        <p>It was Bennett.</p>
+        <p>&quot;There is single known assailant in the building,&quot; he said. He looked at Kraig, then at Lee, and finally his eyes settled on Tali. &quot;She has not been identified. But I know it is Shepard.&quot;</p>
+        <p>What? Why is Shepard here by herself? Where are the others? Tali thought to herself.</p>
+        <p>&quot;What are your orders, sir?&quot; Kraig said.</p>
+        <p>&quot;She has made it through the lobby and is on her way up here. I sent a squad to meet her at the elevator. More are on the way. Kraig, take a team and wait by the research area entrance.&quot;</p>
+        <p>Kraig promptly left the area, and Bennett walked over toward Tali&#x27;s cell. He lifted up his arms and took hold of the bars, leaning forward. He smiled at her. At that moment Tali discovered that his smile was more terrifying than his former scowl.</p>
+        <p>&quot;Lee, you stay here and guard the alien,&quot; Bennett said, his eyes still fixed on Tali. She felt chills.</p>
+        <p>Tali then got into a defensive stance. &quot;So what&#x27;s the deal with you?&quot; she said. &quot;I never heard of you before. Not even from Miranda.&quot;</p>
+        <p>His smile widened. &quot;She never liked working with me,&quot; he said. &quot;Complained to the boss that I gave her the creeps. That I was… too wild.&quot;</p>
+        <p>&quot;Even with my olfactory filters, your breath stinks,&quot; Tali said. &quot;I don&#x27;t care who you are, you don&#x27;t scare me. If you want to stay alive, you need to open these bars before Shepard gets here.&quot;</p>
+        <p>&quot;I can&#x27;t tell you how happy I am to know she&#x27;s here,&quot; Bennett said. &quot;I finally get to kill her.&quot;</p>
+        <p>Bennett let go of the bars and turned around. &quot;I&#x27;m going to go prepare,&quot; he said. &quot;Lee, if Shepard gets here, shoot her in the stomach.&quot;</p>
+        <p>&quot;The… stomach, sir?</p>
+        <p>&quot;Yes, of course,&quot; he replied. &quot;It won&#x27;t kill her right away. It&#x27;ll just hurt her real bad. And slow her down.&quot;</p>
+        <p>Bennett left the room. Tali and Lee were left alone.</p>
+        <p>&quot;Lee,&quot; Tali called out. &quot;You have to let me out.&quot;</p>
+        <p>He looked at her and sighed. He shook his head. &quot;I can&#x27;t.&quot;</p>
+        <p>&quot;Yes you can. I know you&#x27;re Cerberus, but that doesn&#x27;t mean you&#x27;re a bad person. I serve with a ship full of Cerberus. They&#x27;re all good people.&quot;</p>
+        <p>Lee looked away.</p>
+        <p>&quot;How old are you?&quot; Tali asked.</p>
+        <p>&quot;What? What does that matter?&quot;</p>
+        <p>&quot;I&#x27;m curious. You seem kinda young.&quot;</p>
+        <p>&quot;I&#x27;m… twenty-two.&quot;</p>
+        <p>&quot;That&#x27;s how old I was when I met Shepard.&quot;</p>
+        <p>Lee avoided responding, but eventually muttered: &quot;I know.&quot;</p>
+        <p>&quot;What? How?&quot;</p>
+        <p>&quot;I know about her, and you, and your old crew. I saw you guys on the news vid after the attack. I thought it was so cool that you guys fought Saren on the Citadel. I read about you guys. I wanted to be like you. It&#x27;s one of the reasons I joined Cerberus.&quot;</p>
+        <p>&quot;You can be with us. Don&#x27;t you see? Shepard is the best hope we have to stop the Reapers, and now she&#x27;s risking her life to save me. All because of your boss. He doesn&#x27;t deserve your loyalty. Help us. Please. Shepard could get killed if we don&#x27;t help her.&quot;</p>
+        <p>Lee didn&#x27;t say anything more, and a long time passed with neither of them saying anything. But Tali&#x27;s plea had planted a seed in his mind. One that had now grown into a full realization. The silence was broken as he laughed to himself and shook his head. &quot;Oh God… I must be crazy. I can&#x27;t believe I&#x27;m actually going to do this.&quot;</p>
+        <p>He stood up and approached Tali&#x27;s door.</p>
+        <p>. . .</p>
+        <p>11.</p>
+        <p>12.</p>
+        <p>14.</p>
+        <p>15.</p>
+        <p>&quot;Hm, I never figured the Illusive Man as the superstitious type,&quot; Shepard said to herself, noticing the omission of the 13th floor as the elevator ascended. &quot;Maybe he just doesn&#x27;t like that number.&quot; She continued looking all around, studying the interior of the elevator.</p>
+        <p>&quot;Speak of the devil,&quot; said EDI.</p>
+        <p>&quot;Huh?&quot;</p>
+        <p>&quot;The Illusive Man is trying to contact you.&quot;</p>
+        <p>Shepard allowed herself several seconds of hearty laughter.</p>
+        <p>&quot;Oh God, this is great… put him through.&quot;</p>
+        <p>EDI connected Shepard to the call with the Illusive Man. There would be no visual, holographic projection this time. No synthetic eye&#x27;d, cigarette drag-taking, whiskey sipping pompous asshole in a million credit suit. Just the voice of an old racist man whose house of cards was beginning to collapse.</p>
+        <p>&quot;Hey Timmy,&quot; Shepard said, alluding to the Illusive Man&#x27;s &#x27;Tim&#x27; nickname that the crew sometimes used. &quot;You wouldn&#x27;t happen to be in the building would you? I sure would love to run into you.&quot;</p>
+        <p>&quot;I commend you Shepard,&quot; the Illusive Man greeted. &quot;I never thought you would actually be able to sneak onto Earth without my knowing. Still, this doesn&#x27;t change your utter stupidity in trying this. You actually think you can do this by yourself? Your arrogance is beyond measure. You&#x27;re in over your head. You&#x27;re going to die there.&quot;</p>
+        <p>&quot;There, not here?&quot; Shepard said. &quot;Damn, I guess that means you aren&#x27;t here. I&#x27;ll just have to kill you some other time. By the way, sorry about that beautiful lobby of yours. It&#x27;s somewhat of a crater now. I hope the authorities don&#x27;t uncover any nasty secrets when they investigate what happened.&quot;</p>
+        <p>&quot;It doesn&#x27;t have to be this way. Stop what you&#x27;re doing. Turn yourself in. I promise both you and Tali&#x27;Zorah will be unharmed. We can work togeth—&quot;</p>
+        <p>&quot;Sorry Timmy, my floor&#x27;s coming up and I have to get ready. I have a lot more Cerberus to kill.&quot;</p>
+        <p>Shepard ended the call with a smirk.</p>
+        <p>. . .</p>
+        <p>The elevator doors opened on the 40th floor, and a group of waiting Cerberus agents opened fire with their automatic weapons. The mahogany paneling of the elevator wall ripped apart and splintered by the barrage of bullets, and it took several seconds before a ceasefire was ordered. There was no one in the elevator.</p>
+        <p>There was confusion among the Cerberus agents. They were assured Shepard would be on this elevator. It was the one she took up from the lobby, and no other elevator had been used.</p>
+        <p>The air-conditioning vent above them opened, and a flashbang fell in the middle of their group. It exploded. The light was as blinding as its sound was deafening.</p>
+        <p>Amidst their disorientation, a shadowy figure landed from the air vent above. She stood there completely still, surrounded Cerberus agents wringing in pain and confusion, gripping at their ears while their eyes were tightly shut. And then, with spellbinding speed, she began a swift dance of destruction. Moving from target to target, she rapidly snapped necks, cut jugulars, and stabbed hearts all in a continuous, seamless motion. Her close-quarters combat rendered their kinetic barriers useless. In just a matter of seconds, every member of the group was dead.</p>
+        <p>&quot;EDI, which way?&quot; Shepard said into her communicator.</p>
+        <p>&quot;To your left, down the west hallway.&quot;</p>
+        <p>Shepard starting running in that direction. More Cerberus agents and mechs appeared. Shepard methodically took cover wherever available and took them out, fighting her way down the hall and leaving a trail of empty thermal clips, bullet holes, and dead security forces. The clouds of smoke from smoke grenades were spreading throughout the floor, creating a noticeable fog. Shepard&#x27;s goal was the secure access door at the end, which would lead into a secret Cerberus research area.</p>
+        <p>While most of the building did operate as a legitimate business, the area behind the access door was purely a Cerberus operation. It was where research and experimentation that benefited from the aerospace company&#x27;s resources took place. And it now served as Tali&#x27;s makeshift prison.</p>
+        <p>There was just a long stretch of hallway left to the access door. It had no available cover. Every military instinct told Shepard that running down remaining hallway was a poor tactical maneuver, but she had no other option. She needed to get to Tali. She could be in danger with all the chaos happening; time was running out. With the building on full alert, opposition was intensifying. It was also a matter of a time before local city authorities would start gathering outside the building, and possibly intervene with SWAT teams.</p>
+        <p>Shepard made a full sprint toward the door, initializing her cloak as the only defense she had available.</p>
+        <p>As Shepard ran, the door opened and a group of Cerberus agents emerged. Shepard prepared to open fire, still cloaked. Whether by some unknown detection device, the sound of her footsteps, or just plain intuition, the leader of the group—an older man with salt and pepper hair—yelled to open fire down the seemingly empty hallway.</p>
+        <p>A torrent of gunfire was unleashed, and Shepard leaped forward, returning fire as she landed flat on the floor. Her kinetic barrier rapidly flashed during the intense exchange of gunfire. Her cloak ended, but she kept firing. Her kinetic barriers then failed, but still she kept shooting as shots impacted all around her.</p>
+        <p>Her weapons stopped firing. Click click click click. Her thermal clips were fully spent.</p>
+        <p>She had killed most of the group. Only the man with salt and pepper hair remained. He had numerous gunshot wounds, but still he stood. He took a moment to carefully aim his pistol at Shepard.</p>
+        <p>Bang.</p>
+        <p>The gunshot reverberated extra loudly. The man collapsed, intense bleeding coming from his head. Someone had shot him from behind, before he could shoot Shepard.</p>
+        <p>Shepard jumped to her feet, curious as to who had shot her almost killer. Her very first thought was that perhaps the man had been accidentally shot by another Cerberus agent. But to her surprise, and immense joy, she saw the most pleasant thing that could ever be found within this terrible place. A beautiful quarian draped in purple. She ran up behind the fallen Cerberus man with a gun in her hand, and looked right at Shepard. There was someone with her.</p>
+        <p>&quot;Tali,&quot; Shepard exclaimed. &quot;It&#x27;s me!&quot;</p>
+        <p>Although Shepard&#x27;s dark infiltration uniform fully covered her body and face, she already knew it was her.</p>
+        <p>&quot;Shepard!&quot; she yelled as she ran to her.</p>
+        <p>Shepard threw her arms around her and squeezed her tightly. She was breathing hard, no doubt tired from all the fighting. Between two deep breaths, she laughed and said, &quot;You saved me.&quot;</p>
+        <p>&quot;Well yeah,&quot; she said. &quot;I need you to get me out of here.&quot; She tried looking at her face, but only saw the dark matted material covering it. She suddenly realized how she must have felt all the times she could only see her mask.</p>
+        <p>&quot;Are there any others?&quot; she asked.</p>
+        <p>&quot;It&#x27;s just me. I&#x27;ll explain later, first let&#x27;s find a way out.&quot; Shepard looked at the young man that was with Tali. &quot;Who&#x27;s this?&quot;</p>
+        <p>&quot;My name is Lee, ma&#x27;am.&quot; The young man said.</p>
+        <p>&quot;He was one of my guards,&quot; Tali explained. &quot;Bet he let me go. He wants to help us escape.&quot;</p>
+        <p>&quot;How do you know we can trust him?&quot; Shepard said. Her eyes remained focused on him.</p>
+        <p>&quot;You can trust me,&quot; the young man said. &quot;I know about you. You and your team. I know you&#x27;re trying to stop the Reapers. I just want to help. I can get you out of here.&quot;</p>
+        <p>After some hesitation, Shepard said, &quot;Lead the way.&quot;</p>
+        <p>The three went into the Cerberus area, where Tali and Lee had just come out of. Lee briefly glanced at the man on the floor that Tali had shot. &quot;See you, Kraig…&quot;</p>
+        <p>&quot;Why are we heading in there?&quot; Shepard asked. &quot;Elevator&#x27;s back that way.&quot; She gestured down the hall.</p>
+        <p>&quot;That&#x27;s the regular, public elevator,&quot; Lee said. &quot;There&#x27;s a special elevator just in here. It&#x27;s large. We use it for transporting parts and cargo from the roof. There are skycars up there we can use to get out of here.&quot;</p>
+        <p>They ran into the elevator. It was about the size of a small room. Lee hit the button for the roof level. &quot;Phew,&quot; he exhaled. &quot;I can&#x27;t believe this is happening,&quot; he laughed.</p>
+        <p>As Shepard looked at Lee, something strange happened. She saw the air refract and bend right in front of Lee&#x27;s torso. In an instant, startling moment she realized what it was. Someone else was in here. Someone cloaked—</p>
+        <p>Lee screamed in agony as blood poured out of his chest. A man materialized from a cloak field behind Lee, holding a knife to his chest. Leaving the knife in Lee&#x27;s chest, he then grabbed Tali by the back of her helmet and slammed her head against the elevator wall, cracking her faceplate into a spider web pattern. She collapsed on the floor. Shepard lunged at the man, who was now looking right at her.</p>
+        <p>It was Bennett.</p>
+        <p>He knocked Shepard&#x27;s weapon out of her hand as Shepard came at him, and maneuvered around her, using Shepard&#x27;s own momentum to push her into the wall.</p>
+        <p>&quot;Shepard,&quot; Bennett said, smiling. &quot;I&#x27;ve been looking forward to meeting you. That is you under that plastic mask right?&quot;</p>
+        <p>Shepard didn&#x27;t respond, she just swung at him. Bennett dodged the swing. Another one came, and Bennett dodged it too. More swings came at him, but Bennett either dodged them or blocked in such a way so that they only glanced. Bennett was only avoiding Shepard&#x27;s attacks, not yet fighting back.</p>
+        <p>&quot;You fight like those old-time boxers,&quot; Bennett said. &quot;Brawlers, who just swing and swing and swing and hope something happens.&quot; He laughed, then unleashed his retaliation. A volley of fast—much too fast—swings came at Shepard. She did not expect movement so fast. Shepard was able to block or deflect most of them, but the ones that did hit, did so with an unexpected amount of force. It did not make sense for this smaller man to strike with such power.</p>
+        <p>A powerful Blow landed on Shepard&#x27;s face, warping the solid matted material of her faceplate and knocking her back. There was a pause in the fight as Bennett let Shepard recompose herself. Shepard used the break to look at Tali and Lee. Tali was unmoving, probably just knocked unconscious. Lee was awake, lying still on the floor with his eyes open, occasionally coughing up blood. Shepard returned her attention back to Bennett.</p>
+        <p>&quot;So what&#x27;s your story?&quot; Shepard said. &quot;Some kind of synthetic infiltration unit or genetic experiment?&quot;</p>
+        <p>&quot;That really annoys me,&quot; said Bennett. &quot;How little credit you give your race. There&#x27;s nothing special about me. I&#x27;m more human than you are. How many springs and gears you got in you? That shit makes you weak. Learn to command your body, not just ask. Learn to fire all your nerves, all at once. You&#x27;ll be more powerful than any machine.&quot;</p>
+        <p>Bennett licked his lips and grinned, staring more intensely now than ever at Shepard. Both stood steady, waiting for the other to make a move.</p>
+        <p>A groan came from the floor. It was Tali, trying to get back on her feet, still dazed from her impact, but desperate to get up and help Shepard in the fight. She began to reach for the gun on the floor. Shepard momentarily looked at her, and that&#x27;s when Bennett struck. In a move faster than anything he had done yet, Bennett grabbed his sidearm and shot at Shepard&#x27;s head from almost point blank range. Shepard reacted by attempting to deflect the gun, but was unable to deflect it all the way.</p>
+        <p>Pop pop pop.</p>
+        <p>The first two shots impacted the side of her black matted faceplate. It cracked from the first shot, and shattered from the second one. The third one hit Shepard above her temple, and she fell to the ground.</p>
+        <p>&quot;Shepard, NO!&quot; Tali screamed and fired the gun she just picked up, at Bennett.</p>
+        <p>But he was too fast. He grabbed Tali&#x27;s right arm and pointed the gun away from him as he slammed and pinned her to the elevator wall. She kept firing in desperate rage, but the bullets just harmlessly impacted the other side of the elevator. With his free hand he pointed his gun at Tali&#x27;s cracked faceplate.</p>
+        <p>He smiled at her.</p>
+        <p>&quot;Sorry about your Shepard friend,&quot; he said. &quot;Looks like we don&#x27;t need you anymore, though. Tough luck.&quot;</p>
+        <p>Tali clenched her teary eyes shut, knowing what was coming. The same gun that killed her love would now kill her, too. This was the last second of her life, and she devoted it to Shepard. With her mind&#x27;s eye, she thought only of her. Not as she must look now, on the cold metal floor with blood coming from her head. But as her smiling, looking at her with loving eyes.</p>
+        <p>Bennett gasped and choked.</p>
+        <p>Tali opened her eyes. She still saw Bennett&#x27;s face, but his sinister smile was gone. Now only a look of shock remained, with his facial features twisted in pain. He coughed, causing blurry spots of blood to appear on her faceplate. The hand that held his gun was forcibly pointed away from her by a darkly clothed arm reaching from behind him. Another dark hand was holding onto a knife handle sticking out of his chest, directly over his heart.</p>
+        <p>&quot;Die you piece of shit.&quot;</p>
+        <p>It was Shepard&#x27;s voice.</p>
+        <p>She gave the knife sticking into Bennett&#x27;s heart a hard twist, and Bennett&#x27;s body went limp and collapsed. Tali now could see Shepard&#x27;s face. Her black faceplate was thoroughly shattered, with jagged edges around the edge. Her face was tense and weary. Sweaty, with a dark stream of blood coming from above the temple where she got shot.</p>
+        <p>&quot;Oh Keelah, Keelah… Shepard,&quot; Tali said. She threw her arms around her. &quot;You&#x27;re alive! How? How did you—are you okay?&quot;</p>
+        <p>&quot;I&#x27;m okay,&quot; she said. &quot;Cerberus had used patches of carbon-fiber reinforced ceramic to repair parts of my skull. I&#x27;m still alive, so I guess he hit me in one of them. The bullet probably glanced, too. Still… it hurts like hell.&quot;</p>
+        <p>A weak laugh came from the other side of elevator. It was Lee. &quot;Way to go. I thought he… had you guys there… for a second.&quot;</p>
+        <p>Shepard and Tali quickly came to him. &quot;I have some medi-gel. Let&#x27;s get you on your feet,&quot; Shepard said.</p>
+        <p>Lee stopped her before she could apply any. His breathing was heavy. &quot;You know that won&#x27;t help me. Medi-gel holds things together. It doesn&#x27;t drain lungs. You have to go… before more come. It&#x27;s okay… I don&#x27;t feel much. I&#x27;m sorry I couldn&#x27;t help more.&quot;</p>
+        <p>&quot;Don&#x27;t talk like that,&quot; Tali said, kneeling at his side. &quot;You helped us out. You set me free. You have to come with us.&quot;</p>
+        <p>&quot;I wish I could…&quot; Lee said. He smiled. &quot;I just feel so… tired. Like… I want to sleep.&quot;</p>
+        <p>Shepard had seen enough people die throughout her career to know what was coming next. So did Tali. There was a jolt as the elevator came to a stop. The door opened, revealing the roof of the building. Lee exhaled one last time as his eyes closed.</p>
+        <p>Shepard sighed. &quot;We have to go, Tali.&quot;</p>
+        <p>&quot;I know.&quot; She stood up, looked at Lee, and whispered, &quot;Thank you.&quot;</p>
+        <p>They ran out of the elevator onto the roof. Right in front of them was a wide landing area with several skycars off to the side. All throughout the roof were also large air conditioners and ducts, and an impressive array of antennas and communications equipment.</p>
+        <p>But only one thing caught Shepard&#x27;s attention. She couldn&#x27;t believe their luck. There was a Kodiak Shuttle near the center of the landing area. It suddenly made sense: this was probably what Cerberus had used to transport Tali to this place. Shepard originally had no specific escape plan. Her intention was to go to the nearest spaceport and hijack a transport, but she hadn&#x27;t discounted the possibility of stealing Cerberus equipment such as this.</p>
+        <p>&quot;The shuttle, there,&quot; she pointed at it. &quot;Go.&quot; Both of them ran to it.</p>
+        <p>A flash of bright, white and blue light shined on them. It was a spotlight from an armored vehicle hovering above.</p>
+        <p>&quot;Freeze!&quot; was heard over a loudspeaker. &quot;Lay down your weapons. Get on the ground, hands above your heads.&quot;</p>
+        <p>Tali and Shepard stopped in their tracks. &quot;Who is that?&quot; Tali asked. &quot;More Cerberus?&quot;</p>
+        <p>&quot;No,&quot; said Shepard. &quot;Local authorities. Earth police.&quot;</p>
+        <p>Tali looked at Shepard. &quot;Earth? I&#x27;m on Earth?&quot;</p>
+        <p>&quot;Lay down your weapons, and get on the ground!&quot; the ship&#x27;s loudspeaker blasted.</p>
+        <p>&quot;Get ready. On my mark,&quot; said Shepard. She slowly reached behind her back, as if complying with the police orders. She grabbed her final smoke grenade and tossed it forward at the Kodiak shuttle. &quot;Now! Run!&quot; the grenade burst, unleashing a thick white cloud of smoke.</p>
+        <p>Shepard and Tali ran into the cloud as the hovering police ship opened fire on them. The white smoke provided ample cover, but real protection. &quot;Shepard, the door&#x27;s locked and I don&#x27;t have an omni-tool to open it!&quot; said Tali. Gun shots impacted around them, some coming dangerously close.</p>
+        <p>&quot;EDI, open it!&quot; Shepard said, holding up her omni-tool to the Kodiak door. In just a second it was hacked by EDI and the door unlocked. The two ran inside and sat at the cockpit of the shuttle, Shepard in the pilot seat and Tali in the co-pilot seat.</p>
+        <p>&quot;You fly this thing,&quot; Tali said. &quot;Give me your omni-tool. I&#x27;ll see if EDI and I can do something about that gunship.&quot;</p>
+        <p>Shepard initiated the shuttle&#x27;s engine and mass effect core. With a quiet rumble, the shuttle began to hover. Gunshots were now heard steadily impacting the hull as they flew up out of the cover of the smoke grenade. Shepard powered on the kinetic barriers of the shuttle, and the gunshot noises stopped. The shuttle flew straight up into the night sky, with the police gunship in close pursuit.</p>
+        <p>&quot;Another one incoming,&quot; Shepard said, looking at the radar. &quot;Kinetic barriers won&#x27;t last long. I hope they don&#x27;t have missiles. Is there anything you can do to disable them?&quot;</p>
+        <p>The shuttle violently rocked, almost knocking Shepard and Tali from their seats. &quot;They do have missiles. We can&#x27;t take much more of this.&quot;</p>
+        <p>&quot;I know Shepard, I&#x27;m trying,&quot; Tali said. &quot;They&#x27;re out of range of the omni-tool&#x27;s transmission radius—wait, I have an idea. Just keep flying.&quot;</p>
+        <p>Shepard tried some evasive maneuvers, but shaking them was impossible in the shuttle. Kinetic barriers were almost down, and now three police gunships pursued behind them.</p>
+        <p>&quot;Okay… one second… Got it!&quot; Tali exclaimed. Just then, all the light in the shuttle flickered and momentarily dimmed. The gunships behind them stopped pursuit.</p>
+        <p>&quot;What just happened?&quot; Shepard asked.</p>
+        <p>&quot;I shut down their navigation systems. They&#x27;re stuck, floating there,&quot; Tali answered.</p>
+        <p>&quot;How&#x27;d you do that? I thought you said they were too far away to hack into?&quot;</p>
+        <p>&quot;I used the shuttle&#x27;s power to amplify the signal, and then I used its hull to transmit it as a large burst.&quot;</p>
+        <p>Shepard responded with a proud smile.</p>
+        <p>&quot;We&#x27;ll be exiting the atmosphere in a few minutes,&quot; Shepard said. &quot;I think this is it. We just might be in the clear. I can&#x27;t believe we made it.&quot;</p>
+        <p>Their victory was short lived.</p>
+        <p>&quot;Shepard, there is a problem,&quot; said EDI through the shuttle&#x27;s comm system.</p>
+        <p>Shepard sighed. &quot;What now?&quot;</p>
+        <p>&quot;I&#x27;ve been monitoring Earth defense communications. The local authorities and the Alliance currently believe that the attack on the Cord-Hislop Corporation was some kind of intergalactic terrorism strike. They&#x27;re aware of your shuttle and are tracking it.&quot;</p>
+        <p>&quot;What does that mean for us?&quot; Tali asked.</p>
+        <p>&quot;The Alliance has authorized use of planetary defenses. The orbital platforms around Earth will shoot you down the moment you break through the atmosphere.&quot;</p>
+        <p>&quot;Damn it to hell, why can&#x27;t anything ever be easy,&quot; Shepard said. &quot;There has to be something we can do. Can&#x27;t you hack the orbital platforms and disable the defenses?&quot;</p>
+        <p>&quot;No,&quot; EDI answered. &quot;I&#x27;m afraid that&#x27;s not possible.&quot;</p>
+        <p>Shepard lowered the speed of the shuttle, to give them more time to think before they exited the atmosphere.</p>
+        <p>&quot;I have an idea,&quot; Tali said. She was strangely quiet, as if she herself did not like the idea. &quot;We can use the shuttle&#x27;s FTL to escape. They can&#x27;t shoot us down if we&#x27;re traveling at FTL speeds.&quot;</p>
+        <p>&quot;That is very dangerous,&quot; EDI said.</p>
+        <p>&quot;Yeah…&quot; Shepard said. &quot;FTL in an atmosphere. That is risky. The air compression and dust particles alone could tear us apart. And forget about it if we crash into some debris. The mass effect drive of the shuttle isn&#x27;t powerful enough to lower our mass enough for it to be safe.&quot;</p>
+        <p>&quot;I figure there&#x27;s not much atmosphere left,&quot; Tali said. &quot;Our kinetic barriers are recharged. They&#x27;ll provide some protection…&quot;</p>
+        <p>Shepard looked up ahead. The atmosphere was beginning to fade, and distant stars were coming into view. There wasn&#x27;t much longer left.</p>
+        <p>&quot;What are our chances, EDI?&quot; Shepard asked.</p>
+        <p>&quot;Assuming there isn&#x27;t any space debris in your way, or even any particularly large atmospheric particles, you might survive.&quot;</p>
+        <p>She thought a while longer before finally making her decision.</p>
+        <p>&quot;Good enough.&quot;</p>
+        <p>Shepard turned towards Tali and removed her cracked faceplate. She kissed her, with all the passion in her heart.</p>
+    </div>
+</body>
+</html>
