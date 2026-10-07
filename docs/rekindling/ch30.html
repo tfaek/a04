@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 30: A Day For Two</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch29.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html" selected>Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch31.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 30: A Day For Two</h1>
+    <div class="chapter-content">
+        <p>It was midmorning, and Jane Shepard was adjusting the collar of her jacket for a third time. She’d been messing around with it the whole time in the elevator. Zipped, unzipped, hands in pockets, sleeves rolled. In the end all the shopping she’d done still left her with the wardrobe of an Alliance dockworker.</p>
+        <p>Sick and tired of looking at Cerberus logos, she’d gone and bought nearly a month’s worth of clothes: Shirts, fatigues and boots, varying between black and grey. It hadn’t really occurred to her at the time, but none of it was very stylish outside the confines of a warship.</p>
+        <p>The best she’d managed was to buy a jacket. Black, of course. The sight of a short haired woman in black and grey hit her hard. God, she looked drab. The only thing that broke up her boring silhouette was the addition of a small blue satchel: A last-minute purchase, just to carry a single thing, once. But the thought made her smile. It’d be worth it, just for Tali’s reaction.</p>
+        <p>After everything that went down at the Dantius Towers, it had been a unanimous decision to catch a little extra sleep. Unfortunately, while Samara had her own room, Thane did not. Shepard made the offer; it was her mission after all. After some initial tension, it became quickly apparent that her new guest wasn’t the obnoxious kind.</p>
+        <p>Thane barely said two words to her, sitting himself in a chair for the night. Sleeping in the same room as a master assassin was a… new experience. But in the end, exhaustion had won out. The night had been mercifully dreamless, with morning bringing a kind of anticipation she hadn’t felt in years.</p>
+        <p>Bright-eyed, she’d politely dodged a few attempts to rope her into things. Swapping messages back and forth with her chief engineer, everything fell into place quickly. Tali had reluctantly agreed to meet her at the shuttle bay, setting a time that Shepard was now dangerously close to exceeding.</p>
+        <p>The tightness of new boots accompanied every step as she half-strolled, half-jogged to the meeting place. The crisp, high altitude air bit into Shepard’s face and hands. She clutched the satchel, bracing it against the wind. The bright Nos Astra sun shone down through a blue sky, offering some comfort as she scanned the busy platform.</p>
+        <p>Amidst the hustle and bustle of hotel patrons and staff, it was hard to make out anyone: Asari, turian, salarian; the same faces over and over. The sight of a rising sky-car grabbed her attention, before her eyes finally settled on a streak of bright violet. The unmistakeable colour adorned the realk of a black-suited quarian, waving to her.</p>
+        <p>Shepard’s mouth curled into a smirk. Despite her one-of-a-kind look, Tali had spotted Shepard first. She always had been the observant one. As Shepard weaved her way past a throng of people, she swore that her friend was jittery, bouncing on her toes a little. Dazzling bright eyes looked her up and down, scrunched into happy crescents.</p>
+        <p>“Hey.” Tali greeted her cheerily with another small wave.</p>
+        <p>“Hey yourself.” Shepard chuckled with a smile. “Sorry for the whole “meet up” thing. I just wanted to…” She gestured to her clothes in exasperation. “You been waiting long?”</p>
+        <p>“Only a few minutes.” Tali dismissed her concerns. “You look nice.”</p>
+        <p>“Thanks.” Her reply was more bashful than she intended. “I cobbled together something reasonable. No more Cerberus logos.”</p>
+        <p>“Good.” Tali nodded. “I hated seeing you in that uniform.” She stressed the word with a growl, getting a laugh out of Shepard.</p>
+        <p>“Me too.”</p>
+        <p>Despite her singular gift for bad timing, Shepard had everything else arranged. With her usual flair, she led Tali over to one of the nearby sky-cars. With the current track record for quarian hospitality, she had elected to rent an autonomous model for the trip. It had costed more, but this was a special occasion. Shepard couldn’t even recall the last time she’d spent the day with Tali, the best she could do was a short stroll through the Presidium gardens, two years ago.</p>
+        <p>Even that had been a short affair, just taking the scenic route back to the Normandy, and the mission. But that had also been the first time Shepard had seen her quarian friend’s fascination with nature. For a woman who lived most of her life waist-deep in frayed wires and busted hydraulics, she’d poured over every detail in the flowers and shrubs. Even the everyday, pigeon-like birds that flew overhead had her rapt attention.</p>
+        <p>It had been such a change of scene for both of them, filling Shepard with both joy and sadness. It was nearly impossible for her to imagine. An entire life spent within sterile metal hallways: A life without the feeling of soil between her toes, or pattering of rain on her skin. While she couldn’t share those sensations with Tali, she’d made a promise to treat the young woman to another stroll through leaves and birdsong.</p>
+        <p>She felt something cold prod at the back of her mind. It had taken her two years to see her promise fulfilled. Two years of pain, and loss. Because of…</p>
+        <p>She drew in a short breath, noticing Tali staring at the bag in Shepard’s lap.</p>
+        <p>“You seem a little preoccupied.” Shepard mused, grinning as Tali’s gaze snapped up to her.</p>
+        <p>“Sorry.” She said quickly, bringing her hands together. “I was just… is that bag new?”</p>
+        <p>“It is. I bought it this morning.” Shepard cocked an eyebrow. “That’s not the real question you wanna ask though, is it?”</p>
+        <p>“Well, I’m not giving you the satisfaction now.” She jabbed with a smile in her voice. Crossing her arms, Tali did her best to look aloof. She said the word under her breath, her favourite bit of profanity, but Shepard heard it all the same.</p>
+        <p>“…Bosh’tet.”</p>
+        <p>The pouting was short lived, as the vehicle raced through the busy skies. Soon Tali had returned to her sightseeing, helmet glued to the window. Shepard found herself looking at her, admiring the little details in the quarian’s suit. Something about it was just intrinsically feminine, a woman’s silhouette without question. She wasn’t quite sure what specific part drew up the idea; all of it just came together.</p>
+        <p>Maybe it was the way her hood fell around her shoulders, or the way the fabric snaked across her belly before fastening to her thighs. The way the colours led the eye, piecing this beautiful puzzle into something… magnetic. Shepard tore her eyes away, looking out the window.</p>
+        <p>Her thoughts were back on that cold balcony, looking at the stars. Beautiful. All the things she could’ve said, and the best she could do was a clunky compliment. She was still a damn farmer’s girl. Sophistication and suave always seemed to dry up with Tali, a dubious honour she alone could claim. Tugging the reigns a little, Shepard focused on the buildings and soft music: There was a whole day to make a fool of herself.</p>
+        <p>Their destination was a good deal more impressive than the rooftop park on Liara’s office building. An enormous building set right in the busy financial district, it took up nearly a whole city block by itself. The Nos Astra Natural Museum, one of Illium’s famous cultural marvels. Inside were countless specimens from the planet’s fossil record, along with hundreds of off-world species.</p>
+        <p>The product of donations by dozens of wealthy matriarchs, the building was yet another example of asari dominance in the realm of hearts and minds. However, the museum itself was not where Shepard had decided to bring her friend. Instead, the sky-car descended onto the building’s landing pad. Spanning nearly the entire roof was a large park, doubling as an aviary for people to enjoy flying wildlife.</p>
+        <p>For the museum itself, this addition was just another notch in the belt, but Tali’s eyes were wide with wonder as the vehicle settled on the ground. She hopped out of the car; light on her feet in a way Shepard hadn’t seen since her pilgrim days. Even outside the entrance, several strange creatures could be seen flying overhead. She gawked up at them as Shepard went to join her.</p>
+        <p>“What do you think?” Shepard asked, taking in the view.</p>
+        <p>“It’s amazing!” Tali exclaimed, turning back to her. “I thought we were just going to a park, but this… Keelah.”</p>
+        <p>“Ah, we only got a couple days left. Figured why not go all out?” Shepard shrugged with a smile. “Now… there’s one more thing.” Fiddling with the satchel’s zipper, she readied the contents. “Close your eyes.”</p>
+        <p>She watched those twinkling lights behind the mask disappear, a suddenly blind Tali growing more impatient by the second. Pulling out the expensive cylinder, she guided Tali’s hand to it. She took it carefully, unsure what exactly she was holding.</p>
+        <p>“Alright, open them.”</p>
+        <p>In a flash those shining eyes returned, laser focused on the gift she’d just received. Recognition glowed in them, and she inspected every inch to make sure she was correct.</p>
+        <p>“This is… from the hotel menu… Shepard, this is frigusepto.” She breathed the word, astonished.</p>
+        <p>“It did have an odd name.” Shepard agreed, inwardly relieved she hadn’t messed up the order. The idea of the turians having what was essentially an ice cream drink was adorable for such a militaristic culture.</p>
+        <p>“I-it’s worth five thousand credits!” She held the drink out, shaking her helmet. “I can’t…”</p>
+        <p>“Tali…” Shepard put her hand over Tali’s, pressing it back against the quarian’s chest. “I want you to enjoy it, okay?” She held a finger up to Tali’s mask. “Captain’s orders.”</p>
+        <p>Shepard’s expression softened into a friendly smile. Her hand slowly left Tali’s as the quarian nodded. She could tell Tali was still reluctant, gazing down at the drink capsule like it was made of gold. Her fingers clasped the drinking straw, carefully extending it and bringing the thing to her mask.</p>
+        <p>There was a moment’s hesitation, Shepard dreaded that maybe she’d forced Tali into pretending. The last thing she wanted was to make their time together an obligation. But then the subtle click sounded at her induction port, and Tali took her first sip. She let out a small grunt of surprise, shivering.</p>
+        <p>“So, what’s the verdict? Any good?” Shepard asked casually, enjoying the obvious response.</p>
+        <p>“It’s cold…” She managed through chattering teeth. “But…” Her vocaliser caught a few more greedy sips. “It’s good… really good.” Emerging from her sugary trance, Tali’s eyes squished under smiling cheeks. “Thank you.”</p>
+        <p>“You’re welcome.” Shepard gave her shoulder an affectionate squeeze. “Come on.”</p>
+        <p>With a beep of recognition, the park entrance cleared the pair through as Ascension Hotel guests. Soon they were past the disinterested looking staff and blinking adverts, emerging into tapestry of floral colour. Oxygen making species from all over the galaxy had been planted here, with a new sight no matter where they looked.</p>
+        <p>The path split just ahead of them, forking off in multiple directions. Throwing a dart at the proverbial board, the pair was content to throw caution to the wind. Heading down a path flanked by blue and orange foliage, both Tali and Shepard found their attention pulled a hundred different ways.</p>
+        <p>The humming and buzzing of small, four-winged birds accompanied the shrubs and undergrowth. Flashes of purple and green streaked through the leaves, clashing brilliantly. Clearly accustomed to sapient visitors, the tiny birds hovered in front of them, examining the delighted couple before flitting over to a nearby flower. Tali followed, watching them intently as they drank nectar.</p>
+        <p>Before long, a shadow passed over them. Shepard saw her friend wheel around, her eyes skyward. A huge creature flew overhead, its wingspan easily ten meters across. Lazily it soared through the air, making a wide circle. The magnificent flyer wasn’t alone; it was joined by dozens of smaller animals.</p>
+        <p>Some where like balloons, pushed along by fins. While others didn’t appear to have wings at all, tearing through the sky with jet propulsion. Flocks of every kind manoeuvred and passed through each other, an incredible display of aerobatics.</p>
+        <p>The whole show didn’t just capture the quarian’s attention. Couples, parents and children, almost everyone was swept up in the experience. Seeing so much wonder in one place, it made Shepard smile like an idiot. The feeling only intensified when her gaze finally returned to Tali.</p>
+        <p>She was truly there, cemented in the moment. Between sugary sips and the splendour all around her, the past few weeks… hell, the past two years, they were gone. Shepard saw her slender hands, clutching the drink capsule. She saw that excited bounce in Tali’s step. She saw that brilliant shine in her eyes. All of it was committed to memory, locked away somewhere safe: Her best friend, having the time of her life.</p>
+        <p>As the flocks dispersed, everyone’s attention returned to the trees and the bushes. Families moved on, children resumed play. The two of them strolled, swapping idle remarks and hurriedly pointing out new sights. Looking up into the air, Shepard noticed a strange crackling. Nudging the engineer, she pointed to it.</p>
+        <p>“What do you think that is?” She asked, genuinely perplexed.</p>
+        <p>“Hmm… I thought so.” Tali’s confidence betrayed her technical mind. “I was wondering how they kept the animals above the park. It looks like a mass effect field covers the whole area.”</p>
+        <p>“Like a kinetic barrier?” Shepard asked, getting a nod from her.</p>
+        <p>“Right. Except this one must be tuned for the flight speeds of the animals. That way, air can pass through, but they can’t fly out. The crackling could be gusts of wind, triggering the field.”</p>
+        <p>“Y’know, sometimes I forget you’re a genius with this kind of stuff.” Shepard’s compliment raised Tali’s shoulders.</p>
+        <p>“It’s… just a guess.” She said, embarrassed. “I could be completely wrong.”</p>
+        <p>“Uh-huh, says the woman who built her own stealth ship.” Shepard’s incredulous smirk got a giggle out of her.</p>
+        <p>The two of them came into a large clearing, what must have been the centre of the park. All around were benches and covered picnic areas. The green grass ran all the way to the wooded edge, blending into ambers and blues and reds. For Shepard, it was like finding a little piece of Earth amongst the fantastical landscape. Neither of them were all that tired, but sitting down at a sunlit bench seemed irresistible.</p>
+        <p>Heading over to an unoccupied one, the human and the quarian got off their feet. Shepard wasn’t sure how long they’d been there, but the sun hung high in the sky. It had to be just after midday. The thought was chased away by the feeling of Tali’s wide hips brushing Shepard’s own. She’d always enjoyed Tali’s close proximity, but it had been a long time since that sense of giddiness had been there. It was girlish, completely infantile. Yet it was there all the same.</p>
+        <p>For a moment, she swore that something similar passed through Tali as well: Just a split second of rigidness, easily mistaken or played off. She kept the grin off her lips, a difficult feat. While taking in the surrounding nature, she stole another glance at her friend.</p>
+        <p>From the fitting of her realk to the arch in her back, it was becoming an increasing occurrence. Shepard’s eyes travelled over her hood; down past her helmet to… her eyes, she was watching Shepard. The blood rushed to her ears as she looked ahead, hearing a few nervous sips beside her. She raced to think of something to say.</p>
+        <p>“It’s nice out here, isn’t it?” She remarked, forcing a casual tone.</p>
+        <p>“Yeah.” Tali agreed, lightning fast. “It’s… peaceful.” Shepard saw her loosen up, the tension easing a little. “It kind of reminds me of home.”</p>
+        <p>“You mean the Rayya?” Shepard asked, watching Tali nod as she gazed out at the tree line. “I didn’t know the Migrant Fleet has places like this.” Guilt shot through her as Tali’s shoulders sunk.</p>
+        <p>“Not… like this.” Tali’s disheartened tone surfaced for only an instant. “But there are some places with trees: The garden plaza, where we hold our conclaves, and the grow-rooms for food and oxygen.” She chuckled to herself, lost in thought.</p>
+        <p>“Sounds like there’s a story there.” Shepard surmised, leaning into her eye-line.</p>
+        <p>“There is.” She admitted, relaxing into the bench. “I was twelve, standing in a clean room while mother helped me into my first suit.”</p>
+        <p>“Your first suit?” The realisation hit Shepard hard. “I bet that was a big day.”</p>
+        <p>“Mostly it was just awkward.” Tali answered with a wince. “The last time my mother saw me naked, I was six years old. Then there’s all the… tubing, and…” She shuddered at the memory. “I’ll spare you the details.”</p>
+        <p>“Must’ve been nice though, finally getting out of the clean rooms?” Shepard heard a long sigh leave her helmet.</p>
+        <p>“You have no idea… Keelah, I’d been counting the days. I got the whole day off from school, and there was a celebration planned for the evening. Getting our first suit, it’s like a coming of age for quarians. Mine was stuffy, and it pinched in places, but I didn’t care. As soon as that airlock door opened, I went exploring.”</p>
+        <p>“Little Tali, set loose on the Rayya.”</p>
+        <p>“I went to engineering, flight ops, up and down the elevators. Eventually, I ended up in hydroponics. Going into one of the grow-rooms… I’d never seen anything like it before. There were trees everywhere! I mean; they were all mounted in machines, for oxygen extraction. But to me, it was like another world.”</p>
+        <p>She loved hearing the awe in Tali’s voice. Imagining a little quarian girl, scampering past busy workers and ogling the plants, her bright eyes bugging out of her helmet. It made Shepard’s heart glow.</p>
+        <p>“Sounds like you had your own enchanted forest.” She said warmly.</p>
+        <p>“I never wanted to leave. I ran up and down those rooms for hours, looking at every plant I could find.” She tapped a finger against her mask. “I tested out my suit’s olfactory filters in there. I always hated the smell of the clean rooms; that chemical smell left over by the disinfectants. But the trees… I could taste the difference. It was sharp, fresh air.”</p>
+        <p>Tali hunched forward a little, her eyes settling down on the gloved hands in her lap.</p>
+        <p>“When father found me, he took me to see the Rayya’s gene vault. Inside are a handful of our home world species. Desert grasses and shrubs. He told me about them, about Rannoch. Then he handed me a small pot, with a cloned sample growing inside. It was the most magical thing I’d ever seen.”</p>
+        <p>She rubbed a thumb along her palm.</p>
+        <p>“It was spiky.” She forced a smile. “I could feel the needles poking my glove.”</p>
+        <p>Soon the sounds of the park filled the air, both Tali and Shepard sitting silent. Shepard looked down at Tali’s hands, those slender, delicate hands. That was when it hit her. Her own fingers unconsciously sought each other as the horrific magnitude of the implication crested her mind. It wasn’t just the monotony, or the dangers. It wasn’t the dirty looks or the whispers behind Tali’s back. It was everything. She was cut off from everything.</p>
+        <p>This brilliant, sweet girl couldn’t even find solace in the feeling of her own skin. Years spent in that kind of isolation, breathing filtered air, seeing the world through a pane of glass. Not being able to catch the rain on her tongue, or get a clump of pollen on her nose while sniffing a flower.</p>
+        <p>Not being able to touch someone, or be touched. And she never complained, not once. Shepard could see the enjoyment fading in the quarian. The pain was closing in, threatening to swallow her up. Shepard wouldn’t let it happen, not today.</p>
+        <p>“Come on.” Shepard got up from the bench, offering a hand to Tali. “There’s gotta be a few weird things we haven’t seen yet.” She felt Tali grip tightly as she lifted her friend up, leaving the memory behind on that lonely bench.</p>
+        <p>Together, the pair explored the rest of the park. One path took them down a verdant mixture of blues and purples. A grin plastered itself on Tali’s face when Shepard remarked how Tali could “fit right in” with the colours. It was a dumb joke, but something about the way Shepard said it made her warm all over. Looking around at all those exotic species, spotting something new every few minutes, she wished she’d paid more attention during biology class.</p>
+        <p>Some of the biomechanics were fascinating, especially the jet-powered creatures that whined as they flew by. The part of her brain that never shut off was already hard at work, extrapolating possible methods for propulsion. In the wings, she saw flight surfaces, in the legs, landing gear. It had been the same with the Nualli, born out of all the little observations she’d made on Shepard’s missions.</p>
+        <p>Then that rich, smoky voice would reach her ear. It buried the constant whirring in her head. Everything sputtered and stopped, leaving her in blissful quiet, with only Shepard for company. Shepard must’ve sensed something back on the bench, because it wasn’t long before she got Tali talking again.</p>
+        <p>Shepard asked about Hal, the Neema, everything Tali had gotten up to the past two years. At first, she wasn’t sure where to start. Back then; every day had been tainted, smeared over by what had happened. But as Tali kept pace with her slightly slower human friend, it was like the sky had cleared.</p>
+        <p>With the taste of berries and vanilla on her tongue, she endeavoured to give Shepard every detail. She skipped over the first few weeks, before her passion project had begun. They’d both had enough of nightmares and sadness. Instead, the engineer focused in on her favourite part. Building the Migrant Fleet’s first stealth ship.</p>
+        <p>It wasn’t long before Tali’s hands were gesticulating, and her sentences ran on to the very end of her breath. She recounted every failed launch, every time a piece of plating came flying off. How once in a fit of frustration, she bashed the drive core with a wrench so hard it roared to life. Before long, poor Hal himself entered into the tale: A supposedly “brilliant” kid to help her with the construction.</p>
+        <p>But much like how their own friendship had started, soon she was spilling over with fond words for the plucky pilgrim boy. The whole experience had given her a newfound respect for Shepard, what it felt like having people look up to you. Sometimes it was nice, and authority always came in handy. But there was a lot of worrying too, a lot of sleepless nights.</p>
+        <p>When Shepard did get a word in, it was mostly to compliment her. Hearing Shepard talk so highly of her, it brought a flush to her cheeks. The feeling wasn’t helped but Shepard’s tight-fitting shirt, clinging to her broad chest and the curves of her breasts. Or how Shepard’s new pants definitely fit her better than the old ones. Maybe she was taking advantage of her mask a little too much. It was getting harder not to steal glances at Shepard.</p>
+        <p>Hours went by, though to be honest she barely noticed them. It was only during an absent-minded suck of her straw that Tali looked up to a dim, orange sky. Sadly, there was no more frigusepto; only sweet smelling air escaped the straw now. Disconnecting the drink capsule from her mask, the quarian binned it as they passed through the exit.</p>
+        <p>The sky-car was right where they’d left it; she dreaded to think of the price tag. She was formulating an argument for paying half the bill when she felt Shepard’s strong hand help her into the passenger’s seat. The flight back to the hotel seemed to take no time at all, hazy within idle conversation. Soon she was strutting through the Ascension’s high-class lobby, turning her nose up at the bosh’tet staff.</p>
+        <p>Crammed inside an elevator with several snooty guests, Tali found herself pressed up against her friend. Being so close, the woman’s size was… very apparent. It would’ve been intimidating if not for that bright smile, and the pink in her ears. Practically falling out at their floor, she wrapped up a gym story just as the two of them came to a stop outside her room.</p>
+        <p>“No wonder you can outrun me these days.” Shepard’s compliment came with a rub of her neck. “You’ve got a two year head start on training.”</p>
+        <p>“I could outrun you back during my pilgrimage, too.” Tali assured her, oozing confidence.</p>
+        <p>“Bigger, faster, stronger. Hardly any need for me at all.” Shepard noted, giving a shrug.</p>
+        <p>“True, true.” Tali agreed, having too much fun. “Except… I could use an extra pair of eyes. To laugh at some old holos with?” She unlocked her door, beckoning Shepard inside.</p>
+        <p>“I suppose I could manage that.”</p>
+        <p>Feeling almost weightless, Tali bounded across the room to the bed. She made a show of flopping down on it, patting the spot next to her. Shepard shook her head at her antics before shedding her jacket. With considerably more care, she joined her, leaning against the headboard.</p>
+        <p>Leaning her shoulder against Shepard’s, she brought up her Omni-tool. After a full day on her feet, with aches and pains from chatting instead of fighting, her brain was enjoying a happy fatigue. The RPM was spinning down to zero, and everything felt a little fuzzier.</p>
+        <p>She lazily batted at the glowing gauntlet, swiping to her media files. Scrolling through the different vids and holos she’d taken made Tali a little nervous. Although her memory was excellent, it was hard keep track of just what had been saved… and what had been deleted quickly afterward.</p>
+        <p>Soon the dates were comfortably far away from the present, and familiar sights greeted her shining eyes. Sticking out her tongue, she hovered a finger over an old favourite. The reaction from Shepard was immediate.</p>
+        <p>“Did you have to get yourself in the shot with him?” She asked through snickers, taking in the image of Hal dangling in space by a safety cable. In the corner was a very unmoved Tali’Zorah, eyes mid-roll.</p>
+        <p>“It was an important teacher-student moment!” Tali protested, meeting Shepard’s friendly gaze. “I told him a hundred times to fix his mag-boots. A little reminder goes a long way, your words.” A gloved fingertip brushed the woman’s nose.</p>
+        <p>“You’re right…” Shepard’s concession got a prideful nod of her helmet. “…I should’ve taken a holo of you falling down that sand dune.”</p>
+        <p>“That was completely different!” She felt a very different flush in her cheeks. “Wrex… pushed me.”</p>
+        <p>“Mm-hmm.” Shepard’s unfeeling dismissal made her eyes narrow. She pursed her lips to avoid another unintentional smile. Shepard had gotten enough out of her already.</p>
+        <p>She scrolled through a few more, most of them taken inside the Nualli’s engine room. They were kind of samey, but Shepard was enjoying every one. Sometimes it was Hal, both feet on a wall while he tried to pull something loose. Or of her, head first inside a service tunnel with sparks flying everywhere.</p>
+        <p>One of the images made her eyes widen in horror, swiping past in an instant: Another service tunnel, with half-a-Tali inside. But clearly her horny little bosh’tet of an assistant had been focused on his mentor’s butt. She attributed the… size of it to the camera zoom, trying to ignore Shepard’s stifled giggles.</p>
+        <p>She stopped on a vid she’d taken, of the Flotilla passing a cobalt blue gas giant. She’d been on EVA with Hal, and the wonder in his eyes had been too good to pass up. Slyly looking for her commander’s reaction, she saw that one-of-a-kind smile on Shepard’s handsome face.</p>
+        <p>If there was one thing she loved about Shepard, perhaps more than anything, it was her ability to share in someone else’s happiness. It only added to the strength of Shepard’s jaw, and the heat of her powerful body. Tali let her eyes wander down Shepard’s tight shirt, feeling the electricity dancing across her skin.</p>
+        <p>They shared a few outright laughs as the holos delved back into the SR-1 days. Despite being a little hesitant, Shepard was quickly growing comfortable sandwiched next to her chief engineer. She’d never noticed Tali’s penchant for photography, but Tali had certainly been industrious with her Omni-tool’s camera. Nearly every mission they’d shared together had at least a few snaps; most of them pretty damn funny.</p>
+        <p>Tali had managed to catch Ash with a look of such disgust on her face that Shepard howled with laughter. The fact that Ash was glaring right at Liara didn’t help in the least. Several of them were just Wrex in the process of eating something. Shepard watched Tali’s finger scroll, first past a sandwich on the Citadel, then some fancy finger-food on Noveria. In one of them, he was just eating rocks. She shared a look of bewilderment with Tali over that.</p>
+        <p>There were even a few of Shepard herself, jumping or running or talking with people. She couldn’t help but notice most of them were taken from behind, or the tiny tremor in Tali’s hand as she scrolled through them. By now the sun was long gone, and the room’s soft lights had come on. Shepard was about to check the time when her friend paused on a familiar scene.</p>
+        <p>“Well, well, what do we have here?” She asked rhetorically, gazing lovingly at the two of them posing in the Normandy’s engineering room. “Looks like I found a stowaway.”</p>
+        <p>“This is one of my favourites.” Tali said warmly. “Meeting a big hero, shaking her hand. You know, back before I found out what a bosh’tet you are.” She punctuated the quarian insult with a little poke at Shepard’s cheek.</p>
+        <p>“I know what you mean.” Shepard shot back with a smirk. “After meeting you in that alley, I was certain you were gonna get one of us killed.”</p>
+        <p>“Oh, is that right?”</p>
+        <p>“Yep. A jumpy little quarian with a shotgun as big as she was, figured I’d have two asses to watch for the rest of the mission.”</p>
+        <p>She giggled at the pouty groan beside her.</p>
+        <p>“But… didn’t take long to see how wrong I was. You were a diamond in the rough, I’m not afraid to admit it.”</p>
+        <p>“A… rough diamond?” Tali turned into Shepard, slender shoulders giving way to far softer suit. “I don’t get it.”</p>
+        <p>“Not a rough diamond, a diamond in the rough.” Shepard explained, trying to ignore the fire under her cheeks. “It means you were special, but I couldn’t see it at first.”</p>
+        <p>Tali moved a little closer to her, her eyes losing all the snarky edge they’d held moments ago.</p>
+        <p>“And… now?” Her tone was serious, in a way that caught Shepard off guard.</p>
+        <p>“Now?”</p>
+        <p>She said the word out loud, as if the answer was obvious. What was there to say? Tali had grown into a leader, bringing home a gift worthy of her incredible pilgrimage. She’d saved people’s lives, stepping up to do her part. She’d given up everything, everyone, just to help Shepard again. Who was she now? She was Shepard’s best friend, the one person who truly understood her. The closest thing to family Shepard had anymore.</p>
+        <p>“Now… you’re everything I knew you’d be.” Shepard filled every syllable with warmth.</p>
+        <p>For a while, neither of them spoke. They just lay there, nearly nose-to-nose, in silence. Tali’s eyes were bewitching, holding her prisoner in their enchanting glow. There was something so sweetly familiar in the air, that unmistakable sense of expectation.</p>
+        <p>Jane Shepard was a woman of action, someone whose decisions had shaped the fate of the galaxy. She’d never shied away from a fight, or making the hard choices. But here and now, so close to someone who meant more to her than anything, she was completely torn.</p>
+        <p>They’d been through so much already, with barely enough time to heal. She remembered that time; so long ago now, when last she’d felt this ache of uncertainty. Back then it had been easy, just dismissing what wasn’t there. But the way Tali looked at her… she was paralysed.</p>
+        <p>A beep sounded at her wrist, and she broke away from that entrancing gaze. Eyes heavy, she saw the time on her Omni-tool. It was just after midnight. Tomorrow would be a busy day getting everyone ready. Not something to do on a couple hours of sleep.</p>
+        <p>After that, it was back to the mission: The most dangerous mission of her life. One she’d dragged Tali into. Guilt rose up in her stomach. They’d never even talked about the possibility of… not coming back. Putting on a smile, she leaned down to Tali.</p>
+        <p>“It’s getting late. We should get some sleep.” Her eyes conveyed that shared understanding. Both of them knew the truth of it, duty was part and parcel of military life. She sat up, ready to drag her sleepy body to the door.</p>
+        <p>A hand gripped her arm.</p>
+        <p>It was gentle, but firm. Shepard froze. She knew that the slightest tug away would be enough to release her, but she didn’t move a muscle.</p>
+        <p>“Don’t go.”</p>
+        <p>Tali said the words so quietly they were almost a whisper. Shepard’s mouth opened, but nothing came out. Whatever thoughts, whatever rational objections she could make, all of it was burned away by the sheer need in Tali’s voice. Eventually the answer came to her, the only answer she could possibly give Tali.</p>
+        <p>“…Okay.”</p>
+        <p>Shepard’s heart was racing, letting Tali pull her down onto the bed. She felt a slender arm drape across her chest, just above her breasts, as Tali cuddled up to her. Consumed by instinct, she put her arm around Tali’s shoulder, closing those last agonising inches until they were together. Finally.</p>
+        <p>Lying there, with Tali’s head on Shepard’s chest and the warm softness of the quarian’s body against her own, the whole universe may as well have ended at the hotel door. She was terrified and relieved all at once, caught between the reality of what was happening, and a long forgotten dream.</p>
+        <p>A thousand different scenarios blazed through her weary mind, with the worst ones leading to a permanent rift between them. She wasn’t sure how long she’d been there, tormented by all the terrible possibilities. But when soft snoring came from the woman beside her, the fears began to dissipate. She closed her tired eyes, and focused on that wonderful sound.</p>
+    </div>
+</body>
+</html>

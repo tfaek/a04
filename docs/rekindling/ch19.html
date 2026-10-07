@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 19: The Prize</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch18.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html" selected>Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch20.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 19: The Prize</h1>
+    <div class="chapter-content">
+        <p>Thick bands of muscle tensed and contracted. Short shins and long ankles slowly folded, the typically springy joints aching as they bore the added weight. The practiced dexterity of three-fingered hands held the bar in a perfect point of balance. Slender shoulders felt the uncomfortable presence of a barbell, heavy circular weights slotted on either end. But this wasn’t the first time; this wasn’t even the heaviest weight they’d ever felt. Months of training had sculpted her to handle heavier loads than this, but it had been some time since an actual lifting workout.</p>
+        <p>Tali took a breath, careful to keep her posture and form as she sank into a low squat. Arching her back only slightly, she kept the pose for a moment before rising again with a breathy grunt. It was something she was self-conscious about. The engineer had always been a little vocal with things. It was just the way she pushed through the aches and pains. Some people swore, or pulled faces. She… vocalised. Nothing a quick change of settings to her helmet couldn’t fix. By now it was second nature, a quick tap of the Omni-tool and she was muted.</p>
+        <p>The strumming came in from Shattered Mask’s newest album. Track eight, with the bass solos. She felt the heavy cords hum through her suit as her powerful legs straightened. “Breaking the Seal” had to be the band’s best work in the last five years. Maybe… it was debatable. They had a different drummer now. He was good, but he was no Shel’Toro. Tali had always been proud of her fast hands, but Shel’s became a blur of pure percussion perfection! Keelah, that man had been the one for a long time. The scream of guitars and the myriad sounds of the keyboard were as integral to a song as lungs and a liver, but nothing could replace your heart. And a heart beats.</p>
+        <p>She sunk low again, bobbing her head in time with the tempo. The lyrics came in, Tilla’s throaty performance belted out the absolute poetry she always wrote. Ever since her teenage years, nobody had ever gotten little miss Zorah quite like she did. The kind of Khelish that made a woman sing along, bringing her dangerously close to a weighted high jump. But Tali was a professional, so she kept her composure as her body sunk into another squat.</p>
+        <p>After two weeks of tracking a Blue Suns fleet, this was the first time she’d felt like her old self. They’d gotten the call not long after Jack had come aboard. The thought killed her mood a little. That bald human had been skulking around the ship, back and forth from the crew deck to engineering. She’d bumped into the convict a couple of times, both of which had been marked by an unpleasant scowl followed by profanity. If that bosh’tet called her “dog legs” one more time, she was going to propel her through a wall with them. Tali shook the thought away, that wasn’t the important development after all. No, that prize went to getting her best friend back.</p>
+        <p>Shepard had been a bit funny after their session; it reminded her of their time aboard the SR-1. She’d always been a bit of a “mother hen” with Tali, at least that’s how she put it: Some kind of Earth nesting bird, fat and fluffy. Tali hadn’t gotten the reference to begin with, until one time Shepard had called her a “good egg”. Then it all made sense. Still, the woman had been checking up on her nearly every day. No cabin talks again, but they’d chatted at meals. Sometimes she’d steal Tali away from her terminal, with a very understanding nod from Ken and Gabby. Just a few minutes to talk; ask her how she was going. Of course it was never that casual, Shepard asked about the jumpiness, how her heart was: If things were still setting her off. Before that night, Tali would’ve snuck around the questions. Found some way to blow off the concern.</p>
+        <p>But now, she didn’t want to. Maybe it was more honest to say she couldn’t. Something in Shepard’s blue eyes made her feel safe. After a lifetime of training and self-reliance, the young woman rarely felt the fear of physical danger anymore. She was a deadly fighter and she knew it. But this kind of safety was something else, something more. The warm tone of Shepard’s voice, the intricate tapestry of expressions across her face: A smile, a raise of the eyebrows, the subtle pink blush in her cheeks when Tali noted her worrying. The woman was just too easy to talk to. So she talked, and Shepard listened.</p>
+        <p>The first week had been more of the same. Even after the catharsis of that night in Shepard’s cabin, the quarian had found the same nightmare awaiting her in the sleeper pod. Eyes shot open, and fear clawed underneath the protective barrier of her suit. But Tali had followed her mother hen’s advice: The tears, the urine, and the sickness in her stomach. She recognised them for what they were. This was a sickness, and it would take time to heal. Instead of chasing the fear, she practiced her breathing. Slowly the indigestion eased, and before long her heart was beating normally again. She told herself the truth, out loud in her helmet. The words sounded hollow, but that didn’t make them false.</p>
+        <p>When a flashback ambushed her in engineering, she didn’t ignore it. Instead she stepped away from her terminal, and focused again. These feelings were unwelcome symptoms, so she treated them as such. Gabby had come over to help, being there with her as she rode the wave and calmed herself again. It was something the three engineers had discussed. Letting them in had been one of the hardest parts of her plan, but Shepard trusted them, and if she was being honest, Tali did too. The grounding techniques worked better with others to help.</p>
+        <p>This last week had been an improvement. The nightmares were still there, and so were the moments of stress and anxiety. She’d felt it during a breakfast, sitting across from Garrus. He noticed it immediately. Tali never really considered the big turian to be the empathetic sort. More like a guardian than a talker. Unless he was cracking wise about something, that is. But this time, he asked after her. Not a hint of sarcasm to be found. She would’ve recorded it in her suit logs if she hadn’t found the sentiment so touching. So she told him, and he nodded with a solemn air completely alien to the sniper. His advice was unprompted, and similar to Shepard’s. Clearly the two friends had been through similar situations.</p>
+        <p>She wondered if they’d ever talked about it amongst themselves. Maybe it was an unspoken thing, or a soldier thing. A smile crept on her face. Separated by an entire biosphere of different evolution, and yet the two of them could be siblings for the amount they had in common. The thought stuck with Tali as she took a breather between her sets. She couldn’t deny the feeling for herself either. Being back on the Normandy, even if it was a copy, it felt right. Of course Shepard had found them all another mess of a mission, but she’d forgotten how much she missed the quiet of Shepard’s ship. How much she’d missed a lot of things.</p>
+        <p>Suddenly the rumbling reverb of a turian spoke a prioritised word aloud. Tali’s helmet cancelled out the guitars, leaving the poor girl blue-eared right before the good part. Setting the bar down, she turned to see what had caused Garrus to call out Shepard’s name. The commander was at the punching bag, donning her Cerberus fatigues. Tali made a mental note, before her shining eyes met Shepard’s. She’d been looking in Tali’s direction, and the woman’s face suddenly flushed red. For a moment she seemed stunned, like Tali had caught her doing something wrong.</p>
+        <p>The quarian glanced over at Garrus, who still had his reptilian gaze set on Shepard. His mandibles were crooked into a smirk, an expression the two of them were intimately familiar with. When she looked back to the commander, Shepard was glaring at the turian. She looked angry, almost like she was going to storm over there and thrash the plated scoundrel. Then she retorted with a smirk of her own, the dangerous glee behind her blue eyes put a lightness in Tali’s stomach.</p>
+        <p>“You know what Garrus, I think I do.” She answered the turian’s question. Tali had no idea what they’d been talking about, but the sniper quickly slid out from under his barbell. Zaeed cursed and stormed off, slurring something to the effect of having his time wasted.</p>
+        <p>“How long’s it been since we danced, Vakarian?” Shepard asked, beckoning her friend over to the mat in the centre of the cargo bay gym.</p>
+        <p>“If we’re talking about those convulsions you had at Flux, not long enough.” Garrus answered with a dark chuckle. “Of course if you’re asking for another sparring session, you’ll have to make it interesting. Wouldn’t wanna take you down in front of your crew.” He parted his mandibles fully, flashing a set of pointed fangs. “…Again.”</p>
+        <p>“Two rounds, three for a tie-breaker. Winner gets to choose their prize.” Shepard’s offer raised the turian’s brow plates. He glanced Tali’s way, before looking back at the commander. Something about his look made the engineer uneasy.</p>
+        <p>“Anything?” Garrus asked, his eyes narrowing with sinister glee.</p>
+        <p>“That’s right.” Shepard answered, reflecting the darkness back. “No crying about it afterward.” That got a laugh out of the turian.</p>
+        <p>“You’re on!” Garrus said loudly, getting the attention of everyone in the cargo bay.</p>
+        <p>The two friends began to circle each other. The scene had everyone off their machines and gathered around the newly consecrated “ring”. Jacob leaned over to one of the crew, no doubt placing a bet on who would win. He gave a friendly smile when he noticed her watching him. Tali sneered back, invisible behind the opaque purple glass of her visor. She turned her attention back to the fight, unconsciously sizing up her friends. She could perfectly recall the last time they’d done this, over two years ago now. It had been a month or two into their mission, after Therum but before Feros.</p>
+        <p>Shepard has been asking Garrus about what the turian military was like, another icebreaker between the human and her new alien ally. The answer had been a blunt one, violent. Garrus didn’t leave it there; he praised the discipline of the ship he’d served on, explaining the ins and outs of maintaining standards. When the conversation turned to combat sims and sparring, Shepard had a very bad idea. Turians and humans weren’t too different in terms of raw physical strength, but Garrus had neglected to mention his skills in close combat. The match was over in seconds. Somewhere in the back of her mind, Tali was expecting a repeat of history.</p>
+        <p>“Who’s your money on?” A smirking voice whispered the question in her ear. The engineer recoiled, still acclimating to the peculiarities of the other hooded member of the team.</p>
+        <p>“Keelah!” Tali scolded the woman. “Kasumi, you are going to give me a heart attack!”</p>
+        <p>“I doubt it.” The thief smiled impishly. “Quarians can’t get them. Now, who’s your money on?” She repeated the question, ignoring the roll of Tali’s eyes.</p>
+        <p>“Well…” She looked over the both of them, weighing her answer. “I’ve seen them fight before, and Shepard didn’t win last time.” Her lips pursed and her brow furrowed.</p>
+        <p>“So your money’s on the big guy then?” Kasumi asked, shadowed eyes taking in the turian from behind. Tali nodded nervously.</p>
+        <p>“Shep’ll win, trust me.” The thief decided, utterly confident.</p>
+        <p>“How can you be so certain?” The quarian asked in earnest, sensing some providence in her tone. Kasumi’s impish smile twisted into something devilish.</p>
+        <p>“She’s got more to lose.” She said ominously. Something about her answer made Tali’s setae stand on end. The two of them had talked on occasion, more so recently. The mysterious human certainly had a charm to her, something that made her similarly easy to talk to. But there were times, like now, where the engineer felt like a bug caught in a spider’s web.</p>
+        <p>In a flash, Kasumi was her typical self again, rubbing shoulders with Tali as they watched the match. Garrus and Shepard were closing in now, arms raised and ready for the first strike. The most noticeable difference between the two fighters was their size. Shepard was tall for a human, certainly taller than Tali was: Broad shouldered and chested, her breasts outlined by her fatigues, with thick arms and legs. She almost seemed larger than Tali remembered, burlier. Maybe she’d just never noticed before.</p>
+        <p>Garrus by comparison was taller, but lankier. It usually wasn’t noticeable under his armour, but ever since they’d started regular use of the gym the sniper would shed it to fit on the weight benches. He’d made a snarky remark about handling enough weight already. So instead he dressed in a set of well-worn clothes. Tali surmised they were dress blues, an old pair: One of the downsides of a military culture, the lack of fashion options. Not like she could talk, being a one-suit kinda girl.</p>
+        <p>Both of them had clearly been working hard before the match. Sweat beaded on Shepard’s face and clung the grey clothes to her skin. It even slicked the crown of dark hair on her head, and ran along her jaw. The longer hair had been a new thing with her. Probably enjoying the freedom away from military regulations. Garrus was harder to read. Turians didn’t sweat like humans and quarians, a fact Tali found very strange indeed.</p>
+        <p>But months aboard a ship with Garrus had been an impromptu lesson in biology.</p>
+        <p>She could see it now. He had his mouth open, his mandibles spread apart. It was kind of threatening, showing off a mouthful of pointed fangs. But the leathery skin covering his throat undulated as he fluttered his neck muscles. Garrus was panting, regulating his already high body temperature to account for the straining exercise.</p>
+        <p>At some undetermined distance the turian closed his mouthparts, forming a protective shield of faceplates. The human grit her teeth, leaning forward a little. Two sets of blue eyes watched each other closely, looking for the perfect opportunity to strike. Just a few more steps and Garrus would be in range, using his superior reach to land a safe blow. Shepard slowed her approach, whole body tense. She wanted the turian to close, to make the first move. Something hungry inside the turian wanted it too, and he took that last step. Tali saw the expression change on Shepard’s face a split second before the commander charged.</p>
+        <p>The human exploded forth, catching her opponent by surprise. She was inside the sniper’s reach before Garrus could react. Using the top-heaviness of turian physique against him, Shepard hooked the waist. Swinging around she used her weight as a weapon, bringing them both crashing down onto the mat. The move had been well calculated. The angle of the takedown had left Garrus lying on his side, protecting his large crest from impacting the ground. The human was already on top of him, pinning the turian to the ground and declaring victory.</p>
+        <p>Tali was in shock. The whole thing had been over in seconds, all the anticipation vanished when Shepard made her move. She thought back to the sparring sessions Shepard had done on the SR-1. Most of them had been against Ashley or Kaidan. They’d been similar to this fight. Humans preferred grappling their opponents, using their arboreal physiology to grasp and lock them down in a hold.</p>
+        <p>Despite their similar size, Kaidan hadn’t beaten Shepard once. He’d always hesitated, which the commander always punished. Ashley traded victories, sharing the woman’s aggressive instinct. Though the engineer could tell Shepard held back with Ashley. She’d certainly held back the couple of times Tali herself had sparred with her. Even then, Shepard’s strength was overpowering. Tali had silently prayed Shepard hadn’t noticed her trembling afterward.</p>
+        <p>But this was something else. The quarian looked on as the two friends got to their feet, and the next round started. Garrus took the lead this time, closing off the avenue for another charge and striking hard with hooks and jabs. He was angry, surprised and angry. Shepard blocked and absorbed the hits, just shrugging them off. It was unreal. She watched as Shepard traded blows, taking a left hook to the ribs while delivering a barrage of strikes to the soft spot under the turian’s carapace. Garrus stumbled back, retreating from the close-in brawl. He flared his mandibles, heavy breaths whistling through the openings in his mouth. Shepard didn’t pursue. Instead she held her ground, eyes wild.</p>
+        <p>Tali had caught a couple of the sessions the commander had with Miranda. Their fights had been similarly brutal. The Cerberus woman always attacked, never relenting even when Shepard’s guard was broken: Until one day, things changed. Now when Shepard’s guard broke, the commander just surged through it. It was reckless… and it scared Tali.</p>
+        <p>She could see Shepard readying another charge. Just as Garrus recovered, the human closed in. This time the turian was ready, clamping a taloned hand around Shepard’s throat to stop her. Tali felt her heart skip a beat. Everything seemed to freeze, her two friends locked in a bitter struggle, without an ounce of warmth between them. Then Shepard’s leg shot forward, and Garrus was on the ground once again.</p>
+        <p>The fight was over. Nobody made a sound; the air was thick with apprehension as the two friends lay tangled on the mat. Both of them were panting, slowly coming down from the rush of adrenaline. Shepard stood up first, keeping her attention on the turian at her feet. Tali was already on the mat, padding over to them in a daze. She didn’t know why, but she had to be with them. Her concern spiked when the commander’s human eyes flashed over at her for a moment, before returning to Garrus. The quarian’s mouth went dry as she closed the last few steps. She stood by Shepard’s side, her eyes full of worry as she watched her friend for any signs of serious injury. Garrus’ notice flickered to her, before he closed his eyes and groaned.</p>
+        <p>“You doin’ okay champ?” Shepard asked, leaning down to offer her hand. Tali followed suit wordlessly, still amped up.</p>
+        <p>“You’ve gotten fatter since last time.” Garrus chuckled to himself, gripping his friends’ hands tightly as they pulled him to his feet.</p>
+        <p>“Yeah well, you’ve gotten slower.” The human shot back, patting him on the back.</p>
+        <p>“Tali… come to tag me out?” Garrus’ eyes adjusted to her presence. She side-eyed the commander.</p>
+        <p>“If it means keeping you two bosh’tets from killing each other.” She grumbled sternly, fixing the human with a full-on glare. Shepard gave her a sheepish look, before turning back to the turian.</p>
+        <p>“You need Chakwas to have a look at you?” She asked, the typical Shepard concern back in her voice.</p>
+        <p>“You’d like that, wouldn’t you?” Garrus smirked. “I’m fine.” He glanced at Tali before continuing. “So… what’s your prize gonna be?”</p>
+        <p>“Follow me.” Shepard’s answer was both enticing and ominous at the same time. As if she could read Tali’s thoughts, the woman found her eyes. “Having dinner on the crew deck tonight?”</p>
+        <p>“Yeah.” She suddenly felt a little bashful.</p>
+        <p>“See you then.” Shepard gave her a wink before awkwardly looping her arm around her taller friend. Tali watched the two of them half-limp half-strut over to the elevator, relaxing as the mood returned to normal and the crew went back to their machines. She didn’t hear the footsteps, but she knew what was coming.</p>
+        <p>“Told you.” Kasumi’s voice was in her ear again, the thief had sidled right up beside her. Tali nodded.</p>
+        <p>“How’d you know?” The quarian asked the question half-aware, her mind still occupied with those wild blue eyes.</p>
+        <p>“Like I said…” She gave the young woman a knowing smile. “…She had more to lose.”</p>
+        <p>Garrus followed Shepard as they made their way across the lounge. He sat down on a stool while his human counterpart plucked a pair of drinks from behind the bar. The observation window was closed like usual, giving the room a cozy feeling. He’d asked about it before, but the de facto owner had been adamant about keeping it shut. Kasumi was a strange woman, and her presence made the prospect of getting drunk a little worrying. He was… almost certain she wouldn’t rob him. Most of the time she just talked his ear off, so to speak. The hooded human was a gossip machine. She reminded him of Tali in a way, at least back during her pilgrim days. Maybe it was just the choice of attire, hoods seemed to be in fashion. He nursed a sore spot under his carapace while mulling over the odd choice of reward.</p>
+        <p>“…I don’t get it?” Garrus sounded confused, looking up to Shepard. “Your prize is having a drink?”</p>
+        <p>“You don’t want a drink after all that?” The commander retorted with a grin, plonking down a bottle. Garrus winced.</p>
+        <p>“Don’t get me wrong.” He backpedalled the remark in between swigs. “I’m not complaining. But you didn’t have to fight me to do this.”</p>
+        <p>“You mean kick your ass?” Shepard corrected him, putting her lips to the bottle.</p>
+        <p>“It was a lucky couple of rounds.” The turian bit back. “Mixed in with a little charity.” He added with a smirk.</p>
+        <p>“You left some charitable bruises on me.” The commander groaned, rubbing her ribs. “Gonna take a while to heal.”</p>
+        <p>“Speaking of healing…” Garrus fiddled with his bottle. “How’s she doing?”</p>
+        <p>Shepard’s easy smile faltered. The warm mammalian air she always had about her seemed to dwindle as she looked down at the bar. The soft skin on her face creased and wrinkled as the woman considered the question. Garrus felt his mandibles press against his jaw. It was a stupid question, and a mood killer at that. Despite her pluck and spirited demeanour, Tali was still new to war. That mess on Haestrom was probably the first time she’d ever seen anything like that. It was easy to forget the differences between species. Not everyone was raised in the Hierarchy. He remembered walking the smoking battlefield, crimson blood mixing with white conductive fluid: Pieces of geth and suited quarian scattered around, almost indistinguishable from each other amongst the carnage.</p>
+        <p>He’d heard Shepard call out from the rubble of a building; his turian feet flew up the loose brickwork to join her. Finding Tali alive after all that, it had shaken him. Garrus considered himself a hard turian, but spirits was he grateful that day. Shepard already had Tali cradled in her arms, her human eyes wet with tears as she gently shook the quarian’s limp body. It reminded him of before, when he’d forced himself up to the captain’s cabin. Seeing the woman like that, coming undone, it was hard to watch. Then the quarian wakes up only to have that nightmare follow her. Of course, Shepard had noticed first. The two of them always were dialled in to each other.</p>
+        <p>“She says it’s getting better.” The commander finally answered. “Ken and Gabby are keeping an eye on her, and I check in when I can.” The woman closed her eyes, letting out a sigh.</p>
+        <p>“Is that what you were doing in the cargo bay?” Garrus asked cheekily. “Keeping an eye on her?”</p>
+        <p>Shepard’s eyes shot open, fixed on the turian. That familiar hue of pink was on her fair skin. It reminded the turian of colony markings almost. The human’s mouth hung open, letting out a stifled sound of protest. Then her eyes narrowed, and an emphasised frown scrawled itself on her face.</p>
+        <p>“You’re such an asshole.” She finally said, getting a guttural laugh out of Garrus.</p>
+        <p>“Might want to tell Miranda she’s got some competition.” He suggested, watching Shepard’s brooding vanish behind a look of shock.</p>
+        <p>“You think… Jesus Garrus, me and Miranda?”</p>
+        <p>“You do spend a lot of time together these days.” The turian shrugged. “Long nights doing reports, always getting physical in the gym…” He shook his head in feigned judgement. “Sleeping with the enemy Shepard, what would the Alliance say about that?”</p>
+        <p>“Alright, enough speculation about my personal life Vakarian. That’s an order.” Shepard struggled to look serious. “Besides, we’re up here because of my prize, which doesn’t involve being grilled by old friends.”</p>
+        <p>“Oh? So a drink with your buddy isn’t enough of a reward?” Garrus mused, taking a swig. A moment passed in silence. That was enough to draw his attention. By the time he’d looked over to Shepard, it was clear something was wrong. The human pursed her lips, an expression she always made before bad news. An expression one particular turian had come to be afraid of.</p>
+        <p>“I got a message yesterday… from a Nalah Butler.”</p>
+        <p>Garrus felt a cold pit in his stomach. His taloned hand constricted around the bottle, trembling ever so slightly. His eyes were down on the bar, just as Shepard looked in his direction. Some part of him knew this would eventually come up. But sprits, why did it have to be now?</p>
+        <p>“We’ve been shoulder-to-shoulder for weeks now.” Shepard continued, clearly forcing herself to. “Garrus, you haven’t said a word about what happened on Omega: Or the two years before that.”</p>
+        <p>“This… is what you wanted, isn’t it?” The turian finally spoke, letting out a groaning sigh. “This is the prize.”</p>
+        <p>“Yeah.” Shepard nodded, taking a drink. “No crying about it afterwards, right?” Her tone was almost warm again.</p>
+        <p>“No crying about it afterwards.” Garrus agreed, bringing his own bottle up for a swig. Letting the liquid courage settle in his gut, he gave the human a conceding nod.</p>
+        <p>“Do you remember that conversation we had, right before we landed on Ilos?” He asked, looking at his friend.</p>
+        <p>“Yeah, you were going back to C-Sec after the mission. Reapplying to the Spectres.” Shepard smiled at the memory. It made the turian grimace.</p>
+        <p>“Well, after you…” He closed his eyes, swallowing down the thought. “After the Normandy was destroyed, none of us really knew what to do. Liara left without even a goodbye, and Kaidan was reassigned along with the crew. Tali was… spirits, I didn’t know what to say to her.” Garrus trailed off, his beak clenched tightly. “When she finally left, all I could think about was that damn talk we’d had. So I went back to the Citadel.”</p>
+        <p>“You didn’t go home?” Shepard asked gently. Garrus held his composure. There’d be a time to talk about that, but not now.</p>
+        <p>“No. I could still help, and it felt like keeping a promise.” His explanation got a knowing nod. “By the time I got back there, everyone was still rebuilding. It was chaos, Shepard. C-Sec was in shambles; most of the aid work was coming from the Alliance. Hell, people were working around the clock just to keep the lights on. With a skillset like mine… well, I wasn’t really going to be useful in all that. So I went to Sparatus, thought I’d make my case for Spectre status. I knew the bad guys were still out there, and someone needed to stop them.” He spread his mandibles, giving Shepard a weak smile.</p>
+        <p>“How’d it go?” The smile died on his plated face.</p>
+        <p>“Things… didn’t work out. The councillor didn’t string me along at least. He told me they weren’t accepting any turian applications, not after what Saren had done. I don’t think they even trusted the remaining Spectres anymore. But it wasn’t just that. My application for reinstatement was rejected by C-Sec as well. They were tight-lipped about why, but without a sitting Executor the orders came down from the council. Bastards.”</p>
+        <p>“They stonewalled you?” Garrus nodded, staring bitterly into the pink liquid of his bottle.</p>
+        <p>“That was just the beginning. I bummed around the Citadel for a while, doing odd jobs, trying to help people where I could. But after a few weeks, the newscasts started. They plastered your face on every vid-screen, with talking heads from the Presidium tearing apart your credibility. Soon your Alliance brass joined in, drowning out anyone with a good word to say about you.” He snarled the words. “Those ungrateful fucking rats. I watched them drop the entire investigation, write off the Reapers as a myth and move on like business as usual. It made me sick… so I left.”</p>
+        <p>“And went to Omega?” Shepard’s question got a grin out of the turian.</p>
+        <p>“A shithole full of criminals nobody else could touch, and no red tape to slow me down? It was a perfect fit. The first couple weeks it was just me, tailing gangs and picking them off during deals and shakedowns. But they caught on quick, started sending their own men out looking for me. Most of them were just locals, volunteers with more balls than brains. No real military experience. You can imagine.”</p>
+        <p>Shepard nodded.</p>
+        <p>“Then one day, this guy shows up at my hideout. He didn’t trip the mines, or get his head blown off. At first I thought the mercs had scrounged up enough money to hire a professional. But when I had him in my sights, he asked me if I wanted a partner. That was Butler.”</p>
+        <p>Garrus went quiet again. He wished he’d sent the poor woman more credits. Things would be hard for her, harder than they were for him. By the time he came back to reality, Shepard was eyeing him cautiously.</p>
+        <p>“After that, more people started joining up: Mercs looking for a second chance, ex C-Sec agents… the usual. Ended up with a bunch of misfits you would’ve loved: Had this salarian explosives expert, pretty sure he was STG. My tech expert? A batarian if you can believe it. He could hack systems nearly as good as Tali, though he made up for by being a prickly son of a bitch. Round it out with a couple of turians, and it almost felt like old times.”</p>
+        <p>“How’d you stay fed, take jobs on the side?” Shepard asked.</p>
+        <p>“Kind of. We weren’t really mercenaries per say, at least nobody was paying us. The contract work we did was mostly pirate hunting, slavers, and looting the gang hideouts. None of us got rich, but it wasn’t about that, y’know?”</p>
+        <p>“Sure. You were kicking back.”</p>
+        <p>“Exactly. By then there were twelve of us, and after a few “trust-building” missions together we really kicked back. The Suns, Eclipse, Blood Pack, we were hitting their shipments every day. Picking off their lieutenants, leaking intel to their rivals, for a while we had them killing each other just as much as we were. When they finally did come for us, the table was set. Their troops came into our well-prepared killzone, crossfire and snipers, clean and surgical. They never stood a chance.”</p>
+        <p>“Sounds like you found your calling, Archangel.” The commander gave him a grin.</p>
+        <p>“For a while, yeah.” Garrus agreed. “…Until I fucked it up.”</p>
+        <p>The mood shifted, and the turian already knew what was coming next. He knew what kind of woman Shepard was. A part of him was surprised she hadn’t been lecturing on the virtues of due process. But this time the commander’s face was grim. There was something cold in her human eyes, something new.</p>
+        <p>“Who was it?” The human asked, her voice low. The question surprised Garrus, but he was glad to not re tread that awful day again.</p>
+        <p>“One of mine. A turian named Sidonis.” His mandibles twitched with rage as he spat the name out. “He asked me out on a job, but when I got to the meeting place nobody was there. By the time I got back…”</p>
+        <p>“You sure it was him?” Shepard’s question held no moralising, just the cold tactical appraisal of a soldier.</p>
+        <p>“Absolutely. He took a transport off Omega just before the attack. The bastard cleared out his private accounts and paid someone a lot of money to disappear.”</p>
+        <p>“You know where he is?”</p>
+        <p>“No… not yet.” Garrus dragged a talon along the glass of his bottle, letting the rage bleed out of him. He could see Shepard hunched forward, chewing her lip as she took it all in. The woman looked angry, and tired.</p>
+        <p>“…Why didn’t you tell me?” The question held the commander’s usual warmth again. Garrus was surprised how welcome it was to hear: Enough not to lie to her.</p>
+        <p>“I don’t know.” It was the truth, even if there was more to it. “Two years go by and then you’re back like nothing happened. I guess I just-”</p>
+        <p>“Like nothing happened?” Shepard’s tone changed, sending a shiver down the turian’s spine.</p>
+        <p>“I didn’t mean it like that.” His apology was drowned out.</p>
+        <p>“So what did you mean?” The woman snapped, her bottle clacking down on the bar. “I wake up to find out years have passed. I just barely manage to save the two friends I’ve got left in this fucking galaxy. Now Tali can’t go a night without waking up crying, and you won’t even talk to me!”</p>
+        <p>Garrus didn’t know what to say. Any answer he could think of seemed to dissipate under the glare of those human eyes. He could see it, plain as day. Shepard was furious, the kind of unrestrained anger she’d never shown before. The two of them had their share of arguments, times when the rebellious turian would push things too far and get struck on the nose for it. But the commander had always been composed. If the woman shouted, she did so with intent, if she used violence, it was measured and precise. But this… something in those eyes made the bruises on his skin flare with pain. It took a lot to impress him these days, but it was a rare thing indeed that could scare him.</p>
+        <p>The seconds of roiling silence ticked by like hours, held hostage by the tension. Garrus knew Shepard could keep him there all day, unable to escape. But just as soon as that fury had seized the commander, it was gone again. All at once, the woman’s anger twisted into realisation, and then to shame. Those arresting eyes looked away, reddened and dilated as they disappeared under the palm of her hand. She let out a muffled sighing breath, trying in vain to suppress the trembling. In an instant, the fear was gone, replaced by the care of a friend. Garrus set down his bottle, completely uninterested in finishing it. His full attention was on the human, held back only by uncertainty.</p>
+        <p>“I’m sorry.” Shepard said quietly, wiping her hand across her face.</p>
+        <p>“You okay?” Garrus asked carefully, the whole scene feeling eerily familiar.</p>
+        <p>“Yeah. I just…” The woman shook her head, unsure of what she wanted to say. “I wish I could’ve been there: Just an hour earlier. I could’ve…”</p>
+        <p>She looked at the scars on the turian’s face.</p>
+        <p>“Fuck... I don’t know what I’m saying.”</p>
+        <p>Shepard got up from the bar, slowly walking over toward the door. “I should get out of these clothes, put something clean on before dinner.” She hung in the doorway, giving the turian a smile. “Gives me a chance to get my shit together too.”</p>
+        <p>Garrus watched in silence as the woman he’d looked up to left without another word. The automatic door closed, leaving him all alone. Why hadn’t he said anything? He could’ve opened his stupid beak and at least made a joke. He could feel the rationalisations creeping in already. Shepard was a human, and humans were strange creatures: The instability, the flare-ups, just quirks of her species. Maybe she’d always been like this, just this time the turian was seeing it from the position of a friend rather than a subordinate.</p>
+        <p>It was crap and he knew it. The woman was hurting, from whatever Cerberus had done to her. The thought made his cobalt blood boil. It took considerable effort to remain on that stool, to not stalk down to Miranda’s office and rip her throat out with his fangs. Garrus’ reptilian eyes settled on the half empty bottle of up-marked beer. He grabbed it and downed the piss-flavoured drink.</p>
+        <p>He knew that wasn’t all it was. He knew Cerberus wasn’t the only reason his friend was hurting. And right now, he felt like an idiot.</p>
+    </div>
+</body>
+</html>

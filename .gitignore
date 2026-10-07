@@ -215,3 +215,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 docs/.DS_Store
+
+# regender_v3 cache and unpacked ebook
+outputs/*/v3_work/

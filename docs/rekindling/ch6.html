@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: The Angel&#x27;s Nest: Part One</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch5.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html" selected>Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch7.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 6: The Angel&#x27;s Nest: Part One</h1>
+    <div class="chapter-content">
+        <p>Shepard’s eyes shot open. Letting out a muffled groan, she flinched upward. Taking in the surrounds of her new cabin, the fear began to recede, her heartbeat slowing to normal. She leaned back against the headboard, rubbing her eyes. Struggling to shake the fog from her mind, she tried to recall what had happened. Despite the comfortable feeling, she didn’t remember climbing into bed. She remembered the guilt in her stomach, the silent trip in the elevator. She could still feel the horrible sense of anticipation as she eyed the Project Lazarus data-pad. Shepard reached around the back of her head, her hand finding a small cut where she must’ve fallen. There was a bandage over it, put on recently. Finally, movement from behind the display case caught her eye. At first the woman looked Shepard’s way, then after a pause she approached. Shepard felt so strange, caught dead centre between flight and fight.</p>
+        <p>“Miranda?” She slurred, rubbing her head. “What the hell… are you doing here?” The dark haired woman gave her a confused raise of her brow.</p>
+        <p>“You’re lucky I found you when I did.” She said matter-of-factly. “If it wasn’t for EDI, you’d probably be dead.”</p>
+        <p>“…What?” Shepard was still too groggy to appreciate the gravity of her assessment. Miranda gave a sideways glance back toward the desk.</p>
+        <p>“I take it you watched the vids?” She asked. Shepard’s face twisted, the horrible memories taking shape in her mind again.</p>
+        <p>“Yeah.” Shepard nodded. She watched Miranda approach, graceful steps carrying the woman to her bedside. She’d been focused on her face, the way her dark hair fell messily around her cheeks. It reminded her of that last video, that final nail in her coffin. Miranda reached out a hand, offering her a glass. Shepard eyed her, suspicious.</p>
+        <p>“What’s in it?” She asked. Miranda’s expression shifted to annoyance.</p>
+        <p>“Water.” She answered bluntly. “You’ve been out for nine hours, you should drink something.” Feeling an odd sense of embarrassment, Shepard gingerly took the glass. Sitting up a little, she poured the cool liquid down her throat. The sensation seemed to calm everything down, anchoring the woman back in her cabin. Things were clearing up, and after a couple blinks everything returned to perfect focus. She looked at Miranda, who was leaning against Shepard’s second desk, just a few feet from the bed. Miranda was watching her, icy blue eyes keenly focused on Shepard’s arm, then her hand as she placed the glass down beside her. Then those eyes were on hers again.</p>
+        <p>“What happened?” She finally asked.</p>
+        <p>“EDI contacted me, said your vitals were spiking. By the time I got up here, you were already unconscious. I gave you a shot…” She pointed to an empty syringe on the desk. “…And luckily was able to head off a heart attack. Since I got you into the bed, everything’s been normal. But seeing as I don’t know what caused the episode, I figured it’d be best to wait and see.”</p>
+        <p>“Wait. If I nearly died, then why didn’t you get me to the med-bay?”</p>
+        <p>“Why do you think?” Miranda retorted. “The crew doesn’t need to see the legendary Commander Shepard carried into the doctor’s office on her first day. What do you think that would do to their morale?” Shepard didn’t answer. “Besides, I was prepared for this. Wilson and I ran trials for how you’d react to finding out the truth.”</p>
+        <p>“You mean to finding out I’m a walking corpse?” Shepard said bitterly. “Or finding out I’m not even the same person anymore? That I’m just some… thing, created in a lab.”</p>
+        <p>“You wanted to know the truth.” She reminded her. “You were pretty bloody insistent about it.” She added. Shepard glanced the bruises on Miranda’s neck, barely visible under makeup. The flare of anger died away, and she took a moment to calm herself.</p>
+        <p>“Sorry. It’s just a lot to think about. I guess it hasn’t all sunk in yet.”</p>
+        <p>“I can imagine.”</p>
+        <p>“I… don’t suppose there’s something you could tell me about the project? Something that, I don’t know, explains the process, maybe gives me more context as to who I am now?” Shepard’s hopeful look to her was met by a shrug.</p>
+        <p>“You watched my vid-logs, the details are in there. I spent weeks looking at a foreign thought-pattern living in Shepard’s head, not knowing who you’d be when you woke up. But honestly, it doesn’t really matter now. You’re lucid and you’re rational… most of the time. And you’re the only Shepard left.” Miranda let out a sigh. “We’ll have to make do.”</p>
+        <p>“But, what about Joker, or Chakwas?” Shepard’s question left her mouth before she could stop it. “It’s not right, they deserve to know I’m not really-”</p>
+        <p>“Look, Shepard.” Miranda interrupted her, pinching the bridge of her nose. “Dwelling on this isn’t going to help anything. Every minute we waste here, more people are being abducted. You need to focus on the mission, everything else is just a distraction.”</p>
+        <p>Shepard hated hearing it, but she gave a half-hearted nod of affirmation, vexing the woman even more.</p>
+        <p>“Why don’t we start with something tangible?” She suggested. “Something you can improve on, like your aim, which is terrible.” She added, sternly.</p>
+        <p>“Your hands shake when you’re sighting down a target, it’s making your shots go wide. Then there’s your biotics, which you can barely control. You’ve got L5n’s Shepard; you should be outputting a lot more dark energy than what I’ve seen. The best you managed was charging into that quarian kid. I’ve yet to see you project anything, or manipulate your environment.” Her angry tone actually made Shepard chuckle.</p>
+        <p>“Anything else?” She asked, a small smile creeping on her face.</p>
+        <p>“You’re coordination and fine motor control. You struggle to put on your hard-suit, heat-cycle your weapons, or operate your Omni-tool. You’re also too slow. This body is capable of operating well above the human standard for extended periods, yet you struggled to even jog on Freedom’s Progress. You can’t land your punches, and you can’t translate force properly.”</p>
+        <p>“Maybe I just need the right target?” Shepard jabbed, looking at her. Ignoring the comment, Miranda moved closer to Shepard, getting down to her eye level.</p>
+        <p>“This isn’t a game, Shepard. Your current state of ability is unacceptable. We… you, need to be doing better than this, and fast. It’s easy to sit here and giggle about it when there’s no one relying on you.” Her voice turned serious. “But if you fall apart out in the field, people are going to die.”</p>
+        <p>Her last sentence came out meaner than she meant it, but Shepard’s expression tightened. She didn’t look at Miranda, but she gave the smallest nod.</p>
+        <p>“…I know.”</p>
+        <p>Unwilling to push any further, Miranda knelt there for a moment, not quite sure why. When she finally stood up again, her gaze lingered on Shepard before she began to walk away. Working up the strength to say the words, Shepard called out to her.</p>
+        <p>“Thanks… for saving me.” The gratitude sounded like it came from a woman twice her age.</p>
+        <p>“We’ll be arriving at Omega in a couple of hours. You should have something to eat.” Miranda’s last suggestion came without a hint of malice as she left her alone in the room.</p>
+        <p>Shepard remained on the bed, running her hands through her short, crew-cut hair. In the absence of talking or music, she could hear all the little sounds the Normandy made: The bleeps of technology echoing up from the CIC, or the soft hissing of air travelling through the sprawling network of pipes. Even below that, there was a constant hum of energy, the signature of being aboard any starship. Nothing was ever static, never still. No matter where they were, the ship itself was alive, working every moment to protect her from certain death only a few feet away. She lifted her head up, out of her palms and took in the room again: The commanding officer’s quarters, Shepard’s quarters.</p>
+        <p>It all felt so familiar, sitting at her bedside, mind filled with all manner of doubts and niggling fears. The turmoil she felt, it reminded her of Saren, of Virmire. Things had seemed so dark back then, when Ash died. Like the dysfunctional little world she had aboard the Normandy was starting to fall apart. Two years ago, alone in her room, Shepard couldn’t see a way out for any of them. But she remembered a friend, someone who pulled her out of that pit. Under those twin stars, things had been warmer, brighter, hopeful. Whether she believed it or not, Miranda was right. She was the only Shepard left. And it would have to be enough.</p>
+        <p>The commander enjoyed a few minutes under the hot water of her shower before getting dressed. Getting into the elevator in a fresh uniform, she wasn’t sure how much she liked the white and grey colour scheme. Beyond the disgust of wearing Cerberus colours, the boots seemed a little too big. It wasn’t really a problem, but she made a mental note to do some clothes shopping whenever she got to the Citadel. The crew deck was busy, with morning shifts starting to kick off; everyone was chowing down while they could.</p>
+        <p>Mess Sargent Gardner, or just Rupert to most of the crew, had a smile on his face when he spotted Shepard approaching. He greeted the commander with just as much enthusiasm as the first time they’d met, thrusting a bowl of food into her hand. Along with another glass of water, Shepard sat down at one of the tables, offering good mornings to the other crewmates sitting nearby. She was only a couple of spoonfuls in to what was… not the worst stew, when she noticed a woman sitting across from her. Dressed head to toe in black, with a large hood obscuring her face, only her smile peeked through.</p>
+        <p>“Morning Shep.” She said cheerfully.</p>
+        <p>“Uh… good morning.” She returned, a little put off. “I don’t remember seeing you yesterday?”</p>
+        <p>“Don’t worry, I didn’t take it personally.” She assured her. “You seemed pretty exhausted after your visit to Miranda’s office.” Her comment woke Shepard right up. Shepard’s brow furrowed unconsciously.</p>
+        <p>“You’re… very perceptive.” She noted, unsure if she should reprimand her or not.</p>
+        <p>“It’s one of my many qualities. Kasumi Goto.” Her introduction was met with realisation.</p>
+        <p>“Ah, I take it you’re the master infiltrator the Illusive Man mentioned.”</p>
+        <p>“I am.”</p>
+        <p>“I guess that explains why I didn’t hear you come over.” Shepard observed.</p>
+        <p>“Not exactly.” Kasumi corrected her before vanishing from the chair. “You didn’t hear me, because I was already here.”</p>
+        <p>“Cloaking tech? Long period models are hard to find.”</p>
+        <p>“They certainly are, luckily finding things is another one of my talents.” Kasumi’s chipper tone was accompanied by her smile again, her sudden reappearance startling a nearby crewman.</p>
+        <p>“So, what’s your specialty? Assassination?”</p>
+        <p>“No. Dead people don’t replace their valuables.”</p>
+        <p>“So you’re a thief then.” Shepard surmised. Kasumi’s painted lips opened into a toothy grin.</p>
+        <p>“A master thief.” She corrected her.</p>
+        <p>“No offence, but I’m not really sure how a master thief ends up signing on for a mission against the Collectors.”</p>
+        <p>“You’d be surprised how easily burglary turns into sabotage, all I have to do is leave a bomb behind.” Kasumi’s explanation got a smile out of her.</p>
+        <p>“I suppose that’s true.”</p>
+        <p>“Besides, along with a freighter load of credits, Cerberus promised your help on a little job I’ve got planned.” Shepard became serious again, not liking the idea of being roped into even more things behind her back.</p>
+        <p>“What kind of job?” She asked, looking at Kasumi incredulously.</p>
+        <p>“A heist.” She beamed. “I’m still working out the details, but trust me, you’re gonna love it.”</p>
+        <p>Shepard was more than a little surprised by her new friend. Kasumi seemed far too friendly for someone who was such a prolific criminal. Several of her proudest moments were like something straight out of a vid, with betrayals and shootouts and slipping away by the skin of her teeth. One moment of defying the odds after the next, and all of them tinged with that same fun upbeat feeling that emanated from the woman. Shepard couldn’t tell if what Kasumi told her was true or not, but the longer she listened, the less she cared.</p>
+        <p>By the time the last mouthful of breakfast was gone, she hadn’t noticed Kasumi had carried her through Rupert’s meal without a second thought to the bland taste, bordering on unpleasant really. When Joker piped up over the PA announcing their arrival to Omega, Shepard asked the thief if she’d be tagging along. Kasumi assured Shepard that she’d be at the airlock, ready to go. Then she was gone, leaving the woman to carry her bowl back to the kitchen while mulling over just how much Kasumi’s pet name was starting to grow on her.</p>
+        <p>If the Terminus Systems had a single focal point, a place that so perfectly captured the lawless, deadly mystique of the great swath of contested space and pirate hunting grounds, it was Omega. As the Normandy approached, several of the crew took in the sight from the observation decks. Nestled within an endless shoal of asteroids, there was a rock larger than any other for hundreds of kilometres. From a distance, it didn’t look much different from the endless horde of cousins drifting around it. But up close, the visage was something to see.</p>
+        <p>The asteroid itself had been nearly sheared in half, with one side being nothing but cratered rock. But built into the flattened surface of the other side, was a truly enormous collection of spire-like buildings, stretching down from the bedrock to nearly the entire length of the asteroid over again. Spiny kinetic barrier emitters encircled the huge city, jutting out from the circumference of the rock like the bare spokes of a wheel. A ring of red light ran around the perimeter of the station, separating the emitters from the buildings themselves. Shepard wasn’t sure if the light was anything functional, or just the biggest neon sign in the galaxy. As they passed through Omega’s mass effect field, the cone shape of the station became unrecognisable. Instead, now it was just a forest of hundreds of towers, all hanging from the stone high above. Deftly flying the Cerberus frigate through the increasingly clustered buildings, Joker settled the ship into a berth.</p>
+        <p>True to her word, Kasumi was right there beside Shepard as the airlock doors opened. Miranda had changed since Shepard last saw her, donning her suit of black and yellow Cerberus armour, similar to Jacob’s. She gave the thief a sideways glance, but Kasumi didn’t seem to notice. Led by the commander, the squad soiled their boots on the grimy docking bay floor. No sooner had the airlock shut behind them, then the thief shot Shep a grin, before flickering out of sight.</p>
+        <p>“You plan to stay cloaked the whole time we’re here?” Shepard asked.</p>
+        <p>“Of course. It helps my crippling social anxiety.” Kasumi’s voice joked back.</p>
+        <p>Succeeding in getting a smile from Shepard, she trailed behind the trio at a distance. Shepard was happy to let her hide; having someone no one could see was an obvious benefit in a place like this. There were other benefits too, ones that the commander didn’t know about: Personal, Jacob-focused ones. They’d had barely gotten more than halfway down the corridor when a jittery salarian approached them.</p>
+        <p>“Ah, welcome to Omega!” He spoke fast, gesturing around at the grease-smeared docking bay walls. “You’re new here aren’t you, I can always tell, allow me to-” His big speech trailed off when he noticed a large batarian stride up next to him. Shepard supressed that tingling she got at the back of her neck whenever she saw the four-eyed aliens.</p>
+        <p>“Oh!” The slarian stuttered. “H-hello Moklan! I was just-”</p>
+        <p>“Leave, Fargut. Now!” Moklan’s deep, growling command made the jabbering Fargut flinch.</p>
+        <p>“O-of course Moklan, whatever she wants!” The salarian offered a frail salute before scurrying away. Shaking his wrinkled head dismissively, the batarian turned his attention back to the three humans.</p>
+        <p>“Damned scavengers. Welcome to Omega, Shepard.” Moklan’s greeting was punctuated by an intentional showing of his needle-like teeth.</p>
+        <p>“I’m surprised anyone here would know about me.” The commander noted.</p>
+        <p>“Spectres are always worth knowing about, dead ones especially.” Moklan explained. “Aria T’Loak wants to know what brings the most famous dead Spectre to her rock, I suggest you go to Afterlife, and put her mind at ease.”</p>
+        <p>“I didn’t come here to meet some two-bit crime boss.” Shepard retorted. The batarian gave a snarling laugh.</p>
+        <p>“If I were you, Spectre, I wouldn’t keep her waiting. You wont like it if she finds you first.” Moklan’s thinly veiled threat was accompanied by another croaking chuckle. Not waiting for a reply, the batarian made his way back toward the docking bay exit.</p>
+        <p>Emerging from the bay, the squad walked out onto a large, bustling thoroughfare. Members from every species crossed back and forth in front of them, a collection of poor, scared people. The orange-tinted skyline peeked in through the cracks between the towers. Off to the left was a busy sky-car lot, with shuttles coming and going. Off to the right, the seedy street disappeared down a flight of stairs at the far side, towards a market district. But dead in front of them was the thing that utterly dominated the area. A massive club, with a line of hopefuls congested in front of an annoyed elcor. The entrance was flanked by six armed guards, twitchy and eyeing everyone who walked past them. Ugly brown metal was hidden beneath blazing orange neon, with a stuttering image of an asari dancing in skimpy leather. Beneath the tacky spectacle, a word burned brightly, calling the squad towards it.</p>
+        <p>Afterlife.</p>
+        <p>Making their way past the elcor bouncer, the squad received confirmation from one of the gunmen. They were indeed expected. A short walk down an entrance hallway was broken up by the angry stares of some disgruntled batarians. Despite the immense temptation, Shepard kept her gun holstered. The door on the far side bore the club’s name again in miniature, a final threshold to turn back from before someone entered the infamous den. The doors slid open, and immediately the loud thumping of drums and synthesisers filled their ears. The music was loud, overpowering the senses, aided by the soupy hot air and the brilliant flashing lights and lasers.</p>
+        <p>The main room was cavernous, a circular mingling area with chairs and booths around the perimeter, some of which were just there for ogling the dancers. Up above the main floor was a large central platform. On top danced a group of asari women, their brilliant skin shining electric blue under the dazzling lights. In just one brief moment, Afterlife demonstrated why it commanded lines of people outside its doors. Even in the bowels of the Terminus Systems, a place like this had everyone wanting to visit.</p>
+        <p>The squad headed around the outer part of the circular room, avoiding the larger dancing groups. They briefly passed the bar, catching a glimpse of the frustrated turian working there, before getting to the far side. From the main floor, they could see a little raised booth above, no doubt the nest for the club’s owner. With a nod from the guard, the three humans made their way up the stairs, finally laying eyes on Aria herself. The asari woman was looking out at the dancers, her back to Shepard and the rest of her team. Shepard approached alone, climbing the handful of stairs before Aria spoke.</p>
+        <p>“That’s close enough.” Even in the throng of the club music, her voice carried perfectly. Suddenly the five relaxed aliens surrounding her burst to life, and the squad were looking down multiple gun barrels each. With a tilt of her crested head, she signalled her batarian bodyguard to approach.</p>
+        <p>“Stand still!” He ordered Shepard, activating his Omni-tool. The demanding tone of the four-eyed prick, along with the stench of his breath, was all the excuse Shepard needed. She grabbed the alien by the front of his armor, pulling him in close.</p>
+        <p>“Try it and you’ll be scanning the inside of your colon!” She threatened; causing the batarian’s eyes to bulge. The asari’s melodious laughter filled the booth.</p>
+        <p>“I’d almost pay to see that!” She admitted. “But unless you want your brains mopped off the floor, you get scanned.” Her warning was punctuated by the nearby turian pressing his carnifex pistol to Shepard’s temple. Shepard let the batarian go, shoving him back. In a more hurried fashion, the guard finished his scan before turning to Aria.</p>
+        <p>“They’re clean.”</p>
+        <p>Brushing the guard aside, Aria walked straight up to Shepard. Like any member of her species, Ms T’Loak was beautiful. Radiant purple skin contrasted against the white of her jacket and the black of her skin-tight one-piece. Her face was angular and refined, with a large tattoo running across her hairless brows, before curving down her cheeks and along the edge of her scalp-crests. She had deep, indigo eyes, sparkling with flecks of white. Her perfect features gave nothing away as she inspected Shepard.</p>
+        <p>“So…” Aria finally said, taking a step back before reclining into her couch. “What can I do for you?”</p>
+        <p>“I thought you were the one looking for me?” Shepard replied, her arms crossed. Aria gave her a mirthless smile.</p>
+        <p>“I like to keep an eye on newcomers, never know when an opportunity might walk in.” She gestured her to sit. Shepard made her way over to a corner couch, shoulder checking the batarian before sitting. “Maybe I can help you?”</p>
+        <p>“Awfully generous of you.” Shepard noted, feeling more uneasy by the second.</p>
+        <p>“Not at all.” Aria said, her lips stretching into a smile. “See, I get the feeling you’ve come here looking for someone. And if that’s the case, then my station is probably better off without them.” She raised a tattooed brow, tilting her head a little.</p>
+        <p>“Ever heard of Archangel?” She asked. Aria’s demure expression immediately hardened.</p>
+        <p>“You want him dead too?” She asked. “The little do-gooder has been a thorn in my ass since the day he showed up here.”</p>
+        <p>“Why’s that?”</p>
+        <p>“He’s a delusional idealist, with a gang of sycophants. He’s been stirring up the Big Three these past few months, trying to right Omega’s wrongs…” She shook her head in disgust. “It’s catching up to him.”</p>
+        <p>“The Big Three?” Shepard asked.</p>
+        <p>“The Blue Suns, Eclipse and Blood Pack. Major merc gangs here. Normally they stay out of each other’s way and send their tribute to yours truly, but this damn turian has been hitting them nonstop.”</p>
+        <p>“Just because he thinks it’s right?”</p>
+        <p>“Yes.” Aria sneered. “It’s getting… insufferable.”</p>
+        <p>“He sound’s perfect. Where is he?”</p>
+        <p>“The mercs have got him pinned down at some dingy apartment block not far from here. He’s cornered, but as usual those idiots are having trouble finishing the job.”</p>
+        <p>“Sounds like I need to get moving then.” Shepard gave the asari a nod as she got up.</p>
+        <p>“You really want to find him? Go sign up. The Blue Suns are recruiting local talent downstairs. Just use small words, you’ll fit right in.” Aria gave the human a wink.</p>
+        <p>“Thanks for the information.”</p>
+        <p>“Thanks for the pest control.”</p>
+        <p>Even from a brief interaction, it was obvious to her just how dangerous Aria was. It was always a safe bet to treat any asari with caution, but this woman? It was blindingly obvious. Hundreds of years of experience, no doubt all of it violent, sat comfortably behind those sparkling eyes. Shepard was grateful that whatever Aria’s illegal and murderous interests, she didn’t seem the least bit interested in her. Sliding down the visor of her helmet, Shepard figured it would be a safe bet to look like a suit of armour when dealing with the mercs.</p>
+        <p>The recruiting centre was easy to spot; one of the Blue Suns troopers was lingering out the front, looking around for potential. A grin was already forming on his thin lips when Shepard and her squad walked up. Hidden beneath her breather helmet, the commander’s question crackled out from the vocaliser.</p>
+        <p>“I hear you’re recruiting?”</p>
+        <p>“Hmm.” The merc pretended to size them up, paying special attention to Miranda before answering. “Why don’t you step inside?” The three humans headed down into a small room, stopping behind another recruit. A large batarian in blue and white armour was discussing the terms. Eventually he sent the recruit away, waving them over.</p>
+        <p>“Don’t think I’ve seen you around.” The recruiter noted, his tone becoming standoffish.</p>
+        <p>“We’re here for Archangel.” Shepard answered. The batarian narrowed his four eyes.</p>
+        <p>“This is a local problem, tourist. Why don’t you go buy yourself a dance?” The recruiter was about to shoo them away when a loud, gravelly voice filled the room.</p>
+        <p>“Bathok, the hell is your problem?” A grizzled man in patchwork, yellow armour sidled up beside the commander, resting an arm on her shoulder. “I told you I had good help coming, didn’t I? Look at this lot, fucking mean-looking aren’t they?” The man’s scarred face broke into a snarling smile, his one white eye vainly looking them over.</p>
+        <p>“I’m not getting my pay docked because you brought in freelancers from off-station.” Bathok protested.</p>
+        <p>“You aren’t gonna find any decent guns in this shithole, just kids and vorcha. What are you planning on doing when the idiots run out, eh? Tarak’s gonna have your arse out there next.” The man’s threat seemed to do the job. With a frustrated groan, the batarian tapped away at the console.</p>
+        <p>“Fuck… fine. Just get them over there.”</p>
+        <p>Keeping his arm around Shepard, the man walked the two of them back out into the club proper. Releasing the commander from his grasp, he leaned in close.</p>
+        <p>“Shepard, right? Zaeed Massani.” He extended his hand, getting a shake for his trouble. “Your Illusive Man said I’d find you here, looking for Archangel.”</p>
+        <p>“Thanks for the help back there.”</p>
+        <p>“Consider it customer service. You gotta find your man, and I gotta fulfil my contract.” Zaeed looked around the club.</p>
+        <p>“No point waiting around eh? Besides… I can’t stand this music.”</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 46: Problems and Solutions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch45.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html" selected>Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch47.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 46: Problems and Solutions</h1>
+    <div class="chapter-content">
+        <p>She could feel them, burning under her skin. Reanimated flesh seared by an incomprehensible tangle of cybernetics. Everything felt heightened, and even the steady beat of her new heart had given way to pounding. When the message had ended, Tali’s bright eyes had searched for hers. She saw it all, behind the mask: Uncertainty, confusion, anger… fear. They mirrored her own. But then those beautiful eyes had widened, and with just inches between them, Shepard had caught the red glow of her scars in Tali’s visor’s reflection. Worse, she’d seen two points of crimson light, glinting back from the glass. Tali’s reaction had been immediate, as had her attempt to stifle it. Shepard couldn’t blame her. Like this, she was frightening: Too clearly the cobbled together being of the present, and not the woman of the past. Tali had followed her out of the airlock, ashamed silence following a stuttered apology. It only bit down harder.</p>
+        <p>Now she stood in the Comms room. Controlled breaths left flared nostrils, simmering rage roiling like waves inside her. Of all the times, of all the places, that bastard chose the very worst. All for something as petty as… Shepard’s jaw muscles flexed, gritting her teeth. Something colder lurked below the fire, something closer to the truth. Together those feelings circled in her mind, smearing the world around her. She caught glances from the squad, eyes not quite on hers. Shepard’s stomach turned at the thought of looking in a mirror. It only fed back into the burning scars, and the pain began anew. Aria T’Loak strutted back and forth, laying out the details as she had back in Afterlife.</p>
+        <p>“Multiple turian vessels, STG strategic oversight, presence of undisclosed dreadnought… problematic.” Mordin met her eyes cautiously. “Many variables Shepard. Direct engagement high-risk, killing of personnel may attract reprisals. Political, military, impossible to guarantee total blackout of data.”</p>
+        <p>“You’re right.” Shepard nodded. “Which is why we won’t be killing anyone.”</p>
+        <p>“What?” Aria’s gaze snapped to Shepard.</p>
+        <p>“Aria…” Something in Shepard’s voice ceased the tirade, heat criss-crossing Shepard’s cheeks. “…You agreed to the terms: My mission, my rules. You’ll get what you want, but we do this my way.”</p>
+        <p>Aria balked at the non-lethal approach. But Omega was a rapidly vanishing dot in the black, and a couple of lackeys weren’t enough to match the hand picked members of Shepard’s team. Every pair of eyes was on her, Bray and Ahz. Shepard knew Aria had no room to argue.</p>
+        <p>“Fine.” She scoffed, rolling her eyes.</p>
+        <p>“Now, military or not, these ships will be vulnerable to boarding.” Shepard started. “Without a breaching shuttle, we’ll be going EVA for the assault.”</p>
+        <p>“Bloody suicide.” Zaeed chuckled.</p>
+        <p>“Normally, yeah. But the Normandy can get us in close. Close enough to disable the squadron before they can react. When they can’t burn or call for help, we’ll board them.” Shepard clarified.</p>
+        <p>“Advise against using main airlocks. STG command authority, likely to be booby trapped.” Mordin warned. “Standard tactic for repulsion of boarders. Standard greeting as well, good for negotiations.” He added perkily. “Shows initiative!”</p>
+        <p>“Then we’ll have to cut our way in.” Shepard noted, glancing to Tali. “Doable?”</p>
+        <p>“I can try retrofitting the laser cutters in Engineering. They’re workshop tools, not purpose built for breaching. And military hull plating is hardened against breach cutting…” She was lost in thought for a moment. “Give me a few hours, and they’ll be ready. I promise.” She said with fervour. The smallest smile tugged at the corner of Shepard’s mouth.</p>
+        <p>“Still leaves the small matter of actually taking the ships.” Miranda noted. “It’d be hard enough normally, let alone non-lethally.” She gave Shepard a look. “Not much room for finesse in close quarters.”</p>
+        <p>“Ah, idea on that front!” Mordin piped up. “Study of seeker swarms extensive, discovered secrets behind Collector sensor technology, good for jammers. Also discovered means of immobilisation: Technological duplication of stasis effect, unlike previous examples seen before. Difficult to reproduce, however requires only simple eezo core for power. Can construct launched devices for combat. Should freeze targets and remove awareness. Novel technology, no counter for it.” He ended with a sly smile.</p>
+        <p>“What’re the rest of us gonna be doing on this snooze-fest?” Jack asked, slouched forward.</p>
+        <p>“You, Miranda and Samara will each be assigned to a boarding team. Keep a barrier up at all times, plenty of kill zones inside a ship.” Shepard eyed the three of them. “I’ll need your A-game on this one, could be life and death.”</p>
+        <p>“Playin’ defence… hoo-ray…” Jack crossed her arms.</p>
+        <p>“If an enemy gets too close, take em down gently.” Shepard held her gaze. “I don’t mind a few broken bones, but no killing. Understood?”</p>
+        <p>“Aye-aye, Cap’n…” She gave a half-hearted salute.</p>
+        <p>After a solid half hour of tactics and manoeuvre discussion, the briefing came to an end. Piloting specifics were already being relayed to Joker, along with the target location. Everyone knew their job, and just over a day to get everything ready. Tali, Jacob and Mordin were the first to leave, without a minute to waste. Shepard’s lips thinned as her girlfriend passed her, sharing a knowing look. They couldn’t risk a touch, and that alone was enough to prod her nerves. Once the others had their orders, the room was emptied down to just Shepard and the newest arrival. Legion stopped when she gestured to stay, its blue optic widening slightly. Something unspoken passed between them.</p>
+        <p>“Shepard-Commander, we have not been tasked a specific role.” The machine glanced to the doorway. “You did not mention the role EDI would be tasked, either.”</p>
+        <p>“Not in front of Aria, no.” Shepard nodded. “She already knows enough. No need to play our hand fully.”</p>
+        <p>“That is dishonest.” Legion noted. Her face tightened.</p>
+        <p>“No choice. This mission will be dangerous, and we can’t trust Aria to keep her side of the bargain. Means we have to keep a few cards close.” Shepard searched for understanding, but found none. “You’ll be taking point on this mission. EVA to the dreadnought itself, then we’ll tight-beam EDI’s cyber attack to you. Feed it into the ship through a hard-line connection, and then assist the Normandy in targeting the other vessels. Once the enemy’s been disabled, my fire team’ll join you and take the dreadnought.”</p>
+        <p>“Acknowledged.” Just like that, not even a hint of argument. It simply obeyed in cold monotone. Not a hint of shared passion or intrigue. It bothered her less now, but it still made her uneasy. “We will begin preparations for safe data channelling.”</p>
+        <p>“One more thing.” Shepard spoke again as it moved to pass her. “Tali’s gonna need some help, getting the cutters ready.” Legion stopped dead, but didn’t look back at her. “We’ve only got a few hours to get ready, barely a day. Mordin’s got EDI to help with number crunching on the tech, so I need you down there, lending a hand to Tali. Whatever she needs, heavy lifting, calculations, recording data, second opinions. She needs it you do it, understood?”</p>
+        <p>Something happened that surprised her. For a moment, legion simply stood there, as if it hadn’t heard the order. The characteristic immediacy of a response was absent. In that silence, she noticed the smaller details. A flex of the machine’s head flaps, a constricting on the optic. It stared out the doorway, transfixed.</p>
+        <p>“Legion?”</p>
+        <p>“Acknowledged.” The geth’s answer was sudden and heartless. Then it marched out toward Engineering, back to its usual rhythm. She gave it some time to slip away, readying their destination in the CIC’s galaxy map. Kelly said hello, though her trademark casualness was dimmed by the new arrivals. She seemed nervous, an understandable feeling.</p>
+        <p>Weariness gripped the Commander, one that hadn’t been present since her first days awake. Hours had gone by without food, something she’d neglected during her time on Omega. For the most part she’d been eating less anyway. Her body seemed to metabolise what she did eat very effectively, and fatigue on a day-to-day basis was barely an issue. No doubt the result of whatever had been grafted onto her. Yet now it barely seemed to help at all. Her feet felt heavy, and the trip to the elevator felt longer than before.</p>
+        <p>It still occupied her mind, even in the midst of a mission. Why? No longer was the question one about her closest friend, now the baleful gaze of it had turned on herself. Why hadn’t she seen it before? The pain it was causing Garrus. Turians may not be the most expressive species, but she knew her friend. Knew there was something wrong. But it had been easier to focus on Tali, to rely on Garrus’ fortitude to buy time for a fix: To find a more appropriate moment.</p>
+        <p>Hesitation was death, and that old boot camp lesson had come right back to haunt her. Shepard tried not to think about what might be happening. That Garrus could already be in custody, or recognised as Archangel on whatever shitty transport he’d smuggled himself aboard. Right this moment, he could be tied down to a chair, having what little life had been spared beaten out of him. The lights of the elevator flickered, blanketing the small chamber in darkness. Muscles pulled taught in her face, as Shepard looked straight into the ambient crimson glow. There was no dream to wake from this time, no blurred edge of reality to run to. The ever present what that she was had made itself apparent. It made the human stomach in her turn.</p>
+        <p>The Crew Deck already echoed with pitched chatter: The small din of argument. Sure enough Shepard found the culprits she’d expected. Aria stood outside Miranda’s office, with Shepard’s Executive Officer. The two were already trading insults and threats. Between them, guarding the door like a sentinel was Samara. Azure skin and crimson armour barring entry to the crime lord.</p>
+        <p>“Shepard, finally.” Aria looked over at her, expectantly. “Your friends were just showing me to my room.” She said snidely. “Only I think they need some help with the last part.” Her lip curled. “Which is getting out of my way.”</p>
+        <p>“Charming.” Miranda cocked her head to Shepard, arms crossed. “The answer’s still no. XO’s quarters contains classified Cerberus documents. No entry without authorisation.” She scowled at the asari crime lord. “Which you do not have.”</p>
+        <p>“I’m not asking.” Aria said with a sneer. “I’ve already given you too much freedom with this operation. I’m not spending the time I’m paying for in some communal bunk.”</p>
+        <p>“I don’t care where you spend it.” Miranda bit back. “But it won’t be here.”</p>
+        <p>“Let me put this simply for you.” Aria’s voice was a razor. “Get the fuck out of my way, or I’ll have your-”</p>
+        <p>“Not another word!” Samara’s threat reverberated through the three of them. Her eyes were black, crackling with biotic energy. She stomped forward, towering over the other asari. The Justicar’s usual stoicism gave way to something burning beneath. Her right hand gripped the hilt of her sword. There was something in Samara’s eyes, something that had been absent before.</p>
+        <p>“Alright, enough! Everyone calm down!” Shepard’s voice prevailed over the tension. For a moment, those murky eyes were on her. She saw it, clear as day, looking back at her. Rage. The smallest tremble travelled across Samara’s sword-arm, as if it took all the strength she had to keep it sheathed. A glance to Aria revealed a surprise. Uncertainty. She seemed to shrink, if only by a hair. Miranda stood to the side, indulging in the potential bloodshed. No doubt just as sick of her.</p>
+        <p>“Lawson, secure all sensitive data you’ve got inside, take as long as you need. You can use my cabin tonight for reports.” Shepard gave her a pleading look. She screwed her nose, chewing her lip. But she nodded. “And you…” Shepard glared at Aria. “Attempt any unauthorized access, and the deal’s off. Don’t! push me! Understood?”</p>
+        <p>Aria looked her over, and smiled darkly. “Trust me, I couldn’t care less.” Her tone was dismissive.</p>
+        <p>A nod from Shepard, and Samara stood down. She almost looked exhausted. By the time she’d allowed Miranda past, Shepard could tell something was wrong. The Justicar marched back to her room, eyes forward. Not a moment spared to look at Shepard, as if she couldn’t. Already Shepard felt it grip her gut. Soon the crimson-clad warrior was gone, leaving both her and Aria alone. She couldn’t help it, that itch she felt. Like she’d made another mistake.</p>
+        <p>Suits you, that tone of voice.” Aria’s voice was in Shepard’s ear. She’d sidled up beside her, sharing Shepard’s view of the corridor. Her implacable eyes met Shepard’s, mysterious as ever. “You should use it more often.”</p>
+        <p>“You having fun?” Shepard asked, lip curled. “Riling up my team, disrupting things? Hurting the mission’s chances?”</p>
+        <p>“I am, actually.” She said with a smirk. “Reminds me why I came along in the first place.”</p>
+        <p>“What’s that supposed to mean?”</p>
+        <p>“It means you’ve got a nice ship, Shepard.” Aria looked over the interior finish as she strutted into the galley. “Got a decent crew, even those misfits tagging along… I think you’ve got a shot at pulling this off.” Shepard followed behind until Aria spun to face her, looking the woman up and down. “Also means you might think of fucking me over.” Her tone turned deadly serious. “This is your show, legend. I’ve only got one rule. Keep to it, and everything’ll be fine. Who knows… might even be the start of something beautiful.” She brushed past Shepard, heading toward her temporary quarters. “…Long as your pet bitch doesn’t steal the pillows!”</p>
+        <p>She hadn’t noticed Bray lurking nearby, watching the whole scene. Shepard suppressed the urge to ball her fists when the batarian grinned at her, needle teeth flashing. The creases in her skin made the scars hurt all the more. Samara’s exit stuck in her like a splinter, one she had to tweeze. Samara would need a clear head for the mission.</p>
+        <p>The Justicar’s armour sat on its rack, Samara herself stripped down to just a crimson robe she wore beneath it. She hovered above the ground, blade in front of her and a small orb of biotic light between her hands. Beyond her twinkled an endless sea of stars, their presence still enough to give Shepard pause. But with a single step, fear’s grip was broken. Soon she’d sat down beside Samara, and with some focus, she joined her in the air. The old asari smiled.</p>
+        <p>“I am impressed.” Her words were warm.</p>
+        <p>“Figured a couple weeks without practice and I’d be on my ass again?” Shepard asked, feeling the smile on her cheeks abate the burning.</p>
+        <p>“I had the utmost confidence my lessons would endure… even with you, Commander.” Her playful tone got a chuckle from Shepard. She looked back to the glass. “You are calmer now, with the void.”</p>
+        <p>“Yeah.” Shepard nodded, joining her view. “You’ve been a big part of that. Don’t think I’d be here without our lessons.”</p>
+        <p>“You flatter me. Though I sense something more has happened.” She gave a knowing look. Shepard couldn’t help but smile.</p>
+        <p>“I’m like an open book, aren’t I?” She chuckled. “Tali uh… we had some routine maintenance that needed doing. Adjusting the PDLs. She fixed em up. I just tagged along, really. Tried not to float away.” She felt a wobble in her biotic field. It didn’t go unnoticed by Samara.</p>
+        <p>“I was scared shitless for most of it. But she hiked us up to the top of the ship, had me close my eyes. Next thing I know the whole thing’s rocking back and forth. Nearly gave me a heart attack.” Shepard smiled. “Then I opened em, and… she’s got us looking at the giant we were parked around. Blues and greens flowing across the surface like paint. Ring stretchin’ out far as the eye could see, shining.” She let out a breath she hadn’t noticed herself holding. “…It was the most beautiful thing I’d ever seen.”</p>
+        <p>“A rare thing indeed.” Samara noted. “Both what you saw… and what you’ve found.” Her addition came with a deepening of her smile. Shepard didn’t even try to pretend.</p>
+        <p>“Not everyone gets a second chance.” She said quietly. “Like you said, rare thing indeed.”</p>
+        <p>For a time, silence reigned. Despite the obvious fact that the Justicar had sniffed them out, Shepard only felt relaxed. For so long the Normandy had been a foreign place, one with few spots of warmth. But here had become another, trust having grown between mentor and student. However, in the silence she heard it. Slow, heavy breathing: In and out. It drew her eye to Samara. She peered out at the stars, but her eyes were glassy. Following down Samara’s bare forearms to her fingers, Shepard saw the smallest tremble. Those eyes flicked her way for less than a second, but she caught them. A knot started to form.</p>
+        <p>“You okay?” Shepard knew the answer already, a tug at the corner of Samara’s mouth.</p>
+        <p>“…Had I not sworn my oath to you, I would have killed Aria in the dry dock.” Samara admitted, hands clenching. She sunk to the floor, biotics fading away.</p>
+        <p>“I kinda got the feeling.” Shepard agreed, following her down. “Things seemed a little-”</p>
+        <p>“You seek to give her a dreadnought.” Samara cut Shepard off, as though the words escaped her mouth. “One that hides from scanners as the Normandy does. You would take such a prize for her, along with a small fleet of escort ships. Provoke the ire of the Council in doing so.” The serenity left her voice.</p>
+        <p>“Right now it’s our only ticket to the thanix cannon.” Shepard answered, bewildered and cautious. “We’re not in the best place to be-” The words died in her mouth. Samara’s eyes were on her, bone white. Arresting, like they had been the first time they met.</p>
+        <p>“Shepard.” She eyed Shepard fiercely. “I have… enjoyed our time together. It has been many years since I shared good company. But this plan, to hand over such a weapon to Aria T’Loak…” Her expression strained. “The Code will demand satisfaction for this. It will call upon me to right this wrong. I can only stand by as long as my oath persists. But once freed of it, I would be forced to pursue her. To kill Aria, and spare the galaxy the suffering she will no doubt inflict with this vessel. You would…” She trailed off, visibly distressed.</p>
+        <p>“You cannot make yourself a party to it.” She pleaded.</p>
+        <p>Something in the way she shifted. Indecision Shepard had never seen in her before. It chilled Shepard to the bone. Something raged inside the asari, pressing up against the surface. And right now she was fighting tooth and nail to keep it there, beneath the cerulean surface. To witness a creature of such composure like that, the animal part of Shepard sensed very real danger.</p>
+        <p>“Samara. Are you… threatening me?” The question slipped out of Shepard, impossible to hold back. Something flashed in Samara’s eyes.</p>
+        <p>“No.” She answered hastily, all that molten emotion cooling again. “I am… imploring you. Please, find another way.”</p>
+        <p>Below the Crew Deck, the cavernous size of the Cargo Bay was always a strange sight for Tali. Even with a gunship and an IFV occupying it, along with strapped down crates and the makeshift gym, there was still so much room. If the Normandy had been a quarian ship, there wouldn’t be a single inch of space left unattended. She could almost picture the dividing walls and curtains, separating hundreds of beds. Families huddled together in sleeping groups, shoulder to shoulder with their neighbours. Nowhere in the Fleet felt so… sterile. The thought was enough to tickle her brain, distracting the quarian from her work. Work, which required her full attention.</p>
+        <p>A laser cutter laid flat on the foldout workbench, opened up and stripped down to its guts: A standard fibre setup, like most modern cutters. Forsaking the older gas medium for increased efficiency. Around Tali was a collection of different power cells, with frayed wiring sprouting from them. Keelah… it was like trying to fit a rocket into a paste capsule. Nearby, an annoyed Jack trudged back and forth, lining up plates of fabricated metal with biotics.</p>
+        <p>“Y’know, if you’re such a damn genius, Dog Legs. How come we gotta test this shit?” The convict complained; adjusting her protective goggles.</p>
+        <p>“You are aware that testing your designs is the bare minimum for genius, right?” Tali answered, focused on the bench.</p>
+        <p>“Okay. So is there a reason I’m holding all this stuff together like some kinda…” Jack looked to the multiple layers of metal suspended in the air. “I dunno, metal sandwich?”</p>
+        <p>Tali quickly reassembled the boxy-looking gun, lifting it off the table with both hands. It hummed with energy, before she flicked the button by the trigger: A red guiding laser painted a dot on the nearest metal plate. The true laser was ultraviolet, invisible to almost everyone on board, except Tali. Guiding her thumb over the controls, she selected a circular pattern.</p>
+        <p>“Starship armour is composite. Made of multiple layers.” She explained to the bored woman. “These cutters aren’t built for it, so I have to test and make sure I’ve got the beam output correct. Now can you hold them still?”</p>
+        <p>A whirr, and the articulating lens moved so fast as to create a red outline on the metal. Jack huffed as she pressed the plates together. Tali squeezed the trigger. Through instantly polarised visor glass, she saw a cone of UV light burn into the sheets, carving through them. A continuous clicking and popping as the air ionized in the beam. HUD readings began to spike, free-falling seconds later. Her setae stood on end before inevitably, the laser flickered and died. The hum became a whine, and the power cell sparked and smoked.</p>
+        <p>“Bosh’tet!” Tali yelled, loud enough to carry across the bay. Her contempt was followed by the clatter of steel.</p>
+        <p>“The hell happened?” Jack asked.</p>
+        <p>The question came from behind, as Tali had already spun on her toes. Padding over to the workbench, she slammed the tool down. Her hands were a blur, wrenching the casing and pulling the burned out cell free.</p>
+        <p>“That doesn’t look good.” The convict noted over her shoulder. Tali’s eyes narrowed.</p>
+        <p>“It’s the damn power cell!” She finally answered her question. “I’ve been trying to increase its output, bypassing safety limiters. But… I can’t get the stupid thing to last long enough!” She tossed it aside, the charred piece of tech joining an earlier attempt, equally damaged.</p>
+        <p>“Alright, well…” Jack’s attempt at being helpful fell flat. “Can’t ya, I dunno, stick a couple of em together or somethin’?”</p>
+        <p>Tali sighed through her nose. “I really don’t have time to explain why that wouldn’t work.” She resisted another urge to smash the whole thing to pieces. “If it’s not the cell, then the laser itself burns out. In theory I know the wattage output, and I’m certain the tech is capable. I just…” Throwing her hands up, she growled. “Why can’t it just work?”</p>
+        <p>Audio sensors detected footsteps, barefoot, and heavy. Already she had that sinking feeling. Tali turned to see the geth approaching. It eyed her cautiously with that evil optic, sparing a glance for Jack. As usual it was intentional and threatening in its posture, as if it knew any other way of being.</p>
+        <p>“What do you want?” She asked, lip curled. The intimidating machine did not register her anger.</p>
+        <p>“Creator-Tali’Zorah. We have come to assist you.” Its garbled rasp made her nose scrunch up.</p>
+        <p>“Go away.” She said flatly.</p>
+        <p>“Shepard-Commander ordered us to assist you.” Jane… Tali’s expression hardened. The geth wouldn’t leave. Instead it scanned the nearby workbench, instantly ascertaining her situation. “The model two-thirty standard weapon core is incapable of sustaining charge for laser output.” Before she could object, it stalked up to the bench, scanning over the power cells.</p>
+        <p>“Yes, I know!” Tali barked, hands on her hips. “I’m working on it, and you’re not helping by skulking around!” Then the deathless eye found her.</p>
+        <p>“We can construct a compatible power cell. Access to Engineering’s main fabricator required.”</p>
+        <p>She scoffed. As if the past hour hadn’t been an exercise in proving that very thing impossible. But her voicing the point did nothing to dissuade it. Taking two of them, it repeated the request.</p>
+        <p>“Fine.” Tali finally relented. “Just, get out of my way, please.” She authorised it for use.</p>
+        <p>Without another word, the geth made for the elevator, power cells in hand. She returned to fiddling with the test cutter, Jack sauntered over. There was a pause, the kind she hated.</p>
+        <p>“The hell’s your problem with the bot, anyway?” She asked, quirking an eyebrow.</p>
+        <p>Jack’s question was both incensing and baffling. What was her problem? She shot around and glared at the convict.</p>
+        <p>“Wha – Where would you like me to begin?” Tali snapped. “The taking of my home world? Or how about the time those things slaughtered my friends in front of me! I don’t know, Jack. Maybe it’s how their existence makes the galaxy hate quarians. Or maybe it’s this…” She gripped her suit. “…Prison I have to live in!”</p>
+        <p>Jack’s answer was predictably dim.</p>
+        <p>“This one didn’t do that.”</p>
+        <p>This geth. As if they were anything more than drones acting out the whim of a neural network. Venom filled Tali’s mouth, caustic and boiling, and she readied a verbal assault on the convict. But before she could, a voice chimed in on her helmet radio.</p>
+        <p>“Chief, you there?” Ken’s voice wavered. “We need you up here lass, the geth’s got someone!”</p>
+        <p>Tali was back to Engineering in a flash. She exploded into the room, panting. Both Gabby and Ken watched on, their gazes carrying her to the scene. Sure enough, the geth stood a few feet from the main fabricator, a strange glowing object in its right hand, and a struggling salarian in its right. Synthetic fingers gripped his neck tightly, and the intruder’s eyes were strained to a squint. Not fear, but anger. It was one of Aria’s men that had joined her aboard.</p>
+        <p>“What the hell is going on here?” Tali demanded, stalking past her co-workers. The geth’s unblinking eye found hers, and that guttural staccato drone answered.</p>
+        <p>“We have apprehended an unknown intruder.”</p>
+        <p>“My name’s Ahz, you fuc-” The salarian strained through an iron grip.</p>
+        <p>“We have apprehended self-identification: Ahz.” The geth corrected itself. “Intruder-Ahz was detected inside Normandy’s Engineering section, scanning the fusion plant. He was utilising optical camouflage of advanced design, beyond usual detection parameters. However, geth sensors are designed to detect such frequencies. He was discovered. Data extracted from Omni-tool indicates additional unauthorised scans of Normandy IES systems. All relevant data has been deleted.”</p>
+        <p>For a moment, Tali simply stood there: Angry, boiling beneath her suit at the gall of this shiftless lackey. Her shining eyes burned holes into him, satisfied to watch him squirm under the machine’s vice-like strength. She looked back at her friends. Their eyes were glued on the salarian. There was a dread hidden under the expressions they wore. A terror. Something had come into their home, violated their space without them knowing. Shaken the sanctity of this place. It only made her angrier.</p>
+        <p>“Article six of CSV Normandy’s regulations states unauthorised access to restricted areas is punishable by confinement and expulsion from the vehicle.” The geth quoted Jane’s words verbatim, military words. She’d had them drawn up before Tali had even arrived. Unsurprising. “Creator-Tali’Zorah, as senior officer present, we await your decision.”</p>
+        <p>Tali was dumbstruck. It was a machine, repeating Jane’s orders like her drone would do, but at the same time it had defended her friends, and gone out of its way to apprehend the intruder. Even now, it waited on her decision. A quarian. The surrealism of the moment held her until it repeated the request. She gave a nod, and to the “brig” Ahz was hauled. The door to Grunt’s room opened. The krogan was happy for the company.</p>
+        <p>After locking away the prisoner, the pair of them rode the elevator down to the Cargo Bay. She still felt tense, being so close. But oddly, there was no threat in the geth’s stance. No scanning of sectors, or single-minded intention to kill. It seemed… calm, at ease: If a machine could be at ease. She peered down at the strange thing cradled in its arms. It was veined, greyish metal with glowing slits belying something alive beneath the surface. When they reached the workbench, Tali noticed the geth place it down beside the cutter.</p>
+        <p>“What is it?” She finally voiced the question.</p>
+        <p>“It is a power cell.” The geth… Legion, answered. “With access to Normandy’s fabricator, we were able to recreate a standard geth design. This cell is fit for task, it will overclock output when required.”</p>
+        <p>With some lingering distrust, she went to affix the strange object to the cutter. A few seconds of confusion passed, her hands hovering over the assembly. She had no idea how to connect them.</p>
+        <p>The effect was almost profound. Her mind began to race, examining every inch of the geth cell to figure out the solution. But before she could, the geth’s hands slid beneath hers, pressing down on divots she hadn’t noticed before. The cell opened, and the wires were connected. From there she had the rest of it readied in a flash. A nearby Jack held aloft the replica hull once more, and Tali squeezed the trigger. This time the plates burned, laser light sinking into them. Tolerances and output shone in her HUD, but none of them slipped into the red. She’d found it, the missing piece. A geth piece…</p>
+        <p>“No stress failures detected.” Legion spoke up, looking over the tool. “Creator-Tali’Zorah. Four more cell units will be required for the mission. Permission to manufacture?”</p>
+        <p>“Um…” She blinked, regaining herself. “Yes. Go ahead. I’ll need them all here in twenty minutes. We’ll have to reconfigure the other cutters.”</p>
+        <p>“Acknowledged.”</p>
+        <p>Legion took the rest of the power cells, stalking back toward Engineering. It made no qualms about secrecy, or sharing technology. It merely offered to help. Nearby, another chorus of clattering metal sounded. As Jack dropped it all in a corner, she moseyed on over. She’d watched the whole thing, and that look in her eye said it all. Tali braced herself for the inevitable.</p>
+        <p>“Legion’s thingy fix your problem?” She asked, knowing the answer already.</p>
+        <p>“Yes…” Tali droned, brow heavy.</p>
+        <p>“Maybe he’s not such an asshole after all?”</p>
+        <p>With a typically cavalier goodbye, Jack departed, leaving the quarian all alone. For a time she just stood there, looking down at her handiwork. All the hallmarks of her people’s ingenuity were present. Hallmarks Jane praised her for. The smoothness of her welds, the clean wiring. The care she took never to break anything, or burn it out: If there was only one of each piece to any puzzle, that’s all she needed to solve it… except this time. The workbench still held the two prior cells, burned out and useless. It twisted something inside her. Even with the test cutter back on the workbench, opened up for another check, she couldn’t stop from glancing over at them, at her failures.</p>
+        <p>Disconnecting the geth power cell, she stared down at it, eyes like hot coals. All her hard work, glazed over by a machine. Then the realisation came. It was cold, and calculating. It calmed the waters of her mind, reducing them to glass. She activated the scanner in her helmet, focused on this unprotected prize. Already the technical details were coming in, a trickle becoming a swollen river. While the data collected, she tapped a message on her Omni-tool.</p>
+        <p>[T.Z. – Legion, could you fabricate an additional cell? We might need a backup.]</p>
+        <p>The message was sent. For a few seconds, the cold feeling abated, replaced by apprehension, until the reply came.</p>
+        <p>[L. – Acknowledged.]</p>
+        <p>She rested a gloved hand on the geth power cell, and a cruel smile parted her lips. If this geth wanted to help, then so be it.</p>
+    </div>
+</body>
+</html>

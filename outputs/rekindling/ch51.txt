@@ -1,0 +1,507 @@
+Chapter 51: Omissions
+
+“Bloody hell, would you look at it!”
+
+ 
+
+“The jump was twenty-two percent under standard effect flare! How is that possible?”
+
+ 
+
+Two pairs of human eyes were pointed Tali’s way. She didn’t need to look to know it. The readings came in bursts of the unimaginable. Constant adjustments of the smallest details. The kind of thing you would have to freeze time for an organic to even catch. She remembered the endless hours of looking at drive reports after daily usage. Painstaking assessment of the same numbers, making changes for next time. But now, it was all happening in the moment. The jump from Xerceo had barely risen above the drive activity around them, allowing the Normandy to nestle herself up against a nearby asteroid after coming out of FTL.
+
+ 
+
+The Relay was close by, ready for whatever course was planned next. There was a tightness in her chest, anger that drifted without a proper target. Watching EDI manipulate the Normandy’s drive core – her drive core – to such dangerously extreme intervals, it reeked of arrogance. Her HUD reported an uptick in sweat, frantic minutes of monitoring the core during the jump for the moment EDI’s balancing act crumbled. But it never came. Even as things spooled down, there were no lasting stresses on the machinery.
+
+ 
+
+“Ken, I want you to check the wiring along our main capacitors for burnouts.” She ordered, meeting their gaze. “Gabby, go EVA and check the thrusters for stress warping. EDI took us out of our usual envelope.”
+
+ 
+
+“Only by a hair.” Ken protested. “A full EVA check is gonnae take-”
+
+ 
+
+“I’m not asking!” Tali snapped. Ken’s mouth shut silently, eyes wide. Gabby’s jaw clenched, muscles moving below her pale skin. Then the woman’s usual composure returned.
+
+ 
+
+“Aye chief, we’ll get on it.” Gabby gave her partner a look before they both headed for the door. Regret began to seep in, following the silence of their departure.
+
+ 
+
+Tali rubbed her arm. Stupid girl. They hadn’t done anything wrong; they didn’t deserve her fury. She turned away from the empty consoles, trying to block it out. Glancing down at the terminal, she watched as EDI’s tireless meddling continued. A screen full of readouts being tampered with every second, with a little window open in parallel, monitoring EDI’s cognition processes in engineering. The deck had been de-bugged long ago, with only the raw function data still being transmitted. EDI could touch the drive core, but it couldn’t see, couldn’t hear. Tali eyed the thick cable running from the sequestered AI Core port into her deck’s mains. Her focus settled on the manual release lever above. One pull, and this thing would be forced back into its box, never to interfere again. This abomination that saw fit to wrap its tendrils around her drive core, supplant her hard work. Regret and pain began to burn into hate, snaking down her veins, carrying that molten feeling into her fingertips. The adrenaline from the mission pumped it through harder and faster, rattling against her calm like debris against a ship’s hull. Just, one, pull…
+
+ 
+
+The hiss of the automatic door yanked her from the depths, a familiar silhouette warming the room. There were cracks and divots in Shepard’s armour, deformities in the gel layer beneath the aramid weave that showed at the joints. A hideous stain of white conductive fluid covered her front, burned onto the ceramic from vacuum exposure. But rising above the rigid collar was Jane’s handsome face, those blue eyes bright as they met hers. Lava cooled in Tali’s veins, and she let a primal urge overcome her as they embraced. Shepard’s hands ran down the quarian’s back, fingers finding the softer fabric of her suit to show their affection. Tali squeezed her in reply, resting her helmet under Shepard’s jaw.
+
+ 
+
+“Sorry I took so long.” Shepard stroked her gently. “How’s my girl doing?”
+
+ 
+
+“Minor hull strain. Heart’s still beating, though.” She answered, relaxing into Shepard.
+
+ 
+
+“I meant you, y’know?” Shepard kissed the top of her hood, and she smiled.
+
+ 
+
+“I know.” Tali nodded, self-satisfied at her slyness. “How did things go with Aria?”
+
+ 
+
+“We’ve got a berth, and her protection. For all the good it’ll do us.” Shepard sighed. “It’s not much, but it’s more than we had yesterday.” She hugged Tali a little tighter. “I don’t think Samara’s too pleased about it.”
+
+ 
+
+“It is a big risk.” She noted. “Even with a worm in her systems, there’s no guarantee Aria won’t purge everything and reset.”
+
+ 
+
+“We’ll cross that bridge when we come to it. You all needed some certainty, and this mission – wait.” Those eyes looked down at her. “How’d you know I planted something in the dreadnought?”
+
+ 
+
+“Give me some credit.” She chuckled, tapping Shepard’s cheek with a gloved hand. “It’s what I would do.” Shepard took it in her own, before pressing those human lips to the fabric. Sensory emulators tingled in response, and the ever-present urge to return the kiss flared. The longing stayed, but the moment passed.
+
+ 
+
+“How’re things looking down here?” Shepard asked, guiding her shoulders around so they both faced the console. “EDI pull her weight?”
+
+ 
+
+“It… did.” Tali said in a small voice, trying to hide her bitterness. “The direct interface allows for on-the-fly management, but EDI ran the core near its operational limits the whole battle. And even now the typical margins have shifted above normal. No damage was reported, but… I still don’t like it.”
+
+ 
+
+“You wanna pull the plug?” Jane asked her, and from within the comfort of her embrace, she felt all the power to do it. A sick satisfaction returned, knowing her word alone could kick this thing out of engineering forever. But the memory of that red smoke coiling back to save her from enemy fire barrelled into her mind. EDI had saved her life, doing in seconds what would’ve been impossible for any organic. That precision laser fire had kept the entire salarian drone swarm pinned against the dreadnought, while the Normandy’s adapted shields had held the smoke overhead like a protective cloak. The AI’s tweaks had even let them slip away undetected, without so much as a shift in the local radar network. Deep down, Tali knew there wouldn’t be g-warping, or wire burnouts. EDI wasn’t reckless, not really. It – she – just knew her limits more than any flesh and blood person ever could. Was losing that advantage worth a momentary swell of pride?
+
+ 
+
+“No.” She answered, slumping against Shepard. “EDI’s software operations could reduce overall core strain and maintenance time. The Normandy will run better with all of us down here.”
+
+ 
+
+“We’ll have to find something to do with all that free time…” Jane hummed against her ear-mic.
+
+ 
+
+“Really…?” She purred, running her fingers down Shepard’s armoured chest. “Well, we can start with getting that gunk off your suit.” Tali looked her over. “What happened?” Those blue eyes darted away, and her captain grew sheepish.
+
+ 
+
+“Well… that’s the other reason I’m down here.”
+
+ 
+
+All that intimate warmth was sucked out as the two of them descended to the sub-deck. Tali’s mouth fell open as she spotted the synthetic occupant, waiting patiently with a severed arm in its lap.
+
+ 
+
+“You can’t be serious!” She turned to Jane with shock and anger in her voice.
+
+ 
+
+“No one else has your level of expertise on the geth.” Shepard said calmly. “Legion’s agreed to take over self-repair as soon as he’s able to.”
+
+ 
+
+“Which will be hours, judging by the damage!” She looked over the geth. “The left arm is severed, there’s fluid clotting in the transfer capillaries, that slouch means the secondary posture controls are fried.”
+
+ 
+
+“I know it’s a lot.” Jane nodded. “And I know that-” The conversation was cut short by a loud clang from above. The sound reverberated down the walls, drawing their attention.
+
+ 
+
+“Commander, I need you in medical, right away!” Doctor Chakwas’ voice betrayed only a hint of worry, but it was enough for Jane to tense. Tali felt the reality of the mission come back into the room. She was hardly the only one with problems, nor was she expected to solve them all, like Shepard was. Her face flushed at the outburst she’d made.
+
+ 
+
+“EDI?” Tali opened her comm. “I’m going to be away from engineering for a couple of hours. I need you to keep watch until I return.”
+
+ 
+
+“Of course, Chief Zorah.” The feminine voice sounded almost understanding.
+
+ 
+
+“It’s alright, Jane, go.” She touched Shepard’s arm. “I’ll get my tools.”
+
+ 
+
+ 
+
+Even through ceramic, aramid and impact gel, Tali’s show of affection had been sorely needed. Shepard returned it, taking her hand in her own for the briefest of moments. Then the world outside demanded her, and she answered. She marched from the elevator across the crew deck, glancing at the activity around her. Mister Gardner was preparing a meal for the away team, while volunteers worked to unsecure the chairs and utensils. Everyone gave a nod, a “ma’am” or a salute as she passed. Only as she drew closer to the suspiciously fogged med-bay did she notice a few people looking over. The locked door opened for her, and Karin met her gaze with frightened eyes.
+
+ 
+
+“You’re a lying bitch!” Jack yelled, sending a tray flying at Miranda. Her teeth were bared, sweat running down her shaved head as the projectile was batted away by the Cerberus officer.
+
+ 
+
+“Throw one more thing at me, and I’ll have your implants removed. Forcibly if necessary.” Miranda’s cold, accented voice barely rose an octave. Around her was a clutter of trays, pans and other doctor’s equipment. Scrapes covered the wall to either side of her, where hard-flung objects had deflected away.
+
+ 
+
+“Just fuckin’ try it.” The convict spat in a low voice. Shepard saw a scalpel lift from the counter behind her XO. “Let’s see how smug you are when you’re-” In a warping flash Shepard had materialised between them, seizing Jack’s arm. Her biotic aura flared and faded as the blade landed back on the countertop.
+
+ 
+
+“You two, XO’s office, now.” Shepard’s order cut clean through the furious atmosphere. Jack made a single attempt to struggle, Shepard’s eyes were on hers in an instant. She stopped dead. “Not a word until we’re there.”
+
+ 
+
+She marched the two women out of the med-bay, sparing a moment to give Karin an apologetic look. Neither of them spoke, their backs painted with daggers from Shepard’s eyes. Two crew were sent in to help clean up before they rounded the corner and entered Miranda’s office. The clean, metal room had been returned to its former state, everything tied down for combat.
+
+ 
+
+“Sit.” She pointed Jack to the guest’s chair, then Miranda to her office chair. It put a desk between them but kept both firmly in her sights. The convict was trembling, fingers digging into the thick, padded pants of her jumpsuit. Perspiration had soaked her tank top, still glistening on her tattooed skin. Her nose bled, trickling over her lip. Those brown eyes still burned, flickering a shiny grey as biotic energy hummed inside. Miranda’s condition was only marginally better, but those perfect genes couldn’t save her from exhaustion after a mission like the dreadnought. She slouched a little, unsteady. There was something in her expression. Was it satisfaction, about how she’d been right all along? Some of it was. But not all of it.
+
+ 
+
+“Once we’re done here, you will both apologise to Doctor Chakwas.” Shepard growled. “Understood?” An infuriating moment of non-committal noises brought her a step closer. “Am I understood?”
+
+ 
+
+“Yes, Commander.” Miranda nodded, her expression vanishing.
+
+ 
+
+“Yeah… yes, Commander.” Jack got the answer out, shrinking a little. It was a start at least.
+
+ 
+
+“Explain yourselves.” Shepard took a step back, crossing her arms.
+
+ 
+
+“I’m not even sure if this is out of the ordinary.” Miranda started with a smirk. Shepard fixed the woman with a glare, and her demeanour shifted. “We were receiving our supplements from Doctor Chakwas, to combat mission fatigue. After Samara left, Kasumi came in with a datapad and showed it to Jack.” Her lip curled. “Who then proceeded to call me a whore and throw assorted medical items at me.” The recollection only seemed to further prick at the convict, who balled her fists in her lap.
+
+ 
+
+“You’re a fuckin’ snake.” Jack hissed.
+
+ 
+
+“What was on the data-pad?” Shepard asked, pre-empting another fight. Those fiery brown eyes met hers, all reservation burned away.
+
+ 
+
+“Teltin.” Jack said the word like it was branded on her skin. It came up from a pit of boiling hate, but a hint of fear still lingered. “You remember the talk we had, ‘bout where I came from?” Shepard nodded, shame gnawing as she glanced Jack’s cheek. “That was the place. That was the Cerberus facility where they tortured and drugged me!” Her voice wavered a little, lost in a memory.
+
+ 
+
+“You’re sure?” Shepard asked, incredulous. Jack’s rage returned.
+
+ 
+
+“Course I’m fucking sure!” She snapped. “They put it on every fucking wall! Along with that!” She pointed a harsh finger to the Cerberus logo emblazoned on the wall. Her finger shook. “Teltin Paediatric Research, gateway to potential.” She recited some company jingle in a small voice. It twisted something in Shepard.
+
+ 
+
+“Where is this place?” Shepard’s voice growing an edge.
+
+ 
+
+“Pragia.” Jack answered. “Sumi said it’s some jungle world. Fits with what I remember. It rained up on the shuttle pad, and it was dark.” Shepard had never heard of Pragia before. It must have been a backwater, unable to be properly colonised. That kind of place certainly sounded perfect for a shady research facility. Wouldn’t be the first time she’d seen Cerberus do it. The whole thing raised her hackles.
+
+ 
+
+“Why’d you attack Miranda?” Shepard’s question brought the young woman back into the room. She glared at Shepard’s XO, a whole new surge of anger brewing. But she swallowed it down, meeting the commander’s gaze again.
+
+ 
+
+“I couldn’t access one of the database files. I asked the PA system, but it told me it didn’t know. Dog Legs is always busy, so I had ‘Sumi take a look at it.” Jack explained, her voice level. “Y’know what she told me? The whole file had been encrypted. Not some standard Cerberus thing either. Nah, this shit was custom done. File alteration dates back right when I was cleared for access. Which means this bitch…” She jabbed her finger at Miranda, “…tried to hide it from me!”
+
+ 
+
+Miranda’s face was a stone. She regarded the agitated convict with the same feline coldness she always did. But in this perfect storm of coincidence, it took on a whole new side. Shepard could see it in Jack, every word had been the truth. She genuinely believed Miranda had tried to deceive her over the existence of this facility. What was worse, is Shepard wasn’t sure if Jack was wrong.
+
+ 
+
+“After you’ve apologised to the doctor, you’ll go and help Mister Gardner with tonight’s meal. You’re dismissed.” Shepard spoke levelly to the convict. Jack stood up but didn’t leave. Her face twisted into indignation.
+
+ 
+
+“That’s it? You want me to stir a pot and sit on this shit?”
+
+ 
+
+“Dismissed, specialist.” She didn’t raise her voice, but Jack’s protest settled into silent disdain as she left. The room felt considerably smaller with just herself and Lawson, and Shepard pinched the bridge of her nose in frustration. Jack had come a long way since Shepard had sent her to the floor that awful day. Even the early training with Miranda had helped the young woman get back into the swing of things. But after their chat in the convict’s hidey hole, she’d made sure to train Jack herself in biotics. She may not have been as powerful a caster as either woman, but she could keep her head, and more importantly, her presence had helped Jack keep hers. Things had been improving, slowly edging away from general hostility to a comfortable understanding. But now the fire in her had returned, burning much more dangerously with the revival of Jack’s biotic powers. This needed sorting out, and fast.
+
+ 
+
+“What do we know about this Teltin facility?” She asked her exec. Miranda didn’t need to consult her terminal.
+
+ 
+
+“It’s an older project base, from back before I joined Cerberus. Like Jack said, it’s a biotics research facility. We set it up as a viable alternative when news broke about what was happening on Jump Zero. Conatix using turian mercs for their BAaT program. Abuse of human students by alien nationals. The Illusive Man funnelled Alliance black budget funds into a human-only program, which could guarantee the children’s safety. Apparently, the team there was making real progress… until Jack happened.” She let the last words slip out with a sneer.
+
+ 
+
+“Until what happened?” Shepard asked. Miranda’s lips thinned.
+
+ 
+
+“Jack is a biotic prodigy. She has a higher concentration of element zero nodes in her nervous system than any other human on record. You remember the neural decay we talked about?” She glanced at Shepard, who nodded. “It started early with her. Pre-fontal cortex damage, deregulation of the amygdala. It’s the price she pays for all that power. She was apparently expressing personality disorders even back then. Anti-social behaviour, violence, emotional instability. The team had no idea how powerful her output would be until they gave her an amp. After she woke up from surgery, she…” Miranda trailed off, lips curling in muted anger. “…She killed everyone in the facility. Staff, students, everyone. Psychotic break, maybe. She disappeared, and the whole thing was shut down afterward. Total loss.”
+
+ 
+
+Shepard kept silent, her gaze drifting from her exec to the table. She hadn’t sensed that practised tone Miranda called upon when she lied. Her account had been frank and dispassionate, not unlike many reports Shepard herself had made. She considered the possibility that this facility might truly have been legitimate. Hard as it was to imagine Cerberus having a hand in anything of the sort. Even now, her faith in Miranda struck a familiar wall. She had seen firsthand what her organisation was capable of. The depths they sank to. She sighed. It wasn’t worth another argument.
+
+ 
+
+“Did you encrypt the file?” She asked. Miranda didn’t miss a beat.
+
+ 
+
+“I did.” She nodded.
+
+ 
+
+“Why?”
+
+ 
+
+“I had hoped to prevent this very thing from happening.” She answered her question with a nod to the door. “Your deal with Jack was dangerous from the start, but I could see the wisdom in stringing her along.” Miranda’s framing of Shepard’s offer to the convict made Shepard’s face tighten, but she let it slide. “Teltin just complicates things. We already have a teammate AWOL, we don’t need another unnecessary diversion from our mission.”
+
+ 
+
+“You think that’s fair for you to judge, after you surprised us all with rescuing your sister?” This time, Shepard’s framing drew anger from the XO.
+
+ 
+
+“The two aren’t comparable.” She answered through clenched teeth, and a part of Shepard regretted the jab. “There’s nothing left of Teltin but some overgrown ruins. All we’ll be doing is wasting fuel and time we could spend better elsewhere.” Her harsh tone sharpened. “Like tracking down Garrus.” The implication was one she would never dare say openly, but it dug right under the woman’s skin. In the scant couple of days they had been apart, her fears over the whereabouts of her best friend had only worsened. She hated waiting, almost as much as she hated having no choice but to wait. It had been her actions that had pushed Garrus away. Now it seemed, it would be even longer still.
+
+ 
+
+“Well, now she knows.” Shepard said flatly, watching her XO squirm a little in her seat. “Maybe if you’d told me about your scheme to begin with, all this could have been avoided.” Her exasperation slipped through, and Miranda shrunk further. Muscles tensed, and Shepard let out a long sigh. She had thought things were improving between them. The Cerberus woman was a far deeper creature than she’d given her credit for, and despite the gulf of ideology between them, she managed to find herself comfortably within Shepard’s confidence. Shepard still remembered that warm smile when Miranda had watched Oriana sleep. Now it was gone again. Another lie, another reminder she had loyalties beyond the Normandy.
+
+ 
+
+“I’m sorry.” Miranda said quietly, and Shepard met her downcast eyes. “You’re right, I should have told you.” She shrugged limply. “I thought I had it under control. You…” a tiny smile came to her lips. “…I figured you’d probably demand we go there if you knew. Even if Jack is an unhinged lunatic, you’d still want to help her.”
+
+ 
+
+“I do want to help her. If I can.” Shepard admitted. Miranda’s smile withered. Memories returned, of their conversation as Shepard had sat outside the med-bay, praying Tali would be okay. How Miranda had spoken about Jacob and his father in that same voice. “You don’t think this will help, do you?”
+
+ 
+
+“I don’t know.” She said grimly. Shepard’s lips tightened, before she left the woman to her thoughts. Punching in the CIC, it took all her strength to banish Garrus from her mind. For now, there was only one clear direction.
+
+ 
+
+ 
+
+Down in the Engineering sub-deck, the damage was even worse than Tali feared. Her suit was proofed against every type of fluid known, though it didn’t make the white stains on her gloves any more welcome. The past hour or more had been spent on minor repairs alone. Now she examined the shoulder stump, nimble fingers parting folds of synthetic muscle as her shining eyes studied them. Legion remained motionless, optic staring straight ahead while she worked. In the middle of the strange, inorganic fibre was a metal bone. While geth stalkers were comprised almost entirely of muscle, using strange ribbons of fibre to form the core of the limb, standard trooper models possessed an endoskeleton.
+
+ 
+
+“The ends are warped from the shot.” She said with a grimace. “I’m going to have to cut a clean section, then fabricate a join to weld them back.”
+
+ 
+
+“The composite alloys aboard Normandy lack the required material strength. It will be a structural weakness.” Legion noted, bringing a harsh frown to her face.
+
+ 
+
+“Do you have an extra arm lying around somewhere?” She asked tersely. Legion’s head tilted.
+
+ 
+
+“We do not.”
+
+ 
+
+“Then you will just have to live with it.” Tali huffed, activating a workshop laser cutter. Fastening the severed arm to a vice, she carefully pulled back the muscle and ran the beam down the bone. Sparks flew, the hissing of intense heat sounded as it melted through the metal. The chipped end hit the workshop floor with a clink. Parting the synthetic gore, she did the same to the damaged end of Legion’s stump. It would be easy to weld a join now. The geth watched her dispassionately. Its optic darted from her eyes to the tool in her hand. Then down to the severed arm.
+
+ 
+
+Far removed from the mechanical geometry of a LOKI chassis, the body a geth was graceful. Beings spun into life from unimaginably advanced printers, rather than assembled from stock parts. She remembered her advanced xeno-engineering class on the subject, where Shiir’Tera had brought out a dissected geth. Exterior plating cut away like the shell of an insect, layers of silvery-grey muscle sliced open to reveal the haunting structure beneath. The bones of its arm had been almost an exact match to quarian anatomy. Was it mockery, or flattery? They were software, intangible entities of the digital realm. They could take on any form, inhabit starships or walking battle tanks. So why did they choose to look so much like us?
+
+ 
+
+Tali shook the thought from her head, getting up to use the fabricator. “How did this happen?” She asked as it hummed with life.
+
+ 
+
+“We engaged hostiles inside the dreadnought’s control centre. Their fire supressed Shepard-Commander’s squad at the ingress point and dazzlers were used to overload our audiovisual sensors.” Legion droned. “Shepard-Commander requested we utilise this platform’s pressure sensors to backtrace hostile firing positions.”
+
+ 
+
+“That would have meant deactivating your barrier.” Tali said, looking over her shoulder. “Shepard asked you to do that under heavy fire?”
+
+ 
+
+“Shepard-Commander queried this platform’s resistance to small arms. We confirmed the chassis’ plating would withstand direct fire for ninety-four seconds. An acceptable operation window.” Even as the geth explained its reasoning, she took in the sight of its mangled innards. There were divots in the outer plating, but the pattern showed a quick focus of fire toward the exposed cavity in Legion’s chest. STG had done exactly what she would have. Similar priority had gone to the right arm, where Shepard’s… her shining eyes fixated on the scorched N7 pauldron, and familiar sickness gripped her stomach. Tali swallowed, noting the gap that the unfamiliar armour left on the geth’s limb. No reinforced lattices, no plating. Just bare muscle.
+
+ 
+
+“You lied to her.” She turned to glare, voice flat and distant.
+
+ 
+
+“Creator-Tali’Zorah?”
+
+ 
+
+“Your barrier signature is doubled over this cavity. There are three cascade failure points that if damaged would incapacitate you. Posture control was nearly destroyed there.” She pointed a finger to the mess of cables. “And your… scavenged armour does not correctly cover this arm. You know all that.” She felt accusation creep into her voice. “Which means you lied.” Legion stared back at her, silent for several seconds. It made her setae raise beneath her suit.
+
+ 
+
+“We judged Shepard-Commander would not endorse the action if our vulnerability was known.” Legion answered. “Without proper targeting data, there was a seventy-two percent probability of death for Shepard-Commander, or other organic squad mates. Comparatively, if this platform had been destroyed, our data-memories would have been transferred back to the Geth Consensus. We concluded this was an acceptable risk.”
+
+ 
+
+Tali leaned back against the fabricator, while her brain worked furiously. The geth had lied, admitted that it had done so. It had deceived Jane in the heat of battle without seemingly any inclination to mention it later. If she hadn’t pressed, it might never have. What else would Legion lie about, how sophisticated could those lies be? She knew the horror stories of the rebellion, how geth had lied then, too. What leaps had they made in three hundred years, toward fooling organics? Everything inside her anxious mind jumped to high alert. But that fear was shadowed by another thought. Legion had lied to save Jane. The geth had risked its own functionality, its own mission – whatever it may be – to protect Jane. And now Legion admitted it to her, the machine’s voice recorded in her helmet audio. Why would it do that if there was something to gain from the deception?
+
+ 
+
+Tali set the new join against the vice-gripped arm, switching her cutting laser to weld. “Are you going to tell her you lied?”
+
+ 
+
+“We had not intended to.” Legion sounded strange, almost like it was unsure.
+
+ 
+
+“Why not?”
+
+ 
+
+“Shepard-Commander is operating at elevated cognitive-emotional capacity. This is harmful to organics. We did not wish to contribute to it.” Tali was pricked by the logic, but there was a strange, underlying warmth to it.
+
+ 
+
+“What if next time you do get destroyed?” She asked, the taste of her question’s implication sour on her tongue. “How would Shepard feel then?”
+
+ 
+
+“We…” Legion’s audio stopped, as if cut short. As she finished up the weld, and began unpinning the grey, synthetic flesh, Tali realised the geth has remained silent for almost a minute. A glance up showed it’s optic dilating and constricting, as if it was lost in thought. Finally, that crackly voice resumed.
+
+ 
+
+“We had not considered it.”
+
+ 
+
+Medi-gel foamed over the damaged viscera, and bandages were wrapped overtop to keep things in place. Such a procedure would work for a quarian’s arm, and Tali knew the same was true of this one.
+
+ 
+
+“If this mission is going to succeed, we need to be able to rely on each other.” She said, her voice losing its usual sting reserved for the geth. “Shepard needs to know these things, it’s her job. Nothing’s worse than fighting an unknown.” Warm memories surfaced as Tali echoed Kal’s words. She couldn’t even imagine what he’d say if he saw her now. Legion had been many things in her eyes, but never vulnerable. A predatory part of her sought to keep it that way, one final card to pull should things go wrong. But another part of her, the part Jane loved, relented. She had already parted the geth with an innovative new power cell. The least she could do was prevent an unnecessary loss.
+
+ 
+
+“Run self-diagnostic for right arm.” She gave the order as Legion rose off the table.
+
+ 
+
+“Successful reintegration of tissue along line of displacement. Fibre bonds nominal.” The geth flexed its previously severed arm. “Structural irregularity in core detected, chance of failure calculated at zero-point-four percent. Within operational allowance.”
+
+ 
+
+“Good.” She nodded. “But it’s not going to stay that way, exposed like that. I’ll fabricate some new plating for proper coverage.” She went to remove the damaged pauldron, but Legion pulled away. The sudden retreat surprised her.
+
+ 
+
+“That is unnecessary.” It stated, watching her carefully. “Current plating is sufficient.” Tali’s brows rose.
+
+ 
+
+“What?” She half snapped. “We just spent the last two hours here because this plating isn’t sufficient! It needs replacing, now let me remove this-”
+
+ 
+
+“No!” The geth’s hand clenched over the scavenged pauldron. The word came out loudly, a sharp refusal. Tali stopped, backing up a bit from it. Legion’s hand remained, optic watching her.
+
+ 
+
+“Why won’t you let me change it?” She asked, hands on her hips.
+
+ 
+
+“It was… Shepard-Commander’s.” Legion said quietly. Her face tightened.
+
+ 
+
+“I know what it is!” She felt her face flush. “You scavenged it off her corpse!” Legion was silent, but she pressed. “Why? Why are you wearing it?” She stepped closer. “Why are you wearing Jane’s armour?”
+
+ 
+
+Tali was met by another silence, long and empty like the last had been. Legion’s head plates flexed, its optic tightening to a pinhead, before flaring out again. Anger and loss roiled in her gut. She had put up with this thing’s presence, worked alongside it on occasion, even fought with it on the team. Now she offered to fix the stupid machine, and in return it gave her some ridiculous pantomime. It was as confusing as it was vexing.
+
+ 
+
+“No data available.”
+
+ 
+
+Legion’s answer fell like a stone to the floor. The caustic feeling leaked out of Tali in a long exhale. She knew it was pointless to keep asking. Now she was trapped between leaving the geth vulnerable, and the inevitable pain that would bring Jane when its luck ran out. Or… She padded across the workshop, past Jack’s bed to where several damaged hard suits were resting. One of them was Jane’s. The rear plating had been bored through by a Collector particle beam. Damage to the gel layer of Jane’s suit had been extensive, beyond fixing.
+
+ 
+
+The armour itself was fine, but without the impact gel it was useless for organics. Tali looked at it for a long while. Seeing it again brought back painful memories. She heard Shepard’s cry of pain, her vision filled with the red, seeping crater that had marred Shepard’s skin. But she banished it, and focused. It’s what Jane would want. With perfect precision she cut away the front chest plate and right arm, fashioning them to the dimensions on Legion’s platform. With the pieces in hand, she returned to the geth.
+
+ 
+
+“She wore these on Horizon.” Tali showed the attentive machine the bright N7 insignia, and crimson stripe on the pauldron. “Will you let me install them?” Legion’s head plates flared slowly, before it looked at her.
+
+ 
+
+“Yes.” Its voice was low, optic still fixed on the armour. With a few minutes more work, she stripped the old plating from Legion’s chest and arm. In place of the charred memory rested shining, charcoal grey, the N7 no longer scratched and faded. There had been need for minor adjustments, but now a smaller, rounded pauldron covered the geth’s right shoulder, and its chest bore a full plate across the once gaping cavity. A few final tweaks, and she stood back while Legion rose to its full size.
+
+ 
+
+“Run self-diagnostics.” She ordered again.
+
+ 
+
+“Plating installation successful. Torso and right arm coverage is ninety-nine percent. Platform repair complete, we are ready for tasking.” For a moment, the image of that ancient carving returned to Tali’s mind. In some small way, she understood the awe her ancestors had felt. A swell of pride accompanied it, taking in her handiwork.
+
+ 
+
+“We should get back to our duties then.” She gathered up the removed pieces of Jane’s old armour, cradling them as she made her exit.
+
+ 
+
+“Creator-Tali’Zorah!” Legion’s voice drew her back. Her eyes met its optic. “Thank you.”
+
+ 
+
+“You’re welcome, Legion.” She said, half aware of the words. It was surreal to hear them.
+
+ 
+
+“This interaction has been recorded for transfer to the Consensus.”
+
+ 
+
+“It has?” She asked, confused. “Why?”
+
+ 
+
+“This is the first repair of a geth unit by a Creator in three-hundred-twenty-seven years. We judge this to be a significant event.”
+
+ 
+
+Tali blinked, unable to quite process what she’d just heard. The whole time, and she’d never even considered that fact. Too many emotions came at once, conflicting and drowning each other out for her to experience any of them clearly. She wasn’t sure if the wetness in her eyes was anger, pain, or something more profound. But her throat tightened, and all she could do was stare at the expectant geth.
+
+ 
+
+“Do you wish to add a statement for the record?” Legion asked.
+
+ 
+
+“No, but… Legion?” She felt that optic find her eyes. “Just call me Tali.”
+
+ 
+
+ 

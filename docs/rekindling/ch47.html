@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 47: Fallen Angel</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch46.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html" selected>Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch48.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 47: Fallen Angel</h1>
+    <div class="chapter-content">
+        <p>Rough alien barks echoed outside, garbled through an ancient PA system. Translators changed the batarian major into Palaveni, and Garrus sighed. They were docking soon. Hunched over a bathroom sink too small for him, the turian stared into a dirty mirror. It was all dirty, every inch of the ship. The rust, the blood, the stench of Omega had clung to this transport like a parasite. It corrupted everything, and he saw it in his reflection. There was someone looking back at Garrus that he didn’t recognise anymore. Doctor Chakwas’ bandage had been safely discarded weeks ago, with scarred hide and chipped plates taking its place: The right side of his face, mangled. Sol didn’t know. His sister had only spoke with him in voice calls. None of them knew.</p>
+        <p>He’d thought it would be easier, in time. That like any wound, a turian could wear this proudly. Perhaps he had when it was outshone by the blue markings painted over top: The blood of forefathers past, blood that soaked the soil of his species’ home world. But now those markings were gone, along with his armour. Done away with to hide his identity. So for a time, it had just been him: Just a disfigured wretch, gracelessly applying false colony markings. Not the son of Castis Vakarian, not the turian who stood shoulder-to-shoulder with Commander Shepard and brought down Saren. It felt like none of that person remained anymore.</p>
+        <p>Only those blue eyes were the same. His mother’s eyes…</p>
+        <p>Garrus’ mandibles clenched tightly. It was back, gorged on the blood of his old team and stalking him again. The feeling prowled inside him, claws dragging along his heart. He had already come this far, already abandoned his friends and his duty. There was no going back. What more harm could be done, if he turned himself in? It would tweak the nose of that damned matriarch Dantius, her prey sitting safely in a C-Sec holding cell. Soon enough his father would come, and collect his failure of a son. The thought of returning home in disgrace, interrogated and berated by Sol, losing what little respect they still had for him. It burned like tar rubbed under his fringe.</p>
+        <p>But amidst all that, he would get to see her again. Mother. He would get to catch the spark of lucidity in her eyes, bask in the recognition of her boy come home. Maybe even give her some peace. Spirits how he wanted that. Just to see her one last time, and hear her call his name with the warmth she did when he was a child. Just so he could tell her he was sorry, and that he loved her. A keen travelled up his throat, but never left him. He fixed those blue reptilian eyes on the turian before him. He would not crumble now.</p>
+        <p>The brightness of the nebula stung his eyes. Fresh air hit his nose, washing away the reek of the dingy transport behind him. Garrus followed the queue slowly, searching for his contact. But it was easy for his gaze to wander. The gleaming, curved skyline of the ward was majestic, framed against the impossibly large structure holding the four other arms of the Citadel together. Everything was clean and neat; with the trappings of civilisation everywhere he looked. It felt almost like reliving a memory, as if everything was just a little askew.</p>
+        <p>He hadn’t noticed it when he’d come with Shepard, but there were humans everywhere he looked now: Humans in C-Sec uniforms. They were waving the other arrivals through the DNA scanners, and Garrus’ hide itched. Another quick scan of the area and he finally spotted them: A pair of turian’s, brown and black, both sporting Carthaan colony markings. He gave a sigh of relief. Pushing through the crowd, soon he was funnelled into their queue, and their eyes caught his. The two C-Sec officers approached, pushing the new arrivals aside.</p>
+        <p>“Come with us.” One of them growled. The order was enough to scatter the surrounding lowlifes, and Garrus felt hands around his arms as they marched him away. The familiar sight of security doors opened as the three of them bypassed the scanners, winding their way through sterile hallways dotted with holding cells and interrogation rooms. Soon they reached the officers’ shift quarters, the windows fogged to hide them. His escorts released him, green and gold eyes watching intently.</p>
+        <p>“Braccus, Tarsus…” Garrus cracked his neck, working out the kinks from the flight. “Very convincing arrest, your captain would be proud.”</p>
+        <p>“Go to hell, Vakarian.” Tarsus chuckled. He brought a hand down on Garrus’ shoulder. “Looks like you seen better days, sir. We hardly recognised you, did we Brack?” The other turian gave a worried nod. “You holding up alright?”</p>
+        <p>“I’m fine.” He answered. “Hardly the first tight spot I’ve been in.”</p>
+        <p>“Last time you weren’t attackin’ people’s pleasure cruisers and pissin’ off matriarchs…” Braccus’ interjection got a sharp look from his brother.</p>
+        <p>“Go get his kit, Brack!” Tarsus said sternly. There was an aggravated chuff before the other turian left. Garrus saw the strain in his friend’s plates as he sighed. “Don’t mind him. Still adjusting, I think. Whole force looks completely different now. Lotta old faces we’re gettin’ used to… not seeing.”</p>
+        <p>“I noticed.” Garrus nodded. “Seems like it’s mostly humans out there now.”</p>
+        <p>“Everywhere you look…” Tarsus said with a huff. “Not their fault. It’s just… Leyra’s squad, those asari from SR, our buddies from the Tayseri precinct… they’re all dead.” His gaze hardened. “Wiped out by the geth. We found some of ‘em on the ground. Surrendered, y’know? Didn’t make any difference to those things.”</p>
+        <p>“I’m sorry.” Garrus said quietly. “C-Sec brass was tight-beaked about it. They never even let me back in the system. I didn’t know it was that bad.” He returned his friend’s touch, more sombre this time.</p>
+        <p>“It was bullshit, what they did to you.” Tarsus muttered. “Everyone in Investigation knows it. Fuckin’ politics.”</p>
+        <p>“Ancient history now.” Garrus tried to reassure him. “Got enough problems in the present. You have any intel on this, Fade?”</p>
+        <p>“Nothin’ more than best guesses. I reckon he’s gotta be a former agent. Network Division’s been after him for months. Guy’s too good to be an outsider. Either that, or he’s got contacts on the inside. Spirits, I don’t know what’d be worse.”</p>
+        <p>Before Garrus could answer, Braccus returned from the armoury. Bundled in his arms were a military-grade shield harness, and a holster with a pistol inside. For a moment he stood beside his brother, eyeing the former C-Sec agent. But Tarsus gave him a look, and finally he handed them over. Garrus was grateful for the protection, there’d been no way to smuggle weapons off the transport without being caught. But something caught his eye. At first he hadn’t noticed the familiar contours of what he was holding. But as he examined the pistol, pulling it from the holster, realisation dawned. The scuffmarks, the aftermarket sights, the classic style heat sink. His brow plates rose.</p>
+        <p>“Is this…?” He uttered, looking up from the gun.</p>
+        <p>“Yep.” Tarsus said proudly. “Took some doin’, but we thought you could use another old friend.”</p>
+        <p>He pulled back the pistol’s slide. The action was smooth as silk, recently cleaned. It felt like he’d turned it in yesterday. A pulse hit his chest. “Thanks.” Garrus looked back up at them. “All of this, I know the risk you’re taking.”</p>
+        <p>“Just opening a couple doors, misplacing old gear.” Tarsus shrugged. “Standard practice, really.” The three of them moved to the exit, a quick ID scan unlocking the door. The outside world came pouring in again, on the other side of the cordon. “Good hunting, sir.”</p>
+        <p>Garrus felt there was more to say, but in the end they simply bowed their heads. As turian a goodbye as there was. As he left the C-Sec building behind, a small fear followed him. Braccus had been hesitant to help, uneasy the whole time. Would there be a squad of agents following him to the meeting place? Hell, would Fade even be there now? He checked his Omni-tool; the message had gone through. The forger knew he was here. It would have to be enough. He tugged at his jacket, taloned hands fiddling with the fit of his new clothes. They were ill sized, a last minute purchase on Omega. Camouflage amongst criminals, shedding his armoured silhouette.</p>
+        <p>With his old service weapon tucked away inside a pocket, it almost felt like the old days: That sense of tension before a sting, talking the talk and trying not to blink first. The walk to the warehouse was a long one, taking him down the more downtrodden streets of Zakera. The further from the Presidium he went, the poorer people got. A fleeting idea crossed his mind to pop in to Zakera Lanes afterward, check on Tali’s friend. But the thought of her dug into his skin. What would she be thinking right now? Spirits, they hadn’t even talked about it before he left. They’d barely talked at all. It sat heavy in his stomach, the sense of… betrayal.</p>
+        <p>It was too late for what-ifs; there was no turning back now.</p>
+        <p>Coming to a stop outside a rundown warehouse, Garrus checked his tool. The coordinates matched, this had to be the place. Far away from a C-Sec station, where shadowy characters lingered in broad daylight. Squeezing through the half-open automatic door, he entered the building. The interior was barren and utilitarian, pitch black to the naked eye. The front office was empty, devoid of life. No one had worked here in a long time. It was strange; usually warehouses would be refurbished and kept operational. Perhaps the past couple years had halted most of those plans. Making his way past overturned chairs and dusty terminals, Garrus was soon in the main storage area.</p>
+        <p>It was vast, stretching back into a gloomy abyss. Storage racks broke up the cavernous size and loading arms, with dead forklift drones scattered around. Only a handful of crates remained, like scraps of rotten flesh, still clinging to the bone. A scarce few lights flickered above, providing some small illumination: Enough to draw attention to a trio of figures waiting in the centre. Two heavyset krogan leaned against some crates, armed to the teeth. Between them a portly little volus worked a data-pad, seemingly oblivious. He approached slowly, scanning along the high catwalks and far corners. His visor switched to infrared, then to motion tracking, but nothing stood out. The itch didn’t leave.</p>
+        <p>“Fade?” Garrus spoke up, stepping into the gritty light. Two sets of slitted eyes were on him, hard and suspicious. Soon they were joined by the glowing optics of the volus.</p>
+        <p>“You’re late!” The volus, Fade, answered. “It’s been a week! Client windows are meant to be timely. It’s going to cost extra, just so we’re clear.”</p>
+        <p>“Crystal…” Garrus said with a sneer. “Gotta admit, you’re not quite what I expected.”</p>
+        <p>“I wouldn’t be very good at my job if you did, would I?” Fade huffed. “Now, do you wanna chat all day, or do you wanna disappear?” The two krogan stood up straight, making a show of brandishing their guns.</p>
+        <p>“I’ve got a counteroffer for you…” Garrus snarled. He stepped forward, stopping just short of Fade. He loomed over the volus, unfazed by the show of levelled weapons. “How about you make someone reappear?”</p>
+        <p>“Uh, t-that’s not-” Fade’s response became a yelp as Garrus’ arm shot forward, grabbing the volus by his suit harness and hoisting the little alien up. Now they were face to face, the two krogan shocked by the speed. His blue eyes burned like coals.</p>
+        <p>“Make an exception.” The turian’s threat came at gunpoint, pressing his pistol against Fade’s stomach. “Just this once.”</p>
+        <p>Movement. Several orange figures appeared in the gloom, illuminated by his IR scanner. Garrus took a step back with his hostage, pointing his gun at the krogan. He counted six new contacts, each in a firing position. His instincts had been right: this was a trap. One of the shooters moved, and he jerked to aim his weapon. Then suddenly something slammed against his carapace, tearing through the jacket. A deafening bang echoed through the room. The volus fell from his grasp as he turned to spot the culprit: A sniper on the far catwalk. He barely had time to react before one of the krogan bodyguards came barrelling towards him. Two blinding shotgun blasts clattered against his shields, nearly draining them completely. Garrus turned his gun skyward, shooting out the overhead lights. The krogan’s charge missed in the dark, and he made a break for cover.</p>
+        <p>Shadows danced around the room, muzzle flashes strobing the surroundings. It was chaos, impossible to keep track of any one detail. Accurate gunfire found him again, Garrus returning in kind with a pistol volley. The turian heat signature fell over dead. The relief was momentary. As soon as his shields had recovered, the sniper’s sights found him: Another loud bang, and a sharp pain in his collar. Blood began to stain his jacket. Garrus panted, holding off the urge to panic as one of the krogan drew closer. Before he could make the foolhardy close shot, a brilliant blue flare lit up the whole warehouse. It burned brightest on the catwalk, reducing the sniper to a smear on the metal grating. Tracers flashed in the direction of the disturbance, the mercs’ attention drawn away from him.</p>
+        <p>“Here, catch!” A woman’s voice called out over the din.</p>
+        <p>The sniper’s long rifle was flung towards him, slowed by biotics. Garrus grabbed it just seconds before the roar of a krogan sounded nearby. Spinning to face the attacker, he buried the barrel in its gut and pulled the trigger. He fired round after high-calibre round into the krogan, even as the beast’s hand clenched around his throat. The rifle jolted and kicked, heat sink screaming for relief. The fourth shot was enough, and those beady eyes went glassy as the final round exited in a geyser of blood.</p>
+        <p>Pushing the body down to the ground, Garrus racked the bolt. Now he could really fight back. Arcing biotic blasts came down like artillery shells, scattering the shooters while he lined them up. He let the weapon sing, punching thumb-sized holes through armour and helmets: Humans, turians, batarians. Soon the entire enemy squad was down, a few of them still squirming. With the danger having passed, Garrus emerged from cover, struggling to keep stride with his wounds. He drew his pistol, finishing off the remaining mercs. Blue Suns, as he’d expected. He let himself enjoy their deaths. They still had plenty more blood to repay him.</p>
+        <p>The other krogan was slumped down beside some crates that had been piled together. Missing limbs broke up his huge frame: Interior biotic detonations, a gruesome sight. Despite the blood and viscera, he was still alive. They were the toughest species out there, the krogan. The mystery woman was standing over him, blue hand grasping his wide jaw. An asari, he’d thought as much. Her biotics had been impressive. She was clad in black leathers, a fashion statement knock off of the commando uniform, popular with maidens. He noticed the biotic energy still radiating off her, the subtle shiver in the krogan at her feet.</p>
+        <p>There were muffled whispers, impossible to make out. But the large reptile mumbled in answer, almost unintelligible. Something about it… kept him back. His steps froze, just outside her notice. When the mumbling finally stopped, the krogan gave one final spasm before his eyes rolled back. Blood dripped from his nose and mouth. A few drops stained the asari’s hand, and she wiped it clean before rising to her full height. With a wave of her hand she blasted away the crates, revealing a cowering Fade beneath them. The little volus barely had time to squeak before she yanked him from the ground, turning and dropping him before Garrus.</p>
+        <p>“Would you do the honours?” She asked. Her voice was smoky and low. A stark, almost angular face framed her bone white eyes: Regal, with only the last vestiges of youthful softness remaining. Something about her looked almost familiar. His pause didn’t go unnoticed. “I can’t join with suited species. Not without the right equipment.” She looked at him expectantly. “Do you mind?”</p>
+        <p>“Not at all.” Garrus answered, kneeling down in front of the cowering volus. “Now, Fade. Where were we?”</p>
+        <p>“I-I’m not Fade!” He cried as the turian’s pistol found that his head again. “I just front the meetings and send client data. Please, I’m sorry!” His voice shook, shivers ruffling the suit. “Please… don’t kill me.” He whimpered.</p>
+        <p>“That depends on next few minutes.” Garrus threatened, glaring into the volus’ optics. “They’re going to be very important ones.” The smallest peep came in response. “Where is Fade? Who is he? And how is he helping people disappear?” He dug the barrel into the fabric on the volus’ cheek. “Answer I don’t know to any of that, and you’re not walking out of here.”</p>
+        <p>“H-he’s, u-uh…” He was shaking now. “W-what would you like me to-?”</p>
+        <p>“His name!” Garrus yelled.</p>
+        <p>“Harkin!” He yelped. “H-his name is Harkin. Used to be C-Sec, b-but they fired him.” The pistol slackened its press. “He knows their systems, and he used them to make himself disappear. Then the Blue Suns found him…”</p>
+        <p>“And now he’s helping them disappear people.” Garrus finished the thought.</p>
+        <p>“Yeah.” The volus nodded. “It’s client based now, they supplement their smuggling operations by incorporating paying customers into-”</p>
+        <p>“Where?” Garrus cut him off. “Where is he?”</p>
+        <p>“Tayseri.” He collected himself. “They-uh, they’re in the Hahne-Kedar foundry on Tayseri Ward. The area’s still dark, but they’ve got power going to one of the buildings. They keep it blacked out on the outside. It’s crawling with mercs, gun turrets. It’s a fortress.”</p>
+        <p>Tayseri… the whole ward was still without power. Ships flew over it all day, heading between the other wards. If no one were looking, a quick drop off or pickup would be easy: Perfect place for smuggling. Fucking Harkin, of all people. It shouldn’t have surprised Garrus. He’d always been a criminal. At least now it was official. He took in the little volus for a moment. With only a mask, it was impossible to read him for certain: But the subtle movements, the slowed breathing. His visor had tracked the alien’s heartbeat, steadying as he talked. It was the truth.</p>
+        <p>“C-can I… can I go?” The volus asked, carefully. Without answering, Garrus gripped his arm. For a moment there was whimpering as he synced up their Omni-tools. One of Tali’s hacks was sent, bricking the tool’s comms and data storage. The whimpering died, and the turian stood up.</p>
+        <p>“Get out of here.” Garrus ordered. He’d never seen someone so small and clumsy, run so fast. A breath escaped him, one of relief. Criminal or not, threatening the helpless sent a twinge through the turian.</p>
+        <p>“Impressive.” The asari chuckled behind him. “You really went to town on the little guy. Thought he was gonna fill his suit.” No sooner had the quip left her mouth then Garrus’ pistol found her.</p>
+        <p>“You here for me?” He asked with a growl, barrel pointed between her eyes. She was unperturbed, staring right back at him.</p>
+        <p>“No.” She answered coolly.</p>
+        <p>“Don’t bullshit me. This isn’t coincidence.” Garrus glared at her. “How’d you find this place?” Her lips thinned.</p>
+        <p>“I saw those turians let you go from the station. Saw they gave you a gun, too.” Her eyes darted down to his weapon. “You were on the transport outta Omega. Kept to yourself most of the way, so you’re not with the gangs.”</p>
+        <p>“You were watching me?” His gaze hardened. She shrugged.</p>
+        <p>“I see what I see.” Her answer pricked him. “You’re not a merc, least not affiliated. You’ve got friends in C-Sec, enough to get you past customs and arm you. Undercover cop, maybe?”</p>
+        <p>“Answer the damn question!” He snapped. The asari’s eyes narrowed.</p>
+        <p>“I followed you here.” She admitted. “Figured you were looking for Fade, and I took a chance. Turns out I was right.” The pistol faltered, and fell from her head. Garrus relaxed, keeping his eyes on her. “You’re welcome, by the way.”</p>
+        <p>He grunted and slung the rifle dangling from his arm. Pain shot through him as he searched the corpses. Most were human; all of them were Suns. He looted them for thermal clips and a mid-range scope, even getting his hands on a decent assault rifle: A Vindicator model, modified for single-shot use. Many of the dead were in pieces, the victims of this strange asari. Finally he spotted one of his own kind lying nearby. The turian was about his height; close enough in proportions for the fit to work. It was worth a shot. He knelt down with a hiss, and began stripping the armour.</p>
+        <p>“You got a name?” The asari asked from behind. His mandibles clenched.</p>
+        <p>“No.” He answered.</p>
+        <p>“Cagey, aren’t ya?” She shrugged and attended a nearby body.</p>
+        <p>“I don’t know you. And I’ve had my fill of betrayal and attempted murder for this year.” His answer got a snort from the asari, quiet but very much there. He removed his jacket and the cold, stale air dug into his wounds. He couldn’t suppress the shudder.</p>
+        <p>“You’ll need medi-gel for those.” She warned, fiddling with a pouch on her outfit. “Probably catch an infection from those rags alone…” He felt a hand trace his carapace and flinched, glaring at her. “What? Not like you can reach back here yourself.” His eyes narrowed, and she sighed. “If I was gonna kill you, don’t you think I would’ve just waited till those mercs finished you off?” She cocked a brow, tilting her head.</p>
+        <p>“Fine.” He relented. “Go ahead.” Soft skin caked in gel lingered at the edge of cracked carapace, before slipping inside. Tender flesh was touched by the cold, sending jolts through him. Uncontrollable shivers racked Garrus, once, then twice. The asari must have noticed, but she didn’t comment. Instead she worked fast, covering the small craters in his body with the salve.</p>
+        <p>“The name’s Morinth.” She said softly, finishing up. He looked at her. She met his gaze, soft yet confident. “Now you know something about me, that I don’t about you. Makes us even.” It was his turn to snort in amusement.</p>
+        <p>“Probably planning to get it changed anyway.” He guessed, slipping into the armour’s vac-suit. “You a client of Fade’s? Looking to disappear?”</p>
+        <p>“Think I would’ve attacked the meeting if I did?” She asked.</p>
+        <p>“I think you knew that wasn’t the real Fade, same as I did. Maybe you were looking for the in person discount?” Garrus glanced to her. “That getup the real deal? You a commando?”</p>
+        <p>“The armour’s real. But no, I’m not a commando. I bought it. Place like Omega… pays to look more dangerous than you really are.”</p>
+        <p>“You seem dangerous enough already.” Garrus nodded to the dismembered corpses. “Makes sense, given you made it to matron in the Terminus Systems.”</p>
+        <p>“You make a habit of guessing girls’ ages?” She asked with a smirk.</p>
+        <p>“I see what I see.” He shot back. She let out a giggle. It was an oddly warm sound, in the cold, sterile warehouse. He fitted the armour to the suit, adjusting it. “So… if you’re not a client, what’s your interest in him?”</p>
+        <p>“You first.” She crossed her arms. The humour left the air.</p>
+        <p>“I’m looking for someone.” Garrus said, his voice a low growl. “He screwed me over, and he owes a debt. I’ve come to collect it.”</p>
+        <p>“You came halfway across the galaxy for a few credits?” Her question made him shake his head.</p>
+        <p>“Not that kind of debt.”</p>
+        <p>“Ah…” She said quietly. “…I understand.”</p>
+        <p>Minutes passed by in silence as he finished fitting the armour. It was a snug fit, but it would do for now. He fitted the stolen guns to their mag-points, and thought about his next step. A public shuttle would be a no-go, not with illegal weapons. Perhaps the Suns had a shuttle stashed nearby? They must’ve gotten here somehow. Before his knuckles could whiten from the stress, he heard Morinth’s voice.</p>
+        <p>“Got a way to Tayseri?” She asked. He could hear it in her voice; she knew he didn’t. He shook his head, and a small smirk grew on her face. “Need a ride?” She finally asked.</p>
+        <p>“I… do.” He said, more to himself than to her.</p>
+        <p>Her smirk became a smile, and Morinth turned on her heels, strutting towards the exit. Garrus kept pace, his newly armoured footsteps trudging behind her. A force of military habit, he scanned the main loading bay a final time as they departed. He noticed a mass of shapes at the far corner. Utility drones. Some were forklifts, others cranes, or warning fliers. They were piled together, one on top of the other. The paint was faded, and rust had set in. They were dead, all of them. This whole place was forgotten, buried at the bottom of a bureaucrat’s filing desk. Nobody came to fix it. Nobody cared. It was just… lost, among the chaos of the past two years. By the time anyone did find their way back here, it would all need replacing.</p>
+        <p>There was no hope of repair.</p>
+    </div>
+</body>
+</html>

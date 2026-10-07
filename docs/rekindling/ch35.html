@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 35: New Homes</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch34.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html" selected>Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch36.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 35: New Homes</h1>
+    <div class="chapter-content">
+        <p>The small, commandeered utility rover came to a stop on the side of the road. About a mile from an outskirts town on the colony of Anhur, was a small mercenary base. Shepard felt tense. Tali sat beside her, the two of them all but alone for the mission. After tracking a lost Cerberus operative from the Omega System, his tracker signal had led them to this world. Potential locations were spread out, so she’d split her squad up into teams to check the towns and city. A few locals had recognised Tyson Rawling’s holo, but none knew where he was. Garrus’ team had chimed in not long ago, citing a VIP operative working with the local Eclipse. This “attaché” was apparently hunting for him as well. After some quick tapping of Eclipse radios, Tali had found something. Mentions of a captured Cerberus collaborator, though not the man they were looking for. Instead, her eyes widened at the description.</p>
+        <p>Two dreadful words came over the airwaves. “Suit-rat”.</p>
+        <p>Shepard readied her rifle while Tali sent Chatika off to investigate. Her time spent tinkering on the drone had payed off, and the purple orb rose into the sky before vanishing from sight. Cloaked and airborne, hopefully it could get them some idea of what was waiting inside. Shepard felt an itch beneath her hard-suit, glancing over at Tali as they stealthily approached. She didn’t like putting Tali in harm’s way, especially without any backup. But teams two and three were hours away. If the prisoner knew anything there was no time to lose.</p>
+        <p>An image blinked up on Shepard’s HUD, aerial footage from the camp. She saw a few troopers standing guard, along with as many LOKI bots to fill out the ranks: Mostly just humans and salarians. The centre of the base was dominated by a bunch of large cages, the kind used in an open-air prison camp. All of them were empty, except one. Three figures were inside: A quarian, tied to the bars. A human on a terminal, with wires hooked up to the prisoner’s suit. And an asari, dressed in black armour. The drone focused in on them as Shepard and Tali drew closer.</p>
+        <p>“Scans finished?” The asari asked impatiently, her voice rough in Shepard’s earpiece.</p>
+        <p>“Yes ma’am. Suit’s not picking up an OSD, internals aren’t showing anything in his digestive tract.” The Eclipse trooper’s report got muffled curses from Tali. Shepard could feel her tensing up as they got to the wall.</p>
+        <p>“He must’ve stashed it, then.” The asari moved closer, squatting in front of her prisoner. “Tell me where the informant is.” Her voice was low and dangerous. Garbled coughing came from the quarian’s helmet.</p>
+        <p>“I… don’t know… what you are talking about.” He pleaded through groans.</p>
+        <p>“Hit him again, fire this time.” Screaming soon joined the asari’s sharp order. The quarian writhed and thrashed, as if trapped in an inferno.</p>
+        <p>The sound was enough to stop Tali dead in her tracks. Shepard looked back to check she was okay, keeping her head on a swivel. Soft, muttered curses escaped Tali’s helmet as she tapped away at her Omni-tool. Chatika’s footage was soon overlayed with local network data. Shepard watched as she hacked it all in real time. Comms were cut-off, and soon the LOKI guards had been infiltrated. Tali’s digital tendrils ensnared every computer in the camp, including the one hooked up to quarian victim. The data she was sending flew by too fast to follow, but soon the writhing stopped. The poor man just lay there, his laboured breathing picked up by the drone’s microphone.</p>
+        <p>“What the hell just happened?” The asari was angry, getting in the trooper’s face.</p>
+        <p>“I-I don’t know, his nerve-stim just went dead!” He held up his hands. “Maybe a failsafe or something, I didn’t… I must’ve missed it.” She shoved the trooper aside, glaring at the computer.</p>
+        <p>“Fucking useless…” She snarled, looming over the quarian. “Fine, we’ll do this the old-fashioned way.”</p>
+        <p>That was their cue. Shepard pushed up along the wall, Tali at her back as they approached the gate. Slotting on suppressors, they brought down the two mercs standing guard. Slipping inside, the pair split up. She could see the cages now, along with the interrogation happening within. Sticking to the shadows in the afternoon light, Shepard keenly watched the aerial footage: Ten or so troopers, not counting the asari in black. A violet shadow slunk along the far side, slowly lining up the enemy with technological attacks.</p>
+        <p>Another line of code, the LOKI’s all shifted their positions. Metal hands gripped their rifles and submachine guns, bringing new targets into their firing lines. Adjusting the sight on her avenger, Shepard took aim at the mysterious “attaché”. Scars and bright white markings tarnished her ethereal blue features. Her lips were curled in a sneer as she glowed with biotic light. The former torturer stepped back, Tali’s targeting laser trained on his head. The prisoner began to cry out again, his pain enough to pull Shepard’s finger down over the trigger. For just a moment, everyone stood still. The window was small, but it was more than enough.</p>
+        <p>She gave the order.</p>
+        <p>Flashing pulses of electricity erupted around the Eclipse soldiers. One by one their shields flickered and failed. In a flash, the robots opened fire. Bursts of rifle and pistol rounds tore into the unshielded foes. Before they could react, all the mercs toppled over dead. The human torturer barely had time to flinch before two large holes perforated his helmet, sending blood and brain matter splashing against the bars. Finally the shields fizzled away from the black-clad asari warrior. Shepard squeezed the trigger, firing a controlled burst. But her deadly salvo fell harmlessly to the ground. The asari’s biotic barrier blazed, her sapphire eyes encircled in darkness, looking right at Shepard.</p>
+        <p>Suddenly Shepard was yanked from behind cover. She tumbled through the air into the dirt, as the asari twisted a hole in the cage with her biotics. The asari drew her gun, crossing it over her arm and firing at Shepard. Bullets bit into Shepard’s shields as she returned fire. From the front her enemy was invincible, completely protected by her barrier. Forced behind cover, Shepard pulled a grenade. The disk-shaped bomb was flung toward the asari, only to be caught with a biotic field. She fired again, detonating the explosive right in front of her. But the attack didn’t stop. Instead machinegun fire tore through the last of Shepard’s shields.</p>
+        <p>Then a flash of purple came streaking across the battlefield. Tali’s auto-shotgun pelted the asari with electrified buckshot. The barrier faded, and the surprised opponent switched targets. Levelling her rifle, Shepard fired into the asari’s weapon, a precise burst clipping the machinegun. Outnumbered and outflanked, the asari yelled out as bullets bit into her. In an instant she snatched Tali up with biotics, readying to crush the quarian against the wall. Shepard struck first, tackling the asari over. Robbing the full strength of the attack, Tali dropped to the ground. Shepard grappled with the asari, before being knocked away by a shockwave. Dazed, Shepard quickly recovered her rifle. The enemy stood tall, her wild eyes on Shepard.</p>
+        <p>“Human biotic… N7 armour…” She looked Shepard over, flashing a smile of bloodstained teeth. “…Perfect.”</p>
+        <p>The asari made no move for a weapon. Instead, her Omni-tool burned on her arm. A sharp, glowing blade unfolded from it, jutting out over her fist and tapering to a deadly point. She brandished the new weapon in her right hand, blue biotics crackling in her left. The warrior surged forward. Shepard clamped the trigger down, firing a stream of bullets. They whizzed around the asari, deflected by her barrier. She swung the blade savagely, slicing Shepard’s weapon into sizzling pieces. Shepard’s own biotic punch dented the asari’s chest plate as the asari tried to stab her. Each thundering hit brought a flesh spurt of blue blood from her nose, but the asari wouldn’t relent. Glowing scars raked across Shepard’s armour, near misses as she kept her distance.</p>
+        <p>Suddenly an opening, Shepard struck the asari across the face. With her nose flattened she slashed Shepard’s arm, burning hot blade searing her flesh. Enraged, the asari lifted her into the air. Shepard heard her helmet crack as she was smashed against the wall. She was completely pinned. Her whole body felt like it weighed a ton. Teeth bared, the asari stalked towards her. Every step brought more pain. Her left hand held Shepard fast, while the right readied her burning blade. A figure struck from behind. Tali was on the asari’s back, quick as lightning. Sinking her knife into the enemy’s shoulder, the biotic field vanished.</p>
+        <p>Shepard hit the ground, before seeing the opponent turn to Tali. In seconds that blade would be on her. Shepard breathed and flexed, becoming a biotic missile. The impact was devastating, tearing through armour, muscle and bone. A wet crunch and pop, and the asari crashed to the ground. Blue blood poured onto the soil, drooling from the fleshy stump that used to be her shoulder. She looked up at Shepard, stunned and horrified. Her severed arm still hung from Shepard’s grasp. Shepard hadn’t realised she’d torn it off.</p>
+        <p>A crack of gunfire broke the silence. The asari’s head snapped sideways, a high-calibre hole through it. Shepard dropped the disembodied limb. She turned to see Tali, pistol lowering and set on her hip. Her beautiful eyes were wide. She quickly loped over, her hands hovering, afraid to touch. Those eyes were roaming now, over every searing scratch. They homed in on Shepard’s cut arm, but a few others had made it through as well. Tali didn’t need those on her mind. Taking Tali’s nervous hands in her own, Shepard lifted her faceplate and smiled.</p>
+        <p>“Nice shooting.” Her compliment was answered by Tali’s touch. Shepard released Tali’s hands, letting them wrap around her. Tali squeezed her tightly, letting out her adrenaline and worry. Shepard returned her embrace, rubbing her clean gauntlet down Tali’s back. Back and forth, slowly bringing down Tali’s quick breathing until she’d matched Shepard’s motions.</p>
+        <p>“I’m alright, Tali.” She said gently, pre-empting her question. Tali pulled away with a final glance to Shepard’s arm, but nodded.</p>
+        <p>“Okay…” She conceded. “…I should, go help the prisoner.” She said it more to herself than Shepard. With a final squeeze of Shepard’s hands, Tali headed for the mangled cage. Content to let her handle the other quarian, Shepard took a closer look at the body.</p>
+        <p>She was definitely a combat veteran. Shepard couldn’t know for sure, but ballpark this asari still had to be a maiden: Maybe on the older side, or a young matron, but clearly older than the typical mercs and dancers of her species. The armour she wore was high quality and asari-made, the flowing curves were a dead giveaway. There weren’t any insignias, no doubt by design. Whoever she was, it wasn’t some gun for hire. Scans from Shepard’s Omni-tool explained her incredible biotics: An Armali Council amp, with classified specs. All the evidence brought her back to Noveria, and a very particular name. Benezia. She’d had a troupe of asari commandoes with her, and the dead woman in front of her fit that description perfectly. But what was she doing out here?</p>
+        <p>“Shepard, I need some help.” She turned to see Tali coming back to her, propping up the quarian man. Rushing to relieve her, Shepard took the man’s weight. Following Tali out of the base, a small voice came through the ragged vocalised breaths.</p>
+        <p>“…T-thank you.”</p>
+        <p>The sun was low on the horizon now. Seated in the back of their commandeered utility rover, Tali’s attention was split between the countryside and the quarian sitting next to her. After an injection of medi-gel and stimulants, Jarr’Tirrel was stable and lucid again. He’d barely managed more than his own name at first, still coming down from the torture those bosh’tets had put him through. She’d returned functionality to his nerve-stim, along with a software upgrade. In return for saving his life, Jarr had admitted to knowing about the target. At least, he’d recognised the holo. Jane had let the others know before driving them all to his home. She couldn’t recall the last time she’d actually enjoyed a ride with her commander, which was saying something for a girl with perfect memory.</p>
+        <p>“Take this right.” Jarr spoke up, pointing his gloved hand. The rover shifted and he groaned a little, but seemed okay.</p>
+        <p>“Why were they looking for this human?” Tali asked, her question at least half-genuine.</p>
+        <p>“I don’t know.” He shook his helmet. “Maybe because he was an outsider? He only came here two months ago.” Jarr coughed, sitting up a little. “They were talking about some… killing. Looking for Cerberus people.” She noticed the shift in his eyes.</p>
+        <p>“This man, did he threaten you, hurt you?” Jane asked from the driver’s seat.</p>
+        <p>“No. Never. Mister Rawlings was a good human.” Jarr looked to her for a moment. “He was kind, and helpful.”</p>
+        <p>Before she could ask what he meant, the rover passed the final bend. What awaited Tali was a sight she never thought she’d see. At the end of a long, dirt track sat a house, just a simple two-story pre-fab. Nearby sat a large barn, converted to a makeshift hangar for drones. Everywhere else she looked was green. Rows and rows of produce; planted and maintained. They surrounded the area in vast fields, the unmistakable evidence of a family farm. Her eyes bulged in her helmet, the utterly alien view drawing her to the window. It was mesmerising, seeing the vegetation go by. Hovering to and fro across the fields was all manner of robots. Watering, planting, scanning, the whole operation was just incredible.</p>
+        <p>An unconscious “Keelah” slipped through her mask, getting a warm laugh from the quarian next to her. Jarr could clearly tell she’d never expected this as a quarian’s home. It felt so… out of place. When it came to ships, she’d seen her people in every nook and cranny. Any possible job that could be required, a quarian could fill with ease. Just a glance out the window of a space station, and Tali could pick out every make and model sitting in dock, along with probably every component inside them. But here, she didn’t even know what was planted.</p>
+        <p>Strangely, there was some familiarity to the scene. But the memories of early mornings and muddy clothes weren’t hers. She looked at Jane, whose eyes were still on the road. Keelah; how she wished to know what Jane was thinking right now. As they pulled up alongside Jarr’s vehicle, the two of them worked to help the older man out. Her strong human was more than capable of lifting him, so instead she led them up the porch. Uncertain, she rang the doorbell, and before long the sound of footsteps came to greet them. The door opened to a woman, her billowing blue realk flowing down like a human dress. Momentary confusion gave way to shock and relief as she embraced her missing man.</p>
+        <p>“Jarr…” She pressed her helmet to his. “Keelah, I was so worried.”</p>
+        <p>“I am alright, Senu.” He cooed back, standing tall to hold her. “Those Eclipse bastards found me in the market. But this human saved me, along with our sister here.”</p>
+        <p>Jane introduced herself first, offering a wave in quarian greeting. Tali noticed the accuracy in Jane’s gesture, along with the omission of her famous clan name. She followed suit, similarly remaining clan-less and hoping her realk didn’t give things away. Before much more could be said, the pattering of smaller feet rapidly approached. Tali glanced beyond the threshold, catching movement behind the older couple. A pair of pitched voices cried out in unison, their joy and surprise filling the doorway.</p>
+        <p>“Father!” Jarr wheeled around at the sound, bending down with his arms wide. Two little suited quarians swamped the man in a hug.</p>
+        <p>“Keo, Pella!” His voice was thicker now as he squeezed them tight. “My beautiful girls.”</p>
+        <p>Tali stood there in shock, her eyes transfixed on the children. Both of them only came up to her hips. They couldn’t have been older than six or seven. Never in her whole life had she seen environment suits on quarians that young. More questions began to form in the back of her mind. She saw the care taken in their realks, matching the blue of their parents. Little helmets sat atop bundles of cloth and material. Tiny, gloved hands grasping for more fatherly purchase. Squeaky, tinny voices came distorted through vocalisers, while big bright eyes shined through the faceplates. Something unexpected welled up in Tali’s chest.</p>
+        <p>“W-who’s that?” Keo asked, looking up at Jane. The girls huddled a little closer to their father.</p>
+        <p>“She’s a friend of Mister Rawlings.” Jarr answered quickly, patting her shoulder. “You remember the OSD he left? Come show me where it is.” With nods and giggles the two girls tugged him away. Senu remained at the doorway, a smile in her eyes.</p>
+        <p>“Ancestors preserve you both.” She clasped her hands together, bowing her head. “I don’t know what I’d do without him.”</p>
+        <p>“Glad to help.” Jane assured her, before looking out at the fields. “I can understand the concern, with all this.” Her joke got a laugh out of the woman.</p>
+        <p>“True.” She agreed, taking a few steps to join them. “The machines do most of the work, but somehow the damn things always manage to clog up.”</p>
+        <p>“Tell me about it. Must’ve jury-rigged them a dozen different ways. Always got my hands dirty anyway.” Jane nodded, getting a sympathetic grunt from her. The whole scene bewildered Tali. She felt totally out of her depth.</p>
+        <p>“Uh, what are you growing anyway?” She asked sheepishly.</p>
+        <p>“Potatoes, from Earth I think?” Senu answered, checking for a nod from Jane. “It took us a little time to get started, but now we make good money supplying the local settlement.”</p>
+        <p>The baffling topic of potatoes was interrupted when Jarr returned. The children watched silently from the doorway, bright eyes stuck on either Tali or Jane. Senu was quick to chide them for staring, ushering the girls back inside. A quick scan from Tali’s Omni-tool confirmed the OSD had the data Cerberus was looking for. It was encrypted, but the cipher matched the description. Jane practiced a bit more of her civilian etiquette before radioing the other teams. Tali was content to tune out, still trying to process the idea of quarian potato farmers. Though she didn’t want to be nosy, even glancing inside the house was a shock. She could see a living room and a staircase. A whole other floor above, just for these four people. Four quarians, living in a space made for twenty, surrounded by dirt. It was incredible. Soon Jane walked back over.</p>
+        <p>“Shuttle’s gonna be a couple hours, maybe three. C’mon, we’ll head back to town.” Tali nodded in agreement, moving to follow her.</p>
+        <p>“Wait, miss Jane.” Jarr moved out in front of them. “It’s getting dark already, after what happened it could be dangerous on the roads.” Jane barely opened her mouth before he continued. “Please, stay for dinner with us. There’s a field behind the house where your shuttle can land.”</p>
+        <p>“I-uh, appreciate the hospitality.” Tali smiled seeing Jane caught on the back-foot for once. “But we don’t wanna intrude, plus it’s not like you planned for company. I know things can be pretty-”</p>
+        <p>“Nonsense!” Jarr waved his hand. “We have plenty of food. My Senu, she cooks for the neighbours, trust me you’ll love it.” He clapped a gloved hand on Jane’s back, ushering her in. Tali had to stifle a giggle; Jane had clearly never dealt with older quarians before.</p>
+        <p>“I hope you like potatoes.” Senu winked at Jane.</p>
+        <p>With no hope of escape from the warm welcome, the odd couple went inside. Tali couldn’t help but marvel at the interior of the Tirrel house. It was enormous. There was a kitchen and a living room, even a dining room! Everywhere had little amenities and furniture. None of it was quarian; indeed most of the items in the house were human. The house itself was too, looking like something out of one of Jane’s stories of childhood. Even with the clutter of so many superfluous objects, there was still so much space.</p>
+        <p>But this exotic dwelling still had the hallmarks of home. Brilliant orange and blue fabrics hung from the walls, some of them emblazoned with the Tirrel clan markings. Over the threshold, she recognised the insignia of the Kemori, a smaller ship under her aunt’s command. Fascinatingly, she saw the typical dolls and ornaments made from metal aboard the Fleet, recreated in wood. There was something primal about it. In the living room a holo screen played: An asari show, with Keo and Pella looking on enrapt. Tali spent the time taking in the house, while Jane excused herself to clean up. Soon the six of them were seated around the large dining table.</p>
+        <p>“Blessed are the Ancestors. Through their courage, we survive. Through their determination, we endure. Through their guidance, we prosper. Keelah Se’Lai.” Jarr’s prayer brought the room to reverent silence.</p>
+        <p>“Keelah, Se’Lai.” Tali let the words flow through her, joining with Senu and her children.</p>
+        <p>“Keelah, Se’Lai.” Something in Jane’s words held her for a moment. Her khelish was oddly accented, with incorrect strains on the words. But untranslated, her husky alien voice made Tali’s heart flutter.</p>
+        <p>The flavour of genuine dextro soup was something to be treasured. She slurped at it greedily, trying to avoid making too much noise. Tali could only imagine the lengths this family went to for such luxuries. For a pilgrim or a station-dwelling quarian, such things would be a fantasy. Perhaps their good fortune was just another quirk of these unlikely suited farmers.</p>
+        <p>She looked over at Jane, eating a plate of potatoes. One was solid, while the other had been reduced to some kind of… mush? Despite the appearance, she seemed to like it. Seeing Jane eating alongside her fellow quarians brought a smile to Tali’s face. She could almost picture them all seated in the Rayya’s galley. While daydreaming, Tali caught one of the girls staring at Jane. It was strange to think these children had seen more humans in their time than she probably ever had.</p>
+        <p>It wasn’t long before everyone had finished eating, heading into the living room. She noted the plushness of the human couch the family had, a little pang of jealousy cropped up in her. The girls whined when Senu turned off the holo-screen, instead setting some mood lights to a dim glow. The new tone of the room felt very much like home now. Most ships ran their lights at reduced brightness, anything to take the strain off the power grid.</p>
+        <p>Suddenly Keo and Pella grew excited, anxiously looking around while their mother slipped out for a moment. Jane was chatting with Jaar, not quite noticing the change. Then Tali saw it, an instrument in Senu’s hand. It was a guitar, though not like the more modern ones Shattered Mask used. This one was wooden for a start, with a big hole in the middle.</p>
+        <p>“Oh Keelah…” Jarr shook his head. “Should we torture the poor souls with that?”</p>
+        <p>“Come now, love.” Senu handed it to him. “I think we’d all enjoy a song and dance, right little ones?”</p>
+        <p>“Yes, yes!” Keo hopped up and down. Pella joined in, bouncing on her toes.</p>
+        <p>“All right, all right. Let this poor old man take a seat.” Jarr reclined on the couch, fiddling with the long instrument.</p>
+        <p>The two girls began to bounce and twirl in place, their flowing realks catching the air. Senu cleared her throat, practicing a few very familiar notes. Tali felt eagerness building inside, it had been so long since she’d danced to proper quarian music. She loped over to Jane, catching the glance from the older quarian. She clearly noticed her excitement.</p>
+        <p>“Uh, dancing?” Jane’s eyes widened a little.</p>
+        <p>“It’ll be fun, trust me!” Tali fiddled with Jane’s Omni-tool. “Besides, I’ll let you… watch, for a bit.” She added, her voice lower.</p>
+        <p>“And what you’re doing with that?” Jane smiled nervously.</p>
+        <p>“Just tweaking the translator. The song sounds better in Khelish.” It barely took her a few seconds. “There, all done.”</p>
+        <p>The strumming of cords was Tali’s cue. Though not quite the instrument a vil’andra was, the wooden guitar did its job. Jarr had modified it well, re-stringing it with the three-to-six design. His gloved fingers slid up the three cords, adjusting the pitch and tone of the six flared out below. Even the slightest change in position made his notes shift. Senu clutched a tal’bara. Tapping the small percussion disk, the beats followed with jingles. Already the short practice got her in the mood. Joining Keo and Pella, she gave a few twirls. The children followed, sending the realks flapping. It was adorable seeing their energy. Jane had sat down; trying to be inconspicuous while the whole thing got started. Jarr gave a thumbs-up, and Senu tapped her tal’bara sharply.</p>
+        <p>One, two-three. One, two-three. The beats came in perfect rhythm. Starting off slow, Jarr’s strumming filled the living room. Soft and light at first; Tali felt the notes slide over her. Her body followed the tempo, swaying and stepping. Flanked on both sides by the two girls, she led their little procession. Then the sweet song of Senu’s voice broke those last few moments of music. Her Khelish flowed so beautifully, pure and practiced: “Harvest’s Eve”, a favourite from Tali’s youth. Like all quarian songs, it told a story.</p>
+        <p>Slow to start, the words carried the tale of hardship and toil. The strumming cords were mournful, evoking droughts and scorching sun. Her dancing was subdued, the flow of arms and waist more reverent than joyous. Caught up in song and familiar surroundings, memories of childhood returned. Back then she swore the plains stretched out across clean-room halls. She could almost see her ancestors, tilling the soil of a world she’d never known. But soon the tempo lifted, and Senu’s voice carried the three dancers to the chorus. Hardship became triumph, and famine became feast!</p>
+        <p>Drumming and jingling picked up the pace, with quick strumming not far behind. Tali let her own voice free, joining her warble to the older woman. She shook and rolled her hips, spinning and twirling. Keo and Pella followed, their singing interrupted by excited giggles. The engineer’s body flowed like water; every part of her was perfect movement. Her eyes caught the enjoyment of her fellow quarians. Years of practice paid off it seemed. Then those eyes were on Jane. The woman looked on in disbelief, like she’d done so long ago. Tali held her gaze for just a moment, drinking in her affection and hunger. She still had it.</p>
+        <p>Another verse came; the dancers slowed their movements. But these were not lines of drudgery and hardship. No, these were lines about love. Two souls, bound together. On Harvest’s Eve they joined as one, mixing into the souls around them like stars across a summer sky. Celebration waited ahead, for a village, a kingdom, an entire people. But right now, this verse was just for them. Tali slowed, bouncing on her toes. She strutted up to Jane, taking her by the hands. The fear on her human face was palpable. Commander Shepard, out of her depth. But the safety, the welcome Tali gave her with just a look. Not a single word was needed. Jane followed her lead, excited yipping from the girls blended in with the music. Even Jarr followed, sidling up to his bond-mate as the two made music together.</p>
+        <p>Then the chorus burst to life again, celebration and hope woven into Khelish! It flooded the room, filling all who heard it. Even Jane. She saw it in Jane’s eyes as she guided her, the steps coming quickly with Tali there to hold on to. Tali cut loose, twirling, spinning, her hips rolling and swaying. Shouts and trills joined the tempo, faster and faster. The girls locked arms, mirroring their guests. Soon her brave, handsome commander couldn’t keep the dumb smile off her face. Tali’s soul rode the strings and drumming, letting her feelings carry her right to those last explosive notes. She belted out the final lines, trilling and hollering with joy. Then it was over. Senu and Jarr embraced, while Keo and Pella let out their own jovial calls. But Tali, she only had eyes for the woman she loved.</p>
+        <p>The night carried on a little longer, with a few chores to be done. Having become familiar with “washing up” aboard the old Normandy, Tali offered to help Senu. The two women went to the kitchen, while poor Jane was left at the mercy of two very inquisitive quarian girls. She ran Jane’s dish under the tap, slowly cleaning away the remains of potato. After fighting just a few hours ago, it felt nice to do something normal. Maybe it was just this place, this house? There was something cosy about it, despite the size. Senu hummed a song to herself, fiddling with the decontaminator for their food capsules.</p>
+        <p>“Your home is beautiful.” Tali couldn’t resist the comment. “I’ve never seen anything like it.”</p>
+        <p>“It’s human by design. Used to belong to an old man out here… Marvin.” Senu ran her gloved hand along the countertop. “When he saw my girls, he left us practically everything. We’ve added our little… touches of home, but it felt wrong to throw his generosity away.”</p>
+        <p>“I noticed the Kemori flag on the wall. Was that home, before?” Tali’s question dampened the woman.</p>
+        <p>“It was… a long time ago.” Senu sighed.</p>
+        <p>“What happened?” For a moment, the older quarian didn’t answer.</p>
+        <p>“I wasn’t always a potato farmer.” She chuckled to herself. “I used to be a suit-maker: Senu’Tirrel vas Kemori. My Jarr, he used to be a flight engineer. With little Pella, I could hardly have imagined a better life.” Senu’s eyes travelled out to the living room, finding her children there.</p>
+        <p>“Then… we had Keo.” Tali stiffened up just hearing it.</p>
+        <p>“But, having multiple children, that’s…”</p>
+        <p>“I know.” Senu nodded. “ But when I found out, I couldn’t give her up.”</p>
+        <p>“That’s why their suits are so strange.” Tali looked to her. “You made them.”</p>
+        <p>“For a while, the Captain kept our secret. He and Jarr were old friends. But, after a while he made demands. We bore it as long as we could. Eventually it became… too much.” Senu took a long breath.</p>
+        <p>“So one day, we stole a shuttle and never looked back. I’m not sure if he exiled us for it… and to be honest, I don’t care. This life might not be easy, but at least we’re free.”</p>
+        <p>Tali put a hand on her shoulder. “I wish there was something I… the Admirals, maybe they could…” She stopped when gloved fingers found hers.</p>
+        <p>“You have done more than enough already, Tali’Zorah.” Senu said warmly. “Both of you have.”</p>
+        <p>“You… know who we are…” Tali pulled away, rubbing her arm. “…Sorry.”</p>
+        <p>“Don’t be, sister. You saved my bond-mate’s life, and taught my daughters a few new moves.” Senu chuckled. “And they can say they’ve met Commander Shepard.”</p>
+        <p>Feeling more than a little embarrassed, Tali gave the older quarian a parting nod of thanks. She wanted to slap her visor. Of course they knew who she was, Jane’s whole crew had been on vid screens for months after the Battle of the Citadel. Perhaps Pella and Keo weren’t the wiser; otherwise she’d have to question her supposed intellect. It made her wonder about just what else Senu and Jarr had noticed. There had certainly been moments during the song. Music always had a way with her mind. She’d let go with Jane there, in a way only Jane could get out of her. Her cheeks flushed at the thought of being local town gossip. But, maybe after everything they’d been through this didn’t seem so strange: Her and Jane.</p>
+        <p>Everything they’d been through… Tali could hardly imagine a worse predicament. Fleeing the only life they’d ever known, leaving friends and family behind just to keep their daughter. All that hardship, just because she’d wanted another child. Tali watched the girls play with their father. She knew why the Fleet was so strict about it. In her world, nothing was free. For one to prosper, another must pay. But no matter the logic to all those rules and laws, the sight of those children put a knot in her stomach. A chime came to her Omni-tool, pulling her thoughts away from home.</p>
+        <p>[C.S.- Garrus radioed. Shuttle will be here soon. Join me outside?]</p>
+        <p>Jane’s invitation was a welcome relief.</p>
+        <p>It was a clear night. The dry, cold air nipped at Shepard’s face. Not for the first time, she checked her gauntlets. Scrubbed clean, free of asari blood. She’d made certain not to leave any mess for the children to find. God, they were so small. Bundled up in their suits, Keo and Pella looked like Tali in miniature. She’d kept her thoughts to herself, but she recalled Tali’s talks about cleanrooms and adolescence. No doubt there was a story to this family. But it wasn’t her place to ask after it. Instead she’d enjoyed Jarr’s pleasant conversation, and the bubbly questions of the little girls: Eager eyes and tapping feet, like all rural kids had. Like she’d had.</p>
+        <p>The hours had flown by. Still, with the time she had left, this seemed like a fitting way to spend it. She leaned back on her hands, legs dangling off the roof of the pre-fab. Perched two stories above the ground, she could see everything from the fields to the tree line, and beyond the dim glow of the town. Two bright moons dominated the starry sky. Their pale light glinted along the treetops. There were a thousand little things that reminded her of home. Almost twenty years ago, she would’ve sat right here, looking up. But it wasn’t the same. A feeling she was slowly getting used to.</p>
+        <p>“Shepard?” Tali’s voice never failed to make her smile.</p>
+        <p>“Up here!” She waved down, getting a wide-eyed stare in response.</p>
+        <p>“Wha… how did you get up there?” Tali asked, dumbfounded.</p>
+        <p>“Little trick I’ve been practicing. Jump up and I’ll show you.” Shepard extended her hand.</p>
+        <p>“Are you kidding? I can’t jump that high!”</p>
+        <p>“Trust me.”</p>
+        <p>She heard a lilting groan travel up from below. Tali muttered some self-encouragement as she limbered up for the jump. Those thick quarian thighs Shepard was so fond of could easily propel her more than twice her own height in the air. Not enough to clear the roof, but still impressive to see. Bright, discerning eyes lined up the target. She sunk into a squat, getting low to the ground. Long legs bent like coiled springs. There were a few seconds of silent anticipation, before she exploded upward. A few more feet and she’d have made it. But as gravity caught up with her, Tali’s body was wreathed in blue light. Shepard gently pulled her the rest of the way, Tali’s slender hand gripping hers. One last grunt of effort, and she parked her substantial “centre of gravity” beside Shepard.</p>
+        <p>“Keelah… where did you learn that?” She half-panted in surprise, gingerly looking over the edge.</p>
+        <p>“Let’s just say our resident Justicar has been very patient with me.” Shepard chuckled to herself. “Still, got myself up here okay.” The uncertainty in her tone got a stern look from Tali. “Shuttle’s gonna be here soon. Thought we could enjoy a few minutes up here, indulging your commander in her childhood pastime.”</p>
+        <p>Hearing that, Tali actually looked out at the moonlit scenery. That overactive mind of hers settled on the fields and the trees, and worries about falling melted away. Shepard watched her enjoying it, basking in that wonderful energy she always had.</p>
+        <p>“It’s beautiful.” She said softly, leaning against Shepard.</p>
+        <p>“Not much about farming that word would fit.” Jane smiled. “But… watching the sunlight roll over the hills… just me and…” The smile fell away. “…Well, I never got tired of it.” She let the silence linger too long.</p>
+        <p>“So, how did you enjoy quarian hospitality?” Tali asked, nudging Shepard’s shoulder.</p>
+        <p>“Are all the kids so inquisitive?” She asked.</p>
+        <p>“I was.” She said with a giggle. “Except I didn’t meet my first alien until I was an adult. Growing up like this?” Tali held her hand out to the rural vista. “I can’t even imagine it.”</p>
+        <p>“Quarian homesteaders, who’d have thought? ” Shepard squeezed Tali’s shoulder. “They look happy here, though.”</p>
+        <p>“Yeah… they do.” Tali nodded, her eyes drifting up to the stars above. Shepard could see something there, behind them. This wasn’t the first time she’d seen it, but it was the first for which she had no answer. But she did have something in mind.</p>
+        <p>“So…” With a show of strength, she lifted the surprised quarian into her lap. “…Gonna tell me why you’re turning my cabin into a bunker, now?” Cradled in Shepard’s arm, Tali’s eyes widened.</p>
+        <p>“Hey!” Her voice was an anxious whisper. “You said that-” She glanced the sky. “What if we’re spotted?”</p>
+        <p>“Guess you better talk fast, then.” Shepard teased, tracing a finger down Tali’s waist. “Cause I’m not buying your “soundproofing” story anymore.” The cheeky interrogation waned when Tali’s eyes fell from hers.</p>
+        <p>“It, um… I wanted it to be a surprise.” She took Shepard’s flirting hand in hers. “During my last check up, Doctor Chakwas was telling me about the projections of my treatment. I may have… mentioned us.”</p>
+        <p>“Ah.” Shepard suddenly shared in her sheepishness. “That explains the look she gave me yesterday.” A frightening thought crossed her mind. “She didn’t get too… clinical about me, right?” The genuine concern in her voice made Tali burst out laughing.</p>
+        <p>“No.” She finally managed to say. “Actually, it was good news. Keelah, it was great news!”</p>
+        <p>“Sounds it.” Shepard could practically see her beaming beneath her mask. “Feel like sharing?”</p>
+        <p>“Sorry, I’m just…” She stifled a squeal. “According to the current projections, with a mostly clean environment, I can take off my suit!” The realisation hit Shepard hard.</p>
+        <p>“That’s what you’re doing to the cabin.” She could hardly believe her own words. “Wait, you’re not saying…”</p>
+        <p>“O-only if you want to.” She clarified. “And, we’d have to start small. But… yes.” Tali shrunk a little in Shepard’s arms, bashful. “…Surprise.”</p>
+        <p>For a moment, Shepard was right back in that hotel bed. She felt that same uncertainty again. With that soft weight in her lap, it wasn’t like she could deny her attraction. Just the thought of feeling the skin beneath Tali’s suit was intoxicating. But if there was even the slightest risk… No, she wasn’t going to badger her about it.</p>
+        <p>Not here, not now.</p>
+        <p>“Jane?”</p>
+        <p>“Sorry, just taking it all in.” She said warmly. “Of course I want to.”</p>
+        <p>“Really?” Shepard ran her hand along Tali’s thigh, getting a shiver in response. It seemed to answer her question.</p>
+        <p>“I don’t wanna risk your health.” She admitted, cupping the cheek of Tali’s helmet. “But, I trust you.”</p>
+        <p>“Thank you.” The cold surface of Tali’s helmet pressed lovingly against Shepard’s forehead. “I… I can’t tell you what this means to me.” Her arms looped around Shepard’s neck, holding them together.</p>
+        <p>“How long?” Shepard asked, adding a little mischief to her voice.</p>
+        <p>“Soon.” She promised. “A week or two, once the next lot of results are in. Keelah, I’m going to go crazy waiting for them.”</p>
+        <p>“It’s a date.” Shepard kissed her mask. “Just be gentle with me, okay?” The most wonderful sound came up from Tali’s chest. The kind of excitement she hadn’t heard since Tali’s pilgrim days.</p>
+        <p>She took the chance to bask in it. Tali’s attitude was infectious, doubly so when she was happy. There were concerns that still plagued Shepard, kept behind silent lips as they descended the roof in a biotic field. As she waved goodbye to the quarian family, she remembered what Jarr had said. Rawlings had told him all about Cerberus. Not the ranting of a zealot, but a warning. It seemed this agent had become disillusioned with the Illusive Man. Though Shepard hadn’t needed it, Jarr had warned her regardless. As the two of them clambered into the shuttle, she wondered just what was on this OSD? Perhaps EDI could help her find out. As she greeted Garrus and Jack, it ate at her. Another damn mystery, tied in with these terrorists she worked for. Doubts, worries, then Tali’s gentle touch. She let it all go. Whatever the future held for this mission, there was something she could look forward to now. And it was thanks to her, like always.</p>
+    </div>
+</body>
+</html>

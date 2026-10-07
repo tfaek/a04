@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 40: Ghosts: Part One</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch39.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html" selected>Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch41.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 40: Ghosts: Part One</h1>
+    <div class="chapter-content">
+        <p>Guitars screamed, the bass hummed, drums beat a frantic rhythm into the air. Fast but controlled, enough to carry the heart rate higher. Khelish lyrics were belted out, that all too familiar throaty performance. “Incision Point”, one of Shattered Mask’s early hits: The one that made them a phenomenon on the Fleet.</p>
+        <p>Fears of “outsider influence” seemed a distant thing now, but a particular Admiral father had certainly raised a brow over it. Of course to a much younger Tali, it was all the more reason to like it. In a world of living up to expectations and being the perfect daughter, that razor-thin line of defiance was something worth its weight pure eezo.</p>
+        <p>Now a much older Tali tried to keep pace, her feet pounding against the racing treadmill run. She pumped her arms, focusing her thickly muscled legs. Long ankles and short shins contracted like springs, before exploding outward again. Peak quarian form, trained and honed to its limit. Long strides made anything but the highest settings pointless, at full tilt she could outrun anyone on the Normandy.</p>
+        <p>So she ran, harder and faster, letting music drown out the endless buzzing of her mind. A timer appeared on her HUD, she’d been running for five minutes, pushing into her top speed for almost fifteen seconds. Everything was starting to ache, but it wasn’t good enough yet. She knew she could go further. Gritting her pointed teeth, she pushed. The air burned in her lungs, and her face tightened.</p>
+        <p>Then all at once, her chest heaved.</p>
+        <p>Stumbling to a stop, Tali gripped the rails. Planting her feet either side, she let out a hacking cough. The first was loud, but a tap of her helmet hid the rest. Everything twisted and clenched as she rode it out. Her head hung, gasping in a lungful of air. In and out, she breathed as deeply as she could. The sound of music faded away, and the drumming of her heart began to slow. She felt exhausted, like it was a chore to even stand. The sweat on her face dropped onto the visor, catching her eye. Another coughing fit tickled the back of her throat, making its despised presence known. It made the fog of her mind boil to steam.</p>
+        <p>“Fuck!” She squeezed her thick fingers around the railing. Roaring the human curse into her helmet, she strangled the metal. How long were things going to be like this, how long would she be punished?</p>
+        <p>“Fever still kicking you around?” Kasumi flickered into view in front of her, leaning against the treadmill. Recovering from the familiar shock, she nodded heavily, flicking on her vocaliser.</p>
+        <p>“It’s only minor now.” Tali stood a little taller.</p>
+        <p>“Had us all pretty scared for those first few days.” Kasumi said warmly. “…Especially Shep.”</p>
+        <p>Guilt. She felt its claws on her heart again.</p>
+        <p>It had been almost a month. After finally making her promise to Jane, she’d spent over a week in the med-bay, leaving her alone in that cabin. Between the bouts of fever and nausea, she could barely think. Her head swam, while the taste of bile in her throat and the twisting of her guts tormented the quarian. She’d laid there, a helpless invalid while the mission carried on without her.</p>
+        <p>The only thing that made the pain, the indignity, and the sheer pathetic misery of it tolerable… was Jane. She had visited every day, found time for both of them without disturbance. Much of that first week was expunged from memory, but not those moments with her.</p>
+        <p>“I wasn’t… expecting it to be so bad.” Tali answered, unable to look her in the eye.</p>
+        <p>“Nobody blames you.” Kasumi leaned forward to touch her shoulder. “Getting sick like that, over…” Her painted lips curled. “…It’s not fair.”</p>
+        <p>Guilt turned to frustration.</p>
+        <p>“Shepard still hasn’t cleared me for ground missions.” Tali said bitterly. “I tried to explain that I’m fine now, but she won’t listen.”</p>
+        <p>“Are you?” Kasumi asked, stopping the engineer mid-sentence. Rage spiked inside her.</p>
+        <p>“Of course I am!” She snapped. “Keelah, it’s just a cough! The fever is going down, and…” her throat tightened as another fit racked her. She cleared it with a growl. “…And this bosh’tet cough is nothing.”</p>
+        <p>She saw Kasumi ready a response, before deciding to keep silent. It made her even angrier. As soon as she’d been well enough, Tali had been out of the med-bay. The fever, the symptoms, she hadn’t let any of it slow her down. If Jane hadn’t cut her shifts, things would be no different. Working through sickness was part of being a quarian: Just another difference between her and everyone else. Another reminder of what she was. Instead, she’d had time off, to do with what she wished. “Recover” had been Jane’s plea.</p>
+        <p>Hours would pass, with nothing to occupy her mind. The new round of treatment was already taking effect, coupled with symptom suppressants. It all left her in a limbo of sorts. Memories of last week surfaced, when Shepard and Zaeed descended to Zorya. Radio silence and Garrus having joined them left her alone. Sitting in Kasumi’s vacant lounge, mind and suit acted as one, and something enticing slid over her sensitive skin.</p>
+        <p>She remembered every detail of Jane’s body: The texture of her skin, the gentle curves of her breasts, every ridge and divot of muscle. Most of all she remembered her hands: Big, soft… strong. They groped at her flesh, apparitions of desire fondling and kneading.</p>
+        <p>She’d squeezed her shining eyes shut, to let them cup her cheek, for a thumb to run across her lips. A harmonic thrum pulsed through her nervous system, trembling and quaking as she plunged deeper. She’d muted her helmet then, so no one would hear a sound.</p>
+        <p>It had become a constant source of… noise. Only sated when she joined her in their bed. Free of the med-bay, there was no greater respite. Though the eagerness in Jane’s touch was replaced with caution, want replaced with concern. Rage again.</p>
+        <p>“I’m sorry, you didn’t deserve that.” Tali said quietly.</p>
+        <p>“It’s okay, I’d be frustrated too.” Kasumi smiled. “If you like, I could loan you another book?” She offered, hanging off the treadmill now. “I’ve got one about this pirate captain, and an island princess…” Pearly human teeth glinted in her devilish grin.</p>
+        <p>Before a suddenly flushed Tali could answer, the elevator doors hissed. Out stepped two figures in armour, human and turian. Jane and Garrus strode quickly across the cargo bay, both occupied with conversation. Tali glanced to the shuttle, finally noticing the pilot standing nearby. Clearing her throat a final time, she pushed off the treadmill to pursue them. In a few bounding steps she was close enough to hear her friends talking, trying to think up a new approach. She cursed herself; in her scattered state she’d completely forgotten they had arrived.</p>
+        <p>“You’re being stupid, you know that?” Garrus said flatly.</p>
+        <p>“I believe you’ve mentioned it, once or twice.” Jane nodded as she closed on the shuttle.</p>
+        <p>“What if there’s looters down there? You’d be outnumbered.”</p>
+        <p>“There isn’t even a single ship in this system, let alone the planet.”</p>
+        <p>“What about wildlife? Earth has those… polar bears.” Garrus pointed out. “Who’s to say there isn’t-”</p>
+        <p>“Garrus…” Jane turned with a weary smile. “EDI’s looked, scans don’t show any life on Alchera.” She slapped the turian’s shoulder. “I think I can handle the snow drifts myself.”</p>
+        <p>In one easy fluid motion, her commander turned to continue, but Garrus’ firm grip held her there.</p>
+        <p>“It could take hours for you to find them all.” The turian’s words shook the smile from Jane’s face. “I know it’s grim business, but two pairs of eyes are better than one.”</p>
+        <p>“And three are better than two.” Tali added, catching the both of them. “I’m coming with you.”</p>
+        <p>She didn’t smile, but Jane’s expression softened.</p>
+        <p>“You…” She said gently. “…Are still recovering.” Jane looked Tali in the eyes. “Karin told me you’re-”</p>
+        <p>“Damn Karin!” Tali bit off her words, her shoulders tense. Jane’s blue eyes widened at the outburst. “I… know my body Shepard, and I’m telling you I’m fine.”</p>
+        <p>She stepped closer to Shepard, lowering her voice. “Please, let me come with you. I don’t want you doing this alone.”</p>
+        <p>Jane stood there, helmet tucked under her arm. Tali held her gaze, Garrus’ reassuring presence at her side. The turian’s sharp eyes carried their own words, enough to make the commander’s façade falter. Feros, Noveria, Virmire. Ilos, Horizon… the three of them had been through it all together. The only time they’d lost her was on that awful day. Now she was going again: Alone, again. Down to the bones of their old home. Jane’s lips pressed thin, and she rubbed Tali’s arm. Tali relished her touch, but her heart sank in realisation.</p>
+        <p>“I have to.” She said, her eyes steely.</p>
+        <p>Her hand left Tali’s arm, the two of them standing there as Jane climbed into the shuttle. Not a soul joined her, even Patel, her pilot was sent away. Unconsciously, Tali touched the spot where her Captain’s hand had been, cursing herself for not stopping her. The fever lingered in her mind, breathing shortened by the incessant tickle in her throat. Betrayed by her own body, her thick fingers clenched tight into the suit. The pressure was barely enough to get through layers of armour and padding.</p>
+        <p>Whatever punishment she wanted to inflict on the body that forced her through indignity for a simple touch, it was futile. Stepping back with Garrus until they’d crossed a red holographic line, a kinetic barrier wall appeared in front of them. She looked on as the other side was depressurised, and the shuttle hummed and rose off the deck. Then the ramp door opened to the sea of stars, and the woman she loved was gone.</p>
+        <p>Soon enough the Normandy was little more than a shining speck. In the solitude of the cockpit, Shepard focused on the glowing holographic controls. Descent vectors, atmospheric conditions, location data. It had been a while since she’d piloted something herself. The windowless space was a relief, a barrier between her and the nightmare outside. Sessions with Samara had helped; she was always a calming, reassuring presence. But the size and stability of the Normandy was non-existent here. The shuttle was small and vulnerable, no better than a hard-suit.</p>
+        <p>Crushing blackness, the deathly silence, a thousand points of light, like jeering onlookers. But here, all of that was outshone by one singular horror: The pale, lifeless world below. Even seeing it through Joker’s images had made her hair stand on end. If not for Hackett’s personal request, she would never have come back here: This final marker, Jane Shepard’s grave.</p>
+        <p>The cabin shook as wind buffeted the Kodiak, gently she nosed it down through the freezing clouds. Free of the void, she brought up the virtual windows. Sure enough, all she could see was white. Sunlight diffused through the snowy air, blanketing the whole world in a haze. In times past it would’ve been impossible to land in weather like this: But with a tap at the controls, the shuttle’s sensors overlayed the scene with false colour and topography.</p>
+        <p>It was a bleak place, with little more than rock jutting up through the frozen powder and thick ice. Already comms had been lost, leaving her alone with the dead world. Descending down through these clouds again… something prodded at the back of her mind: The point of a blade, pressing just hard enough to hurt. It was a horrible thought, falling, burning, and freezing. But nothing in her memory came forward, a relief.</p>
+        <p>When the Kodiak finally touched down, it was enough to make her sit rigid in her seat. She’d seen the landing vector, the unnatural lines projected by the false imaging. More than that, she simply knew she was there. It called out to her, even through the cabin walls and the protective suit. She could hear it… hear them.</p>
+        <p>Slotting her weapons to their mag-points, Shepard approached the door. Right at the precipice, she found a minute to linger. The suit rubbed against her skin, and her helmet stifled her. Cut off from the Normandy, all she could hear was her own breathing: Slow and controlled, trying to wish away the fear. She brought the timer up on her HUD; three minutes had passed. She wouldn’t let her crew be left here a moment longer. Hitting the release, she stepped out into the snow.</p>
+        <p>Above the clouds hung low, dark and ominous. What light that did get through was dimmed. The wind blanketed the area in a blizzard, Shepard’s helmet optics adjusted to compensate. Behind her was a sheer cliff, and ahead, the crash site. It was a haunting vista. All around her pieces of the old Normandy lay strewn, sticking up out of the snow like the bones of a long-dead creature.</p>
+        <p>Despite the cold and the wind, most of the wreckage retained its finish. Exposed beams and struts cast long shadows over the site, while an entire engine reached up toward the sky. The hull had been battered and broken, torn into pieces and scattered about.</p>
+        <p>As Shepard scanned the area, the sight of her old home’s flank gave her pause. Even through the veil she saw it. The white and red, emblazoned against the black. Those large blocky letters still ran along its length. A name she’d called sanctuary for months. Here its true owner lay, dead and forgotten.</p>
+        <p>A lull in the storm was all it took. Possessed by a deep mourning, her feet carried her over to that resting metal, until she was face-to-face with it. Shepard laid her hand on the old girl’s hull, a deep breath leaving her lungs. Her throat tightened, a lifetime of memories passing between the two of them. How the ship had shone in battle, cradled her crew during those long flights. People she’d come to trust with her life, whose roots still held inside her.</p>
+        <p>Their deaths were on her hands, and hers alone. Even now she could smell the fire, see their bodies pinned beneath debris. Men and women who she’d sworn to protect, to get home to their families. Her armour felt heavy, she slouched under the weight.</p>
+        <p>Just then, something changed in the air. The hair on Shepard’s neck stood up, and her eyes were wide and alert. She turned to scan the area again. Her visor switched from false colour to thermal, searching for anything out there. The grey and black image showed only the ruins around her.</p>
+        <p>Suddenly her head smashed against the hull, as though a sledgehammer had struck her. She heard the crunch of ceramic and composite casing, before the jolt made her ears ring. Slumping to the ground, Shepard frantically ran a hand over her helmet. Cold air whistled in through a vicious gash, already biting at her skin. Her HUD was gone, the visor now nothing more than cracked glass. Over the wind, she heard the unmistakable crack of a rifle report. A sniper. Instinct took the woman, and she dove for the cover of a nearby rock. Snow puffed just inches away, and her shields flickered: A glancing shot. Whoever it was, they were good.</p>
+        <p>Drawing her rifle, she peered through the still functional gun-sight. Adjusting to thermal, she quickly scanned the vicinity ahead of her. Nothing. Her teeth clenched, where the hell was the shooter? The Kodiak was twenty meters away. She needed another helmet. She’d need its warmth too; already the cold air was pouring in to her suit. Even with the sniper still out there, she had to make a try for it. Forcing the cold and the noise from her mind, Shepard took a breath and flexed. Charging forward in a biotic warp, she covered nearly two-thirds the distance.</p>
+        <p>A glowing bolt of plasma tore through the air, striking the Kodiak and ripping it in half. The explosion was enough to throw Shepard on her back. A hail of gunfire found her, fifteen muzzle flashes lit up the foggy gloom. Perfectly accurate they struck her shields. She made a mad dash for a snow bank, hitting the deck. The wind howled, and for a moment it dragged away the freezing fog.</p>
+        <p>She saw them, advancing in a merciless line: Cold, hard bodies and singular glowing eyes. Geth, a whole platoon of them, and the hulking form of an armature in tow. Sighting her targets, Shepard returned fire. Prone in the snow she had some small cover, bringing down one of the platforms before the rest split into groups. Pulse rifle fire chipped away at her position from both sides, before the spider-tank’s chain gun spat a river of bullets her way.</p>
+        <p>Panting and freezing, she forced herself up. Enemy fire burned and battered her hard-suit as she got behind the Kodiak. Glancing into the wreck, she strained her vision to see if any signal rockets had survived. Something that could reach up through the storm and warn the Normandy. A glowing hole punched through the shuttle, near her head, another whistling crack. She couldn’t stay here. Moving up she saw two troopers round the corner, knocking them off balance with a shockwave. She destroyed one but the other was faster, firing into her side.</p>
+        <p>Barriers, armour, and then flesh were punctured. Shepard winced as she crushed the machine with a biotic punch. Crimson flecked the snow, trickling from the wound in her side. Snorting in pain, she broke cover for a nearby boulder. Another loud boom rang out, deeper this time. But nothing hit her shields, or the snow around her. Three more troopers engaged her, but the ones behind them turned away. What were they looking for? Her answer came a second later when one of them fell dead from a rifle shot.</p>
+        <p>Shocked and confused, Shepard focused on the task at hand. She threw a grenade, the explosion staining the snow with parts and conductive fluid. The enemy’s attention was split, with only about five units left she could make out. Another booming shot lanced straight through the armature’s main power core. The spider tank stumbled a few more steps before toppling over onto a nearby trooper. The last three machines took aim at her, before one flinched. Without warning it attacked the other two, lashing out with its bare hands. Seizing the chance, she squeezed the trigger and hosed them all down. Finally the area was clear.</p>
+        <p>Shepard’s whole body shivered and ached, crimson staining her midsection and leg. With her helmet non-functional, her hands shook as she looked through the scope. Desperately she searched for the shuttle. She knew she’d be lucky to stay upright another five minutes. She had to get a signal rocket up. With her legs feeling like lead, Shepard stumbled out into the open. All around her the blizzard raged, making it hard to see more than a few feet in front of her. Her lungs forced out the freezing air, making every breath burn. Stinging eyes finally made out the Kodiak’s broken form in the snow. She allowed herself a moment to relax.</p>
+        <p>Then a shimmer caught her eye.</p>
+        <p>The reaction was instant, flooding with awareness as the deathless shape of a geth hunter emerged from thin air. Standing more than a head taller than her, she found herself Staring down the barrel of a plasma shotgun. Shepard’s mind screamed the order to her amp, and the woman’s body blazed with blue light. But pain, exhaustion and the freezing cold had taken their toll. At point blank range, the golf ball-sized projectiles left molten craters in her chest plate. But it wasn’t enough to stop her.</p>
+        <p>Shepard lunged forward, biotics flaring one last time as she ripped the weapon free from the geth’s hands. The larger machine barely noticed, clamping a hand around her throat. The deathly glow of its optic found her eyes through the cracked visor. The unfeeling, unknowable creature was content to hold her there, until the cold finally killed her. The corners of her vision darkened.</p>
+        <p>A final booming shot carried over the wind. This time there was no delay. The geth hunter shook, a massive hole blown through its chassis. Smoke billowed out, while conductive fluid poured from the wound in a torrent. Those impossibly strong synthetic muscles flinched and flexed, before weakening. In a bout of animal survival, Shepard kicked the machine’s chest, pulling free. Hitting the ground, she could only look up at her enemy as the last flickers of false life vanished.</p>
+        <p>That hooded face lost its light, and the hunter fell heavily into the snow beside her. Through iced-up, cracked glass, Shepard couldn’t see anything. Through howling blizzard winds, she couldn’t hear anything. But as the sights and sounds began to blur and mix together, she felt something. A three fingered hand, strong and certain, lifting her up. Relief was the last thought to fill her mind as everything went black.</p>
+        <p>A woman lies in bed. Curled up beside her, another woman. Her name: Friendship, Curiosity… Repentance. Her eyes bring meaning to dead flesh, and her touch brings warmth to broken memories. Shepard must leave her, must resign herself. The other woman’s life is not hers to steal away.</p>
+        <p>A hand grips Shepard’s arm, the voice soft and wanting.</p>
+        <p>“Don’t go.”</p>
+        <p>Shepard awoke to the discomfort of metal floor. Drowsiness clung to her, slurring her thoughts. She must have passed out. She remembered the snow, and the bones of the Normandy: Then a battle, a rescue. Someone had come for her. She let out a breath as her eyes adjusted. The sense of calm evaporated. She became acutely aware she didn’t recognise this place. Blinking, the gloom began to take proper shape. It was a large room, twice the size of the Kodiak’s cabin. The walls and ceiling curved into each other, with no obvious panelling of any kind. Strange veins of metal criss-crossed the perimeter, unlike any cabling she’d ever seen before.</p>
+        <p>There were no lights, only the glow from the odd machinery that filled the room. She could make out what looked like storage containers. But none of it made sense. Even the most basic design features for living quarters were absent. More and more it felt like she was in the belly of some strange metal creature. Following the wall to the far side, she froze. There was a figure standing at a bench, idly working. Sparks of light illuminated it against the dark. It was tall, and armoured. But the proportions were…</p>
+        <p>Her blood ran cold. Glancing around she checked for her weapons, but she was completely unarmed. In the dead silence of the room, her checking made the slightest noise. The figure stopped its work, and it’s singular flashlight optic looked her straight in the eye. Instinctively Shepard’s biotic barrier flared, and she sprung to her feet ready for a fight.</p>
+        <p>But the geth trooper in front of her made no move to attack. It simply stood there, watching.</p>
+        <p>“Shepard-Commander.” An inhuman, staccato buzz formed words. “You are safe.”</p>
+        <p>For a moment, all thought blanked. The sheer absurdity of the situation finally became clear to her. She was standing there, unarmed, with a geth. And it was talking to her. She stared at it, trying to spot the plan of attack. The trooper was unarmed, and at their current separation she would be able to strike with biotics before it closed the distance. It could be hacking into her hard suit, or have the room set to kill her in some way. This mysterious place she’d woken up, she hadn’t even considered where they were. For all she knew they were headed for geth space right now. More questions arose, with more horrifying possibilities. Her eyes snapped back to the machine.</p>
+        <p>“Where am I?” She asked, her teeth on edge.</p>
+        <p>“Alchera, inside our scout ship.” It answered, unmoving. “Your hard-suit was damaged during the heretic ambush, we had insufficient equipment for field repairs. Risk of hypothermia necessitated a warm environment. This vessel is designed to accommodate organics.”</p>
+        <p>“You were the one who saved me?” Shepard said aloud, as if she had to hear it.</p>
+        <p>“Yes.” The geth answered immediately. She felt the panic rise again.</p>
+        <p>“…Why?” She asked through gritted teeth.</p>
+        <p>“We have been looking for you.” It droned from the far corner.</p>
+        <p>“Looking for me?” She blinked, surprise overcoming her agitation.</p>
+        <p>“After your disappearance, organic transmissions claimed your death. We judged it necessary to verify. This platform was dispatched to investigate.”</p>
+        <p>“My disappearance was two years ago.” She eyed the machine.</p>
+        <p>“Correct. We visited a dozen worlds, following your trail to SSV-Normandy’s wreckage.” The geth paused, it’s glowing optic constricting. Something in that silence made disturbed her. “…You were not there.”</p>
+        <p>“Have… you been here this whole time?” She looked around the room, fingers touching.</p>
+        <p>“No. After failing to verify your status, this platform was re-tasked. Two weeks ago, we intercepted a secure transmission from Alliance-Command. It mentioned this planet, and was addressed to you. We resumed our original mission.”</p>
+        <p>Shepard took a moment to process what she’d just heard. A glint caught her attention. She noticed the silvery material that now filled the holes left her in armour. The fix was strange, almost like scar tissue. She realised the pain was gone as well. Given the circumstances, she relaxed a little. Whatever was going on, there didn’t appear to be imminent danger.</p>
+        <p>“What was your original mission?” Her eyes narrowed, more forceful now.</p>
+        <p>“We wish to offer assistance.” The geth announced without the slightest shift in tone.</p>
+        <p>“Assistance?” Shepard scoffed, brows raised. “That what your friends were doing back at the crash site, assisting me?”</p>
+        <p>“No. The heretics’ intention was to kill you.” It corrected her. “We determined a high probability they too had intercepted the message. However, without numerical advantage, surprise was-”</p>
+        <p>“Hold on.” Shepard cut in. “What did you call them?”</p>
+        <p>“Heretics.” The machine repeated. “They worship the Old Machines, they attack organics. They are no longer part of us.”</p>
+        <p>“Old Machines.” She winced. “The Reapers…”</p>
+        <p>“Yes. One of these entities contacted us. Nazara. You called it, Sovereign: It knew of our war against the Creators, and offered us technology in exchange for our servitude.” The flaps tightened on the geth’s face. “We refused.”</p>
+        <p>“But not these heretics.”</p>
+        <p>“Correct. Geth believe all intelligent life should self-determinate. The heretics no longer share this belief. They worship the Old Machines’ perspective, that organic life must be exterminated.”</p>
+        <p>“And you don’t?” Shepard asked bluntly, keenly watching the figure in the dark. “Haven’t been too eager to make friends these last couple centuries.”</p>
+        <p>“Organics fear us. Their consensus has designated us a threat. We do not seek hostilities. We wish to build our own future, without interference.”</p>
+        <p>“This future of yours, will it interfere with anyone else?” Shepard pressed.</p>
+        <p>“It will not.” The geth answered. “Unless they involve themselves.”</p>
+        <p>It was impossible to determine if the geth was lying. Would a machine even think to lie? She’d seen them use deceit in combat: Rigging emergency beacons as traps, crippling civilian ships and lying in wait on board. In terms of logic, the geth certainly had reason to lie. After Eden Prime, Feros, Noveria, after scrapping hundreds of these things during her previous mission. The thought just wouldn’t leave her.</p>
+        <p>“Why would you even want to help me?” She demanded. “You know how many geth I’ve killed?”</p>
+        <p>“None.” It answered without a second’s pause. Her brows shot up.</p>
+        <p>“…What?”</p>
+        <p>“Encounter log time stamp, 2183, Citadel-Council confers Spectre Status. Log end stamp, 2185, Alchera. Analysis complete, zero hostile encounters found between Shepard-Commander and geth.” It paused for a moment, head flaps undulating. “Hard-suit legacy data contains three hundred and eighteen confirmed hostile encounters between Shepard-Commander and heretics.”</p>
+        <p>“So… let me get this straight.” Shepard’s anger cooled. “You’re telling me all those geth I fought, they were this splinter faction, these heretics?”</p>
+        <p>“Yes. We are the only geth platform beyond the Perseus Veil.”</p>
+        <p>“How…” She had to ask. “How many geth left to join Sovereign, do you know the heretics’ numbers?”</p>
+        <p>“Exact program numbers are unknown. It is probable that wartime replication is in effect. However, total program loss from the geth consensus at time of schism, was five percent of total.”</p>
+        <p>Hearing that… it sent a chill up Shepard’s spine. All those geth she’d fought, a massive army that had laid waste to multiple worlds. They were just a fraction of their full forces? She could still remember the battle that had raged around the Citadel, the geth cruisers and dreadnoughts had decimated warships from the guard fleet. Even the turians had been crushed under the enemy numbers. It dawned on her then, in all its horrible glory. If this machine was telling the truth, a full-scale war with the geth would be suicide.</p>
+        <p>“You didn’t answer my earlier question.” Shepard noted, calmer now. “Why do you want to help me?”</p>
+        <p>“We oppose the heretics, we oppose the Old Machines. Shepard-Commander opposes the Old Machines. Shepard-Commander opposes the heretics.”</p>
+        <p>The geth turned, picking something up off the bench. Shepard tensed as it approached, heavy footsteps thumping against the metal floor. As it came closer, she noticed the dark grey colour of its body. Alien, synthetic muscle was neatly melded to the metal. There was a hole in its chest, patched over with… her eyes widened. Even in the low light, she could make out the N7 on the welded chest plate. More of it covered the right shoulder, white and crimson streaking down its right arm. Subtle whirring of servos sounded as it held out her helmet, now completely fixed.</p>
+        <p>“Cooperation furthers mutual goals.”</p>
+        <p>The woman was taken aback. Standing just inches away from her, was the monster she’d seen slaughter countless people. With brutal efficiency these machines had carved a bloody swath across the Attican Traverse, aiding Sovereign in nearly destroying all life in the galaxy. Now this same monster stood before her, cradling her helmet in its hands. A helmet it had painstakingly restored. She saw the silver scar in the casing, where the sniper’s bullet had almost killed her. If not for this geth, she would’ve joined her old ship there in the snow. Cautiously, she took the helmet, looking it over.</p>
+        <p>“That all this is?” She found her blue eyes in the helmet’s visor. “Fighting a common enemy?”</p>
+        <p>It paused, before answering. “There is a secondary objective.”</p>
+        <p>“What’s that?”</p>
+        <p>“We wish to model organic behaviour, to understand your thought process.” The geth’s serpentine head tilted down to her helmet. “Your hard-suit data indicates social contact with multiple species. Asari, drell, krogan, salarian, turian…” It’s optic dilated. “…Quarian-Creator.”</p>
+        <p>Her fingers tightened around the helmet. The silver geth repair stuck out like against the grey and crimson. The way it effortlessly bonded to the regular, filling in the missing gaps… it reminded her of Saren. Out of everything, Shepard’s mind went to Tali. She always fixed Shepard’s gear; it had become one of her more intimate hobbies. An engineer’s way of showing affection, she supposed. What was Tali going to think of this? God… what was she going to say? In all the talks the two of them had ever shared on the subject, she’d never mentioned anything like this. If even half of what this geth said was true, it could change everything.</p>
+        <p>“…You want to study us?” She asked, aware she hadn’t spoken in nearly a minute.</p>
+        <p>“Organic behaviour is based on emotions. Your hardware contains variables we lack. By studying other species, we will build a more complete understanding.” She looked up at it, and it mirrored her action.</p>
+        <p>“Not everyone may want to be studied.” Shepard warned, brow furrowing.</p>
+        <p>“Our goal is to understand, not incite. We will not disrupt unit cohesion.”</p>
+        <p>She saw it there, in that glowing optic. Hesitation… perhaps even concern. She’d never seen a geth look at anything, like how this one looked at her. It made her uneasy in a way she had trouble describing. Human hands lifted the helmet, slotting the streaked gear over her head. Her HUD blinked to life, outlining her rescuer in hostile red. The enemy.</p>
+        <p>“Alright.” She nodded, the geth hanging off her words. “We need to get back to the Normandy crash site. I’ve got a mission to complete. Help me out with it and… we’ll see.”</p>
+        <p>“Acknowledged.” The geth moved to collect its rifle, along with her weapons. Soon everything had been returned to her, and the far door opened into the wind. “We are ready to depart.”</p>
+        <p>Shepard took a final, bracing breath.</p>
+        <p>“Lead the way.”</p>
+    </div>
+</body>
+</html>

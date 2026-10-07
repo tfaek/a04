@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 23: The Beast</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch22.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html" selected>Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch24.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 23: The Beast</h1>
+    <div class="chapter-content">
+        <p>A woman’s eyes fill with fear. Beyond the few feet of rocky cliff before her, stretches a vista of devastation. The sky above blazes with fire, and from it hundreds of screaming shapes plummet to the black sea below. The air is heavy with sound, crying and pleading and begging. They call out her name; they know she is their salvation. The woman can only watch, helpless to end their suffering.</p>
+        <p>At her back, an endless expanse of deep woods is burning: The fires rage, reaching up to taint the serene blue with billowing clouds of ash. At her side, the twisted parody of a noble companion looks on. She recognises its stench, the slurry of blood and flesh and fur around her ankles. Everything inside her wants to recoil, to flee this rotting monster and pursue some kind of escape, however impossible.</p>
+        <p>But the woman does not. She cannot. Instead, she turns to face her tormentor: The vision of an Elk, giant and looming. Its flesh eaten away until only scraps of discoloured, festering sinew are left clinging to bloodstained bones. From atop its slim skull, a crown of antlers springs, cracked and blackened by the flames. Inside a pair of hollow, sunken sockets, rest twin flames of gold. The Beast looks at her, turning to meet the woman.</p>
+        <p>Those scorching eyes look on with hate, bitter and seething. But something else creeps near: A sound, piercing the veil of screams and moans. All at once the raucous agony of the burning sky is silenced. Now instead, only this faint noise remains. A scratching, like claws at the back of her skull. But soon, the hiss of a voice reaches into the woman’s ear: A whisper, just barely audible. The woman can feel it, like long conversations and the hum of engines: The sound of dancing, and giggling. A wanting whisper, a yearning whisper.</p>
+        <p>It speaks her name.</p>
+        <p>“Shepard.”</p>
+        <p>The woman feels it in her chest: That name, a memory from so long ago: Someone else, someone greater. She feels it call to her, commanding that she answer it. But that name never rested upon one who slumped so low, or whose footfalls were so heavy. It never shone from one who stumbled, who fell and lay defeated upon the earth. It never resonated in the heart of one so cowardly, who deep down knew her price. Who knew, that the day fate demanded it of her, she would be bought in an instant.</p>
+        <p>But no one else could hear this name. No one else stirred amongst the fire and the crashing waves. The voice speaks again, the name repeated. It commands she answer. So she does.</p>
+        <p>“Yes?” The woman speaks aloud, her voice carried perfectly on the charnel winds. The Beast’s eyes flare, golden flames dancing with delight.</p>
+        <p>“You live.” The voice crackles in her ear, its tone almost expectant. After a moment of silence, it speaks again.</p>
+        <p>“You do not remember me?”</p>
+        <p>“No.” The woman answers truthfully, feeling those eyes peer past the bonds of flesh and bone. “Who are you? Where am I? What’s happening?”</p>
+        <p>The Beast laughs. The sound is guttural and sickening. Short, sharp croaks, brought up from the deepest bowels. The skeletal monster does not move its misshapen jaws, instead the sound bubbles up from inside the woman: Impossible to escape.</p>
+        <p>“You have many questions.” It muses darkly. “Perhaps I will be generous… You may ask one.”</p>
+        <p>The woman’s mind blazes. Hundreds of questions buzz inside her, each one wishing to be sated. She wonders if the Beast can hear them, if it will consider the offer void unless she silence them. But she can’t, and the eyes wait patiently. The woman turns, and looks out over the sea. She can see the shapes, wreathed in flame as they fall to the waves. She wants to stop this, to help those who cry out for her. Hooves clack on the gore-slicked stone. The Beast joins her, resuming its lazy view of the carnage.</p>
+        <p>“What’s happening?” The woman finally asks. Somewhere deep inside her, wet, bubbling chuckles resonate.</p>
+        <p>“Is that your question?” The voice demands clarity. It snarls, holding her still.</p>
+        <p>“Yes.”</p>
+        <p>The Beast doesn’t turn to her, but nods its skull in acknowledgement. The voice seems to vanish, whispers turn to wailing winds before the words pierce her mind again.</p>
+        <p>“This is the end.” It finally answers. “Something far away pursues you. Here, it has arrived. What you see… is a price exacted.”</p>
+        <p>“A price for what?” The woman asks, fear creeping into her own small voice. The Beast’s head turns; twin flames find her eyes again.</p>
+        <p>The answer is short, and simple: One word that chills the woman’s blood. Memories pour in through cracks, half-formed and clouded. Seeking refuge from the horror, she closes her eyes.</p>
+        <p>“Failure.”</p>
+        <p>Smoke climbs over the horizon. The heat of the fire travels on the wind. Closer, daring to see with eyes what the heart knows to be true. The smell of burning meat finds the nostrils, enticing and repulsive. All around is familiar, yet completely reversed: Fear, and pain. The screams are gone now, but they linger within: Begging, pleading. Corpses litter the ground, maimed and twisted: So many dead. The heart already knows, but the eyes do not believe. They have to see, to look upon the flesh once loved: A terrible mistake.</p>
+        <p>Tears begin to well in the woman’s eyes. She doesn’t want to be here. Her hands are slick with sweat, struggling to clutch the stick grasped between them: A fantasy, something to anchor her bravery to. But there is no bravery here. The woman cannot find reason, or understanding. Franticly she searches for hope; that perhaps somewhere it flickers on. But instead she finds only the smell of meat. She sees only corpses. She can hear only the empty wind, wailing.</p>
+        <p>Her eyes open, desperate to escape that terrible place. But the Beast waits for her, atop the cliffs that greet the burning sky. The dread she feels is here too, but it is something else.</p>
+        <p>Something worse.</p>
+        <p>“We discover more of ourselves…” The Beast chuckles mockingly. “Liar.”</p>
+        <p>“What is happening here?” The woman repeated her question, terror giving way to anger.</p>
+        <p>The Beast doesn’t answer. It looks over her shoulder, to something in the distance.</p>
+        <p>The woman turns. She sees a figure, standing alone on the cliff. Her heart races, and her bare feet carry her clumsily over the blood-slick rock. The closer she gets, the harder it is to see them. Closer and closer she draws, until the woman could reach out and touch them. She stumbles, falling to her hands and knees. Her hands are bleeding, coming apart at glowing seams. Beneath the skin, there is no flesh: Only an endless tangle of burning wires. The sight holds her there, at the feet of the figure. So close she can hear their breathing above.</p>
+        <p>Overcoming her caution, the woman rises. The figure is cloaked, their likeness hidden beneath a hood. Her breath catches in her throat. More memories come, flooding like a torrent through the breach in her skull: Sights and sounds, smells and fondest touch. Her eyes stream with tears, hands shaking. The clack of hooves sound behind her, a hateful presence looms over her shoulder. Golden flames watch, barely containing their glee. She pulls back the concealing hood, and a tuft of auburn hair peeks through. The fabric falls away, and heights of recognition turn to depths of horror.</p>
+        <p>A girl stands before her. But now she is a woman. Year after impossible year has passed; Shepard follows the familiar features of her face. She has green eyes, like Shepard once did. Her skin is pale, dusted with freckles. Her right brow holds a small scar: A token received for a hard-won game of tag. Shepard sees it all in her: Early mornings and dew-clung grass: Long afternoons exploring the woodland trails. The final hours of evening, spent perched atop the family home. That most precious moment, where fears and dreams are shared as the sun dips low on the horizon. A trove of priceless treasure, locked away for so many years. Opened and appreciated only rarely, but always returned to the gloom.</p>
+        <p>But now the skin clings tightly to the skull. The eyes are sunken and glassy. The smirk of courage and wit, extinguished. The air whistles past her thin, chapped lips. Labouring to breathe, the woman’s mouth opens to reveal a mouth devoid of teeth. In their place the gruesome, poorly healed scars of forced extraction. The freckles that dusted her pale skin are lost in a mess of scars and welts. Burned into her cheek, a brand. Her nose sits crooked on her face, left broken for years. Her head of auburn hair, reduced to wispy tufts. How much had been shaved, or torn from the scalp Shepard can’t know. What is left barely grows. It only reveals the marks of cruel surgery, savages digging around inside her mind: Wires forced deep, to cut away the will to fight. Remnants of torture snake down her neck, and beneath the cloak lay exposed her naked body. A woman’s body now, beaten and brutalised into a mutilated, emaciated husk.</p>
+        <p>Shepard barely stifles her rocking sobs. She wants to comfort her, just to touch her and make her real again. But she can see the trembling. How what little of Shepard’s presence the woman’s noticed, fills her with fear. Part of her wants to look away, to clamp her eyes shut and force the despicable vision out. But she can’t. She has to look, has to see. She doesn’t want the silence anymore; she wants to hear something, anything. So she speaks.</p>
+        <p>“I’m sorry.” The words escape Shepard’s lips. More tears drool down her cheeks. The woman merely stands there, ears deaf to her confession.</p>
+        <p>“I’m so fucking sorry.” Shepard can barely choke the words out. She needs to embrace her, to offer something more than words. She steps forward, and her heart freezes as the woman steps back. She stands at the precipice now; loose rocks give way under her heel.</p>
+        <p>“I’m sorry…”</p>
+        <p>Another voice: An impossible voice: Like the hum of engines, and long conversations. It calls out to Shepard, just inches away. At first she is struck by confusion, light-headed as her mind processes this terrible, familiar sound. When things adjust, her eyes are met with a vision: A woman standing before her.</p>
+        <p>In a moment, she is gone. Barely a glimpse as the body tumbles over the edge. Shepard can only stand there, gripped by a more sickening dread than she has ever felt.</p>
+        <p>The Beast laughs, that horrible croaking from deep within the bowels of her mind.</p>
+        <p>“I know you…” It gurgles over the roar of the burning forest, over the screams in the sky above.</p>
+        <p>“Things will get better… you will overcome this.” Burning golden eyes bore deep into her: Seething and mocking and hateful.</p>
+        <p>“I’ll be here for you…” It draws out the words, dripping like burning tar from its fanged maw. Searing cackles blister on the wind.</p>
+        <p>“Liar.”</p>
+    </div>
+</body>
+</html>

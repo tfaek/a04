@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 34: Risk and Reward</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch33.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html" selected>Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch35.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 34: Risk and Reward</h1>
+    <div class="chapter-content">
+        <p>“Again.”</p>
+        <p>The attack came hard and fast. With a twist at the waist, Shepard shot forward toward Thane. Cybernetics and powerful muscle made the woman into a blur. Her hands reached for the arm and neck, ready to lock her opponent down before gilding behind them. The movement was singular and fluid, immobilising any response before breaking the neck: A simple transition from a grapple, but one that required a little finesse. A gloved hand found Thane’s throat, the other milliseconds away from his forearm. But before contact could be made, the master assassin retaliated. He shifted position, slipping past the grab and delivering a sharp punch to the gut. Shepard felt a spike of pain as her arm was leveraged at the shoulder, bending enough to negate her grip. Thane slipped free, moving around her disabled side. There was no second opening, and the assassin brought her to the ground. Shepard lay on her chest, an arm bent behind her back. For a moment the opponents remained there, quick drell panting joined with deep human breathing.</p>
+        <p>“How old you say you were again?” Shepard asked with a grin.</p>
+        <p>“My age would not mean much to you. Drell don’t mature like humans do.” Thane’s matter-of-fact answer was tinged with a little sarcasm. “Though… apparently old enough to nearly suffer defeat. During only our second session.” He was on his feet, offering Shepard a hand up.</p>
+        <p>“Not going easy on me I hope?” She adjusted the sleeve of her under-suit.</p>
+        <p>“Not at all.” Thane assured her. “You are improving Shepard, remarkably fast.”</p>
+        <p>It had been nearly a full hour for the two of them. Convincing Thane to attend the gym for exercise had been difficult at first. He’d been reluctant to leave his quarters, even after Shepard had promised safety and consideration of his condition. It was a topic the pair had spoken about at some length after he’d finally agreed. Limiting exposure to moisture had become a priority, plus it was a good excuse to make sure everyone was wiping down the machines properly. For her part, Shepard donned her under-suit. The increase to her physical ability truly came into its own during training. She was even faster than before, hitting even harder with greater precision. However the incredible performance her body could output quickly translated into perspiration. The woman could easily sweat through her workout clothes in a single high-intensity session. With a personal shower it wasn’t too bothersome for the advantage it gave, but for Thane it could be dangerous. Not only that, but the drell was the opposite. He cast his shirt aside, sparring and running bare-chested to help with cooling and his breathing. Wearing her under-suit kept them both safe and healthy, well worth the slight discomfort.</p>
+        <p>“How’d you get away then?” Shepard asked, her breathing normal again. “Thought I had you.”</p>
+        <p>“You still have a few tells. You tense your left arm before striking, and you glance at your target beforehand: Subtle by most fighters’ standards, but not against a true professional. It is likely our enemies will either be or hire the latter.” Thane readied his stance for more sparring, padding around the mat. “Don’t worry, by the time we’re finished, even I won’t see you coming.”</p>
+        <p>Shepard chuckled, following the man’s lead. Squaring up, she readied to trade blows. Thane’s attacks were mainly jabs or kicks, favouring faster and more numerous hits over something more solid. The physical impacts of the punches barely fazed her, the defensive power of her new body easily absorbing anything she couldn’t block. But something about the placement sent twinges through the woman. Wherever a green fist did make contact, Shepard felt the tingle of nerves or another underlying sensation to the pain. Once or twice it had even elicited a shiver. The assassin knew his targets well, no doubt aiming for pressure points and other sensitive spots in the human animal. Compared to Miranda’s all out assault, fighting with Thane was more of a dance. He couldn’t take hits like she did, and Shepard saw him flinch more than once when a blow made it through. But these “tells” nearly gave Thane precognition in combat. He was always just out of reach, somewhere he shouldn’t be. It felt like both a fight and teamwork at the same time, in stark contrast to the other pair training nearby.</p>
+        <p>“You’re clawing your hands again.” Miranda’s instruction caught her ear. “Mind and body, remember?”</p>
+        <p>“Yeah, I got it!” Jack’s reply was considerably less composed. “No clawing.”</p>
+        <p>She stole a glance over at the biotic training. The pulsing of shockwaves had filled the air for the past half hour. A power Jack excelled at. What they lacked in accuracy was made up for in sheer power. Miranda’s dummy setups were routinely sent flying; the whole scene was like watching someone bowling with hand grenades. When the bald convict was focused, she constantly glowed. Her odd, custom amp brought up a truly impressive well of biotic power, crackling off her skin and released as powerful blasts at the slightest whim. But she was unfocused; any attempts at more precise action almost always resulted in failure. Which judging by the peaks and valleys in the pair’s volume; was not uncommon. Though she was hardly the only person distracted. Shepard’s mind was back on Aeia for a moment, long enough to receive a direct strike. She stumbled back, prompting a pause in the fight.</p>
+        <p>“Is something wrong?” Thane’s black eyes held their usual intensity. Shepard couldn’t help but wonder if he already knew.</p>
+        <p>“Just thinking about the last mission.” She said, a hint of worry in her voice. “Been a few days now, Jacob hasn’t breathed a word about it.”</p>
+        <p>“I overheard the crew discussing it earlier.” Thane nodded, looking past her “From what I understand, Mister Taylor’s father had lost his mind. It was an act of mercy.”</p>
+        <p>“Yeah. His dad resorted to… extreme measures to avoid eating the local plant life. Turned out the toxins had built up in everything over the past ten years.” The thought made Shepard’s stomach turn. “Wasn’t just that though, the shit he did… and he ends up the only survivor? Maybe the universe has got a sense of humour.”</p>
+        <p>“You disapprove?”</p>
+        <p>“No, the bastard got what he deserved.” Shepard’s glower softened. “Just… should’ve been me who killed him, not Jacob.”</p>
+        <p>“A difficult choice.” Thane agreed. “Spare him the act, and rob the man of agency. Or allow it, and risk the chance to cause more pain.”</p>
+        <p>For a moment, neither of them said anything. Shepard’s memories of that place were still tinted red. Finding Ronald Taylor’s fortress, seeing the bones of the people he’d damned to consuming the toxic local food. He was supposed to protect them! Instead he’d let them lose their minds, using the men for labour and the women for his own monstrous appetites. She saw the rusted medical table again, a barely functional auto-doc machine stained with blood. The things those poor people had endured… But worst of all had been Jacob. Watching relief turn to horror as the truth came out, his father reduced to a jabbering invalid. Against impossible odds the two of them had been reunited, only for Ronald to become a twisted parody of the person he once was. Rage had flared up in Jacob, as it had in Shepard. Death was the only acceptable outcome. But after seeing the man now, retreating into himself and wary of everyone around him, the whole thing felt like a mistake.</p>
+        <p>“For what it’s worth, I believe you made the right one.” Thane’s words were enough to bring the world back to Shepard. She sighed, unzipping her under-suit and tying it around her waist, letting the air cool her breasts.</p>
+        <p>“Yeah… I hope so.” Shepard called an end to the day’s training, taking a moment to relax. She watched Grunt for a moment, noticing the intensity of the krogan’s assault on the cargo crates he trained with. His bellowing had grown in recent days, measured blows turning into knuckle crunching strikes: Something to keep an eye on, maybe.</p>
+        <p>“Shit!” Jack’s yell rang out across the cargo bay. A weighted target she’d been lifting was propelled through the air, her biotic field violently collapsing into a shockwave. The projectile spun towards an inattentive crewmember, before being frozen in mid-air. Miranda held it a few feet from its unwitting victim, slowly dropping it to the ground. The whole scene was enough to draw Shepard’s full attention, making her way over.</p>
+        <p>“What the hell are you doing?” Miranda roared, glaring daggers into the convict. “How many times do I have to say it, don’t claw your hands!”</p>
+        <p>“I wouldn’t if you weren’t on my ass about every little thing!” Jack bit back. “How am I supposed to focus with your bullshit in my ear?”</p>
+        <p>Miranda let out a frustrated snort. “How the hell are you going to fight if you can’t even pick something up?”</p>
+        <p>“You know what, fuck you!” Jack snarled before turning for the elevator. “You wanna stand there and sneer all day, you can go fuck yourself!” She was gone, her middle fingers visible as the doors closed.</p>
+        <p>“Bloody hell…” Miranda said under her breath as Shepard approached. She hadn’t even noticed Shepard yet.</p>
+        <p>“Nice catch.” Shepard offered, getting a startled look from her. Miranda brushed the raven hair from her face.</p>
+        <p>“Thanks.” She nodded, making her voice level. “Remind me to clear the bay for our training sessions from now on.” A curled lip punctuated her little joke.</p>
+        <p>“She improving?” Shepard’s question got a mirthless chuckle out of her.</p>
+        <p>“She’s all over the place. Scans from her amp are good, when she sits still for them. Dark energy build up is substantial, and neurological activity correlates with conscious manipulation. Jack can certainly output biotics.”</p>
+        <p>“But?”</p>
+        <p>“She’s got no control!” Miranda gestured toward the elevator. “Honestly, how hard is it to focus for five minutes?” Her icy-blue eyes caught Shepard’s, acknowledging the commander wasn’t quite satisfied with the answer. “I wont know for certain without doing proper tests, but I think her neural pathways are degenerating.”</p>
+        <p>“Wouldn’t we be seeing a drop in her powers then?” Shepard drew from what memories she still had of the old Alliance handbook on biotics.</p>
+        <p>“Normally, yes…” She stared off into space, her lips pressed into a line.</p>
+        <p>“You okay?” Shepard asked, seeing those eyes light up again.</p>
+        <p>“I’m fine.” Miranda straightened up, her features returning to their typical coolness. “If Jack’s going to be a baby, I’ve got reports to finish up.”</p>
+        <p>As she watched Miranda head to the elevator, Shepard couldn’t help but be surprised. They hadn’t even properly finished their conversation. Miranda was hardly the type of woman to leave things half done, or miss out on demonstrating her impeccable knowledge. But instead it seemed like she’d been anxious to get away. It bothered Shepard. She’d been down here before during Jack and Miranda’s training sessions. The teacher’s impatient nagging had certainly been a mainstay, as had the student’s profanity. The topic had never come up, but she figured Miss Lawson had to have at least a decade on Jack. It was in the way she talked, that subtle emphasis on the words as though her meaning was obvious. She anticipated Jack’s mistakes, readying a chiding long before the event took place. In truth, Jack wasn’t the only person she did this with. Shepard had caught the same behaviour with Tali, Jacob, Garrus, even herself from time to time. It was impossible to tell the woman’s age by her looks, effortlessly beautiful as she was. But those eyes couldn’t hide the years behind them.</p>
+        <p>Unsatisfied, Shepard got off on the engineering deck. For a moment she entertained the idea of stopping by her favourite quarian’s workstation. Maybe she’d sneak up behind her, enjoy that startled jolt as she slid her arms around Tali’s waist. That little synch in her girlfriend’s body was quickly becoming a favourite place of hers; perfect to just let her hands fall. Resting above Tali’s hips she could pull her in close, peeking past her violet veil as she asked after the ship. Hearing her talk about anything was a treat in itself, but the detail in her talks about the Normandy was matched only by her passion. She truly loved this new ship, stripped away from the AI and the Cerberus trappings. Another angelic piece of technology, beauty and power married into something extraordinary. Even if Shepard couldn’t grasp everything she spoke about, just listening to the purr of her voice, the newfound weight in her homeland accent: The proudness that radiated from her now. All of it was a joy.</p>
+        <p>God… how she wanted it all again, right this moment.</p>
+        <p>Instead she descended the stairs to the engineering sub-deck. A secret rendezvous with her lilting lady would have to wait. She kept her steps light, not wanting to barge in on an angry biotic. Soon the engineering walkway was overhead, and she was submerged in the dimly lit gloom of Jack’s new abode. It was a small, inconspicuous part of the ship, perfect for her. The workbench sat unattended beneath a lonely light fixture. Storage tanks and crates took up most of the space. What little remained was enough for the handful of stools brought down by the crew for poker nights, and a single foldout bed. The former quarters Jack had occupied were hardly spacious, but “broom closet” would be generous down here. Finally Shepard caught sight of her, leaning forward with her hand outstretched. A wrench was floating in front of her, shivering unsteadily in the biotic field. Shepard watched her for a moment, before the same thing occurred again. The field collapsed into a shockwave, throwing the tool against a crate with a loud clang.</p>
+        <p>“Fuck!” She hissed in frustration, burying her head in her hands.</p>
+        <p>“I could get you a softball if you like?” Jack whipped her head around in Shepard’s direction. “Less chance of concussion that way.” Shepard’s joke seemed to slip through a little, that vicious snarl was gone now.</p>
+        <p>“What do you want?” She asked; brown eyes narrowed as Shepard walked over to the crate.</p>
+        <p>“Just making sure the local wrench population isn’t in danger.” She picked up the scuffed tool, tapping it against her palm before looking at Jack. “I thought you might try something like this.”</p>
+        <p>“Like what?” She arched an eyebrow.</p>
+        <p>“Training alone.”</p>
+        <p>“So what if I do?” Her annoyed scowl faltered when Shepard dropped the wrench, anther weighty clang.</p>
+        <p>“It’s dangerous, for one.” She warned, moving it toward the table with her boot. “And you won’t improve either, not without someone watching for mistakes.”</p>
+        <p>“I’m not a kid, Shepard.&quot; Her teeth flashed at Shepard’s implication. “I don’t need a fuckin’ teacher.”</p>
+        <p>“Really?” Shepard lined up the wrench a little, before joining her on the bed. Jack seemed surprised by the act. “Think you could put it on the table?” Shepard watched her face scrunch up in anger.</p>
+        <p>“Why should I?” Her question was filled with venom. Those brown eyes were locked on Shepard’s, but they were looking at someone else. Shepard could see someone younger behind them, someone much younger.</p>
+        <p>“How’s two hundred credits sound?” She lit up her Omni-tool with a smirk. The fire flickered away, and the woman’s typical aloofness returned. Jack sized her up, along with the offer: A good sign.</p>
+        <p>“Make it five hundred.” She countered with a smirk of her own.</p>
+        <p>“Deal.”</p>
+        <p>The pair’s little bet seemed to spark something in Jack. She eyed the wrench like a hawk, holding out her hand towards it. Shepard observed her carefully, never letting the heavy object out of her sight. Jack summoned her biotics, enveloping her human form in shimmering blue light. The effect was intense, crackling and sparking off her in waves. The power she must have hidden just below the skin, it was like a vast ocean pouring through a pinhole. In the time she’d been aboard, Jack had grown accustomed to her new clothes. Gone was anything remotely orange, instead opting for browns and blacks: Something simple to juxtapose her tattoos. She favoured tank tops, or anything that kept her mostly bare.</p>
+        <p>The tattoos and scars certainly made for an arresting look. But in this state her colourful exterior wasn’t what grabbed Shepard. It was her face. Behind the shaven head and sneers, Jack was a natural beauty. No doubt a blessing and a curse for someone like her. But something about seeing her like this, the façade stripped away with just a look of concentration. Shepard could see her drive, even a bit of earnest pluck. She followed the length of Jack’s outstretched arm, toward her slender fingers. They shook slightly, twitching as the wrench rose higher.</p>
+        <p>Then suddenly it dipped. Jack’s eyes widened and her fingers clawed, her whole body sparking. The wrench rose again, wobbling in the air as she inched it towards the table. Sharp breaths escaped her nose; jaw setting as the object grew unstable. Shepard felt the hair on her arm stand up, more and more energy collecting in the field.</p>
+        <p>“Easy…” Shepard urged her, watching carefully. Concentration turned to panic on Jack’s face as the distortion began to ripple and pulse. For a second the field vanished. The wrench fell, and then stopped. Her hand jerked it back up before another shockwave erupted. Shooting into the crate, the heavy missile bounced back toward the bed. It stopped short of Jack’s face by mere inches, snatched from the air by Shepard’s hand. Both of them sat in shock for a moment. Shepard let out a relieved sigh, until the young woman slumped forward.</p>
+        <p>“God damn it!” She forced out the words through clenched teeth. Her hands were balled to fists, shaking with rage as she sat there. Shepard let her bleed it off, standing up to place the tool back in position again. By the time she’d sat back down, the shaking had stopped and only a lingering pout remained. Shepard hadn’t been sure what to make of the accident in the gym; she hadn’t seen the whole thing. But now the problem was obvious. It’d been Alliance Biotics Division homework for the first two months. Giving Jack what was left of the minute; she searched for her gaze.</p>
+        <p>“How’d you used to do it?” Shepard asked, hoping to lead her into it. Humiliation and anger gave way to confusion in her.</p>
+        <p>“What?” Shepard pressed her with a look, getting an annoyed shrug. “I dunno; I just did it! Didn’t have to think about this shit before.” Shepard’s instincts had been right.</p>
+        <p>“I know what the problem is.” She got Jack’s attention with that. “You’re hyper-focusing, channelling too much energy. Gotta relax while you’re doing this.”</p>
+        <p>“Oh, great advice!” She rolled her eyes. “Got any hallex to help with that?”</p>
+        <p>“You’ll manage without it.” She pointed to the wrench. “Just, I dunno; talk to me or something. Tell me about yourself.”</p>
+        <p>“…Tell you about myself?” Her brows rose in confusion. “Are you fuckin’ serious?”</p>
+        <p>“You’re going to have to multitask with biotics in the field. This’ll help with that.” Shepard insisted, her tone more gentle now. “Besides, this stuff’s like riding a bike. A couple successes and it’ll be second nature again.”</p>
+        <p>With a dismissive shake of her head, Jack put her eyes back on the target. With a deep breath the biotics were back, loosening up her hands before readying them.</p>
+        <p>“Alright… ask away.”</p>
+        <p>Shepard held off for a bit, letting her get the thing off the ground first. Her form was already more relaxed, fingers extended comfortably as she watched it rise. Looking the convict over, Shepard searched for something comfortable. The scars were off the table, along with the tattoos. Anything on your skin had to be earned for conversation. She figured Jack must’ve had a few amusing anecdotes. Well, as amusing as violent criminals got. She saw the traces of grease on Jack’s scalp, a splash of it on a knife nearby. Combined with oddly out of place tattoos, she had it.</p>
+        <p>“What’s with the haircut?” She asked casually.</p>
+        <p>“Seriously? That’s what you wanna know about?” Jack snorted in amusement.</p>
+        <p>“Sounds like I’m on the money.” Shepard grinned. Jack chuckled to herself, nodding.</p>
+        <p>“Joined a cult a few years back. The baldy look was like a dress code for ‘em.” She loosened up, inching the wrench through the air. “Some kind of neo-paganism, a bunch of old Earth shit I’d never heard of. They used to have all these ceremonies, read from some dusty book. Boring as shit. Drugs and sex made up for it though.”</p>
+        <p>“Figured you’d be a better fit for a gang than a cult. Less rules in a gang.” Shepard mused, watching the object gently float by.</p>
+        <p>“Sure, here and there. Never lasted long-term.” She smirked. “Someone always got a little hands-y. But the cult… I dunno, people looking for a better place… didn’t seem so bad back then.”</p>
+        <p>Her form was good, and the tension hadn’t returned. Shepard watched her hands, noting the subtle flexes in Jack’s fingers. She wasn’t clenching her jaw anymore, the muscles in her face just resting normally. Right now she wasn’t some mass murder convict, and Shepard wasn’t some Cerberus stooge. They were just two people, having a conversation. Fleeting as it might be, Shepard liked seeing her in this state.</p>
+        <p>“Things didn’t work out?” She asked, watching Jack’s lips curl into a frown.</p>
+        <p>“Turned out they were full of shit: A pack of fuckin’ colony raiders in dress-up. Fed me their bullshit about persecution for a while, how my powers were a last resort.” The wrench dipped, but she caught it this time, and the field held steady. “One of the guys eventually told me, think he’d fallen for me or something… S’what I get for being naive, I guess.”</p>
+        <p>“What happened to the cult?” Shepard’s question got a sideways look from her</p>
+        <p>“What do you think?”</p>
+        <p>“Bet that wasn’t in their holy book.” Shepard gave a conspiratorial smirk. Jack laughed.</p>
+        <p>“No it was not.”</p>
+        <p>It was strange hearing Jack laugh like that. A real laugh, not some unhinged cackle drawn up from bitterness. Sure the situation was a little morbid, and Shepard didn’t really want to encourage revenge thoughts in a powerful biotic. But she enjoyed it all the same. She even joined in, letting a chuckle play second fiddle to Jack’s guffaw. Almost absent-mindedly Jack set down the wrench on the table, the minor victory suddenly hitting her.</p>
+        <p>“Ha! Yes!” She leaned forward on the bed, fists clenched in triumph. “Fuck you, wrench!”</p>
+        <p>A bright, genuine smile was on her face, bordering on a grin. It was surprisingly infectious, getting a smile out of Shepard in return. If that wasn’t enough, an audible giggle escaped the convict. It was self-satisfied and prideful, but most of all it was honest. It dawned on her then, watching this wanted killer celebrate moving a mechanic’s tool five feet through the air. Jack had spent weeks like this, her abilities trapped beneath an inhibitor chip. Shepard could only imagine how she’d been muzzled before that, forced to have a part of her being stripped away. And even after it was returned, everything was broken. She was learning to be herself again. Shepard looked down at the miniscule red scars on her hands, trailing up her bare arms. Her eyes wandered back to Jack, seeing the horrific lacerations that marked her skin. They were hidden below ink, but just seeing them got a pang of sympathy from Shepard. Looking at the relics of her pain, Shepard hadn’t noticed Jack’s brown eyes were on her. By the time she met them again Jack’s expression had changed.</p>
+        <p>“Now I get why you’re down here.” She spat, glaring at Shepard. “Get a kick out of the buddy thing?”</p>
+        <p>“I get a “kick” out of making sure my team’s okay.” Shepard held her gaze. “That’s why I’m down here.”</p>
+        <p>“Oh fuckin’ spare me!” She got up from the bed, grabbing the wrench and pointing it at Shepard. “You’re down here making up for the cheerleader’s bullshit!” Her eyes narrowed. “…Or maybe you’re just eyeing me up.”</p>
+        <p>Shepard got up, closing the distance between them. Jack clutched the tool a little tighter in her hand, but Shepard stopped short of her threshold. The wiry woman looked up at her, her wild eyes somewhere between anger and fear. Shepard watched the other Jack slip away again, sinking back down into that deep, dark pit. Now the animal had returned, the creature of instinct that had kept her alive all these years. Shepard didn’t push it, simply holding out her hand.</p>
+        <p>“Can I have the wrench?” Shepard asked. “It’s Gabby’s.” Shepard’s calm got another ripple below the surface.</p>
+        <p>“There.” She slammed it down on the table. “Now fuck off.”</p>
+        <p>There was no point in moralising, or trying to force the point. Shepard simply took the tool, leaving for the stairwell in silence. As she ascended back to the comforting lights and sounds, a part of her wanted to remain down there. Those moments before, she could’ve dismissed them as mere flashes: Events small enough to be a matter of opinion. That rational part of her mind would conclude that Jack was exactly what she looked like: A psychopath, a criminal and an unnecessary risk. But after this it was clear that wasn’t true. She knew it, and more than that, she knew the urge to help her wouldn’t let go. Until the opportunity arose, there were others who needed her attention. She looked down at the wrench with a small smile. She had at least helped a little. A reward was in order. The smile widened as she drew closer to engineering. She’d hand over the wrench; inform Ken and Gabby they had a few minutes off to take it to the locker: Just enough time for a technical debriefing. Sure she wouldn’t get to surprise Tali, but there was always next time. But when the door opened, Ken and Gabby turned to greet her with a very noticeable absence.</p>
+        <p>Where the hell was she?</p>
+        <p>Up on the crew deck, a certain quarian sat across from the Normandy’s other dextro crewman. Her break would be over soon, after which another appointment with Chakwas was due. A scratchy throat and blocked nose had stifled Tali’s appetite. Atypically for her, she was happy to let the nasal tube handle the food and drink for today. Feeling another rush of cold liquid pass through her nostril and into her stomach, she instead focused on the flight recorder. Garrus had been fiddling with it earlier, struggling to get past a particular security system. Most of the code cracking was already done; he understood the stuff that talked to Citadel systems. But the last layer protecting root access was custom code, code she immediately recognised. Delving into the node acquisition, her neural connection deftly outplayed the defensive program. Tali’s lip curled, shaking her helmet. The ciphers were based on Khelish script, everything from cadence to word progression. Another quarian had written this, no doubt in the shady employ of Omega’s criminals. Wasn’t it insult enough to abandon your family, only to sink into a life of crime? Part of her flared up in indignation.</p>
+        <p>Another part of her cowered, suddenly feeling very much in the crosshairs.</p>
+        <p>“All done.” She announced, cutting her connection. She slid the black box across the table.</p>
+        <p>“I appreciate it, Tali.” Garrus gave her a nod, already delving into the contents.</p>
+        <p>“Looking for anything specific? I could write up a search program to help-”</p>
+        <p>“No.” Garrus cut her offer short. “Thanks, but you’ve already done plenty. Besides, I could use the practice.”</p>
+        <p>“…All right.” She got up from the table, sensing the prickliness under his gratitude. “I’ll see you later, then.”</p>
+        <p>He returned the goodbye with a distracted wave, his full attention on the data. Tali’s inner snoop had considered copying it over, having a good look through it herself. Better judgement and decency had staved off her curiosity, but something in Garrus’ behaviour the past couple of weeks bothered her. He’d retreated a little from their special trio, putting up the snarky mask more often than usual. During those first days with Jane’s feelings in her head, she’d talked with the turian about Omega. He’d assumed it was common knowledge by now, freely recounting some of what happened. No doubt some details had been avoided, and he’d been unnaturally angry while forcing himself through some of it. But there was also a strange energy to him about it. Like he couldn’t wait for what was coming next. It bothered her, a lot.</p>
+        <p>Receiving another message from the Fleet hadn’t helped matters. Kal’s old message still warmed her heart, knowing the bosh’tet had pulled through okay. But this new one was from Shala. Seeing the Admiralty Board’s flag on a message always made her nervous, but after weeks without hearing from them it was even worse now. Of course, a few lines in that dread soon melted away. Auntie Raan remained the sweet elder she always had been, asking after her. Haestrom was mentioned, along with hopes that the colony attacks hadn’t involved the Normandy. There was a professional request buried in the well wishes, some letters that needed writing for the marines’ families. Most had already been handled, but a couple had been forwarded. Seeing Riah and Myrr mentioned again was enough to make Tali’s chest tighten. After everything with Horizon, and Jane, she hadn’t thought about them in weeks. Guilt gnawed at her, something she hoped to appease with some respectful words.</p>
+        <p>Heading into the med-bay, the sniffles and coughs were a constant reminder of the latest development in her life: This damned treatment. She suppressed the worst of if when Jane was around, Jane didn’t need to hear her spluttering and sneezing in their precious moments together. Hell, just the thought of Jane was enough to bury her frustration. Jane had done this for her, and she would endure it for Jane. Selecting another dose of unblocking mist for her helmet, she drew in a breath. Her nose snorted loudly and cleared, at least for the time being. A little flush of embarrassment dusted her cheeks when Doctor Chakwas looked over at the sound. Once again Tali considered a buzzer for the med-bay door.</p>
+        <p>“Tali!” Chakwas was out of her chair, her lovely smile shining as she approached. “Right on time. How’s it going, dear?”</p>
+        <p>“The fever’s receded, and I’ve got a cough. Sinuses are all gunked up.” Tali’s voice reflected her condition. “Doing great!” She added with some levity.</p>
+        <p>“You are a trooper.” She felt the doctor’s hand on her shoulder, gentle as always. “Come on, let’s have a look at you.”</p>
+        <p>Tali sat down on the medical bed, syncing up her suit readings with Doctor Chakwas’ Omni-tool. Her HUD lit up with images of her vitals and brain activity, all of it streamed in real time. Her heart rate climbed a little watching it appear before the human’s eyes. She trusted the doctor with her life, and cherished the woman like a second auntie. But a suit’s readings were the very definition of privacy for a quarian. She knew there was nothing to fear, no chance of having her confidence betrayed, but still it nagged at her. That alone was upsetting. There was still a barrier between her and the humans she cared about. She reminded herself it wasn’t like that with Jane. She could be completely honest with her… she would be.</p>
+        <p>She listened while the doctor went down her list of trouble spots. Most of it was stuff she already knew, along with a few issues of complacency. Tali had learned long ago that pretending to listen with Chakwas was a good way to get a lecture. So she kept her thoughts in the present, making mental notes of what to keep track of. Soon she was handed a tray with that week’s dose on it. Once again the suit bit into her, and once again she swallowed the pill. At leas this time there’d been some water handy. There was a supplemental shot afterward, something to dampen the more immediate symptoms. Apparently Mordin had been developing it in unison with the treatment proper. With any luck her sinuses would clear and the cough would recede in a few hours. Overall the outlook was positive, and Tali pricked up when Chakwas mentioned reviewing the current suit data. She already had projections in the works, hopeful projections.</p>
+        <p>“All right.” The older woman nodded, deactivating her Omni-tool. “All done.”</p>
+        <p>Tali wanted to play along and just say goodbye. So far everything was going smoothly, and she and Jane’s relationship had remained perfectly discreet. But she’d seen a change in Jane too. After the Aeia mission she’d come back in a dour mood. The horrors she described down there had been enough to make Tali sick. But worse than that, it had hurt Jane too. There wasn’t anything said, but she could see old memories in those blue eyes. She needed something to look forward to, more than that she wanted it.</p>
+        <p>“Doctor Chakwas?” She activated her jammer as the doctor looked over to her. “There was something else I wanted to talk to you about.” Fiddling with her hands, she glanced to the windows. “…Privately.”</p>
+        <p>“Okay…” Chakwas fogged them over with a tap of her Omni-tool. She sat down across from Tali. “I’m all-ears.”</p>
+        <p>“During our first talk about all this, you said my immune system would be able to handle suit breaches.” Tali started, already a little nervous. “How long could I be exposed?”</p>
+        <p>“Hmm, the current projections are somewhere between two to four hours in a non-sterile environment.” Chakwas reviewed her data-pad. “Assuming the breach is over a small surface area.”</p>
+        <p>“Right. So full suit loss…”</p>
+        <p>“Full suit loss or respiratory exposure could still be lethal. Maybe a forty minute timeframe for treatment.” The assessment got a half-hearted nod from Tali.</p>
+        <p>“So, how…” She bit her lip. “How sterilised would a room have to be for safe unsuiting?”</p>
+        <p>Chakwas looked up from the tablet in her hand. Her eyes locked with Tali’s clearly aware something was up. The quarian’s face burned, she’d said too much. Contingencies began buzzing through her mind, a way to carefully slip out of the conversation. She winced as the doctor leaned forward a little.</p>
+        <p>“Tali, what’s this about?” She asked, that matronly warmth in her voice. “If you need time out of the suit, I can always decontaminate the med-bay.”</p>
+        <p>“It’s… not that.” Tali took a deep breath. “Jane – Shepard, I mean. We’re uh…” She brought her fingers together. “…We’re seeing each other.”</p>
+        <p>“Oh!” The doctor’s eyes widened for a moment. Tali grit her teeth, letting the truth hang in the air. But soon the surprise was gone, replaced instead by that palpable kindness Chakwas always had. “Oh dearie, that’s wonderful!”</p>
+        <p>“Thanks.” Tali said bashfully, shifting a little on the bed. “It’s only been for a couple of weeks, a-and we’re keeping things quiet for now. We don’t want it to hurt the mission.”</p>
+        <p>“I understand. Don’t worry, it won’t leave this room.” Chakwas assured her. “So, this business about exposure… have you two discussed it yet?”</p>
+        <p>“No.” She shook her helmet. “I… didn’t want to promise anything.” It felt pathetic to say. “I mean, I’d like to, and I think… I hope she would too.” Her eyes fell to the floor.</p>
+        <p>“I don’t think you have to worry about that, dear.” Chakwas said confidently. “When I first saw her again, Jane told me about what happened on Freedom’s Progress. She couldn’t stop talking about you.” Chakwas chuckled to herself. “To be honest, I had a feeling this might happen.”</p>
+        <p>“Really?” Tali asked, surprised. Chakwas gave her a wry smile.</p>
+        <p>“I think she’s been taken with you for quite some time.” She winked.</p>
+        <p>For something so uncharacteristically cavalier, Chakwas’ words made Tali’s heart soar. Among the tapestry of memories she had of Jane, there were these golden threads woven in. Little moments throughout the time she’d known her, where things had felt closer than friendship. Childish as it seemed now, having a heroic human save her from hired killers had certainly sparked something. For her it had never gone away. But there had been times, when Jane’s smile had been a little too wide, or her ears had pinked. Perhaps it had been shyness or self-doubt, but hearing it from a woman who knew Jane so well. It was like looking through a whole new lens. Everything had become a little clearer.</p>
+        <p>“So… do you think it’s possible, without the suit?” She let the question out without making eye contact. When she did look over, Chakwas had deflated slightly.</p>
+        <p>“As your physician, I would advise against it, Tali.” She admitted. “The safest option would be to pursue intimacy through the suit. Skin-to-skin contact, full exposure, the risks are…” Chakwas trailed off.</p>
+        <p>Tali cursed herself, the helmet’s microphone was still on. Tears streamed down her cheeks; nose running while the weight of those words crashed down on her. She tried to pull herself together; it wasn’t fair on the woman just trying to keep her healthy. Besides, it was the truth. Treatment or not, Tali knew what she was. And in that moment she hated it.</p>
+        <p>“Tali?” Damn that voice. It was like Jane’s.</p>
+        <p>“I’m sorry.” She forced herself to stop crying. “You’re right, I know. It’s just, sometimes I…” An unwelcome memory racked her body, putting her head in her hands.</p>
+        <p>“I haven’t… touched someone, in three years.” Tali said quietly, ashamed. “I-I’ve never… The last person whose skin I felt… Keelah, it was my own…”</p>
+        <p>Long ago, Jane had told her about her own memories: About human memory. For her kind, nearly every moment was catalogued somewhere, able to be retrieved at a moment’s notice. A prodigy, even among her own species, Tali could easily recall even the smallest details, the farthest moments from the present. But after years of pain, she’d discovered a similarity. Jane had said human memories clung to that which was treasured, the people and times they loved. For her, it was twenty years ago. Huddled in a clean room shower, terrified as the warm gentle mist became stinging jets of water. Alone she would’ve panicked, fled before the joys of it became clear. But the gentle touch of her mother kept Tali safe. It had strengthened her, helped her endure the pain: The feeling of those arms around her, the sacred touch of skin upon her own. It was among her most treasured memories.</p>
+        <p>“I just…” She had no idea what to say.</p>
+        <p>The brush of gentle fingers on her shoulder brought Tali’s awareness back. Softly, Karin guided the young woman up into a tight hug. She couldn’t help but sob into the doctor’s shoulder, allowing herself a moment of grief… for all of it.</p>
+        <p>“Oh sweetheart…” Karin cooed, rubbing her back. “…I’m so sorry.” As her heart rate began to fall again, Tali released the older woman from her embrace. There was something different in those human eyes now. “Sometimes it’s easy to take the things I enjoy for granted.”</p>
+        <p>“I don’t want you to feel bad.” Tali promised through sniffles. “You’re trying to help me.”</p>
+        <p>“Part of that job means keeping you well up here, too.” Chakwas placed a finger on her visor, above her eye-line. “And I can see how much it’s hurting you.”</p>
+        <p>Returning to the professional and resolute doctor she always was, Chakwas brought up the suit data on her Omni-tool again. Tali watched, her eyes wet and sensitive as she scrolled through the current treatment projections. She checked and double-checked, lining up graphs and piecing together the most important parts she could. Soon something had been compiled, knitted together into a concise file. A copy appeared on the quarian’s device. She scanned through it before looking back to the doctor, her eyes wide.</p>
+        <p>“Now, all of this is contingent on the two of you not doing anything stupid.” Chakwas warned, her powerful maturity making Tali stand a little straighter. “I’ll also have to confer with Mordin about some of it. He’s the expert between us.”</p>
+        <p>“Uh…”</p>
+        <p>“Don’t worry, Tali. The man is a trained doctor. Neither of us would dream of exposing your relationship.” Chakwas slipped in a smile before returning to sternness.</p>
+        <p>“All right, if you want full suit-less contact we have to prepare. First, the room will need to be decontaminated. Eighty five per cent or higher Tali, I won’t accept anything less.”</p>
+        <p>Tali just nodded, speechless.</p>
+        <p>“Second, this will need to happen in stages, along with sustained exposure over a period of time. Limited skin contact to begin with. The mask stays on, understood?”</p>
+        <p>“U-understood!”</p>
+        <p>“Once your immune system has had time to adjust… we can look at respiratory exposure, fluid transfer.” She brushed her silver hair from her face, weariness already setting in. “Goodness… You can tell the commander she owes me a bottle of brandy for this.” Chakwas smirked.</p>
+        <p>“I promise we’ll be careful.” Tali was jittery all over, ready to spring into the air.</p>
+        <p>“See that you are.” The doctor’s voice turned serious. “If anything happened to you, Jane would never forgive herself… and neither would I.”</p>
+        <p>“I know.” Tali nodded solemnly. Already the plans were forming in her head. She couldn’t resist hugging the older woman again. “Thank you, thank you, thank you!”</p>
+        <p>Bouncing on her toes, the quarian was most certainly shaking up her doctor a little. But soon the English woman’s good-natured laughter followed suit, feeding off Tali’s explosive energy. Soon sense returned, and she gave the other woman a little space.</p>
+        <p>“She’s a very lucky woman.” Chakwas said warmly, squeezing her shoulders. “If she puts a toe out of line, you let me know.” Tali giggled as the woman wagged a deadly finger.</p>
+        <p>“Speaking of Jane. Is she going to be okay? I mean will she get…?” Tali gestured to herself, prompting a snort from Chakwas.</p>
+        <p>“Oh no, dear. She’ll be fine.” She waved the concern away. “Alliance soldiers all have their cross-chirality allergies suppressed when they enlist. It’s part of their gene therapy. After all, we were looking at war with the turians back then.” Chakwas side-eyed the door. “…With how those two carry on sometimes, you’d think we still were.”</p>
+        <p>After a final hug and warm farewell, Tali left for the elevator. She loped lazily across the crew deck, reading over her doctor’s plans for them. Most of the projections were still a ways off, weeks from now. Aside from her current regimen of exercise and supplements, her treatment effects would begin to compound. The sniffle in her nose had receded, with body scans indicating that Mordin’s meds were helping. She pushed away thoughts of his involvement in the more intimate parts of her treatment. Chakwas was no doubt correct about his necessity.</p>
+        <p>There were other things, however. Deeper concerns she hadn’t previously thought about. Or perhaps more honestly, had consciously ignored. Now that she knew the possibility was there, for her to one day shed her suit in front of Jane. An old question resurfaced. It had swum for years in the recesses of her mind, trapped beneath the certainty that it could never happen. But now, that possibility was very real. She stood in the elevator, looking down at the black gloves that covered her hands. They followed the contours of her flesh roughly, showing the shape and proportions of them. Three digits, Jane had slid them between her own five before. It wasn’t a perfect fit, but she’d never shown an ounce of discomfort. Tali’s shining eyes travelled to the fingers’ hardened tips. Tapered but rounded, practical for everyday use. But they hid her claws, and the stripes on her skin. Would Shepard want to hold her hand, if she saw the natural weapons it sported? Would the stripes that crossed her sickly pale skin discomfort Jane?</p>
+        <p>She did her best to banish the thought, at least for now. She remembered the words Jane had spoken to her, over a week ago. When the time came, and everything was in place, they could always talk about it. Instead she drew strength from the last person she’d wanted to think about, her father. Instead of worrying about the things she couldn’t change, she would focus on what she could. Her technical mind lit up, plotting out disinfection techniques, installation points for a decontamination unit. She had a place all picked out, their sanctuary from the rigors of this mission. It would be difficult, and dangerous, but she didn’t want those precious moments to happen anywhere else. When the door opened to Jane’s empty cabin, Tali activated her helmet’s scanners. And got to work.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 43: Facing Fears</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch42.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html" selected>Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch44.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 43: Facing Fears</h1>
+    <div class="chapter-content">
+        <p>It was a grim job, cleaning up after a mission. The smell of copper and salt hung in the gunship cabin: Blood and sweat, tinged with a particular pheromone that Garrus understood as fear, in humans. It was so potent he could taste it, bitter memories surfacing. He remembered that smell in Shepard’s cabin, months ago. Never before had his closest friend been such a picture of frailty… of mortality. As the days had drawn on, that image had faded. He saw glimmers of the woman he used to know, and now that image was more complete than broken. But as water from the pressure hose carried away the blood from Niket’s corpse, those niggling fears returned.</p>
+        <p>The ground team had barely made it aboard when the Normandy went to condition one. An Eclipse fleet had jumped in, fifteen ships from out of nowhere. He’d shared the elevator with Shepard, while Tali clambered up an access ladder. By the time he’d made it to Gunnery, missile alerts began blaring: He’d felt the ship lurch and shudder beneath him, GARDIAN turrets frantically dispatching the threats with infrared laser fire. One of the heat sinks was at near-full saturation when the FTL spun up.</p>
+        <p>Joker had got them behind a gas giant, hugging the thermosphere as they switched to silent running. After that, the Tantalus had dragged them by gravity well into the giant’s ring system, hiding among the larger moonlets. There had been multiple short circuits, and even now the quarian was tending to the damage. The whole thing had shaken him more than he’d expected. He could only imagine how the crew had felt back over Horizon…</p>
+        <p>With the gunship clean and left to air out, the turian trudged across the cargo bay. A man stood near a Cerberus coffin, with hands clasped in prayer. Green and black scales covered by an open jacket. Thane’s dark eyes remained closed, even as the heavy footfalls drew close. Garrus’ mandibles clenched.</p>
+        <p>“Everything alright, Krios?” He broke the silence, watching Thane carefully.</p>
+        <p>The drell’s purring murmurs slowly came to an end. Those dark eyes opened, transfixed on the silver coffin beneath their gaze. There was an absence of emotion on his scaled face, a mask of sheer willpower: A bulwark against a great, crashing wave. For a time he stood there, in silence. What was there to say? Niket had not been a fighter, his scrawny body had likely never known more than poverty. He had died helpless, and without even the slightest chance of remorse. Death had come, as certain as gravity’s pull to the ground.</p>
+        <p>“It’s my fault.” Thane finally spoke, the deep growl kept consciously serene. “I should’ve come to Shepard, when I learned of his desire to meet. Instead I let my desire… my flesh, guide my actions.” His lips thinned, a shallow breath escaping his nose. “Now another innocent has paid for it.”</p>
+        <p>“You had no way of knowing.” Garrus replied heavily.</p>
+        <p>“Precisely… and yet I acted anyway.” Thane touched the curving metal. “It is the role of an assassin to be exact. Every variable must be accounted for, every ripple considered. The greatest failure is not that his shot should miss the target, but that it should hit someone else.”</p>
+        <p>There was no reply this time, no words of comfort. Even here, standing so far away, Garrus could smell the blood. He’d watched the helmet footage Shepard had given him, while cleaning out the gunship. Melassania wasn’t a lifelong diplomat like Benezia had been. She was a solider: A warrior in her prime, with almost a thousand years of experience at her back. Even firing at her from the safety of a combat craft, it had felt only like buying time. And the way she’d killed this Niket, sent chills through his carapace. Biotics always were the cruellest killers.</p>
+        <p>“We’ll get her.” Garrus said coldly. “She’ll pay for what she’s done.”</p>
+        <p>“Will she?” Thane’s response was almost a chuckle. “She is a powerful matriarch, with the galaxy at her command. We are some of the best, but there is only twelve of us.”</p>
+        <p>“You of all people know numbers don’t matter.” He argued. “Twelve good soldiers can win a war.” A moment of tense silence passed between them.</p>
+        <p>“Will it be worth it?” Thane finally asked. “How many more innocents will have to die?”</p>
+        <p>Garrus clenched his jaw, beak scraping and fangs grinding. Without another word, Thane left him there. Opening his Omni-tool. The messages screen stared back at him. He was so close now; he could taste it in the air. Lantar had changed his name, but he was definitely on the Citadel. Zakera Ward, somewhere. After calling in just about every last favour he had, a name had finally come up: A pseudonym “Fade”, the moniker of a forger. It had cost nearly ten thousand credits, but the fool had been bought into arranging a meeting. It was simplicity itself. They were already in the local cluster, just a casual chat with Shepard.</p>
+        <p>There was another name, below Fade’s. Sol… Solana. It had come in the night, outside of the agreed schedule. Only one reason for that: an emergency. Garrus had felt sick before he’d even opened it. Her message had burned itself into his retinas, so far away from the composure a military upbringing had given them. There was none of the formalities, no stiff-beaked talk. There wasn’t even any anger: Just a plea.</p>
+        <p>“Need you home.”</p>
+        <p>Standing there, beside Niket’s lifeless body, a realisation hit him. He had disgraced himself that night, with an answer so certain in it’s uncertainty. A pathetic attempt to save some kind of face, to be the brother… the son he was supposed to be. He could have spared them, told them it was impossible. Let them cut him out of their lives. But no… That would’ve been the brave thing to do. What a good turian would do… something he’d never been.</p>
+        <p>“I’ll see what I can do.”</p>
+        <p>He had to settle up… and soon.</p>
+        <p>The lighting of Miranda’s office had been dimmed. The Spartan, yet tasteful décor was bathed in a faint light reflected off the ring outside, pouring through the windows. For a moment Shepard stood there, in front of her unoccupied desk, looking out. Sessions with Samara had brought her far; to the point only the smallest of lingering needles traced her spine when confronted with the infinite black. With a few hours left until the Cerberus ship arrived for Niket, an old thought crossed her mind again. It seemed selfish given the circumstances, but it stuck nonetheless. She collected herself. There would be time later.</p>
+        <p>Instead she focused on the figure at the far side of the room, sitting on the edge of her bed. In just fatigues she crept toward her, careful not to make too much noise. Miranda’s gaze flicked up to Shepard, before returning to the girl sleeping beside her. She ran her fingers through Oriana’s hair, showing a gentleness Shepard couldn’t remember ever seeing in her before.</p>
+        <p>“How is she?” Shepard’s whispered question paused her strokes. In a slow, fluid motion Miranda rose from the bed.</p>
+        <p>“Finally got her to sleep.” She answered, forcing some form of comfort in her voice. Red rings still hung around her eyes. “Wasn’t sure if I’d manage it, with Moreau’s flying…” Miranda trailed off. Any last drops of levity were gone. “Is, um… is Niket…?”</p>
+        <p>“His body’s been taken care of. Resting in the cargo bay now.” Shepard said grimly. “You can go see him, if you want? I can stay here with her.”</p>
+        <p>“No.” The word came out of her like she’d been winded. “Thank you, Shepard, but… I can’t.”</p>
+        <p>“I understand.” Shepard made it easy for her. She knew how difficult it could be, facing something like that. Even now, it prowled in the recesses of her mind. The guilt. Knowing that no matter how far they came together, her friends had done the very same for her. Endured the very same. She could feel the tar in her mind, seeping into the crevices, poisoning her thoughts. She wouldn’t let it settle this time.</p>
+        <p>“So… a sister…”</p>
+        <p>It was enough to get the ghost of a smile. Miranda seemed to relax, looking back at the sleeping girl. A hand unconsciously touched her arm, and she leaned back against the wall.</p>
+        <p>“My twin, believe it or not.” She said fondly. Her eyes met Shepard’s, brightening just a little at the woman’s confusion. “Genetically, I mean.”</p>
+        <p>“Your father’s doing?”</p>
+        <p>“Yes… I was only a teenager when she was grown.” Miranda’s fingers trailed along the skin of her arm. “We’d been fighting more often, back then…” She shrugged, lips thinning. “I guess he’d gotten sick of me.” There was something strange in her tone, almost a longing. “I hated her. Whenever I saw that crib, all I could think about was being replaced.” Slender fingers dug into her arm. “That’s all I ever was to him… just some toy, to be thrown out when I broke.”</p>
+        <p>“You took her with you, when you left.” Shepard’s assertion got a nod, and a cruel smile. “Revenge?”</p>
+        <p>The smile faded.</p>
+        <p>“It was… at first.” Miranda admitted. “I destroyed his research data, genetic compilations: Years of work. He’d never have his precious doll again. Taking Ori was… a final insult, I suppose.” Her face softened as she watched her sister sleep. “She’s the only other person alive like me. Maybe it’s narcissism, or…” He eyes fell from the bed, to the floor. “…I don’t know.”</p>
+        <p>“You love her.” Shepard used the word, stepping closer. Miranda shrank in Shepard’s presence, squirming under the weight of the word. For a moment, there was a touch of wet in her eyes. She blinked it away, giving a quick nod.</p>
+        <p>“I… like to think so.”</p>
+        <p>She shared in Miranda’s view. The child curled up on the bed definitely possessed the same ethereal quality. Not the product of natural life, but something hand crafted. Though despite that, she didn’t resemble the woman beside Shepard. The details were all different. Shepard glanced back at Miranda, and only then did she notice them. Miniscule, almost invisible, surgery scars. Seemed she wasn’t the only one that had been rebuilt…</p>
+        <p>“Why didn’t you tell me?” Shepard finally asked, snapping Miranda’s gaze to hers. The softness left her eyes, and the tactician returned. She closed those few remaining inches between them, and kept her voice low.</p>
+        <p>Above the hushed tones and tense conversation, an automatic door hissed open. Bright lights shone out from Mordin’s Tech Lab, every surface inside was illuminated in some fashion. The glare was enough for Tali’s suit to react, visor glass polarising to shield her eyes. Medical check-ups were a part of daily life for any quarian, whether self-administered or at the hands of an expert. It was as normal as things got for her people. And yet, somehow, going to the Professor always felt awkward.</p>
+        <p>She padded inside, taking in the numerous half-finished marvels lying around the place. Composite armour layering, novel arrangements of magnetic coils, prehensile fabrics. Keelah… it was enough to get distracted. She kept focus, approaching the tall salarian working diligently at his console.</p>
+        <p>“Professor?” She probed with his title. Large eyes darted up to greet her.</p>
+        <p>“Tali’Zorah! How can I help?”</p>
+        <p>“Um, just here for my-”</p>
+        <p>“Next dose! Treatment ongoing, weekly regimen expended.” He came to life all at once, flying about his small workspace. “Apologies, arrived two minutes early. Small break in schedule: Was running test scenarios with EDI, watching AI data-generation habits. Ah… little things, appreciate them when we can.”</p>
+        <p>“Sorry, I didn’t mean to interrupt you on your break.” She faltered in her steps, rubbing her arm.</p>
+        <p>“Not a problem. Patient’s needs primary focus, always more free time later.” He came from around the desk, injector in hand. “Now, medical scan. Necessary precaution.”</p>
+        <p>She nodded, standing a little straighter. Seven feet of energetic doctor loomed over her, his Omni-tool passing over her suit. There was a quick pop-up on her visor, asking for internal system access. With a thought she synced their devices, and streamed the data to him. Even standing within the cluttered habitat of the galaxy’s greatest genius, it would still take a few minutes to finish the scan. Her mind was always quick to wander in moments like this… forced stillness.</p>
+        <p>“Immune responses tracking along projected models. Hypothesis correct, massive contamination produced aggressive response.” Mordin’s words broke the silence. “Problems with current contamination therapy?”</p>
+        <p>“No.” Tali shook her helmet. “The air samples from the cabin are fine. Just minor symptoms.”</p>
+        <p>“Tissue and fluid materials?”</p>
+        <p>“Rashes sometimes, on the exposure sites. Coughing. Nothing serious.” She looked up into Mordin’s eyes. Skepticism looked back at her. “I’ve been feeling a lot better, Professor.” He let out a sharp breath through his nose.</p>
+        <p>“Aware you are not sleeping in Crew Deck pod. Saw hammock in Engineering, near work console. Hung quarian-style for military bunking.” As usual, Mordin’s care came with a price. “Time period matches Legion’s presence aboard Normandy.”</p>
+        <p>“I just… can’t sleep, not with it so close by.” She shuddered at the thought alone. Mordin grunted in acknowledgement.</p>
+        <p>“Unexpected relocation, assumed Shepard’s cabin would be optimal choice?” There was no judgement in his voice, just curiosity. It almost made her feel worse.</p>
+        <p>Tali muttered something vague, giving a practiced shrug. Alluding to protectiveness of the ship’s critical systems. It was something she had become very good at, the past two years… lying. Easier than talking about the way her muscles tensed, whenever she saw that machine in the room. Worse still was Jane, just inches from its grasp: The animal inside her panicked, fearing for Jane’s safety. But the quarian in her snarled at something different. Sympathy gone too far.</p>
+        <p>Her jaw clenched. This was not how she felt, not about Jane.</p>
+        <p>“Tali’Zorah…” Mordin was oddly quiet. “…Need to see this.”</p>
+        <p>Confusion furrowed her brow. If something had gone wrong, Tali knew she wasn’t in her best state to find out. In a flash the doctor’s long face disappeared behind a screen on her HUD, data being isolated and streamed back from her suit recordings. At first it just seemed like typical information. Brain activity, hormone levels, nothing out of the ordinary.</p>
+        <p>Then she saw it…</p>
+        <p>Her setae stood on end, pressing against the vacuum seal of the suit. A chill passed through her core, bringing nervous hands to her stomach. She didn’t move, didn’t breathe. She just stood there, still and silent, watching: The dates, the time stamps, everything down to the minute. She watched them all line up, matched against the biosensor readouts. Synapses crackled with electric fire, furiously searching her memory for any recollection. Had she simply not noticed? Was it because Jane was human? Even as anxiety had Tali bobbing on her toes, she felt a ton of weight pressing down on her. Out of all the things she’d been through recently, this, of all things… this was impossible.</p>
+        <p>“Tali’Zorah?”</p>
+        <p>“Yes, I… I see it, Professor.” She answered his question with a faraway blink. “Keelah…”</p>
+        <p>“Need course of action. Telling Shepard. Too important to keep secret.” His advice was correct, though it was a single voice in a chorus at that moment.</p>
+        <p>“I know.” She nodded robotically, trying to swat the buzzing thoughts away. “I’ll tell her, I just… Keelah, I need time to process this…”</p>
+        <p>“Understandable, but recommend caution. Human social bonding requires trust, transparency. Don’t want to-”</p>
+        <p>“Chief Engineer Zorah, please report to the bridge.” EDI’s calm voice cut the salarian off.</p>
+        <p>Jane, it had to be. Feeling a little unsteady on her feet, Tali bid the doctor farewell. She loped through the CIC, enduring an overly cheery “hey Tali!” from Kelly. Something about the redhead’s demeanour, despite being so outwardly nice… it made her skin crawl. Though that sensation was just one of many that was flooding her at this moment. Hypotheses came to life in her head, blazing brightly before fading away again. Had it happened when she touched Jane? It sometimes worked like that.</p>
+        <p>Feeling Jane’s skin against hers, nerve endings lighting up like the fusion torches of a full fleet burn. Jane’s presence had always been like a silhouette. Singular, one she would recognise anywhere. She could feel its contours against her, pressure forming a map in her mind. Nerve-stim shone a light upon the figure, bringing it into blurry existence. She could feel the trick of warmth, of texture beneath her fingers. But when her gloves were cast aside? Jane became clarity itself: Heat, skin, hair, and sweat.</p>
+        <p>Something like her… something alive.</p>
+        <p>The last few steps toward the bridge were almost difficult. Breath forced itself from her lips in sharp pants. Pupils filled her silvery-white irises, taking in Jane’s presence beside Joker’s chair. She announced herself, slipping into the comfort of professionalism. The name “Shepard” now felt strange to say. Jane and Joker both smiled, it put her at ease like it always did. She gave a technical rundown, listing the necessary repairs. Jane’s brightness dimmed, hearing about the extra work she’d had. Joker indulged in some flight-ops talk, feeding her information for likely hull stresses. While she enjoyed the routine of it, something else was going on. And it wasn’t long before a gap in the conversation revealed it.</p>
+        <p>“Don’t suppose you’d be up for a little EVA?” Jane asked, fingers tapping on Joker’s headrest. “Need to inspect the GARDIAN turrets.”</p>
+        <p>“Good idea.” She turned on her toes. “I’ll radio Donnelly up here and we’ll get to it.”</p>
+        <p>“Actually…” Jane stepped toward her. “I was thinking we could do it.”</p>
+        <p>“…Oh.” She blinked in surprise.</p>
+        <p>“She figured you could use the expertise.” Joker gave her a wink. “Y’know, being the technical genius she is.”</p>
+        <p>“You’re hilarious, you know that?” Jane shot back before looking to her. “Saves you having to write up a report, having me there to tick the boxes.” Tali could see there was more to it. But it didn’t matter.</p>
+        <p>“Of course, Shepard. Ready when you are.”</p>
+        <p>Her response had Jane off Joker’s chair, and marching for the airlock. Following behind her into the clean, featureless room, Tali could feel the tension in the air. The interior door closed, sealing the two of them away from their little metal world. She hesitated to break the silence, knowing that there were sensors everywhere inside. While she could speak into Jane’s ear through their private channel, anything Jane would say would be audible. When those blue eyes glanced her way, she could see her thinking the same. Jane turned to the nearby cabinet, reaching in for the EVA suit. It was thicker than an under-suit, but without any armour. Naturally, it sported Cerberus colours.</p>
+        <p>“Uh, Shepard?” She sidled up beside her. “I should warn you. That is Ken’s suit.”</p>
+        <p>“Good to know.” Shepard chuckled. “I’ll take an extra shower afterward, just to be safe.”</p>
+        <p>She giggled at the barb, taking Jane’s jacket, pants and shirt. It was nice, hearing some of her snark. Something she’d been missing. Packing the clothes into a safe compartment, she stole a look back at her girlfriend. Small canyons formed between the flexing muscles of Jane’s back, shifting across her pale skin like sand dunes, a breast’s curve just visible as she turned. Tali indulged in the warmth and flutter of her stomach, the tightness of her chest. The woman she’d desired for so long, whose flesh she’d touched, with her bare hands. Pride and greed and sheer joy rose up inside her. Only for her new revelation to come screaming to the forefront. With a final click the helmet was on, and a suited-up Jane turned to find her, face visible through a large visor.</p>
+        <p>“Mind if we talk a minute, before we head out?” Jane’s voice was in her helmet, silent to the world. It told her everything she needed to know.</p>
+        <p>“Sure.” Tali gave a smile, padding over to her. “I… thought this might be what you wanted.” She took a breath, focused and calm. “I shouldn’t have yelled like that. Not in front of a child.” There was a moment of silence. “But, I still feel that it is a bad idea bringing the geth on missions. We’re working with limited data, and taking any chances is still too big of a…”</p>
+        <p>She trailed off watching those human features closely. Jane stared at the outer door, eyes completely fixed on it. Dread began to crawl up Tali’s spine.</p>
+        <p>“Jane?” She extended a careful hand. Jane flinched, but only just, stopping herself. “Jane, what’s wrong?”</p>
+        <p>“I can’t do it.” She said, voice far away. It sunk into Tali’s guts. “Go out there, I mean… outside.” Sweat streaked down her brow. “Samara’s been helping me… doing sessions, y’know?” She let out a shaky breath. “But it’s not enough. I need to be able to go out there.” Dilated eyes found Tali’s. “Just… can’t do it on my own.”</p>
+        <p>Tali didn’t need to hear another word. Her gloved hand slipped down Jane’s arm, entwining their fingers and locking tight. The shaking remained, lessened by the squeeze Jane was returning to her. A dozen little moments surfaced in her memory. Wearing Jane’s breather helmet in the shuttle, covering the window in Jane’s cabin, a dozen times Jane had stood by her side, eyes closed while she enjoyed the stars. Only now did she realise the terror Jane had been braving: Death, clawing the air from her lungs. She knew the fear all too well.</p>
+        <p>“Are you sure?” She asked, pressing her shoulder against Jane’s. “We don’t have to, not today.”</p>
+        <p>“I am.” Jane’s face tightened, resolute.</p>
+        <p>“Okay…” She readied her Omni-tool, giving Jane a final look. “…Here we go.”</p>
+        <p>With a wireless command, the air began to hiss as it was pumped out of the room. It was loud at first, almost a roar. But soon the air levels dropped, and the din began to muffle, until at last its final vestiges disappeared into utter silence. Artificial gravity was next, disabled with another command. A familiar moment of vertigo passed through her, as organs, muscles and blood were released from the constant pull. An unconscious flex of her toes, and she felt the floor begin to slip. With a thought, her toe-boots magnetised. Anchored, her keen eyes caught Jane rising. All it took was a nudge, and Jane clicked her heels and was beside Tali again. It was admittedly a strange feeling, dangling from one’s feet.</p>
+        <p>In the silent, weightless room, there was just one final task. She said the words aloud, “Opening exterior door”. First came the clunk, as the Normandy’s blast shield opened and slid aside. Then a nearby light turned green, and the doors finally parted, revealing the endless black. Tali felt Jane’s hand grip hers. She heard Jane’s quiet panting. Terror gripped the woman. It was almost unreal, that Commander Jane Shepard was standing beside her, scared out of her mind at the prospect of a routine EVA mission. But that thought was quickly smothered by her concern for Jane.</p>
+        <p>“Hey…” She squeezed Jane’s hand, using the other to stroke Jane’s arm until those blue eyes finally tore away from the door. They were wide, like a child’s. “It’s okay, I’m right here.”</p>
+        <p>She saw the shame in those eyes. Reddening cheeks, a grimace of pain. Like the night after Horizon, Jane didn’t want to be seen like this. But being less than legends, being flesh and blood and fears. That was something they could be for each other. Something they could be together.</p>
+        <p>She took the first step, like wading through a swamp and climbing a rock face all at once. With the gentlest of tugs, Jane followed suit, taking an exaggerated step to join her. She heard Jane counting, practising her breathing. Tali stepped forward. Jane stepped forward. Slowly and carefully they closed on the opening. Finally, at the precipice, Tali gave her one final look. Hand-in-hand, they stepped out over the metal cliff, and onto the hull.</p>
+        <p>“Are you okay?” She asked, the both of them settled together.</p>
+        <p>“Yeah… I’m okay.” More slow breaths, and a nod. “Let’s get to work.”</p>
+        <p>Tali gave the order. Tiny tremors passed through her boots as eight armoured panels opened across the Normandy’s shining hull. From their burrows emerged eight laser turrets, three along the frigate’s back, three more on her belly, with the last two on her wing roots. The design had been similar to the old SR-1, and with all her time spent outside for regular maintenance, Tali already had the new layout memorised.</p>
+        <p>Taking it slow, she led her captain from one turret to the next. They were large, almost as big as she was. A spherical redirecting mirror nestled inside a gimbal. To the eye, it looked like an oversized security camera. With control through her Omni-tool, she took the laser through some tracking tests, feeling Jane’s unease as Jane stood a few feet away.</p>
+        <p>“Do you know how these work?” She asked, looking over her shoulder. Better to have Jane focused on something.</p>
+        <p>“Uh…” Jane stumbled at first. “Just what I remember from command training. It’s a mirror, right? Laser’s actually generated in the ship, then mirrors carry the beam up to the turret, where it’s directed at the target.”</p>
+        <p>“That’s right!” Tali couldn’t help but grin. “We’ll make a junior engineer out of you, yet.” Something in Jane’s nervous little chuckle stoked the fires in her belly. She loved that sliver of vulnerability.</p>
+        <p>Strolling down the Normandy’s length, the quarian’s mind was mostly on autopilot. Glancing around at the other PDLs, examining the armour plating or the bay doors on the missile launchers: Just a regular starship check-up for her. The conscious part of her brain was focused on Jane. Her hand clung to Tali’s, though as the time went by outside, her grip had slowly begun to slacken. She was looking at her feet, and the hull in front of them. Tali took her mind off things as best she could, pointing out some little details as they walked. Like how the “windows” that ran across the Normandy’s flanks weren’t windows at all. Just panelling, paint scheme, and some clever on board lighting. Enough to fool any ship that spotted them through a telescope, or an inattentive passer by at a spaceport. To the entire galaxy, their frigate could’ve been a playboy’s tacky yacht.</p>
+        <p>Soon the inspection was over, with less than an hour left before the Cerberus ship would arrive. With grunts of effort, Tali and her captain hiked their way up to the top of the Normandy, a rise in the frigate’s sleek, sloping back. She reached into a utility pouch and produced a pair of belt harnesses. Looping the first around her waist, she attached the magnetic anchor pad to the hull. Her butt hovered just off the surface, before the harness adjusted and planted her down. She beckoned the woman to join her. Jane got the idea, and soon, if a bit slower, she was beside Tali. With their mag-boots off, and bottoms tied to the hull, it was like sitting on a hillside together. Tali wanted to stretch out, and let the zero-g help her lounge, but Jane sat rigid. She needed something else… then it came to her.</p>
+        <p>Switching solely to Joker’s radio, she requested a position change of the ship: A precise angle, for… calibration purposes.</p>
+        <p>“Hold on.” She said, back in Jane’s earpiece. Leaning into the woman, she wrapped an arm around her shoulder.</p>
+        <p>“Hold on for what?” Jane’s question was squeezed out by a gasp as the ship began to spin. Tali clung to her tight, taking her through the manoeuvre with a light-hearted, lilting laugh. Finally the roll came to a gentle end; the heroic Commander Shepard glaring at her.</p>
+        <p>“Jesus…” She finally breathed out. “Nearly gave me a heart attack.”</p>
+        <p>“Jane…” She silenced her grumble, rocking her helmet to the side. “…Look.”</p>
+        <p>Unable to refuse her, Shepard braved a glance. Far from the endless black maw that had haunted every window, stars trapped within its ravenous jaws, something incredible greeted her. The air caught in her lungs, eyes wide at the sheer majesty before them. Stretching off into infinity was a ring of pale dust and rocks. Sunlight glimmered across its gently flowing surface, each moonlet of the planet’s ring glinting and shining like a diamond. It carried her gaze through the darkness beyond, gently curving around the world’s horizon like a river of light. Up close, the rocks drifting nearby spun and danced, a procession of craters and canyons appearing and disappearing in ever-changing shadows. Each one of them could crush the Normandy, yet out there they looked perfectly serene.</p>
+        <p>But beyond them, beyond the incandescent ring was the full spectacle of the planet itself. Dominating the entire scene, it held her wrapt attention, regal and powerful. The gas giant was a spectacular cobalt blue. She watched in awe as thick bands of cloud flowed back and forth across its surface, each one a differing shade of azure beauty. Just off the centre, was a great swirling storm: A hurricane so vast that all of Mindoir could’ve rested comfortably inside it. The sight was… indescribable: Such powerful forces at work, and yet from here, it was as if some cosmic painter had brushed every shade of cerulean imagining across a vast, living canvas. Locked in endless silent dance.</p>
+        <p>“It’s beautiful, isn’t it?”</p>
+        <p>If anything could have drawn her away from all that fear… all that beauty, it was Tali’s voice. Even now as she turned from the grand visage, the dark beyond did not come for her. It did not come for Tali. The woman she loved sat there, her eyes twinkling behind her mask. They carried her smile, not the biggest or brightest: A little smile, a cautious smile. Throwing the last embers of dread to the void, Shepard returned it, confident and warm.</p>
+        <p>“Yeah… it is.”</p>
+        <p>There were no words in return, just the snaking of Tali’s arms around Shepard’s waist, pulling them together. She nuzzled close, and there in the endless silence Shepard let everything fade. For a few blissful moments, it was just the two of them together.</p>
+        <p>“Been missing you…” She rubbed Tali’s arm. “…Missing this.”</p>
+        <p>“Me too.” Tali tensed a little. “I’m sorry, for being… distant, these past few days.”</p>
+        <p>“It’s okay.” Shepard brushed it off, but Tali pulled back to look at her.</p>
+        <p>“No.” She said firmly. “It’s not.” Shepard heard her take a bracing breath. “I wanted to, it’s just that… seeing that thing walk around, all I can see is Zara, Myrr… Riah. I don’t know if it’s fear, or anger, but… Keelah, I can’t even be in the same room with it.” She was quiet for a moment, eyes downcast. “I stayed away because… I felt it, when I saw you too. And I never want to feel like that, not about you.”</p>
+        <p>She felt Tali’s hands clasp her helmet, pulling her to Tali’s.</p>
+        <p>“I can’t bear to see you that way.”</p>
+        <p>She could see it, in those shining eyes: The guilt, the shame. Tali had meant every word of it. Some part of her bristled at the realisation. How could a woman who was so caring, who had always been a voice of empathy, let hatred run this deep. But she quenched the spark, drowning it long before it found tinder. She knew what it was like, to see other people as the enemy, simply from standing too close. She could never forgive the batarians for Mindoir, it wasn’t right of her to demand that from Tali. Not for the geth. Leaning forward, she put her arms around Tali, bringing the woman into her shoulder. She felt Tali’s weightless form slacken, her breathing steady.</p>
+        <p>“Y’know. I wouldn’t be out here, if not for you.” She said gently. “Wouldn’t have recovered from Horizon, or felt comfortable again. I’d… I’d still be staring at the blood on my wall, still trapped.” She gave her a squeeze. “You’ve helped me overcome so much. All I want… is to help you overcome this.”</p>
+        <p>“I know…” She whispered. “…Thank you.”</p>
+        <p>With a gentle flick, Tali’s magnetic anchor came free, and Shepard guided the quarian into her lap. She let the minutes go by, watching the brilliant blue world beyond the silver ring. Slowly Tali began to relax, and soon she joined Shepard in the view. Floating, she took full advantage, clinging close.</p>
+        <p>“So…” A little smirk scrawled on Shepard’s lips. “How do you wanna see me?” Those twin stars flashed back at her, knowingly.</p>
+        <p>“As the woman who put me in hospital for a week, from a back rub.” She jabbed.</p>
+        <p>“Ouch.” Shepard feigned hurt, but a hand shot up to hold her gaze on Tali’s.</p>
+        <p>“That night was… I will never forget it.”</p>
+        <p>“In a good way, right?” She winced, getting a snort out of Tali.</p>
+        <p>“Yes, in a good way.” She shook her helmet. “Don’t get me wrong, throwing up is fun. But I do that all the time. How often do I get to rub my girlfriend’s back bare-handed?”</p>
+        <p>“We’ll have to give that night some competition.” Shepard winked, seeing those glinting eyes squish to crescents. “You uh… ready to come back up?” Tali’s answer was clear enough, from the hand ghosting down Shepard’s chest, over the curve of a breast beneath her suit.</p>
+        <p>“I shouldn’t have left.” She sighed, before giving Shepard a playful poke. “Don’t worry, perfect memory. I never make the same mistake twice.”</p>
+        <p>The trip back to the airlock was the calmest Shepard had felt in a long time: The tug of mag-boots, the sound of breathing, familiar things that no longer hid shadows. Out there, for the first time since she’d woken up, the stars shone comfortably in the endless night: Something that called to her, rather than haunting her. She wanted that for Tali, to pull away the fear and let the woman breathe freely. She would, in time. If there were even the slimmest possibility, Tali would be free.</p>
+        <p>Strutting their way together through the CIC, a part of that weightlessness still carried Shepard. When she and Tali were in the elevator, she couldn’t resist scooping Tali up in her arms. Her yelp, her giggle, all of it sounded so much better now. Letting them both enjoy a squeeze of naked fingers against Tali’s soft suit, she gave her a grin. The doors opened, and the woman took a few long strides out, her chief engineer in draped over her arms like a princess.</p>
+        <p>The realisation hit them almost before hitting them: Surprise, shock, and ignorance slamming headlong into complete, chilling awareness. Wordless, she let Tali down onto her feet, the quarian straightening up beside her. Standing near Shepard’s door, blue reptilian eyes fixed on them, was Garrus. The woman felt her friend’s gaze pass right through her, and she could barely think of what to say. Not that either of them got the chance, when the turian spoke first.</p>
+        <p>“We need everyone in the briefing room, Shepard.” He said heavily. “There’s something you need to see.”</p>
+    </div>
+</body>
+</html>

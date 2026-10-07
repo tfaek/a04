@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 49: Entanglement</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch48.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html" selected>Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch50.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 49: Entanglement</h1>
+    <div class="chapter-content">
+        <p>The sky-car was surprisingly lavish. Clad in bloody, ill-fitting armour, Garrus could barely appreciate the comfort of leather seats. It accompanied the smooth flight, as they left Zakera Ward behind. All around them the forest of gleaming towers took their place in the grand spectacle of the Citadel’s ward arm. Without the subtle buffeting of station air, their trip became completely silent. In that absence the turian’s mind wandered. He took in the colossal structure with weary eyes. In all his old transit flights from one C-Sec precinct to another, the Citadel’s ageless might was ever-present: A bastion of certainty and civilisation. It was something untouchable, immortal.</p>
+        <p>Sovereign’s attack shattered that illusion. Those next few months afterward, the sheer mortality struck him. Not just of the people who lived on the Citadel, but the station itself. It had left a splinter inside, one that grew as time passed. One that raked his psyche like talons the day Shepard died: The untouchable, the immortal… dead. Garrus sighed, fixing his eyes on the long dark finger of metal ahead of them. Morinth kept quiet, seemingly absorbed in her piloting.</p>
+        <p>The absence began to eat at him. He was used to Tali’s fidgeting, her chirps of observation or query. He was used to Shepard’s warm conversation, the kind that never intruded, but was always welcomed. Without them, he couldn’t ignore the lingering tenderness in his scars. He had to break the silence; before all of this became the mistake he feared it was.</p>
+        <p>“You’re not from Omega, are you?” He asked, with a certainty that got a sideways look from the asari.</p>
+        <p>“What makes you say that?” Morinth’s question came with a smirk that all but confirmed his suspicions.</p>
+        <p>“Your accent.” Garrus pointed out. “It’s Armali. Equinox District if I had to guess.” Something flashed behind her bone white eyes. “Sure you put some grit in it, but inflections like those don’t come from the streets. You’re educated.”</p>
+        <p>“Good guess.” She chuckled. “Remind you of an old fling?”</p>
+        <p>“No, an old friend.” He answered. Morinth shrugged.</p>
+        <p>“Yeah, I grew up in Armali. Jewel of Thessia.” She scoffed. “Mansion, fancy schools, money, had it all for a while. Well, my sisters and me.” She cocked her head. “They were always, y’know… momma’s girls.”</p>
+        <p>“Not you?” He saw the smirk drop from her face. She stared out into the distance.</p>
+        <p>“Nope, not me.” Morinth shook her head. “Funny how quick all that luxury turns into a cage, when you don’t turn out the way mommy wanted.” Her lip curled. “It’s no way to live.”</p>
+        <p>“No.” Garrus agreed, looking down into his lap. “It’s not.”</p>
+        <p>“That why you left Palaven? To get away?” She asked, drawing his eyes to hers. A tremor went through him. He let his question slip through his face, and she caught it. “You’re not the only one who notices things.” A coughing chuckle escaped him.</p>
+        <p>“You could say that. Not at first though. I always wanted to follow that path. It’s only when I tried to, that…”</p>
+        <p>“…You realised it wasn’t yours.” She nodded. “I get it.” Morinth sighed, and tapped her fingers on the sky-car’s throttle. “People only see the bad in places like Omega. Spend all your life being safe and certain, you can hardly imagine anything else.” She hummed. “A shithole like that was the first place I was finally free.”</p>
+        <p>He saw that glimmer in her eyes, the kind that came with memories. It was a familiar feeling, all too familiar.</p>
+        <p>“Comes at a cost though, doesn’t it?” His question sunk her expression. “You lost someone.” Morinth’s fingers tightened around the controls. Her face became a blank mask.</p>
+        <p>“Nef.” She said quickly, the name coming up like a held breath. “She was an artist, sculptor. Did it out of her bedroom in this little apartment. Could walk by her every day and never see her. But I did.” She chuckled, mirthlessly. “We used to talk about getting away, selling her sculptures, living somewhere with real sunlight. Being around her was like… I felt… warm.”</p>
+        <p>Her lips thinned, strained by grief. “Found her dead in an alley, near the club where we first met. They just left her to rot there. Nobody cared.” He watched the lines on her face deepen, as her composure shuddered. “The piece of shit who did it came here, thought he’d be safe.” A sneer parted her lips, and she fell silent.</p>
+        <p>Garrus nodded darkly, clenching his fists. “Harkin’ll talk, even if I’ve gotta beat him within an inch of his life.”</p>
+        <p>The volus had told the truth. Ahead of them, dominating the industrial district was the Hahne-Kedar foundry. To the outside world it still appeared abandoned. But Garrus saw movement through his visor’s night vision mode. Blue Suns were crawling all over the place. He guessed maybe a company of them. Fighting in close quarters could get ugly. Better to keep things quiet. Garrus spotted an entrance at the top of a fire escape, a couple floors above street level. Slowly and silently they ascended the stairs, that sense of exposure digging in through his plates. Without suppressors, all he had for stealth was a scavenged combat knife.</p>
+        <p>Morinth kept close, her head on a swivel. She was experienced, that much was clear. Upon reaching the entrance he froze, seeing a pair of glowing optics turn to spot him from across the balcony. Adrenaline surged, but before he could level his rifle Morinth acted. She flashed blue, clasping her hands together. The merc’s helmet shrank in on itself with a crunch, hands clawing at the mangled armour for only a second before going limp. No time to hide the body. They had to move.</p>
+        <p>Inside was a tangle of hallways and offices, leading to the larger foundry warehouses. They kept low, watching corners and dark spots for enemies. Garrus hacked his way into the Blue Suns’ systems. Not full access, but enough to plot the route to their operations room. They could find Harkin from there. Following the crude map on his Omni-tool, he led Morinth through the complex. Blinding cameras and taking down guards where they had to, his knife soon dripped with blue and red blood. The more bodies left behind, the tenser he got. Any minute now, the base would be on full alert. Finally they spotted the ops room. Wires had been laid everywhere, and a couple guards stood watch over a techie sat at a terminal. He gave Morinth a look. Without warning they burst in.</p>
+        <p>Garrus’ knife buried itself between four batarian eyes. The alien fell over dead, blood pouring form his face. The human to his right barely had the chance to react before an invisible weight crushed him against the wall. His head and chest deformed and splattered, an unrecognisable mess. The fight was over in seconds. Garrus approached the desk, gun drawn on its occupant. A quarian sat there, shaking with her hands up. Tears reflected in her shining eyes.</p>
+        <p>“Don’t move!” He growled, looking her over for weapons. She didn’t speak, but nodded quickly. Her chin light flickered with shaky breaths. She wore a simple brown realk over her suit: A pilgrim. She was unarmed, and tubes ran to her wrist from a nearby machine. Garrus’ mandibles clenched. They had her strapped up to a stimulant pack.</p>
+        <p>“I-I didn’t want to.” She mumbled, between sobs. “I didn’t, I didn’t.” Her eyes shut tight. “I’m s-sorry.” It was plain as day she wasn’t a merc. Even the small skirmish around her had shaken the girl. He lowered his pistol.</p>
+        <p>“What’s your name?” Garrus asked, placing a hand on her shoulder. The quarian flinched, but the shivering lessened. Her eyes opened again.</p>
+        <p>“L-Lia.” She sputtered, as if trying to recall a test answer. “Lia’Vael nar U-Ulnay.”</p>
+        <p>“Lia, it’s okay.” He said, bringing his voice down. “We’re not going to hurt you. We’re here to stop this.” Glancing from the screen to her visor, Garrus knelt to her eye level. “I’m looking for Harkin. Fade? Can you help us?”</p>
+        <p>“I can’t.” Lia shook her head. She lifted her hood, showing something on her visor. “They p-put a cap on my mask. I-if I do anything wrong, they’ll v-vent air into it.”</p>
+        <p>“Is it wireless access?” He asked. She nodded. Using a hack Tali gave him; Garrus overrode access to the nasty little trap. “There, you’re safe now.” The jittery girl hugged him.</p>
+        <p>“Thank you.” She choked out. The quarian sat up, trying to suppress the drugs and adrenaline. “Okay, how can I help?”</p>
+        <p>With some reassurance and direction, Lia whizzed through a collection of grainy feeds, searching for the target. Garrus glanced at the stimulant pack, it made her pant she was so tweaked out. Morinth lingered behind them. She was getting antsy, having her goal so close. He knew the feeling well, trying to suppress the hunger he felt. Soon he would have the bastard in his grasp, and then the wrath of ten good men would be brought down on him.</p>
+        <p>“Here!” Lia pointed to the holo-screen. “Sub-level 3. H-he has an office in the storage section, with a big door.”</p>
+        <p>“Good work.” Garrus said warmly. “What’s the quickest way there?” The hiss of a sliding panel nearby was his answer.</p>
+        <p>“Air ducts.” The quarian brought up a layout map. “They run all through the complex. I can guide you there.”</p>
+        <p>“Alright. Lock this place down when we go. Don’t let anyone in.” He put one of the guard’s pistols on the desk by her hand. She looked up, frightened. “If anything happens, you call C-Sec. Use this frequency for Special Response. Tell them there’s a code-eleven at your location. Then you make yourself scarce, okay?”</p>
+        <p>“O-Okay.” She nodded, and he sliced the tubing from her wrist.</p>
+        <p>“When you get out of here, go to this clinic.” He sent the address to her Omni-tool. “I’ve got a friend there, she’ll help you through the withdrawal.” Garrus gave her a brave flare of his mandibles, before he and Morinth entered the cramped tunnels.</p>
+        <p>There was an ever-present pinch all around him. Total darkness reigned, broken up only by maintenance lights and the occasional grate to the outside. He felt completely entombed, as if every scrape of his armour against the tight walls would invite a hail of gunfire. Inversely, Morinth flowed like water through a pipe. Her form-fitting commando leathers silhouetted a creature of grace and poise. When the thumping of boots sounded, she would freeze instantly, where he would come to an unsteady stop. As they passed her gaze followed them, sharp and predatory. It caught his own. She gave him a smile, one no less hungry.</p>
+        <p>“Enjoying yourself?” Garrus asked as they kept moving.</p>
+        <p>“We’re getting close, I can feel it.” Morinth answered from in front. “Is your heart pounding?” Her question gave him pause, enough to notice that he could hear it. “Mine is too.” She concurred, as if she could read his thoughts.</p>
+        <p>“You really wanna get this bastard, don’t you?” His question only seemed to brighten those eyes that glanced back.</p>
+        <p>“I hear it, beating in my ears…” Her voice was dreamy. “…Like the drums of a great hunt.”</p>
+        <p>Something about her words lingered in his mind, settling in the shadowy crevices. He heard them too, beating inside. Longing for the traitor to fill his scope. Longing for the hunt.</p>
+        <p>Deep in the twisting bowels of the foundry, the two partners came to a stop. Lia’s instructions had led them to their target. The quarian unlocked the air vent, and Morinth was out first. Garrus watched her closely as he emerged. In the midst of counting their numbers she shot down, flattening herself against the crate. Sliding into cover beside her, he took the opportunity to glance over at the room. His visor took an image before he ducked back down: There Harkin was, at the far side of the room. But he wasn’t alone. An entire platoon of Blue Suns elites was with him, plus a hulking YMIR robot. For a moment the two hunters sat there wordlessly, trying to formulate a plan. The enemy had superior numbers, sightlines and firepower. There wasn’t sufficient room to move, and even if Morinth kept them off balance…</p>
+        <p>Suddenly the foundry shook. Explosions echoed down from the upper levels, and gunfire followed.</p>
+        <p>“Lia?” Garrus whispered over the comm, only to be hit with a screech. They were being jammed. He wasn’t the only one, the mercs all reacted at once, switching over to external speakers and talking hurriedly amongst themselves. Harkin’s pitched voice carried over the rest, barking orders. He wanted them out of there, putting a stop to whatever was going on. Heavy boots thundered toward them, and the pair kept as low as possible. There was just enough cover to see them pass by, the ground-shaking stomps of the YMIR following them. Harkin fled to his small office behind a vault door. It was more of a panic room. The pair followed him in, slipping through as the door closed. In the midst of flustered searching, Harkin spotted them. The shock Garrus saw in those beady eyes was matched only by the horror that followed it.</p>
+        <p>“Garrus?” Harkin exclaimed. “Where… how did you…?” He tripped over his words, drawing a pistol. Then he froze in place, trapped in a stasis field. The gun clattered to the ground.</p>
+        <p>“Nice little operation you’ve got, Fade.” Garrus stalked toward him, Morinth by his side. He grabbed the man by the throat, pulling him close. “Just wasn’t enough, was it? Ruining people’s lives with a badge. Now you’re a proper criminal. Nice and official.”</p>
+        <p>“Come on Garrus, we can work this out, right?” That disgusting little smile crawled onto Harkin’s face. “What do you-?” The turian slammed his head against the wall. He gasped, shaken and bloodied.</p>
+        <p>“I didn’t come here to bargain with you.” Garrus snarled. “You’ve got something I want…” He fixed the man with his cobalt eyes. “…And you will give it to me.”</p>
+        <p>“And what,” Harkin groaned, “Might that be?” Garrus loosened his grip, keeping the man pinned against the wall.</p>
+        <p>“Lantar Sidonis. Where is he?” Despite the situation, Harkin coughed up a laugh.</p>
+        <p>“I knew it.” He slurred through a smirk. “Turian never gave specifics, but he told me about that bunch’a delusional misfits-” An armoured kneecap struck his groin hard, and the man collapsed to the floor.</p>
+        <p>“You say one more word about them, and I’ll open up your skull and take a look myself.” Garrus dug his pistol into the man’s head. “Now answer the question!”</p>
+        <p>“You really gonna kill me?” Harkin sneered. “No. It’s not your style. But the people I work for now, this is their style. And they got friends bigger than C-Sec. Giving out client information’s bad for business, and whatever you got in that gun ain’t nothing compared to what’ll happen if I talk.”</p>
+        <p>“I’m willing to play those odds.” He pressed the pistol harder against the human’s forehead. “Are you?”</p>
+        <p>Sweat rolled down the balding human’s forehead, meeting the barrel of the weapon. Garrus adjusted the core setting of the pistol, letting its climbing whine fill the man’s ears. This piece of shit: scum who had never done a decent thing his whole life. Memories crawled back like little insects, digging into the turian’s mind: Every failed bust, every public scandal, metastasising, cancerous failure. How much could’ve been different, could’ve been better if he’d just given an ounce of a fuck about the job he did? And even now, stripped of every unearned privilege and sitting in a filthy foundry, he was still hurting people. Self-control began to burn under the intense heat, and what was once a scare tactic began to shift. The turian let a finger trail over the trigger, feeling the tension. He knew exactly when the mechanism would give, and that defiant pair of eyes would glaze over. The gunfire outside grew louder; soon Special Response squads would be here. Blood flushed in his throat, and his mandibles twitched.</p>
+        <p>“Tell me!” Garrus yelled. Still the bastard held firm. The rage boiled over and he pulled the trigger. A loud bang filled the tiny office, and a bullet hole smoked right beside the man’s head. Silence reigned.</p>
+        <p>“I’ll get it out of him.” Morinth said calmly, brushing aside the gun. Stepping away, Garrus let out a snort of fury and self-contempt. Even a coward like Harkin was willing to wait him out. He looked back at the asari, hoisting the human to his feet. She leaned in close, holding him in her gaze. “Look into my eyes.”</p>
+        <p>Suddenly that feminine gaze shifted into pools of ink. Harkin went rigid, unable to move. Even a few feet away, Garrus felt a chill run up his spine. Morinth spoke in whispers, so low he couldn’t hear. They were drowned out by Harkin’s whimpers. An image flashed before the turian. Back in the Dantius Towers, watching as Samara dragged the information out of Nassana as if with a rusty meat hook: One mind forcefully invading another. What little familiarity connected him to this strange asari, it was absent now. She’d become something else. A creature that only saw prey in its clutches. In a trance, Harkin fumbled with his Omni-tool, sending something to hers. She leaned in to his ear, breathed something, and he slumped back to the floor. When she turned to face the turian, those empty voids were gone.</p>
+        <p>“He’s on the Presidium.” Morinth sent his Omni-tool the coordinates. “We should get out of here before-” Shooting erupted just outside the door. The two of them pressed back against the far wall. More and more footsteps approached, the entire SR platoon must have been outside. “Fuck!” She hissed. “Ideas?”</p>
+        <p>Garrus scanned the room, trying to ignore the sparks from a cutting laser slicing through the door. It was a cramped broom closet of a place, barely enough for just Harkin. The door provided a good chokepoint, but it wasn’t enough. His pistol was still in hand, for a moment he thought of them fighting their way out. It made him sick to his stomach. He wouldn’t kill C-Sec officers, not even for Sidonis. Breathing became panting as the laser cut further down. He knew they’d have to surrender. He looked to Morinth, but her eyes were on the door. Her whole body crackled and sparked. She was going to kill them. His heart was pounding. A dozen factors all screamed at once. He squeezed his pistol tighter and tighter.</p>
+        <p>There was an explosion as the door was breached. Blind and disoriented, Garrus dropped his gun to the floor. Relief came when a second clatter joined the first. Morinth had followed suit. As his senses returned to him the turian saw an entire squad of soldiers. They were definitely Special Response troops. Their leader, a salarian, had him right in his sights. “On your knees, hands behind your head!”</p>
+        <p>“It’s alright.” Garrus assured the officer as he complied. “I’m former C-Sec. Agent Vakarian with Investigation.” The attempt seemed to spark something behind those large eyes. The salarian left the room while the other officers got closer, cuffing the both of them. Morinth kept dead silent, watching the exit. Something about it unnerved him.</p>
+        <p>“You were right ma’am, suspect identity confirmed. It’s him.” The salarian returned, talking with someone. As they stepped in through the haze of flashlights, his stomach dropped.</p>
+        <p>“Thank you officer, your men are relieved.” That awful, familiar voice sliced into him. This couldn’t be happening.</p>
+        <p>“With respect ma’am, this is an active crime scene. Special Response has-”</p>
+        <p>“Leave it alone Kello.” Another voice interjected. “We’ll take it from here, Spectre authority.”</p>
+        <p>Fury and panic writhed inside Garrus like twin serpents, coiling around his gut. Bringing himself to face his captors, his worst fears were realised. Standing amongst a retinue of black-clad asari commandoes, was the matriarch herself. Melassania regarded him with a cold, silent glare. She was flanked by her Spectre, another asari with red markings. She seemed disinterested with the whole thing, looking over the ruined human behind them.</p>
+        <p>“I want him prepped for transport immediately.” Melassania gave the order.</p>
+        <p>A slender hand gripped the cowl of his armour, pulling Garrus back before a needle bit his neck. Everything began to mix together. He heard drums beating in his chest. The hand released him and he crashed to the floor. “There was a quarian too. Up in the operations room.” Morinth’s voice was all around him, vague like mist.</p>
+        <p>“Find it and deal with it!” Sharpness in his ears again.</p>
+        <p>Everything inside Garrus commanded him to move, to break his restraints and fight free. Everything he’d sacrificed for, the life he’d thrown away to get to Sidonis, all of it was falling apart. The window was closing, already gone. But something louder screamed inside. He couldn’t let them kill Lia. Not another innocent. The only thing worse than leaving his brothers unavenged, was seeing that which they fought for trampled in front of him. But muscles wouldn’t move, and he lay there as things dimmed. In the last moments of fleeting consciousness, he saw something: A pair of bright eyes in the grate of an air vent. Silently he begged them to run. They disappeared, and darkness took him.</p>
+    </div>
+</body>
+</html>

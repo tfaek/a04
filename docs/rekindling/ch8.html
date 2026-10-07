@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Buried Truths</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch7.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html" selected>Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch9.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 8: Buried Truths</h1>
+    <div class="chapter-content">
+        <p>Tali’Zorah vas Neema held her breath as the Nualli was propelled to unimaginable speed through the Mass Relay. Coming back to the Tassrah system had been strange enough. The Migrant Fleet hadn’t assigned her ship anywhere near there since the raid on the batarian frigate. Thanks to near perfect memory, being in the system again had brought back the horrific image of Daniel’s death. More often then not, the environment suit she was forced to wear frustrated her. But seeing that poor human look back at her in terror while the air was torn from his lungs, it made her wish all species were so lucky.</p>
+        <p>The Nualli had loitered for a few hours in-system, bleeding off static charge at a local gas giant before heading back to the Relay. Everyone had been tense, but there was still some small talk. She’d been chatting with Meeko’Rala and Kal’Reegar about the mission; what they might find on Haestrom, if they’d be adding more geth to their kill counts. But hearing her pilot call out the approach, then the swoop of her stomach as the ship was shot through the hyper-effected lane of space, she and everyone else were dead silent.</p>
+        <p>“Arrival in five seconds.” Meeko announced over the PA system. Tali and Kal were behind her. They could only see her back, but it was clear she was uncomfortable.</p>
+        <p>Tali gripped the armrests of her seat, while Kal braced himself against the corner of the small room. In a flash, the swirling colours of the physics bending jump dissipated. The deceleration was over in a few seconds, with the Nualli coasting nearly a thousand kilometres before returning to normal velocity. With no immediate threat, the young engineer emptied her lungs. Her mask quickly dissipated the warm air, keeping her view clear. Both she and Kal emerged from their brace positions, looking out the scout ship’s windows. As they’d expected, the local star Dholen dominated the scenery. They’d all seen red giants before, but the sight of this particular one put a pit in their stomachs.</p>
+        <p>“Any sign we were spotted?” Kal asked, putting a hand on the pilot’s shoulder.</p>
+        <p>“Not that I can see. Stealth systems are engaged and I’m not picking up any incoming contacts.” The mature woman gave the report with an uncharacteristic fidgeting. “That being said, without proper scans there’s no way to really tell.”</p>
+        <p>“We’ll have to make do.” Tali spoke up, checking over her terminal. “We can’t afford to give ourselves away, not here.” She looked over the core and IES readouts. Everything was nominal… for now.</p>
+        <p>“Alright, according to the comm-buoy intercept, Haestrom is currently… here.” Meeko tapped a finger at the map. “Travel by Tantalus should take a couple hours, we’ll be cutting it close.”</p>
+        <p>“No choice.” Kal noted, tension creeping into his voice as well. “Let’s get to it.”</p>
+        <p>Meeko nodded, setting a high-efficiency course for the planet. Instead of the slight push of engines, they felt the tug of a singularity from the bow. The effect wasn’t pleasant, but the crew was used to it by now. Keeping just as cold as the outside space, the Nualli began to fall through the void. Unlike the typical manoeuvring required with thrust, the small ship just chased the invisibly small black hole all the way to its destination. The effect was still cumulative, the longer they “fell” like this, the faster the fall became.</p>
+        <p>Soon the trajectory and speed were optimal and the singularity was collapsed. All that was left was to drift toward the target. The three quarians on the bridge had travelled in stealth many times, but this flight felt especially eerie. There was a building sense of dread, like at any moment the geth would descend upon them. Floating through space, nearly blind and possibly surrounded, the little ship felt helpless.</p>
+        <p>“…I hate this.” Meeko groaned, her eyes flicking back and forth across her holographic instruments. It was a strange sight, seeing her so nervous.</p>
+        <p>“Everything all right?” Kal asked her, trying to keep the atmosphere calm.</p>
+        <p>“No alerts from the geth stations. We’ve been hit with LADAR pings every eight or so minutes: At least four or five installations in-system keeping an eye out. So far everything looks normal. They don’t know we’re here.” Meeko gave the report through clenched teeth.</p>
+        <p>“Anything from Haestrom’s direction?”</p>
+        <p>“I don’t think so. Without active scans I can’t say for sure, but I think the geth are mostly clustered around the gas giants. Figures, what do they need with rocky planets?”</p>
+        <p>The trio’s spirits lifted a little as the small shadowy dot ahead of them grew into the familiar sight of a planet. As they drew closer, the Tantalus was reconfigured and another singularity formed behind them. The ship slowly decelerated, falling into Haestrom’s orbit. Despite the riskiness of the mission, Tali pressed her helmet up to the window, looking out at the former quarian colony. Even from high above, the dusty world had her spellbound.</p>
+        <p>“Oh shit!” Meeko’s voice pulled her away from the glass. “I’m seeing a massive structure cresting the horizon.”</p>
+        <p>“Redirect the core output, get us into the atmosphere now!” Tali gave the order, already sending updates to engineering from her terminal.</p>
+        <p>The gentle tug on their stomachs became a pull as the singularity was collapsed and reformed, dragging the ship down toward the planet at speed. For a few nail biting seconds, the Nualli hung in empty space, in full view of an enormous collection of space stations. Tali and Meeko worked in concert, adjusting the ship’s flight surfaces and mass effect core as they entered the planet’s atmosphere. To prevent plasma flaring during entry, the singularity was moved again, this time pulling against the ship’s descent. The strain on the core was immense, and Tali’s eyes were glued to her readouts as the vessel plummeted into the thicker air. Eventually the drag began to steady the fall into a terminal velocity. Without the threat of heating up too much, she called it.</p>
+        <p>“Meeko, disengage stealth. Glide us in towards those ruins.”</p>
+        <p>Without a word the pilot tapped at her console. The stealth mode disengaged and Tali had full control of the core again. She quickly switched the field output to countering the Nualli’s mass, using the surrounding heat from the atmosphere to hide them. Freed from the burden of doing two things at once, the drive core began to settle again. Silently the ship flew over the barren and lifeless landscape. From short-range scans, there seemed to have been plants and animals living on the surface at one point. But now all that was left were irregularities in the soil and rock that hinted at their existence. Clearly the planet had been hit hard by the sun’s radiation output. Ahead of them was an enormous quarry, with a collection of buildings inside. The site looked bigger than just a research outpost, but nothing approaching a city. A quick scan showed they were in luck. There was an observatory building.</p>
+        <p>“Meeko, anywhere for us to land?” Tali asked, looking over the woman’s shoulder.</p>
+        <p>“Yeah… there’s a small landing pad near this destroyed building.” She brought up an image for the two onlookers. “It’s covered from the sun, but it’s a tight squeeze. I’ll need engines to get in and out.” The two captains looked at each other, considering the risks. Increasing emissions wasn’t something they wanted to do, but a hidden landing zone was too valuable to pass up.</p>
+        <p>“Work your magic Meeko.” Kal ordered. “Slot us in, minimal thrust.”</p>
+        <p>The ninety-meter ship jolted as the main thrusters and nose-mounted rockets came alive. Hovering near the destroyed building, the seasoned pilot got to work. The scout ship turned and tilted, flying sideways then backward as she brought it under the landing pad’s protective canopy. With barely ten meters of clearance in any direction, the Nualli gently set down on its landing gear. There was one final rock of the cabin before stillness prevailed. Tali watched her pilot let out a relieved breath.</p>
+        <p>“Well done.” The engineer praised the older woman.</p>
+        <p>“Yeah… no problem.” Meeko gave a thumbs-up.</p>
+        <p>“I’ll have the guys set up a perimeter.” Kal interjected, getting their attention. “You wanna start now?”</p>
+        <p>“Yes.” Tali answered her friend with a firm nod. “I’ll talk to Dr Vassa, see if I can help her. In the meantime tell the squad to stick to shaded areas. Direct sunlight is strong enough to overwhelm our shields.”</p>
+        <p>“So much for being outfitted for the mission.” Kal grumbled. “Alright, I’ll head out with them. See what we can see.”</p>
+        <p>“Be careful Kal.” Tali stressed. Despite his usual light tone, the marine solemnly nodded.</p>
+        <p>“You too ma’am.” Kal exited the bridge, leaving her with alone with Meeko. She looked back at the ship’s console.</p>
+        <p>“Did you get a good look at that construct?” Tali asked, waiting as her pilot swiped through images.</p>
+        <p>“It’s big.” Meeko noted jokingly. “Telescope imagery looks strange though. There’s not much in the way of weapons or scanners. But…” She traced a finger along the image. “These all look like tight-beam emitters. Some kind of comms hub maybe?”</p>
+        <p>“Hmm.” Tali rubbed the chin of her helmet. If the structure was a communication relay, then it was definitely the largest she’d ever seen. “Anything looking down here?” She asked.</p>
+        <p>“I don’t think so, at least not from this… thing.” Meeko sounded surprised. “There’ll be patrol ships out there though.”</p>
+        <p>“Making planetary sweeps.” Tali concluded her friend’s thought, narrowing her shining eyes. “Three days.” She stated, catching Meeko’s attention. “That’s our window, after that we’re getting out of here.”</p>
+        <p>“Sound’s good to me.” Meeko agreed. “Don’t worry, I’ll set up some sky-watchers, hopefully we’ll see the bastards coming first.”</p>
+        <p>“Don’t get fried.” Tali said warmly, slapping the pilot’s shoulder. “I’ll see you later, time to get these scientists settled.”</p>
+        <p>Heading out from the bridge, the young engineer spotted the scientists at the far end of the crew deck. They seemed to be arguing about something, but it died down when they saw her approach. Between the three of them, all of their hands were full. Myrr’Jorin, a familiar face from the batarian raid, was also there. He was carrying even more equipment in a large backpack, along with having one hand occupied by a case. Diligently, his shooting arm only held his rifle. Seeing the four pack animals huddled together brought a smile to Tali’s face, thankfully hidden beneath the opaque mask.</p>
+        <p>“Dr Vassa, have you got everything you need?” Tali asked, keeping a light tone. A trick she’d picked up from Shepard.</p>
+        <p>“I think so ma’am.” Tola answered with earnest, clearly unaffected by her attempts to lighten the mood.</p>
+        <p>“Where do you need to go?”</p>
+        <p>“Uh, somewhere we can get a core sample. Underground, one the buildings maybe?”</p>
+        <p>“Good idea.” Tali pointed to Myrr. “What’s the marine carrying for you?”</p>
+        <p>“Mostly… equipment backups, extra geological scanners, food-paste rations.” Tola stopped when Tali raised her hand.</p>
+        <p>“Myrr, leave that stuff here. I need you looking sharp.” The marine heeded her order immediately, with a glimmer of thanks in his eyes. Tola seemed upset for a moment, but didn’t dare protest. The three scientists fell in behind Myrr and Tali, the two of them leading the group down and out of the cargo bay.</p>
+        <p>The other marines had already headed out to set up the perimeter, meaning there weren’t any distractions for when the young woman finally set foot on Haestrom’s surface. Even with all of her extensive travel through the galaxy, and the years she’d had to mature into a level headed woman, Tali couldn’t help but feel awed. She drank in the surrounding architecture. It was very practical and utilitarian, unsurprising for the kind of outpost that once operated here. But little details enrapt her, like the quarian script carved into the walls, marking travel destinations. The dialect was only partly readable, something more regional than the Fleet-wide modern Khelish. On a larger scale, she admired the geometry of the carved stone.</p>
+        <p>The landing pad roof was larger than the pad itself, coming out in a semi-circle from the building’s interior. There were little notches carved into the stone high above, precision work likely done by hand. As the team headed out into the streets of the settlement, Tali couldn’t help but gawk at the structures all around her: Fusions of metal and stone, some reaching high into the sky. There was something indomitable about them. This place felt sturdy, able to withstand even the harshest of punishment. For a girl who’d grown up on ships, the fragility of a life in space was completely absent here. This place was strong, like the ancestors had been.</p>
+        <p>Tali and Myrr escorted the science team further into the settlement. Keeping to the shade they moved quickly out on the streets. It was more habit than protocol, but Tali found herself looking up at the sky. She felt like those small furry creatures Shepard had shown her, hunted by those flying things with beaks. One after another the buildings were checked. Most were damaged, with underground entrances having collapsed long ago. Despite how impressed she was, the engineer had to remind herself this place was centuries old. Eventually they came across a break in the buildings. A large valley of quarried stone stretched out ahead of them, with small structures carved or built from the rock serving as administration. On their side of the quarry, was a large observatory. Finally they had some luck, this place had an underground lot of some kind.</p>
+        <p>The team was in luck. After lighting up the place with some flares, they discovered a large main chamber. There were doors leading further into the complex, but the whole thing was powered down. Tola and her colleagues were quick to set up their equipment, already cutting and drilling in a corner of the room. Their equipment was battery powered, so they could work uninterrupted for a few hours before needing to charge the cells again. Myrr was taking a walk along the perimeter of the room, checking for any structural damage or surprise entry points. Tali had made her way over to the closest door.</p>
+        <p>Unlike the walls, the doors were metal, with projector pads for holograms like any modern interface. Up close the almost mythical structures were revealed to be quite mundane. Holding a flare up to the door, she struggled to piece together the old Khelish. Eventually she was able to make out the words “living quarters” amongst the rest. Moving on, she checked the other entrances, reading the labelling until she found what she was looking for. Next to the third door, the words “main power” were scrawled. Now all she had to do was get in.</p>
+        <p>With a little cajoling of Dr Hatar, she got her hands on a cutting laser. It was a bulky thing, requiring a backpack for power. With a little effort Tali lugged it back over to the door, flipping switches across the device before brandishing it. A small red outline appeared on the stone next to the door. She hit the button, and the digging tool flashed. Within a few seconds, the beam of light cut a diagonal swath through the rock, burning a hole large enough for the quarian to crawl through. She took her time returning the tool, giving the new passageway a chance to cool down. When she got back to the new tunnel, there was nothing but blackness staring back at her. She threw a flare into the hole, illuminating the hallway on the other side. Everything looked clear.</p>
+        <p>“OP-1, this is OP-2 over?” Tali called out over the radio.</p>
+        <p>“OP-2, this is Kal’Reegar.”</p>
+        <p>“Kal, my team has found somewhere to set up base camp. We’re in the observatory building, in an underground lot.”</p>
+        <p>“Sounds good. I just finished checking in with the squad, nothing out here except us looks like.”</p>
+        <p>“That’s a relief. I’ve found an old generator, I’m going to see if I can get it up and running.”</p>
+        <p>“Need any help?” Tali mulled it over in her head for a moment before answering.</p>
+        <p>“Thanks Kal, but I’ll be fine. Easier for me to concentrate on my own anyway.”</p>
+        <p>“Okay… be careful down there, don’t wanna have to dig you out.”</p>
+        <p>“Ha, ha, ha.”</p>
+        <p>Tali jogged over to Myrr, getting the young man to keep an eye on the scientists. Then, after psyching herself up a little, she crawled into the hole. Though she was used to wriggling her way through the confined spaces of ships, the rubbing of stone against her suit was an odd new experience. The course surface pulled on the fabric, even plucking the hood off her helmet. The engineer was glad no one was with her. While the laser-burned tunnel was only a few meters long, she definitely felt the squeeze around her hips. If she did anymore digging with that thing she’d make sure to adjust its settings. After some awkward last minute jostling, she slid out the other side. The door was sealed shut behind her, and now the only light came from the flare she’d thrown in. Taking it with her, she headed off down the hallway.</p>
+        <p>After descending a couple flights of carved stairs, following along with wires fitted to the walls, she finally came into another open chamber. In the centre was what she’d been looking for. Tali set down the flare beside her and got to work. The generator looked like an old ship’s fusion plant, something rugged for long-term use. Her suit’s radiation sensors were lower down here than they had been on the surface. Looking over the admittedly old piece of machinery, the young quarian was in luck. Though the scripting on it was the old Khelish stuff, the generator itself was nearly identical to the fusion plants back on the Rayya. Of course, those plants had been up kept and maintained throughout the years. A scan from her Omni-tool found no major mechanical failures inside, and the reaction mass was still present. She just needed to find a way to power it, along with getting that power back up to the doors.</p>
+        <p>She moved with purpose, opening panels all over the small reactor. Using her Omni-tool, she fabricated some conductive pieces to replace the wiring she couldn’t repair herself. The process was slow, and in the complete darkness there wasn’t really any way of telling just how long she was taking. Sparks from her tool flew as she patched up some of the cable connections, sealing the entire system for operation. Tali felt in her comfort zone again, just her and the machine. Even though the darkness unnerved her a little, all it took was some humming to keep the woman’s mind on task.</p>
+        <p>Back and forth she fixed something and then checked her tool, looking for more faults. The whole thing was a wonderful distraction from the nerve-wracking situation they were in. Scouting a barren world, creeping around inside their ancestors’ ruins hoping the overwhelming geth armada wouldn’t spot them. None of that was down here. No, down here there was only Tali, her mechanical patient, and a room full of dust that made her mask’s filters cry. Feeling the strain in her fingers, she decided it was the moment of truth. She prepped an overload charge on her Omni-tool, before shocking the nearest panel.</p>
+        <p>The old generator sparked and groaned, and the engineer seized the moment to flip some switches. More sparks and more groans, before the deep humming of life came out of it. The sound grew louder as the reactor started up properly. Scans showed the whole thing was still functioning under par, but it was alive! Tali couldn’t help but hop on the spot, balling her slender hands into fists as she revelled in her success. All around her lights flicked on, illuminating the room. It had been much larger than she initially thought. Surprisingly, it also looked more ornate, with details carved into the rock, and columns adorning the space. What was this place?</p>
+        <p>What she’d been expecting to be a simple generator room looked more important than the place she’d just come from. There were a number of archways, leading off to further tunnels. Unfortunately, most of them had caved in. A couple of the smaller ones survived, along with a much larger entrance on the far side of the room. Wanting to save the best for last, the quarian stuck her head inside the smaller tunnels first. She didn’t get far, they’d both collapsed further in, but it was clear that they were some kind of workers quarters. Or maybe something scientific, there were old metal tables in some of the rooms with rusted bits of machinery on them. It made sense she supposed; this was an observatory after all.</p>
+        <p>Finally she couldn’t stave off her curiosity any longer. Loping over to the far side of the room, the quarian stood outside the much larger door. Though time had certainly taken its toll, even down here, the door was still functional. With just a little application of her magic touch, Tali heard the huge hunk of metal slowly grind upward. Dust fell from the machinery as it carried the door over her head, leaving a yawning entrance to more darkness. She paused at the entrance, all at once unsure if she should proceed alone. It would be irresponsible not to radio Kal or Meeko, or even Myrr. If anything happened down here they really would have to come dig her out. The rational decision grew larger in the engineer’s mind until suddenly the lights sparking to life inside the entrance burnt it away. One set after another of the wall-mounted bulbs blazed, laying an enticing path to the far end. Her sense of wonder overcame any protest, and Tali stepped through the door.</p>
+        <p>If the generator room had seemed ornate before, than this hallway was downright decadent. High ceilings loomed above her, with arches and columns carved all the way to the far side. There was old Khelish written on the walls, though most of it was illegible to her. What little she could make out was something about “far skies” and “the glory of our ancestors”. When she reached the end of the hallway, there was another door. This one was much more than a simple industrial barrier.</p>
+        <p>It was almost artisan in its design. The metalwork had been polished and inlaid with other shining materials. A series of complex locks ran down the centre seam, each set unique. In front of her was a scanner, the panel was still responsive but the device was dead. The hiccup was nothing to an engineer like her. A quick sync with the Omni-tool and the security was overridden. Tali stood still, waiting to see what would happen next. Up above her the clunks of the heavy locks sounded. One after another the mechanisms came apart, before finally releasing their hold. The doors opened inward a crack. Placing her three-fingered hands on them, she took a deep breath and pushed.</p>
+        <p>Tali’s eyes were wide with awe. Never in her life had she seen something like this. The room was long and cavernous. The stone had all been polished to an alabaster sheen, unable to resist she ran her gloved palm along its surface. The feeling was smoother than any metal or plastic. Instead of the electric lights outside, the great hall was illuminated by fire. Small sconces dotted the walls, encased within glass housings no doubt fuelled by gas. The effect was captivating; all around her the archways and columns flickered shadows over the intricate reliefs carved along the walls. Every surface was bathed in a warm, orange light. The extent of the torches’ brightness fell just short of the ceiling, giving the darkness above her the look of a night sky.</p>
+        <p>Utterly spellbound, the young engineer loped over to one of the walls. Firstly she inspected the nearest column, taking in the craftsmanship of the thing before noting the countless etchings of script. Muddling her way through the translation, the text came across as reverent, telling of the quarian people and their ascendance from the natural world. Her eyes were drawn from the writing to the painstakingly carved relief that filled the wall between the columns. Images of quarians uncovered and adorned in strange clothes, marching forward.</p>
+        <p>Tali followed along as they left the plains where her species had began; with spears and fire they spread across the continents of Rannoch… the homeworld. Looking around the room, she spotted another relief, rushing over to continue the tale. Her people changed before her eyes, no longer nomadic hunters, but settlers and farmers, taming herding creatures and enlisting animal companions to their side. Huts became houses, and villages became towns. Her belly fluttered as she took in the carvings of old castles and homes, seeing first hand architecture that no living person had. She saw men and women dressed in finery, emblazoned with jewels and flowing garments.</p>
+        <p>She ventured further, looking over the dawn of Rannoch’s modern age. From the discoveries of steam power and electricity, to internal combustion and fusion power, her people blossomed into the technologically advanced ancestors that had filled her childhood dreams. Soon the carvings changed, depicting quarians looking up to the stars, leaving Rannoch behind in colony ships. Most of the vessels looked exotic to her, but some bore an unmistakable resemblance to the liveships. Tali felt her heart swell.</p>
+        <p>One of the carvings depicted something familiar to the young engineer, the magnificent visage of a Mass Relay, with colony ships all around it. She read how the ancestors had believed it sent by the gods to welcome them to the cosmos. She saw a map of the Perseus Veil, the Far Rim and other systems she didn’t recognise: The birth of a Quarian Empire among the stars. Further carvings lay beyond, but the young engineer’s attention was seized by a dominating presence in the centre of the great hall: A statue, depicting a man and a woman, with a young child between them. Below the robed figures was an inscription.</p>
+        <p>“The Sword and Shield of Rannoch, protectors of our great future.”</p>
+        <p>Tali felt a wave of emotion the likes of which she’d never felt before. Pain and sorrow whirled within her, but also love and joy. Taking a timid step toward the stone figures, she reached out her gloved hand. For a moment her hand hovered over the cool surface, almost unwilling to disturb them. When she finally touched the cheek of the small child, tears beaded in her eyes. She gently ran her fingers along the contours of the little girl’s face, taking in all of the details there. The girl had brushstroke stripes on her cheeks, with a little crown of them on her forehead. Her lips were curled in a playful smile, looking up at her parents. The mother and father stood proudly, their eyes resolute and facing forward. But the girl was shown as a joyful child, unbothered by the rigors of adult life.</p>
+        <p>The figures had been carved from the same stone as the room, standing together in monochrome. What had these proud people looked like in life? Did they stand taller, greeting each other with smiles? Did the women strut proudly through the streets, their skin tanned by the sun and adorned with jewellery and makeup? She tried to imagine it, coming home to a beautiful stone house, skin still wet from a day at the beach. She could pause on her porch, lounging on a chair under the sunlight. She thought about the cool wind, fanning over the curves of her body, dressed in fashionable swimwear. Her talons were painted with a cute little pattern, the claws on her hands done up in something matching.</p>
+        <p>She could take in a deep breath, enjoying the smell of salt water. Lying there, under the warmth of a perfect day, the young woman could feel the strength of a woman’s arms around her. The feeling of heat as their bodies pressed together, relishing the closeness: The tickle of Shepard’s breath on her neck before she rolled over to face her. She could touch her, trace a claw along Shepard’s jawline while she smiled in confusion at the million little things Tali did to convey affection. Shepard could see Tali return her easy smile, brows and lips and cheeks all visible to carry the joy in her eyes. Their lips would press, searching for that perfect seal despite the differences. They could be together, like one being…</p>
+        <p>All at once the confines of her suit filled the quarian’s mind. Her hand retreated from the statue, instead resting against the glass of her visor. Darker thoughts trickled in. What would her ancestors think of them now?</p>
+        <p>Would she repulse them, this sickly creature trapped inside a suit?</p>
+        <p>Was that how Shepard…</p>
+        <p>Tali stepped away from the statue. She had to move on, find something else to occupy her mind. Walking past the figures, she made her way over to the next carving. Forcing herself to take it in, her eyes roamed over the depictions of people in space suits, constructing stations in orbit over the colonies. Slowly the awe began to take hold again as she marvelled at the huge cities that now dominated the wall reliefs. Soon her people found other Mass Relays, then the Citadel. She had to smile at the somewhat exaggerated depictions of the Asari, Slarians and Turians of the council. The columns spoke of a great welcome for her kind, with much said about where the quarians would fit into the wider galaxy. Trade was established and the fledgling empire began to grow.</p>
+        <p>The next carvings were a shock to her, what had been a hopeful telling of history began to turn bitter, with passages and imagery of the quarian people stifled out of suitable worlds. Threatened by the turians and ignored by the council, the words written spoke of a new path for the Empire, of standing alone and prospering without the other species. She saw depictions of many scientists, hard at work in labs building something to return their destiny to them. A pit began to form in her stomach as she crossed the room. Under the flickering glow of the firelight, her fears were confirmed.</p>
+        <p>The engineer didn’t have to stuggle with the old Khelish script of the columns, she recognised the image immediately. Standing before her, surrounded by proud researchers, was a geth. The machine was imbued with the sanctity of the ancestors themselves, it’s optical sensor carved into a shining star. What began as a wonderful view into her people’s history, became a wall of horrors. The columns and carvings grew worse, showing them working tirelessly to build more and more of the evil things. The words spoke of a new age, an era where the suffering and toil of the individual was at an end. History turned to propaganda, with flowery promises of a revolution of labour and defence.</p>
+        <p>It was sickening, geth attending to quarians in the street, working the farms and marching with rifles in their hands. One particular carving of a little boy holding the cold claws of a machine caused her hands to ball to fists. She looked on helplessly as her people were slowly surrounded by geth; they were everywhere. The foolish platitudes grew worse, telling of a grand plan for the Quarian Empire: How they would use the geth to bring order to the Terminus Systems. How they would accomplish with a geth fleet what the council had not. The columns read with such certainty that the quarians would earn their place on the council. She looked on the final carvings, seeing an army of geth and a fleet of insect-like ships in the skies above. They were called the new sword of Rannoch, a guarantee that no one, not even the Citadel would ever dictate to her people again.</p>
+        <p>Tali lingered on this last carving, hate and anger boiling under her suit. How many billions had died because of this: How many families had been destroyed, all because of some selfish need to be important? She remembered the stories she’d been told as a child, how the geth had rebelled and slaughtered the quarians. Her mind drifted to her talks with Shepard aboard the Normandy, the two of them had disagreed over the issue. She hadn’t appreciated Shepard’s tone regarding the geth, but by then Shepard had proven herself to be nothing but kind and decent to her. She’d understood Shepard’s opinions came from a place of good-natured ignorance, if Shepard had seen the scope of suffering the machines had caused, there wouldn’t have been any argument.</p>
+        <p>These things were a blight on the galaxy, a disease her own people had unwittingly released. But standing here, looking at the brainwashed filth etched into the stone before her, a whole new perspective was beginning to form. It wasn’t ignorance that had led to their near extinction; it was a single-minded desire to grow. The geth had simply offered the most expedient path. Thousands of years of history reduced to ashes because the government of her ancestors had decided to put their future in the claws of unfeeling machines. They’d robbed her… her people, of the lives countless generations past had taken for granted.</p>
+        <p>With some effort, the young engineer pulled the immense doors closed again. She tapped at her Omni-tool, resealing the intricate locks in place. Storming back through the entry hall, she didn’t even glance at the fine stonework now. She was back in the central room, looking over to the stairs beyond the generator. Fiddling with the door controls, she closed the metal slab over the ornate place, hiding it away. Thanks to years of engineering experience and a little natural brilliance, killing the lights to the far portion of the chamber was child’s play. The electric lamps blinked and went out, casting a thick black shadow over the whole area. Anyone who came down wouldn’t even look twice. Whatever small guilt she felt for concealing the great hall was drowned out by indignation. Clamouring for the geth was something unforgivable, and seeing the glee with which her ancestors went to their own destruction tainted their legacy irreparably.</p>
+        <p>Tali clasped her hands over her mask, letting her mind rest in darkness for a moment. She reminded herself, she had a job to do. The mystery surrounding Haestrom’s sun had to be solved, and there were people who needed her help to do it. Instead of dwelling, she admired the stonework again. However foolish and prideful they’d been, seeing the handiwork of her culture was still a beautiful thing. Even if all of it was little more than ruins now, she could still appreciate the vast space and the walls of stone. All of it was… amazing. Standing by herself, Tali wished her friends could see it with her.</p>
+        <p>Most of all… She wished Shepard were there.</p>
+    </div>
+</body>
+</html>

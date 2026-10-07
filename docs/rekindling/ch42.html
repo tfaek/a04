@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 42: Ulterior Motives</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch41.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html" selected>Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch43.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 42: Ulterior Motives</h1>
+    <div class="chapter-content">
+        <p>The splendour of the cruise ship was a sight to behold. Curving, clean walls and lavish paintings, accents of gold and silver, polished to a shine and adorning a myriad of decorations. The main venue hall was enormous, lit by chandeliers and boasting a central water feature, fat koi fish swimming lazily back and forth. The hint of smoke in the air betrayed criminal company, rising from cigars, hookahs and other strange pipes. A salacious jazz melody complimented the scene, giving the whole place a swagger to its step.</p>
+        <p>Feeling the ever-so-slight pinch of her tuxedo, Shepard adjusted her bow tie. It was crooked again; she knew it. Standing near the huge ballroom windows, she looked out on the Bekenstein bay, spying Hock’s mansion in the distance. With a confident, cocky beckon of her hand, her quarian partner approached. Tali’s head was low in deference, until she was close. Then Shepard saw those shining eyes, doing little to hide their contempt as her deft fingers straightened the commander’s tie.</p>
+        <p>“I still think this is a bad idea.” Tali muttered through their private channel. “I could’ve fit in the statue’s compartment.”</p>
+        <p>“You think?” She gave Tali a smirk, admiring her wide hips. It fell away quickly, sensing her lack of amusement. “We needed to field test him eventually, and-”</p>
+        <p>“It.” Tali cut in. “Not him.” Shepard let her pedantry slide.</p>
+        <p>“Right, it.” She corrected. “Point is, you said geth system-sieges were unstoppable, and we need this ship reigned in, if things go south. Chances are nothing will even happen.”</p>
+        <p>“Keelah…”</p>
+        <p>“Still got you on here, didn’t I? Despite the strict invite rules.”</p>
+        <p>“As your servant!” Tali snapped. “I get to walk around with my head down, getting dirty looks while you and…” Her eyes flitted over Shepard’s shoulder. “Oh, great. Here she comes…”</p>
+        <p>Shepard followed her gaze to see the other member of team one. Miranda Lawson was transformed: The embodiment of socialite perfection, every detail slotted neatly into an hourglass red dress. The same gown she’d worn to the Ascension Hotel.</p>
+        <p>“You find him?” Shepard’s question was joined by an annoyed lilting grunt in her earpiece.</p>
+        <p>“I did.” Miranda nodded. “Over by the water feature.”</p>
+        <p>“Alright. Team two, status?”</p>
+        <p>“We’re on site.” Garrus answered. “Security at Hock’s mansion is minimal, mostly automated. Not a problem anymore.”</p>
+        <p>“Certified fuckin’ boring…” Jack added, pulling a frown from Miranda.</p>
+        <p>“You reached the vault yet?”</p>
+        <p>“No.” Garrus answered. “We’ve run into a security system. We’ve cut power to the barrier, and Kasumi’s made a DNA key for the biometric scanner. But there’s a problem.”</p>
+        <p>“What do you need?”</p>
+        <p>“We need a voice sample, from Hock.” Garrus’ request had the quarian quickly tap something into her Omni-tool. Soon, they all had the voice capture software.</p>
+        <p>The three of them wound their way through the throng of wealthy criminals. Shepard kept her mercenary façade, hooking her arm around Miranda’s waist as they mingled. Miranda matched her perfectly, her presence dripping with suave mystique. While she remained the consummate professional, Shepard could feel Tali’s glare burning holes in Miranda’s back. It made her skin crawl, watching her girlfriend play the role of indentured servant.</p>
+        <p>A message chirped on her Omni-tool: A status update from Legion. Not her first choice for a name, but EDI had been quicker to offer one, and the geth had accepted. As of now, the named geth was still inside the Saren statue they’d brought, folded up in the bottom compartment. “Awaiting orders” had been the two words given.</p>
+        <p>Standing near the central water feature, was their target. Sporting a thin moustache and goatee, and dressed in a white suit, Donovan hock was chatting lively with a salarian. Inconspicuous among the dangerous-looking crowd, Shepard ran a hand over her jaw. Her grown out hair, and a little prosthetic addition to her nose, served as a decent disguise. Or so she hoped.</p>
+        <p>“Mister Hock?” Her announcement broke the arms dealer away from his conversation, shooing off the salarian.</p>
+        <p>“Ah, our guests from Illium!” Donovan’s thick Afrikaner accent carried his greeting. “I don’t believe I’ve had the pleasure.”</p>
+        <p>“Solomon Gunn.” Shepard shook Hock’s hand. “My wife, Allison.”</p>
+        <p>“Pleasure’s mine.” Miranda didn’t skip a beat, batting her lashes. Her distraction was enough for a flick of the wrist, and the recorder was on.</p>
+        <p>“And who is your…” He eyed Tali with suspicion. “…Plus one, here?”</p>
+        <p>“Recent addition to my squad, Reela’Tani.” Shepard answered coolly. “Bought her on Illium, a few weeks ago. Suit’s chipped and wired of course, no surprises. But she’s a technical genius. I don’t do any deals without her.”</p>
+        <p>“Always found it hard to trust quarians. The masks, you know?” Hock shrugged.</p>
+        <p>“Sol’s a collector, of sorts.” Miranda nudged Shepard’s shoulder affectionately. “Always wants what she can’t have.”</p>
+        <p>“Ah, mixing business with pleasure, eh?” Hock laughed, giving Shepard a knowing look. “My tastes for the exotic are purely material. Still…” He leered at Tali. “…Perhaps I overlooked the finer details.”</p>
+        <p>“He still loves the sound of his own voice…” Kasumi groaned in Shepard’s earpiece. “Sorry, Tali.”</p>
+        <p>“It’s fine.” She answered sharply. “Was it enough for the sample?”</p>
+        <p>“Yeah, we’re through. Heading to the vault now, we’ll let you know when we find it.”</p>
+        <p>Shepard gave the arms dealer a nod. Even just friendly small talk had been nauseating for her, especially with Tali there. She didn’t have to look back to know Tali was boiling under her suit. As she readied her very diplomatic goodbyes, the criminal piped up again.</p>
+        <p>“Ah, but there’s an exception to every rule… and here she comes now.” Hock straightened his collar, looking over Shepard’s shoulder. “…You can’t beat the asari for long-term dividends.”</p>
+        <p>The professional couple turned to meet Donovan’s mysterious asari. She marched through the ballroom, her steps weighed down by combat boots. She was tall, like Samara in height and build, easily looking Shepard in the eye. Unlike the other asari around her, done up in all manner of Grecian-style dresses, this one wore a military hard-suit, pistol on her hip. White with blue accents, it showed her strong, athletic figure. Electric blue eyes contrasted her darker, purple complexion, no facial markings to be seen. In that moment, when those eyes met Shepard’s, the commander realised she was a matriarch. Centuries of confidence, of skill and knowledge, they glinted behind them.</p>
+        <p>“Allow me to introduce my new silent partner…” Hock smiled proudly. “…Lady Melassania Dantius.”</p>
+        <p>Shepard felt a hyper-awareness flare up. It struck Miranda too, tensing beside her.</p>
+        <p>“Keelah…” Tali’s voice shivered in Shepard’s ear.</p>
+        <p>“Solomon and Allison Gunn?” Melassania’s voice was low and rich, completely ignoring Tali. “You’re the ones who brought the Saren statue. An interesting choice.”</p>
+        <p>“Apologies, my Lady.” Miranda’s tone was reverent, bowing her head. “We… weren’t aware the senior chair of the Armali Council would be here.”</p>
+        <p>“Don’t worry.” The asari waved her hand dismissively. “The statue doesn’t offend me. Benezia and I were never more than acquaintances. Between hand-holding for High Command, and running the company, I don’t get much time to sit in that council chair.” She gave a predatory smile. “Not that it’s a problem, I prefer the direct approach anyway.”</p>
+        <p>There was a shift in the tempo of the music. Piano and saxophone signalled a change in mood, and all around them the denizens of the party began to pair up. The hall became a place of movement, slow and sensual. Even Hock seemed to notice it, turning to Miranda.</p>
+        <p>“Gunn, you wouldn’t mind if I treated your lovely wife to a dance, would you?” He asked, already sauntering over. “I believe Lady Dantius wanted to speak with you, alone.”</p>
+        <p>The idea of splitting up, especially in such dangerous company, gave Shepard pause. But a quick look to Miranda conveyed the necessity. Until they got the thumbs-up from Kasumi, things had to stay in motion. No sooner had Hock slunk off with Shepard’s “wife” in tow, than Shepard was in the sights of the matriarch. With a wave of her hand, she gestured the commander to follow.</p>
+        <p>“Shoo, quarian.” Her command was tinged with menace. It was enough to stop Tali in her tracks. Shepard could see her preparing for the worst-case scenario. But Shepard simply gave her a small nod. Better to play along.</p>
+        <p>With slow, purposeful steps, the two of them strolled toward the edge of the ballroom, leaving Tali behind at a distance. Melassania’s eyes weren’t the only ones on Shepard. No doubt every one of her commandos were watching like cerulean hawks.</p>
+        <p>“So… you’re from Illium…” She turned her statuesque face to catch Shepard’s eye. “I take it you heard about the attack on my towers?”</p>
+        <p>“I did, my condolences for your loss.” Shepard gave her a respectful nod of her head. Melassania’s lips thinned.</p>
+        <p>“Yes…” Melassania exhaled. “Nassana was my eldest, my most promising. Now I’m left with her air headed, infantile siblings to work with.”</p>
+        <p>“That your interest in Hock?” Shepard asked. “Looking for someone to help mentor them?”</p>
+        <p>“Goddess, no.” The matriarch’s chuckle was mirthless. “I’m only sharing that cretin’s air because he’s a magnet for mercs. My daughter’s death has to be answered for, and here is where I’m shopping for the talent to handle it.”</p>
+        <p>“And I’m the pick of the litter?”</p>
+        <p>“Charming phrase… indeed you are.” Her voice was steely. “I’ve narrowed down the list of suspects. One is a top assassin, impossible to track under normal circumstances. The other is an asari Justicar.”</p>
+        <p>“Heavy hitters.” Shepard noted. “What makes you so sure?”</p>
+        <p>“I rounded up a few of the survivors, and my daughter’s former security chief. After getting the truth out of them, I made a few calls. Got my hands on the relevant information.” She opened her Omni-tool, transmitting a file to Shepard.</p>
+        <p>Shepard looked it over; sweat forming in her closed palms. Some of the information was far too close for comfort: The worst being one name in particular.</p>
+        <p>“Commander Shepard?” She met Melassania’s gaze, tremor kept below the surface. “Heard she died a couple years back.”</p>
+        <p>“Please.” Melassania snorted. “Unless you’ve seen the body, Spectre’s are never dead.” She stepped closer, looking down at Shepard’s Omni-tool. “She appears to be active in the Terminus. Mission unknown. But my intel puts our drell in her current employ. She’s not known for subtlety, so she should lead you straight to the target.”</p>
+        <p>“She on the list?”</p>
+        <p>“No.” She shook her head. “She’s only incidental in this. Wasn’t her who murdered my daughter, and killing a Spectre is always a last-resort.”</p>
+        <p>“Understood.”</p>
+        <p>“Excellent. I’m willing to offer you an exclusive contract for Thane Krios.” Melassania’s lip curled. “Ten million credits, alive. And another five for intel on the Justicar’s location.”</p>
+        <p>“You offering an… exclusive contract on her too?” Shepard asked.</p>
+        <p>“No. While I don’t doubt your abilities, Ms Gunn, I’ll be dealing with that matter… personally.” White-hot rage burned beneath her cool exterior. “Do you accept?”</p>
+        <p>The last few notes of music warbled and dissipated into the air. The pattering of a snare drum, and the tingling of cymbals replaced slow piano keys. The matriarch eyed Shepard, awaiting an answer.</p>
+        <p>“Jobs this size need the okay from both of us. Give me an hour, to talk it over with Alli?” Her suggestion seemed to snap Melassania out of some furious trance.</p>
+        <p>“Be punctual, Gunn.” She gave a bow of her head, regal and calm. “This is a limited courtesy I’m showing you.”</p>
+        <p>Leaving the matriarch behind, she searched for Tali. A splash of violet stood out against the endless parade of tacky glimmering gowns. She kept things casual as they closed the distance; acutely aware they were likely being watched. But the worry behind her visor was clear as day.</p>
+        <p>“You hear all that?” She asked, already seeing the answer in Tali’s body language.</p>
+        <p>“I did.” She nodded in disbelief. “Keelah… we can’t stay here, Jane.”</p>
+        <p>“Agreed. We’ll find Miranda and make ourselves scarce, come on.”</p>
+        <p>With Tali back by her side, Shepard scanned the crowd. Keeping the pace calm but brisk, she felt some of the earlier panic begin to recede. It was something her favourite quarian’s presence never failed to do, calm her. Even with just the one of them armed, she felt ready.</p>
+        <p>“So… you bought me?” She mused, eyes narrowed to glowing slits. Shepard felt her cheeks flush as she realised what Tali meant.</p>
+        <p>“I was thinking on my feet!” A sheepish smile found her lips. “Just… playing the role, saying what a low-life merc would say.”</p>
+        <p>“Mm-hmm…” Tali grunted, unmoved. “…You certainly did a good job.”</p>
+        <p>“Hey, c’mon…” Shepard brushed her shoulder against Tali’s. “Y’know I didn’t mean a word of it.” She could see Tali’s mask of indignation slip. “Besides, with all your qualities, no way in hell I could afford you.” She winked. Finally, the mask fell away.</p>
+        <p>“Damn right you couldn’t.” She agreed, pushing Shepard off with a swing of her hips. Before the commander could respond in kind, Tali nodded her helmet into the crowd. “Here she comes.”</p>
+        <p>Heels clacking across the false marble floor, Miranda gave them both a subtle wave. The three of them skirted the ballroom’s main throng. Finding somewhere a little quiet, the mission and its dangers came back into focus.</p>
+        <p>“How’d things go on your end?” Shepard asked, huddled together with the two women.</p>
+        <p>“Well, I’ll need another shower when we get back…” Miranda sneered. “But your file-snatcher worked perfectly, Tali. We’ve got limited security access, and a map of the interior.”</p>
+        <p>“Good, because we need to leave.” Tali said firmly.</p>
+        <p>“Leave?” Miranda asked, puzzled.</p>
+        <p>“Melassania knows about Thane.” Shepard answered, watching the colour drain from Miranda’s face. “Worse, she knows he’s with me, and that I’m still kicking.” With a tap of her Omni-tool, she got Kasumi on the radio. “Team two, you have the package?”</p>
+        <p>“It’s not here, Shep.” The thief said, dejected. “We’ve turned over every inch of the vault. It has to be on that cruise ship.” Shepard’s teeth clenched.</p>
+        <p>“I’m sorry Kasumi, but we’re gonna have to abort. Situation’s more tenuous than we anticipated.”</p>
+        <p>“What? No!” Miranda interrupted. “Disregard that, Kasumi. We’ll move to plan B. Find some transport and rendezvous here when we radio you.”</p>
+        <p>“Yes ma’am, I’ve got just the thing…” Her cheeky tone didn’t even register to Shepard, or Tali.</p>
+        <p>“What the hell are you doing?” Shepard hissed. “I wanna help Kasumi, but this is too-” The protest died when Miranda’s fingers dug into Shepard’s sleeve, desperation in her icy blue eyes.</p>
+        <p>“Please, Shepard. I need you to trust me on this.” Her voice matched Shepard’s in tone. “We can’t leave without that grey box.”</p>
+        <p>Shepard’s teeth clenched, looking to Tali. She could see the concern building in the quarian, matching her own desire to play it safe. Pulling out now was the smart thing to do; she knew it with every rational bone in her body. Which made ignoring all those instincts all the harder.</p>
+        <p>“God damn it…” She exhaled. “Legion, plan B is in effect.”</p>
+        <p>“Acknowledged, access token and map data received. Proceeding to nearest access point.”</p>
+        <p>“This is a bad idea, Jane.” Tali warned her as they readied to move.</p>
+        <p>“Probably.” She agreed.</p>
+        <p>Shepard led Miranda and Tali through the ever-rowdier throng of criminals. Following the map data to one of the guardrooms, Tali sent a penetrating scan through the door: Two troopers inside.</p>
+        <p>The door hissed open, and Shepard’s blue corona flared as she spotted them: A human and an asari. Her hands were around the man’s throat in an instant, blinking into him with a crash. The clatter of a metal coffee cup was followed by a wet, muffled pop. By the time she’d broken the man’s neck, the asari trooper was suspended in mid-air, under Miranda’s grasp. She sent the asari into the wall with a meaty crunch, before she slumped to the floor with a thud.</p>
+        <p>Wasting no time, the pair stripped down to their underwear, casting aside the tuxedo and dress like so much trash, leaving Shepard’s bra covering her breasts. The rasp of zippers and the clacking of clasps were all that broke the tense silence. Shepard wanted to press Miranda. To ask why she, of all people, would care so much for the personal trinket of a thief. But Shepard kept her questions to herself, instead letting Tali sync up their commandeered hard-suits. While Miranda was momentarily occupied, she felt Tali’s hands on her, adjusting a segment here and there. She still had the magic touch.</p>
+        <p>The three squad-mates emerged back into the ballroom, hidden in plain sight. Miranda and Jane now looked no different to the other Eclipse mercs, except that they were now escorting a particular quarian along the fringes of the crowd. Tali kept between them, trying to look as downtrodden and guilty as she could. With her radio linked into their helmets, and the ship’s map on her HUD, she silently guided them towards the possible location for the grey box. In another window, she carefully watched the geth’s cam footage. It accessed the local net, flooding the system with program copies. One by one, internal utilities were consumed in the system siege. It was uniquely horrifying to see it in action. But she watched closely, pattern-recognition in overdrive as she attempted to glean every advantage from it.</p>
+        <p>“Shepard-Commander, we have acquired access. Uploading objective coordinates now.” A new diamond appeared on Tali’s HUD, before alarms began to blare. “Warning, security alert triggered.”</p>
+        <p>“Yeah, we got that part!” Jane answered over the alarms. “Moving to secure, rendezvous on my suit signal!”</p>
+        <p>“Acknowledged.” The geth’s feed blinked out, and the three of them picked up the pace.</p>
+        <p>“For the record…” She couldn’t help herself, piping up over their private channel. “…I would’ve caught that alarm.”</p>
+        <p>Running through corridors, Tali was grateful to have Jane’s pistol, with Jane and Miranda brandishing the merc rifles. No need for hiding anymore. Frantic yelling and the pounding of boots against the floor echoed all around them. The damn geth had kicked the swarmers’ nest.</p>
+        <p>When the security door opened to their objective, all three of them stopped. The room was dimly lit, with fans whirring in the background: A computer lab of some kind. Tali kept a firm grip on her gun, but it remained barrel-down.</p>
+        <p>Two figures were at the standing desk, a man and a woman… no, a girl. Both human, the younger one couldn’t have been much older than fourteen. Wearing a hoodie, Tali had almost mistaken her for a quarian. The man stepped forward, shielding the girl. That was when Tali spotted it. The grey box, hooked up to a terminal.</p>
+        <p>“Who are you?” The man demanded, his voice shaking. “W-what do you want?” Tali glanced to Jane, awaiting the order: Only for the thud of Miranda’s helmet on the ground to pull her attention. The woman stared in awe; her usual composed self completely gone.</p>
+        <p>“…Niket?” She said the name is disbelief. Immediately the man stiffened up, his eyes wide.</p>
+        <p>“M…Miri?” He choked the words out. “Is that you?”</p>
+        <p>Utterly dumbfounded, Tali watched as this cold and calculating woman threw her arms around the man. They spoke quietly, almost nose-to-nose with each other. Even with the pandemonium going on outside, she couldn’t help but feel warmed by the scene. It reminded her of a time not too long ago, when fear and the frigid cold had all but melted away on Freedom’s Progress: Having Jane returned to her waiting arms again, as if by magic.</p>
+        <p>Letting her shotgun rest in one hand, she found her captain’s hand with the other, teasing Jane’s own to join it. Three fingers slid between five, enjoying a moment without scrutiny. Soon Miranda was talking with the girl, the three of them moving to the terminal. Tali disentangled from Jane as the Cerberus woman approached, grey box in hand. At first she thought she was imagining it, but Miranda was… crying.</p>
+        <p>“Alright.” The woman sniffled. “Got the grey box. We’ll rendezvous with the others like planned but…” She glanced back. “They don’t have a way off without us.”</p>
+        <p>“Who are they?” Jane asked, taking the neural implant from her. Miranda’s empty hands found each other.</p>
+        <p>“Niket’s an… old friend, not with Cerberus.” She blew out a sigh. “About the only person outside of them I can trust.”</p>
+        <p>“And the girl?” Miranda swallowed thickly at Jane’s question, muscles tensing on her face.</p>
+        <p>“That’s um…” She let out a shuddering breath. “That’s Ori… my sister.” Tali saw Jane’s eyes widen, before her brow furrowed.</p>
+        <p>“That’s why you were pushing for this mission…” She said quietly. “…You knew.”</p>
+        <p>“I did.” She nodded, eyes on the floor. “I’m sorry Shepard. I should’ve told you. I just… when nobody knew what’d happened to Ori, I wasn’t sure who I could trust, I didn’t know what was…” She trailed off when Jane raised her hand.</p>
+        <p>“We’ll discuss it later.” She looked to the two civilians. “For now let’s just… fuck, we gotta get moving. Keep them on your ass the whole way, no room for mistakes.”</p>
+        <p>Miranda nodded in agreement, before her eyes went wide. Tali’s proximity sensor’s shrieked seconds before she was flung into the far wall. A blast of blue light filled her view, before the impact left her winded and dizzy. The pistol still hung limply in her hands. She saw Jane lying nearby, still stunned as well. Miranda struggled to her feet, moving toward Niket and Oriana. In the doorway stood three asari, one of them a head taller than the others.</p>
+        <p>“I thought I was being clear before, Shepard.” Melassania’s voice was calm and collected. “I would’ve paid you for your troubles. Even gone along with your inane charade. But since you’ve chased off all my other options, I see I’m going to have to be straightforward.”</p>
+        <p>She stalked into the room, glancing to Miranda.</p>
+        <p>“You’ll all be detained, and brought back to Thessia. I doubt it’ll be long before your terrorist friends want to negotiate. Lucky there’s three of you. Cerberus can have you and the suit-rat, and we’ll see how much market share Henry Lawson’s daughters are worth to him.”</p>
+        <p>As the other commandos filed in, an explosion rocked the ship. The distraction lasted barely a second, but it was enough. Tali exploded forward in a pounce, bowling over the first commando as both Jane and Miranda attacked the matriarch. Before the commando beneath her could react, Tali pressed her pistol into the asari’s forehead, painting the floor beneath it with azure blood. The force of Jane’s biotic charge was enough to knock Melassania off balance while the Cerberus agent cleared a path for Niket and her sister. Tali turned just in time to see the matriarch fight Jane off. Jane shot past, gripping Tali’s three-fingered hand in her own as they ran to catch up with Miranda.</p>
+        <p>Everywhere was chaos. Garrus announced loudly over the radio that he’d found transport, and had blown a hole in the ballroom deck for their exfil. Despite the geth’s earlier blunder, it had managed to jam the ship’s communications, so Bekenstein’s military wasn’t on their way. But Eclipse soldiers were everywhere, fighting with both the guests and each other. A ship full of criminals, of course everyone was paid off.</p>
+        <p>Tali kept should-to-shoulder with her captain, pistol jolting in her hands as she brought down the mercs in their way. The chatter of Jane’s rifle was at her side, while Miranda kept the two civilians in a protective force field. Smoke and debris drew her eye to the blown-out window, but there was nothing but empty air.</p>
+        <p>Taking cover near some overturned tables, she could hear screams and the deep electric bass of warp fields. Fear shot up in her as the squad of black-clad asari slaughtered their way through the crowd, led by the dazzling white of the matriarch. Tracers flashed from multiple machineguns. Tali pressed herself against the table, Jane beside her. Panting, she rolled prone and returned fire, watching a dozen rounds slam into her shield as she scurried back.</p>
+        <p>“Team two where the hell are you?” Shepard yelled into the radio.</p>
+        <p>“Dealing with Eclipse, ETA one minute.” Garrus answered, breathless.</p>
+        <p>“We don’t have a minute!”</p>
+        <p>Her warning vanished into an explosion of splinters, the table ripped in half by biotics. Tali barely fired two shots before her fingers froze inside the trigger guard. The floor slipped from her feet, and soon she and the others were suspended in the air. Powerful quarian muscles flexed in vain, trying to push through the stasis field. But it was no use. A commando glared up at her, fingers clawed and glowing. Melassania only had eyes for Jane, a look that chilled Tali.</p>
+        <p>“You throw a decent punch, Shepard. I’ll give you that.” A touch of blue oozed from the matriarch’s purple lips. “But I’m running out of patience. Give me the drell.”</p>
+        <p>“Gonna have to do better than that.” Jane smirked through her helmet. “Last person to threaten me was a couple kilometres taller than you.”</p>
+        <p>Melassania gave a nod to one of the commandos, pulling Niket’s frozen form away from Oriana. Miranda’s upset grunt carried through the radio, and the asari’s eyes glinted at the sight that must have accompanied it.</p>
+        <p>“This isn’t getting us anywhere…” She said coldly. “Miss Lawson, can you hear me?” The matriarch pulled Niket closer, the field shimmering around him. “I want to make it clear, it didn’t have to be this way.” With a flex of her fingers, the man’s voice rang out in pain. “But it seems your captain needs a reminder of who she’s dealing with.”</p>
+        <p>Tali’s heart was pounding, watching the man’s body slowly contort. Miranda’s ragged breathing grew louder, whistling through her teeth. His cries became screams, as bones began to creak and snap. Fighting back against the field, the three fought with every ounce of strength they had. The pistol sat limply in Tali’s hand, finger just millimetres away from the trigger. Just one second, if the Ancestors could hear her…</p>
+        <p>There was a flash, and the booming crack of a gunshot. Not ten feet away, a figure of shimmering air fired its massive rifle. The farthest commando fell, her head nothing more than a grisly canyon. The matriarch reacted instantly, her grip on them replaced by a powerful barrier. The second shot slammed into her, as the deathless form of a geth emerged from the ether. The machine’s aim was perfect, sending the next shot past her head, and into another commando. The stasis fields vanished. Niket fell in a heap, and Jane moved to help him.</p>
+        <p>The commando closest to Tali lunged forward, her eyes frenzied. She fired shot after shot into the asari, bullets puncturing her abdomen, but doing nothing to slow her down. Gripping her neck, the geth lifted Tali’s attacker off the ground; it’s optic looking right through the flesh and blood. It’s clawed fingers punched deep into her chest. There was a twist, and a horrible tearing sound. Terror blazed so bright, the whole world smeared over. Those bloodstained claws gripped Tali’s suit, lifting her up. It was too much, and she staggered back.</p>
+        <p>The huge shadow of a mantis gunship smashed through the blown-out window, buzzing just meters off the floor. Heat from the thrust vectoring nozzles seeped through Tali’s suit, momentary terror spiking at the new foe. But its deadly chin-mounted chain gun swivelled to the enemy, before sending a tide of bullets their way. Soon shockwaves followed, as Jack clambered out from the gunship. The remaining commandos fell back, under the matriarch’s impenetrable barrier. Tali followed the others up the aircraft’s rear ramp, still shaking off what felt like a dream. Falling into one of the seats, she realised her heart was pounding.</p>
+        <p>She could hear a woman crying… a girl crying. Blinking, Tali looked around. The cabin of the gunship came into view. Kasumi was in her seat, silently holding the grey box. Jane knelt beside Miranda, whose sister was bundled in her arms. There blood on the floor, human blood. Pouring from the crumpled body of Niket. Shining eyes dropped to her suit, seeing more on her, in twisted quarian handprints.</p>
+        <p>“Creator-Tali’Zorah, are you damaged?”</p>
+        <p>Tali’s heart was in her throat, pressing herself against the seat. She saw those cold metal claws, drenched in blue. Her mouth went dry, skin itching and tingling beneath her suit. The drumming of her heart grew louder, echoing in her ears. Her hands clenched tight, and she felt the painful presence of the pistol there. She raised it, unthinking. A hand gripped the gun, pulling it from her shaking hands.</p>
+        <p>“Tali, it’s okay… you’re okay.” Jane’s voice was there beside her. She tore her gaze from the machine, finding those warm blue eyes. Jane’s hand squeezed her shoulder, and the thumping slowed in her ears. But as control came back to her, anger followed. The grim reality of the scene became clear, as did the identity of its culprit. She found those eyes again, standing tall.</p>
+        <p>“Okay?” She said in disbelief, forgetting to disable her vocaliser. “None of this is okay! We almost died back there, because that thing couldn’t disable a simple secondary alarm!”</p>
+        <p>“Creator reaction time to visual stimulus is zero point one five seconds. Alarm trigger was zero point zero-”</p>
+        <p>“Quiet!” Tali roared, spinning to face it. “Don’t you dare speak!”</p>
+        <p>“That’s enough, Tali!” Jane’s voice killed her outburst stone dead. “Legion, how short was the window to intercept the alarm?”</p>
+        <p>“Zero point zero one two seconds.” She grit her teeth as it spoke freely.</p>
+        <p>“Why didn’t you get it?” Shepard asked, calm.</p>
+        <p>“This platform’s programs were tasked to capacity. Multiple redundant security systems activated in concert. Within allotted time frame, it was impossible to secure all threats. Target prioritisation was necessary. All primary objectives achieved.”</p>
+        <p>“Primary objectives.” She spat the words back at the machine. “What about him?”</p>
+        <p>The geth paused, its calculating optic looking past her pointed finger to the covered body. She could see the absence of life in that metal gaze.</p>
+        <p>“Critical damage. Multiple organs crushed or punctured: Likelihood of survival, one point five percent. Rifle cycling time one point two seconds, total targets six. Primary objectives, Shepard-Commander, Operative-Lawson, Creator-Tali’Zorah.”</p>
+        <p>Her lips pressed tightly, hearing her name come out of it. It stared back at her, serene.</p>
+        <p>“Prioritisation necessary.” It clarified.</p>
+        <p>The words were followed by a grim silence. Soon, a small whimpering cry came from the girl in Miranda’s arms. Tali felt Jane’s presence recede, looking to the one who needed the commander’s help. Everything she’d said began to sour on her tongue. Even if all of it had been true, the child hadn’t needed to hear it. To hear how her life was just a… math problem to the geth. She sat down quietly, her fingers playing in her lap as they drew close to the Normandy. Tali’s eyes fell to the floor, and stayed there until the mantis touched down in the cargo bay.</p>
+        <p>She was right; she knew it… and she hated it.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 26: Picking Up the Pieces</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch25.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html" selected>Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch27.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 26: Picking Up the Pieces</h1>
+    <div class="chapter-content">
+        <p>What had meant to be only a couple of hours had turned into a full night for the commander. Shepard stood in the elevator, every part of her sore and stiff. The Cerberus uniform shirt rubbed against what had hours ago been the burn in her back. The pad was gone, having done its job. The wounds she’d sustained were mending slowly, but already she was in better shape than most others on board. Whatever upgrades these people had given her; long-term injuries seemed a thing of the past. Some parts were still tender, faded bruises and cuts still stung during her stretches. But all of that felt secondary now.</p>
+        <p>As usual, her mind was the thing that struggled with healing. The events of the previous day were still fresh, and the sight of the Collector ship rocketing into the sky still made her fists clench. But she knew there was nothing more to be done. The time for tears had come and gone, and she’d shed hers. The Illusive Man’s new directions did little to help. The only hope of stopping these abductions permanently; was waiting for them on the other side of the Omega-Four Relay. A feat no other ship had achieved: She felt like she was trading one impossible scenario for another. She got out on the engineering deck, heading for the port cargo hold. She needed more allies, might as well start with the hardest one first.</p>
+        <p>Greeting the guards, Shepard stepped through the door. Jack’s impromptu cell had been overturned during the fighting. Her quarters hadn’t exactly been tidy before, but now the place was a complete mess. The convict was lying on her bed, watching something on her Omni-tool. Her eyes darted to Shepard as the sound caught her ear, flicking the holographic screen away. The momentary caution in her posture was quickly replaced by aloofness, though Shepard doubted its authenticity. Memories of what had transpired here just a few days ago still lingered in her mind. For her part, Jack didn’t appear angry to see her. She slowly got up, sitting off the edge of her bed with a yawn. She took Shepard in, making a show of looking the woman up and down.</p>
+        <p>“You look like shit.” Jack’s appraisal came with a roll of her neck. Shepard nodded in agreement.</p>
+        <p>“Had a rough day yesterday.” She admitted, walking over to her. She leaned against the window.</p>
+        <p>“Would’ve appreciated some warning. Y’know, when stuff goes flying around the room?” Jack’s tone was sharper. “One of your jarhead buddies came in here and strapped me to a seat.”</p>
+        <p>“Better that than winding up a smear on the wall.” Shepard matched her tone, crossing her arms. “Better for you, anyway.”</p>
+        <p>“Got your asses kicked, didn’t ya?” Her typical wicked smile came out. “Saw you carrying your little friend to the elevator.”</p>
+        <p>Shepard felt the spike of rage in her gut. Her tolerance for the convict’s behaviour had never been high to begin with, but making light of what had happened was pushing dangerously close to the line. She caught herself silently, forcing down her emotions. Jack was trying to rile her up; this was just a typical strategy. She wouldn’t let her do it again.</p>
+        <p>“Those files you mentioned, last time I was here. Still want them?” Shepard’s question wiped away her smirk</p>
+        <p>“That why you came down here, to lord this shit over me again?” She hissed.</p>
+        <p>“I came down here to talk.” Shepard answered coolly. “Think you can manage that?”</p>
+        <p>She watched Jack squirm on the bed, like she’d done the first time they met. She hated being in this position, having something offered to her with no way of taking it herself. As far as Shepard was concerned, it was a good sign. Jack set her jaw, glaring at her. Time ticked by silently as Shepard watched her weighing the options. After the resignation she’d shown last time, that genuine fear of losing her one chance, this opportunity had to work.</p>
+        <p>“Fine.” The word forced its way past clenched teeth. “Talk, then.”</p>
+        <p>“That shaking you felt yesterday, my team was trying to stop a Collector ship. They got away with thousands of innocent people.” Shepard’s recount barely got a stir behind those brown eyes.</p>
+        <p>“So?” Jack grunted. “What’s that got to do with me?”</p>
+        <p>“You’re going to help me stop them.” Shepard’s assertion got the convict’s attention. “In return, you’ll get access to the ship’s computer. Supervised, of course.”</p>
+        <p>Jack’s eyes narrowed. Her lips pulled into a sneer, silently mulling over the offer. Shepard could tell she’d made up her mind already, but she kept up the appearance for about a minute. The theatrics of it would’ve been charming, if it was anyone else.</p>
+        <p>“Why the fuck not?” She gave Shepard a confident shrug. Her bravado waned a little as the commander shook her head.</p>
+        <p>“I’m not finished. You want those files? You’re going to earn them.” The addition deflated her.</p>
+        <p>“…Alright.” She sighed, mirroring Shepard’s crossed arms. “What do you want?”</p>
+        <p>“First things first. That little stunt you pulled in the mess hall? It never happens again. Ever.” The commander’s tone was razor sharp. No snarky answer came, just a nod of understanding.</p>
+        <p>“Next, when we’re in the field you follow my orders. What I say, when I say it. Understood?”</p>
+        <p>“Yeah, yeah. Ma’am-yes-ma’am.” Jack gave her a lazy, mocking salute. Shepard was content with that.</p>
+        <p>“Good. Now, everybody on this ship has to pull their weight. What are you good at?” Jack raised an eyebrow at the question.</p>
+        <p>“Uh… killin’ shit?” Her answer soured Shepard.</p>
+        <p>“I mean, what technical skills do you have? First aid, repairs, anything like that?”</p>
+        <p>“No.”</p>
+        <p>Shepard pinched the bridge of her nose, letting out a frustrated snort. Would it have been too much to expect something useful from her, beyond shooting and the ability to dress herself. She let it go, there were contingencies for this kind of thing.</p>
+        <p>“Okay…” She said calmly. “You’ll report to Mess Sergeant Gardner then. Cooking, cleaning, he’ll find something for you to do.”</p>
+        <p>Jack’s mouth fell open.</p>
+        <p>“Are you fucking kidding me?” The sheer annoyance in her voice was almost enough to get a smile out of Shepard.</p>
+        <p>“Nope.” Shepard let herself enjoy the moment. “A little structure will do you some good. Plus it’ll smooth things over with the crew. So behave yourself.”</p>
+        <p>“For fuck’s sake…” Jack huffed. “Alright, fine, whatever.”</p>
+        <p>“There’s one more thing.” Shepard gave her a knowing look. “I need your powers.”</p>
+        <p>“Meaning you want me under a Cerberus knife.” Jack tensed up, fists clenched.</p>
+        <p>“Doctor Chakwas is a friend, and she’s not Cerberus.” Shepard explained. “Nobody’s going to hurt you. But none of this works if all I get out of you is another gun.”</p>
+        <p>Shepard’s attempts to convince her started to falter. She could see the convict retreating, this final step pressed up against something raw. Jack held her gaze for a while, not saying anything as she processed the offer. She was searching for something in Shepard, no doubt a hint that Shepard was lying. The commander didn’t budge, waiting patiently for her to make the next move. Jack’s hands fiddled with the fabric of her tank top, working through the anxiety. Finally her eyes dropped from Shepard’s.</p>
+        <p>“I don’t know…” She said, quieter than before. “What guarantee do I get that I-?”</p>
+        <p>“Look, Jack. I’m not gonna stand here and spend all day trying to convince you. Out of the two of us, you screwed me over. You either trust me enough to get what you want, or it’s back to square one. Join my crew and I’ll do what I can for you. Deal?”</p>
+        <p>Shepard extended her hand. Jack’s expression hardened into a scowl. For a moment Shepard thought she’d start shouting, lashing out over what happened last time. But the shouting didn’t come; the profanity didn’t come. The gears didn’t turn behind those brown eyes. Instead she sat there, looking at Shepard. A long, loud breath escaped the convict as her shoulders sunk. She rubbed her face, muttering something under her breath before standing up.</p>
+        <p>“Alright…” Jack nodded, taking Shepard’s hand in hers. “Deal.”</p>
+        <p>Shepard shook it firmly. She focused on the strength of Jack’s grip, ignoring the roll of her eyes. Beckoning her to follow, she led the convict out past the guards. One word was enough to dismiss them, bringing an end to Jack’s captivity. Jack kept quiet in the elevator, no doubt already knowing what was coming next. Together they headed across the crew deck, toward Miranda’s office. Several pairs of eyes looked on in shock as they went. Whatever their thoughts, most of the crew were too busy cleaning things up. In the six or so hours she’d been asleep, things were already looking better. If things went smoothly, her newest recruit would soon be joining them. With a tap of her finger, the door to the office opened. Dutifully at her desk, Miranda looked up from some last minute logistical reports with mixture of surprise and supreme distaste. Glancing from Jack to Shepard, she locked the door behind them.</p>
+        <p>“What the hell is she doing here?” Miranda snapped as she stood up.</p>
+        <p>“I’m your new teammate, precious.” Jack jeered, enjoying the moment immensely.</p>
+        <p>“We made a deal. She’s agreed to the mission, crew duties included. In exchange, we allow her access to the ship’s database.” Shepard’s explanation lit a fire behind the woman’s icy blue eyes.</p>
+        <p>“Oh, is that all? Just access to our main database, where we store all of our tactical information!”</p>
+        <p>“She’ll be supervised while using it, the relevant files will be transferred to a data-pad. I’m not going to compromise ship security.” Shepard’s assurances got the Cerberus officer rubbing her brow.</p>
+        <p>“Jesus Christ…” She sighed to herself. “You’ll be watched every second you’re in there, are we clear?”</p>
+        <p>“I’ll be good.” Jack retorted, mocking Miranda’s accent. “Long as you don’t fuck me over.”</p>
+        <p>“Alright, enough!” Shepard turned to the convict, glaring at her. “Report to mister Gardner, tell him you want the hardest job he’s got. When I come out there I better see you doing it, understood?”</p>
+        <p>“Yes ma’am!” Jack gave her another phoney salute before leaving the room with an exaggerated march. Shepard could already taste the regret souring on her tongue. The galaxy’s most powerful human biotic, it didn’t even seem worth half the trouble she was going to cause. The door snapped shut again, red lock glowing angrily. Shepard turned back to Miranda, her mask completely gone.</p>
+        <p>“Are you out of your god-damned mind?” She asked; her heels clacking as she rounded the desk.</p>
+        <p>“You talked to the Illusive Man yet?” Shepard ignored her question.</p>
+        <p>“What… yes. I’m sorry, did you not hear me?”</p>
+        <p>“He tell you we’re changing tack, no more colony intercepts?” The topic seemed to dampen her temper.</p>
+        <p>“He did.”</p>
+        <p>Shepard felt that tension in her face again. Miranda’s eyes caught hers, mirroring those same feelings. There were little imperfections in Miranda’s outfit, a zipper opened or a belt hanging loose. Her hair was done quickly, leaving more than a few strands out of place. She’d gotten less sleep than Shepard had. Imperceptible dark rings sat under her eyes, covered by makeup. The truth of their situation was palpable in the air; Shepard gave them both the opportunity to breathe it in before continuing.</p>
+        <p>“We can’t stop them Miranda, not on our own.” Shepard’s admission got a subtle tug at the corner of her mouth.</p>
+        <p>“I know, Shepard.” She concurred. “Which is why I think this is a mistake. We already have enough to worry about, without throwing Jack into the mix.”</p>
+        <p>“She’s the most powerful human biotic. This mission needs more than just you and Jacob. It needs her.”</p>
+        <p>“She’s no good with that chip in her head.”</p>
+        <p>“Jack’s willing to get the surgery. We just agreed to it downstairs.”</p>
+        <p>Whatever genuine surprise the revelation gave the Cerberus officer, it was short-lived. She felt Miranda’s doubts creeping into her while the officer processed what Shepard had said. Shepard remembered Rolston’s unconscious body in the med-bay. He’d only been up an hour before the Collector ship attacked. The thought bothered the commander more with each passing second. Was she about to make the same mistake, yet again?</p>
+        <p>“Shepard…” Her tone was softer now. “…You know it’s not a guarantee. Even if the surgery works, she may not recover all her powers. And even if she does, it’ll take time and training to express them fully.”</p>
+        <p>“Which is why I want you to help her.” Shepard’s request got a silent but sore look. “Your regimens got me back on my feet from death, Miranda. I don’t trust anyone else with this.”</p>
+        <p>“I’d be flattered if this didn’t feel like some sick punishment.” She complained. After a loud snort of dissatisfaction, she looked at Shepard. “What about you?”</p>
+        <p>“I think I handled myself pretty well back there.” Shepard’s levity got a smile out of her.</p>
+        <p>“That glowing bastard nearly disembowelled you.” Miranda stated matter-of-factly.</p>
+        <p>“Nearly.” Shepard stressed the word, before taking a more serious tone. “I appreciate the thought, but between me and Jack, I’m not the one who’ll need help. I’m hitting more shots than I miss, and my biotics seem to be in working order. You can mark the Lazarus Project a success.”</p>
+        <p>“Marginal success.” Miranda moved closer. “I’ll have to update the psych profile from aberrant neural patterns, to bloody lunatic.”</p>
+        <p>“I’ll take what I can get.” Shepard mused, content to lean against the desk with her. The silence between them held for barely a minute. Shepard started to notice her proximity, how exhausted Miranda seemed. She supposed after everything Miranda had been doing since they got back, it was well earned. The freezing chill of medi-gel foam surfaced for a moment in her mind. Aside from Tali, Miranda had been the first one to help her. Hell, her actions probably saved Shepard’s life. Unpleasant as things could be between them, there was no denying that.</p>
+        <p>“Hey…” Shepard’s voice got her attention. “I never got the chance to thank you, for what you did back there.”</p>
+        <p>“Lucky Tali was with us.” Miranda noted, with a small smile. “Otherwise your friend would’ve taken my head off.”</p>
+        <p>“Kaidan…” Shepard breathed out the regret. “Sorry. He’s… we saw some nasty things together.”</p>
+        <p>“I get it.” She nodded. “I’ve seen a few things myself. It’s… easy to blur the line between bystander and perpetrator. To judge an entire group, even an entire species, by the actions of their worst individuals.”</p>
+        <p>“Yeah…” Shepard still felt that pain, buried deep down inside. Seeing a batarian, no matter how innocuous, it still bit at her. What happened all those years ago was unforgivable. But eventually, you run out of targets for all that anger.</p>
+        <p>“It’s not easy, moving past it.” Miranda’s voice drew her gaze. Icy blue eyes watched hers. “But it’s worth trying.”</p>
+        <p>All of a sudden, Shepard became acutely aware of how close Miranda was. Dissipating the atmosphere that had been building, she got up from the desk. Miranda followed, equally shaken from the moment. The other task had already come back to Shepard, the real reason she’d dragged Jack up here.</p>
+        <p>“Come on, I’m gonna need some help with the next one.” Shepard beckoned her to follow.</p>
+        <p>“Next one?” Miranda asked, before she realised what Shepard meant. The exhaustion was back on her face.</p>
+        <p>“Garrus, where are you?” Shepard activated her earpiece as they went to the elevator.</p>
+        <p>“Cargo bay, what’s up?</p>
+        <p>“Get your rifle ready, we’re recruiting the paperweight.”</p>
+        <p>Shepard noticed her XO shaking her head. The turian’s affirmative came through, before she switched frequencies to Jacob and Zaeed. Two more people would be enough. She heard cracks and pops as Miranda stretched out the kinks from sitting down, displaying impressive contortion in the confines of the elevator, never mind her skin-tight outfit. Miranda went from weary, to bright-eyed and ready in an instant. There was no real need to discuss the plan; dealing with a krogan was always straightforward. Instead, the commander pursued something else.</p>
+        <p>“We got a destination for dry-dock yet?” She asked.</p>
+        <p>“We do.” Miranda flicked the details from her Omni-tool to Shepard’s. “Illium.”</p>
+        <p>“Not the Citadel?”</p>
+        <p>“Too many eyes there, we take the Normandy apart and someone’s bound to notice. But Illium’s a free-trade world, a little experiment by the asari on the edge of the Terminus Systems. We’ll be in Nos Astra for a few days while repairs are done. It’s a beautiful city. Intel says we’ve made contact with a local there. She’s coordinating things.”</p>
+        <p>“A local?” Shepard cocked an eyebrow. “That’s a little vague, isn’t it?”</p>
+        <p>“Compartmentalisation.” Miranda shrugged. “Occupational hazard for working with Cerberus.”</p>
+        <p>“Mm-hmm… I’ve noticed.”</p>
+        <p>Shepard couldn’t be bothered chasing her around for more information. On top of being a fool’s errand, she was enjoying the reprieve from their typical combative partnership. For just a moment, she thought there was a smirk on Miranda’s face. There were times where she worried that Miranda could read her mind. Or maybe she was just that obvious nowadays. If there was any playfulness on those perfect features, it vanished when the doors opened to the cargo bay. The pair of them strode across the mostly cleaned up deck toward the gestation tank. Garrus was leaned against a cargo crate, adjusting the settings on his rifle. Shepard was glad to see the turian had come through Horizon mostly unscathed, maybe with a hint of jealousy. Without a word the three of them stopped in front of the tank, taking in the sheer size of its occupant while Jacob and Zaeed jogged over. The old merc let out a long whistle as he swaggered up.</p>
+        <p>“Big bastard.”</p>
+        <p>“Got a plan, Shepard?” Garrus asked, with a little glint in his eye. “Or just wanted an audience while it eats you.”</p>
+        <p>“I’m gonna talk to him.” The commander mused.</p>
+        <p>“Uh-huh, and what if he’s a krogan on the inside too?”</p>
+        <p>“You’ll see.” Shepard gave him a smile. “No one shoots unless I give the order.”</p>
+        <p>She could see Garrus was catching on, glancing to Miranda. With a nod he found a position on a nearby cargo crate, fixing his sights on the tank. Jacob and Zaeed were next. Both of them took several steps back, shotgun and assault rifle at the ready. Satisfied with the group’s spacing, Shepard kept her XO close. Shoulder-to-shoulder with Miranda, she gave EDI the order to open the quarantine seal. Despite reinforcements and a fair idea of how things would go, watching the amniotic fluid slowly drain out of the glass capsule was still unnerving. Without the cloudy medium, the full visage of the krogan was clear. He truly was massive, with beady blue eyes set within a wide head. Rust coloured scales covered a powerful, muscular body. Encased in a suit of silver armour, the plates on the krogan’s head were still segmented: He was still maturing. It was strange to see such a clean krogan, without a single scar or stain on his armour. There was something just… new, about him.</p>
+        <p>The absent-minded appraisal stopped short as the heavy locks on the gestation tank clunked open. The glass followed, swinging outward from an invisible seam down the middle. For a second the krogan stood there, lifeless. Then Shepard saw it. The reptilian, slitted pupils widened and constricted, adjusting to the light. Without the support of the fluid, armour and muscle came crashing down. The krogan caught himself, coughing and retching before bringing up a bellyful of liquid.</p>
+        <p>Shepard took a careful step back; just enough to offset what was coming. She could feel the static electricity coming off Miranda; she was ready. The krogan slowly rose, getting off his hands and knees and standing tall. Towering over all of them, his beady eyes fixed on Shepard. Leathery reptilian lips curled into a snarl, followed by a guttural roar as he charged. The footsteps slammed down on the metal floor, less than a second from reaching the commander. Surging forward, the krogan lunged.</p>
+        <p>Shepard felt the wind of claws on the tip of her nose. Roars of anger became snarls and bellows of frustration. Inches away the krogan’s intimidating form dangled in mid-air, suspended in a biotic field. Wild flailing sent her attacker tumbling end-over-end, trying in vain to get the right angle. Miranda’s timing had been excellent, leaving their new guest completely helpless. Resting a hand on her holster, Shepard patiently waited as the spinning slowed and stopped. Face-to-face with the upside down krogan, she took the opportunity to begin negotiations.</p>
+        <p>“Can you understand me?” She asked. The krogan’s eyes narrowed.</p>
+        <p>“Human, female.” The answer came in a low growl. “Hmm… more humans. Males. Female, biotic.” A glance into the distance brought another growl. “…Turian.”</p>
+        <p>“I just released you from that tank. Any reason you wanted to attack me?” Shepard matched the krogan’s intense glare.</p>
+        <p>“Want?” The krogan looked surprised. “I do not… want. I do what I’m meant to, fight and determine the strongest.&quot;</p>
+        <p>“Why?” Shepard’s question got another growl of frustration.</p>
+        <p>“Why… Okeer spoke of… the enemy that threatens all my people. His words are unclear… hollow.” He bellowed in anger. “I don’t need a reason! Fight me! Prove your worth!”</p>
+        <p>“See that?” The commander pointed down the length of the cargo bay. The krogan’s head craned to follow, spotting the cargo ramp sealing the deck. Slitted eyes focused back on her.</p>
+        <p>“I’ve had a long, shitty day.” Shepard leaned closer. “So I’m going to say this once. Join my crew, and put those fighting skills to good use. Or I’ll blow you out the airlock.”</p>
+        <p>Anticipating what came next, she straightened up as another swipe just missed. The krogan’s show of defiance sent him spinning again. Shepard drew her pistol, using it to bring the helpless reptile to a stop.</p>
+        <p>“You offer me servitude or death.” The krogan grumbled.</p>
+        <p>“That’s right.” Shepard kept a hard look. “Which’ll it be?” She watched those leathery features break into a smile.</p>
+        <p>“Ha!” The krogan’s laughter hit the group like a truck. “Maybe you are worthy!”</p>
+        <p>Shepard gave Miranda the nod. In an instant, the krogan crashed down to the floor. His rumbling chuckles continued, utterly relishing the moment. Brushing himself off, the new recruit stood tall. Weapons were slung, and a red targeting laser blinked off.</p>
+        <p>“So, what can you do?” Shepard asked, crossing her arms expectantly.</p>
+        <p>“I am trained.” The krogan assured her. “The tank taught me much, about war and fighting. Every skill I might need comes as easy as breathing.” He flexed the impressive muscles in his arms. “I am strong, your enemies will die.”</p>
+        <p>“That’ll do for now.” The commander nodded. “Zaeed, get him squared away.”</p>
+        <p>“Come on you big bastard.” The merc waved him over. Content to leave them to it, Shepard stayed behind.</p>
+        <p>“Wait.” The krogan turned back to her. “I need a name.”</p>
+        <p>“A… name?” The request took her aback. “Didn’t the uh, tank give you one?”</p>
+        <p>“No…” The krogan closed his eyes. “Okeer’s voice… warlord, legacy… grunt… Grunt.” Snorting with approval he looked at Shepard. “Short and meaningless, it will do. I am Grunt!”</p>
+        <p>“I’m Commander Shepard.”</p>
+        <p>“Commander… Shepard… good!” Grunt’s enthusiastic nod perplexed the woman. Seemingly content, Grunt followed Zaeed back to the elevator.</p>
+        <p>Garrus stood quietly nearby, having made his way over to keep an eye on things. Shepard’s performance had been a highlight, gritting her flat teeth and staring down a krogan. It never ceased to surprise him how such a soft-skinned being could pull off actually being scary. Without any direct talking, Miranda’s presence had been tolerable. She’d caught the krogan before there was any trouble, not that it would’ve mattered anyway. At only ten meters away, a head that big was an easy target.</p>
+        <p>He’d noticed that for all his self-professed prowess, “Grunt” hadn’t activated his armour’s kinetic barrier. Perhaps a clone-training program couldn’t teach common sense. He folded his rifle, slinging it over his back as the three humans talked for a bit. Keen hearing caught most of the conversation; from the sounds of it Illium was the next stop. Cerberus must have surmised the dangers of dry-docking their terrorist Normandy on the Citadel. Part of him was disappointed; it would’ve been worth it to see them carried off in handcuffs. The fantasy was shooed away when the two Cerberus agents headed off, leaving a friendly face approaching.</p>
+        <p>“I’ll blow you out the airlock.” Garrus growled, mimicking the woman’s threat. “Nice touch.”</p>
+        <p>“I thought so.” Shepard agreed. Her blue eyes glanced at the empty tank. “Figured it was time to get this over and done with.”</p>
+        <p>“Shame, I was thinking we could’ve sold him. Imagine what some stuck-up salarian would pay for authentic krogan interior décor.” He ran his talons along his chin, enjoying his friend’s chuckle.</p>
+        <p>“We’ll have to settle for a super-soldier. Mordin says he’s never seen anything like him.”</p>
+        <p>“You say that like it’s a good thing.” The retort failed to keep Shepard’s smile.</p>
+        <p>“It might’ve been…”</p>
+        <p>Garrus watched his friend’s gaze travel along the large room. Though all of the loose cargo had been tied down again, there were still dents and scrapes everywhere. Most of the broken or missing panels had been patched over, but it was still a messy sight. The worst of it was the gym gear. Barbells bent in half, weights cracked or lodged into walls. The more expensive machines never stood a chance. Only the mats had come through all right, though still scuffed. It would all need replacing.</p>
+        <p>Even just a few weeks aboard had already shaped a few memories, some of them right here. Maybe a shameful one is his case. Whatever they did to Shepard, it carried through in her fists. He’d only caught a few seconds of the battle with the strange glowing Collector; more concerned with bringing down that shrieking, stomping thing it brought along. But beaten or not, Shepard had reduced the thing’s head to mulch. That ferocity still unnerved him, perhaps more so than seeing the Normandy burning again.</p>
+        <p>“I never got the chance to check in, yesterday.” The commander’s voice carried her usual warmth. “How’re you holding up?”</p>
+        <p>“Oh, you know me. A few scrapes, sore arm from pulling your ass out of the fire.” Garrus gave the woman a flare of his mandibles. “I was pretty broken up about the forward cannon, though.”</p>
+        <p>“That’s why you’re down here.” Shepard glanced over to the Mako. “Looking for the next best thing?”</p>
+        <p>“It’s therapeutic.” He shot back, leading the commander over. “I’d tell you to try it sometime, if you had any talents beyond talking and shooting.”</p>
+        <p>The pair squeezed through the Mako’s slim troop doors. Finding his favourite seat, Garrus planted himself. Shepard followed suit, sitting across from him. He could see the quizzical look on the commander’s face, enjoying the advantage. The turian reached one of the small overhead compartments, retrieving a pair of bottles: A quick check to make sure which was which, before he handed one over. The skin on Shepard’s face creased into a confused smile. With a tap of his Omni-tool, Garrus sealed the doors shut.</p>
+        <p>“Private stock, Vakarian?” Shepard asked, looking up to the compartment.</p>
+        <p>“Emergency reserve” He corrected the woman. “For a, what is it? A rainy day?”</p>
+        <p>“I’d say this qualifies.” The commander swirled the liquor in her bottle. “Gabby’s still in the med-bay, along with two others.”</p>
+        <p>“Mm-hmm… Donnelley’s taking it pretty hard.”</p>
+        <p>“Thanks for filling in. I know it’s not your standard job.”</p>
+        <p>“Ah, please.” He waved Shepard’s concerns away. “I mostly just babysit the monitors anyway. You don’t think Miss Prodigy lets me actually touch anything, do you?”</p>
+        <p>“…I suppose not.” Shepard agreed, sniggering.</p>
+        <p>Garrus let the absence of words take hold for a minute, taking a swig from the bottle. He mulled over exactly how to ask the question, watching Shepard carefully for any obvious signs. He’d been relieved last night, when Tali returned to engineering. Something had happened; she must have gone to see Shepard. After a disaster like Horizon, he could only guess at how all of that had turned out. But the quarian had been in decent spirits, and that edgy tingle in her voice was gone. Good signs, at least. But it wasn’t enough to answer the question. He took another swig.</p>
+        <p>“How’re things looking?” Garrus finally asked. “I saw you up on the engineering deck.”</p>
+        <p>“Brokered a deal with Jack, so I’m giving it about two weeks before that bites me in the ass.” Shepard rolled her eyes, deflating a little. “Illusive Man’s having us change tactics. We’re not going after colony attacks anymore.”</p>
+        <p>“…It’s probably for the best.” Garrus gave her a sympathetic look. “No fun to hear it, I know. But even if we were ready, the Collectors would have us on the back-foot every time. We can’t formulate a plan of attack if we’re always reacting.”</p>
+        <p>Shepard nodded in agreement; though it was obvious the idea turned the woman’s stomach. Garrus felt bad for her, but this was always a soft spot for humans. Though he was too young to remember it, schools on Palaven had included a course on the Relay Three-Fourteen Incident. He still recalled the teacher’s shock during the presentation. The humans had brought an entire fleet, one used to guard their most secure outpost, to defend one colony: A massive response to a minor occupation. To them, attacking even a handful of people had been enough to trigger a full-scale war. But that same impulse had led to the surrender of Shanxi in the first place. Spilling even a drop of human blood, affected them greatly. It was just a fundamental difference between their species, not worth rehashing now.</p>
+        <p>“Tali came up to see me.”</p>
+        <p>“How’d… that go?” Garrus braced himself for what was coming.</p>
+        <p>“She gave me the rundown, took me through the damage report.” Shepard’s expression was dark, “Helped me with this damn gel pad. I couldn’t, uh… couldn’t do it myself.” She trailed off.</p>
+        <p>“Shepard?”</p>
+        <p>“I told her, Garrus… all of it.” She looked down at the floor, the bottle forgotten in her hand. “…I’m an idiot.”</p>
+        <p>“It’s not exactly happy news.” Garrus pointed out. “Or easy to believe.”</p>
+        <p>“I should have told her weeks ago.” He could see the woman’s eyes, still far away.</p>
+        <p>“She didn’t come back down in tears. I’m assuming things went okay?” The prompt seemed to bring her back.</p>
+        <p>“Remember how I was when I told you?”</p>
+        <p>“A mess?” He saw that smile again.</p>
+        <p>“Yeah… a mess. I think I freaked her out, clung to her like I was five years old.” Shepard sighed. “God, I haven’t done anything like that since…” Her blue eyes widened a little. Whatever the revelation, she kept it to herself.</p>
+        <p>“I wouldn’t worry about it.” Garrus took another swig, encouraging Shepard to do the same. “You’ve always been the earnest, charmless one anyway.”</p>
+        <p>“Gee, thanks.” Shepard looked at the bottle. “Is this your strategy Vakarian? Ply me with alcohol and make fun of me?”</p>
+        <p>“Only when you need it.” Garrus waved off her pouting. “It’s good you cleared the air. We both know you shouldn’t be carrying around stuff like that. Spirits, you two are as bad as each other.”</p>
+        <p>“Yeah, well… you can consider this whole fucking issue put to bed. I don’t wanna think about clones, or resurrection, or any of that shit anymore.”</p>
+        <p>“I’ll drink to that.” Garrus leaned over, offering his bottle. Shepard’s clinked against it, a toast to moving on.</p>
+        <p>“Now.” Shepard stood up, half bent-over in the Mako’s cabin. “Show me a thing or two about calibrating mass accelerators.”</p>
+        <p>“You serious?” Garrus raised a brow-plate, getting a nod from the commander. “Spirits… I’m gonna need another beer.”</p>
+    </div>
+</body>
+</html>

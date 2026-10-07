@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15: No More Hiding</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch14.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html" selected>Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html">Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch16.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 15: No More Hiding</h1>
+    <div class="chapter-content">
+        <p>It had been nearly three days since the Normandy had departed the Citadel. The “civilian frigate” had certainly gotten some suspicious looks while she was docked, but C-Sec hadn’t delayed anything. Restocking had gone smoothly; with calls from the Presidium making sure there were no hold ups. By the time everyone was back on board, she’d been ready to depart. Shepard had spent the morning looking over the next dossier. They were on their way to a prison ship, the Purgatory. From the specs it looked like some old agriculture ship, something to transport animals in. A morbid irony grew in her, seemed like the perfect place for scum like that.</p>
+        <p>The whole thing was shaping up to be far more low-key than the previous missions. Miranda was already in talks with the warden, preparing a substantial payment for the release of a particular prisoner, Jack. The file on her had been anaemic to say the least: A career criminal, wanted for a number of extremely violent and destructive crimes. The list had been long, with everything ranging from Piracy and murder, all the way down to vandalism. No personal details or even a picture: Odd for someone with such a prestigious rap sheet. The only other detail mentioned aside from her crimes and psych profile was the main draw for her recruitment. She was perhaps the single most powerful human biotic ever discovered.</p>
+        <p>The idea bothered her. The last thing they needed was an unstable human atom bomb on board. Hell as far as she was concerned, they already had one. Shepard paused at the door to the Tech Lab, leaning against the wall. She let herself enjoy that familiar ache that came from working out. It might’ve taken a few boring hours to set up the gym in the cargo bay, but it had certainly been worth it. Running, lifts, squats, bag time, all of it was just what she needed: Somewhere to be physical, to push all the bullshit out of her mind and just focus on the moment.</p>
+        <p>Expanding the equipment had been the right call; it wasn’t long before she was sharing the space with everyone. Of course her morning routines were graced by Miss Lawson’s presence. She’d picked up the charming habit of scanning Shepard for physiological readouts while the commander exercised, along with questions to test her reaction time. She really was a special lady, able to carry out a woman’s recovery from death itself with all the warmth of a praying mantis.</p>
+        <p>There were some true positives, beyond getting to spar with the Cerberus agent at the end of every session. Miranda was still fast, and hard-hitting, but Shepard had definitely felt her flinch more than once just this morning. If nothing else, Shepard’s body seemed to be improving at least. And there were admittedly worse things than training with a beautiful woman in skin-tight gym gear. But sometimes she just wanted to unwind, climb on a machine and push herself. Yesterday evening had brought an unexpected and pleasant surprise. The gym had been empty except for a certain quarian, who herself had been looking for a moment alone. Tali had joined Shepard on the running machines, the two of them squaring up for a little race. Sharing in the bliss of mindless action, the commander never stood a chance.</p>
+        <p>She was bigger and stronger, but the engineer ran like the wind. She couldn’t help stealing glances at Tali’s form; long, loping legs carried her friend like coiled springs. Even in the suit she kept perfect form, pushing the machine to its limits beneath her two-toed feet. Shepard had pushed harder, forcing every last drop of energy. But after what felt like an eternity she tapped out, slowing the machine. Panting from exertion, she sat down on the running belt. The quarian had joined her soon after, similarly breathless. In the heat of the moment, she’d made a joke: Some stupid turn of phrase that didn’t even stick in her memory. But the sound of Tali’s lilting laughter afterward, it was still clear as day.</p>
+        <p>Shepard touched her arm, unthinking. Tali hadn’t laughed like that since the night in the commander’s cabin, two years ago… Shepard had almost forgotten what it sounded like.</p>
+        <p>The door to the Tech Lab opened to a truly dichotomous scene. The most advanced technology money could buy and fit aboard a warship, contrasting with just the sheer mess of things scattered about. The resident genius of the Normandy was perhaps the strangest salarian the commander had ever met. It wasn’t right to judge a species by human standards. But allowing that indulgence for a moment, most had been uptight, neurotic and condescending.</p>
+        <p>With one in particular being such an asshole, that it had taken all of Shepard’s willpower not to paint the walls of the bastard’s Noveria office with brain matter. There were exceptions though, Captain Kirrahe had been a brave soldier and leader, and without his help the commander might’ve lost a lot more on Virmire than she already had. Perhaps it was just a matter of limited perspective, she’d never really had the chance to work with a salarian before this mission.</p>
+        <p>Man, did Mordin Solus fix that. A scientist with such an extensive catalogue of published papers and guest appearances you’d think he was a celebrity. Speaking in a weird, stilted cadence that seemed closer to an actual train of thought rather than conversation. He managed to be both friendly and polite, but also incredibly blunt and incisive at the same time. Shepard was a big enough woman to admit she’d met some people who outstripped her own intellect before. But Mordin was that special breed of person who could make you feel stupid just listening to him.</p>
+        <p>Fast-talking and descriptive enough to explain complex theories in patronising simplicity, and yet still leave you feeling like a child when the talking was done. The salarian’s time in STG was apparent the moment they’d met, he was calm and collected despite the fighting in the Omega slums, and quick on the draw to demonstrate his skill with a gun. Hearing him talk it was hard to imagine a violent bone in the professor’s body, but that look in his large, dark eyes was unmistakable.</p>
+        <p>“Shepard! How can I help?” Mordin’s tone was energetic as ever.</p>
+        <p>“I was just looking to touch base professor Solus, we haven’t really had time to talk since you came aboard.” The commander answered.</p>
+        <p>“Please, Mordin sufficient. No need for professional titles, want to foster close working environment. First name basis.” The salarian raised his hand with a smile.</p>
+        <p>“Okay… Mordin.” Shepard corrected herself. “How’s everything going, is the lab working out for you?”</p>
+        <p>“Yes! More than satisfactory. Minimal distractions, high-quality equipment, AI in particular very helpful.”</p>
+        <p>“That’s good to hear. How about your assistant, any word from Omega?”</p>
+        <p>“Cure a success, violence has slowed, good news so far. Left him the security mechs, just in case.” Mordin chuckled. “Also… wanted me to convey his apology.”</p>
+        <p>“Apology? For what?”</p>
+        <p>“Regarding hostage situation. Apparently said some things; implied you murdered batarians to save him. Cold-blooded.”</p>
+        <p>“Ah…”</p>
+        <p>“Wanted to apologise. High-stress environment, emotionally vulnerable. Didn’t mean what he said.” Mordin assured her, clearly perturbed himself.</p>
+        <p>“You can tell him it’s okay.” Shepard nodded sympathetically. “Sometimes things don’t always… turn out like we want them to.” She paused for a moment. “Speaking of which, I wanted to thank you for helping Reegar.”</p>
+        <p>“No thanks needed, happy to help.” Mordin’s tone lightened. “Karin Chakwas excellent surgeon, knowledge of quarian anatomy impressive. Complete contaminant removal makes recovery easier.”</p>
+        <p>“He told me your meds probably saved his life.”</p>
+        <p>“Possibly. Kal’Reegar healthy quarian male, likely would’ve survived infection regardless. However materials for making meds available, was able to synthesise quickly to head off symptoms.” the professor’s answer surprised Shepard.</p>
+        <p>“Wait. You made them?”</p>
+        <p>“Yes. Simple long-lasting antihistamine. Studied quarian biology at university, wrote my dissertation on symbiotic micro-biome. Work done for thesis caught attention of STG.”</p>
+        <p>“How so?”</p>
+        <p>“Hypothesis based around possibility for retroviral gene-therapy. Contrary to popular belief, quarian immune system not absent, simply dormant. Removal from native environment inhibits natural activation of functionality. Presence of correct stimuli activates process, long-term health benefits. Study was to create specific viral strain, then infect all quarians and promote immune system activation. Species-wide improvement, allow for colonisation efforts. No more Migrant Fleet.”</p>
+        <p>“That’s… amazing.” Shepard said, stunned. “What happened? Was it successful?” She saw Mordin’s smile fall.</p>
+        <p>“…No. Intricacies of micro-biome greater than originally thought. Individual development based around unique factors. Age, sex, ethnicity, all contribute in slight differences to internal environments. No broad-spectrum viability, too many variables.” Mordin gave a defeated sigh.</p>
+        <p>“Oh… I see.”</p>
+        <p>“Not total loss. Objective failed, but many discoveries made. Was able to develop hyper-efficient carrier virus for widespread infection. Effective gene-manipulation with minimal margin for mutations or degradation. Compiled understanding for dextro-amino biology and genetics, useful for individual treatment. Ultimately research considered success. STG offered internship afterward.”</p>
+        <p>Mordin seemed a little conflicted when he spoke about STG. He’d certainly danced around what exactly about his research had the salarian government so interested. But that thought was on the periphery of Shepard’s mind. Something else claimed her attention, something far more important.</p>
+        <p>“What do you mean treatment?” She asked. Mordin’s eyes lit up again.</p>
+        <p>“Though unable to achieve effect through retrovirus, fully understand immune-development process. Native Rannoch fauna undergo symbiotic development with plant life, receive beneficial infection. Was able to develop regimen of herbal supplements and injections to simulate effects. Over multiple month period, significant improvement.” He said proudly.</p>
+        <p>“Would you be able to do that here, create the treatment?” Shepard asked. Mordin went quiet, looking the human in the eye.</p>
+        <p>“For Tali’Zorah’s benefit, correct?”</p>
+        <p>“…Yeah.” The commander nodded. “She’s a good friend, and I’d like to help her however I can. Not to mention how important she is to this mission.”</p>
+        <p>“Of course, concern for friends understandable. Good sign for mental health too.” Mordin pondered the question again, staring off at the wall. “Development problematic. Focused on Collector countermeasure. Narrowed down solution to local jamming device, still fine tuning emitter frequency. Looking for blind spot in seeker swarm sensors. Don’t want to risk ground team.”</p>
+        <p>“I understand.” Shepard assured the professor. “Stopping the Collector’s is your top priority. I don’t want anything else getting in the way of that countermeasure.”</p>
+        <p>“Appreciate it Shepard. After prototyping phase complete, will look into possible treatment for Tali’Zorah.” Mordin promised.</p>
+        <p>After making her way back to the CIC, the commander was in a daze. Checking through her emails, she couldn’t stop thinking about what Mordin had said: A treatment, a working treatment for the quarian immune system. Sure it might not be able to cure every quarian, but if she could help Tali, give her back the health taken by life in the flotilla… it’d be a miracle. As she looked through the messages, chatting idly with Kelly, the urge to go down to engineering grew by the second. Every part of her wanted to tell Tali, but until the professor actually had something viable, it would just be false hope. She couldn’t do that to her.</p>
+        <p>No, she’d have to wait. When the time was right, when the details were hashed out and things were in place, then she could share the news. In an attempt to get her mind back on track, Shepard opened two emails that had just come in. One from the Citadel, and the other form the Migrant Fleet. The first was from Admiral Rael’Zorah, the king of the quarians himself. It was a curt letter; conveying a reluctant offering for his daughter to serve on the Normandy again, with a threat of violence thrown in for good measure should anything happen to her. He was definitely the ray of sunshine Tali’d described him to be.</p>
+        <p>The second one; was from Doctor Chloe Michel. The message was spruced with kind words and well wishes. The young French woman had always been a friendly face during the Saren mission. Clearing up her problems had barely felt like work at all. But further down the page, was an invitation. She understood that Shepard had already left the Citadel, but that she would love to catch up whenever the commander was there next. Shepard had to stifle a grin when she noticed just how many times Michel inquired after Garrus in the message. The doctor had simply made the assumption that the two were inseparable, which current circumstances hardly disputed.</p>
+        <p>She hoped he was well, and that it was hard to get a hold of the brave turian. The message bemoaned the former C-Sec officer’s unshakeable focus, his drive to pursue grand moral crusades. How such an incorruptible and determined man struggled to see the other things in life… and people around him. The almost naked admission near the end got a snort out of the commander. She’d always suspected the doctor had feelings for Garrus, but seeing it written out like old world poetry was too much.</p>
+        <p>Unable to resist, Shepard sent her a reply. It’d probably take a couple days to reach her, but the idea of catching up sounded great the next time she was on the Citadel. Even if things were tense now, another friendly face would do them all some good. She was happy to report that Michel’s assumptions were correct, that both Garrus and Tali were currently serving with her. It wasn’t the truth, but she assuaged her concerns about the turian regardless. There wasn’t any need to worry her. After adding in thanks for her part in Shepard’s investigation, the commander wrote down a few suggestions for meeting up, most revolving around eating out somewhere. The urge to suggest bowling was definitely there, but Shepard considered herself a measured woman. Capping it all off with some kind words of her own, the email was sent.</p>
+        <p>For a minute she mulled over the idea of heading down to the main battery. The pretence of course was to scold Garrus for not answering his messages, but beyond that she needed to know what happened. The longer this went on, the more it was clear that something was wrong. Whatever had transpired back on Omega wasn’t just a skin-of-their-teeth battle. There was a recognisable weight in the turian’s eyes, but without an opening Shepard knew he was too well versed in battlefield psychology to just let her in. Once again, the commander felt the sapping cold of being too late. How much pain could’ve been avoided if she’d just gotten there sooner? How much pain could’ve been avoided if she never left at all?</p>
+        <p>After arriving on the Crew Deck, Shepard looked up past the sleeper pods. Taking a plate of food back the main mess table, she sat down and tried to focus on eating. The thought wouldn’t leave her alone; she knew it had to be resolved sooner or later. But she also knew the kind of turian Garrus was. He’d always been a friend, someone trustworthy. But he also had a wall, something that had probably always been there. He was a professional, and passingly mature in his disposition, which meant that if he didn’t want something to be discussed, the endeavour would be like pulling teeth.</p>
+        <p>She’d have to find an opening, a time and a place. Somewhere the two of them would let their guard down. The plan began to form in her head, hampered only by one last niggling detail. What exactly was she going to find? Beyond the carnage Garrus had been rescued from, there was two years that he didn’t breathe a word about. The possibilities were endless, and none of them good.</p>
+        <p>“Uh… Commander?” A Scottish voice broke the woman from her thoughts. Looking up from her plate, Shepard saw the inseparable Alliance grease monkeys.</p>
+        <p>“Ken, Gabby.” She took a moment to gather herself. “What’s up?”</p>
+        <p>“Oh, it’s nothing really.” Ken assured her. “We were just hoping to get a moment of your time. You see, we’ve been noticing some… discrepancies – all of it minor of course! Strange shift hours, mislabelled reports. But nothing we want to suggest…”</p>
+        <p>“What Kenneth is trying to say.” Gabby cut the man off. “Is that we’re worried about Tali.&quot;</p>
+        <p>“What’s the problem?” Shepard asked, concern building in her. “Are you having issues working together?”</p>
+        <p>“No! No, nothing like that.” Gabby quickly assured Shepard. “Tali’s been wonderful to work with. She’s polite and respectful, and she clearly knows her stuff.”</p>
+        <p>“A little quiet maybe.” Ken mused, getting a glare from his counterpart.</p>
+        <p>“We think there’s something wrong with her.” She explained. “When we were correlating our findings yesterday, we found errors in her work: Most of its minor stuff, easy to catch. But it’s not really the kind of mistake someone like her would make.”</p>
+        <p>“What do you think’s causing it then?” Shepard asked.</p>
+        <p>“If I had to guess, maybe she’s tired?” Gabby shrugged. “Some of her work reminds me of late nights back in tech academy. But it’s kinda hard to tell with the suit.”</p>
+        <p>“Any way to know for certain?”</p>
+        <p>“Funny you should ask.” Ken spoke up. “I was running some maintenance on Tali’s console when she was off shift. Diagnostics revealed strange login times… like dead of the night strange.”</p>
+        <p>“There’s been other thing’s too.” Gabby added. “Sometimes she’ll just space out at her workstation, not responding when he talk to her.”</p>
+        <p>“It’s probably the bucket on her head.”</p>
+        <p>“It’s not the bucket, Ken!” She snapped. “There’s also been a couple of… I don’t know, flinches? Like sometimes a pressure valve will auto-release and the poor thing nearly jumps out of her suit. It’s not all the time, but this isn’t really the kind of thing a lifelong mechanic would even sneeze at.”</p>
+        <p>The two engineers exchanged a look.</p>
+        <p>“We’re not trying to get her in trouble ma’am.” Gabby said nervously. “But we thought you should know, being her friend and all.”</p>
+        <p>“Plus, it’d be nice to know the drive core isn’t gonna explode because she forgot to carry the two.” Ken added with a small grin, earning the fastest punch in the arm Shepard had ever seen.</p>
+        <p>“Thanks guys, I appreciate you keeping an eye on her.” The commander said, her reply met with relieved exhales from both of them. Getting up from the table, she watched them scurry back to the elevator, the sound of an argument already brewing. Following them for a bit, she made a turn into the unoccupied starboard observation room. After closing the shutter, Shepard allowed herself a small groan. She didn’t want to do this, but she wasn’t going to let her friend suffer in silence.</p>
+        <p>“EDI?” She summoned the AI.</p>
+        <p>“Yes Shepard?”</p>
+        <p>“Have you noticed any unusual activity from Tali’s sleeper pod?”</p>
+        <p>“Tali’Zorah’s sleeper pod preferences were customised approximately nineteen hours after first boarding. Among standard parameters for quarian comfort, remote activation of glass fogging was selected.”</p>
+        <p>“So the pod can appear occupied, without anyone inside?”</p>
+        <p>“Correct.”</p>
+        <p>“…Alright. Any sensor recordings showing Tali out of her pod during bunk time?”</p>
+        <p>“Yes, there has been one example of incident per day since first boarding. Tali’Zorah remained out of pod for the entire duration of her first off-shift sleeping period. With multiple-hour occurrences on subsequent periods.”</p>
+        <p>“Damn it.” Shepard said to herself. “I don’t suppose you could give me an estimated time for when she’s out of bed?”</p>
+        <p>“Scanning for pattern… The most likely times for Tali’Zorah’s out of pod activity are between 00:30 and 05:00 hours. However, past data points are not guarantees of future behaviour.”</p>
+        <p>“Got it. That’ll be all.”</p>
+        <p>Shepard pinched the bridge of her nose, cursing herself for being such an idiot. The signs had been there, right in front of her! Tali had damn well run off to the bathroom, no doubt to spare Shepard the view of her best friend suffering through an attack. How much longer would she have let it go on? She knew from experience, this wasn’t the kind of thing you just come on out with. No one ever wants to. No, instead they’d rather struggle on, to be there for others. After everything Tali had done for her, it was hardly surprising. But she knew this monster all too well, and she damn well wasn’t going to let Tali face it alone.</p>
+        <p>…</p>
+        <p>The stone ruins of the city were bathed in the greens and pinks of a constant aurora. The effect was surreal, as if the whole planet were kept inside a terrarium, with a bored child covering the lights above in cellophane. Tali ran full pelt, her natural night vision doing its best to alert her to the endless rubble. Behind her the boom of an explosion sounded, pinks and greens momentarily replaced by a flash of orange. There was a burst of static in her ear, one of the lookout teams was gone: Jaro’s team. She pushed herself harder, yelling into her helmet.</p>
+        <p>“Dr Vassa! Are you reading? Is your team safe?”</p>
+        <p>Nothing.</p>
+        <p>The other quarians behind her were keeping pace, each one scanning constantly for the geth ship. Rounding the corner together, they finally saw the observatory. The other marines hadn’t wanted to go; they thought the science team were good as dead. But she couldn’t abandon them. In the end Kal took her side, and they’d set off across the dark streets to try and reach the civilians. As they got closer, a signal began to garble in her helmet. She strained to hear it over the distant but closing sounds of gunfire.</p>
+        <p>“…ali? We’re ho… …in the basement! Nella’s… …I don’t think she can walk.” Tola’s voice was strangled out by static.</p>
+        <p>“We’re almost there!” Tali yelled back, her eyes glued to the looming building. “Stay together, we’ll get you out!”</p>
+        <p>Kal echoed the sentiment, along with the other marines. Closing in on the courtyard, fighting could be heard from within the building. Pistol tracers flashed out from the main entrance, followed by the glowing beam of the digging laser. The geth were invisible in the gloom, with only the spraying of bright blue phasic rounds to show they were there. The squad began to fan out, looking for targets to engage.</p>
+        <p>That was when they felt it. The ground shook. The air began to crackle.</p>
+        <p>A roar came in from above.</p>
+        <p>Something inside the young woman told her to run. Her legs obeyed and she sprinted toward the building. The deafening sound closed in behind her, then it was all around her. The pinks and greens that coloured the ground beneath her feet were snuffed out by a huge shadow. The sky disappeared.</p>
+        <p>A flash… then fire.</p>
+        <p>The force of it flung her back. She looked up from her daze to see the observatory burning. She could hear the screams in her helmet, voices begging for help. The sounds of bending steel and crumbling rock soon overwhelmed the airwaves, along with the sickening crunch of a helmet radio being crushed under tonnes of debris. The entire building began to fall, blanketing the courtyard in a cloud of dust.</p>
+        <p>But what came next was worse.</p>
+        <p>A faint sound, buried beneath rubble and static.</p>
+        <p>A lone voice, barely more than a stifled groan.</p>
+        <p>Still alive…</p>
+        <p>Tali felt a familiar wetness in her suit as she was shaken back to consciousness. She was trembling; it took effort just to use the pod’s controls. For an agonising minute she forced her hand to obey her, tapping the input code on the hologram before the obscuring piece of glass retracted. She nearly fell forward, weak at the knees. Her stomach churned again, and the young woman clamped her mouth shut as it filled with bile. The acidic brew burned her tongue and cheeks before retreating back down her throat. Taking a moment to steady herself, she hunched over the pod controls, returning it to the horizontal sleeping position.</p>
+        <p>She glanced down the walkway, out into the Crew Deck. Empty as always. Finally feeling some of her strength returning, she quietly padded down the small steps into the mess area. Opening the pantry, she collected a small water capsule, extending the straw. She knew it was risky, but she sat down at the empty table. Carefully connecting the straw to her mask’s induction port, she enjoyed the relief of cold water. Sucking in a mouthful, she swilled it around. Slowly the taste of stomach acids began to recede, and she swallowed it down. The cold sensation travelled down into her gut, getting an uncomfortable reaction. But it was better than that awful taste.</p>
+        <p>Tears had been sliding down her face since she’d woken up. She didn’t sob, or shake her shoulders. It was just constant now. Whenever she regained consciousness, the suit registered urination, and she cried. It was getting worse. Things that had been easy to do just days ago, she knew they were slipping away. She saw the errors in her reports, numbers that she couldn’t add up. Her nearly perfect memory now struggled to recall even basic things. She was losing time, unsure of the hours between her workstation and staring at the glass of the sleeper pod. Ken and Gabby must have suspected something; they’d definitely caught her more than once during her flashes. The orange of the console screen was gone, replaced by blinding light and cracking gunfire. Sometimes it was dark, with only a pair of shining eyes present: A boy, pleading to stay.</p>
+        <p>She couldn’t keep this up… she’d tried… but…</p>
+        <p>“Tali?”</p>
+        <p>Shepard’s voice, the sound sent her eyes wide. She looked up to see the woman walking over, sitting down at the table across from her. She felt naked, completely unprepared. The qurian opened her mouth, but nothing came out. Shepard’s blue eyes were full of concern. She couldn’t look at them, instead her gaze dropped to the table.</p>
+        <p>“You okay?”</p>
+        <p>Tali’s lips pressed together, more tears streaking down her cheeks. She couldn’t speak, terrified of what would come out, so she shook her head, keeping her eyes down. From the corner of her vision she could see Shepard nod in understanding.</p>
+        <p>“Bad dreams?” Shepard asked. Tali gave a nod. “…About Haestrom?”</p>
+        <p>She didn’t want to lie to Shepard, she wasn’t even sure if she could anymore. But she didn’t know what to say, how to explain it. Everything was going to pour out of her, every buried feeling, and every little secret: All the fear and regret and sheer fucking agony of two years without her. She wasn’t ready for that… but she wouldn’t stay silent.</p>
+        <p>“Do you… do you ever get them?” Tali asked, her voice still shaky.</p>
+        <p>“Sometimes…” Shepard admitted. Tali looked at her. “Sometimes it’s the Blitz… or the threshers on Akuze. Sometimes it’s… it’s a bunker full of batarian kids, wailing and crying.” Shepard took a deep breath. “Lately it’s been something else, something I can’t remember.”</p>
+        <p>She listened, taking it all in. Hearing Shepard’s voice made everything calmer. Even when Shepard talked about bad things, it was comforting to just have her near.</p>
+        <p>“You wanna talk bout it?” Shepard asked gently. She swallowed, feeling naked again.</p>
+        <p>“Yes.” She said finally. “But… when I try to… I…” She could feel her breath hitch in her throat.</p>
+        <p>“It’s okay.” Shepard assured her, taking her hand. “We don’t have to talk about it now.”</p>
+        <p>“…I just, don’t know what to say.” She fumbled. “Whenever I think about it, it’s like…”</p>
+        <p>“I know, believe me.” Shepard nodded. “But this is hurting you Tali. Gabby and Ken, they’re worried about you… I’m worried about you.”</p>
+        <p>“I’m sorry.” She said, feeling a rush of shame. She wanted to retreat, but the firm squeeze of her friend’s hand kept her present.</p>
+        <p>“None of this is your fault.” Shepard promised her. “I just want you to be okay.” She paused for a moment. “Would you... talk to Kelly for me? She’s a therapist with a specialty in xeno-psychology. I think she could-”</p>
+        <p>“No!” Tali blurted out, forgetting the late hour. She quickly put a hand over her chin-speaker. “I’m sorry. I know… you want to help, but I can’t talk to Cerberus about this. I can work with them, but I can’t…”</p>
+        <p>“It’s alright.” Shepard backed off. “I’m not gonna make you do anything you don’t want to do.” She assured her, watching the quarian relax a little.</p>
+        <p>“What if…” Shepard started, before pausing. Tali watched her closely while Shepard weighed her words. “What if it was just us then? You and me, no Cerberus.”</p>
+        <p>Tali didn’t want to accept, but if there was anyone she trusted enough to try it with, it was Shepard.</p>
+        <p>“Would you be okay with that? Talking to me about it?” Shepard asked. “We’d take things at your pace, I could help you manage some of the other things you’ve been feeling. I’m not really an expert, but I learned some things from people who were.” She gave her a smile. “I just wanna help you, Tali.”</p>
+        <p>Pushing past the guilt and the shame, she knew this was the right thing to do. Despite her best efforts, things weren’t improving. A slip up on a mission could get everyone killed. She wouldn’t be responsible for that. But there was something deeper, something more. Tali wanted to tell her, to be open and honest like they used to be. She wanted Shepard to be the person she could tell anything again, someone who could always trust her, like she trusted Shepard. She wasn’t sure if the commander could really help, if there was any atonement for what had happened. But she had to try.</p>
+        <p>“…Okay.” She finally answered, surprised at the sudden relief written in the woman’s face.</p>
+        <p>“Okay.” Shepard echoed, giving her hand another gentle squeeze. “We’ve got a mission tomorrow, there’s still a few hours before we’ve gotta be up. Do you want the time off, I can get Kasumi to…”</p>
+        <p>“No-no.” Tali cleared her voice. “I’ll get some sleep. You can count on me Shepard.”</p>
+        <p>“Alright.” Shepard nodded, letting her go and standing up from the table. “After your shift ends tomorrow, come up to the cabin, and we’ll get started.”</p>
+        <p>“I will.” She forced some lightness into her tone. “Goodnight Shepard.”</p>
+        <p>“Night, Tali.”</p>
+        <p>By the time she was back in her pod, the reality of the conversation they’d had began to sink in. There was no hiding it anymore. Whatever chances of things just going back to normal were over. She knew the truth wouldn’t be pretty. It wouldn’t be long before everything came out: All the death, all the guilt. Tali didn’t know if Shepard was ready for that. She didn’t even know if she was ready for it. Truly, the whole thing terrified her more than she could rationally understand. There was so much Shepard didn’t know, how far she had travelled from the girl the commander knew so long ago. Was she even the same person anymore? What would Shepard think of who she’d become? The engineer didn’t want to dwell on it, or anything for that matter. Reaching across to her Omni-tool, she administered a dose of depressants, enough to knock her out until tomorrow. She’d probably have to be pulled out of her pod, but she wasn’t going to just lie there awake.</p>
+        <p>Things were about to change forever, but first there was a mission to complete.</p>
+    </div>
+</body>
+</html>

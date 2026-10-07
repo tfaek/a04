@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 37: &quot;Korbal!&quot;</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch36.html" class="nav-button">← Previous</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Another Rescue Mission</option>
+                <option value="ch2.html">Chapter 2: Back From Hades</option>
+                <option value="ch3.html">Chapter 3: Reunion</option>
+                <option value="ch4.html">Chapter 4: Skin Suit</option>
+                <option value="ch5.html">Chapter 5: Duty</option>
+                <option value="ch6.html">Chapter 6: The Angel&#x27;s Nest: Part One</option>
+                <option value="ch7.html">Chapter 7: The Angel&#x27;s Nest: Part Two</option>
+                <option value="ch8.html">Chapter 8: Buried Truths</option>
+                <option value="ch9.html">Chapter 9: Performance Review</option>
+                <option value="ch10.html">Chapter 10: Ruin</option>
+                <option value="ch11.html">Chapter 11: Something Familiar</option>
+                <option value="ch12.html">Chapter 12: A Grim Reminder</option>
+                <option value="ch13.html">Chapter 13: Prodigal Daughter</option>
+                <option value="ch14.html">Chapter 14: Zakera Lanes</option>
+                <option value="ch15.html">Chapter 15: No More Hiding</option>
+                <option value="ch16.html">Chapter 16: Escaping Purgatory</option>
+                <option value="ch17.html">Chapter 17: Crumbling Walls</option>
+                <option value="ch18.html">Chapter 18: Nightmare</option>
+                <option value="ch19.html">Chapter 19: The Prize</option>
+                <option value="ch20.html">Chapter 20: A Madman&#x27;s Legacy</option>
+                <option value="ch21.html">Chapter 21: Broken Mirror</option>
+                <option value="ch22.html">Chapter 22: A Bad Hand</option>
+                <option value="ch23.html">Chapter 23: The Beast</option>
+                <option value="ch24.html">Chapter 24: Locusts</option>
+                <option value="ch25.html">Chapter 25: Laid Bare</option>
+                <option value="ch26.html">Chapter 26: Picking Up the Pieces</option>
+                <option value="ch27.html">Chapter 27: Old Friends</option>
+                <option value="ch28.html">Chapter 28: Illium Blues</option>
+                <option value="ch29.html">Chapter 29: Knight and Shadow</option>
+                <option value="ch30.html">Chapter 30: A Day For Two</option>
+                <option value="ch31.html">Chapter 31: Born Again</option>
+                <option value="ch32.html">Chapter 32: Devil&#x27;s Bargain</option>
+                <option value="ch33.html">Chapter 33: Personal Matters</option>
+                <option value="ch34.html">Chapter 34: Risk and Reward</option>
+                <option value="ch35.html">Chapter 35: New Homes</option>
+                <option value="ch36.html">Chapter 36: Rising Above</option>
+                <option value="ch37.html" selected>Chapter 37: &quot;Korbal!&quot;</option>
+                <option value="ch38.html">Chapter 38: First Contact</option>
+                <option value="ch39.html">Chapter 39: Dream&#x27;s End</option>
+                <option value="ch40.html">Chapter 40: Ghosts: Part One</option>
+                <option value="ch41.html">Chapter 41: Ghosts: Part Two</option>
+                <option value="ch42.html">Chapter 42: Ulterior Motives</option>
+                <option value="ch43.html">Chapter 43: Facing Fears</option>
+                <option value="ch44.html">Chapter 44: Fractures</option>
+                <option value="ch45.html">Chapter 45: Changes</option>
+                <option value="ch46.html">Chapter 46: Problems and Solutions</option>
+                <option value="ch47.html">Chapter 47: Fallen Angel</option>
+                <option value="ch48.html">Chapter 48: Team Player</option>
+                <option value="ch49.html">Chapter 49: Entanglement</option>
+                <option value="ch50.html">Chapter 50: Devil&#x27;s Due</option>
+                <option value="ch51.html">Chapter 51: Omissions</option>
+                <option value="ch52.html">Chapter 52: Angels and Demons</option>
+            </select>
+            <a href="ch38.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 37: &quot;Korbal!&quot;</h1>
+    <div class="chapter-content">
+        <p>For the first time since Shepard and her team had arrived in the Urdnot bunker, it was completely silent. From the moment her team had exited the tomkah, not a single krogan had made a sound. The dimly lit concrete cavern of a main hall was now filled. All the Urdnot clan, along with the visitors from neighbouring camps had gathered. Seated upon his blocky throne was Wrex, his keen eyes finding them from the far side of the room. Shepard led the eerie procession, with Grunt at her side. The tank-bred warrior towered over her, nearly eight feet of muscle and plates. The echoing clank of boots on hard floor was broken only by the wet squelch that accompanied their movements. From head to toe, both of them were covered in gore. Orange coloured and foul smelling, it caked the ceramic and metal of her hard-suit. The remains of what had been a horrifying surprise.</p>
+        <p>Grunt’s Rite of Passage had been just as violent as she’d expected. Fighting in the sun-drenched ruins of a krogan city, the dusty wind howling overhead. It had been an ordeal just getting Jack into combat armour. Along with Miranda, Zaeed, Tali and Garrus, Shepard’s ground team had played “Krannt” for their tank-bred krogan. The pounding of the Keystone had drawn the ire of the native wildlife. On most worlds, a foe needed guns and armour to be a threat to someone like Shepard. Not so on Tuchanka. Packs of varren had come running out of the nearby ruins, the dog-like aliens clearly well aware of what the thumping meant. Keeping together, the squad had little trouble cutting them down with gunfire. The fish-scaled hounds circled and stalked, but few got close enough to be a threat. Without having to worry about thermal clips anymore, the modified firearms had more than enough ammunition.</p>
+        <p>Soon a horrible droning had carried over the wind. Carried on blurred beating wings, a harvester swooped down from above. Fanged jaws on a serpentine neck scattered the squad, and man-sized insects emerged from under the flying beast’s body. Klixen. Far tougher than the varren, bullets did little to even slow them down. Two lines of powerful shockwaves thwarted the scuttling creatures’ assault. For her first time in proper combat, Jack had proven more than capable. She still lacked precision and control, but the power of her biotics was out of the question. The klixen were smashed against the weathered concrete, or exploded from within by shockwaves. Samara’s deadly blade soon found new prey. Shimmering within its biotic field, the razor-sharp weapon sliced through insect carapace. Up above the harvester dove and lunged, split jaws snapping just inches overhead. The loud buzzing of wings accompanied the booming thumps of the keystone.</p>
+        <p>Then the ground shook.</p>
+        <p>Striding proudly through the crowd of krogan, Shepard felt sweat beneath her gloves. Despite all the years that had passed, despite the calm of victory she’d enjoyed just an hour ago, a part of her still flinched in terror. The vision flashed before her eyes. Clear as it had been at the keystone.</p>
+        <p>Injured and enraged, the harvester had let out a shriek of anger. Taller than a giraffe, airborne it was an intimidating foe. But in an instant, everything had changed. A rumbling roar had come up from deep below the ground. The craggy soil rose in a mound before erupting into a nightmare. Squealing in terror, the harvester was snatched from the sky. Wings and claws were crushed against the overpowering jaws of its attacker. Towering some thirty meters above them, was a thresher maw. The corpse of the flying terror was swallowed, before the enormous worm turned to them. Its roar was deafening.</p>
+        <p>What happened next was a blur of adrenaline and primal fear. Shepard only heard her heart pounding, drowned out by explosions and savage shrieks. Both she and Grunt bore the scars of battle, with armour and plates eaten away by the thresher’s acid. It had only been luck when the monster surged forward to eat the tank-bred. Shepard had reacted instantly, slamming a nearby pillar with a volley of shockwaves. Like an enormous tree, it came crashing down on the maw. Pinned to the ground, it thrashed and spewed corrosive venom. But it was finally vulnerable. Shepard had only needed to give Tali a look, and she relinquished her grenade launcher to Grunt. A toothy grin had split the krogan’s face, as he fired every last round down the monster’s throat.</p>
+        <p>By the time they had reached the throne, another krogan had joined them. The Shaman. A surly looking old lizard, his leathery face was cragged and scarred. Bones covered his armour, a line of beasts’ ribs decorating its hump. His heavy waddle had the slightest limp, and those brows sat low on his eyes. But what keen eyes they were. They’d seen right through not only Gatatog Uvenk, a traitorous excuse for a krogan diplomat. Just a footnote now, left to bleach in the hot Tuchanka sun. No, those eyes also saw through Shepard. Her bravado, her head butting, all of it had shrouded a quiet desperation. To help a tank-bred krogan she’d scarcely known a few weeks. Whatever judgements the Shaman had made of her, none had been uttered. Instead the ancient krogan had laughed at her antics, and praised her gumption. But those eyes, much had been said in the breaths between.</p>
+        <p>“Step forward.” The Shaman’s baritone echoed in the hall. Grunt moved first, kneeling with his head bowed low. Shepard followed, standing tall beside him.</p>
+        <p>“Violence and death, these are the fires in which the krogan were forged! Gifts of Tuchanka, to kill the weak and torment the slow! Our world demands strength and cunning, and here the krogan thrive!” All around, Shepard could feel a change in the air. The congregation hung off every word, reverent and stoic.</p>
+        <p>“The Rite of Passage is a test of all that is krogan! To survive we must adapt, we must fight, and we must overcome!” The Shaman held in his hands a simple bowl. Ugly and functional, it was filled to the brim with blood.</p>
+        <p>Leaning forward, the Shaman held the cup over Grunt’s bowed head. He muttered something, his gravelly voice so faint Shepard couldn’t make out the words. All around the krogan looked on, completely transfixed. Though she didn’t dare turn to check, she could sense her squad mates doing the same. For a moment her gaze left the ceremony, catching Wrex’s on his throne. Those red eyes found her, carrying a weight of emotion she’d never seen before. In their time together, the commander had seen the old mercenary in all manner of spirits. Often dour and reserved, or focused in battle. As the months had marched on, reservation gave way to comfort and trust. Wrex would smile, and soon joke. The warmth of the krogan shone through in him.</p>
+        <p>But now, it was altogether different. Now he was showing them what no alien had ever seen.</p>
+        <p>“You have been tested in our sacred rite, young one, and prevailed.” The Shaman’s voice was low. “The blood of youth has been spilled, to stain the surface of our home as testament to your victory.”</p>
+        <p>Carefully, he poured the dark crimson over Grunt’s head. It trickled in rivulets through the unfused plates, cascading over his tightly closed eyes and grim expression. The smell was strong. Metallic and heady, it permeated the small space they all shared.</p>
+        <p>“This is the blood of your brothers, the life that courses through the veins of Clan Urdnot. Many times it has been shed, taken in great battles of ages past. But today we give it willingly, for you.” As the last drops left the cup, the Shaman rested a hand on Grunt’s head. “From this day forth, our blood is your blood.” Leaning down, the Shaman drew close to the young krogan’s ear. “Rise, Urdnot Grunt.”</p>
+        <p>Without a word, the once tank-bred krogan rose to his full, impressive height. The sticky viscera of the thresher maw still clung to his body, though conspicuously absent around his mouth. The bone-clad holy man regarded the newest clan member, before his scaled lips pulled into a satisfied grin.</p>
+        <p>“You come bearing a fine prize! Many survive the Rite, but it has been years since a thresher maw was brought down! For that, your names shall live in glory!” The proud declaration got bellows of agreement from the surrounding krogan. The air shifted again, and everything seemed to brighten. “With the honour of Clan and Name, you may now own property, join the army, and apply to serve under a Battlemaster.” With a nod of understanding, Grunt’s slitted blue eyes fell upon the commander.</p>
+        <p>“Shepard is my Battlemaster!” He said proudly, loud enough for everyone to hear. “She has no match!” The Shaman’s wise eyes looked to Shepard, before he gave a respectful nod. For a moment, the bunker was silent again. All eyes were on the tank-bred, and his non-krogan leader. If this large, powerful species had a form of apprehension; that was what she felt. Shepard inched closer to Grunt’s flank, body tensing.</p>
+        <p>“Korbal!” A single, booming voice cut through the thick air of unease. Wrex stood from his throne, a mighty paw raised in the air. His call washed over the crowd like a great wave, reverberating through them.</p>
+        <p>“Korbal!” A chorus of bellows came in answer. The krogan of clan Urdnot exploded in revelry, cheering and hollering. Heavy reptilian hands slapped down on Grunt’s shoulders and back, each one accompanied by a welcoming growl. The sight was enough to put Shepard at ease. The fingers that had been hovering near her holster relaxed, and a smile worked its way onto her face. She removed her helmet, tucking it under her arm. Then a force sent her forward. Krogan welcomes had found her too. She received a round of impressed nods and muttered praise. The whole thing almost made her a little bashful.</p>
+        <p>In no time at all, the mood of the Urdnot bunker had completely changed. Crackling speakers played heavy drumming and slurred krogan battle songs. The poor quality audio was made up for by the impromptu karaoke that started up around the Normandy crew. There was activity everywhere. Barrels of ryncol were brought out, and cracking gunfire sounded from down the hall. A couple of the guards came back from the shuttle bay, carrying crates. More supplies from the Kodiak. Rations, alcohol, enough for a few hours of fun. Shepard didn’t have to glance over at her comrades to see their thoughts on the matter. Jack and Zaeed were grinning like fools, already digging into the offerings. Miranda watched on in momentary horror, before those icy-blue eyes narrowed in frustration. She met Shepard’s gaze for a moment, conveying her annoyance in no uncertain terms. But it seemed she was outnumbered. Shepard gave her a defeated shrug; a little fun couldn’t hurt.</p>
+        <p>Barely an hour went by before she was regretting that thought.</p>
+        <p>Burning liquid travelled down her throat, setting a fire in her belly. Blurred vision took in the sheer number of bottles sitting empty between her and Garrus. Two different brands, chirality-segregated. No matter how hard she tried, the math in her head wouldn’t add up. Shit, there were just a lot of them. Looking over at the turian, she could see slackness in his mandibles. They drooped from his face, addled muscles struggling to hold the plates firm. They were surrounded by krogan; two teams of them had formed behind the opponents. When they weren’t egging her on, they were placing more bottles. Shepard shook her head, blinking away the swaying of the room. Garrus was quick to follow, clenching his mandibles and focusing his stare. On the table between them was a pair of pistols: Carnifexes, with the safeties off.</p>
+        <p>“How many was it again?” Shepard asked the krogan, Tark, beside her.</p>
+        <p>“Ten pyjaks in ten seconds.” He answered, pointing out to the monkey-like creatures scurrying around. “First to make it, wins.”</p>
+        <p>“Please.” Garrus slurred, mean-mugging the krogan. “I could make those shots with my eyes closed!” At one hundred meters distance, even with a sidearm, he was probably right.</p>
+        <p>“Big talk, turian!” Tark jeered. “Think you can back it up without that little toy on your face?” Garrus glared daggers into the bigger reptile.</p>
+        <p>“Easily.” He fiddled with his visor, before the blue readouts flickered off. “Let’s do it!” He snatched the pistol off the table, levelling it downrange.</p>
+        <p>Shepard followed, lining up the first creature in her sights. Tark signalled one of his men on the nearby sentry gun. The carnifex felt heavier than normal in her hands. She gripped it tight. The gun beside them let out a dizzying blast, scattering the pyjaks that were squatting in the loading bay. A dozen of the little creatures ran in all directions, confusing the eye. Instantly she felt her reflexes kick in. Everything slowed, sights and sounds sharpening into focus. Struggling against the liquor, she forced her body to cooperate. Squeeze, bang! Squeeze, bang! The pistol barked and jerked. High calibre rounds screamed downrange, ripping through the air. Tracers flashed to their targets, kicking up dust. The seconds ticked down: Four, three, two, one. Still in motion, Shepard let her last shot fly as the sentry gun fired again: A final parting gift to the little vermin bastards.</p>
+        <p>“So, who won?” Shepard turned to Tark, holstering her pistol. Garrus fumbled his own sidearm away.</p>
+        <p>“Hmm…” The krogan pursed his lips as he looked down the scope. “Neither of ya did.”</p>
+        <p>“What?” Garrus and Shepard exclaimed the word in unison.</p>
+        <p>“Didn’t hit a single one.” Tark shook his head. “How’d a pair of whelps like you take down a thresher maw?”</p>
+        <p>“Bullshit!” Garrus flicked his visor back on. After a few moments of scanning, his indignation vanished.</p>
+        <p>“…Son of a bitch.”</p>
+        <p>Tark’s laughter followed the pair of them as they stumbled away from the shooting range. Shepard felt her footing come back to her, after Garrus had pulled her up from the chair. She looked back to see one of the other krogan take a swig of the turian’s forgotten bottle. Naturally, vomiting ensued. The beating of drums still carried over the speakers, joined now by some heavy-sounding metal. Another battle song played, still with crap audio. Garrus kept a step in front, angrily muttering to himself and checking his carnifex.</p>
+        <p>“Must’ve tampered with our guns.” He said to himself, running a scan. The result came back negative; Shepard saw the display.</p>
+        <p>“Guess not.” The grin was back on Shepard’s face now. Garrus’ brow-plates clenched down.</p>
+        <p>“Image scramblers then.” The turian’s answer came quick. “Hologram decoys.”</p>
+        <p>“Hey…” Shepard rested a hand on her friend’s shoulder. “I won’t tell a soul.” Her smile was matched by Garrus’ frown. At least, it looked like a frown if she squinted just right.</p>
+        <p>“…Let’s just go find the old man.” Garrus sighed, swallowing his ego. “Probably getting lonely without us to-”</p>
+        <p>Suddenly the warping boom of shockwaves lit up the bunker. Krogan were thrown left and right, and at the end an unlucky varren went flying into the air. A distinctly human cheer erupted, drawing the two friends over. What they found was a massacre. Nearly a dozen krogan lay scattered around the main hall, all of them groaning. Surrounding them were even more, most of them either hollering or booing. In the centre of the mess was a woman, bald and tattooed. She’d walked over the incapacitated krogan and pounced on the still dazed varren at the end of the fiasco. Pinning it against the concrete floor, Jack held her head high.</p>
+        <p>“Got the fucker!” She declared, triumphant.</p>
+        <p>“Atta girl!” Zaeed gave a thumbs-up as he joined her. Careful not to tread on anyone, Shepard and Garrus made their way over.</p>
+        <p>“What’re you doing?” Shepard raised an eyebrow at the scene.</p>
+        <p>“Playing tackle the varren.” Jack answered like it was obvious. “Crowd put good odds I wouldn’t even touch it.” Her self-satisfied smirk fell as she looked to the krogan. “Hey! Caught your ugly fuckin’ dog! Now pay up!”</p>
+        <p>“You’re not getting a single credit, human!” A large krogan emerged from the crowd, stomping towards them. “Biotics weren’t part of the bet.” He glared at Jack, lips curled in a snarl.</p>
+        <p>The fuzzy state of Shepard’s mind once again became completely sharp. Barely a glance to Garrus and he was the same. At this range, they wouldn’t miss anything. The varren began to gurgle and growl beneath the convict. Her brown eyes stayed on the krogan, before she brought down a biotic fist on the creature’s head. It stopped moving. Then she was up, wiry and fierce. She looked up at the seven-foot reptile.</p>
+        <p>“Pay…” She slid the first word past clenched teeth, the others watching closely. “…Up!” Her threat just made the krogan grin.</p>
+        <p>“Or what?” He asked with a low growl.</p>
+        <p>In that moment, Shepard realised it was all over. Jack’s eyes told her everything. Jack was hunting again. The krogan had made the mistake of closing the distance, thinking the danger was only at range. But with a flash of blue, the convict was enveloped in a biotic barrier. She sprung into the air, her mass shifting with her powers to look her opponent in the eye. Then the next second, she smashed her barrier-protected head against his with the weight of a truck. The krogan was out cold, data-pad lying beside him. Little more than grunts came up from the heap of muscle and armour. Then she was on the ground, looking to Shepard for what to do next.</p>
+        <p>But next never came. Instead, the entire crowd burst out laughing. By the time her antics had worn off, Zaeed had already pocketed the winnings on the pad. All while the attention was on the pint-sized powerhouse.</p>
+        <p>“Guess she’s got her, uh…” Garrus paused as they kept up the search. “What’s that word again?”</p>
+        <p>“Mojo?” Shepard offered.</p>
+        <p>“Right. She’s got her mojo back.” The turian’s assessment left him wide-eyed. “Spirits…”</p>
+        <p>“She’s getting there.” Shepard allayed some of her friend’s fears. “Still struggles with precise fields, and Miranda doesn’t think she’s hit peak yet.” She looked back over her shoulder, at the unconscious krogan still strewn about. “…But she’s definitely getting there.”</p>
+        <p>She thought back to that moment they’d had in the sub-deck. She’d seen the hesitation in Jack then, the uncertainty. It took her back even further, beyond even the memories of the Lazarus labs: Back to the… back to Shepard’s memories. Mandatory leave after what had happened on Torfan. She thought of Rebecca. Corporal Alvarez. They’d shared a table at the hospital’s cafeteria, both nursing their own “infirmities”. She’d lost an arm during a pirate raid. Caught the tripwire on a door just a second too late. Now she had shrapnel in her chest and a stump where her shooting arm had been.</p>
+        <p>The prosthetic she’d received was top-quality; Alliance bought and paid for. But learning to control it, even with the neural implants, had been a battle: Morning after morning, watching a coffee cup tremble in a false hand, her brain simply refusing to cooperate. Shepard couldn’t count the times she’d spilled something, or accidently torn apart a packet she was just trying to open. In the end, she never went back to active service. Couldn’t sight down a target without shaking. She’d cried on the last night before her discharge. Her life had been changed forever, in one moment of bad luck.</p>
+        <p>Bidden by her unconscious mind, Shepard’s hands clenched tightly shut.</p>
+        <p>For an enclosed space, the Urdnot bunker felt much harder to navigate with a throng of partying krogan everywhere. The centre of the reptilian mass was Grunt, who was impossible to spot within the group. Though judging by the slurred bellows and laughter, things were going smoothly. The commander stole a glance toward the main entrance, beyond which was the shuttle. Sure enough Miranda was there, talking about something with Samara. Clearly she’d given up on reigning in her subordinates.</p>
+        <p>Between the two of them, it was the justicar who looked Shepard’s way. Her armour was clean again, like Shepard’s was. The benefits of biotics, an instant grime remover with enough skill. Her deadly blade sat in its scabbard, still eye-catching. Her bone-white eyes met Shepard’s, and her stern countenance broke into that sly smile. It conveyed a warmth and understanding, or perhaps she knew something Shepard didn’t. But there was always a little cheek to it, like she was breaking a rule. Miranda didn’t even notice, too busy with everything.</p>
+        <p>Sure enough, the old lizard was right where they thought he’d be. With nary a bottle of ryncol or varren skewer in hand, Wrex was lounging on his throne. Those centuries-old brows were raised in enthralled conversation. His talking partner brought a grin to Shepard’s face. Tali was leaning against the blocky concrete chair, using her free hand to gesticulate as she talked with him. Every now and then, those heavy krogan shoulders would rock, and his hump would sway with laughter.</p>
+        <p>For a moment, the scene was enough to stop the commander in her tracks. She wanted to see this, to see her old friends like they used to be: An energetic young quarian and a grizzled krogan mercenary, chatting away without a care in the world. If she let the last embers of intoxication caress her vision, things could blur just enough to take her back two years. A time with scrappy pilgrims and hothead cops, where not a single step felt wrong, and everything worked out.</p>
+        <p>“Just gonna leave him at her mercy?” Garrus asked, a step ahead of her once again. In the gloom of the bunker, the scars on his plated face were gone. He raised a brow-plate, a long forgotten glint in his eye.</p>
+        <p>“Wouldn’t dream of it.” Shepard answered through a smile. Working their way around the edge of yet another drinking scrum, it was a clear shot to the throne. Even at a distance, she could overhear the conversation going on. The topic couldn’t have been more fitting.</p>
+        <p>“You still remember that quick-priming trick I taught you?” Wrex pointed to the shotgun nestled in the small of Tali’s back. Without a second’s hesitation, she gripped the folded weapon. A flick of her wrist and it sprung out to full size, before she slid a finger over its safety and racked the pump. A whine of power climbed up the gun.</p>
+        <p>“You know, I can take care of myself these days.” She gave the krogan a smug tilt of her helmet.</p>
+        <p>“I know, I know…” Wrex sighed, holding up his hands. “Just, old I suppose. Can’t help but worry.” He looked her up and down. “And you’re still so tiny.”</p>
+        <p>“I put on twenty two kilograms!” She protested, holding out her arms to better show her suited physique.</p>
+        <p>“Where?” The krogan’s blunt question got a groan out of her.</p>
+        <p>“It’s there.” Shepard interjected, grabbing their attention. “Just gotta know where to look.” She held back a smirk, seeing Tali stiffen up just a little.</p>
+        <p>“Finally!” Wrex got up from his throne. “Bout time you two pyjaks showed up. You have any idea the things this quarian’s been talking about for the last hour?” He side-eyed her playfully. No one else noticed, but Shepard had watched her girlfriend’s mask long enough to recognise when she was sticking her tongue out.</p>
+        <p>“Let me guess.” Garrus scratched a talon against his chin. “It involved numbers?” His jab narrowed those red eyes.</p>
+        <p>“He still thinks he’s funny.” Wrex directed the comment to Shepard, getting a flanging chuckle from the turian. “While you two were off helping the salarian, Tali had a look around here. Finding what needs fixing, what needs replacing.”</p>
+        <p>“And?” Shepard asked.</p>
+        <p>“And it’s a lot… expensive too.” The krogan grumbled. “But she says we gotta do it. So, gotta do it.” He gave a weary look around the lively bunker. Shepard recognised the expression. Seeing all the problems your subordinates didn’t, an endless weighing of pros and cons. Always more problems, never enough time.</p>
+        <p>“I can help with that.” Garrus piped up, opening his Omni-tool. “Costs you mentioned, bribes to the CDEM right?” Wrex nodded. “I know a couple guys working the battle-stations from back in the day, I can give them a call. As for suppliers, I’ve got some contacts on Omega.” The two men huddled closer together, looking over the holographic screen.</p>
+        <p>Suddenly, a gloved finger prodded Shepard’s side. Enough to tense her up, before she caught the quarian it belonged to. Tali inched closer to Shepard, leaning into her ear.</p>
+        <p>“I’ve got a surprise for you.” She said quietly, helmet audio turned down.</p>
+        <p>“Oh?” Shepard played along, watching Tali reach for something slung on her belt. From the front, she hadn’t noticed that Tali had kept her helmet. The quarian held it in her hands, checking it over a final time.</p>
+        <p>“…Uh, my helmet? Think I already knew about this one.”</p>
+        <p>“Just hold still, you bosh’tet.” Tali snorted, reaching up over Shepard’s head. With a little finagling, she slipped it down over Shepard’s face, before securing the airtight seal. For a moment the commander just stood there, listening to her own breathing in the mask.</p>
+        <p>“Okay, now what?” She asked, though this time it sounded different. Before she could place the change, a lilting voice filled her ears.</p>
+        <p>“Now I can talk with my girlfriend.” Tali said smugly, tapping a finger against the absent chin-light of her mask. Just like that, it all made sense. No wonder Shepard’s voice had sounded different, the helmet’s speaker was off.</p>
+        <p>“You set up a private channel for us.” Shepard’s assumption got a nod as she joined Tali leaning against the throne.</p>
+        <p>“Not just private, fully encrypted.” She clarified. “The cipher’s connected to my subconscious, through my neural implants. Impossible to crack.”</p>
+        <p>“That’s incredible.” Praise was all Shepard could offer in lieu of any expertise on the subject. Tali still giggled at it, a little bashful.</p>
+        <p>“Sorry it took me so long to set up.” She fiddled with her fingers. “I had to study EDI’s detection algorithms. Keelah, and then there were the number generators and…” Shepard pressed her shoulder against Tali’s.</p>
+        <p>“Worth the wait.” Shepard assured her.</p>
+        <p>“S-speaking of… waiting.” Tali’s voice raised an octave, somewhere between nervous and excited. “I got the test results back from Doctor Chakwas.”</p>
+        <p>“Karin give us the go-ahead?” Shepard turned into Tali, watching her hood shift over her nodding helmet.</p>
+        <p>“Microbe levels in the cabin are safe, and Mordin gave me a new round of symptom suppressants to try.” She slouched a little beside Shepard. “How’d… things go with him, yesterday?”</p>
+        <p>“Turns out it wasn’t a rescue mission.” Shepard sighed. “Mordin’s old student, Maelon? He was running experiments to try and cure the genophage.”</p>
+        <p>“Keelah…”</p>
+        <p>“I’m glad you weren’t there. Reminded me of those labs we saw on Korlus. Mordin he… it really bothered him.”</p>
+        <p>“But, I don’t understand. You said he updated the genophage?”</p>
+        <p>She nodded, trying to find the right words. “I think it… I don’t know, hit home a little harder.” Her head hung forward. “I said some things, while we were there. Saw he was hurting and twisted the knife anyway.”</p>
+        <p>“You were angry.” Tali offered, touching Shepard’s arm. “I understand. I am too.”</p>
+        <p>“Yeah.” She just nodded.</p>
+        <p>“What happened to Maelon?”</p>
+        <p>Taking advantage of their closeness, Shepard opened her Omni-tool. Flicking over to her messages, she found Tali’s. Sparing her some of the sappier ones Tali had sent, she stopped on the last one. It was an image from Tali’s helmet recordings. From two years ago. She could still taste the bile from yesterday, sitting across from the professor as they trundled toward the Weyrloc camp. Rage had been building up again, like it had on Aeia. This time, it had poured out in her words, lashing Mordin for his part in the genophage. That anger had only grown as they passed by the mutilated bodies: So much needless cruelty. Hearing Maelon’s unhinged jabbering had brought both Mordin and Shepard to the brink of violence.</p>
+        <p>But a simple holo had stopped it.</p>
+        <p>Shepard recognised the blue sky, the waves lapping against the shore. Virmire. She saw herself, standing inches away from Wrex. After all this time, she couldn’t even remember exactly what she’d said: Just the pounding of her heart, the dread of having to kill an ally, for the sake of the mission. Back then, she hadn’t been aware Tali was watching them, no doubt terrified of what the outcome might be. Either way, Tali would’ve lost a friend. But in the end, it was words, not violence, which had saved them. It was a lesson the old Shepard knew well. A lesson the woman who carried her torch still struggled with. She met Tali’s eyes, smiling beneath her helmet.</p>
+        <p>“I handled it the old fashioned way.” She have her a wink. “Hopefully he’ll take the professor’s advice, open up a clinic somewhere.”</p>
+        <p>Maybe it was just the moment, or the intimacy of the private channel they shared. But in spite of the public setting, right next to the Urdnot chief’s throne, Tali pulled Shepard in to a hug. Shepard enjoyed the familiar presence of Tali’s helmet against her chest, just above her breasts, the reassuring smother of the quarian’s arms around her. Instinct took over, and she returned it warmly.</p>
+        <p>“You did the right thing.” Tali’s words were quiet, guarded even in the air of Shepard’s helmet. Praise meant just for her, tied up in meaning no one else could understand. She never knew how Tali did it. How Tali saw her so completely.</p>
+        <p>“Thanks.” It was all she could say.</p>
+        <p>“You two cold or somethin’?” Wrex’s question hit the pair of them like a bolt of lightning. By the time they’d disentangled, both of their old friends were looking on. Garrus wore a weary expression, while the krogan beside him was considerably coyer. While the prospect of being “caught” by them didn’t really bother Shepard, Tali stood straight as an arrow.</p>
+        <p>“Been like this ever since she joined up.” Garrus sighed. “I know worrying’s your thing Tali, but this isn’t healthy.”</p>
+        <p>“Sure that’s not jealousy talking, turian?” Wrex jabbed, glancing between them.</p>
+        <p>“Of what, being two feet shorter?” Garrus shot back.</p>
+        <p>“And twenty points higher. In IQ.” Tali crossed her arms.</p>
+        <p>“You always were an optimist.” Garrus readied himself for a proper battle of wits.</p>
+        <p>“Alright!” Wrex brought down a heavy paw on both their shoulders. “Since you two wanna boast about brain power, least you can do is make yourselves useful.” The bickering stopped immediately. “I need tomkah fourteen checked over, think a pair of geniuses like you can handle it?”</p>
+        <p>“What, right now?” Garrus asked, getting a nod of agreement from the quarian.</p>
+        <p>“Yes, right now.” Wrex fixed him with a look. “Besides, been hogging Shepard’s ear since you landed. Tuchanka’s my rock, and that means I get some time with my friend too.” A look of guilt passed between the two dextros, enough to make Shepard chuckle.</p>
+        <p>With a pair of dejected grunts, both Garrus and Tali hopped down from the throne’s rise. Soon they’d slipped into the crowd, on their way towards the vehicle hangar. Making a theatrical show of it, Wrex dusted his hands together, giving a nod of his huge head like he’d done the woman a service. It was all in good fun, but Shepard appreciated the chance for a moment alone. The old krogan had always been a special case, the kind of person you felt comfortable talking about anything with. Someone with his experience, there was an answer for everything.</p>
+        <p>“Thought they’d never leave.” Wrex chortled, lumbering up to her.</p>
+        <p>“Yep, regular lifesaver you are.” Shepard agreed, turning that chortle into a laugh: An infectious one at that.</p>
+        <p>“So…” The krogan punched her arm gently. “How long’s that been goin’ on? You and her.”</p>
+        <p>“Uh, me and her?” Shepard’s deflection fell completely flat. Those scaly brows sunk.</p>
+        <p>“Think I was born yesterday, Shepard? I know what mammals in heat look like.” As expected, he saw right through her. But the phrasing was enough to get another laugh.</p>
+        <p>“Mammals in heat.” Shepard echoed with a snigger. “You always did have a way with words.”</p>
+        <p>“Mm-hmm, shame it didn’t rub off on you.” Wrex answered flatly. “Now, back to how you’ve been treating my favourite quarian.”</p>
+        <p>“…We’ve been together a couple weeks, since our stop on Illium.” Shepard explained, watching the paternal bristling vanish in her friend. “Probably been dancing around my feelings on the matter since, God knows when. She told you about Horizon, what happened to the Normandy?”</p>
+        <p>“Collectors tore her up pretty bad.” The krogan said darkly.</p>
+        <p>“Yeah… what a fuckin’ day that was.” Shepard’s jaw set, before a lungful of air passed out her nose. “I nearly went over the edge. Came so close I can still feel it. Risked everything trying to…” She trailed off. “…It’s only luck nobody died.”</p>
+        <p>She wasn’t sure her ship would ever feel safe again. Despite the repairs and the crews’ spirits, she saw it everywhere she looked. The edge. All to prove something to a dead woman…</p>
+        <p>“Then, there she was.” Shepard shrugged in disbelief. “Never would’ve pulled through it without her. Used to be I could find my own way through stuff like that, but now?” She stopped short, keeping the truth of Project Lazarus to herself. Those feelings were still on a knife’s edge. “I can’t see clearly without her.”</p>
+        <p>“Hmm…” Wrex nodded solemnly. “She told me about this mission you’re on. High-risk, even for you.”</p>
+        <p>“That’s putting it mildly.” Shepard’s lips pursed. “Used to long odds. But this time… I don’t know.”</p>
+        <p>“You sound worried.”</p>
+        <p>“…I am worried.” She admitted. Looking out over the crowd, she took a calming breath. “Any krogan wisdom for me?”</p>
+        <p>“Sure.” Wrex nodded. “There’s the usual like; there’s nothing you can’t shoot your way out of. Or always act like you got a quad to spare.”</p>
+        <p>“I’ll keep them in mind.” She chuckled. The levity evaporated as they stood there together, two people with the lives of loved ones in their hands. Eventually Wrex let out a long sigh.</p>
+        <p>“I’ve lived long enough to watch everything I fought for crumble to dust. Seen my home reduced to a forgotten backwater, my people crushed into obscurity.” His words were weighty, carried by a rarely seen reverence. “I’ve lived every day, for two years, knowing it was hopeless. That the Reapers were coming, and that there’s nothing I could do to stop them. Not without you.”</p>
+        <p>He looked Shepard in the eyes, holding her there.</p>
+        <p>&quot;And even knowing all that, I did it anyway. Busted my hump to build this place into a future for the krogan.”</p>
+        <p>“Why?” Shepard’s question felt wrong, another divergence from the woman in the mirror: Another reminder of who she wasn’t.</p>
+        <p>“Because it’s not about the odds. It’s about doing what you have to do.” Wrex’s answer came without a second’s hesitation. “Either things work out, or they don’t. Doesn’t matter which. What matters is that you fight anyway. Best-case scenario, you win. Worst… your death means something.”</p>
+        <p>He gave a grim smile.</p>
+        <p>“Win-win.”</p>
+        <p>“I guess it is.” Shepard agreed, feeling the air in her lungs. “Thanks, Wrex.”</p>
+        <p>“Don’t mention it.” The krogan waved a paw in her face. “You gave me a new clan member today, only seems right you got something in return.</p>
+        <p>“Your invaluable krogan wisdom?” Shepard raised an eyebrow.</p>
+        <p>“Could give you a barrel of ryncol, but that’d just kill ya.” Wrex grinned, resting his fist on the woman’s chest plate. “…Maybe.” He added, with a touch of awe.</p>
+        <p>Maybe.</p>
+        <p>With so much riding on this mission, the lives of millions in the balance, those odds seemed downright generous. Everything her old friend had said, Shepard knew it was true. Watching the Tuchanka landscape retreat as the shuttle burned for orbit, she realised she’d just needed someone else to say it: Someone older and wiser, with a big krogan laugh. Even now, those two years lost still stung. But seeing that her friends had done so much in her absence, it was inspiring. It reminded her she wasn’t alone. The people she trusted with her life, they’d gone on to build things, continue the fight. Some had found her side again. And in the case of one of them, grown closer than anyone ever had. As the clouds disappeared and the yawning black pressed against the window, she focused on Tali. Even with death just inches away, it couldn’t touch her. Not with her there.</p>
+    </div>
+</body>
+</html>
