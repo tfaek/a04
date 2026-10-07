@@ -12,6 +12,7 @@
 #   - Two passes per chapter: an EDIT pass, then a REVIEW pass that sees
 #     original vs revised text and fixes missed references, pronoun ambiguity
 #     between Shepard and other women, body descriptions and over-editing.
+#     A small BODY CHECK pass then removes gratuitous added breast mentions.
 #   - Results are cached per chapter, so an interrupted run resumes.
 #   - A word-level change report (changes.md) lists every edit for review.
 #
@@ -66,7 +67,7 @@ SHEPARD'S BODY
 Wherever the text describes Shepard's body it must read as a woman's:
 - Remove or replace male-only features: beard, stubble, shaving, five o'clock shadow, Adam's apple, chest hair and other heavy body hair, a deep/baritone voice (→ low or husky), etc. If removing leaves a gap, substitute something comparable ("his beard and hair" → "her hair"; scratching his stubble → rubbing her jaw; hair on his chest tickling her palms → her skin's warmth under her palms).
 - Keep athletic, soldierly traits — muscle, scars, height, strength. Don't feminise beyond what's needed.
-- When Shepard's chest or torso is bare, touched or looked at, the scene must acknowledge that she has breasts — a brief, natural mention, in your own words, woven into the existing sentence. Once per scene is usually enough; don't repeat it every time her chest comes up, and don't reuse the same phrasing. Match the original's tone and level of explicitness — no more, no less.
+- When Shepard's chest is bare or exposed, or a sensual moment dwells on her chest or body, the scene must acknowledge that she has breasts — a brief, natural mention, in your own words, woven into the existing sentence. Once per scene is enough, and don't reuse the same phrasing. Never add one in fights, injuries, medical scenes, descriptions of her corpse or body under reconstruction, or hugs and touches over clothing or armour. Match the original's tone and level of explicitness — no more, no less.
 - If an intimate scene describes male anatomy, adapt it consistently to female anatomy at the same level of explicitness.
 
 AVOID PRONOUN AMBIGUITY
@@ -109,6 +110,19 @@ You'll receive numbered paragraphs. A paragraph the draft left alone is shown on
 6. Typography and tags not matching the original.
 
 For each paragraph that needs fixing, return its complete final text and a short reason. To revert a change, return the original text. Return nothing for paragraphs that are fine. Paragraphs under CONTEXT are for reference only — never return them."""
+
+
+BODY_PROMPT = f"""You are a meticulous fiction editor checking another editor's work.
+
+{RULES}
+
+An earlier pass added mentions of Shepard's breasts that the original text didn't have, and many are gratuitous. Each paragraph to check is shown as ORIGINAL and CURRENT, after a few preceding paragraphs (current text) for context. Decide whether each added mention earns its place:
+- Keep it only if Shepard's chest is bare or exposed in the scene, or a sensual moment dwells on her chest or body.
+- Remove it in fights, injuries, medical scenes, descriptions of her corpse or body under reconstruction, hugs and touches over clothing or armour, and anywhere else it reads as gratuitous.
+- Remove it if the same scene already mentions her breasts in an earlier paragraph.
+To remove a mention, return the CURRENT text with only that mention taken out — restore the original wording of that phrase and keep every other edit. Return nothing for paragraphs whose mention should stay."""
+
+BODY_CONTEXT_PARAS = 4
 
 
 class Edit(BaseModel):
@@ -291,6 +305,33 @@ def review_chapter(name, paras, edits, prev_context, model, effort, flags):
     return fixes
 
 
+def body_check(name, paras, final, model, effort, flags):
+    """Pass 3: drop gratuitous breast mentions the earlier passes added. Returns {index: (text, reason)}."""
+    candidates = [i for i, t in final.items()
+                  if re.search(r"breast", t, re.I) and not re.search(r"breast", paras[i].text, re.I)]
+    if not candidates:
+        return {}
+    blocks = []
+    for i in sorted(candidates):
+        context = [final.get(j, paras[j].text) for j in range(max(0, i - BODY_CONTEXT_PARAS), i)]
+        blocks.append("CONTEXT:\n" + "\n".join(context) + f"\nCHECK [{i}]\nORIGINAL: {paras[i].text}\nCURRENT: {final[i]}")
+    try:
+        result = call(model, effort, BODY_PROMPT, "\n\n---\n\n".join(blocks), ReviewResult)
+    except Exception as e:
+        flags.append((name, None, f"body check failed: {e}"))
+        return None
+    return {e.id: (e.text, e.reason) for e in result.edits if e.id in candidates and e.text != final[e.id]}
+
+
+def merged(data):
+    """Paragraph index -> latest text after edit, review and body-check passes."""
+    final = {int(i): t for i, t in data["edits"].items()}
+    for key in ("fixes", "body"):
+        for i, (t, _) in data.get(key, {}).items():
+            final[int(i)] = t
+    return final
+
+
 # ---------------------------------------------------------------- per chapter
 
 def process_chapter(path, prev_context, args, cache_dir):
@@ -310,20 +351,25 @@ def process_chapter(path, prev_context, args, cache_dir):
             "fixes": {str(i): list(v) for i, v in fixes.items()},
             "flags": [list(f) for f in flags],
         }
-        # Don't cache a chapter whose API calls failed, so a rerun retries it
-        if not flags:
-            cache.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    # Body check runs separately so chapters cached before it existed get it too
+    if "body" not in data and not data["flags"]:
+        body = body_check(name, paras, merged(data), args.model, args.effort, data["flags"])
+        if body is not None:
+            data["body"] = {str(i): list(v) for i, v in body.items()}
+    # Don't cache a chapter whose API calls failed, so a rerun retries it
+    if not data["flags"]:
+        cache.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     return name, src, paras, data
 
 
 def finalize(name, src, paras, data):
     """Apply edits + fixes with sanity checks. Returns (new_src, changes, flags)."""
     flags = [tuple(f) for f in data["flags"]]
-    final = {int(i): t for i, t in data["edits"].items()}
+    final = merged(data)
     reasons = {}
-    for i, (t, reason) in data["fixes"].items():
-        final[int(i)] = t
-        reasons[int(i)] = reason
+    for key in ("fixes", "body"):
+        for i, (_, reason) in data.get(key, {}).items():
+            reasons[int(i)] = reason
 
     changes = []
     for i in sorted(final):
@@ -432,7 +478,8 @@ if __name__ == "__main__":
             name, src, paras, data = fut.result()
             results[futures[fut]] = (name, src, paras, data)
             print(f"  [{n}/{len(selected)}] {name}: {len(paras)} paragraphs, "
-                  f"{len(data['edits'])} edited, {len(data['fixes'])} fixed in review"
+                  f"{len(data['edits'])} edited, {len(data['fixes'])} fixed in review, "
+                  f"{len(data.get('body', {}))} body-check fixes"
                   + (f", {len(data['flags'])} FAILED calls" if data["flags"] else ""))
 
     report = []

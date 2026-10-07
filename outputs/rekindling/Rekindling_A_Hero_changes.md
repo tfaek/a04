@@ -239,9 +239,9 @@ A woman stood between ~~him~~ **her** and freedom. Shepard recognised her voice,
 
 “Get out of my way!” Shepard warned her, levelling ~~his~~ **her** pistol. ~~Her~~ **The woman’s** frown curled into a smirk.
 
-**[86]** _review: Retains the original torso description with the required brief body acknowledgment, and clarifies that the woman—not Shepard—is unfazed by the punch._
+**[86]** _review: Removed the added breast mention because this is a fight scene._
 
-~~He~~ **She** didn’t have time for this. Whoever the woman was, she’d thrown her lot in with terrorists. ~~His~~ **Shepard’s** finger slid down around the trigger and the woman blazed to blue life. ~~His~~ **The** first shots struck against her barrier, but soon she was racing toward ~~him.~~ **Shepard.** Her speed sent Shepard’s other shots wide, ~~his~~ **the commander’s** arms refusing to keep up. ~~She~~ **The woman** fired her machine pistol at ~~him,~~ **Shepard,** burst after burst clattering against ~~his~~ **her** biotic shield. ~~His~~ **Shepard’s** heart was pounding now, ears ringing as the two of them drew closer. When ~~his~~ **her** gun clicked empty, Shepard tossed it aside, bringing ~~his~~ **her** right hook to bear with biotic strength. The woman flowed around the attack, quicker than ~~he~~ **Shepard** could react. ~~He~~ **She** felt ~~her~~ **the woman’s** fists and knees connect with ~~his torso,~~ **her torso below her breasts,** crashing into ~~him~~ **her** with enhanced force from ~~her~~ **the woman’s** powers. ~~Managing~~ **Shepard managed** to land a punch on her, ~~she~~ **but the woman** seemed totally unfazed, returning the favour with a powerful kick to the gut. Winded, Shepard finally collapsed to ~~his~~ **her** knees. Before ~~he~~ **she** could process what was happening, ~~he~~ **she** felt ~~her~~ **the woman’s** slender hand around ~~his~~ **her** throat, tilting ~~his~~ **her** head. A needle pierced ~~his~~ **her** neck. ~~He~~ **She** fell back, hearing Jacob’s voice coming from the hallway.
+~~He~~ **She** didn’t have time for this. Whoever the woman was, she’d thrown her lot in with terrorists. ~~His~~ **Shepard’s** finger slid down around the trigger and the woman blazed to blue life. ~~His~~ **The** first shots struck against her barrier, but soon she was racing toward ~~him.~~ **Shepard.** Her speed sent Shepard’s other shots wide, ~~his~~ **the commander’s** arms refusing to keep up. ~~She~~ **The woman** fired her machine pistol at ~~him,~~ **Shepard,** burst after burst clattering against ~~his~~ **her** biotic shield. ~~His~~ **Shepard’s** heart was pounding now, ears ringing as the two of them drew closer. When ~~his~~ **her** gun clicked empty, Shepard tossed it aside, bringing ~~his~~ **her** right hook to bear with biotic strength. The woman flowed around the attack, quicker than ~~he~~ **Shepard** could react. ~~He~~ **She** felt ~~her~~ **the woman’s** fists and knees connect with ~~his~~ **her** torso, crashing into ~~him~~ **her** with enhanced force from ~~her~~ **the woman’s** powers. ~~Managing~~ **Shepard managed** to land a punch on her, ~~she~~ **but the woman** seemed totally unfazed, returning the favour with a powerful kick to the gut. Winded, Shepard finally collapsed to ~~his~~ **her** knees. Before ~~he~~ **she** could process what was happening, ~~he~~ **she** felt ~~her~~ **the woman’s** slender hand around ~~his~~ **her** throat, tilting ~~his~~ **her** head. A needle pierced ~~his~~ **her** neck. ~~He~~ **She** fell back, hearing Jacob’s voice coming from the hallway.
 
 **[87]**
 
@@ -717,9 +717,9 @@ During their chat however, Gardner let it slip he’d lost his family to bataria
 
 “I should give you a check up, just to be…” She noticed blood dotting the back of ~~his~~ **Shepard’s** uniform. “Christ ~~John,~~ **Jane,** you’re hurt already!”
 
-**[142]**
+**[142]** _review: Remove the added breast mention from a medical examination of an injury._
 
-Knowing better than to argue with her, Shepard obediently lifted ~~his shirt.~~ **her shirt, bunching it above her breasts.** Karin ran her Omni-tool over the wounds, gently touching around them before tapping notes down.
+Knowing better than to argue with her, Shepard obediently lifted ~~his~~ **her** shirt. Karin ran her Omni-tool over the wounds, gently touching around them before tapping notes down.
 
 **[148]**
 
@@ -809,9 +809,9 @@ With a deep breath, ~~he~~ **she** tapped the first video.
 
 The screen flickered to life. The footage started in a white room, with a single surgery table in the centre under medical lamps. There was something on the table, hidden inside a high-tech container. Shepard felt ~~his~~ **her** guts twist. Soon Miranda walked into the room, donned head to toe in surgical gear. A mask and face shield obscured her face; her dark hair tucked away.
 
-**[198]** _review: Clarifies that Shepard, not Miranda operating the equipment, cannot guess the fluids’ purpose._
+**[198]** _review: Remove the added breast mention from a description of Shepard’s corpse._
 
-She fiddled with a nearby control panel, and the container’s foggy glass cleared. Suddenly the view switched to a camera on her body, and Shepard supressed a wretch. Inside the box, was an almost unrecognisable corpse. Its skin was cracked and blackened, with half of it bubbled and twisted from ~~burns.~~ **burns, its breasts barely recognisable.** All four arms and legs had clearly been cut away, with amputations at the shoulders and upper thighs. Below the skin, grey, exsanguinated flesh was present. Dozens of tubes and wires covered the whole thing, plugged in everywhere. They were passing strange fluids into it, ~~he~~ **Shepard** couldn’t even guess at the purpose.
+She fiddled with a nearby control panel, and the container’s foggy glass cleared. Suddenly the view switched to a camera on her body, and Shepard supressed a wretch. Inside the box, was an almost unrecognisable corpse. Its skin was cracked and blackened, with half of it bubbled and twisted from burns. All four arms and legs had clearly been cut away, with amputations at the shoulders and upper thighs. Below the skin, grey, exsanguinated flesh was present. Dozens of tubes and wires covered the whole thing, plugged in everywhere. They were passing strange fluids into it, ~~he~~ **Shepard** couldn’t even guess at the purpose.
 
 **[199]**
 
@@ -1306,9 +1306,9 @@ Tarak’s voice croaked over the gunship’s loudspeaker. Words the ~~man~~ **wo
 
 Before he could utter a single word, the commander’s fist came down, crushing the alien’s skull. Barely more than a lower jaw was left, the body twitching as it lost control of the vehicle. Shepard was thrown from the crashing gunship. By the time ~~he~~ **she** realised what had happened, ~~he~~ **she** was plucked from the air by a biotic field. Floating back towards the apartment, Shepard could make out Miranda, carefully reeling ~~him~~ **Shepard** back toward her. Grabbing ~~her~~ **Miranda’s** hand, ~~he~~ **she** was pulled back to safety, and fear poured in again. Rushing to Garrus’ side, ~~he~~ **she** could see the horrific gashes along the turian’s face and neck, his armour blackened and melted. Jacob and Zaeed had covered the wounds in medi-gel, but it did little to calm the commander.
 
-**[92]** _review: Restore the pronoun in “She looked on”; Shepard’s viewpoint is already clear._
+**[92]** _review: The mention is gratuitous in a medical scene involving a non-sensual touch over clothing or armour._
 
-By the time they reached the Normandy, Karin Chakwas had already prepped the med-bay for surgery. Shepard wanted to follow ~~his~~ **her** friend, but the doctor put a hand on ~~his chest. He~~ **Shepard’s chest, above her breasts. She** respected the woman like a mother, obeying her request without question. ~~He~~ **She** looked on for a moment longer before the windows clouded. The smell of copper was thick in ~~his~~ **her** nostrils. ~~He~~ **She** had to get away from here.
+By the time they reached the Normandy, Karin Chakwas had already prepped the med-bay for surgery. Shepard wanted to follow ~~his~~ **her** friend, but the doctor put a hand on ~~his~~ **Shepard’s** chest. ~~He~~ **She** respected the woman like a mother, obeying her request without question. ~~He~~ **She** looked on for a moment longer before the windows clouded. The smell of copper was thick in ~~his~~ **her** nostrils. ~~He~~ **She** had to get away from here.
 
 **[93]**
 
@@ -1619,9 +1619,9 @@ She turned back toward the CIC, leaving only Shepard and Joker on the bridge. Fo
 
 ## part0011
 
-**[78]** _review: Acknowledges Shepard’s breasts during chest contact while keeping the rescuer’s identity distinct from Tali._
+**[78]** _review: Remove the added breast mention: this is a rescue during combat, with contact over armour._
 
-That changed when the last prime entered their small refuge. The enormous geth platform had lost its weapon, but it could easily kill them both with its bare hands. Kal couldn’t stand, but he shouldered her shotgun anyway. He pulled the trigger again and again, unloading the entire clip into the hulking machine. Its barriers took the hit, barely slowing the threat down. In a last-ditch effort to stop it, Kal emptied her pistol into it. Nothing. The battle outside was still raging, a miracle that came a moment too late. The prime stalked forward, closing the distance toward them. There was a flash; a brilliant blue light blinded them. The two quarians were thrown back by the blast, crashing into the wall behind them. The synthetic monster was dead, ripped in half by the sheer force of impact. Dazed and losing consciousness, Tali looked up to see someone standing over her. A suit of armour, and a voice she cherished hearing again. She felt her rescuer's arms around her. Tali closed her eyes, tears sliding down her cheeks. She weakly leaned her helmet ~~into his chest.~~ **against the armour over her rescuer's breasts.**
+That changed when the last prime entered their small refuge. The enormous geth platform had lost its weapon, but it could easily kill them both with its bare hands. Kal couldn’t stand, but he shouldered her shotgun anyway. He pulled the trigger again and again, unloading the entire clip into the hulking machine. Its barriers took the hit, barely slowing the threat down. In a last-ditch effort to stop it, Kal emptied her pistol into it. Nothing. The battle outside was still raging, a miracle that came a moment too late. The prime stalked forward, closing the distance toward them. There was a flash; a brilliant blue light blinded them. The two quarians were thrown back by the blast, crashing into the wall behind them. The synthetic monster was dead, ripped in half by the sheer force of impact. Dazed and losing consciousness, Tali looked up to see someone standing over her. A suit of armour, and a voice she cherished hearing again. She felt her rescuer's arms around her. Tali closed her eyes, tears sliding down her cheeks. She weakly leaned her helmet into ~~his~~ **her rescuer's** chest.
 
 
 ## part0012
@@ -2932,9 +2932,9 @@ Sharp breaths broke up Tali’s silence as ~~he~~ **Shepard** moved closer to he
 
 “No.” ~~He~~ **Shepard** agreed. “I don’t think they would either.”
 
-**[142]**
+**[142]** _review: Remove the gratuitous breast mention from a hug over clothing, restoring the original phrasing while preserving the other edits._
 
-~~He~~ **She** felt ~~her~~ **Tali’s** arms search for ~~him,~~ **her,** returning the hug. ~~She~~ **Tali** squeezed tightly, burying her helmet ~~into his chest.~~ **against Shepard’s chest, above the curve of her breasts beneath her clothes.** There were no tears; her sobs had all but died away. Instead the two of them just sat there, clinging to each other.
+~~He~~ **She** felt ~~her~~ **Tali’s** arms search for ~~him,~~ **her,** returning the hug. ~~She~~ **Tali** squeezed tightly, burying her helmet into ~~his~~ **Shepard’s** chest. There were no tears; her sobs had all but died away. Instead the two of them just sat there, clinging to each other.
 
 **[143]**
 
@@ -3110,9 +3110,9 @@ Shepard has been asking Garrus about what the turian military was like, another 
 
 ~~“He’s~~ **“She’s** got more to lose.” She said ominously. Something about her answer made Tali’s setae stand on end. The two of them had talked on occasion, more so recently. The mysterious human certainly had a charm to her, something that made her similarly easy to talk to. But there were times, like now, where the engineer felt like a bug caught in a spider’s web.
 
-**[34]** _review: Acknowledge Shepard’s breasts naturally in the visual description of her chest, and remove an unnecessary repetition of Tali’s name in the final viewpoint sentence._
+**[34]** _review: The added breast mention is gratuitous in a fight scene with Shepard clothed._
 
-In a flash, Kasumi was her typical self again, rubbing shoulders with Tali as they watched the match. Garrus and Shepard were closing in now, arms raised and ready for the first strike. The most noticeable difference between the two fighters was their size. Shepard was tall for a human, certainly taller than ~~she~~ **Tali** was: Broad shouldered and chested, **her breasts outlined by her fatigues,** with thick arms and legs. ~~He~~ **She** almost seemed larger than ~~she~~ **Tali** remembered, burlier. Maybe she’d just never noticed before.
+In a flash, Kasumi was her typical self again, rubbing shoulders with Tali as they watched the match. Garrus and Shepard were closing in now, arms raised and ready for the first strike. The most noticeable difference between the two fighters was their size. Shepard was tall for a human, certainly taller than ~~she~~ **Tali** was: Broad shouldered and chested, with thick arms and legs. ~~He~~ **She** almost seemed larger than ~~she~~ **Tali** remembered, burlier. Maybe she’d just never noticed before.
 
 **[36]**
 
@@ -3449,9 +3449,9 @@ Tali got to her feet, shaking off the impact. Blood rage filled the aggressive a
 
 Before her brain could process the error of her action, she felt Shepard’s arms around her. She knocked ~~him~~ **Shepard** to the ground, the fall softened by ~~his~~ **the commander’s** body. For a second she laid there on top of ~~him, his~~ **Shepard, an** arm around her waist. The two of them panted from the ordeal, before the krogan stirred again. Grabbing ~~his~~ **her** rifle one handed, the commander fired a volley into the monster’s head plate. Bullets chipped away at the bony amour, until flesh peeked out. Without a word between them, Tali levelled her shotgun, finishing off the krogan with a single blast. It slumped over dead, a grisly canyon where its skull had been.
 
-**[86]** _review: Keeps the required breast acknowledgment while removing the ambiguous possessive that could describe Tali’s breasts._
+**[86]** _review: Remove the added breast mention because this is contact over armour during a fight, restoring the original chest phrasing while retaining the gender and referent edits._
 
-“Nice catch.” She returned to sentiment, with a strained chuckle. Tali felt the ~~man’s~~ **rise of Shepard’s** chest beneath ~~her~~ **her, breasts encased in rigid armour,** as ~~he~~ **the commander** laughed. The moment didn’t last long, the sounds of snarling and stomping echoed up from the hallway. More naked krogan appeared.
+“Nice catch.” She returned to sentiment, with a strained chuckle. Tali felt ~~the man’s~~ **Shepard’s** chest beneath her as ~~he~~ **the commander** laughed. The moment didn’t last long, the sounds of snarling and stomping echoed up from the hallway. More naked krogan appeared.
 
 **[87]**
 
@@ -4321,9 +4321,9 @@ Joker’s reply was drowned out by a shriek from the praetorian. Tali had emerge
 
 The Alliance soldier’s brown eyes caught ~~his.~~ **hers.** There was an instant of pure realisation. Shepard recognised that voice anywhere, and ~~he~~ **she** felt Kaidan’s grip slacken with shock. But there was barely any time to process before the Collector attacked again. Circling above them, the winged alien threw down powerful energy blasts. Together the two ~~men~~ **soldiers** returned fire, alternating their own biotic strikes. Without serious injury, the lieutenant moved faster, landing his shots and trying to distract it. With barely any support weapons left, all Shepard could do cycle clips and keep firing. Finally growing tired with the battle, the burning Collector dove straight for Kaidan.
 
-**[53]** _review: Restore “She focused”; Kaidan is a man, so the pronoun clearly refers to Shepard._
+**[53]** _review: Remove the added breast mention because this is a fight and injury scene._
 
-Despite the lieutenant’s prowess, the commander realised this monster meant to kill him. Banishing all distractions, Shepard drew in an unsteady, shuddering breath. ~~He~~ **She** waited, watching the thing descend. Kaidan’s bullets chipped away the last of its barrier just milliseconds from impact. ~~He~~ **She** focused and flexed ~~his~~ **her** body. One final biotic charge impacted the Collector side-on, sending both of them tumbling across the battlefield. Shepard pushed away, hurrying to get to ~~his~~ **her** feet as the burning creature slashed at ~~him;~~ **her;** long claws ripping ~~his~~ **her** chest-plate clean off. Another blast struck ~~his~~ **her** unprotected ~~chest,~~ **chest above her breasts,** knocking ~~him~~ **her** down again. Before ~~he~~ **she** knew it, the Collector was on ~~him.~~ **her.**
+Despite the lieutenant’s prowess, the commander realised this monster meant to kill him. Banishing all distractions, Shepard drew in an unsteady, shuddering breath. ~~He~~ **She** waited, watching the thing descend. Kaidan’s bullets chipped away the last of its barrier just milliseconds from impact. ~~He~~ **She** focused and flexed ~~his~~ **her** body. One final biotic charge impacted the Collector side-on, sending both of them tumbling across the battlefield. Shepard pushed away, hurrying to get to ~~his~~ **her** feet as the burning creature slashed at ~~him;~~ **her;** long claws ripping ~~his~~ **her** chest-plate clean off. Another blast struck ~~his~~ **her** unprotected chest, knocking ~~him~~ **her** down again. Before ~~he~~ **she** knew it, the Collector was on ~~him.~~ **her.**
 
 **[55]** _review: Restore the final possessive pronoun; the sensations remain clearly in Shepard’s viewpoint._
 
@@ -4620,9 +4620,9 @@ The Captain’s cabin had been a victim of the attack too. Despite the weeks sin
 
 “Shepard?” She asked quietly, looking past ~~him~~ **her** to the bloody dents on the wall. ~~He~~ **Shepard** tensed for a moment, before looking over ~~his~~ **her** shoulder at ~~her.~~ **Tali.**
 
-**[63]** _review: Clarifies that the bare breasts and scarred abdomen belong to Shepard, not Tali._
+**[63]** _review: Remove the added breast mention because this is an injury scene, despite Shepard’s exposed chest._
 
-“Tali?” ~~He~~ **She** sounded genuinely surprised. “Sorry, I should’ve buzzed you in.” ~~He~~ **Shepard** turned to face her, Tali’s eyes glancing ~~his~~ **Shepard’s bare breasts and** scarred abdomen before she could stop herself. She could see the recognition on ~~his~~ **Shepard’s** face. ~~He~~ **She** didn’t want to be seen like this.
+“Tali?” ~~He~~ **She** sounded genuinely surprised. “Sorry, I should’ve buzzed you in.” ~~He~~ **Shepard** turned to face her, Tali’s eyes glancing ~~his~~ **Shepard’s** scarred abdomen before she could stop herself. She could see the recognition on ~~his~~ **Shepard’s** face. ~~He~~ **She** didn’t want to be seen like this.
 
 **[64]**
 
@@ -5573,9 +5573,9 @@ Tali looked up at the stars with wet eyes, trying desperately to clear her head.
 
 “Everything okay?” ~~His~~ **Shepard’s** voice took on that damned tone, one she’d grown to love and hate. ~~He~~ **Shepard** never used it with anyone else. Just with her.
 
-**[122]**
+**[122]** _review: The tuxedo covers Shepard’s chest, and the moment is not sensual; the added breast mention is gratuitous._
 
-“Didn’t take you for a stargazer.” Shepard leaned next to her, ~~his~~ **her** broad chest on full ~~display.~~ **display, the tuxedo tailored to the curve of her breasts.** “I mean; we see them all the time.”
+“Didn’t take you for a stargazer.” Shepard leaned next to her, ~~his~~ **her** broad chest on full display. “I mean; we see them all the time.”
 
 **[124]**
 
@@ -6255,9 +6255,9 @@ It was gentle, but firm. Shepard froze. ~~He~~ **She** knew that the slightest t
 
 Tali said the words so quietly they were almost a whisper. ~~His~~ **Shepard’s** mouth opened, but nothing came out. Whatever thoughts, whatever rational objections ~~he~~ **she** could make, all of it was burned away by the sheer <em>need</em> in ~~her~~ **Tali’s** voice. Eventually the answer came to ~~him,~~ **her,** the only answer ~~he~~ **she** could possibly give ~~her.~~ **Tali.**
 
-**[149]** _review: Clarifies whose chest receives the arm and who cuddles closer while retaining the natural breast acknowledgment._
+**[149]** _review: The added breast mention is gratuitous in a clothed cuddle._
 
-Shepard’s heart was racing, letting **Tali pull** her ~~pull him~~ down onto the bed. ~~He~~ **She** felt ~~her~~ **a** slender arm drape across ~~his~~ **her** chest, ~~cuddling~~ **just above her breasts, as Tali cuddled** up to ~~him.~~ **her.** Consumed by instinct, ~~he~~ **she** put ~~his~~ **her** arm around ~~her~~ **Tali’s** shoulder, closing those last agonising inches until they were together. Finally.
+Shepard’s heart was racing, letting **Tali pull** her ~~pull him~~ down onto the bed. ~~He~~ **She** felt ~~her~~ **a** slender arm drape across ~~his chest, cuddling~~ **her chest as Tali cuddled** up to ~~him.~~ **her.** Consumed by instinct, ~~he~~ **she** put ~~his~~ **her** arm around ~~her~~ **Tali’s** shoulder, closing those last agonising inches until they were together. Finally.
 
 **[150]** _review: Clarifies whose chest Tali rests her head on without repeating the breast mention._
 
@@ -6354,9 +6354,9 @@ Rounding the corner into the ship’s mess, ~~he~~ **she** was struck again by t
 
 Accepting a nod and another unnervingly friendly chuckle, Shepard headed over to the observation room opposite Kasumi’s. ~~He’d~~ **She’d** wanted to check in with Garrus, but the turian had left ~~him~~ **her** a lengthy message that boiled down to “busy calibrating main gun”. Apparently, elite Cerberus engineers had completely screwed up the targeting and cooling systems. ~~He~~ **She** doubted the truth of it, more likely the ornery bastard just wanted to indulge in his favourite hobby: Besides comedy, of course.
 
-**[39]** _review: Identify whose chest Tali’s arm rests on; restore unnecessary repetitions of Tali’s name where Shepard’s viewpoint makes the references clear._
+**[39]** _review: The added mention occurs during a recollection of closeness over clothing and is unnecessary._
 
-Though in a way, ~~he~~ **she** was relieved. Despite ~~his~~ **her** well-practiced exterior of calm, inside ~~he~~ **she** was all over the place. Memories of last night still swam in ~~his~~ **her** head, utterly impossible to escape. ~~He~~ **She** could still see Tali’s arm draped across ~~his chest. He~~ **Shepard’s chest, just above her breasts. She** heard her steady, gentle breathing in ~~his~~ **her** ear. Felt the softness of her body against ~~him,~~ **her,** even through the suit. It was a heady mixture of heat and closeness that up until now had been pure fantasy. At the centre of it all, were those two words she’d said to ~~him. He~~ **her. She** felt their tug on ~~his~~ **her** mind, even still: Two words, spoken so earnestly and with such desire that they marked ~~his~~ **her** very soul.
+Though in a way, ~~he~~ **she** was relieved. Despite ~~his~~ **her** well-practiced exterior of calm, inside ~~he~~ **she** was all over the place. Memories of last night still swam in ~~his~~ **her** head, utterly impossible to escape. ~~He~~ **She** could still see Tali’s arm draped across ~~his~~ **Shepard’s** chest. ~~He~~ **She** heard her steady, gentle breathing in ~~his~~ **her** ear. Felt the softness of her body against ~~him,~~ **her,** even through the suit. It was a heady mixture of heat and closeness that up until now had been pure fantasy. At the centre of it all, were those two words she’d said to ~~him. He~~ **her. She** felt their tug on ~~his~~ **her** mind, even still: Two words, spoken so earnestly and with such desire that they marked ~~his~~ **her** very soul.
 
 **[41]** _review: The opening otherwise suggests that Tali was the one waking up._
 
@@ -6502,9 +6502,9 @@ Her eyes widened with wonder, staring down at the fuzzy creature in ~~his~~ **Sh
 
 “Tali, this… I mean this is…” Shepard shook ~~his~~ **her** head, mouth open. When it closed again, the corners pulled up into a smile that made ~~her~~ **Tali’s** chest tighten. Those bright blue eyes were on her now, trapped between ~~his~~ **Shepard’s** cheeks and brows. “Thank you.”
 
-**[121]** _review: The draft makes Tali appear to pull the hoodie over her own breasts. Keep the dressing action and body description with Shepard, and restore a clear viewpoint pronoun._
+**[121]** _review: Shepard is trying on a hoodie, not exposing her chest; the added breast mention is gratuitous in this clothing-fit description._
 
-Her suggestion seemed to rouse the ~~man~~ **woman** to life. She listened to the sounds of tiny metal teeth parting down the jacket’s front. Soon the chest was opened up, deftly swung behind ~~him. His~~ **Shepard. Her** thick arms disappeared into the sleeves, filling out the limp material until it conformed to ~~his~~ **her** shape. Absent-mindedly, ~~she~~ **Tali** admired the impressive machine of ~~his body, pulling~~ **Shepard’s body as the commander pulled** the hoodie closed **over her breasts** and ~~drawing~~ **drew** the zipper up to a comfortable spot on ~~his~~ **her** chest. Maybe it was a little baggy, or the arms were too tight? Her brow furrowed under purple glass, looking for any giveaway to a poor fit. But to Shepard, it seemed like there was nothing wrong. Instead, ~~he~~ **she** pulled the hood up and over ~~his~~ **her** short hair, framing ~~his~~ **her** handsome face with it. Something about seeing ~~him~~ **her** like that, it brought a flush to ~~her~~ **Tali’s** cheeks.
+Her suggestion seemed to rouse the ~~man~~ **woman** to life. She listened to the sounds of tiny metal teeth parting down the jacket’s front. Soon the chest was opened up, deftly swung behind ~~him. His~~ **Shepard. Her** thick arms disappeared into the sleeves, filling out the limp material until it conformed to ~~his~~ **her** shape. Absent-mindedly, ~~she~~ **Tali** admired the impressive machine of ~~his body, pulling~~ **Shepard’s body as the commander pulled** the hoodie closed and ~~drawing~~ **drew** the zipper up to a comfortable spot on ~~his~~ **her** chest. Maybe it was a little baggy, or the arms were too tight? Her brow furrowed under purple glass, looking for any giveaway to a poor fit. But to Shepard, it seemed like there was nothing wrong. Instead, ~~he~~ **she** pulled the hood up and over ~~his~~ **her** short hair, framing ~~his~~ **her** handsome face with it. Something about seeing ~~him~~ **her** like that, it brought a flush to ~~her~~ **Tali’s** cheeks.
 
 **[122]**
 
@@ -6829,9 +6829,9 @@ Chakwas gave a nod, a tap of her Omni-tool fogging over the med-bay windows. ~~J
 
 She pounced, bowling the ~~man~~ **woman** over onto the bed. Riding high on happiness and sheer surprise, she pinned ~~him~~ **Jane** down in a hug. ~~John’s~~ **Jane’s** sentence came out in a gasp, before only contented groans made it past ~~his~~ **her** lips. ~~His~~ **Her** arms returned the embrace, patting ~~her~~ **Tali’s** back as the two of them lay there. The words Tali wanted to say were stuck in her mind; the only sound escaping her mouth was something between a giggle and a sob.
 
-**[135]**
+**[135]** _review: The added mention is gratuitous in a clothed hug and should be removed._
 
-The questions and possibilities were all still there, her brain doing its best to catalogue all of them away. Doubts and fears crept in, worries about mission performance or unexpected consequences. But that was barely a drop in the ocean of joy she was feeling. So, while the words slowly came, she nuzzled into ~~his chest.~~ **Jane’s chest, just above the curve of her breasts.**
+The questions and possibilities were all still there, her brain doing its best to catalogue all of them away. Doubts and fears crept in, worries about mission performance or unexpected consequences. But that was barely a drop in the ocean of joy she was feeling. So, while the words slowly came, she nuzzled into ~~his~~ **Jane’s** chest.
 
 **[137]**
 
@@ -7152,9 +7152,9 @@ She remembered the term; ~~he’d~~ **Jane’d** explained it to her on the old 
 
 “If it gets any worse, let me know?” ~~He~~ **Jane** sunk down onto the bed, looking up at her with beckoning eyes.
 
-**[119]** _review: Restore the curly apostrophe and retain the final pronoun, whose human referent is unambiguous._
+**[119]** _review: Remove the added breast mention because this is a clothed cuddle, not an exposed-chest or sensual body description._
 
-“I promise.” She crawled on top of ~~him,~~ **Jane,** laying her head on ~~his chest.~~ **the soft curve of her breasts beneath her shirt.** Soon ~~his~~ **Jane’s** arm was stroking her back, lulling the young woman into a pleasant drowsiness. It had become a lovely new mainstay of their relationship, just lying together. For a human, ~~he~~ **she** certainly knew how to make a quarian feel at home.
+“I promise.” She crawled on top of ~~him,~~ **Jane,** laying her head on ~~his~~ **her** chest. Soon ~~his~~ **Jane’s** arm was stroking her back, lulling the young woman into a pleasant drowsiness. It had become a lovely new mainstay of their relationship, just lying together. For a human, ~~he~~ **she** certainly knew how to make a quarian feel at home.
 
 **[120]** _review: Restore curly apostrophes and remove an unnecessary name where Tali’s viewpoint makes the companion clear._
 
@@ -8156,9 +8156,9 @@ Shepard recognised the blue sky, the waves lapping against the shore. Virmire. ~
 
 “I handled it the <em>old fashioned</em> way.” ~~He~~ **She** have her a wink. “Hopefully he’ll take the professor’s advice, open up a clinic somewhere.”
 
-**[109]**
+**[109]** _review: Remove the gratuitous breast mention from a hug over clothing or armour._
 
-Maybe it was just the moment, or the intimacy of the private channel they shared. But in spite of the public setting, right next to the Urdnot chief’s throne, Tali pulled ~~the man~~ **Shepard** in to a hug. ~~He~~ **Shepard** enjoyed the familiar presence of ~~her~~ **Tali’s** helmet against ~~his~~ **her** chest, **just above her breasts,** the reassuring smother of ~~her~~ **the quarian’s** arms around ~~him.~~ **her.** Instinct took over, and ~~he~~ **she** returned it warmly.
+Maybe it was just the moment, or the intimacy of the private channel they shared. But in spite of the public setting, right next to the Urdnot chief’s throne, Tali pulled ~~the man~~ **Shepard** in to a hug. ~~He~~ **Shepard** enjoyed the familiar presence of ~~her~~ **Tali’s** helmet against ~~his~~ **her** chest, the reassuring smother of ~~her~~ **the quarian’s** arms around ~~him.~~ **her.** Instinct took over, and ~~he~~ **she** returned it warmly.
 
 **[110]** _review: The final pair of pronouns could reverse who sees whom; names Tali as the one who understands Shepard._
 
@@ -8658,9 +8658,9 @@ Seeing ~~her,~~ **Tali,** feeling her. Having that warm, suited body share ~~his
 
 The thought roused something in ~~him.~~ **her.** Rolling over, ~~he~~ **she** saw the empty spot where Tali had been. ~~Her~~ **Tali’s** absence wasn’t enough to worry ~~him;~~ **her;** she was the Normandy’s chief engineer. But when ~~he~~ **Shepard** brought up ~~his~~ **her** Omni-tool for the time, those tired eyes widened. It was still two hours before ~~her~~ **Tali’s** shift. With a frustrated grunt, Shepard brought up the Normandy map, activating the locator. Another gift from ~~his~~ **her** girlfriend, both their tools were synced. At a moment’s notice, one could home in on the other. Part of ~~him~~ **her** pondered just <em>how</em> someone like Tali might use it. A few seconds went by before the tool gave ~~him his~~ **her her** partner’s location.
 
-**[20]** _review: Restores the pronoun where Shepard’s actions are already clear._
+**[20]** _review: The shirt covers her chest, and this is not a sensual moment; the breast mention is gratuitous._
 
-Shepard was on ~~his~~ **her** feet, shirt pulled over ~~his chest. He~~ **her breasts. She** knew enough about environment suits to be concerned. If it required ~~her~~ **Tali’s** physical presence in a bathroom, she could need help. Pacing up the tier steps, ~~he~~ **she** gave Boo’s cage a quick glance. The hamster was pressed against the glass, dark eyes locked on the bathroom door. His agitated mood mirrored the commander’s. Disabling the auto-open feature, ~~he~~ **she** gave a soft few knocks.
+Shepard was on ~~his~~ **her** feet, shirt pulled over ~~his~~ **her** chest. ~~He~~ **She** knew enough about environment suits to be concerned. If it required ~~her~~ **Tali’s** physical presence in a bathroom, she could need help. Pacing up the tier steps, ~~he~~ **she** gave Boo’s cage a quick glance. The hamster was pressed against the glass, dark eyes locked on the bathroom door. His agitated mood mirrored the commander’s. Disabling the auto-open feature, ~~he~~ **she** gave a soft few knocks.
 
 **[21]**
 
@@ -8926,9 +8926,9 @@ Shepard’s expression hardened, the boiling pit in ~~his~~ **her** stomach want
 
 “Appreciate the back-handed compliment, Lawson.” ~~He~~ **Shepard** smiled, the first genuine one since ~~he’d~~ **she’d** woken up. ~~She~~ **Miranda** huffed a chuckle herself, leaning back in her chair. Turning to face ~~him,~~ **Shepard,** she glanced over to the fogged windows and that smile fell from her lips.
 
-**[117]**
+**[117]** _review: Shepard’s chest is clothed, and the glance is not sensual. The added breast description is unnecessary._
 
-“I am sorry, Shepard. About Tali.” Her fingers brushed together again. “And… not just about tonight. I shouldn’t have said what I did on Freedom’s Progress, or when she came aboard. It’s just this mission, and all these unknowns, and…” She glanced at ~~his chest.~~ **Shepard’s chest, the rise of her breasts beneath her shirt.** “Sometimes I forget you <em>had</em> a life, before we met.”
+“I am sorry, Shepard. About Tali.” Her fingers brushed together again. “And… not just about tonight. I shouldn’t have said what I did on Freedom’s Progress, or when she came aboard. It’s just this mission, and all these unknowns, and…” She glanced at ~~his~~ **Shepard’s** chest. “Sometimes I forget you <em>had</em> a life, before we met.”
 
 **[118]**
 
@@ -9831,9 +9831,9 @@ Shepard’s teeth clenched, looking to Tali. ~~He~~ **She** could see the concer
 
 The door hissed open, and Shepard’s blue corona flared as ~~he~~ **she** spotted them: A human and an asari. ~~His~~ **Her** hands were around the man’s throat in an instant, blinking into him with a crash. The clatter of a metal coffee cup was followed by a wet, muffled pop. By the time ~~he’d~~ **she’d** broken the man’s neck, the asari trooper was suspended in mid-air, under Miranda’s grasp. She sent the asari into the wall with a meaty crunch, before she slumped to the floor with a thud.
 
-**[102]** _review: Integrate the breast acknowledgment into the stripping action, clarify who keeps her questions to herself, and remove unnecessary later name substitutions._
+**[102]** _review: Shepard’s chest remains covered by underwear, and the scene concerns changing into armour rather than sensual attention to her body._
 
-Wasting no time, the pair stripped down to their underwear, casting aside the tuxedo and dress like so much ~~trash.~~ **trash, leaving Shepard’s bra covering her breasts.** The rasp of zippers and the clacking of clasps were all that broke the tense silence. ~~He~~ **Shepard** wanted to press Miranda. To ask why she, of all people, would care so much for the personal trinket of a thief. But ~~he~~ **Shepard** kept ~~his~~ **her** questions to ~~himself,~~ **herself,** instead letting Tali sync up their commandeered hard-suits. While Miranda was momentarily occupied, ~~he~~ **she** felt Tali’s hands on ~~him,~~ **her,** adjusting a segment here and there. She still had the magic touch.
+Wasting no time, the pair stripped down to their underwear, casting aside the tuxedo and dress like so much trash. The rasp of zippers and the clacking of clasps were all that broke the tense silence. ~~He~~ **Shepard** wanted to press Miranda. To ask why she, of all people, would care so much for the personal trinket of a thief. But ~~he~~ **Shepard** kept ~~his~~ **her** questions to ~~himself,~~ **herself,** instead letting Tali sync up their commandeered hard-suits. While Miranda was momentarily occupied, ~~he~~ **she** felt Tali’s hands on ~~him,~~ **her,** adjusting a segment here and there. She still had the magic touch.
 
 **[103]**
 
@@ -10206,9 +10206,9 @@ With a gentle flick, ~~her~~ **Tali’s** magnetic anchor came free, and Shepard
 
 “Yes, in a good way.” She shook her helmet. “Don’t get me wrong, throwing up is fun. But I do that all the time. How often do I get to rub my ~~boyfriend’s~~ **girlfriend’s** back bare-handed?”
 
-**[136]** _review: Naturally acknowledges Shepard’s breasts when Tali touches her chest in this scene._
+**[136]** _review: The touch is over Shepard’s suit, so the added breast mention is gratuitous._
 
-“We’ll have to give that night some competition.” ~~He~~ **Shepard** winked, seeing those glinting eyes squish to crescents. “You uh… ready to come back up?” ~~Her~~ **Tali’s** answer was clear enough, from the hand ghosting down ~~his chest.~~ **Shepard’s chest, over the curve of a breast beneath her suit.**
+“We’ll have to give that night some competition.” ~~He~~ **Shepard** winked, seeing those glinting eyes squish to crescents. “You uh… ready to come back up?” ~~Her~~ **Tali’s** answer was clear enough, from the hand ghosting down ~~his~~ **Shepard’s** chest.
 
 **[137]**
 
@@ -10640,9 +10640,9 @@ Jeff!” Tali felt a chill as the ~~man~~ **commander** snapped at ~~his~~ **her
 
 The airlock shook as the gantry disconnected, and that feeling of motion settled in Tali’s belly. Her HUD blinked with the unread message, jeering from out of the corner of her eye. ~~John~~ **Jane** was slumped forward, staring into the cold metal door. ~~She~~ **Tali** could see ~~his~~ **her** body tense and relax with every breath. Slow, controlled. She recognised it immediately. Not fear, or anger. Pain. It writhed inside her too, hot and cold, rasping against her innards. <em>Why?</em> Why would he leave? Tali had never known anything that came between Garrus and ~~John.~~ **Jane.** Nothing short of the very worst circumstances could separate them.
 
-**[131]** _review: Clarifies who turns toward whom and briefly acknowledges Shepard’s breasts during chest contact, without changing the scene’s nonsexual tone._
+**[131]** _review: Remove the added breast mention because this is a hug over armour._
 
-Vivid memories of that time returned, after they’d lost ~~him.~~ **Shepard.** How broken the turian had looked, how he had been a mirror to her own tortured mind. Tali placed a gloved hand on ~~John’s~~ **Jane’s** shoulder, turning ~~him~~ **her** back ~~to her.~~ **toward the quarian.** The scars pulsed red, criss-crossing the skin on ~~his~~ **Jane’s** cheeks. Her mouth went dry just seeing them again, so inflamed. ~~His~~ **Jane’s** Omni-tool glowed on ~~his~~ **her** arm, but the file sat there, unheard. In a wordless display of companionship, Tali nestled in to ~~John’s~~ **Jane’s** chest, getting as close as ~~she could.~~ **the armour over Jane’s breasts would allow.** When ~~his~~ **Jane’s** arm finally settled around her, she pressed a finger to ~~his~~ **the** glowing gauntlet, and the message played.
+Vivid memories of that time returned, after they’d lost ~~him.~~ **Shepard.** How broken the turian had looked, how he had been a mirror to her own tortured mind. Tali placed a gloved hand on ~~John’s~~ **Jane’s** shoulder, turning ~~him~~ **her** back ~~to her.~~ **toward the quarian.** The scars pulsed red, criss-crossing the skin on ~~his~~ **Jane’s** cheeks. Her mouth went dry just seeing them again, so inflamed. ~~His~~ **Jane’s** Omni-tool glowed on ~~his~~ **her** arm, but the file sat there, unheard. In a wordless display of companionship, Tali nestled in to ~~John’s~~ **Jane’s** chest, getting as close as she could. When ~~his~~ **Jane’s** arm finally settled around her, she pressed a finger to ~~his~~ **the** glowing gauntlet, and the message played.
 
 
 ## part0047
