@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch9.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html" selected>Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch11.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 7</h1>
+    <div class="chapter-content">
+        <p>Garrus Vakarian looked down the scope of his M-98 Widow sniper rifle, lying prone atop a ridge overlooking a section of a tall grassland, flanked by dense forests of towering trees. Thunder boomed in the storm clouds above, and torrents of rain poured below, pittering and pattering against the forest floor and the forest canopy.</p>
+        <p>Far in the distance, gunfire cracked through the air.</p>
+        <p>&quot;Two minutes to contact,&quot; Ashley said on the team comm-link, &quot;be ready.&quot;</p>
+        <p>&quot;No way in hell are we letting this pendejo escape,&quot; James said. &quot;Just you wait. Tonight, I&#x27;ll fix us up something real nice. I know just which one of my Abuela&#x27;s recipes–&quot;</p>
+        <p>&quot;James,&quot; Javik said, &quot;now is not the time to talk about human cuisine. Focus.&quot;</p>
+        <p>He took a deep breath. Yes, after hours of recon, he had chosen this location carefully. James and Ashley only had to chase the target into the kill-zone, and then he and Javik would handle the rest.</p>
+        <p>Just over two minutes later, he spotted rustling in the tall grass, then held his breath when the target came closing in fast. It loped into the kill-zone on its four, muscular legs ending with sharp hooves, and bellowed loud enough to rattle his bones. Judging by its massive crown of antlers and its leathery brown skin, the target had to be a male.</p>
+        <p>&quot;Do not fire yet,&quot; Javik said, &quot;wait until it&#x27;s in range, then wait for my signal.&quot;</p>
+        <p>He focused, adjusting his aim to account for the wind.</p>
+        <p>Then suddenly, Javik sprang up from his concealed position at the bottom of the ridge and released a blast of blue-green biotic energy, immobilizing the target in a stasis field. &quot;NOW!&quot;</p>
+        <p>He pulled the trigger. A bone-shaking crack-boom split the air. Then the target&#x27;s head exploded in a gout of blood, brains, and skull fragments.</p>
+        <p>&quot;Target neutralized,&quot; he said. &quot;Great work everybody.&quot;</p>
+        <p>&quot;Oooh, fuck yeah!&quot; James said. &quot;That&#x27;s what I&#x27;m talking about baby!&quot;</p>
+        <p>Ashley chuckled. &quot;Finally, a successful hunt.&quot;</p>
+        <p>He stood up, then folded his sniper rifle before attaching it to the magnetic holster on the back of his armor. Making his way towards the bottom of the ridge, he spotted James, Ashley, and Javik approaching the target&#x27;s carcass. Soon, they huddled around it, and he joined them.</p>
+        <p>&quot;Oooh,&quot; James said, taking off his helmet. Over the past three months, the human&#x27;s once-powerful physique had shrunken to a much thinner, more wiry frame. On his head and face, his fur was now much thicker and longer. &quot;We caught a big one.&quot;</p>
+        <p>He looked at his kill, and indeed, it was a male far larger than average. Its carcass easily had enough meat to feed the entire crew, except Tali and himself, for a whole week. &quot;Yeah, looks like it. I guess this one is closer to a…what did you call that Earth animal again? An elakhant?&quot;</p>
+        <p>James laughed. &quot;An elephant, scars.&quot;</p>
+        <p>&quot;Yeah,&quot; he said, &quot;this bastard looks more like one of those than that other earth animal, the brown one with the antlers.&quot;</p>
+        <p>&quot;A moose,&quot; Ashley took off her helmet. Like James, she had also grown much thinner, her face more sunken and hollow. &quot;You&#x27;re talking about a moose.&quot; She sighed. &quot;Anyways, now we just have to bring it back. It&#x27;ll be quite a long, long way.&quot;</p>
+        <p>&quot;Ah, cease your complaining,&quot; Javik said. &quot;In my cycle, I once carried a wounded comrade over sixty of your kilometers to safety.&quot;</p>
+        <p>&quot;Yeah, yeah, yeah,&quot; he said, &quot;we&#x27;re all impressed. Now, how about you use your biotics to help bring this thing back to the Mako.&quot;</p>
+        <p>Javik nodded. &quot;Indeed.&quot; With his biotics, the prothean enveloped the carcass in a mass effect field, lowering its weight. &quot;Enough talking. We have a long journey back.&quot;</p>
+        <p>James took off a coil of carbon-nanofibre cable from his utility belt, then tied one end around the carcass&#x27;s back limbs. Hoisting the cable over his shoulder, the human began to drag the carcass forward. &quot;Let&#x27;s move.&quot;</p>
+        <p>As they headed back to the Mako, James took point, while he and Ashley guarded the flanks against any predators. Meanwhile, Javik followed, maintaining the mass effect field around the carcass.</p>
+        <p>&quot;Damn, your biotics are really something else,&quot; Ashley said, about an hour later. &quot;Liara or Shepard would have needed to rest by now.&quot;</p>
+        <p>&quot;It&#x27;s simply a product of practice,&quot; Javik said, &quot;and superior biotic implants. In my cycle, even your L5&#x27;s would be considered quite crude.&quot;</p>
+        <p>&quot;Shit, man,&quot; James said, &quot;there anything your cycle didn&#x27;t do better?&quot;</p>
+        <p>An hour later, after following a winding set of trails, they finally made it back to the Mako. Ashley helped James haul the carcass into its interior.</p>
+        <p>&quot;Ah, finally,&quot; James said, dusting off his hands. &quot;Now, let&#x27;s get back. I&#x27;ve got an absolute shit ton of skinning and butchering to do.&quot;</p>
+        <p>&quot;Yeah, you do,&quot; he said. &quot;So get in. I&#x27;ll drive.&quot;</p>
+        <p>James, Ashley, and Javik got into the Mako, while he got into the driver&#x27;s seat. And then he drove off, following the directions on the holo-map by the dashboard. Thank the spirits, we still had recon-drones to map this out. Without them, navigation would have been a nightmare.</p>
+        <p>Two hours later, he sighed. Ever since the larger game had started migrating, these hunting expeditions were getting longer and longer. At this rate, they&#x27;d burn through what little fuel they had left for the Mako, and soon after, the levo crew would begin to starve. Two days ago, Traynor had also informed him that they had only a week&#x27;s worth of dextro rations left.</p>
+        <p>So by the spirits, they couldn&#x27;t stay on this planet much longer.</p>
+        <p>An hour later, he finally reached the base camp they&#x27;d built by the Normandy. Parking the Mako just outside the ramp leading to its cargo bay, he turned off the engine, then left the vehicle, back into the rain. All around the base camp, numerous buckets were overflowing with rainwater. Yes, for at least the next three days, nobody would have to collect water from the nearest streams, then spend hours sterilizing it of any dangerous microbes.</p>
+        <p>James, Ashley, and Javik got out of the Mako. Again, Javik enveloped the carcass in a mass effect field, and James helped Ashley carry it outside, then up the ramp into the cargo bay. Within the cargo bay, they brought it near a pulley system Tali had set up two days after Liara had mind-melded with her. Soon after that mind-meld, Liara had passed along Tali&#x27;s agony to himself and others.</p>
+        <p>And spirits…he knew nothing about love or loss.</p>
+        <p>Yes, Felz&#x27;elt was the psychological equivalent of losing every limb, of having every plate torn off one&#x27;s body. All this time, he had underestimated Tali&#x27;s mental toughness, for such pain would have driven lesser minds to madness or suicide within only days.</p>
+        <p>He huffed through his nose. Shouldn&#x27;t have been so hard on her. &quot;Ok. Now, let&#x27;s haul it up.&quot;</p>
+        <p>James untied the cable around the carcass&#x27;s back limbs, then replaced it with the one connected to the pulley system. Next, the human grabbed the other end of the pulley cable, secured to the deck with a floor hook. Once Ashley released the hook, he positioned himself next to James and also grabbed the cable to help the human pull up the carcass.</p>
+        <p>&quot;On the count of three, scars,&quot; James said. He nodded. &quot;Ok, three…two…one.&quot;</p>
+        <p>He pulled and pulled on the cable with all his strength, and once the carcass was hanging upside down, Ashley reattached the cable to the floor hook.</p>
+        <p>He let go of the cable, along with James. James let out a sigh of relief. &quot;Woooh, now there we go.&quot; The human dusted off his hands. &quot;Better get to work. It&#x27;ll take quite a while for me to chop this big boy up.&quot;</p>
+        <p>He nodded. Now, he should check up on Liara and Tali. Soon, they should return from foraging in the woods not far north.</p>
+        <p>&quot;Garrus!&quot; The voice came from the elevator. It was Traynor, running towards him. &quot;GARRUS!&quot;</p>
+        <p>&quot;Woah, woah, woah,&quot; James said, &quot;easy there.&quot;</p>
+        <p>&quot;Yeah, just settle down,&quot; Ashley said, &quot;take a deep breath, then tell us what happened.&quot;</p>
+        <p>Garrus put one of his hands on Traynor&#x27;s shoulder. What had Traynor so worked up? Normally, she was so calm and professional. &quot;You heard them. Just take a few deep breaths.&quot;</p>
+        <p>Traynor took several deep breaths but was still breathing heavily, as she pressed a few keys on her omni-tool. &quot;Just…just a few minutes ago, I picked this up on the long-range comms.&quot;</p>
+        <p>So we never needed the QEC anyway. He exhaled. Thank the spirits. A month ago, Tali had reported that, despite her best efforts, it was beyond repair and needed expensive spare parts they didn&#x27;t have in the cargo bay.</p>
+        <p>Traynor took another deep breath. &quot;It was sent out over a month and a half ago. Good god, you need to hear it.&quot;</p>
+        <p>Just then, a message played on her omni-tool.</p>
+        <p>&quot;This is Jane Michael Shepard of the Systems Alliance. If anyone on the SSV Normandy is listening to this message, then know this: we won. The war is over. Against all odds, the Reapers have been defeated. So wherever you are, please…return to the Sol system and tell Tali that I&#x27;m alive, that it&#x27;s been terribly lonely here without her. This is Jane Shepard, signing off.&quot;</p>
+        <p>When the message ended, everyone was dead silent and frozen in place, their eyes wide, their mouths open. Outside, the rain continued to pitter and patter against the Normandy&#x27;s hull, along with the Mako&#x27;s.</p>
+        <p>Shepard was alive?</p>
+        <p>Spirits, now, there was no doubt that humanity would remember her as their greatest warrior to ever live. As Javik said just a week after the crash, she deserved nothing less than to have countless monuments dedicated to her glory, to have countless worlds and warships bearing her name. Just like Ataxharksis The Great. His chest swelled with warmth, and he couldn&#x27;t have felt any prouder to be Shepard&#x27;s closest friend, to have been there for her through everything. Yes, as soon as they got back to Earth, he would definitely buy her a drink.</p>
+        <p>They had so much to discuss.</p>
+        <p>Ashley gulped. &quot;I…I don&#x27;t know what to say. This is…&quot; She shook her head, &quot;This is just…&quot;</p>
+        <p>&quot;A welcome surprise,&quot; Javik said, straightening his posture, his hands clasped behind his back. &quot;No doubt, the quarian will be pleased.&quot;</p>
+        <p>&quot;That,&quot; James said, &quot;has to be the biggest understatement of the fucking decade. Man, when sparks hears that lola&#x27;s alive, she just might have a damn heart attack.&quot;</p>
+        <p>&quot;Yeah…&quot; Ashley said. She met his gaze. &quot;Where is she anyway?&quot;</p>
+        <p>&quot;Good question,&quot; he said, &quot;let me check up on them.&quot;</p>
+        <p>Tali&#x27;Zorah picked slews of alien fruits and berries from the bizarre bushes and trees all around her, leaving behind the ones Chakwas had labeled as toxic. Keelah, she wasn&#x27;t used to so much green, to so much rain, and to spending so much time on an actual planet. She sighed. Even with Rannoch reclaimed, it would take many years for her people to grow accustomed to living with soil beneath their feet, instead of the deck of a starship.</p>
+        <p>&quot;So, tell me about the time when you watched Shepard face down that Reaper,&quot; Liara said. Her asari friend was behind her, keeping watch, ready to open fire on any predators with her M-4 Locust. &quot;That is the next part isn&#x27;t it?&quot;</p>
+        <p>She sighed. Over the past two months, she and Liara regularly had these talks, in which she recounted all the greatest and worst moments of her relationship with Jane, pouring out everything she felt. Now that Liara understood her feelings, they&#x27;d helped her become more stable, more able to endure the pain that gnawed on her mind every day. &quot;Yes. That&#x27;s next. Keelah, when she faced that Reaper head-on, I was shaking and hardly able to breathe. For a moment, I was sure that she was going to die, that I would live to see the end of my race.&quot; Under her mask, she smiled. &quot;But then she survived and did the impossible. She saved my people from themselves and gave us back our homeworld, finally ending a three-century-long dark age.&quot;</p>
+        <p>&quot;How did you feel after that?&quot; Liara asked.</p>
+        <p>She laughed, weeping tears of joy. &quot;I felt like the luckiest, most loved quarian in the galaxy, like Velana&#x27;Trosk from the Zendaerias.&quot;</p>
+        <p>&quot;The Zendaerias?&quot;</p>
+        <p>She grabbed another fistful of revolting alien berries from a bush with oddly-shaped leaves, then put them in the makeshift basket on her back. &quot;It&#x27;s one of the few pieces of ancient quarian literature to have survived the Morning War. My people regard it as a timeless masterpiece, as one of the greatest tales of love and war ever written.&quot;</p>
+        <p>&quot;Ooh,&quot; Liara said, &quot;even better than Fleet and Flotilla?&quot;</p>
+        <p>Briefly, she looked back to the earliest days of her pilgrimage, before Jane had whisked her away on the adventure of a lifetime. Yes, she would never forget the countless turian C-sec officers who treated her like filth, nor that disgusting boshtet in the alleyway with the revolting breath.</p>
+        <p>She let out an amused laugh. &quot;Oh, please, that is trashy nonsense for young, ignorant pilgrims. In the real world, no quarian has ever bonded to a turian. Our cultures and psychology are too incompatible for anything long-term. No, the Zendaerias is so much deeper and more meaningful, a beautiful expression of the lengths one will go for their lifemate.&quot;</p>
+        <p>&quot;What&#x27;s it about?&quot;</p>
+        <p>She took a deep breath, then continued to pick the fruits and berries. &quot;It&#x27;s set about seven thousand years ago, during the quarian iron age, a time of barbarism and chaos. In the first act, the hero of the story, the famed Warmaster Zhoru&#x27;Trosk, has the perfect life. He is the heir to his father&#x27;s kingdom and the beloved protector of his clan&#x27;s lands. But his peace is not last. Soon, tensions explode with clan Trosk&#x27;s rival, the feared and hated clan Krael, and those boshtets invade the kingdom in a war of conquest, sacking any city that refused to surrender.&quot;</p>
+        <p>&quot;Goddess, that&#x27;s horrible,&quot; Liara said. &quot;What happened next?&quot;</p>
+        <p>&quot;As Zhoru was marshaling his armies, his second-in-command, Vaero, succumbed to his bent-up jealousy and hidden cowardice. In secret, he and a number of conspirators accepted an offer from clan Krael for the kingdom to become a vassal state, thinking they&#x27;d spare the clan a war they couldn&#x27;t win. Later, just before a crucial battle, Vaero betrays Zhoru and causes a catastrophic defeat.&quot;</p>
+        <p>Liara gasped. &quot;Did Zhoru survive?&quot;</p>
+        <p>&quot;Even though the battle was lost, even though Vaero usurped the throne and held Zhoru&#x27;s saera hostage, hope endured. Zhoru managed to escape, along with a band of his most loyal followers. For the next three years, his saera despaired and believed he was dead. But really, he was uniting every clan he could in the unconquered lands to the south, marshaling them against their common enemy.&quot;</p>
+        <p>&quot;Clan Krael.&quot;</p>
+        <p>&quot;Yes,&quot; Tali said. &quot;Soon, he founded the first clan confederation and marshaled an army of over one hundred and twenty thousand warriors. After that, he declared war on his most hated foe to reclaim what rightfully belonged to him, and to see his belovedagain.&quot;</p>
+        <p>&quot;Was he successful?&quot; Liara asked. &quot;Oh, please don&#x27;t tell me that Vaero killed Zhoru&#x27;s family out of petty spite.&quot;</p>
+        <p>&quot;As the war raged on,&quot; Tali said, picking a fistful of berries from the nearest bush, &quot;Vaero never even considered killing Velana. If he did, Zhoru&#x27;s armies would have destroyed everyone and everything. No city in their wake would have been left standing. But yes, in the end…Zhoru triumphed. He toppled clan Krael&#x27;s empire and reclaimed his kingdom, all for his saera.&quot;</p>
+        <p>Liara laughed. &quot;So Zhoru reclaimed his kingdom, the same way Jane reclaimed Rannoch? All for the woman they love?&quot;</p>
+        <p>She smiled and laughed, as tears streamed down her cheeks. &quot;Yes. Keelah, Jane was practically Zhoru&#x27;Trosk reborn as a human.&quot;</p>
+        <p>&quot;I agree,&quot; Liara said. &quot;It sounds like Rannoch was her greatest gift to you, the greatest expression of her love. It&#x27;s all the more reason for you to live on, Tali.&quot;</p>
+        <p>She stopped picking fruits. &quot;I…I&#x27;m trying, Liara. It&#x27;s just…&quot;</p>
+        <p>&quot;It&#x27;s just what?&quot;</p>
+        <p>Her eyes stung with tears. &quot;It&#x27;s still so hard.&quot; Her voice cracked when she said that, and she wept. She sniffled, then took a deep breath. &quot;Every day, I miss her scent, her voice, and the warmth of her touch. Every night, I dream about her, only to wake up alone in the cold, darkness of her cabin, wishing she was there to hold me, to fill the terrible emptiness in my soul with her boundless love.&quot; She sniffled. &quot;Nobody else will ever be able to fill that emptiness, Liara. Nobody. Without her, Rannoch will never feel like the gift she intended. It will always feel so empty, so lonely and hollow.&quot;</p>
+        <p>&quot;I know how much it hurts, Tali,&quot; Liara said. &quot;I know how much you&#x27;ve been suffering over the past three months. But believe me when I tell you that emptiness won&#x27;t feel so bottomless forever. Tell me, is there anything in Shepard&#x27;s cabin you can use to remember her, to keep a part of her with you forever?&quot;</p>
+        <p>She sniffled, remembering the rock Jane had given her on Rannoch.</p>
+        <p>&quot;Well…that&#x27;s a start.&quot;</p>
+        <p>She still had it in Shepard&#x27;s cabin. Indeed, perhaps she could turn it into some kind of memento, into a part of Shepard she could hold onto forever.</p>
+        <p>&quot;Yes, there is something. When we first set foot on Rannoch, she gave me–&quot;</p>
+        <p>&quot;Hold that thought, Tali.&quot;</p>
+        <p>Tali turned and faced Liara. The asari was pressing two of her fingers to her right ear, listening to something on a private comm channel. Why a private one?</p>
+        <p>What was going on?</p>
+        <p>Liara gasped and covered her mouth with one hand.</p>
+        <p>&quot;Liara, what is happening?&quot; she asked. &quot;Did something happen on the Normandy? Did another one of those predators–&quot;</p>
+        <p>Liara held up one of her hands to hush her, then exhaled. &quot;Ok…I understand. We&#x27;ll return as soon as possible.&quot;</p>
+        <p>&quot;Liara, talk to me,&quot; she said. &quot;What is happening on the Normandy? Who just contacted you on a private channel?&quot;</p>
+        <p>Liara wiped away her tears, then smiled momentarily. &quot;When we get back, you&#x27;ll find out.&quot; She gestured for her to follow. &quot;Come. We&#x27;ve done enough foraging for today.&quot;</p>
+        <p>&quot;Oh…uhm…very well,&quot; Tali said. What was going on? Why was Liara being so secretive? &quot;Let&#x27;s head back.&quot;</p>
+        <p>For the next half hour, she followed Liara along a winding set of trails, flanked by dense alien forests. The whole time, Liara kept wiping away her tears, smiling and letting out weak laughs.</p>
+        <p>&quot;Why are you crying?&quot;</p>
+        <p>&quot;Oh,&quot; Liara said. &quot;No, it&#x27;s nothing…&quot; she let out a nervous laugh. &quot;It&#x27;s just…well, better we stay silent until we get back. I wouldn&#x27;t want to ruin what&#x27;s to come.&quot;</p>
+        <p>&quot;Ruin what&#x27;s to come?&quot; She tilted her head. &quot;Liara, please, talk to me. Why are you being so secretive? I don&#x27;t understand.&quot;</p>
+        <p>Liara stopped in her tracks, then turned and met her gaze. &quot;Tali, just…trust me. You&#x27;ll find you out once we get back. Understood?&quot;</p>
+        <p>She let out a frustrated sigh. &quot;Very well. Lead the way.&quot;</p>
+        <p>For the next eleven minutes, she followed Liara back to the Normandy. There, in the cargo bay, a fresh kill was hanging from the pulley system she&#x27;d set up months ago, but nobody was to be found. Keelah, where was everybody?</p>
+        <p>She followed Liara into the elevator, and Liara pressed the button for deck three. On deck three, she then followed Liara into the mess hall, where nearly the entire crew was sitting at the table.</p>
+        <p>&quot;Garrus, what&#x27;s going on?&quot; she asked. &quot;Why is Liara being so secretive?&quot;</p>
+        <p>&quot;So glad you could join us, Tali,&quot; Garrus said. &quot;Have a seat. We have a surprise for you.&quot;</p>
+        <p>She sat in an empty seat. &quot;A surprise?&quot;</p>
+        <p>Garrus opened up a window on his omni-tool, then input a few commands.</p>
+        <p>&quot;This is Jane Michael Shepard of the Systems Alliance. If anyone…&quot;</p>
+        <p>She froze. Her eyes went wide and she gasped, barely able to breathe. As she continued to listen to Shepard&#x27;s voice, she put one hand on her vocalizer and that hand began to shake. Looking at the ground, she burst into tears and began to hyperventilate.</p>
+        <p>No.</p>
+        <p>This was impossible.</p>
+        <p>This had to be another nightmare. Yes, soon, she would wake up yet again in the darkness of Shepard&#x27;s cabin, only to find herself cold and alone.</p>
+        <p>&quot;...and tell Tali that I&#x27;m alive, that it&#x27;s been terribly lonely here without her. This is Jane Shepard, signing off.&quot;</p>
+        <p>Her chest heaved with racking sobs, and she doubled over and hugged herself. Shivering, she dug her fingertips into her arms, and her breathing became so ragged she feared she might suffocate. Wake up. Wake up! WAKE UP!</p>
+        <p>Everyone around the table were telling her things, but she couldn&#x27;t hear them. Soon, Garrus stood up, grabbed her arm, then hauled her out of her seat. She lacked the energy to resist and allowed him to take her to the med bay, her knees weak, her eyes stinging with tears. Soon, she was lying on one of the medical cots, and Chakwas came over and knelt beside her.</p>
+        <p>&quot;Shhh, it&#x27;s okay, Tali,&quot; the doctor said, &quot;just take a few deep breaths. Okay?&quot;</p>
+        <p>She nodded, then took a few deep breaths.</p>
+        <p>Chakwas put one hand on her shoulder. &quot;After how much you&#x27;ve suffered, I know this wonderful news must have been a complete shock to you. So for now, I want you to just lay on your side and take more deep breaths, while I run some tests. Can you do that for me?&quot;</p>
+        <p>She nodded, then complied, taking one deep breath after the other.</p>
+        <p>This isn&#x27;t a dream, she realized eventually.</p>
+        <p>Yes, she wasn&#x27;t waking up. This was real. Her saera was alive.</p>
+        <p>And by the ancestors, nothing would stop her from seeing her again.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 18</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch20.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html" selected>Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch22.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 18</h1>
+    <div class="chapter-content">
+        <p>On the beach next to her new home, Tali’Zorah was sitting on a rocky outcropping, fiddling with the ring she’d made for Jane. Around her, the waves crashed against the shore. Her realk billowed in the whistling wind, and every minute, Tikkun sank lower and lower towards the horizon in a sunset that squeezed the breath out of her lungs.</p>
+        <p>Keelah, it was so beautiful.</p>
+        <p>Even now, with Rannoch returned to her people, it felt surreal that she’d get to watch Tikkun set every day, and wake up with soil beneath her feet, not the deck of a starship. She smiled. One day, hopefully, she’d get to feel the sand and water of this beach on her bare feet and skin.</p>
+        <p>Yes, it would probably feel amazing.</p>
+        <p>She glanced looked to her right, and in the distance, at the top of a gentle slope, lay her new home. At its rear porch, Jane was pacing around, answering a call on her omni-tool related to something about her future employment. Earlier, whilst Jane occupied herself with whatever matter it concerned, she’d sat on this rock to contemplate the day&#x27;s events in solitude.</p>
+        <p>She sighed. Just hours ago, she and Jane had passed the Clan Masters’ test, then had spent the rest of the afternoon sightseeing Catyn, alongside Kasumi. They had only arrived at her new house about an hour ago, then did a quick rehearsal for the bonding ceremony.</p>
+        <p>Keelah, soon, Shala would arrive here, along with Zaal, Khaalu, Erukhan, and Kal, to conduct it. Soon, she’d get to experience what she’d only thought possible in her dreams, in her fantasies.</p>
+        <p>And soon, her life would change forever.</p>
+        <p>She smiled. Once more, she looked at the ring in her hands. Ancestors, was now the time to give it to her? Or should she wait? She exhaled through her nose. Keelah, just how would Jane react? Would she botch some human custom and only end up embarrassing herself? Or would she–</p>
+        <p>Just then, Kasumi decloaked behind her. “Oh, don’t tell me you still haven’t given it to her.”</p>
+        <p>She looked at Kasumi. “Oh, hey Kasumi.” She looked back at the ring, then sighed. “No, I…I still haven’t given it to her.”</p>
+        <p>Kasumi sat right beside her. “Why?”</p>
+        <p>“I don’t know,” Tali said, her gaze fixed on the ring. “I guess…I guess I’m still waiting for the appropriate time.”</p>
+        <p>“Tali, we talked about this,” Kasumi said, putting one hand on her shoulder, “you know that–”</p>
+        <p>“Yes, yes,” she said, “I know that Jane will love it. It’s just…”</p>
+        <p>“It’s just what?”</p>
+        <p>She looked into Kasumi’s eyes. “What if I do something wrong and embarrass myself? You humans have such complicated courtship rituals and customs, which I still don’t fully understand, and–”</p>
+        <p>Kasumi put one hand on her shoulder. “Tali,” she said firmly. “Relax. It’ll all be alright. Look, how about you give it to her after your bonding ceremony, when it’s just you two alone? Ok? All you have to do is just give her the ring, then kiss her. There’s no need to remember any special phrases or rituals.”</p>
+        <p>“Really?”</p>
+        <p>“Yep,” Kasumi said. She chuckled, then looked out at the sunset ahead. She let out a contented sigh. “Such a beautiful sunset. You and Jane sure are lucky getting to have your house on this beach.”</p>
+        <p>“Yes,” she said, “I wouldn’t want it anywhere else.”</p>
+        <p>Years from now, she could easily imagine her adoptive children playing here. But by then, what would Kasumi be doing? What were her best friend’s future plans?</p>
+        <p>“Kasumi?” she asked.</p>
+        <p>“Yes?”</p>
+        <p>“After my bonding ceremony,” she said, “what are your plans? Is it back to swindling rich bosh’tets like Donovan Hock out of their credits? Or something else?”</p>
+        <p>Momentarily, Kasumi looked at the ground, then let out a weak laugh. “That’s a good question. And to be honest with you, Tali, I…I don’t know. I’ve never been the kind of person to settle down in one place for too long. So I guess I’ll find my way to maybe Illium and figure something out.”</p>
+        <p>“Oh…” she said, looking at the ground. “I see…”</p>
+        <p>Would she ever see her best friend again?</p>
+        <p>“Hey…” Kasumi said, “Tali, look at me.”</p>
+        <p>She looked at Kasumi, and Kasumi faced her.</p>
+        <p>“It may be a while before we see each other again, after the bonding ceremony,” Kasumi said, “but this is not the end of our friendship. Whenever you want to meet or talk, I’ll always be just a few omni-tool messages away. Do you understand me?” Kasumi put one hand on her shoulder. “We are friends for life.”</p>
+        <p>She let out a weak laugh. “Thank you, Kasumi. I…I can’t tell you how much those words mean to me.” She took a deep breath through her nose. “Never forget though, that wherever you are, you will always be welcome in my home.”</p>
+        <p>Kasumi laughed. “I won’t, sister. I promise.”</p>
+        <p>Just then, Kasumi’s gaze focused on something to her right. She looked in that direction. And out in the distance, Jane was leaving their home’s rear porch, approaching her. She wasn’t using cane because now, apparently, she wanted to get used to walking without it.</p>
+        <p>Please don’t hurt yourself.</p>
+        <p>“Well, it looks like I’d better give you two some privacy,” Kasumi said. Kasumi patted her back. “Go to her.”</p>
+        <p>Kasumi cloaked, then left.</p>
+        <p>Pocketing the ring, she got off the rock, then approached Jane. When her gaze met Jane’s, Jane smiled, and she couldn’t help but do so as well. Eventually, Jane wrapped her arms around her in warm hug, and she melted, returning the gesture. Holding her close, Jane gave her a quarian kiss. “So what were you and Kasumi talking about?”</p>
+        <p>She smiled. “Oh, you know, just things like our future plans.”</p>
+        <p>“That’s nice.”</p>
+        <p>“But what about you?” she asked. “How did that call go? Is everything alright?”</p>
+        <p>“Oh, it was nothing,” Jane said, “just some details about my future employment, about my diplomatic and advisory duties. Nothing serious.” She cleared her throat. “Anyways, Shala and the others are going to arrive any minute now. Want to wait with me on the front porch?”</p>
+        <p>She smiled. “I’d love to.”</p>
+        <p>She followed Jane into their home, then passed through its living room before going outside onto its front porch.</p>
+        <p>Ahead, Catyn dominated the horizon. Around the city’s outskirts, amidst an arid, rocky steppe, the lights of numerous towns shone like distant stars. The closest town, Narun , was only a ten-minute shuttle ride away, and so was the Catyn Spaceport.</p>
+        <p>Soon, in the distance, she spotted a shuttle approaching their home. Barely a minute later, it landed in their front yard, kicking up a cloud of dust.</p>
+        <p>The shuttle’s side door opened with a click and a hiss. Then finally, her auntie stepped outside, along with Zaal, Erukhan, Kal, and Khaalu. Her gaze met her auntie’s. Her auntie spread out her arms for a hug, and eagerly, she embraced her. “Ah, finally, you made it.”</p>
+        <p>Shala laughed. “Yes, yes, I know you’re excited, child. I know.”</p>
+        <p>Finally, she let go. Then she and Jane greeted the others, nodding, or doing the traditional quarian greeting to the others.</p>
+        <p>“Shall we do the ceremony on the beach?” Shala asked.</p>
+        <p>“Yes,” she said. What a perfect location. “Let’s do it there.”</p>
+        <p>She and Jane lead them into their house, then out onto the rear porch. Shala pointed towards a patch of sand with level ground. “Just stand there facing your lifemate an arm’s length away, Tali. If you please.”</p>
+        <p>She nodded. “Of course, auntie.” She grabbed Jane’s hand, then did as her auntie asked.</p>
+        <p>Momentarily, she looked into Jane’s eyes and let out a nervous laugh. Every second, her pulse climbed. Ancestors, this is happening. This is actually happening.</p>
+        <p>Kal gave Shala the ritual ribbon, which looked like a silvery cord, then stood beside Jane. Meanwhile, Erukhan stood beside her, and Shala stood two steps back from between her and Jane. Standing across from Shala, Zaal clasped his hands behind his back, with Khaalu and Kasumi standing right beside him.</p>
+        <p>Shala cleared her throat. “Are you two ready?”</p>
+        <p>Jane nodded. “Ready.”</p>
+        <p>She nodded. “Ready.”</p>
+        <p>“Then let us begin,” Shala said. She nodded at Khaalu, and Khaalu opened up his omni-tool, then inputted a few commands, beginning to record the ceremony.</p>
+        <p>“This is Admiral Shala’Raan zhor Akh’Nael khar Catyn pav Rannoch of the Veil Republic Navy, recording an official entry for the Ancestor Archives.”</p>
+        <p>She smiled. Yes, with Rannoch back, all quarians now used pre-Morning War names. Just over a week ago, the new Ancestors Archives had also come online.</p>
+        <p>Shala looked at Jane. “Please state your full name.”</p>
+        <p>“Jane’Shepard zhor Narun khar Catyn pav Rannoch.”</p>
+        <p>“And your reason for this entry?”</p>
+        <p>“To declare and record the joining of my life to Tali’Zorah’s.”</p>
+        <p>Shala looked at Kal. “Is this bonding true?”</p>
+        <p>Kal clasped his hands behind his back. “It is, Ma’am.”</p>
+        <p>“And why?”</p>
+        <p>“Because on Haestrom, when geth platoons had Tali’Zorah trapped with no hope of survival, Shepard fought her way to her like Zhoru’Trosk reborn. The whole time, she also kept me alive, only because Tali’Zorah asked her to.”</p>
+        <p>Shala looked at her. “Please state your full name.”</p>
+        <p>“Tali…” She let out a weak laugh, and tears of joy streamed down her cheeks. “Tali’Zorah zhor Narun khar Catyn pav Rannoch,” she said, hardly able to stop her voice from trembling.</p>
+        <p>“And your reason for this entry?”</p>
+        <p>“To declare and record the joining of my life to Jane’Shepard’s.”</p>
+        <p>Shala looked at Erukhan. “Is this bonding true?”</p>
+        <p>“It is.”</p>
+        <p>“And why?”</p>
+        <p>“Because in the Forum of the Ancestors, when she believed her lifemate was in danger, she lashed out at her lifemate’s would-be killers with the ferocity of a Khelek’miin, willing to die for her if necessary.”</p>
+        <p>Shala looked at Jane. “Jane’Shepard. Please present your pal’tec vis surden to your lifemate.”</p>
+        <p>Jane nodded, then reached into her coat pocket and pulled out Tali’s pal’tec vis surden. Her gaze met Jane’s. Her heart thrashed in her chest, as Jane held her hand, then placed the symbol of their bond in her palm. Jane curled her fingers around it, and then she and Jane were holding each other’s hands.</p>
+        <p>“I offer you my name and this symbol of our future as we join together and journey through life as one.”</p>
+        <p>She let out a joyful sob. “I accept your name and the future it holds. Joined together as one, let our new journey in life begin.”</p>
+        <p>Wrapping the silver cord around her and Jane’s hands, Shala began reciting the Ancestor&#x27;s Prayer, along with Zaal, Khaalu, Erukhan, and Kal.</p>
+        <p>“Two hearts in the void, two souls lost at night.”</p>
+        <p>“Two lives once apart, joined within the light.”</p>
+        <p>“One life now remains, one life shared by two.”</p>
+        <p>“One heart beating strong, joined…their souls…renew.”</p>
+        <p>It did not translate well into alien languages, but Keelah, even the translation was still so fitting, so beautiful.</p>
+        <p>Finally, Shala finished wrapping the ritual ribbon around her and Jane’s hands, then looked at her. “From this day forward and with the blessings of the ancestors, you shall henceforth be known as Tali’Shepard of clan Shepard. Lifemate of Jane.”</p>
+        <p>“Let it be known,” she proclaimed, “that with this naming, and by ancient quarian laws, that before you now stand one body, one voice, one soul. May they walk in life as one.”</p>
+        <p>“Keelah Sel’ai,” everyone said in unison.</p>
+        <p>A brief silence ensued. Soon, Shala cleared her throat. “End recording, close log.”</p>
+        <p>Then everyone started clapping. As Shala unwound the ritual ribbon around her and Jane’s hands, she looked into Jane’s eyes. Jane smiled, and she burst into a fit of joyful sobs. We did it, Jane. We did it!</p>
+        <p>When Shala finally unwound the ritual ribbon around their hands, she embraced her lifemate in a warm, tight tug. And Jane returned the gesture, just as eagerly, holding her close.</p>
+        <p>Yes, now marked the end of her old life.</p>
+        <p>Now, as Tali’Shepard, she was a new woman.</p>
+        <p>In the evening, Tali’Shepard watched Shala’s shuttle rise into the air, then zoom off towards Catyn. After the bonding ceremony, Shala and the others had stayed over at her and Jane’s new home for a while to have dinner and to discuss mundane topics like the planet’s rebuilding efforts. By the end, she and Jane had wished them farewell, and Kasumi had gone along with them. In the morning, Kasumi would be on a ship heading toward human space.</p>
+        <p>Good luck, sister. May the ancestors watch over you.</p>
+        <p>She sighed. Now that she and Jane were finally alone, now was the time to do what she’d put off for too long. Now or never. “Jane?”</p>
+        <p>“Yes?”</p>
+        <p>“I…I have something to give you,” she said. She reached into one of the pockets of her suit and pulled out the ring.</p>
+        <p>Jane’s eyes went wide. “Wait, is that…”</p>
+        <p>“Yes,” she said, handing it to Jane. “It’s a ring. I made it for you on the Khelek’Miin. ”</p>
+        <p>Jane slipped the ring onto one of her fingers, then examined it closely. As she did so, Tali’s heart pounded.</p>
+        <p>“Keelah, I…I can’t tell you how touched and grateful I am that you’re embracing my culture so eagerly,” she said. “But I never want you to feel like…” Looking at the ground, she gulped. “Like you have to abandon all of your human ways. So–”</p>
+        <p>Without warning, Jane pulled her close to herself, then kissed her visor. She chuckled. “This is amazing, saera. Thank you.”</p>
+        <p>She chuckled. Oh, praise the ancestors. Jane actually liked it! “So by human customs, I suppose that I’m your wyfe now, and that you are my wyfe …after just one last thing.”</p>
+        <p>She unclasped the latches around her mask. Holding it in one hand, she wrapped her arms around Jane’s neck and pulled her in for a long, slow kiss on the lips. She hummed into Jane’s mouth, and Jane leaned into it and held her close, with one hand between her shoulder blades, and the other on the small of her back.</p>
+        <p>Soon, their lips parted, and she rested her forehead against Jane’s.</p>
+        <p>Jane let out a weak laugh. “Care to indulge me in one more human custom…Miss Tali’Shepard?”</p>
+        <p>She let out a please hum, then smiled. “What?”</p>
+        <p>“Well,” Jane said, smiling, “in many cultures on Earth, it’s customary for newlywed wives to spend the first night in their home, making lots of–”</p>
+        <p>She giggled, then playfully slapped Jane’s chest. “You are such a horny bosh’tet . You just want another Week Of Seclusion, don’t you?”</p>
+        <p>Jane grinned. “Can you blame me?”</p>
+        <p>She put her mask back on. “No. Because I want one too.” She grabbed Jane’s hand. “Come, let’s head upstairs and… ‘ khrisen’ our k’naaf .”</p>
+        <p>Jane chuckled. And then she and Jane walked hand-in-hand towards the front door of their new home, towards the light within illuminating the nighttime darkness. As they did so, she couldn’t help but look back to her days on the SR-1.</p>
+        <p>“Your ship’s amazing, Shepard. I’ve never seen a drive core like this before.”</p>
+        <p>To their reunion on Freedom’s Progress.</p>
+        <p>“Jane? Is that…Is that you?”</p>
+        <p>To when Jane’d defended Tali at her trial.</p>
+        <p>“I have better, Jane. I have you.”</p>
+        <p>To when Jane’d first confessed her feelings.</p>
+        <p>“I don’t want anyone else. I want you.”</p>
+        <p>To their night before the final battle for Earth.</p>
+        <p>“If we survive this war, I’ll swear you’ll have it, all the time you could ever want. Do you understand me?”</p>
+        <p>Then finally, to their reunion in the spaceport.</p>
+        <p>“You…You came back to me.”</p>
+        <p>Keelah, she and Jane had endured and fought through the worst horrors imaginable to reach this moment. Briefly, she thought of Kaidan, Mordin, Thane, Anderson, her father, and every comrade that had died fighting the Reapers. Yes, along the way, they had lost so many friends and loved ones. And often, the surrounding horror and chaos had pushed them to their very limits, threatening to drive them mad or into a pit of bottomless despair.</p>
+        <p>And yet here they were.</p>
+        <p>Alive and together until death drove them apart.</p>
+        <p>Just before entering her home, she briefly closed her eyes, then let out a contented sigh. Yes, if necessary, she would have endured everything she’d suffered all again without hesitation.</p>
+        <p>It had been totally worth it.</p>
+    </div>
+</body>
+</html>

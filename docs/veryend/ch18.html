@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch17.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html" selected>Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch19.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 15</h1>
+    <div class="chapter-content">
+        <p>In the Camp Bar and Cafe tent, Jane Shepard was sitting at a booth in the corner farthest from the entrance when she opened a window on her omni-tool, checking her inbox. In it, she found a message Shala had just forwarded to her.</p>
+        <p>Dear Admiral Shala’Raan,</p>
+        <p>Admiral Shepard’s pal’tec vis surden is ready. When she arrives, tell her to meet me at my new shop at the following coordinates:</p>
+        <p>Below the message, she found a set of coordinates, and immediately she archived them. Oh, just you wait, Tali. Indeed, she was in for the surprise of a lifetime.</p>
+        <p>She let out a contented sigh, then reclined into her seat. Tomorrow, she, Tali, and Kasumi would finally leave Earth, and head to Rannoch on Shala’s ship the MFV Kelek’miin. Recently, Tali had been busy, making the necessary preparations for their departure.</p>
+        <p>But still, she had two loose ends left to tie up: Liara and Joker. She’d delayed them for too long.</p>
+        <p>She kept looking at the entrance. Yes, any minute now, Liara should arrive, and then she’d get Liara to show her Tali’s pain. After that, Joker should arrive…and finally she’d tell her favorite pilot what he deserved to know.</p>
+        <p>That she had murdered EDI.</p>
+        <p>Soon, Liara stepped into the Bar and Cafe, wearing civilian attire. Shepard waved at her, as she ordered something at the counter. And when she spotted Shepard, her eyes widened. She approached her.</p>
+        <p>“Shepard,” she said. She extended her hand for a handshake, and Shepard accepted it. Liara sat across from her. “It’s great to see you. I see you’ve recovered quite well from your injuries.”</p>
+        <p>“Indeed, I have,” Shepard said. “Garrus told me what few matriarchs remain are keeping you very busy. So thank you for taking the time to come. I have a lot of things I need to ask you.”</p>
+        <p>“Ask away.”</p>
+        <p>She sighed. “Not too long ago, I’ve learned that – if not for you – Tali would have killed herself. Garrus said that you mind-melded with her, so she could share her pain, and that you shared that pain with him and others. So…” She looked at the ground.</p>
+        <p>“So what?”</p>
+        <p>Shepard looked into her eyes. “I need you to share it with me too.”</p>
+        <p>Liara’s eyes widened, and she let out a faint gasp. “Oh…uhm…of course. I figured that you’d ask me to do this eventually.” Briefly, she broke eye contact and pursed her lips. “Ever since our SR-1 days, you’ve always cared so deeply about her. But before I do anything, let me tell you exactly what you’re getting yourself into. This will change you, Shepard. It’ll be anything but pleasant, and you will never see quarians the same way ever again.”</p>
+        <p>“What do you mean?”</p>
+        <p>Liara sighed. “In just a few minutes, I experienced years worth of Tali’s memories…” She looked at the ground. “...including all three stages of the bonding process.”</p>
+        <p>“You have?”</p>
+        <p>“Yes,” Liara said. She leaned forward, giving Shepard strong eye contact, “I have. If you do this, Shepard, you’ll learn exactly how she feels about you, and even experience it yourself.” She gulped. “I don’t quite know how to describe it, but Athame help me, it’s…overwhelming.”</p>
+        <p>Shepard smiled. Yes, this was perfect. Doing this, she’d grow even closer to Tali than she ever thought possible.</p>
+        <p>But not without experiencing her pain: Felz’elt.</p>
+        <p>“But what about her pain?”</p>
+        <p>“That,” Liara said, “is the price you’ll have to pay. Once you feel the indescribable joy of Silz’asul felz, you’ll feel the agony of Felz’elt, and that…” She exhaled, then slid one hand down her face. “Goddess, it’s…”</p>
+        <p>“It’s what?”</p>
+        <p>Liara pursed her lips, then looked at the ground. “I never imagined that a sentient being could feel so much pain.” She let out a nervous laugh. “It’s like how I felt just hours after the Fall of Thessia, except if the pain was ceaseless and only got worse as time went on.”</p>
+        <p>“A living hell?”</p>
+        <p>“Yes,” Liara said, “Felz’elt is nothing short of a ‘living hell’. So are you sure that you still want to do this? I’m sure Tali would understand if backed out.”</p>
+        <p>A brief silence ensued.</p>
+        <p>Yes, circumstances had made certain things impossible. But as Tali’s lifemate, she should have been the first person with whom Liara shared Tali’s pain, not Garrus. Indeed, Tali would understand – and likely prefer – if Shepard backed out of this, if she spared herself any more suffering. But nonetheless, she would do it anyway.</p>
+        <p>Tali had suffered immeasurably on that uncharted world. And damn it, Shepard couldn’t just do nothing to help banish it from her mind.</p>
+        <p>“Yes,” she said, “I’m more sure of this than anything.”</p>
+        <p>Momentarily, Liara smiled. “Then let’s get started. Give me your hand.”</p>
+        <p>Shepard complied, and Liara held it with both of hers. She closed her eyes and took a deep breath. Then suddenly, an electric sensation raced up Shepard’s arm, up her neck, then behind her eyes. Liara opened hers, which now resembled inky pools of darkness.</p>
+        <p>“Embrace eternity.”</p>
+        <p>And then everything went black.</p>
+        <p>In a high-speed blur of successive visions, she experienced days, weeks, and then months&#x27; worth of her lifemates memories, starting from when they first met. Firsthand, she felt Tali’s relief at being treated with respect, like an equal, not a freak, a vagrant, a suit-rat. Firsthand, she felt Tali’s joy and elation of being swept away on the adventure of a lifetime, of bonding with her human captain, and of finding love and acceptance when before it seemed so hopelessly scarce.</p>
+        <p>The visions slowed when they reached the moment Tali knew she was walking down pemla’tiyl, the pathway to the mind.</p>
+        <p>She’s sitting beside Shepard on the bed inside the captain’s cabin. “So that girl from the docking bay…were you still thinking about her?”</p>
+        <p>Looking at the ground, Shepard purses her lips. “Yes. She was from Mindoir, where I grew up?”</p>
+        <p>“Keelah, what happened there?”</p>
+        <p>For a moment, Shepard hesitates, as if wondering whether she wanted to answer Tali’s question, to relive whatever horrors she experienced there. Finally, her Captain takes a deep breath, looks her in the eye, then tells her about Shepard’s childhood on Mindoir.</p>
+        <p>Shepard smiled. Back then, she was right to trust and open up to Tali.</p>
+        <p>The visions went on. And firsthand, she experienced Tali’s walk down pemla’tiyl, feeling the bond deepen and deepen, until the visions slowed around the moment Tali knew was walking down hecs’tiyl, the pathway to the heart.</p>
+        <p>She knocks on the door to Shepard’s cabin. “Jane? Jane, can I come in?”</p>
+        <p>In just a few hours, the Normandy would pass through the Mu Relay. In all likelihood, her next mission would be her last. And now that her shift was over in engineering, this was her last chance to form some good memories.</p>
+        <p>“Come in.”</p>
+        <p>She enters her nehya’s cabin, and Shepard’s sitting on her bed, looking at a datapad.</p>
+        <p>She wrings her hands, her heart pounding in her chest. Would Shepard say no? “Jane?”</p>
+        <p>“Yes.”</p>
+        <p>“Do…do you mind if I stay here until we pass through the relay? There’s…” Momentarily, she looks at the ground. “There’s a good chance that our next mission will be our last, and I think I’d like a few hours with good company.”</p>
+        <p>Shepard puts down the datapad. “Of course, you can stay here, Tali.” She smiles. “I’d also love some good company. Want to watch the newest Blasto movie with me?”</p>
+        <p>She laughs, and a warm, fuzzy sensation blooms in her chest. “Yes. That sounds perfect.”</p>
+        <p>Shepard let out a weak laugh. During that movie, Tali’d fallen asleep, resting her head on Shepard’s shoulder, singing her heelrou for the first time. If she knew how Tali felt then, she would have acted on her feelings so much sooner.</p>
+        <p>The visions sped by, and soon Tali’s grief and pain over Shepard’s first death struck her like a hammer blow to the chest. Over a year’s worth of memories, she felt Tali’s downward spiral into a seemingly bottomless pit of despair.</p>
+        <p>An ice-cold pain gripped her chest in a terrible vise, and she struggled to breathe. Her mind screamed for her to end this now, for her to pull away her hand. She clenched her jaw.</p>
+        <p>NO!</p>
+        <p>With all her willpower, she squashed any such urges.</p>
+        <p>She would endure it all with pride.</p>
+        <p>Soon, Tali’s pain hit a downward plateau and became an aching, but tolerable numbness in her mind. Shepard took a deep breath. During the next years’ worth of memories, she experienced how Tali had gone through life on auto-pilot, how she had always looked back to her days on the SR-1, to her time with Shepard, as the greatest days of her life. Soon, the visions reached her time on Freedom’s Progress, to when she had just begun to heal.</p>
+        <p>And then, for the first time, Shepard had come back to her.</p>
+        <p>The human soldier takes off her helmet, and Tali freezes. She gasps. Her eyes go wide. Her blood goes cold. And she can hardly breathe. “Jane? Is that…Is that you?”</p>
+        <p>Tali’s joy and relief rushed through Shepard, and she burst into a fit of weak laughs. A tear streamed down her cheek, and her heart swelled with a warm euphoria.</p>
+        <p>After coming back from the dead, she had been the luckiest woman in the galaxy to have found Tali on Freedom’s Progress.</p>
+        <p>The visions continued, speeding through Tali’s time on the SR-2, through her walk down hecs’tiyl. Soon, they slowed to when she knew she was walking down felz’tiyl, the pathway to the soul.</p>
+        <p>“I don’t want anybody else. I want you.”</p>
+        <p>Shepard burst into a quiet fit of laughing and crying, feeling the blaze of joy and passion those words had sparked within Tali. The memories went on, and firsthand, she experienced Tali’s walk down felz’tiyl towards Silz’asul felz. Soon, the visions slowed to when Tali knew she had found her lifemate, the other half of her soul.</p>
+        <p>“So tell me, Miss Vas Normandy…will you be my saera?”</p>
+        <p>Tali’s indescribable joy flooded Shepard’s mind, and she burst into an uncontrollable fit of laughing and crying, so intense she could hardly breathe. Was this what Silz’asul felz felt like? Was this how happy she made Tali?</p>
+        <p>God, it was beautiful!</p>
+        <p>So, so beautiful!</p>
+        <p>Like a drug high that lasted for a lifetime.</p>
+        <p>She wanted to feel like this forever. But as the visions sped on, such feelings dissipated when she experienced Tali’s side of their terrible separation. Over eight months’ worth of memories, she experienced how Tali longed for her like a drowning man desperate for air, how Shepard’s replies to her love letters were all that held her together.</p>
+        <p>The visions went on and on, going through Tali’s time in the Reaper War, through how she had relied on Shepard as her emotional anchor through so much horror and despair. Soon, they slowed around their night before the final battle for Earth.</p>
+        <p>“If we survive this war, I swear you’ll have it, all the time you could ever want. Do you understand me?”</p>
+        <p>Then finally, the visions reached the moment when Shepard had left her behind.</p>
+        <p>“I have a home.”</p>
+        <p>“Come back to me.”</p>
+        <p>Firsthand, she experienced how Felz’elt had latched onto Tali’s mind like a malicious parasite that gorged on her sanity, pushing her along a downward spiral into madness.</p>
+        <p>Her pulse spiked. Her every muscle tensed, and she began to hyperventilate. Tears streamed down her cheek, and she gritted her teeth, struggling to swallow her screams. As the visions went on, she was practically drowning in Tali’s pain and grief. And every second, a cold void expanded in her chest, whilst an impenetrable darkness enshrouded her mind.</p>
+        <p>Yes, Felz’elt was just like how she’d felt after the Mindoir Massacre, except that it never waned and left gaping, mental wounds that could never heal.</p>
+        <p>Ceaselessly, her mind begged for her to end the mind-meld, to yank her hand away and spare herself the suffering.</p>
+        <p>“Shepard?” Liara asked. “Shepard, are you okay? Do you want me to stop this?”</p>
+        <p>“No!” Shepard said. “Keep going!”</p>
+        <p>She had put her lifemate through this pain in the first place.</p>
+        <p>And she would not run away from it!</p>
+        <p>Yes, she would relish every second of the pain. It was the perfect way to atone for her actions.</p>
+        <p>With all her willpower and self-discipline, she forced herself to experience the rest of the visions. Soon, she experienced the apex of Tali’s pain, and her mind begged for death, for an end to this living hell. Soon, the visions reached the intervention Garrus had arranged to save Tali from herself.</p>
+        <p>Then finally, everything faded to black. As soon as Liara let go of Shepard’s hand, she opened her eye, then leaned back into her seat, her heart pounding as she panted. She wiped her forehead, which was damp with cold sweat, and her every muscle felt drained of vigor, as though she had just run a marathon.</p>
+        <p>“So?” Liara asked.</p>
+        <p>“Liara, that was…” she said. She gulped. “I don’t have the words to accurately describe felz’elt and Silz’asul felz. But…”</p>
+        <p>“But what?”</p>
+        <p>“I have what I need,” she said. “I know what I mean to Tali, along with what she went through, and I can’t thank you enough for helping her, for pulling her out of such a bottomless rut.” She let out a weak laugh. “This is the greatest thing you’ve ever done for me.”</p>
+        <p>“Better than giving your body Cerberus? For giving you a second chance at life?”</p>
+        <p>“A hundred times better,” she said. “You’ve always been one of my greatest friends, Liara. Don’t you ever forget that.”</p>
+        <p>She smiled. “I won’t, Shepard. I won’t.”</p>
+        <p>Soon, her order arrived, a small mug of instant coffee, and she took a sip of it. “So…Garrus told me that you’re writing a book, Shepard, one that might change the course of galactic history for centuries to come.”</p>
+        <p>“I don’t know whether or not it will do that,” Shepard said, “but yes, I am writing a book. Before I tell you what it’s about though, I’d better give you some context.”</p>
+        <p>She cleared her throat, then told Liara every detail about her actions on the Crucible, along with their consequences. When she finished, Liara looked blankly at the floor, as though in utter disbelief.</p>
+        <p>“Shepard, this…this is monumental. If something like it were on my conscious, I don’t think I–”</p>
+        <p>Shepard held up her hand. “It’s okay. Thanks to Tali, I’m well down the path to recovering from this, but not completely.” Momentarily, she broke eye contact and gulped. “To truly find peace, I need everyone to know that the Catalyst is wrong, that its solution flawed, and that synthetics can coexist with organics.” Leaning forward, she put her hands on the table. “The quarians and the geth were living proof of that.”</p>
+        <p>“Indeed, they were,” Liara said. She finished off her coffee. “And I have no doubt they will be again. As soon as possible Shepard, send me all of your work. Once it’s done, there are many, many ruling matriarchs that would be ecstatic to champion your cause.”</p>
+        <p>“Thank you,” Shepard said. “This means a lot to me, Liara.”</p>
+        <p>“It’s what friends are for,” she said, checking the time on her omni-tool. “Anyways, I’d better get going. If I’m not mistaken, I think Joker should be arriving soon. You said you wanted to talk to him privately, correct?”</p>
+        <p>Shepard nodded. “Correct.”</p>
+        <p>Liara stood up from her seat, then extended her hand for a handshake. Shepard shook it. “Then I wish you and Tali the best. We’ll stay in touch.”</p>
+        <p>“Indeed, we will,” Shepard said.</p>
+        <p>And then Liara left the camp Bar and Cafe. When she did, Shepard closed her eye, then took a deep breath. She checked the time on her omni-tool, and Joker would arrive in about thirty minutes. In the meantime, she closed her eye and reclined into her seat, listening to the tune in the background, as she waited for Joker to arrive.</p>
+        <p>***</p>
+        <p>Around half an hour later, Joker finally arrived, wearing his cap, and his Alliance fatigues. Under those fatigues, her favorite pilot was also wearing a medical exoskeleton to aid his mobility.</p>
+        <p>She waved at him. “Joker. Joker, over here.”</p>
+        <p>Joker spotted, then approached her. “Ah, there you are Command–I mean Admiral. Jeez, it’s been a while, hasn’t it?”</p>
+        <p>She scratched her cheek. “Yeah, I guess it has been a while. But anyways, there’s no need to call me by any titles anymore. I’m a civilian now, remember?”</p>
+        <p>Joker let out a nervous chuckle. “Well, I guess old habits die hard. You know, even with Ashley in charge now, the Normandy, it…it doesn’t feel the same. It’s almost impossible to imagine it as anything but your ship, or anybody you as my CO.”</p>
+        <p>“Yeah,” she said, “I guess you’re right.”</p>
+        <p>“Anyways,” Joker said, “what’s this about? Why bring me here?”</p>
+        <p>Briefly, she broke eye contact, rubbing her cheek. “Yes…uhm…about that,” she gulped, then took a deep breath. Her heart raced. She started to sweat. This was it. She would not delay this any longer. “I have something to tell you. It’s…It’s about EDI.”</p>
+        <p>“Oh…” Joker said. Looking at the floor, Joker pursed his lips, then gulped. “So I guess you know what happened to her.”</p>
+        <p>“Yes,” she said, “but before I tell you, I think it’s best if you had some…context.”</p>
+        <p>Joker tilted his head. “Context? What’s that supposed to mean?”</p>
+        <p>She exhaled. Now or never. She told him every detail about her experience on the Crucible, along with her actions and their consequences. The whole time, Joker remained silent, his face blank.</p>
+        <p>When she finished recounting her experiences, she paused. A painfully long silence ensued. Then finally, Joker exhaled.</p>
+        <p>“So…” Joker said, “let me guess this straight.” Joker gulped, then pursed his lips, his eyes wet with tears. “Are you telling me that you willingly sacrificed EDI to destroy the Reapers?”</p>
+        <p>She took a deep breath. Say it! Just say it! “Yes.”</p>
+        <p>Tears streamed down Joker’s cheeks. Joker pinched the bridge of his nose, wiping them away, then slid his hand down his face. In Joker’s eyes, she found nothing but pain.</p>
+        <p>“Joker, I…I know that–”</p>
+        <p>“Please, just…” Joker interrupted. He looked at the ground, then sniffled. “I…”</p>
+        <p>She looked at the ground, and a cold, terrible raced through her insides. Yes, she should have expected this to happen. Joker had been among those few who stayed beside her through everything. And how did she repay him?</p>
+        <p>By using his lover as a sacrificial lamb.</p>
+        <p>Now, she would just have to accept that she didn’t deserve Joker’s friendship.</p>
+        <p>Joker took a deep breath, then wiped away more of his tears. “I guess I had this coming. I should have known this would come back to bite me in the ass.”</p>
+        <p>“Wait, what?” Did Joker hate her? What was he talking about? “I don’t understand.”</p>
+        <p>“First, I got you killed over Alchera,” he said. He sniffled. “You never blamed me for it. You always treated me with respect, like an equal, not some damn cripple. And how did I repay you?” Joker pinched the bridge of his nose, then let out a few quiet sobs. He sniffled, then exhaled. “I left you to die on the Citadel, that’s what! I’m a coward, Commander. I’m a coward that just had to follow orders.”</p>
+        <p>Joker covered his face with one hand, then burst into a fit of quiet sobs.</p>
+        <p>“Hey,” she said softly. She put one hand on Joker’s shoulder. “Joker. Joker look at me.”</p>
+        <p>She glanced to her left, and the few people in the bar were staring at her and Joker. Let them. Their opinions meant nothing.</p>
+        <p>“I could have saved you, Commander,” Joker said, his voice choked with emotion. “It’s…It’s my fault that Tali almost went crazy. If-If only–”</p>
+        <p>“Joker!” she snapped, and Joker stopped crying. Joker lowered his hand and looked her in the eye.</p>
+        <p>Giving Joker strong eye contact, she leaned forward, gently gripping his shoulder. “Look…” She gulped, then exhaled. “I know that you hate yourself for what you did, and feel like you don’t deserve an apology. But trust me when I say that more self-loathing is not going to help.” Briefly, she broke eye contact. “I’ve been where you are, and it only makes everything worse.”</p>
+        <p>“Then how do you deal with it?” Joker asked. “How do you forgive yourself?”</p>
+        <p>For a moment, she broke eye contact and paused. What answer would help Joker best? Briefly, she looked back to her experience on the Crucible, to how the guilt and shame of her actions had gnawed away at her mind, until she couldn’t ignore or suppress them any longer. She met Joker’s gaze once more. “By accepting that you can’t change the past. By owning your mistakes and learning to live with their consequences.”</p>
+        <p>“You make it sound easy.”</p>
+        <p>“It’s not,” she said firmly. “It’s one of the hardest things anyone can do.” She sighed. “But in your case, and mine, it becomes so much easier if you realize that your options were limited. Nobody knew what the Crucible even did, Joker. From the very beginning, it was a desperate gamble with little chance of success. For all we know, the blastwave could have destroyed every ship in its path. Obeying orders was the right call.”</p>
+        <p>Joker looked at the ground and sniffled. He wiped away his tears.</p>
+        <p>“So whether you accept this or not,” she continued, “I want you to know that I’m sorry. I…I never imagined that I would ever do something this horrible to you.” She pursed her lips, then clenched her jaw. “But as I said, I can’t change the past. And I&#x27;m going to own and accept the consequences of my actions.” She took a deep breath. “If you hate me for taking EDI away from you, and can never forgive me…I understand. You have every right to feel that way. I…I don’t deserve your friendship.”</p>
+        <p>For a moment, Joker paused, looking pensive, as if processing her words. Finally, he exhaled. “I’m not going to lie, Commander. I…I am so mad at you.” He sniffled. “A part of me wants to believe that there’s something you could have done to save her. But I know that’s bullshit. You had no choice and…as hard as this is to admit, you made the right call.”</p>
+        <p>She gasped, and a cool, blissful sensation coursed through her. Her limbs felt lighter, and momentarily, she smiled. “So you…”</p>
+        <p>“I don’t hate you,” Joker said. “I could never hate you, really. You were the best damn CO I ever could have hoped for, and at least…”</p>
+        <p>“At least what?”</p>
+        <p>“At least EDI didn’t die for nothing,” Joker said. “At least she died so that all of us could live, right? To destroy the Reapers once and for all.”</p>
+        <p>“Yes,” she said, “she’s a martyr, Joker. A god damn hero. Don’t you ever forget that.”</p>
+        <p>“I won’t,” Joker said. Momentarily, he smiled, then wiped his tears. “You can be damned sure of that.”</p>
+        <p>Just then, Joker’s omni-tool beeped. Joker opened up a window on it.</p>
+        <p>“Something up?”</p>
+        <p>Joker smiled, then closed his omni-tool. “Oh, it’s…it’s nothing, Commander, just a silver lining to all the shit that’s been happening recently.”</p>
+        <p>“A silver lining?”</p>
+        <p>“Well,” Joker said. Joker gulped, then cleared his throat, “during our SR-1 days, I made really, really good friends with this one girl on Galaxy of Fantasy. Up until the Reapers arrived, we always played together. Often, we’d video-chat, and many times we even met in person, whenever you gave us shore leave on the Citadel.” Joker broke eye contact. Momentarily, he scowled and clenched his fists. “It really sucked when she finished her pilgrimage and–”</p>
+        <p>“Wait, wait, wait,” she said, holding up her hand. “Her pilgrimage? Are you saying she’s a quarian?”</p>
+        <p>“Yeah,” Joker said, “ she is.” He laughed. “You know, once she even told me that you helped her.”</p>
+        <p>She tilted her head. “I did?”</p>
+        <p>“Yeah,” Joker said. He smiled. “Apparently, this volus accused her of stealing his credit chit and–”</p>
+        <p>Alarm bells practically rang in her mind. Her jaw dropped, and her eyes went wide. “Lia’Vael?”</p>
+        <p>“Ah, so you did help her,” Joker said. Joker smiled and momentarily looked at the ground. “What a small galaxy we live in.” Joker cleared his throat. “So tell me, did that C-sec officer really start shaking? Did that volus–”</p>
+        <p>She held up her hand. “It all worked out in the end. That’s all you need to know.” She cleared her throat. “So I take it she’s alive?”</p>
+        <p>“She is,” Joker said, smiling. “During the war, the servers for the game went down, and nobody could really video chat, so I wasn’t sure if she’d made it. But she did. She’s here on Earth right now, working as a shuttle pilot for the Migrant Fleet, and yesterday we spent a lot of time catching up.” Joker chuckled. “Even now, she still calls me by this…this funny Khelish word.” Joker scratched his beard, and for a moment, he looked pensive. “Now, was it insil? Enzel? Inzel? Or–”</p>
+        <p>“Inszel?”</p>
+        <p>Joker’s eyes widened. “Yeah, that’s it.”</p>
+        <p>Covering her face, she started laughing. Joker had no idea what opportunity was within his grasp.</p>
+        <p>“Hey,” Joker said, a hint of frustration in his voice, “What’s so funny?”</p>
+        <p>She met Joker’s gaze. “Joker, do you have any idea what that word means?”</p>
+        <p>“No,” Joker said, tilting his head. “Why?”</p>
+        <p>“Well let’s just say,” she said, “that if she’s still calling you that, she sees you as far more than just a friend.”</p>
+        <p>Joker’s mouth fell open. Joker’s eyes went wide. “Wait, so…” Briefly, Joker looked away and gulped. “She likes me?”</p>
+        <p>“Yes.”</p>
+        <p>Joker stared at the ground, looking as though he was processing what he just heard. “Wow, this is…” Joker shook his head. “I…I never thought that–” Joker gulped. “Just…wow…”</p>
+        <p>“Stay in contact with her,” she said, “and this just might lead to interesting places. Well, that’s assuming you feel the same way, and that you’re okay with the fact that quarians pair bond for life.”</p>
+        <p>“For life?”</p>
+        <p>“Yes,” she said, leaning forward, “for life. To them, soulmates are real.”</p>
+        <p>Joker let out a nervous laugh, still looking at the ground. “So that’s why you and Tali are so inseparable.” Joker took a deep breath, then looked her in the eye. “This…this is great news, Commander, the best I’ve heard in a while. It’s just…”</p>
+        <p>“It’s just what?”</p>
+        <p>Joker exhaled. “I think I still need some more time to get over EDI, and to think about this, really. To be honest, I don’t know if I can handle something so deep and intimate. I mean…what if I don’t measure up.”</p>
+        <p>“I know what you’re saying,” she said. “To us, love can be a very fragile, fleeting thing. And to be honest, I had the same doubts when Tali confessed how she really felt about me. But you know what I did?”</p>
+        <p>“What?”</p>
+        <p>“In spite of the fear,” she said, “I dove in anyway, and did whatever I could to be the lover she deserves. Life is too short and precious to waste great opportunities, Joker. Wait too long to seize them, and they’ll only slip from your grasp.”</p>
+        <p>“Yeah,” Joker said, “I guess your right.” Joker took a deep breath. “I don’t know. We’ll see, Commander. But if this actually goes somewhere, I’ll be sure to stay in touch with you. After all, you just might be humanity’s greatest expert on dating quarians.”</p>
+        <p>She chuckled. “You have my extranet address. So if you ever have questions, don’t hesitate to contact me.”</p>
+        <p>“I won’t, Commander,” Joker said. “I won’t.”</p>
+        <p>Just then, her omni-tool beeped. She opened it up, and in her inbox, she spotted an unread message from Tali.</p>
+        <p>Keelah, just got back from the Kelek’miin. Where are you, Jane? I have a surprise for you.</p>
+        <p>Smiling, she typed out her reply.</p>
+        <p>Just finished talking with Liara and Joker. On the way back now. Sit tight, love. I can’t wait to see what’s this surprise.</p>
+        <p>She closed her omni-tool. “Anyways Joker, I’d better get going.” She stood up and extended her hand for a handshake. Joker accepted it. “Tali just got back from orbit. Apparently, she has a surprise for me.”</p>
+        <p>Joker chuckled. “You go and enjoy it, Commander. We’ll stay in touch.”</p>
+        <p>“Indeed, we will,” she said. “Indeed, we will.”</p>
+        <p>She grabbed her cane, then left the Camp Bar and Cafe, out into winter air. She headed back to her apartment in hab-block E-45, and with every step, her boots crunched on the snow blanketing the ground. An ice-cold breeze stung her cheeks. Thank god, she was wearing her winter coat.</p>
+        <p>Soon, she arrived at her apartment, standing just outside the door. With her omni-tool, she turned off her translator.</p>
+        <p>Over the past month, she had been practicing her Khelish with Tali, and Tali had been practicing her English with her. Yes, if she was going to live amongst the quarian people, then she should at least master their language and customs. It was the respectful thing to do.</p>
+        <p>And one day, it would tear down the last barrier between her and her beloved.</p>
+        <p>Finally, the door opened with a metallic whine, and she stepped inside and spotted Tali by the circular table at the center of the room. On it, a plate of hot food lay across from a tube of nutrient paste.</p>
+        <p>Her gaze met Tali’s, and Tali’s eyes widened.</p>
+        <p>“Yayn,” she said. “Welcome. I make food. Come. Come sit. We eat.”</p>
+        <p>Shepard loved the sound of her natural voice. Soft, delicate, and lyrical, it sounded even more beautiful and exotic than how she sounded with a translator.</p>
+        <p>She looked at the dish Tali had made her, an overcooked steak of cloned meat, along with some overboiled broccoli, carrots, and brussel sprouts. She let out a weak laugh and couldn’t stop smiling. A warm, fuzzy sensation bloomed in her chest. Yes, Tali might not have the best cooking skills, but god, was this a sweet, thoughtful gesture. Her heart melted, and all she wanted was to wrap her arms around Tali in a big, fat hug.</p>
+        <p>She pointed at the dish. “This. You make?” she asked in Khelish.</p>
+        <p>Tali began to wring her hands. “This first time try. Flotilla no have food making.”</p>
+        <p>“Cooking,” Shepard corrected.</p>
+        <p>She went back to speaking Khelish. “This correct word.”</p>
+        <p>“Yes, khooking…” For a moment, she broke eye contact and looked as though she was struggling to think of the right word. Once more, she met Shepard’s gaze. “Khooking not good. Make too much waste.” She looked at the ground. “Keelah, I…I hope you enyoy.”</p>
+        <p>Shepard came over and embraced her in a warm, tight hug. Tali returned the gesture with just as much affection. And a few seconds later, Shepard gently pulled away, holding her close with one hand on the small of her back.</p>
+        <p>She pointed at the dish. “This beautiful.” She cupped the back of Tali’s neck, then gave her a quarian kiss. “Thank you, saera. This make me very happy.”</p>
+        <p>She kissed Tali’s visor, and Tali giggled. Her body loosened up. She grabbed Shepard’s hand, then lead her towards the table. “Come. Sit.”</p>
+        <p>She sat at the table, and Tali sat across from her. Immediately, Shepard started eating. The meat was too salty and as tough as a krogan’s hide. The vegetables were mushy and bland. But nonetheless, she relished every bite. It’s the thought that counts.</p>
+        <p>Tali audibly chewed on some of her nutrient paste. “Food. Is good?”</p>
+        <p>During her earliest days in the Alliance, and her N7 training, she had often eaten the most disgusting things imaginable, like roasted bugs and rats. Compared to such ‘survival food’, this dish was practically a gourmet meal at some fancy restaurant on Illium or Berkenstein. She swallowed her current bite, then smiled. “This very good. Future. I do same for you.”</p>
+        <p>She laughed. “This nice. This very nice.” She let out a contented sigh. “Liara and Yoker. You talk. There much learning? Now, you…” Again, she seemed to struggle to find the right words. “You feelings good? Need talk?”</p>
+        <p>Shepard sighed, then opened up her omni-tool, turning on her translator. “Translator. Need translator.”</p>
+        <p>“Oh…” she said, “okay.”</p>
+        <p>She opened up her omni-tool and did the same. “Jane? Jane, can you understand me?”</p>
+        <p>“Yeah,” Shepard said, “I can understand you.”</p>
+        <p>“So how was my Inglish?” she asked. “Getting any better?”</p>
+        <p>“You’re learning English a lot faster than I’m learning Khelish,” Shepard said. She let out a weak laugh. “Just now, your pronunciation was almost perfect, but your grammar still needs a lot of work.” She pursed her lips. “What about me though?”</p>
+        <p>“You’re doing great, Jane,” she said. “In just one month, you’ve learned how to speak Khelish as well as any toddler. Your accent though…” She giggled.</p>
+        <p>“What’s wrong with my accent?”</p>
+        <p>“Oh, nothing,” she said. “It’s just that I’ll never tire of hearing your natural voice. It sounds…different, not like any quarian, but in a good way. It’s so husky, so commanding, and so pleasing to my senses. Like music.”</p>
+        <p>Shepard raised her eyebrows. “Oh, really now?” She grinned. “Well, I could easily say the same thing about you, Mrs. Shepard.”</p>
+        <p>She laughed. “You always sweet-talk me. Never stop.”</p>
+        <p>“Of course, I’ll never stop,” Shepard said. She took another bite of her food, then cleared her throat. “But anyways, about Liara and Joker. I have quite a lot to say.”</p>
+        <p>“Yes,” she said. “What happened?”</p>
+        <p>“Well,” Shepard said, “Liara was more than happy to help promote my work to all Asari.” She took another bite, then swallowed. “And she also agreed to show me years&#x27; worth of your memories, all within the span of a few minutes.”</p>
+        <p>“Keelah, so…”</p>
+        <p>“I felt and saw everything,” she said, sawing through her steak with her table knife, “from when we first met on the Citadel, all the way until that intervention Garrus staged to save you from yourself.”</p>
+        <p>“And?”</p>
+        <p>“And now I know how you really feel about me,” she said. Momentarily, she smiled. “To say it’s beautiful and overwhelming wouldn’t do it justice because honestly…well…” She scratched the side of her head and looked at the ground. Again, she looked at Tali. “I don’t know what to say, other than that I’m the luckiest woman in the galaxy.”</p>
+        <p>Tali reached across the table and held one of Shepard’s hands. She gave it a light squeeze. “Jane, I…” Momentarily, she looked at the ground. “I can’t tell you how comforting and reassuring it is to know that you truly understand what it’s like to be caught in Silz’asul Felz. But…”</p>
+        <p>“Felz’elt?”</p>
+        <p>“Yes,” she said, tightening the grip on Shepard’s hand. “Are you okay? I know that you’re no stranger to pain. But you never had to–”</p>
+        <p>“Sssh,” Shepard said, putting one finger on Tali’s vocalizer. “I know you’re going to say. You’re going to say that I’ve suffered enough for you, that we should just forget and move on from what you suffered on that uncharted world. But please…believe me when I say that I had to do this. If Garrus, Liara, Ashley, Ken, Gabby, and Adams willingly suffered so that you wouldn’t feel so alone, then there’s is no way I won’t do the same. It’s…” Momentarily, she looked at the ground. She pursed her lips.</p>
+        <p>“It’s what?”</p>
+        <p>Again, she looked at Tali. “It’s what your saera should do. And besides, you were there for me when my actions on the Crucible became…too much. It’s only fair.”</p>
+        <p>“Oh, Jane, I…” she said. She exhaled. “Keelah, thank you. A thousand times, thank you. But please, from now on, know that you don’t have to suffer any more for me. I think we’ve both been through enough pain.”</p>
+        <p>“Indeed, we have,” Shepard said, squeezing Tali’s hand. “Indeed, we have.”</p>
+        <p>For the next few minutes, she ate her food in silence, and so did Tali.</p>
+        <p>“So,” she said eventually. She finished off the last of her food. “Is everything ready for our departure tomorrow?”</p>
+        <p>Tali finished off her tube of nutrient paste. “Oh, yes, everything is ready. I’ve made all the necessary arrangements for you and Kasumi’s food, clothing, and other essentials.” She let out a weak laugh. “Just hours ago, I also had a talk with Admiral Korris, and he told me that our house is ready.” She laughed, hardly able to contain her excitement. “Can you believe it, Jane? It’s ready. He even sent pictures.”</p>
+        <p>Shepard raised her eyebrows. “He did?”</p>
+        <p>“Yes,” she almost shouted. She opened up her omni-tool, then showed Shepard the pictures of their new home, a modest beachside residence with two floors and three bedrooms. Apparently, it was close to a spaceport, where it would be easy to secure Shepard’s regular shipments of levo food.</p>
+        <p>“Wow,” Shepard said. She let out a weak laugh. “It’s beautiful. I’m surprised it’s so…”</p>
+        <p>“So big?”</p>
+        <p>“Yes.”</p>
+        <p>“Zal told me that he and most of the Conclave are eager and happy to have you on Rannoch,” she said, “that our ‘union’ would be a great boon to human-quarian relations, and that your leadership skills and military experience make you an invaluable asset to the quarian people, somebody who could become one of their greatest advisors or diplomats. It’s just…”</p>
+        <p>“I take it there’s a catch.”</p>
+        <p>She let out a frustrated sigh. “Yes. There is. When we arrive at Rannoch, our bond will be tested, again…in front of every Clan Master.”</p>
+        <p>Shepard’s eyes went wide. “In front of every Clan Master?” She shook her head. “God, was Shala’s word not enough?”</p>
+        <p>“Apparently not,” she said bitterly.</p>
+        <p>“Why do they care?”</p>
+        <p>“I don’t know, honestly,” she said. She sighed. “Maybe some find it impossible to believe that a human could feel something akin to Silz’asul Felz, that you could never measure up to a quarian male.”</p>
+        <p>“Then let them test me,” Shepard said. “I’ll pass and prove all of them wrong.”</p>
+        <p>“I have no doubt you will,” she said. She let out a contemptuous laugh. “Keelah, when you do, perhaps you’ll force them to come up with laws and regulations in case more human-quarian bonds happen in the future.”</p>
+        <p>“Oh, speaking of that,” Shepard said. “I have some very interesting news.”</p>
+        <p>She tilted her head. “What?”</p>
+        <p>“Do you remember Lia’Vael?”</p>
+        <p>She laughed. “How could I forget?”</p>
+        <p>“Well,” Shepard said, “it turns out that she and Joker met each other on some extranet game called Galaxy of Fantasy, and became very good friends during our days on the SR-1. At the start of the Reaper War, Joker lost contact with her. But apparently, she’s here on Earth, working as a shuttle pilot.”</p>
+        <p>“Really?”</p>
+        <p>“Yes,” she said. “Just yesterday, they reconnected, and guess what?”</p>
+        <p>“What?”</p>
+        <p>“She’s still calling him inszel.”</p>
+        <p>Tali’s eyes widened, and she let out a faint gasp. Momentarily, she looked at the ground. “I…I never would have guessed. How does Joker feel about this though? Is he aware of what that word means?”</p>
+        <p>“I told him,” Shepard said. “And yes, he feels the same way about her. It’s just…”</p>
+        <p>“It’s just what?”</p>
+        <p>“That he’s still in a lot of pain over what happened to EDI,” she said, “and doesn’t quite believe he can live up to what a saera is supposed to be.”</p>
+        <p>“If this is something Joker wants to pursue,” she said, “then help him, Jane. He deserves to be happy, and it would be very tragic if he threw this opportunity away.”</p>
+        <p>“If he truly wants this,” Shepard said, “then I won’t let him. It’s the least I could do.”</p>
+        <p>Tali checked the time on her omni-tool. “Keelah, it’s late. We’ll be leaving with my auntie Raan in just seven hours.” She closed her omni-tool, then stood up. “So better we get some rest.”</p>
+        <p>Shepard yawned. “Yeah, sounds like a good idea.” She stood up. “But first, let me change into something more comfortable.”</p>
+        <p>She took off her coat, then pulled out a change of clothes from the foot locker at the end of the bed. She went inside the bathroom. And as she was changing, she couldn’t help but notice how much thinner and softer she looked.</p>
+        <p>She sighed.</p>
+        <p>In her prime, before Project Lazarus, she had weighed a hundred kilograms of lean muscle and had the physical prowess of an Olympic athlete. But what was she now? She opened up an application on her omni-tool, which detailed her current health stats.</p>
+        <p>She closed her eye, then exhaled through her nose.</p>
+        <p>Now, she weighed just over eighty kilos, standing six-foot-three inches tall. Recovering from her injuries had eroded large chunks of her muscle mass. She gritted her teeth, clenching her jaw.</p>
+        <p>Unacceptable.</p>
+        <p>Yes. When she got to Rannoch, and was finally free of her damn cane, she would do what she could to stay fit and healthy. She would degenerate no further.</p>
+        <p>Finally, she finished changing, then got into bed with Tali, covering them with the blanket. After turning off the lights, she spooned Tali. And eagerly, Tali nuzzled into her. Within minutes, she was singing her heelrou, and like always, it lulled Shepard to sleep, filling her heart with a blissful calm.</p>
+        <p>She closed her eye and took a deep breath. Yes, tomorrow would be the beginning of her new life. No matter the challenges that lay ahead, she would face them head-on. She would conquer them. And soon, the Reaper War would become little more than a distant memory, a bad dream.</p>
+        <p>She smiled. Rannoch, here we come.</p>
+    </div>
+</body>
+</html>

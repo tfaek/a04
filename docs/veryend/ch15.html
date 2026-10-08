@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch14.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html" selected>Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch16.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 12</h1>
+    <div class="chapter-content">
+        <p>Tali’Zorah walked alongside Jane and Garrus, through the avenues of camp three, towards a large tent with a holo-sign, reading Camp Bar and Cafe . According to Jane, the local authorities and administration had managed to reestablish something resembling a functioning economy, now that the major relays connecting Earth to Palaven, Thessia, and Sur’Kesh were back online. Only Tuchanka and Rannoch remained physically isolated.</p>
+        <p>Keelah, she couldn’t wait for the Shadow Sea and Far Rim relays to come back online, about a month from now. By then, she’d finally get to start her new life with Jane, and put the Reaper War behind her.</p>
+        <p>Yes, ever since Jane’s talk with auntie Raan a week ago, and her talk with Admiral Korris just yesterday, the future seemed so bright that she could hardly contain herself. Already, Zaal had secured her and Jane a plot of land. This morning, she’d sent Zaal the specifications she and Jane had agreed upon. And now, their new home was under construction. When they finally arrived at Rannoch, it would be ready, and their new life would begin.</p>
+        <p>But Jane…</p>
+        <p>Lately, she didn’t seem very excited about it. More and more, she’d been talking in her sleep, and three times she’d woken up screaming. Ancestors, she was in so much pain – and still, she was trying to fight it. Still, she was pretending her problems didn’t exist. And still, she was refusing to talk about them, slowly pushing Tali away.</p>
+        <p>Inwardly, she sighed. She’d been so patient with Jane. But enough was enough. Soon, she would get her to talk, to relieve the burdens squeezing the life out of Jane’s soul.</p>
+        <p>After everything Jane had been through, she deserved to be happy, and Tali would die before ever allowing her to lose her mind.</p>
+        <p>Finally, they entered the tent. At this time, it was nearly empty, except for a few humans and turians. But within seconds, Jane looked at a bald, scarred human man sitting at the bar counter, watching the news on the nearby holo-TV. Apparently, that man was a high-ranking officer, with many political connections. And Jane had made good friends with him.</p>
+        <p>But how?</p>
+        <p>“Over here!” The man said before approaching them.</p>
+        <p>“Ah,” the man said, “so you must be the special lady.” He extended his hand for a handshake, and she accepted it. “Tali’Zorah, correct?”</p>
+        <p>“Yes,” she said, “and you are?”</p>
+        <p>“Colonel Conor Hayes,” he said. “It’s great to meet you.” He looked at Jane. “I’m glad she’s made it back to you. After everything that’s happened…you deserve at least some good news.”</p>
+        <p>“Thanks,” Jane said, “I appreciate the kind words.”</p>
+        <p>Jane spoke those words with no emotion.</p>
+        <p>Why don’t you believe him, Jane? Why are you punishing yourself?</p>
+        <p>Jane cleared her throat. “Anyways. Hayes, meet Garrus Vakarian, also known as Archangel.”</p>
+        <p>Hayes’ eyes widened. His mouth fell open and he shook Garrus’ hand. “God, what a small galaxy we live in. The man who saved my wife – a member of Commander Shepard’s crew.” He laughed. “Why am I not surprised?”</p>
+        <p>“The feelings mutual,” Garrus said. “Tell me, how’d you two fare after your little escape from Omega?”</p>
+        <p>“She needed years of therapy to recover,” he said. Briefly, he looked at the ground. “She still has nightmares about it. But thankfully, Asari psychologists are the best in the damn galaxy. It’s all behind her now.”</p>
+        <p>“Good,” Garrus said. “I’ll sleep better at night knowing that what I did to those animals was all worth it.”</p>
+        <p>“Sounds like a story worth telling,” Jane said. “But first, shall we order some drinks?”</p>
+        <p>“Of course, friend,” Hayes said.</p>
+        <p>She sat next to Jane at the bar counter. With a hand gesture, Hayes called over the bartender, a thin, middle-aged human woman in ragged clothing.</p>
+        <p>“Well, well, well,” the bartender said, approaching them, “what a surprise. The great Commander Shepard and two of her crew, having a drink at my bar, and near closing hours. Who would have thought.” She let out a weak laugh. “Anyways, what can I get all of you?”</p>
+        <p>“Just a pint of whatever beer you have,” Hayes said.</p>
+        <p>“Some turian brandy,” Garrus said, “if you have any.”</p>
+        <p>“And I’ll have whatever kicks the hardest,” Jane said.</p>
+        <p>Her blood went cold. Her eyes went wide, and she let out a faint gasp. Whatever kicks the hardest? Keelah, was Jane trying to get drunk? If so, then whatever was eating at her must be far worse than anything she could imagine. Yes, throughout the Reaper War, Jane had never resorted to alcohol to bury her pain, not even after the fall of Thessia.</p>
+        <p>“Jane,” she said, “are you sure that’s a good idea? It’s late.”</p>
+        <p>Jane held her hand. “I know you’re worried. But I’ll be fine. My cybernetics won’t let me get drunk anyway, remember?”</p>
+        <p>She let out a frustrated sigh. This can’t go on. Yes, as soon as they got back to their room in hab-block E-45, she would get Jane to talk. “Very well.”</p>
+        <p>“And what about you, young lady?”</p>
+        <p>She looked at the bartender. “Just some water please, triple-filtered and sterilized, with a strah .”</p>
+        <p>“Coming right up.” The bartender left and went to prepare their orders.</p>
+        <p>“So tell me,” Hayes said, looking at her and Garrus, “where were you two for so long? Where was the Normandy ?”</p>
+        <p>“We were stranded,” Garrus said. “The Crucible blast knocked us out of the relay lane between this system and the Shadow Sea, to some…uncharted world.”</p>
+        <p>“We were stuck there for over three months,” she said, “with barely any food and water, and no functioning plumbing.” But what was Jane doing?</p>
+        <p>“Sounds rough,” Hayes said.</p>
+        <p>“It was,” Tali said. She sighed. “But let me ask you a question, Conor Hayes. What was Jane doing the whole time? What happened to her after the Crucible fired?”</p>
+        <p>The bartender arrived with their drinks, and everyone took their order.</p>
+        <p>Hayes took a sip of his. “Now that’s a story.” He cleared his throat. “While I was recovering in the field hospital they set up, the news station went crazy when they announced that paramedics had found Shepard alive…but in very, very bad condition.”</p>
+        <p>Her eyes widened and she let out a faint gasp. She put one hand on her vocalizer. “Keelah…how bad was it?”</p>
+        <p>Hayes opened up his omni-tool and input a few commands.“They released this image to the public.”</p>
+        <p>In the image, her lifemate was sitting on the ground, unconscious, leaning against an Avina terminal. Heat had scorched many sections of her armor black, melting and fusing others to her skin. Plastered with soot and ash, her face teemed with burns and lacerations. Oozing blood, her left eye was a gory, unrecognizable mess, and her left hand was a mangled ruin, a useless lump of pulverized flesh and bone.</p>
+        <p>She covered her vocalizer with both hands. “Oh…Oh, ancestors help me…” A cold, crushing sensation racked her chest, and her eyes grew wet with tears. “I can’t look at it.”</p>
+        <p>Keelah, just how badly had Jane suffered? How much pain had she endured as she clung to life? Oh, Jane, I’m sorry. I’m sorry I wasn’t there for you.</p>
+        <p>Just then, Jane held her hand, under the table, and gave it a gentle, reassuring squeeze. A warm, soothing sensation coursed through her limbs, and she returned the gesture. I’ll never let you suffer like that ever again.</p>
+        <p>“How did you get there, Shepard?” Hayes asked.</p>
+        <p>She looked at Jane, into her eyes, and found only pain. She tightened the grip on Jane’s hand.</p>
+        <p>“I…I don’t remember much,” Jane said, looking at the ground, “just fragments…fragments of when I crawled my way there.”</p>
+        <p>She studied the photo more carefully for a moment and spotted something in Jane’s right hand.</p>
+        <p>No…</p>
+        <p>It couldn’t be.</p>
+        <p>So that’s where the photo has been! Ancestors, had Jane crawled her way to where paramedics could find her, enduring enough pain to drive most men to madness, just so she could come back to Tali?</p>
+        <p>She smiled, then let out a weak laugh. Her chest swelled with a fuzzy warmth, and she wanted nothing more than to shower Jane with kisses, to join with her right here and now. Yes, as soon as they had their house, and were settled into their new life, she would make every second of that pain worth it, a hundred times over, in the bedroom.</p>
+        <p>“Anyways,” Hayes said. He closed his omni-tool. “After they found her, everyone was holding their breath, wondering if she’d survive. For a whole month, she was in a coma.”</p>
+        <p>“A whole month?” she almost shouted.</p>
+        <p>“Yes,” Hayes said, “a month. Her hospital bed was right next to mine. And when she woke up…” Briefly, he broke eye contact and smiled. “It was a god damn miracle.” He laughed. “First thing she did was scramble around, looking for that photo of your face.”</p>
+        <p>She looked at Jane. Truthfully, she couldn’t help but feel annoyed that so many people might have seen her face. But if the photo had made it easier for her lifemate to endure those months without her, then so be it.</p>
+        <p>She looked at Hayes. “So what happened after that, during her recovery?”</p>
+        <p>Hayes laughed. “After that, she started overworking to keep her mind off you.”</p>
+        <p>Jane’s eyes went wide, and she nearly spat out her drink.</p>
+        <p>“Oh, don’t give me that look,” Hayes said. “I’ve been in that situation, so many times.” Once more, Hayes looked at Tali. “The woman just couldn’t take one second to rest. Every chance she had, she did what she could to help with rebuilding, with reestablishing order and stability throughout the camps. Hell, she was working so hard, actually, that she was practically taking over some people’s jobs.” He laughed. “Admiral Hackett even made her a prefect.”</p>
+        <p>“A what?” she asked.</p>
+        <p>Momentarily, Jane squeezed her hand. “I’ve resigned.”</p>
+        <p>“Of course, you have,” Hayes said. “Now that you have her back, I bet your future plans can’t involve any responsibilities to humanity or the Alliance.” He finished off his drink. “Am I right?”</p>
+        <p>Jane nodded, then wrapped one arm around her waist. She leaned into Jane’s touch.</p>
+        <p>“Now that the quarians have their homeworld back,” Jane said, “there’s no way I’m letting Mrs. Shepard enjoy her new home alone.”</p>
+        <p>Inwardly, she swooned. She had no doubt Jane meant those words, but couldn’t help but notice how she said them. Stop trying to distract me, Jane. Stop trying to hide your pain.</p>
+        <p>Hayes chuckled. “Planning on going native, are you?”</p>
+        <p>“Yeah,” Shepard said. She finished her drink. “I guess I am.”</p>
+        <p>“I’m sorry,” Tali said. “Going native? What do you mean?”</p>
+        <p>“He means that Shepard plans to assimilate into your culture,” Garrus said before finishing his drink. “Can’t say I’m surprised.”</p>
+        <p>She looked into Jane’s eyes, touching Jane’s arm with one hand. “You…you would really…”</p>
+        <p>“Of course I would, beautiful,” Jane said. She finished her drink. “Well…as much as a human can assimilate into your culture. I mean, at the very least, I’ll definitely learn Khelish and start adopting some quarian customs, enough for your people to stop seeing me as an outsider. It’ll be necessary if we’re going to raise a family, and besides…the experience will help me with the book I want to write.”</p>
+        <p>Hayes smiled. “What, planning to write your memoirs and get rich off the royalties?”</p>
+        <p>“No,” Jane said, “nothing like that. For once, I want to use my fame and influence for good and leave behind a legacy once I’m gone, something to ensure that future generations will never forget the Reaper War, or what lead to it.”</p>
+        <p>“Spirits, Shepard,” Garrus said, “that sounds ambitious. You’re starting to remind me of Ataxharsis the Great.”</p>
+        <p>She clenched her jaw and huffed through her nose. Oh, don’t you dare compare Jane with that monster.</p>
+        <p>“I’m sorry,” Hayes said. “Who?”</p>
+        <p>Garrus sighed. “You humans weren’t space faring yet, so you wouldn’t know him. But to put it simply…” Garrus leaned forward, putting his hands on the table. “He was the first and greatest primarch of the Turian Hierarchy, the man who broke the Krogan Empire. After the rebellions, his reforms and writings laid the foundations for everything the Hierarchy would become.”</p>
+        <p>“So he’s what, one of turian history’s immortals?” Hayes asked.</p>
+        <p>“Not just of turian history,” Garrus said, “but of galactic history. Even the asari and salarians revere him.”</p>
+        <p>Jane called the bartender over with a hand gesture. “Hey. Another, please.” The bartender nodded.</p>
+        <p>Tali frowned and huffed through her nose. When we get our house, I swear you will not become a drunkard.</p>
+        <p>Jane looked at Garrus.“But what about the other races?”</p>
+        <p>“Just mentioning his name on Tuchanka will get you killed,” Garrus said, “but the quarians…I don’t know.”</p>
+        <p>Suddenly, everyone around the table looked at her, as if expecting her to say something.</p>
+        <p>“We also hate him,” she said.</p>
+        <p>“Why?” Garrus asked.</p>
+        <p>“Because that racist bosh’tet robbed my people of ever getting a seat on the Council,” she said, “along with any opportunities for us to colonize new worlds. He made us retreat inward…and eventually create the Geth.”</p>
+        <p>On the Flotilla, everyone learned the history of how the Veil Republic became disillusioned with their former allies, of how the quarian people became decadent and created the Geth.</p>
+        <p>“Oh…” Garrus said, breaking eye contact with her. “Well, anyways, what I’m trying to say is that you’re pretty much humanity’s Ataxharsis, that you will join galactic history’s immortals.”</p>
+        <p>“That’s some high praise, Garrus,” Jane said, as her refill arrived. She took a sip of it. “I’m flattered that you think of me so highly.”</p>
+        <p>Again, Jane spoke those words with a monotone, lifeless voice. Why are you rejecting his praise, Jane? You deserve it.</p>
+        <p>“Garrus is right, you know,” Hayes said. He leaned forward, putting his hands on the table. “Like it or not, I think you will become one of history’s immortals, especially if you write that book.”</p>
+        <p>Her pulse climbed. Keelah, burdened with so much fame and influence, would Jane ever get to live out the rest of her life in peace?</p>
+        <p>“Even now,” Hayes continued, “my family still has quite a lot of connections. So whenever you finish any drafts, send them to me. Your cause is definitely something I’ll get behind and do everything possible to promote.”</p>
+        <p>Jane’s eyes went wide. “You would do that for me?”</p>
+        <p>“Oh, please,” Hayes said, “after everything you’ve done for me, it’s the least I can do.”</p>
+        <p>Hayes’ omni-tool beeped as it received an incoming call. Hayes answered it. “Hello?”</p>
+        <p>Hayes laughed. “Oh, really now? Well, I guess I’ll be right over.”</p>
+        <p>Hayes ended the call, then stood up from his chair. “Anyways, it’s been great, you guys. But I have to go, my wife and I have some… ‘family matters’ to take care of.”</p>
+        <p>Jane and Garrus stood up, and she did the same. Jane shook Hayes’ hand.</p>
+        <p>“We’ll stay in touch,” Hayes said. He looked at Garrus. “Especially you.”</p>
+        <p>Garrus nodded, then also shook Hayes hand. “I guess we will.”</p>
+        <p>With that, Hayes paid for the drinks, then left the bar.</p>
+        <p>“As much as I’d love to stay and talk with you two,” Garrus said, “I’m afraid I can’t. Victus, I…I have to prepare for a meeting with him. Soon, he’ll want me on Palaven and…”</p>
+        <p>Jane put one hand on Garrus’ shoulder. “It’s okay. We’ll stay in touch.”</p>
+        <p>“Yes,” Garrus said. “We will. And don’t worry. I’m sure I can talk my way into staying a few more days here. Good luck.”</p>
+        <p>Jane nodded, as Garrus left the bar. Jane yawned, then looked at her. “It’s getting pretty late.” She held Tali’s hand. “Come on. Let’s head back to our room. I’m sure we both could use some sleep.”</p>
+        <p>Arm in arm, they left the bar, and out into the cold, empty streets of camp three, heading back to hab-block E-45. On the way, they rounded a corner.</p>
+        <p>Then abruptly, Jane stopped in her tracks and stared at a garbage hauler parked on the side of the avenue.</p>
+        <p>“Jane?” she asked. “Jane, what’s happening?”</p>
+        <p>She looked at the garbage hauler, and keelah…it was full of lifeless, blackened geth platforms, half buried in rubble and debris. Has this been what’s torturing you? Ancestors, she knew Jane was somehow responsible for EDI and the Geth’s demise. But what exactly happened? What could be terrible enough to bring her this low?</p>
+        <p>“Jane? Jane, please,” she said, nudging Jane back and forth. Her eyes grew wet with tears. Keelah, she could hardly bear to see her like this. Why are you acting this way?! “Just talk to me, saera.”</p>
+        <p>Jane stirred. “Sorry, I…I was just…”</p>
+        <p>“It’s okay,” she said softly. “It’s okay. Let’s just head back to our room. We can talk about it there.”</p>
+        <p>They went on. Soon, they arrived at hab-block E-45, then made their way to their room, which reminded her of apartments from the Citadel’s lower wards, or even Omega. When the door closed behind them with a metallic whine, Jane sighed as she took off her coat.</p>
+        <p>Was now the time to ask Jane?</p>
+        <p>She faced Tali. “Tali?”</p>
+        <p>“Yes?” Her heart broke at the guilt and shame in Jane’s eyes. A few tears streamed down her cheeks. “What is it, saera?”</p>
+        <p>“I have a confession to make,” Jane said. She sighed, then slid one hand down her face. “One way or another, I know you’ll find out about this, so…better it comes from me.” She took a deep breath. “Let’s talk about what I did on the Crucible.”</p>
+    </div>
+</body>
+</html>

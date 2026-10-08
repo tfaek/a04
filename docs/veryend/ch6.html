@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch5.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html" selected>Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch7.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 3</h1>
+    <div class="chapter-content">
+        <p>Commander Shepard awoke to brain fog clouding her senses, to dull, searing pain radiating through her body. She let out a weak groan. Gradually, her brain fog dissipated. Gradually, her blurry vision cleared, and the voices and noises around her grew more intelligible. Eventually, she found herself staring at the ceiling of a framed, metallic tent.</p>
+        <p>Wait. Where was she?</p>
+        <p>One moment, she was on the Citadel, and now–</p>
+        <p>Something clattered to the ground. &quot;She&#x27;s awake! She&#x27;s awake!&quot;</p>
+        <p>She sat up a little and found herself lying on a hospital bed, her body wrapped in slews of bandages, and connected to numerous wires and IVs. Yes, she was in a field hospital, a small medical tent filled with five other patients and three nurses.</p>
+        <p>Who were all staring at her, their eyes wide, their mouths agape.</p>
+        <p>&quot;Well, I&#x27;ll be damned,&quot; said the patient to her left, a bald, pale man with a burned, scarred face.</p>
+        <p>&quot;How…how long?&quot; she managed to ask.</p>
+        <p>&quot;About a month,&quot; the man said.</p>
+        <p>She gasped, and her eyes widened. A month? Had she truly been unconscious for that long? If so, then where was the Normandy? Where was her crew? Where was her beloved?</p>
+        <p>And where was her photo?</p>
+        <p>Her pulse spiked, and for a moment she couldn&#x27;t breathe. She sat up fully, then frantically searched all around her. But the photo was nowhere to be found.</p>
+        <p>No, no, no. This couldn&#x27;t be happening. She couldn&#x27;t lose it. Not now!</p>
+        <p>&quot;Something wrong?&quot; the man asked.</p>
+        <p>&quot;A photo,&quot; she snapped. Beside her, the heart rate monitor was beeping faster and faster. &quot;Before I blacked out, I had a photo on me. Where is it?&quot;</p>
+        <p>The man raised his eyebrows. &quot;Uhm…I don&#x27;t know. I haven&#x27;t–&quot;</p>
+        <p>&quot;Shepard!&quot; The voice came from outside the tent. It was a woman with an Australian accent. &quot;Shepard, don&#x27;t you dare move!&quot;</p>
+        <p>Just then, Miranda stepped into the tent, wearing a set of combat armor instead of her usual catsuit. &quot;Yes, yes, the Commander is alive. Now get back to work.&quot;</p>
+        <p>The nurses obeyed. Miranda approached her, then sighed and pulled something out of a pouch on her waist. &quot;Looking for this?&quot;</p>
+        <p>With one hand, Miranda held up Tali&#x27;s photo. Oh, thank god. Shepard let out a deep sigh. Her muscles relaxed, and her pulse steadied. &quot;Yes,&quot; she said. Briefly, she broke eye contact and pursed her lips. Damn it. She shouldn&#x27;t have lost her cool and showed weakness in front of so many strangers. As much as she hated it, she had to be the symbol they needed.</p>
+        <p>Once more, she met Miranda&#x27;s gaze. &quot;Thanks for keeping it safe. It means a lot.&quot;</p>
+        <p>&quot;After your help on Horizon, it&#x27;s the least I could do,&quot; she said. She handed her the photo. It was heavily creased, stained with Shepard&#x27;s own dried blood, but still clear enough to show Tali&#x27;sface in all its beauty.</p>
+        <p>&quot;Now, lie down,&quot; she commanded, gently pushing her back onto the bed. &quot;The more you move, the greater your chances of tearing something.&quot;</p>
+        <p>&quot;Fine,&quot; she said, complying. &quot;Where am I, anyway? What&#x27;s happened over the last month, and where&#x27;s my crew? Where&#x27;s the Normandy?&quot;</p>
+        <p>&quot;You&#x27;re in London,&quot; Miranda said, pressing a few keys on her omni-tool. She opened up a window full of graphs, numerical tables, and anatomical diagrams, &quot;in one of several field hospitals for the wounded. Now, I know you must have many questions, but before I answer them, please tell me…how are you feeling?&quot;</p>
+        <p>She huffed through her nose. &quot;Battered, burned, and shredded to ribbons…but able to function.&quot;</p>
+        <p>&quot;No headaches? No muscle spasms, temporary paralysis, or crippling abdominal pain?&quot;</p>
+        <p>&quot;No,&quot; she said. &quot;Why do you ask?&quot;</p>
+        <p>&quot;Hhhm, your vitals seem stable, and the nanites and microbots in your blood have repaired most of the damage to your organs. So if that&#x27;s the case,&quot; she said, &quot;then your remaining cybernetics should be in no danger of malfunctioning…at least for now.&quot;</p>
+        <p>&quot;At least for now?&quot; she asked. She gulped and broke eye contact. Was she a cripple? Had she pushed herself too far? &quot;The damage, how bad is it?&quot;</p>
+        <p>Miranda sighed. &quot;I&#x27;ll be honest with you, Shepard. When we found you on the Citadel, you were a mess, just a hair&#x27;s width away from dying. I&#x27;ll spare you the details, but your body had suffered enough punishment to kill the average man three times over. If not for your SOS beacon, we never would have saved you in time – even with your implants and armor doing everything possible to save you. &quot;</p>
+        <p>&quot;What happened after that?&quot; she asked.</p>
+        <p>&quot;Before you activated the Crucible, the Reapers had systematically destroyed every hospital and medical ship. So we rushed you here, where you spent the next thirty-one hours in surgery.&quot; She broke eye contact, then took a deep breath before meeting her gaze once more. &quot;Your heart stopped twice, and we just barely managed to save your life…though not without costs.&quot;</p>
+        <p>Her heart raced, and she began to sweat. &quot;What costs?&quot;</p>
+        <p>&quot;To put it simply,&quot; she said, &quot;the left side of your body might never be the same again. It&#x27;s where you suffered the brunt of your injuries, and…we couldn&#x27;t save your left eye and most of your left hand. Even after so many stem cell treatments, bone replacements, and other reconstructive procedures, you&#x27;ll never have the motor skills you had in your prime. Your countless third and fourth degree burns caused just too much nerve damage.&quot;</p>
+        <p>She looked away and pursed her lips. &quot;Anything else?&quot;</p>
+        <p>&quot;You inhaled enough smoke and dangerous fumes to kill anyone without augmented lungs. So let&#x27;s just say you won&#x27;t be running marathons anymore – or doing anything too strenuous. Your days of saving the galaxy, I&#x27;m afraid, are over.&quot;</p>
+        <p>&quot;Promise me you&#x27;ll retire, saera.&quot;</p>
+        <p>Perhaps this was a blessing in disguise. Finally, she wouldn&#x27;t have to fight anymore…but at what cost? Even with Talito support her, was she prepared to live the rest of her life as a shell of her former self? Would she ever be able to function normally, to do the simplest tasks without needing constant assistance or endless regimens of medication?</p>
+        <p>&quot;The good news,&quot; Miranda continued, &quot;is that if you cooperate, and your recovery goes well, you should regain enough functionality to live a comfortable, independent life…as a civilian within the next year or two.&quot;</p>
+        <p>&quot;Then you&#x27;ll have my full cooperation,&quot; she said. She took a deep breath. &quot;Now, for goodness sake, no more dodging my questions. Where&#x27;s the Normandy? Where&#x27;s my crew?&quot;</p>
+        <p>Miranda looked away and gulped. &quot;Shepard, I don&#x27;t know how to tell you this, but since the Crucible blast, there&#x27;s been no sign of them.&quot; She took a deep breath, then once more met her gaze. &quot;Until we can finish repairs to the comm-buoys and the Charon relay, we can&#x27;t send out any scout patrols. So for the time being, they&#x27;re on their own. I&#x27;m sorry.&quot;</p>
+        <p>Her heart sank. Her limbs felt heavy, as though made of lead, and a cold emptiness sprouted in her chest. Were they already dead? On the Citadel, had she fought and clawed to survive for nothing?</p>
+        <p>&quot;But I wouldn&#x27;t lose hope,&quot; she said. &quot;Some ships reported missing after the blast have managed to return. And knowing your crew, it would take a lot more to kill them than just being stranded on a planet, or being derelict in space.&quot; She put her hand on Shepard&#x27;s shoulder. &quot;I have no doubt you&#x27;ll see them…and her again.&quot;</p>
+        <p>&quot;Yeah,&quot; she said, letting her body sink into the bed. As much as she wanted to believe Miranda&#x27;s words, they felt only like meaningless platitudes. At least she&#x27;s trying. &quot;Right.&quot;</p>
+        <p>She sighed. &quot;Anyways. Next week, you should be healed enough for us to start removing some of your bandages. And the week after, you should be ready to start physical therapy. In the meantime, try to get some rest. I&#x27;ll go see if I can get you something to eat.&quot;</p>
+        <p>When she left the tent, Shepard closed her eyes and took a deep breath.</p>
+        <p>If the worst had happened, then what was she going to do? Without her crew, without Tali, she was completely alone, just half a woman in a galaxy that didn&#x27;t need her anymore.</p>
+        <p>So why get better?</p>
+        <p>She opened her eyes, then looked at Tali&#x27;s photo, holding it with both hands. Delicately, she trailed two fingers across its surface. Where are you? If you&#x27;re still out there, then please…be strong. No matter how much you&#x27;re suffering, just hold on. Don&#x27;t give in.</p>
+        <p>The patient to her left cleared his throat. &quot;Sooo…It happened to you too, eh?&quot;</p>
+        <p>She looked at him. &quot;I&#x27;m sorry, what? Who are you anyway?&quot;</p>
+        <p>The man extended his hand for a handshake. &quot;Colonel Conor Hayes at your service. It&#x27;s an honor to meet you, ma&#x27;am.&quot;</p>
+        <p>Shepard accepted it. &quot;The honor is mine.&quot;</p>
+        <p>&quot;But let me guess,&quot; Conor said, &quot;the two of you got separated, and you&#x27;re not sure if she&#x27;s alive.&quot;</p>
+        <p>&quot;Yeah,&quot; Shepard said. Briefly, she looked away and sighed. &quot;Was it that obvious?&quot;</p>
+        <p>&quot;Yep,&quot; Conor said. &quot;Why else would you – of all people – get so upset over a missing photo? And quite a striking one at that.&quot;</p>
+        <p>Striking? She clenched her jaw, bracing herself for any rude, xenophobic comments. &quot;What&#x27;s that supposed to mean?&quot;</p>
+        <p>&quot;Relax, friend,&quot; Conor said, &quot;I didn&#x27;t mean to offend you. I&#x27;m just surprised that quarians are such beauties under those masks, that they&#x27;re compatible with humans in, you know…that way.&quot; He chuckled. &quot;Leave it to someone like you to &#x27;boldly go where no man has gone before&#x27;.&quot;</p>
+        <p>Shepard let out a weak laugh. &quot;So what&#x27;s your story? Who&#x27;d you get separated from?&quot;</p>
+        <p>&quot;My wife and daughters,&quot; Conor said. With his omni-tool, he displayed a family photo of himself, an Asari, and their four children. He closed it. &quot;Haven&#x27;t seen or heard from them since the war began.&quot;</p>
+        <p>&quot;I&#x27;m sorry,&quot; Shepard said. &quot;How did it happen?&quot;</p>
+        <p>Conor gulped. &quot;Managed to get them into one of the underground shelters when the Reapers first invaded. But you know what they say… war is chaos. War is hell.&quot;</p>
+        <p>You&#x27;ve got that right. &quot;How did you cope? It couldn&#x27;t have been easy.&quot;</p>
+        <p>&quot;Christ, it was anything but easy,&quot; Conor said, breaking eye contact, and letting out a mirthless laugh. He took a deep breath before meeting her gaze once more. &quot;But I knew that if I constantly worried about them I&#x27;d only lose my damned mind and get all my men killed. So every day, I vowed to live only in the present moment, to focus only on surviving until tomorrow. And you know what, it worked. Thanks to you and General Anderson, my Regiment and I never lost our fighting spirit. When we covered your advance towards that beam, defending your unit&#x27;s flanks and rear, we faced our deaths without an ounce of fear gripping our hearts.&quot; He smiled. &quot;Glad to know our sacrifice wasn&#x27;t in vain.&quot;</p>
+        <p>For a moment, Shepard looked towards the ground and pursed her lips. Yes, in war, victory often required necessary sacrifices. But damn it. Nonetheless, she hated it when people died for her like that. When would they realize that she was just a woman, not a messiah or a demi-goddess?</p>
+        <p>&quot;Anyways,&quot; Conor said, laying back onto his bed, &quot;better we get some rest. Food and meds should be coming soon. So in the meantime…try to think about what I said. Hopefully, it helps you.&quot;</p>
+        <p>&quot;Yeah,&quot; Shepard said, relaxing into her bed, &quot;rest sounds good. And what you said, I&#x27;ll definitely keep that in mind.&quot;</p>
+        <p>Conor chuckled. &quot;That&#x27;s the spirit.&quot;</p>
+        <p>Closing her eyes, Shepard took a deep breath. The road to recovery felt painfully long. But if there was any chance, however small, that Tali was still alive, then she would do whatever was necessary to get better and come back to her.</p>
+        <p>As Conor just said, she&#x27;d endure each day at a time.</p>
+    </div>
+</body>
+</html>

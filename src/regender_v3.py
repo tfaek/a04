@@ -22,6 +22,7 @@
 #
 #   Examples:
 #     uv run src/regender_v3.py inputs/rekindling/Rekindling_A_Hero.azw3
+#     uv run src/regender_v3.py inputs/veryend     # books 1-3 become prologues to book 4
 #     uv run src/regender_v3.py inputs/rekindling/Rekindling_A_Hero.azw3 --only part0003,part0004
 #     uv run src/regender_v3.py book.epub --model gpt-5.5 --effort high --no-review
 #
@@ -184,6 +185,77 @@ def pack(root, out):
                 z.write(f, f.relative_to(root).as_posix(), compress_type=zipfile.ZIP_DEFLATED)
 
 
+def is_chapter(src):
+    """AO3 exports put each chapter's story text in a userstuff2 div."""
+    return 'class="userstuff2"' in src
+
+
+def heading(src):
+    m = re.search(r"<h2\b[^>]*>(.*?)</h2>", src, re.S)
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).split()) if m else None
+
+
+def book_order(path):
+    m = re.match(r"\d+", path.name)
+    return (int(m.group()) if m else 0, path.name)
+
+
+def compile_books(main, prologues, dest):
+    """Unpack `main` into dest/, inserting each prologue book's story before its first
+    chapter as "Prologue N: <title>" (spine, manifest, NCX and the in-book TOC page)."""
+    unpack(main, dest)
+    files = spine_files(dest)
+    opf_path = next(dest.rglob("*.opf"))
+    first = next(f for f in files if is_chapter(f.read_text(encoding="utf-8")))
+    first_href = first.relative_to(opf_path.parent).as_posix()
+    opf = opf_path.read_text(encoding="utf-8")
+    ncx_path = next(dest.rglob("*.ncx"))
+    ncx = ncx_path.read_text(encoding="utf-8")
+    toc_page = next((f for f in files if f != first and f'href="{first.name}#' in f.read_text(encoding="utf-8")), None)
+    item_id = next(re.search(r'id="([^"]+)"', m.group(0)).group(1)
+                   for m in re.finditer(r"<item\b[^>]*>", opf) if f'href="{first_href}"' in m.group(0))
+    itemref = re.search(rf'<itemref\b[^>]*idref="{re.escape(item_id)}"[^>]*>', opf).group(0)
+    nav = re.search(rf'<navPoint\b(?:(?!<navPoint\b).)*?src="{re.escape(first_href)}[#"]', ncx, re.S)
+
+    for k, book in enumerate(prologues, 1):
+        tmp = dest.parent / f"prologue{k}"
+        unpack(book, tmp)
+        story = next(f for f in spine_files(tmp) if is_chapter(f.read_text(encoding="utf-8")))
+        src = story.read_text(encoding="utf-8")
+        title = f"Prologue {k}: {heading(src)}"
+        src = re.sub(r"(<h2\b[^>]*>).*?(</h2>)", lambda m: m.group(1) + html.escape(title, quote=False) + m.group(2), src, count=1, flags=re.S)
+        anchor = re.search(r'<h2\b[^>]*id="([^"]+)"', src)
+        anchor = f"#{anchor.group(1)}" if anchor else ""
+        new_items = []
+        # Bring the prologue's own stylesheets along under unique names
+        for css in re.findall(r'href="([^"]+\.css)"', src):
+            css_src = (story.parent / css).resolve()
+            css_name = f"prologue{k}_{css_src.name}"
+            shutil.copy(css_src, first.parent.parent / "Styles" / css_name)
+            src = src.replace(f'href="{css}"', f'href="../Styles/{css_name}"')
+            new_items.append(f'<item id="prologue{k}_{css_src.stem}" media-type="text/css" href="Styles/{css_name}"/>')
+        name = f"prologue{k}.xhtml"
+        (first.parent / name).write_text(src, encoding="utf-8")
+        href = (first.parent / name).relative_to(opf_path.parent).as_posix()
+        new_items.append(f'<item id="prologue{k}" media-type="application/xhtml+xml" href="{href}"/>')
+        opf = opf.replace("</manifest>", "\n".join(new_items) + "\n</manifest>")
+        opf = opf.replace(itemref, f'<itemref idref="prologue{k}"/>\n{itemref}')
+        if nav:
+            ncx = ncx.replace(nav.group(0), f'<navPoint id="prologue{k}" playOrder="0"><navLabel><text>{html.escape(title)}</text></navLabel>'
+                                             f'<content src="{href}{anchor}"/></navPoint>\n' + nav.group(0))
+        if toc_page:
+            t = toc_page.read_text(encoding="utf-8")
+            t = re.sub(rf'(<li>\s*<a href="{re.escape(first.name)}#)',
+                       lambda m: f'<li><a href="{name}{anchor}">{html.escape(title)}</a></li>\n' + m.group(1), t, count=1)
+            toc_page.write_text(t, encoding="utf-8")
+        shutil.rmtree(tmp)
+
+    order = iter(range(1, 10000))
+    ncx = re.sub(r'playOrder="\d+"', lambda m: f'playOrder="{next(order)}"', ncx)
+    opf_path.write_text(opf, encoding="utf-8")
+    ncx_path.write_text(ncx, encoding="utf-8")
+
+
 # ---------------------------------------------------------------- paragraphs
 
 BLOCK_RE = re.compile(r"(<(p|li|dd|h[1-6])\b[^>]*>)(.*?)(</\2>)", re.S)
@@ -191,10 +263,20 @@ INLINE_RE = re.compile(r"<(/?)(em|strong|b|i|span)\b[^>]*>")
 TAG_RE = re.compile(r"<(/?[a-zA-Z0-9]+)")
 
 
+def normalise(inner):
+    """Some AO3 exports wrap every run of text in a bare <span> on its own line, so the
+    whitespace between tags renders as stray spaces ("Pride and Prejudice , when").
+    Drop the bare spans and that inter-tag whitespace; real spaces live inside the spans."""
+    if "<span>" not in inner:
+        return inner
+    return re.sub(r"</?span>", "", re.sub(r">\s+<", "><", inner.strip()))
+
+
 class Para:
     def __init__(self, match):
         self.span = match.span(3)
-        inner = match.group(3)
+        self.tag = match.group(2)
+        inner = normalise(match.group(3))
         # Strip attributes off inline tags for the model; remember them for writing back
         self.open_tags = {}
         for m in INLINE_RE.finditer(inner):
@@ -398,21 +480,17 @@ def finalize(name, src, paras, data):
 
 def chapter_txt(src):
     """Front-end format (scripts/create_html_chapters.py): heading line, then the story's
-    paragraphs separated by blank lines. Returns (chapter number, text), or None if not a chapter."""
-    heading = re.search(r"<h2\b[^>]*>(.*?)</h2>", src, re.S)
+    paragraphs separated by blank lines. None if the file isn't a chapter."""
+    title = heading(src)
     body = re.search(r'<div class="userstuff2">(.*?)</div>', src, re.S)
-    if not heading or not body:
+    if not title or not body:
         return None
-    title = " ".join(html.unescape(re.sub(r"<[^>]+>", "", heading.group(1))).split())
-    number = re.match(r"Chapter (\d+):", title)
-    if not number:
-        return None
-    paras = [" ".join(html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).split()) or "\u00a0"
+    paras = [" ".join(html.unescape(re.sub(r"<[^>]+>", "", normalise(m.group(1)))).split()) or "\u00a0"
              for m in re.finditer(r"<p\b[^>]*>(.*?)</p>", body.group(1), re.S)]
     # Drop the empty spacer paragraph AO3 puts at the top of every chapter
     while paras and not paras[0].strip():
         paras.pop(0)
-    return int(number.group(1)), title + "\n\n" + "\n\n".join(paras) + "\n"
+    return title + "\n\n" + "\n\n".join(paras) + "\n"
 
 
 def word_diff(old, new):
@@ -433,7 +511,8 @@ def word_diff(old, new):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Regender Shepard in an ebook (v3)")
-    ap.add_argument("book", type=Path, help=".azw3 or .epub file")
+    ap.add_argument("book", type=Path, help=".azw3/.epub file, or a directory of numbered books: "
+                    "the last is the main story, the earlier ones become its prologues")
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--effort", default="medium", choices=["low", "medium", "high"], help="reasoning effort")
     ap.add_argument("--no-review", action="store_true", help="skip the review pass (about half the cost)")
@@ -445,9 +524,16 @@ if __name__ == "__main__":
     if args.flex:
         SERVICE_TIER = "flex"
 
-    output_dir = Path("outputs") / args.book.parent.name
+    if args.book.is_dir():
+        books = sorted([b for b in args.book.iterdir() if b.suffix.lower() in (".azw3", ".epub")], key=book_order)
+        output_dir = Path("outputs") / args.book.name
+        stem = args.book.name
+    else:
+        books = [args.book]
+        output_dir = Path("outputs") / args.book.parent.name
+        stem = args.book.stem
     work_dir = output_dir / "v3_work"
-    cache_dir = work_dir / "cache" / args.book.stem
+    cache_dir = work_dir / "cache" / stem
     epub_dir = work_dir / "epub"
     if args.fresh and cache_dir.exists():
         shutil.rmtree(cache_dir)
@@ -457,8 +543,12 @@ if __name__ == "__main__":
     print(f"Output: {output_dir}")
     print(f"Model:  {args.model} (effort {args.effort}, review {'off' if args.no_review else 'on'}, tier {SERVICE_TIER})")
 
-    unpack(args.book, epub_dir)
+    for k, b in enumerate(books[:-1], 1):
+        print(f"Prologue {k}: {b.name}")
+    compile_books(books[-1], books[:-1], epub_dir)
     files = spine_files(epub_dir)
+    # Front-end txt files are numbered in reading order: ch1.txt is the first chapter
+    chapter_numbers = {f: n for n, f in enumerate((f for f in files if is_chapter(f.read_text(encoding="utf-8"))), 1)}
     if args.only:
         wanted = set(args.only.split(","))
         selected = [f for f in files if f.stem in wanted]
@@ -486,14 +576,20 @@ if __name__ == "__main__":
     all_flags = []
     total_changes = 0
     txt_count = 0
+    ncx_path = next(epub_dir.rglob("*.ncx"))
+    ncx = ncx_path.read_text(encoding="utf-8")
     for f in selected:
         name, src, paras, data = results[f]
         new_src, changes, flags = finalize(name, src, paras, data)
         f.write_text(new_src, encoding="utf-8")
         chapter = chapter_txt(new_src)
-        if chapter:
-            (output_dir / f"ch{chapter[0]}.txt").write_text(chapter[1], encoding="utf-8")
+        if chapter and f in chapter_numbers:
+            (output_dir / f"ch{chapter_numbers[f]}.txt").write_text(chapter, encoding="utf-8")
             txt_count += 1
+        # Keep the ebook's table of contents in step with regendered headings
+        for i, p, new, _ in changes:
+            if p.tag.startswith("h"):
+                ncx = ncx.replace(f"<text>{p.text}</text>", f"<text>{new}</text>")
         all_flags += flags
         total_changes += len(changes)
         if changes:
@@ -501,24 +597,24 @@ if __name__ == "__main__":
             for i, p, new, reason in changes:
                 report.append(f"**[{i}]**" + (f" _review: {reason}_" if reason else "") + f"\n\n{word_diff(p.text, new)}\n")
 
-    stem = args.book.stem + "_regendered"
-    epub_out = output_dir / f"{stem}.epub"
+    ncx_path.write_text(ncx, encoding="utf-8")
+    epub_out = output_dir / f"{stem}_regendered.epub"
     pack(epub_dir, epub_out)
     print(f"\n✓ Saved {epub_out} ({total_changes} paragraphs changed)")
     print(f"✓ Saved {txt_count} chapter txt files to {output_dir}/ "
           f"(for the web: python scripts/create_html_chapters.py {output_dir})")
 
     if shutil.which("ebook-convert"):
-        azw3_out = output_dir / f"{stem}.azw3"
+        azw3_out = output_dir / f"{stem}_regendered.azw3"
         subprocess.run(["ebook-convert", str(epub_out), str(azw3_out)], check=True, capture_output=True)
         print(f"✓ Saved {azw3_out}")
     else:
         print("  (install Calibre for `ebook-convert` to also get an .azw3; Kindle accepts the .epub via Send to Kindle)")
 
     flag_lines = [f"- {n}" + (f" [{i}]" if i is not None else "") + f": {msg}" for n, i, msg in all_flags]
-    report_out = output_dir / f"{args.book.stem}_changes.md"
+    report_out = output_dir / f"{stem}_changes.md"
     report_out.write_text(
-        f"# {args.book.stem}: regender changes\n\nModel {args.model}, effort {args.effort}, "
+        f"# {stem}: regender changes\n\nModel {args.model}, effort {args.effort}, "
         f"review {'off' if args.no_review else 'on'}. {total_changes} paragraphs changed.\n"
         f"~~struck~~ = removed, **bold** = added.\n\n# Flags ({len(all_flags)})\n\n"
         + ("\n".join(flag_lines) or "None") + "\n" + "\n".join(report),

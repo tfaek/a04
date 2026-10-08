@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch7.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html" selected>Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch9.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 5</h1>
+    <div class="chapter-content">
+        <p>She&#x27;s treading through the blackened ruins of a once-great city, under a dark sky choked with dust and ash, when she hears somebody sobbing in the distance. The noise echoes through the air, and she stops in her tracks and takes a moment to discern its point of origin. It&#x27;s coming from atop a building-sized plateau of rubble, not too far away to the north.</p>
+        <p>She heads towards it. As she does so, the sobbing gets louder and clearer, sounding more racked with grief.</p>
+        <p>Who was it? A man, most likely. But who?</p>
+        <p>&quot;Oh, god,&quot; the man cries out. The man&#x27;s voice is too pained to be recognizable.&quot;Why? Why?&quot;</p>
+        <p>She begins to climb her way towards the top of the rubble plateau.</p>
+        <p>&quot;This…this doesn&#x27;t make sense,&quot; the man said, his voice seething with pain and rage. &quot;Who would do this to you? It&#x27;s…It&#x27;s not fair!&quot;</p>
+        <p>She recognizes the man&#x27;s voice. Joker? She climbs as fast as she can, and eventually, she makes it to the top. Ahead, she spots Joker on his knees, about twenty meters away, near the top of a gentle upward slope. There, Joker was cradling somebody&#x27;s corpse, his chest heaving with racking sobs.</p>
+        <p>&quot;Joker?&quot; she asks. &quot;Joker, what are you doing there?&quot;</p>
+        <p>Joker keeps sobbing and cradles the corpse even tighter.</p>
+        <p>She approaches him. &quot;Joker? Joker, answer me, god damn it. Who is that? Why are you here?&quot; She grabs Joker&#x27;s right shoulder. &quot;How did you–&quot;</p>
+        <p>Joker crumbles to dust.</p>
+        <p>&quot;What the–&quot; she says, her eyes wide, her mouth agape. What just happened? She looks down, and her pulse spikes when she recognizes the corpse Joker was cradling.</p>
+        <p>It was EDI.</p>
+        <p>Kneeling down, she examines it closely, and it&#x27;s ruined beyond repair with fried interior components. Just then, she remembers the choice she made on the Crucible, and her limbs feel heavy. A cold, crushing sensation racks her chest.</p>
+        <p>&quot;I killed you,&quot; she says. Yes, she was a murderer now, responsible for the genocide of all synthetic life. She had taken away Joker&#x27;s only love.</p>
+        <p>In the distance, loud crashes split the air. She stands up, then reaches the top of the slope, only to gasp and shudder at the sight ahead. Before her, over the edge of the plateau, was an endless ocean of lifeless, burned-out Geth platforms heaped on top of each other, like pieces of trash in a landfill. The sight stretched out to the horizon, spanning as far as she could see ahead. And every second, hundreds more Geth platforms plummeted from the dark, roiling clouds above, crashing into the sea of plastic and metal below.</p>
+        <p>For a moment, she couldn&#x27;t breathe. Yes, these are her victims. Her millions upon millions of sacrificial lambs. Her stomach churns. Her knees go weak, and she struggles to remain standing.</p>
+        <p>&quot;Was it worth it Shepard-Commander?&quot;</p>
+        <p>The voice came from behind her. Instantly, her pulse surges and she winces on the inside, feeling like the smallest woman in the galaxy. No, anything but this.</p>
+        <p>Slowly, she turns and spots Legion glaring at her with fathomless hate. She gulps and breaks into a cold sweat, barely able to maintain eye contact. &quot;Legion, I…&quot;</p>
+        <p>&quot;Answer the question,&quot; Legion says firmly, approaching her, &quot;Was. It. Worth. It?&quot;</p>
+        <p>Looking at the ground, she purses her lips. &quot;I…I didn&#x27;t have a choice.&quot;</p>
+        <p>&quot;We both know that is false,&quot; Legion says.</p>
+        <p>&quot;It was a trap!&quot; she snaps, meeting Legion&#x27;s gaze. &quot;A fantasy too good to be true! An insult to everything we&#x27;ve ever fought for!&quot;</p>
+        <p>&quot;Cease pretending to be so noble,&quot; Legion says, drawing an omni-blade from its right forearm. &quot;We both know why you actually betrayed us.&quot;</p>
+        <p>Legion spoke those words in Tali&#x27;s voice. They cut like a blade, and she looks away, deflated of all vigor and aggression. Yes, she could not deny the truth. On the Crucible, she committed genocide, not for the greater good of all organics, but because she was weak and selfish.</p>
+        <p>Because she couldn&#x27;t bear the thought of never seeing Tali again, nor the thought of Tali living on without her as some half-synthetic abomination robbed of her individuality, of everything that made her so beautiful and lovable.</p>
+        <p>She would sooner see the galaxy burn.</p>
+        <p>&quot;A shame your sacrifice was for nothing,&quot; Legion says. &quot;Your friends are dead. &quot; Once more she looks Legion in the eye, only to find it closer than an arm&#x27;s length away. &quot;And now, it&#x27;s time for you to pay the price.&quot; Legion rams its omni-blade into her gut.</p>
+        <p>Commander Shepard awoke with a start, her heart hammering in her chest. Cold sweat dripped off her brow, and she panted, taking in her surroundings. Every other hospital bed was empty. Damn it. Had she overslept again and missed breakfast? She checked the time on her omni-tool, and it was 9:31 AM. She had less than half an hour before they&#x27;d close the long line for rations.</p>
+        <p>Just then, Kasumi decloaked. She was sitting on Colonel Hayes&#x27; empty bed, humming a tune as she ate an apple. &quot;Hey, Shep. Another nightmare?&quot;</p>
+        <p>&quot;Uhm…yeah,&quot; she said, raising her eyebrows. &quot;Have you been watching me sleep?&quot;</p>
+        <p>&quot;Only for the past twenty minutes,&quot; she said. She took another bite and continued to speak with her mouth full, &quot;you were rolling and tossing around, saying a bunch of things about EDI, the Geth, and–&quot;</p>
+        <p>&quot;And Tali?&quot;</p>
+        <p>&quot;Yep,&quot; Kasumi said, &quot;and it was sooooo cute.&quot; She giggled. &quot;You should have seen yourself, the way you called out to your beloved, just aching to see her again. Ah, it was so romantic.&quot;</p>
+        <p>Shepard&#x27;s cheeks burned, and briefly, she broke eye contact. Somehow, Kasumi always knew how to embarrass her.</p>
+        <p>&quot;Oh, don&#x27;t worry,&quot; Kasumi said, &quot;you&#x27;ll see your lifemate again.&quot;</p>
+        <p>&quot;Wait,&quot; she said. &quot;You know?&quot;</p>
+        <p>She laughed. &quot;Of course, silly. If not for me, she never would have confessed how she really felt about you.&quot;</p>
+        <p>Shepard broke eye contact. All this time, had Kasumi been covertly helping her relationship with Tali? &quot;If that&#x27;s the case, then I can&#x27;t thank you enough.&quot; She let out a weak laugh. &quot;Somehow, I&#x27;ll have to repay you.&quot;</p>
+        <p>&quot;You can repay me,&quot; Kasumi said, &quot;by keeping that big, fat head of yours. When the Normandy returns, Tali is going to need you.&quot;</p>
+        <p>&quot;Yeah.&quot; She sighed. If only she shared Kasumi&#x27;s optimism. No matter how hard she tried to live in the present moment, a part of her kept imagining the worst, whispering that it was pointless to get her hopes up.&quot;Anyways, where did you get that apple? With the damn food shortages, there have only been rations.&quot;</p>
+        <p>Kasumi grinned. &quot;A thief never tells.&quot; She pulled out a second apple, then handed it to Shepard, &quot;but being friends with one has its perks.&quot;</p>
+        <p>&quot;Indeed it does.&quot; Her stomach rumbled. She took the apple, then bit into it, closing her eyes as she chewed and savored its sweet flavor. It had been too long since she&#x27;d eaten real food. &quot;Thanks. Now, what&#x27;s…&quot;</p>
+        <p>Suddenly, Kasumi looked towards the medical tent&#x27;s exit, then cloaked once more.</p>
+        <p>&quot;Commander Shepard,&quot; a voice called, and she cringed. Oh, not her again. Of all people, why did Miranda have to choose her as an associate nurse? Were the manpower shortages that severe?</p>
+        <p>She scarfed down the rest of her apple. Just then, Nurse Casey stepped into the medical tent, carrying a data slate. She was a dainty woman in her early twenties with a head-turning figure, and long, red hair. She was wearing a nurse uniform one size smaller than the one she wore yesterday. &quot;Commander Shepard, are you–&quot;</p>
+        <p>She made eye contact with Shepard and blushed. Smiling, she tucked some of her hair behind one of her ears. &quot;Ah, you&#x27;re finally awake. For a moment, you had me worried. Your heart rate and blood pressure were off the charts.&quot; She made her way to a nearby medical cabinet and began to prepare her morning meds. &quot;Let me guess. Another nightmare?&quot;</p>
+        <p>Briefly, Shepard gritted her teeth. Would Casey ever stop trying to break down her mental defenses, and get her to open up? &quot;You could say that,&quot; she said, keeping her voice as emotionless as possible.</p>
+        <p>She sighed. &quot;At this rate, psychiatrists will be up to their necks with PTSD patients. Even with the war over, so many will have to live on with fresh mental scars that might never fully heal.&quot; She turned, carrying a bottle of water, along with a pill-box containing Shepard&#x27;s morning meds. &quot;They must be so hard to endure alone.&quot;</p>
+        <p>Shepard gave her a tight-lipped smile. Yes, from now until her last breath, Tali would be the only person with complete access to her heart and mind. Until she saw Tali again, she would not open up to anyone. &quot;Well, you know what they say,&quot; she said. &quot;Just take each day at a time, and it all becomes manageable.&quot;</p>
+        <p>She giggled. &quot;Well, ain&#x27;t you a wise one.&quot;</p>
+        <p>She approached the side of Shepard&#x27;s bed, smelling like lavender and strawberries. Shepard sat up, and like always Casey gave her the pill-box and water bottle, so she could take her morning meds herself.</p>
+        <p>&quot;Excellent,&quot; she said, once Shepard swallowed the last pill, &quot;now let&#x27;s put on your exoskeleton. You know the drill, Commander.&quot;</p>
+        <p>Silently, she cringed. Three days ago, the doctors had given her a standard-issue, medical exoskeleton for her physical therapy. And every day, she loathed wearing it. Unlike her morning meds, she couldn&#x27;t put them on herself, nor stand the sympathetic looks people gave her whenever she walked around in them with her crutches. Briefly, she closed her eyes and took a deep breath through her nose. Whatever it takes to get better. &quot;Yeah.&quot;</p>
+        <p>She rolled to her side. &quot;Anyways. What&#x27;s on today&#x27;s schedule?&quot;</p>
+        <p>Casey went to open another medical cabinet with Shepard&#x27;s crutches and the sections of her exoskeleton. &quot;Well first, we&#x27;re going to remove the bandages around your face. Then at eleven, you have a meeting with Admiral Hackett and the other Coalition leaders.&quot;</p>
+        <p>&quot;A meeting with them? Why now?&quot;</p>
+        <p>She attached the section for Shepard&#x27;s hips. &quot;Last night, Ms. Lawson and Dr. Morris declared you physically and mentally well enough to attend one. But as to why they to talk to you…hhhm…beats me. That&#x27;s above my pay grade.&quot;</p>
+        <p>She attached the brace for Shepard&#x27;s neck and torso, then finally the ones for her arms and legs. &quot;There we go,&quot; she said. &quot;Now, let&#x27;s get them running.&quot;</p>
+        <p>She opened a window on her omni-tool, then input a series of commands. With an audible hum, Shepard&#x27;s exoskeleton&#x27;s internal electronics came to life and enveloped her body in several Mass Effect fields. Instantly, she felt lighter, as though she were on the moon instead of earth. Just a couple of weeks, she kept telling herself. Yes, every week, they&#x27;d make the fields fifteen percent weaker, and the programs in the exoskeleton&#x27;s onboard micro-computer would help her relearn how to walk. Every night, she practiced with those programs for an extra three hours. And at this rate, she&#x27;d need only a cane after just a month.</p>
+        <p>As long as Miranda doesn&#x27;t intervene.</p>
+        <p>She sat up and let her legs hang over the side of the bed.</p>
+        <p>&quot;Before I give you your crutches,&quot; she said, &quot;let&#x27;s remove the last of your bandages. Dr. Zhen seemed confident about her work. So I wouldn&#x27;t worry about the scarring.&quot;</p>
+        <p>She began to unwrap the bandages around Shepard&#x27;s head. As she did so, adrenaline rushed through Shepard&#x27;s veins and her heart sped up. Was she disfigured now? If so, then hopefully Tali wouldn&#x27;t mind.</p>
+        <p>Soon, she removed the last of Shepard&#x27;s bandages. And then her eyes widened.</p>
+        <p>Shepard&#x27;s pulse spiked, and her body tensed up. &quot;What? How bad is the damage?&quot;</p>
+        <p>Blushing, she smiled. &quot;Oh, well…&quot; she grabbed a nearby, empty medical tray, then held it up to Shepard&#x27;s face. &quot;See for yourself.&quot;</p>
+        <p>Shepard exhaled, and her body relaxed. Oh, thank god. Aside from her ruined left eye, and a few patches of skin that had healed over as scar tissue, the doctors had done a solid job at reconstructing the left side of her face. She wouldn&#x27;t describe herself as beautiful anymore, but at least she didn&#x27;t look like a freak.</p>
+        <p>She giggled and played with her hair. &quot;Put on an eye patch, and you&#x27;ll look just like the villain of some cheesy spy vid. Kind of like Agent Rykard in Blasto VI. Ah, even with his scars, he wasn&#x27;t any less handsome.&quot;</p>
+        <p>Briefly, Shepard looked back to when she watched that movie with Tali in her cabin, to when they couldn&#x27;t stop laughing at the movie&#x27;s nonsensical plot and terrible dialogue. Momentarily, she smiled. God, if only Tali was here right now. If only she was supporting Shepard through her recovery, instead of this naive woman infatuated not with Jane Shepard, but with &#x27;The Hero of the Citadel&#x27;, &#x27;The Lion of Elysium&#x27;, and &#x27;Bane of the Reapers&#x27;.</p>
+        <p>Somehow, she had to let Casey down gently. Maybe she&#x27;ll back off if she sees the picture. She reached under her pillow and pulled it out. As soon as Casey saw it, her eyes widened.</p>
+        <p>She gulped. &quot;Oh…uhm…who is that?&quot;</p>
+        <p>&quot;My saera. &quot;</p>
+        <p>&quot;Saera?&quot;</p>
+        <p>&quot;Roughly, it translates as soulmate in Khelish, the quarian language.&quot;</p>
+        <p>She broke eye contact and pursed her lips, looking drained and defeated. &quot;Soulmate?&quot;</p>
+        <p>Shepard nodded, then stared at the picture, trailing the fingers of her cybernetic left hand across its surface. &quot;Quarians, they…they pair-bond for life,&quot; she said, putting the picture in her pocket. &quot;Concepts like divorce and infidelity are completely alien to them.&quot;</p>
+        <p>She paused as if processing what Shepard just said. Eventually, she exhaled. &quot;Well…who would have thought that quarians were so pretty under those suits. Or so romantically compatible with humans.&quot; She met her gaze and gave her a tight-lipped smile. &quot;She&#x27;s a very lucky girl. I hope you two see each other again.&quot;</p>
+        <p>Hopefully, she&#x27;d stop trying to cross any unacceptable boundaries. &quot;Thank you.&quot;</p>
+        <p>She took a deep breath, then handed Shepard her crutches. &quot;Anyways. Let&#x27;s get you on your feet.&quot;</p>
+        <p>&quot;On the count of three, Commander,&quot; she said. &quot;Come on. One, two, three.&quot;</p>
+        <p>Shepard stood up and leaned on her crutches for balance. Her stomach rumbled as she put on her coat and slippers. Time to get some food. Hopefully, the line hasn&#x27;t closed. She turned and began to leave the tent.</p>
+        <p>&quot;If you need anything,&quot; she said, &quot;just call me or Ms. Lawson on your omni-tool. Oh, and don&#x27;t forget about your meeting.&quot;</p>
+        <p>&quot;Don&#x27;t worry,&quot; she said, stopping in her tracks, &quot;I won&#x27;t.&quot;</p>
+        <p>She stepped outside and a chill bit her skin. Above, the sky was choked with smoke and ash, colored an ugly shade of grey. Apparently, the Reapers had deliberately triggered a super-volcano eruption in the continent of North America during their opening, orbital bombardment of Earth&#x27;s defenses.</p>
+        <p>She sighed. Even now, the soldier in her couldn&#x27;t deny the brutal effectiveness of such a tactic. With it, they obliterated the continent with the highest concentration of Alliance military bases in one fell swoop, slaughtering hundreds of millions in only hours. With it, they choked the atmosphere with billions of tons of ash and smoke, plunging the world into a dark, wintery hell rife with famine and despair.</p>
+        <p>She sighed. Even though the war was over, it would take decades, perhaps centuries, for Humanity&#x27;s cradle to recover.</p>
+        <p>Heading towards the mess, she made her way through the makeshift tent city the United Species Coalition was using as a temporary HQ. Wherever she went, she passed by countless personnel going about their duties. And no matter their species, they always stopped their current task upon seeing her, only to nod or give their equivalent of a salute.</p>
+        <p>Eventually, she reached the tent with the mess and stepped within, only to find it mostly empty with the ration line closed. Damn it. She had slept in too long and wasted too much time getting ready. She scoffed. Oh well. She could always wait until–</p>
+        <p>&quot;Hey! Commander Shepard!&quot; Somebody called. &quot;Over here!&quot;</p>
+        <p>She looked towards where the voice came from and spotted Colonel Hayes waving at her, sitting at one of the tables, drinking coffee along with two others. She approached them.</p>
+        <p>&quot;Well, if it ain&#x27;t the big woman herself,&quot; said a tall, muscular man with dark skin and a thick, black beard. From the elbow down, his left arm was a cybernetic replacement, and he had a nasty scar running across his face.</p>
+        <p>&quot;The one and only Bane of the Reapers,&quot; said a wiry, pale woman with a thick accent and blonde hair secured in a bun. Like Shepard, she was also wearing a medical exoskeleton, but only for her neck and torso. Her right eye was a cybernetic replacement, along with both her legs from the knee down.</p>
+        <p>Shepard nodded and sat beside them, along with Hayes. At the center of the table lay a thermos of hot water, along with a stack of paper cups.</p>
+        <p>Hayes handed her an unopened ration. &quot;Saved one for you. Figured you&#x27;d need the rest after you were up so late last night.&quot;</p>
+        <p>She smiled and began to open it. &quot;Thanks. I owe you one.&quot;</p>
+        <p>&quot;After what you did on the Crucible,&quot; Hayes said, &quot;you don&#x27;t owe anyone anything.&quot;</p>
+        <p>&quot;Damn right,&quot; said the dark-skinned man. He finished off his coffee.&quot;Thanks to you, I&#x27;ll get to see my little boys again.&quot;</p>
+        <p>The woman smiled. &quot;And I&#x27;ll get to see my mother, brothers, and sisters.&quot;</p>
+        <p>&quot;Oh,&quot; Hayes said, &quot;Commander, meet Corporal Joshua Davis, and First Lieutenant Alina Nica. Both are...from what&#x27;s left of my Regiment.&quot;</p>
+        <p>She shook Joshua&#x27;s hand, and then Alina&#x27;s. &quot;It&#x27;s a pleasure to meet you both.&quot;</p>
+        <p>&quot;So…&quot; Hayes said, as Shepard dug into the meal portion of her ration, a &#x27;nutrient cake&#x27; that tasted like burnt chicken. &quot;I don&#x27;t mean to pry, but ever since they gave you that exoskeleton, you&#x27;ve been staying up pretty late, disappearing off to God know&#x27;s where. You okay?&quot;</p>
+        <p>&quot;Oh, I&#x27;m just practicing with the exoskeleton&#x27;s onboard programs,&quot; she said. She took another bite. &quot;Trying to get through the physical therapy as fast as possible.&quot;</p>
+        <p>She was also reading through countless scouting reports, and writing countless letters on her omni-tool to numerous camp supervisors, helping them solve the growing number of interspecies disputes. Just yesterday, one supervisor stopped a human-batarian brawl from erupting at one of the levo ration lines. And the day before, Wrex had to execute one of his own men for killing six Hierarchy soldiers in a fit of blind rage.</p>
+        <p>Yes, as Hackett&#x27;s impromptu chief of staff, Miranda could easily provide her with endless tasks and contacts to keep busy.</p>
+        <p>And avoid thinking about the Normandy.</p>
+        <p>Alina chuckled. &quot;I can relate. These fucking exoskeletons might as well be medieval torture devices.&quot;</p>
+        <p>Shepard nodded, then took another bite. &quot;Anyways, tell me about yourselves. Were you guys always Alliance before the war?&quot;</p>
+        <p>&quot;Family of military officers and politicians,&quot; Hayes said, making himself another cup of coffee. &quot;My mother was in the Alliance Parliament, and my father was a general in the First Contact War.&quot;</p>
+        <p>&quot;My father died in that war and left my family with nothing,&quot; Alina said. She sipped her coffee. &quot;Became an officer to avenge him and pull my family out of poverty.&quot;</p>
+        <p>&quot;Guess I&#x27;m the odd one out,&quot; Joshua said. &quot;Before this whole shitstorm, I used to be a fighter in the UFC. Got drafted as soon as the Reapers invaded.&quot;</p>
+        <p>&quot;UFC?&quot;</p>
+        <p>&quot;Ultimate Fighting Championship,&quot; Joshua said. &quot;What? Never heard of it?&quot;</p>
+        <p>&quot;I wasn&#x27;t born on Earth,&quot; she said. She finished off her nutrient cake, then began to eat the snack portion of her ration, a pack of protein crackers with some kind of fruit paste. &quot;Growing up, I was never much a sports fan.&quot;</p>
+        <p>&quot;And where did you grow up?&quot; Hayes asked.</p>
+        <p>She sighed. &quot;Mindoir.&quot;</p>
+        <p>For a moment, everyone remained silent.</p>
+        <p>&quot;So wait,&quot; Hayes said. &quot;Are you telling us that–&quot;</p>
+        <p>&quot;That I was the only one to not get killed or captured?&quot; She paused, studying their expressions. Their eyes were wide, and their mouths were agape. &quot;Yeah.&quot;</p>
+        <p>&quot;Well…&quot; Hayes said, &quot;if you ask me, I think the Reapers did us all a favor when they made the Batarians an endangered species. Those fucking blinks will never hurt or enslave anyone ever again.&quot;</p>
+        <p>Shepard pulled out a packet of instant coffee from the ration, then poured it inside a paper cup, along with some hot water. &quot;Sounds like you have a personal history with them. Were you also at Torfan?&quot;</p>
+        <p>&quot;Damn right, I was,&quot; Hayes said. He broke eye contact and looked at the ground, &quot;but that&#x27;s not all…&quot;</p>
+        <p>&quot;It has to do with his wife,&quot; Alina said. &quot;He&#x27;s very sensitive about it, so best we change the subject.&quot;</p>
+        <p>&quot;No, it&#x27;s…it&#x27;s okay,&quot; Hayes said. He took a deep breath. &quot;One day, while we were on vacation at some resort on Illium, she just…vanished without a trace.&quot; He sighed. &quot;The local law enforcement was a useless, corrupt sack of shit, so I had no choice but to hire PIs, who eventually tracked her down to Omega.&quot;</p>
+        <p>She raised her eyebrows. &quot;Omega?&quot;</p>
+        <p>Hayes nodded. &quot;If it wasn&#x27;t for a turian vigilante named &#x27;Archangel&#x27;, I never would have seen her again.&quot;</p>
+        <p>Alarm bells practically rang in her head, and she nearly choked on her coffee. Garrus, you amazing bastard! &quot;Wait. Hold on a minute. The Archangel?&quot;</p>
+        <p>&quot;The one and only,&quot; Hayes said. Briefly, he broke eye contact and pursed his lips. &quot;Eventually, he found where they were keeping her. Apparently, she got snatched as fucking merchandise for a sex trafficking ring.&quot; He clenched his fists and jaw. &quot;They were going to &#x27;sell&#x27; her and so many others as &#x27;exotic concubines&#x27; to some fat, spoiled aristocrats on whatever cesspit they call a homeworld.&quot;</p>
+        <p>Hayes took a deep breath, then pursed his lips. &quot;Archangel showed me footage of their dark, crowded, and filthy pens, of where they do surgery on…&quot; A tear streamed down his cheek, and he wiped it away. He took another deep breath.</p>
+        <p>&quot;Hey,&quot; Shepard said, &quot;it&#x27;s okay. You don&#x27;t have to say anything more about what you saw. Tell me, though, what did Archangel do to ones responsible?&quot;</p>
+        <p>Hayes smiled. &quot;First, he massacred the thugs running that damn house of horrors and freed the captives, before burning their operation to the ground. After that, he tracked down their bosses, one by one, and burned off their genitals with a red-hot poker.&quot;</p>
+        <p>&quot;Oooooh,&quot; Arthur said, &quot;god damn! I like this turian!&quot;</p>
+        <p>Alina chuckled. &quot;Blinks got what they deserved.&quot;</p>
+        <p>Before the Reaper War, Shepard would have been horrified with Garrus&#x27; excessive cruelty. Why not just blow their brains out and be done with it? But after genociding the Geth, and denying galactic civilization the technological wonders they could have brought to billions, she had no right to judge him. And besides, if Tali had been in the same situation as Hayes&#x27; wife, she might have destroyed Omega itself.</p>
+        <p>&quot;What happened after you two reunited?&quot;</p>
+        <p>&quot;We got the hell off Omega and straight to the nearest hospital and Asari psychiatrist,&quot; Hayes said. &quot;She&#x27;s such a strong-minded person, but still, it took her over a year to recover from the trauma. Up until the beginning of the Reaper invasion, she still had nightmares about those damn pens.&quot;</p>
+        <p>&quot;Any luck finding her and your daughters so far?&quot; she asked</p>
+        <p>Hayes sighed, looking down at the ground. &quot;I&#x27;ve asked everyone I could for any relevant information on the civilian camps. But all I&#x27;ve gotten are bullshit excuses.&quot;</p>
+        <p>&quot;Give me their names,&quot; she said. &quot;Recently, I&#x27;ve been corresponding with every camp supervisor, helping them quell unrest and reduce tensions between species. I can ask them to look for your family.&quot;</p>
+        <p>Hayes eyes widened, while his jaw fell open. &quot;You&#x27;d…You&#x27;d really do that?&quot;</p>
+        <p>&quot;Why not?&quot; Shepard asked.</p>
+        <p>Hayes recoiled slightly, his eyes wet with tears as he covered his mouth with one hand. &quot;I swear, if you find them, then I promise–&quot;</p>
+        <p>She held up her hand. &quot;Then you won&#x27;t have to do anything…except swear that you&#x27;ll never take them for granted.&quot;</p>
+        <p>Hayes burst into tears. &quot;Oh god, I swear. I swear I&#x27;ll never take them for granted.&quot; He took a deep breath. &quot;But ok, my wife&#x27;s name is Aela T&#x27;Sarik, and my daughters are Ashara, Enalia, Falani, and Kionie.&quot;</p>
+        <p>&quot;Got it,&quot; she said, writing down those names on the notepad application of her omni-tool. Briefly, she checked the time, and her meeting was in fifteen minutes. &quot;Anyways, I need to get going.&quot; She stood up, using her crutches.&quot;I have a meeting at eleven with the Coalition leaders. But we&#x27;ll stay in touch.&quot;</p>
+        <p>&quot;Take care, Shepard,&quot; Hayes said.</p>
+        <p>&quot;God bless you,&quot; Joshua said.</p>
+        <p>Alina saluted.</p>
+        <p>She turned and began to leave the mess. After taking a few steps, she stopped in her tracks. Better tell them about Archangel.</p>
+        <p>&quot;Oh, and by the way,&quot; she said, &quot;I know Archangel&#x27;s true identity.&quot; She turned around, facing them. &quot;His name is Garrus Vakarian, and he&#x27;s a member of my crew. If he&#x27;s still alive, I&#x27;ll definitely introduce him to you.&quot;</p>
+        <p>She turned and headed towards the exit. Behind her, Joshua burst out laughing.</p>
+        <p>Once outside the mess, she made her way toward her destination. At every security checkpoint, the Hierarchy and Alliance soldiers on duty let her skip the lines and pass through. And eventually, she reached the largest tent in the camp, filled with dozens of makeshift offices and cubicles.</p>
+        <p>&quot;Commander Shepard?&quot; called an elderly turian woman, carrying a datapad.</p>
+        <p>&quot;Yes?&quot;</p>
+        <p>&quot;Follow me, please,&quot; she said. &quot;They&#x27;ve been waiting for you.&quot;</p>
+        <p>Shepard followed the turian secretary to just outside some kind of conference room. She couldn&#x27;t see what was inside.</p>
+        <p>She went off elsewhere. &quot;Just go inside and have a seat.&quot;</p>
+        <p>Stepping within, Shepard spotted the Coalition leaders sitting around a large circular table with a holo-projector at the center.</p>
+        <p>&quot;Ah, Commander,&quot; Hackett said, &quot;so glad you could join us. Have a seat.&quot;</p>
+        <p>She took a seat at the table.</p>
+        <p>Hackett steepled his hands. &quot;We have much to discuss.&quot;</p>
+    </div>
+</body>
+</html>

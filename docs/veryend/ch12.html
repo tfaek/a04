@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch11.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html" selected>Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch13.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 9</h1>
+    <div class="chapter-content">
+        <p>Tali&#x27;Zorah was working at her console in engineering, humming a tune of her mother&#x27;s favorite folk song, when the Normandy&#x27;s public announcement system beeped.</p>
+        <p>&quot;Attention all crew members,&quot; Joker said, &quot;we have just been cleared to land. So wherever you are, get your buts up to deck two. You&#x27;ll definitely want to see the view out here.&quot;</p>
+        <p>She smiled. Closing her eyes, she took a deep breath through her nose, and a blissful calm coursed through her limbs. Oh, praise the ancestors. Yes, during the five-day transit to the Sol system, the repairs had held. No vital system had suffered a catastrophic failure.</p>
+        <p>And now, they could finally say goodbye to that fre&#x27;eg ball of a planet.</p>
+        <p>Yes, mere hours from now, she would finally see her lifemate again. Soon, she would run into Shepard&#x27;s arms, then relish her feminine scent and warm body heat. Soon, she would stare into her beautiful, blue eyes and savor the sound of her low, soothing voice.</p>
+        <p>At last, Felz&#x27;elt would unlatch its claws from her mind and set her free.</p>
+        <p>Closing her console, she turned and headed towards the elevator, along with Ken, Gabby, and Adams.</p>
+        <p>The elevator door closed and Ken smiled. &quot;You excited, Tali?&quot;</p>
+        <p>She laughed. &quot;Of course, I am, you bosh&#x27;tet.&quot;</p>
+        <p>&quot;Bet the Commander&#x27;s just as eager to see you, girl,&quot; Gabby said.</p>
+        <p>Adams nodded. &quot;Not much longer now. Soon, this will all feel like just a bad dream.&quot;</p>
+        <p>Eventually, the elevator arrived on deck two. There, the rest of the crew were gathered near the cockpit, near the door to the airlock. She joined them, then stopped in her tracks when she saw the view through the fore view-screen. It was depicting the aftermath of the final battle for Earth in all its terrible scale.</p>
+        <p>Once, the human homeworld had been a blue-green jewel of a planet, covered in thick, white clouds. But now, it was a grey-black husk of its former self, surrounded by a sprawling debris field of dead Reapers and the fragments of countless ruined warships. Keelah, throughout the war, the Reapers had raped and ravaged Earth so thoroughly that now it seemed barely habitable, hardly better than Tuchanka.</p>
+        <p>She sighed and couldn&#x27;t help but feel a pang of sympathy for all humans. Easily, they were her favorite aliens, the only ones with no prejudice against her people. They didn&#x27;t deserve to practically lose the planet from which they evolved, from where they forged their first civilizations before expanding out into the stars.</p>
+        <p>Hopefully, they would recover from this.</p>
+        <p>She began to pace around. When they landed, would Jane be waiting for her once she stepped out of the airlock? Keelah, was she okay? After surviving that explosion, she must have sustained many injuries, and oh, ancestors, if only she could have been there for Jane during her recovery. The whole time, she would have never left Shepard&#x27;s side. Every day, she would have given Jane the love and support she needed.</p>
+        <p>&quot;Tali,&quot; Garrus said firmly, &quot;I know how badly you want to see her. But spirits, please…settle down.&quot;</p>
+        <p>She stopped in her tracks. &quot;Settle down?&quot; she whirled around to face him. &quot;How can I settle down at a time like this? She&#x27;s alive, Garrus. She&#x27;s alive and she needs me.&quot;</p>
+        <p>&quot;We know, Tali,&quot; Liara said. &quot;We know.&quot;</p>
+        <p>Soon, the Normandy Earth&#x27;s atmosphere. In just over an hour, it would land in the London spaceport.</p>
+        <p>Then finally, the hard times would be over.</p>
+        <p>Jane froze. Her mouth fell open. Her eye went wide, and for a moment she ceased to notice any of her surroundings.</p>
+        <p>The Normandy was here? Had her crew actually received her message and survived long enough to return to the Sol system?</p>
+        <p>Kasumi was snapping her fingers near Shepard&#x27;s face. &quot;Shep? Shep, did you hear me?&quot;</p>
+        <p>She shook her head, snapping out of her reverie. &quot;I&#x27;m sorry. Let me just make sure I heard you correctly.&quot; Closing her eye, she took a deep breath. &quot;Did you just say that the Normandy is here? That it&#x27;s just been cleared for landing?&quot;</p>
+        <p>Kasumi grabbed both Shepard&#x27;s shoulders. &quot;Yes! As hard as this is to believe, the Normandy is here. Your crew is alive…and Tali – your saera – is waiting for you.&quot;</p>
+        <p>Briefly, Shepard looked at the ground and her eye watered. She let out a weak laugh, and a euphoric sensation rushed through her limbs and insides.</p>
+        <p>This wasn&#x27;t a dream.</p>
+        <p>Karma hadn&#x27;t taken away her crew as punishment for her crimes. Instead, they had beaten the odds. They had survived and did just fine without her.</p>
+        <p>But was Tali among the survivors?</p>
+        <p>Over the past three months, she must have believed Shepard was dead. So in her grief, had she already killed herself? Would Garrus or Liara have to give Shepard the bad news and shatter her life forever?</p>
+        <p>The thought froze the blood in her veins.</p>
+        <p>Her pulse surged. She gulped and broke into a cold sweat. &quot;Kasumi,&quot; she said, giving her strong eye contact, &quot;are you absolutely sure that she&#x27;s alive? Have you seen her? Talked to her?&quot;</p>
+        <p>Kasumi let go of her. From the look in her eyes, Shepard could tell Kasumi hadn&#x27;t thought of this. &quot;Oh, uhm…no. I haven&#x27;t seen or talked to her.&quot; She met Shepard&#x27;s gaze. &quot;But she&#x27;s a very, very tough girl. I&#x27;m sure she&#x27;s alive. She has to be. And besides, there&#x27;s only one way to find out.&quot;</p>
+        <p>Shepard nodded. Damn right. She opened a window on her omni-tool and sent a message to her personal shuttle pilot, saying she needed a ride to the London spaceport. She took a deep breath. &quot;Alright. I just called a shuttle to take us to the spaceport. Come, there&#x27;s no time to waste.&quot;</p>
+        <p>Kasumi laughed. &quot;That&#x27;s the spirit, Shep.&quot;</p>
+        <p>She gestured for Grunt and Ghor to follow her, and the two Krogan complied.</p>
+        <p>&quot;Battlemaster?&quot; Grunt asked.</p>
+        <p>&quot;Yes?&quot;</p>
+        <p>&quot;The Normandy,&quot; Grunt said, &quot;it&#x27;s here? The rest of your Krantt, they&#x27;ve survived?&quot;</p>
+        <p>&quot;Yes,&quot; she said, &quot;and now we&#x27;re going to the spaceport to meet them.&quot;</p>
+        <p>Ghor let out a booming laugh. &quot;Did you truly believe that anything less than the Reapers – the destroyers of countless civilizations – could have laid her Krantt low? Of course not!&quot;</p>
+        <p>Grunt chuckled, his voice low and rumbling. &quot;No. Nothing could bring them low.&quot;</p>
+        <p>Soon, they arrived at landing pad one. A few minutes later, a shuttle descended from the sky and landed right before them, kicking up a cloud of dust. Its side door opened.</p>
+        <p>Then she stepped within and took a seat, along with Kasumi and her two Krogan bodyguards. When the side door closed, the shuttle rose into the air, then flew off towards the London spaceport about twenty-five kilometers away.</p>
+        <p>Meanwhile, she looked out the viewport, at the landscape below. Once, it would have been abound with towering skyscrapers, lighting up the night with artificial lights. But now, it was only a wasteland of crumbling, burned-out buildings, a vista of snow and ash teeming with great craters and gouges in the earth. Amidst the endless night, the artificial lights of the civilian camps were like only distant embers.</p>
+        <p>She sighed. No wonder they&#x27;re moving the capital. Like Tuchanka, Earth was now barely habitable, a useless rock engulfed in a global ice age.</p>
+        <p>But which planet would be the new center of human civilization?</p>
+        <p>Eden Prime? Bekenstein? Elysium?</p>
+        <p>She had no idea.</p>
+        <p>Eventually, the shuttle arrived at the spaceport. Unlike the civilian camps, it was bristling with lights lighting up the night, and was bustling with activity. For as far as she could see out the viewport, countless shuttles, trucks, and cars were moving to and fro, transporting cargo and personnel from one location to the other.</p>
+        <p>Finally, the shuttle landed on the nearest landing pad. The side door opened, and she stepped outside, along with Kasumi, Grunt, and Ghor.</p>
+        <p>&quot;Ok,&quot; she said, &quot;where are they landing Kasumi?&quot;</p>
+        <p>&quot;Follow me,&quot; she said.</p>
+        <p>After passing through the first security checkpoint, Shepard followed Kasumi into the spaceport. Within, crowds of civilians and personnel kept staring at her wherever she passed by, either saluting, nodding, or whispering amongst themselves. Many were even screaming her name, trying to get her attention. But thankfully, Ghor and Grunt kept anyone from approaching too close for comfort.</p>
+        <p>Eventually, she reached another security checkpoint, where Alliance and Hierarchy soldiers were cordoning off access to terminal A-43. As she approached, they saluted and let her through without a word.</p>
+        <p>Just ahead was a throng of people. Within it, she spotted Jack, Miranda, Jacob, Wrex, Shala&#x27;Raan, and numerous soldiers and officers of all the compact&#x27;s member&#x27;s races.</p>
+        <p>Miranda&#x27;s eyes widened when she saw Shepard. &quot;Shepard!&quot;</p>
+        <p>She approached Shepard. Instead of her combat armor, she was wearing an Alliance uniform, and so was Jacob. Finally, they can put Cerberus behind them. &quot;I suppose you&#x27;ve heard the news.&quot;</p>
+        <p>&quot;You bet I did,&quot; Shepard said. &quot;So when are they landing?&quot;</p>
+        <p>Miranda checked her omni-tool. &quot;In about five to seven minutes.&quot;</p>
+        <p>Shepard&#x27;s heart pounded and adrenaline rushed through her veins. Her limbs felt light and bursting with energy. Might as well be a whole hour! &quot;Then all we can do now is wait.&quot;</p>
+        <p>She made her way to the front of the crowd, so her crew – and hopefully Tali – would be the first person they saw upon exiting the Normandy. Leaning onto her cane with both hands, she began tapping her right foot. Every minute felt like an hour, and soon her heart was thrashing in her chest. Soon, her breaths became quick and labored, and her forehead grew damp with cold sweat.</p>
+        <p>Closing her eye, she took a deep breath, then counted to ten.</p>
+        <p>Yes, in the next few minutes, either her life would fall apart, or it would ascend to heights she never could have imagined. Whatever the case, however, she was ready.</p>
+        <p>She would face the coming moment head-on.</p>
+        <p>Tali&#x27;Zorah entered the Normandy&#x27;s airlock, along with the rest of the crew. Ancestors, every second felt maddeningly long. Ceaselessly, her heart hammered inside her chest, and she couldn&#x27;t stop wringing her hands.</p>
+        <p>Keelah, could this stupid machine go any slower?</p>
+        <p>The decontamination cycle began. &quot;Equalizing pressure with exterior atmosphere…&quot;</p>
+        <p>She took a deep breath. Yes, now was the perfect time to say this. &quot;Garrus, Liara, Ashley, Ken, Gabby, Adams.&quot;</p>
+        <p>&quot;Yes?&quot; Liara said.</p>
+        <p>&quot;Before we go out there,&quot; she said, &quot;I want to thank all of you for refusing to give up on me. If not for your intervention, I would not be standing here. Felz&#x27;elt would have consumed me, and Jane, she…&quot;</p>
+        <p>&quot;It was our pleasure,&quot; Garrus said.</p>
+        <p>Ashley chuckled. &quot;Damn right, it was.&quot;</p>
+        <p>&quot;Yes,&quot; Liara said, &quot;your perseverance has finally paid off, Tali.&quot;</p>
+        <p>&quot;And now it&#x27;s time for your reward,&quot; Gabby said.</p>
+        <p>Finally, the decontamination cycle ended. Sweating, she closed her eyes and held her breath when the airlock door opened with a hiss of air and a metallic whine.</p>
+        <p>Now or never.</p>
+        <p>She opened her eyes…</p>
+        <p>And right across from her stood her saera.</p>
+        <p>Their eyes met and her breath hitched. For a moment, she ceased to notice anything but her. And they stared at each other for what felt like hours, like days, like years.</p>
+        <p>It&#x27;s her! It&#x27;s really her!</p>
+        <p>Smiling, she burst into tears and covered her vocalizer with both hands, hardly able to breathe. Keelah, this was actually happening. This was real. Finally, her suffering was over.</p>
+        <p>Sobbing, she took her first few steps, and so did Jane. Tears were running down her cheeks, and her hands trembled, as she reached for the clasps around her mask. Yes, by quarian standards, her immune system was now abnormally strong and should be more than capable of handling this.</p>
+        <p>She wrenched off her mask and dropped it on the ground.</p>
+        <p>At the same time, Jane dropped her cane.</p>
+        <p>And then she broke into a sprint and barreled right into her embrace. Without hesitation, she grabbed Shepard&#x27;s head, then mashed her lips against hers in a deep, passionate kiss.</p>
+        <p>She melted in Shepard&#x27;s arms, and her scent and body heat drove her wild, sending a wave of euphoria racing through her insides. She hummed with bliss and wanted this moment to last forever. But eventually, they grew breathless and their lips parted.</p>
+        <p>Still grabbing Shepard&#x27;s head, she rested her forehead against hers, and her chest heaved with joyful sobs.</p>
+        <p>&quot;You…You came back to me,&quot; she managed to say, her voice choked with emotion.</p>
+        <p>Shepard smiled and held her tighter. &quot;I swore I&#x27;d give you more time, didn&#x27;t I? Well…here I am.&quot; Again, their lips met in another kiss. Tali leaned into it, and a warm, fuzzy sensation blossomed in her chest.</p>
+        <p>Their lips parted, and her cheeks became damp with tears.</p>
+        <p>&quot;Now,&quot; Jane said, &quot;we&#x27;ll have each other forever.&quot;</p>
+        <p>She burst into an uncontrollable fit of laughing and crying, and clung to her as though Shepard might vanish if she let go. Eagerly, Shepard returned the gesture, holding her tightly as Tali sobbed in her arms. The whole time, she drank in and savored every second of this moment, searing it into her memory.</p>
+        <p>Oh, praise the ancestors. Praise the ancestors!</p>
+        <p>All her suffering had been worth it.</p>
+        <p>Now, nothing would ever drive them apart again.</p>
+        <p>Just then, she heard somebody clear their throat as if irritated. Reluctantly, she pulled away from Jane and turned, only to face her Auntie Raan, who was holding out her mask.</p>
+        <p>&quot;Oh!&quot; Quickly, she grabbed her mask, then put it back on. &quot;Auntie Raan!&quot;</p>
+        <p>She embraced her auntie in a warm, tight hug, then let go.</p>
+        <p>&quot;It&#x27;s so good to see you again, Tali,&quot; Raan said. &quot;For a while, I thought I lost you. But for the love of the ancestors, why did you take off your mask? Are you trying to get yourself killed?&quot;</p>
+        <p>&quot;I&#x27;m sorry, auntie, it&#x27;s just…&quot;</p>
+        <p>Raan crossed her arms and tilted her head. &quot;It&#x27;s just what? Hhhm? Tell me, were you so excited to see her again that you risked illness just to kiss her?&quot; She took a deep breath. &quot;Keelah, so I suppose the rumors are true then, that you&#x27;ve bonded to a human?&quot;</p>
+        <p>Jane grabbed one of Tali&#x27;s hands and gave it a light squeeze. Briefly, their eyes met and Jane nodded. Tali sighed and looked back at Raan. No hiding it now. Yes, she was done caring about the opinions of others. &quot;Yes, auntie. The rumors are true. Jane is my saera.&quot;</p>
+        <p>Raan recoiled a little when she said that. &quot;So you&#x27;ve linked suits? You&#x27;ve completed the week of seclusion?&quot;</p>
+        <p>&quot;So tell me, Miss Vas Normandy…will you be my saera?&quot;</p>
+        <p>Yes, during that two-week shore leave, she and Jane had done nothing but make love, watch vids, and talk for hours in that sterilized hotel room. Her immune system had adapted to her seamlessly, and she felt like the luckiest quarian in the galaxy.</p>
+        <p>&quot;Yes,&quot; she said. Jane wrapped one arm around her waist, and Tali nuzzled into her, smiling. &quot;We&#x27;ve done all of those things. Humans are very compatible with us, and we can adapt to them safely.&quot;</p>
+        <p>Raan took a deep breath. &quot;I guess I shouldn&#x27;t be surprised.&quot; She looked at Jane. &quot;Admiral Shepard?&quot;</p>
+        <p>&quot;Promise me you&#x27;ll retire, saera.&quot;</p>
+        <p>Admiral? Her pulse climbed. No. What was the meaning of this? Had the Alliance–</p>
+        <p>Jane held her tighter. &quot;Retired Admiral.&quot;</p>
+        <p>She exhaled. Keelah, what a relief. For a moment, she had believed Jane had broken her promise.</p>
+        <p>&quot;Yes,&quot; Raan said, &quot;I should have clarified that. Anyways, when you are available, I must speak with you in private. We have much to discuss.&quot;</p>
+        <p>&quot;Of course, Shala,&quot; Jane said, and then Raan walked away.</p>
+        <p>At the same time, she spotted Kasumi emerge from the crowd, approaching her. &quot;Kasumi!&quot;</p>
+        <p>Kasumi ran toward her. &quot;Tali!&quot;</p>
+        <p>Laughing, she embraced Kasumi in a sisterly hug. &quot;It&#x27;s so good to see you again.&quot;</p>
+        <p>She let go. Kasumi&#x27;s cheeks looked wet with tears. &quot;Wait, have you been crying?&quot;</p>
+        <p>Kasumi sniffled. &quot;I&#x27;m just so happy for you.&quot; She laughed. &quot;Oh, the way you ran into her arms, the way you two just stood there, holding each other, it…it was beautiful, so beautiful.&quot;</p>
+        <p>Abruptly, Jane put one hand on Tali&#x27;s shoulder. &quot;Garrus is just dying to talk me, so for now I&#x27;ll let you two catch up.&quot;</p>
+        <p>She faced Jane. &quot;Oh…uhm…of course, Jane.&quot;</p>
+        <p>Once more, she faced Kasumi. &quot;Even now, it feels almost surreal that she&#x27;s alive. This…&quot; She let out a joyful sob. &quot;This is the best day of my life.&quot;</p>
+        <p>&quot;After everything you and Shep have been through,&quot; Kasumi said, &quot;you two deserve nothing less.&quot;</p>
+        <p>&quot;How is she?&quot; she asked. Over the past three months, what has Jane been doing? &quot;Is she well? She has an eye-patch and a cane now.&quot;</p>
+        <p>Briefly, Kasumi looked away, breaking eye-contact. &quot;I won&#x27;t lie to you, sister. The Crucible blast banged her up really badly. Physically, she will never be her old self. And mentally, she&#x27;s suffered a fresh set of scars.&quot;</p>
+        <p>She gasped and covered her vocalizer with both hands. During their long, terrible separation, had Jane been suffering in silence, with nobody to listen to her troubles? &quot;Oh…&quot;</p>
+        <p>&quot;Yep,&quot; Kasumi said. &quot;For the past two months, something has been eating at her. Every day, she&#x27;s been burying so much pain, so much guilt and shame. I&#x27;m not sure what it is, but I think it has something to do with EDI and the Geth. More than once, I&#x27;ve caught her talking about them in her sleep.&quot;</p>
+        <p>&quot;EDI and the Geth?&quot;</p>
+        <p>Kasumi&#x27;s eye&#x27;s widened. &quot;You don&#x27;t know? The Geth, they…they&#x27;re gone, Tali. The Crucible blast destroyed every last one of them.&quot;</p>
+        <p>Her eyes went wide and her mouth fell open. The Geth were no more? Was the peace Jane had brokered between them and her people all for nothing? She looked at the ground. Without them, rebuilding efforts would be set back by decades. Now, she might never enjoy a completely suitless life on Rannoch.</p>
+        <p>&quot;Keelah…&quot;</p>
+        <p>Kasumi sighed. &quot;Without you, she&#x27;s been slipping into her old, grumpy self every day.&quot; Kasumi grabbed both her shoulders and gave her strong eye contact. &quot;Now, she needs you more than ever.&quot;</p>
+        <p>She nodded. Yes, soon, she would need to ask Jane about what happened on the Crucible. Clearly, she had done something that caused her great pain and suffering. But no matter what it was, one thing was certain.</p>
+        <p>She would never give up on her.</p>
+        <p>One way or another, she would salve the wounds in Shepard&#x27;s soul and shower her with the love and devotion she needed.</p>
+        <p>&quot;Oh, of course,&quot; she said.</p>
+        <p>Kasumi smiled, then let go of her. &quot;Good. Now, I bet you&#x27;re just dying for some alone time with her. So better we talk later.&quot; Kasumi hugged her. &quot;Good luck, sister.&quot;</p>
+        <p>She smiled.&quot;Thank you,&quot; she said, and Kasumi let go and nodded before disappearing back into the crowd.</p>
+        <p>She turned and spotted Jane talking to Garrus, Liara, and Ashley. Were they telling Jane about their miserable time on that alien planet, about how she had sunk into deepest depths of despair, feeling so lost and alone that every day she yearned for death?</p>
+        <p>Eventually, Shepard turned. Their eyes met and she smiled. Tali smiled back, and they approached each other.</p>
+        <p>Once more, Shepard wrapped one arm around Tali&#x27;s waist and looked deeply into her eyes. &quot;We&#x27;re going to continue our little reunion on the Normandy, where nobody can disturb us. Care to join me?&quot;</p>
+        <p>She giggled. &quot;Of course, you bosh&#x27;tet.&quot;</p>
+        <p>Arm in arm, they made their way back into the Normandy. On the way, she yearned for a moment alone with Shepard, for an opportunity to make up for so much lost time. But for now, that could wait. For now, she was content to be in her arms, rejoicing that the long night was finally over, that the first rays of hope had finally broken through the dark clouds of her mind.</p>
+        <p>Yes, from here on, things would only get easier.</p>
+        <p>Soon, she would have the life she had always wanted, the life she had always dreamed of since her days on the SR-1.</p>
+        <p>And within a few years, the Reaper War would be only a distant memory.</p>
+    </div>
+</body>
+</html>

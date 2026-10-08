@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 17</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch19.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html" selected>Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch21.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 17</h1>
+    <div class="chapter-content">
+        <p>In a Migrant Fleet shuttle descending through Rannoch’s clouds, Jane Shepard reclined into her seat, closed her eye, then took a deep breath through her nose. Her limbs felt lighter, and a cool, blissful sensation rushed through her limbs.</p>
+        <p>Yes, finally, she’d arrived at her new home.</p>
+        <p>Just one obstacle left…</p>
+        <p>And then it would all be over.</p>
+        <p>Sitting right beside her, Tali kept tapping her right foot against the deck, wringing her hands. Was she impatient, nervous, or both? She exhaled, then began tapping her foot faster.</p>
+        <p>But then Shepard put one hand on her thigh.</p>
+        <p>Finally, she stopped tapping her foot. Their gazes met, and then she held Shepard’s hand and gave it a gentle squeeze.</p>
+        <p>Shepard returned the gesture. “Have a lot on your mind?”</p>
+        <p>“Oh, nothing. It’s just…” She shook her head, then sighed. “I just want the stupid test to be over with.”</p>
+        <p>Shepard sighed. “You and me both.”</p>
+        <p>Soon, the shuttle landed at the spaceport.</p>
+        <p>“Keelah, finally,” Tali said.</p>
+        <p>Sitting across from Shepard, Kasumi laughed. “It’ll be over before you know it, Tali. Just you wait.”</p>
+        <p>With a click and a hiss, the shuttle’s side door opened. And immediately, Rannoch’s frigid, night-time air chilled her skin.</p>
+        <p>With Tali and Kasumi in tow, she stepped outside the shuttle and onto the landing pad. Ahead, a quarian man with a blue realk and visor was waiting for them, clasping his hands behind his back. Next to the quarian man stood two armed guards with red realks and visors.</p>
+        <p>“Admiral Jane’Shepard?” The quarian man said, looking at her. The quarian man looked at Tali. “Admiral Tali’Zorah?”</p>
+        <p>“Yes?” she asked.</p>
+        <p>“I am Khaalu’Shan vas Tonbay,” the quarian man said, “adjutant of Admiral Zaal’Koris, who has tasked me with settling you into your temporary lodgings, and with providing whatever you might need until your test tomorrow morning.” He turned. “Follow me, please.”</p>
+        <p>Shepard nodded, then followed Khaalu into the spaceport. Within, throngs of quarians were just arriving, carrying rucksacks or pouches with what few personal possessions they had. Their chatter echoed through the air, loud enough to drown out her thoughts, and many of them, especially children, were staring at her with awe and wonder.</p>
+        <p>She let out a weak laugh. I’m probably the first human they’ve ever seen.</p>
+        <p>Unlike Shepard, however, the crowds could hardly keep their eyes off Tali. Many kept whispering amongst themselves or started chanting her name, trying to get her attention.</p>
+        <p>“Well ain&#x27;t you the celebrity,” Kasumi told her.</p>
+        <p>“Keelah, this is…” Tali said. Looking at the ground, she sighed. “Let’s just keep going.”</p>
+        <p>Shepard grabbed her hand, and Tali held it tightly. She looked at Shepard and nodded.</p>
+        <p>Reading the slews of Khelish signs all around Shepard, she noticed that they were heading towards an exit gate with shuttles leading to the town of Aelu’Shalan . At every checkpoint, Khaalu showed the guards something on his omni-tool, letting them cut through numerous lines. And soon, they reached the exit gate.</p>
+        <p>There, a shuttle was already waiting for them. Its door opened, and she got into the back seat, along with Tali and Kasumi. Once the guards left, Khaalu got into the front seat and sat next to the driver. Finally, the shuttle rose into the air and took off, heading towards Aelu’Shalan.</p>
+        <p>On the way there, she looked out the viewport, and in the distance, she spotted a sprawling cityscape of glittering, midnight-blue skyscrapers and buildings. Easily, the city rivaled Nos Astra in grandeur.</p>
+        <p>“Khaalu?” she asked. “That city, are those ruins from the Morning War, or something the Geth had been maintaining?”</p>
+        <p>“That,” Khaalu said, “is Catyn, Rannoch’s old capital.”</p>
+        <p>“So the geth had been maintaining it, up until they went offline?” she asked.</p>
+        <p>“Yes,” Khaalu said, “though even now survey teams are still mapping it out, seeing which sections are suitable for habitation.”</p>
+        <p>“Suitable for habitation?”</p>
+        <p>Khaalu sighed. “Since the geth went offline, many sections have fallen into disrepair.”</p>
+        <p>“Has any of it been settled?” Tali asked.</p>
+        <p>“A few sections,” Khaalu said. “The Conclave has moved their headquarters to the old Forum of the Ancestors, and the military, to the old planetary citadel. As for the remaining civilians, it will be a slow process, I’m afraid. According to projections, it could take as long as three years to fully settle the city.”</p>
+        <p>“Keelah, three years?”</p>
+        <p>Khaalu nodded. “Moving millions of people, and all the necessary resources to the right locations, at the right times is a great logistical undertaking.”</p>
+        <p>“Indeed, it is,” Shepard said. During the Reaper War, she’d learned just how stressful and head-ache-inducing it was to manage supply lines, with scarce resources and crumbling infrastructure. “Indeed, it is.”</p>
+        <p>For the next few minutes, everyone remained silent.</p>
+        <p>“So Khaalu,” she said eventually, “what exactly is our schedule looking like?”</p>
+        <p>“At Aelu’Shalan ,” Khaalu said, “you will settle into your temporary lodgings, which have already been prepared for your arrival. And then, in the morning, you will have your test in the Forum of the Ancestors.” Khaalu opened up his omni-tool, then input a few commands. “I’m sending you a detailed schedule now.”</p>
+        <p>Her omni-tool beeped, along with Tali’s and Kasumi’s. And in her inbox, she found files detailing exactly what Khaalu said. Apparently, their test would be late in the morning. Did she have enough time to pick up her pal’tec vis surden ?</p>
+        <p>Yes, the jeweler’s coordinates were right in Aelu’Shalan.</p>
+        <p>But no, probably not.</p>
+        <p>Once they arrived at the town, she’d better pick it up immediately. But how could she do it discreetly?</p>
+        <p>Ah, maybe Kasumi could help?</p>
+        <p>Soon, out of the viewport, she spotted numerous towns, situated around Catyn’s outskirts. At the center of each one was a landable civilian ship of the Migrant Fleet, surrounded by numerous hab-blocks.</p>
+        <p>And eventually, the shuttle arrived at Aelu’Shalan, landing on one of its landing pads. When it did, the side door opened. Then everyone stepped outside.</p>
+        <p>Ahead, Aelu’Shalan looked barely active, but its lights illuminated the nighttime darkness. Around her, the surrounding landscape was an arid steppe of shrubs and rocky outcroppings. And above, the sky was cloudy, with ships and shuttles flying through the air.</p>
+        <p>“This way,” Khaalu said.</p>
+        <p>Again, she followed Kaalu, with Tali and Kasumi beside her, towards a hab-block near the town square. By the entrance, Khaalu stopped in his tracks, then faced her. Khaalu then opened up a window on his omni-tool, then began inputting various commands. “I’m sending you the key codes and locations of your rooms, along with my contact information. If you need anything, do not hesitate to call me.”</p>
+        <p>She nodded. “Understood.”</p>
+        <p>Khaalu nodded, then left.</p>
+        <p>She entered the hab-block, along with Tali and Kasumi, then went to the second floor. Soon, she found her room, which was right across from Kasumi’s.</p>
+        <p>With her omni-tool, Kasumi unlocked its door, then yawned. “Well, I’m going to wind down. Good night, you two.” She laughed. “Don’t stay up too late, now. You have a big day tomorrow.”</p>
+        <p>“Good night,” Shepard said, unlocking the door with her omni-tool. Once it opened, she and Tali stepped inside. Unlike their accommodations on the Kelek’miin , the room was far more spacious, as large as their apartment back on Earth.</p>
+        <p>Unlike any human apartment, however, the ‘bed’ was not a bed at all, but a circular, cushioned depression in the ground, covered in a blanket. Interesting. She pointed at it. “Tali, is that the bed? If so, what do you call them?”</p>
+        <p>Tali laughed. “That’s a k’naaf , Jane. Before the Morning War, all quarians slept in them.”</p>
+        <p>Shepard smiled. “Will we have one in our house? A k’naaf? ”</p>
+        <p>“Of course, we will,” Tali said, giggling. “Just wait. It’ll be so much more comfortable than our old bed on the Normandy. ”</p>
+        <p>Oh, I’ll be the judge of that.</p>
+        <p>“You go ahead and relax,” she said. Now, where could she send messages to the jeweler and then Kasumi about the pal’tec vis surden ? Their room had a tiny sanitation chamber near the far right corner. “I just have to use the bathroom.”</p>
+        <p>“Go right ahead,” Tali said, as Shepard entered the bathroom. She shut the door, then sat on the toilet and opened up a window on her omni-tool. To the jeweler, she typed out the following message.</p>
+        <p>I’ve just arrived at Rannoch. Your shop is only a ten-minute walk away from my current position. But could you send somebody to deliver it, at a specified location? I want to surprise my lifemate and can not retrieve it without arousing suspicion. So should you accept, somebody else – another human – will be there in my stead.</p>
+        <p>The jeweler replied within seconds, and her eyes widened. The jeweler’s message read:</p>
+        <p>Dear Admiral Shepard,</p>
+        <p>It is very endearing to know that you’re doing this for your lifemate. So very well. Send me a location and I will send my assistant to deliver your pal’tec vis surden.</p>
+        <p>Smiling, she sent him a set of coordinates, which put the meeting place in an alleyway by the town square, then replied:</p>
+        <p>Thank you a thousand times for this. Keelah Se’lai</p>
+        <p>Next, she sent the pickup coordinates and the following message to Kasumi:</p>
+        <p>Dear Kasumi,</p>
+        <p>Could you please go to this location and retrieve my pal’tec vis surden? With it, I plan to surprise Tali but can’t leave my room without her suspecting something. You’d be doing me a huge favor.</p>
+        <p>A few seconds later, Kasumi replied:</p>
+        <p>Of course, I will Shep. Ha! You couldn’t have asked a better person. So sit tight. While you’re sleeping, I’ll leave your litte package inside the pocket of your coat.</p>
+        <p>She let out a weak laugh, then sent her the following message:</p>
+        <p>Thank you. Just be careful not to wake us up.</p>
+        <p>Finally, she closed her omni-tool, then left the sanitation chamber, only to find Tali standing before her, completely suitless.</p>
+        <p>“Tali, why are you–”</p>
+        <p>Abruptly, Tali wrapped her arms around Shepard’s neck, then pressed her lips to hers in a deep, hungry kiss. Momentarily, Shepard’s eyes widened and her body tensed. But then she leaned into the kiss, holding Tali close, with one hand on the small of her back, and the other between her shoulder blades. She huffed through her nose, and her every muscle relaxed as a blissful wave coursed through her.</p>
+        <p>Oh, what a welcome surprise.</p>
+        <p>Tali hummed into her mouth, twirling her tongue with Shepard’s, before their lips eventually parted with an audible smack. She rested her forehead against Shepard’s.</p>
+        <p>“Guess what?” she asked.</p>
+        <p>Shepard smiled. “What?”</p>
+        <p>“Our room is airtight,” she said, “and the ventilation system keeps pouring in decontaminants. Right now, this room is over eighty-five percent sterile.”</p>
+        <p>“So does that mean…”</p>
+        <p>“That we’ll get to relieve some stress before the test tomorrow?” she asked, tilting her head. “Yes.” She giggled, then kissed Shepard again, letting out a pleased hum.</p>
+        <p>Already, Shepard’s heart was pounding, flooding her system with adrenaline, and a wet heat gathered between her legs. Soon, Tali broke the kiss, then grabbed Shepard’s hand, and lead her towards the k’naaf . Shepard smiled. Without access to a clean and private enough room, she and Tali hadn’t made love in weeks.</p>
+        <p>But oh, tonight was going to be fun.</p>
+        <p>Tali’Zorah awoke to Tikkun’s morning rays pouring through the window. Laying right next to Jane, with her head resting against Jane’s breast, and with their legs intertwined, she closed her eyes and basked in her lifemate’s warm body heart, savoring the feel of Jane’s skin against hers.</p>
+        <p>She smiled. Keelah, last night, they had enjoyed four rounds of lovemaking before eventually falling asleep. The whole time, she had climaxed again and again. And now…</p>
+        <p>She let out a contented sigh.</p>
+        <p>Now, she wanted to wake up like this every day.</p>
+        <p>For a while, she rested, but eventually, her thoughts drifted to the coming test. Yes, today, that test would determine the future of human-quarian relations, of whether humans and quarians would be allowed to bond with one another. When they passed, would she and Jane be the benchmark for all such relationships? Or would she and Jane be the first and last human-quarian couple to live together on Rannoch?</p>
+        <p>Whatever the case, she wouldn’t trade her current situation for anything.</p>
+        <p>It was the closest thing she could imagine to paradise.</p>
+        <p>Suddenly, Jane stirred. Her good eye opened. And when she looked at Tali, she smiled.</p>
+        <p>Tali let out a weak laugh. “Sleep well?”</p>
+        <p>“Sure did,” Jane said. She repositioned herself so that her face was barely an inch from Tali’s. With her thumb, she began stroking Tali’s cheek, then gave her a kiss on the lips. She rested her forehead against Tali’s. “For the first time in months, I actually had a good dream.”</p>
+        <p>Her pulse climbed, and she couldn’t stop smiling. “That’s amazing, Jane. What did you dream about?” Running her hand across Jane’s side, down onto her buttocks, she let out a pleased hum.</p>
+        <p>Jane smiled, then moved her head to whisper something in Tali’s ear. “Our future.”</p>
+        <p>Tali let out a weak laugh. Cupping the back of Tali’s neck, Jane once more pressed her lips to hers in a deep, slow kiss. Singing her heelrou , she leaned into it and slipped her tongue into Jane’s mouth. A warm, soothing sensation raced through her, and her heart pounded faster and faster.</p>
+        <p>Jane rolled her onto her back, and Tali moaned as Jane began kissing her neck, her clavicle, and then her breasts. Soon, as Jane lavished her with affection, a wet heat sprouted between Tali’s legs, and Jane slid her fingers in between Tali’s folds. She gasped and threw her head back into the padding. Clinging to Jane, she gripped Jane’s ankles with her feet and began to sweat.</p>
+        <p>With every one of Jane’s thrusts, her breathing grew faster and faster. Wave after wave of euphoria raced through her nerves, and the aching pressure in her loins grew ever closer to bursting into her climax.</p>
+        <p>But then her omni-tool beeped.</p>
+        <p>Somebody was calling her.</p>
+        <p>She growled. Keelah, of all times, now she was receiving a call?</p>
+        <p>Jane stopped thrusting. “Should we–”</p>
+        <p>“No,” she said firmly. Abruptly, she grabbed Jane’s head, then pulled her in for a kiss. A few seconds later, their lips parted with an audible smack. “Keep going.”</p>
+        <p>Jane smiled, then continued thrusting. Meanwhile, her omni-tool kept beeping.</p>
+        <p>Better finish this quickly. “Faster, Jane,” she managed to say. “Faster.”</p>
+        <p>As soon as she said that, Jane let go of all restraint.</p>
+        <p>Gasping and moaning, she could hardly breathe. Every second, her moans grew faster and louder.</p>
+        <p>Until finally, she climaxed.</p>
+        <p>Arching her back into Jane, she let out an ear-piercing wail, enraptured in a wave of euphoria. Soon, as she basked in the afterglow of her climax, Jane climaxed as well. And then they were laying atop each other, sweating and panting.</p>
+        <p>“Jane…” she said, trying to catch her breath, “my glove. Hand me my glove.”</p>
+        <p>Jane handed her the glove. After slipping it on, she looked at the caller ID, and it was her auntie. She answered it. “Hello?”</p>
+        <p>“Keelah,” her auntie said, “what took you so long to answer? Oh, ancestors help me, were you still asleep? Today is not the day for–”</p>
+        <p>“I wasn’t sleeping,” she said.</p>
+        <p>“You sound exhausted, child,” her auntie said. “Is everything okay? Should I–”</p>
+        <p>“I’ll see you at the Forum of the Ancestors shortly,” she said before ending the call.</p>
+        <p>She relaxed into the padding, then exhaled. “Keelah…”</p>
+        <p>Jane let out a weak laugh. “Guess we should get ready then.” She gave Tali one last kiss on the lips, then rolled off of her.</p>
+        <p>They got out of the k’naaf. Whilst she went to pick up the pieces of her suit, Jane was picking up her clothes. Briefly, she checked one of her suit’s numerous pockets, and the ring she had made was still there. Keelah, it was so crude, like something a child had made. But hopefully, Jane would like it.</p>
+        <p>After putting the ring back into the pocket, she began to put on her suit. As she did so, she couldn’t help but admire her lifemate’s body, staring at Jane’s tight, muscular glutes and thighs, along with her thin, toned waist which tapered up to her broad shoulders. Jane was much thinner now, and not as lean.</p>
+        <p>But still, she was a site to behold.</p>
+        <p>Soon, they were both dressed. Jane grabbed her cane. And then they left their room, going out into Aelu’Shalan’s avenues. Ahead, Tali spotted Khaalu waiting by a shuttle, clasping his hands behind his back.</p>
+        <p>She and Jane approached him.</p>
+        <p>“Ready for the test?” Khaalu asked.</p>
+        <p>“We’re as ready as we can possibly be,” Jane said.</p>
+        <p>“Yes,” Tali said, “let’s get this over with.”</p>
+        <p>She got into the shuttle, along with Jane and Khaalu, and then it rose into the air and zoomed off towards Catyn. The whole ride, she stared out of the viewport, at the ancient city of her ancestors.</p>
+        <p>Even now, she couldn’t help but marvel at the glittering, midnight-blue skyscrapers and buildings, as marvelous as any such building on Illium or Thessia. Keelah, even with Rannoch returned to her people, it was still hard to imagine them living in such buildings. According to Aelina’Zorah’s commentaries on the Morning War, her ancestors had grown weak and decadent living so luxuriously.</p>
+        <p>So would future generations do the same?</p>
+        <p>Soon, the shuttle flew over an old government square. At its center, she spotted a towering statue of a quarian man and woman, holding Rannoch up high in their hands. Suitless, both were wearing ancient ceremonial robes of office.</p>
+        <p>Squinting her eyes, and zooming in with her suit’s visor, she studied the statue carefully. It was just over one-hundred and fifty meters tall, and…</p>
+        <p>Keelah…</p>
+        <p>“Jane, look,” she said, “it’s a statue of Tross and Qalani’Larrik.”</p>
+        <p>“The unifiers of your people?”</p>
+        <p>“Yes,” she said, smiling. On the Kelek’miin , Jane had taken the time to study quarian history, “the mother and father of modern quarian civilization.” According to the histories, they founded this city about 2200 years ago, in the aftermath of the unification war. She let out a weak laugh. “To think that their statue is still there, that I’d get to see it in my lifetime. Ancestors, it’s…”</p>
+        <p>Jane held her hand and squeezed it gently. “Surreal.”</p>
+        <p>“Yes,” she said, “like something out of a dream.”</p>
+        <p>About one kilometer ahead of the statue, the Forum of the Ancestors dominated the horizon. Lozenge-shaped, it lay right at the heart of the city. There, shuttles were arriving or departing, and she marveled at how the morning sunlight glinted off the surfaces of the surrounding buildings.</p>
+        <p>Keelah, it was so beautiful.</p>
+        <p>Soon, the shuttle landed at one of the Forum’s interior landing pads. The shuttle’s side door opened. And then she stepped outside, along with Jane and Khaalu.</p>
+        <p>“Follow me, please,” Khaalu said.</p>
+        <p>She nodded. And soon, Khaalu led them into the atrium. In it, bureaucrats and administrators were moving to and fro, and in the distance, she spotted her auntie and Admiral Zaal’Korris chatting by a fountain.</p>
+        <p>“Go to them,” Khaalu said, “they’ve been waiting for you.”</p>
+        <p>She approached them, with Jane in tow. “Auntie?” she called out. “Auntie, over here.”</p>
+        <p>Her auntie looked at her, then approached. “Ah, there you are, child. It’s good to see you’ve made it on time.”</p>
+        <p>She gave her auntie a hug. “Got here as fast as we could.”</p>
+        <p>Zaal gave Jane a handshake. “Welcome, Shepard. Welcome. I take it your accommodations were comfortable?”</p>
+        <p>“They were,” Jane said.</p>
+        <p>“Excellent,” Zaal said, “and oh, congratulations on completing the first draft of your manuscript. I must say, so far, it has been a fascinating text. In the years to come, I think it’ll do wonders towards bringing back the geth. Now, we need them more than ever to repair and maintain this city.”</p>
+        <p>“I can imagine,” Jane said. “If there was any proof that the geth never hated you, this city is certainly it.”</p>
+        <p>“Very true,” Zaal said. Zaal cleared his throat, then checked the time on his omni-tool. “Anyways, your test will be starting soon, in about seven minutes.” Zaal gestured for them to follow. “Follow me.”</p>
+        <p>She nodded, then followed Zaal towards the conference room. On the way, they passed throngs of bureaucrats and administrators, but soon they reached the conference room’s entrance.</p>
+        <p>Zaal turned and faced her. “Just head inside.” Momentarily, Zaal looked at the ground. Zaal took a deep breath. “Not that you’ll need this, but…may the ancestors bless you with good fortune.”</p>
+        <p>She touched her left shoulder with her right hand. “Thank you.”</p>
+        <p>And then she and Jane stepped into the conference room. Within, armed guards escorted them down a short hallway, into a small amphitheater-like enclosure in which every Clan Master, every senior member of the Conclave, was sitting along three tiers of seats. At the very back, she spotted the current Prime Speaker, the Veil Republic&#x27;s head of state, Iratano’Khairun vas Armanos, who was wearing a gold realk and visor. Above, she spotted a holo-projector attached to the dome-like ceiling.</p>
+        <p>When they reached the center of the room, more armed guards surrounded her and Jane, blocking the only escape route. Her pulse climbed. What was going on? Why were these guards surrounding them?</p>
+        <p>“So the alien finally arrives with her pet,” said Erukhan’Zorah vas Jhaitan, the master of her own clan. Tall and elderly, he had a gravelly but commanding voice. Erukhan looked at her. And inwardly, she cringed. Erukhan used to be one of her father’s only friends. “Have you no shame, girl? No love for your clan? Become an alien’s slave? Bah! You bring Hrarxa upon us all.”</p>
+        <p>Clenching her jaw, she huffed through her nose and balled her fists. An alien’s pet? How dare he talk to her that way! Growling, she was about to retort.</p>
+        <p>But then Jane closed her eye, then took a deep breath. “I’m sad you feel that way, Clan Master. You see, I never imagined that the head of Clan Zorah – the clan who kept the quarian people united after Clan Larrik’s destruction – would stoop to making childish insults, or to disrespecting the greatest Zorah since your clan’s founder herself .” Jane sighed, then looked at the ground. “But it seems that I was wrong.”</p>
+        <p>The Clan Masters began whispering amongst themselves, and Erukhan gripped the arms of his chair tightly, glaring at Jane.</p>
+        <p>Jane swept her gaze across the Clan Masters. “Tell me, is this what quarian leadership has become? Is this the best I can expect from you?” Jane let out a frustrated sigh. “So disappointing.” Jane shook her head. “Anways, we’re here for your test. Ask your questions.”</p>
+        <p>The Master of Clan Vael, Aratia’Vael vas Entaaba, cleared her throat. “We’ll get to them. But first, tell me, human, are you familiar with the laws that govern all intelligent species?”</p>
+        <p>Her eyes went wide, and her mouth fell open. WHAT? Keelah, why ask such a question? How was it relevant to their bond?</p>
+        <p>“Yes,” Jane said.</p>
+        <p>“Then you should know,” Aratia said, “that any species, if forced to choose between its survival, and that of another, will choose its own without hesitation.” She leaned forward. “Yes, how strange that you – a human – willingly chose to live on a planet full of quarians. To most species, such behavior is madness. So how can we be sure that you’re not a spy? Hhhm?”</p>
+        <p>“Yes,” said the Master of Clan Gerrel, Vorun’Gerrel vas Ghoro. “Why should we not arrest and then interrogate you? After all, at one point, you did work for Cerberus.”</p>
+        <p>Just then, the guards surrounding them released the safeties on their weapons. One brought out a pair of handcuffs.</p>
+        <p>For a moment, time seemed to play out in slow motion. No, this couldn’t be happening. After everything she and Jane had been through, had this ‘test’ actually been a trial all along?</p>
+        <p>Within her, something snapped.</p>
+        <p>“You fre’eg eating bosh’tets! ” she shouted, and everyone in the room recoiled. Sweeping her gaze over the Clan Masters, she started pacing around, her heart thrashing in her chest, her breathing growing faster and faster. Where was her auntie? Where was Zaal? Yes, something was wrong. None of this was adding up. Not even the most xenophobic Clan Masters would ever make such insane accusations! Never! “What is the meaning of this?! Do you not hear yourselves?! Why would–”</p>
+        <p>Jane held up her hand to hush her.</p>
+        <p>“Jane, what are you…”</p>
+        <p>Briefly, Jane looked at her and winked.</p>
+        <p>Closing her eyes, she took a deep breath, then reigned in her emotions as best she could. Very well, Jane. I trust you.</p>
+        <p>Momentarily, Jane looked at the ground, then exhaled. “Clan Masters. Yes, it&#x27;s true that I worked for Cerberus. After my first death, they resurrected me with Reaper technology in Project Lazarus, then sponsored my mission to rid the galaxy of the Collectors, who were abducting entire human colonies.” Jane opened a window on her omni-tool. “I cut ties with them as soon as I was able. But if you want, I could send any of you the files on Project Lazarus, along with detailed logs of my mission. I’m sure you–&quot;</p>
+        <p>The Master of Clan Reegar, Jhora’Reegar vas Neema, cleared his throat. “That will not be necessary, Admiral Shepard.”</p>
+        <p>Jane closed her omni-tool. “Very well.” She let out a weak laugh. “If I am a spy, Clan Masters, then I must be the worst one in the galaxy. Tell me, what kind of operative would have willingly given you the Reaper IFF, so you could access a treasure trove of salvage? What kind of operative would have willingly given you files detailing Mordin Solus’ treatment for your immune systems, along with data from the Collector base? Would I have even bothered to return those quarian tablets I found in Donavan Hocks&#x27; mansion?”</p>
+        <p>“Bah!” Vorun scoffed, looking at her. “Those could easily have been just ploys to gain our trust.”</p>
+        <p>“HOW DARE YOU!” she shouted, pointing at Vorun. Without thinking, she tried to get in that piece of fre’eg’s face, but two guards held her back. Again, she swept her gaze all around, glaring at all the Clan Masters. “After everything Jane has done for the quarian people, this is how you treat her?! By dismissing her contributions as…as PLOYS to gain our trust? NO! This is madness!” She let out a throaty growl. Her hands began to tremble, and hot tears ran down her cheeks.</p>
+        <p>Keelah, was this a nightmare?</p>
+        <p>Was she losing her mind?</p>
+        <p>Or was this all some sick joke?</p>
+        <p>She pointed at where the Masters of Clans Raan, Reegar, Koris, and Nara were sitting. “AND YOU! Why are none of you saying anything? Have her deeds counted for NOTHING?”</p>
+        <p>A dreadfully long silence ensued.</p>
+        <p>She let out an animal growl. “Perhaps…” She let out a loud sob. “Perhaps the council species were right! Perhaps the Geth were right! Perhaps we never deserved to have Rannoch back! Perhaps–”</p>
+        <p>“Tali!” Jane snapped.</p>
+        <p>She looked at Jane. “But Jane, they’re–”</p>
+        <p>Without warning, Jane grabbed her shoulder and pulled her close. “I’ll handle this, saera, ” she whispered into the audio receptor of Tali’s helmet. “Just trust me, okay.”</p>
+        <p>Panting, she nodded. Yes, there was nobody she trusted more. “Okay…Okay…”</p>
+        <p>Jane gave her a quarian kiss, then once more looked at Vorun. “Now, where were we? Ah yes. Even if I was doing that, then what could possibly be my mission? What ‘great secrets’ am I trying to steal from the quarian people.”</p>
+        <p>“I don’t know,” Vorun said, “but if I had to guess, you’re a deep-cover operative working to help punish us for our retaliation against the Idenna Massacre.”</p>
+        <p>Momentarily, Jane covered her mouth and nearly burst out laughing. Jane gulped and regained her composure.</p>
+        <p>Then once more, the Clan Masters began whispering amongst themselves.</p>
+        <p>“Your retaliation to the Idenna Massacre?” Jane asked.</p>
+        <p>Jhora cleared his throat, then began inputting a few commands into his omni-tool. The holo-projector sprang to life, then displayed a series of holograms. “Not too long after the Idenna Massacre, Captain Imanu’Reegar vas Ithaaya, lead three squadrons of warships to raid a Cerberus cell in some dead system off the relay network. After a sixteen-hour orbital bombardment of their moon base, there were no survivors.”</p>
+        <p>Jane smiled. “Good riddance. It’s great to know that the quarian people finally got justice for such an atrocity.”</p>
+        <p>Again, the Clan Masters began whispering amongst themselves. Briefly, Jane looked at the ground and sighed. “Of course, this whole time, you’ve had no reason to believe me other than my word.”</p>
+        <p>Every Clan Master stared at her and Jane.</p>
+        <p>“So if you’re so willing to throw away everything I was prepared to give the quarian people,” Jane continued, “and are so determined to wallow in your isolation, to prove that the council species were right about you, then go ahead. Arrest me. Do whatever you want. I don’t care.” Jane took a deep breath. “But should you choose to do that, I have only one humble request.”</p>
+        <p>“And what would that be?” Vorun asked.</p>
+        <p>Looking at the ground, Jane took a deep breath. “Whatever happens to me, show Tali mercy. And if she wants to die, let her die. Believe me or not, she’s already suffered through Felz’elt once. So–”</p>
+        <p>“The only way Jane is leaving this room in handcuffs,” she interrupted, “is if you kill me first.”</p>
+        <p>Yes, better to die here and now than to suffer Felz’elt again.</p>
+        <p>She glared at the guards. “If any of you touch her, I will kill you. Do you understand me? You–”</p>
+        <p>“Enough,” said the Prime Speaker, and the entire room went silent. The Prime Speaker stood up. “This test is over.”</p>
+        <p>She whirled and faced the Prime Speaker. Her eyes went wide, and her mouth fell open. The test was over? So did that mean…</p>
+        <p>Oh, Keelah…</p>
+        <p>She put one hand on her visor. This whole time, she had been such a fool.</p>
+        <p>The guards backed away, holstering their weapons. The Prime Speaker approached them. “Jane’Shepard and Tali’Zorah?”</p>
+        <p>Her heart pounded, and she gulped. If the test was over, then what were the results? “Yes?”</p>
+        <p>The Prime Speaker stood before them, clasping his hands behind his back. “Congratulations. You have passed.”</p>
+        <p>Her eyes widened, and she gasped. A cool, euphoric sensation rushed through her limbs, and suddenly, she felt bursting with vigor. She let out a joyful sob, and her tears were now of joy, not of rage and sadness. Ancestors, did she really just hear that? “We…we passed?”</p>
+        <p>“Yes,” the Prime Speaker said. “You have.”</p>
+        <p>“But what about the spy accusations, the–”</p>
+        <p>The Prime Speaker chuckled. “Nobody in this room believed that your lifemate was a spy, or that you were her pet. On everyone’s behalf, I must apologize for playing such mind games with you two. But we needed to see how you two would react under pressure.”</p>
+        <p>“And the results?” Jane asked.</p>
+        <p>“Were not what many of us were expecting,” the Prime Speaker said.</p>
+        <p>“And just what did they expect?” she asked.</p>
+        <p>The Prime Speaker looked at Jane. “They expected you to get hostile and defensive, to show no respect for our ways, and to proclaim your human ones to be superior.” The Prime Speaker looked at Tali. “And they expected you to remain either timid or rational. But by the ancestors, it turned out to be the opposite. The way you defended her, Tali’Zorah, with such passion and ferocity. And how you would rather die in this room, than allow the guards to take away your lifemate…Keelah, there is no greater evidence that you are under the sway of Silz’asul felz. ”</p>
+        <p>The Prime Speaker looked at Jane. “And you, Jane’Shepard, the way you remained calm and rational, and how you cared more about her happiness, than your own.” The Prime Speaker let out a weak laugh. “If I were in your position, I would have made the same request.”</p>
+        <p>The Prime Speaker exhaled. “Now, I’m sure you know that we’ve debated much on whether to allow you to stay here, and on what benefits you could bring to the quarian people.” The Prime Speaker looked at Jane. “Quite frankly, we are very much interested in gaining humanity’s favor. The krogan and the council races, you see, they are our allies only in name and will likely do everything possible to sideline us and undermine our influence in the new federation. Remaining friendless and hated will do us no favors, and will only set us down a path like that of the batarians. So your people…”</p>
+        <p>“Are the only species that could become a true ally?” Jane asked.</p>
+        <p>“Yes,” the Prime Speaker said, “and the next galactic hegemon at that. Yes, in this new age, nobody will ever look to the asari for leadership ever again. When a galactic crisis threatened to doom us all, they completely failed to give everyone hope and direction, and only looked after themselves. So tell me, Jane’Shepard, if we accept you as one of our own, will you be the link between humanity and the quarian people?”</p>
+        <p>“I will.” Jane said.</p>
+        <p>“Do you swear to entwine our interests with those of your kind, until they are one and the same?”</p>
+        <p>“I swear.”</p>
+        <p>The Prime Speaker swept his gaze over the other Clan Masters. “You heard her. So all in favor of recognizing Tali’Zorah’s bond to Jane’Shepard as genuine please raise your hand.”</p>
+        <p>The Prime Speaker was the first to raise his hand. One by one, the other Clan Masters did the same, and she couldn’t help but burst into a fit of weak laughs.</p>
+        <p>Keelah, this was happening.</p>
+        <p>This was actually happening.</p>
+        <p>Soon, every Clan Master raised their hand, until only the masters of Clan Zorah, Gerrel, and Vael remained. Reluctantly, Aratia raised her hand. Erukhan did the same. Vhorun huffed through his nose, then finally raised its hand.</p>
+        <p>“It’s unanimous then,” the Prime Speaker said. The Prime Speaker looked at Jane. “Jane’Shepard?”</p>
+        <p>“Yes?”</p>
+        <p>“We hereby declare you to be the first alien citizen of the Veil Republic,” the Prime Speaker said, “and the founder and master of the new Clan Shepard.” The Prime Speaker exhaled. “Now, I believe you have a bonding ceremony to prepare for.” The Prime Speaker faced the other Clan Masters. “This meeting is over. Keelah Se’lai, and may the ancestors watch over you.”</p>
+        <p>Finally, every Clan Master stood up and began to leave the conference room. As they walked past her, she looked at Jane. Her eyes met Jane’s, and for what felt like hours, she just stared at her. Jane smiled. She smiled.</p>
+        <p>She was about to embrace Jane. But then somebody cleared their throat beside her, as though to get her attention. She turned, only to spot the Masters of Clan Zorah, Vael, and Gerrel standing before her and Jane.</p>
+        <p>“Admiral Shepard?”</p>
+        <p>“Please,” Jane said, “no need to refer to me by any titles.” Jane cleared her throat. “But what is this about?”</p>
+        <p>Erukhan sighed. “I would like to apologize for what I said at the beginning of the test.”</p>
+        <p>“As do I,” Vhorun said.</p>
+        <p>“And I,” Aratia said. “As the Prime Speaker said, it was all a part of the test. We did not mean a single word.”</p>
+        <p>“I accept your apologies,” Jane said.</p>
+        <p>“And so do I,” Tali said. Keelah, she had exploded at them with such rage. Did they take it personally? She began wringing her hands.</p>
+        <p>“Oh, you have nothing to apologize for,” Erukhan said. “If anyone had threatened my lifemate in such a way, I would have reacted the same way. Now, tell me, for your bonding ceremony, do you have a witness?”</p>
+        <p>Momentarily, she looked at the ground. “No, I don’t.”</p>
+        <p>“Then might have the honor?”</p>
+        <p>Her eyes went wide, and she gasped. “Keelah, after everything that…”</p>
+        <p>Erukhan laughed. “Oh, of course, I will be your witness. Your lifemate spoke the truth when she compared you to the great Aelina herself.”</p>
+        <p>“Oh, ancestors, thank you,” she said, “a thousand times, thank you.”</p>
+        <p>Erukhan opened up his omni-tool, then began inputting commands. “I must go now, but we will stay in touch.” Her omni-tool beeped, and in her inbox, she found Erukhan’s contact information. “May the ancestors be with you, Tali’Zorah. Keelah’Sel’ai.”</p>
+        <p>“Keelah’Sel’ai.”</p>
+        <p>Finally, every Clan Master left the conference room. Holding Jane’s hand, she followed them, only to run into her auntie and Admiral Korris waiting outside.</p>
+        <p>“Oh, congratulations, child,” said her auntie, spreading out her arms for a hug. She gave her auntie that hug. “It seems that your dream has finally come true.”</p>
+        <p>“Indeed, it has,” Zaal said. “We never had any doubt.”</p>
+        <p>Once she let go, her auntie cleared her throat. “Now, Jane. Is there something you wish to show her?”</p>
+        <p>She tilted her head. Something to show me? “Jane, what is she talking about?”</p>
+        <p>Jane nodded, then reached into her coat and pulled out a black pouch. Tali’s pulse spiked. Her eyes went wide, and momentarily, she couldn’t breathe.</p>
+        <p>No, could it be?</p>
+        <p>Jane took out the pal’tec vis surden from the pouch. “Tali?”</p>
+        <p>She let out a joyful sob, and she couldn’t stop smiling. “Yes?”</p>
+        <p>Holding one of Tali’s hands, Jane put the pal’tec vis surden in her palm, then curled her fingers around it. Holding Tali’s hand with both of hers, she looked deeply into her eyes, and Tali’s knees grew weak. She could hardly breathe.</p>
+        <p>“Will you join with me and travel through life together?” Jane asked.</p>
+        <p>“Oh, Jane…” She embraced her, then burst into tears, into a fit of joyful sobs. Jane knew the words! Yes, the exact ones to propose. “Yes! A thousand times, yes! Let us journey together for our souls are already one.”</p>
+        <p>Jane dropped her cane, then wrapped her arms around Tali. Tali returned the gesture, and for what felt like hours, she hugged her with all the love a hug could convey.</p>
+        <p>Yes, finally, it was over.</p>
+        <p>She and Jane had conquered the last obstacle standing in the way of their bond. And now, after their bonding ceremony…</p>
+        <p>It would be the first day of the rest of her life.</p>
+    </div>
+</body>
+</html>

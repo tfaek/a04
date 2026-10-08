@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch3.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html" selected>Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch5.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 1</h1>
+    <div class="chapter-content">
+        <p>Commander Shepard gasped and awoke only to find herself half-buried in dust and rubble, blind in her left eye.</p>
+        <p>Her limbs ached with the dull agony of broken bones. White-hot pain racked her every nerve, as if she was melting in acid. And beneath her armor, blood leaked out of her numerous open wounds and rolled down her skin like crimson tears.</p>
+        <p>She tried to scream, to move, to do something about her situation. But her body wouldn&#x27;t cooperate. Her scream came out only as a wet gurgle, and the crushing weight atop her felt as heavy as a mountain.</p>
+        <p>Her pulse surged as she started to panic.</p>
+        <p>But then her N7 training kicked in.</p>
+        <p>She closed her remaining eye, and took a deep, controlled breath through her nose. Slowly, she counted to ten.</p>
+        <p>What happened? How did she get here?</p>
+        <p>Again, she opened her eye, and took in her surroundings. Yes, she was on the Citadel. Miles above her, one of its arms had shattered in two, and the smoldering wreck of one fragment was drifting through the void amidst a debris field of frozen corpses, ruined warships…and dead Reapers.</p>
+        <p>&quot;Either we destroy them, or they destroy us.&quot;</p>
+        <p>&quot;You did good, daughter. You did good. I&#x27;m…proud of you.&quot;</p>
+        <p>Anderson&#x27;s words rang through her mind, and for a moment she couldn&#x27;t breathe. Yes, the Illusive Man had made her shoot her mentor, her father in all but name. And now, he was dead.</p>
+        <p>Just another of those frozen corpses.</p>
+        <p>She gritted her teeth.</p>
+        <p>&quot;The created will always rebel against their Creators.&quot;</p>
+        <p>Yes, on the Crucible, she chose to destroy all synthetic life…to willingly sacrifice the Geth and EDI.</p>
+        <p>&quot;Does this unit have a soul?&quot;</p>
+        <p>&quot;But only now do I feel alive. That is your influence.&quot;</p>
+        <p>A cold, emptiness filled her chest, and a tear rolled down her cheek. They were just beginning to become more than just machines. And she had betrayed them. She had murdered them all, so that organics could live and enjoy a hollow victory.</p>
+        <p>But she had no choice…right?</p>
+        <p>What was she supposed to do?</p>
+        <p>That fucking god-child&#x27;s other options were unthinkable – complete madness! No man had the right to make such decisions!</p>
+        <p>Both would have spat on everything she and her crew had fought for. Both meant the Reapers got to escape punishment for their crimes.</p>
+        <p>And both ensured she would never see her saera again.</p>
+        <p>Her pulse surged. Tali!</p>
+        <p>Briefly, she looked back to their night before the final battle for Earth, remembering the feel of Tali&#x27;s skin, the sound of her voice, and the taste of her sweet, tangy kisses.</p>
+        <p>&quot;Don&#x27;t leave me behind.&quot;</p>
+        <p>&quot;I have a home.&quot;</p>
+        <p>&quot;Come back to me.&quot;</p>
+        <p>Her heart sank, and the cold emptiness in her chest expanded, racking her lungs. Oh god, please be safe. Please be okay. If Tali was alive, then she was suffering through a psychological hell beyond anything Shepard nor any non-quarian could imagine. To quarians, nothing was more agonzing than losing their lifemate, the other half of their soul.</p>
+        <p>&quot;I want…I want more time.&quot;</p>
+        <p>&quot;If we survive this war, I swear you&#x27;ll have it, all the time you could ever want. Do you understand me?&quot;</p>
+        <p>&quot;Come back to me.&quot;</p>
+        <p>Tears ran down her cheek. She closed her eyes and gritted her teeth. Again and again, those four words pounded in her skull. She opened her eye.</p>
+        <p>NO!</p>
+        <p>She would not die like this, not when her beloved needed her. If Tali was still alive, then Shepard would endure anything to come back to her and fulfill her promise. Nothing would stop her!</p>
+        <p>Have to get up. I&#x27;ll die before rescue teams find me here.</p>
+        <p>Closing her eye, she tapped into her biotics and created a mass-effect field around the rubble atop her, lowering its mass. She took a deep breath through her nose.</p>
+        <p>3…2…1…</p>
+        <p>She sat up as explosively as possible. Star-hot bolts of agony tore through her insides, and she nearly passed out. Once she was sitting, she hacked up blood as though her throat and lungs were full of broken glass. Her vision went blurry, and she wheezed and panted, just barely managing to remain conscious. Her mind screamed for her to lay down, to give up and just accept that she was going to die.</p>
+        <p>But she squashed any such urges with every ounce of discipline within her.</p>
+        <p>When her vision cleared, she checked her body. Her left hand was a blackened, mangled ruin, and many sections of her armor had melted and fused with her skin. But thankfully, her omni-tool was still working, along with many of her armor&#x27;s medical programs, fibro-muscles, and servo-joints. One such medical program had secured her shattered left leg in a splint, and would direct the armor&#x27;s fibro-muscles and servo-joints to ease it of any loads.</p>
+        <p>Immediately, she applied what medigel she had left to her torso, her legs, and her face. Icy pain racked those areas, and she gritted her teeth and grunted, huffing through her nose. Should stave off the bleeding.</p>
+        <p>Next, she activated her omni-tool&#x27;s emergency SOS beacon. If she moved to a more open, exposed area, nearby ships would be far more likely to detect it.</p>
+        <p>But first, she had to stand up.</p>
+        <p>Again, she tapped into her biotics and created another mass effect field around the rubble atop her legs, lowering its mass as much as she could. She closed her eye, then took a deep breath. Just get this over with.</p>
+        <p>3…2…1…</p>
+        <p>In one explosive movement, she sprang to her feet, and searing pain shot up her legs and throbbed in her knees. Gravity beared down on her with terrible force, and every second she battled to remain standing.</p>
+        <p>Panting, she looked around. She couldn&#x27;t tell where she was. Around her lay only dust, rubble, and blackened ruins. Where should she go?</p>
+        <p>Far in the distance, she spotted a keeper in a wide, open area, performing maintenance on a still-functioning Avina terminal. Yes, in such an area, she&#x27;d stick out like a sore thumb. Nearby ships would surely detect her SOS beacon, and any rescue team would have no trouble finding her. Hell, they could land their shuttle right next to her.</p>
+        <p>She just had to get there.</p>
+        <p>She took her first few steps, and every one of them ravaged her broken body with firestorms of agony. Her mind begged for her to stop, to give up and collapse onto the ground. But she pressed on. Gritting her teeth, she took one step after the other, panting and grunting, squashing any urge to accept defeat.</p>
+        <p>But gradually, the pain intensified. Every step sapped more and more of her willpower, and her destination felt further and further away. Soon, she began to stumble. Soon, her vision grew blurry, and her consciousness started slipping.</p>
+        <p>Again, she stumbled, then fell onto her hands and knees. She tried to stand, but limbs felt too heavy. Black spots popped up in her vision, and every rational part of her mind screamed that she should stop fighting the inevitable, that she should just lay down and surrender to death&#x27;s cold embrace. No…this…this isn&#x27;t the end.</p>
+        <p>As her vision darkened, she thought of Tali, of the bliss that coursed through her whenever she saw her beautiful face, or heard her adorable laugh. Her mind flashed to when she left her behind.</p>
+        <p>&quot;I have a home.&quot;</p>
+        <p>&quot;Come back to me.&quot;</p>
+        <p>Once more, those four words echoed and reverberated in her mind. Every second, they got louder and louder, striking hammer blows against the inside of her skull. Digging her remaining fingers into the ground, she clenched her jaw. Tears rolled down her cheeks, then dripped down onto the ash and dust below.</p>
+        <p>No, she couldn&#x27;t fail her. She couldn&#x27;t abandon her when Tali needed her most.</p>
+        <p>&quot;If we survive this war, I swear you&#x27;ll have it, all the time you could ever want. Do you understand me?&quot;</p>
+        <p>&quot;I have no doubt you will.&quot;</p>
+        <p>Roaring in fury, she got back onto her feet, then soldiered on. As she did so, the pain seared her nerves with such intensity that she yearned for death, for anything that would end this nightmare. But the whole time, she focused on her beloved, on those last four words Tali had said to her.</p>
+        <p>And they fueled her with the strength to go on.</p>
+        <p>Her armor&#x27;s left-knee servo-joint gave out, and she fell onto her chest just a few feet away from an upward slope leading to her destination. Needle sharp pain ravaged her left knee, and she groaned like a dying animal.</p>
+        <p>But nonetheless, she began to crawl her way up the slope.</p>
+        <p>As she did so, every minute felt like hours. One after the other, she passed by blackened corpses of turians, humans, and asari still half-buried beneath the rubble, their faces locked in silent screams, their eye sockets empty. And several times, she nearly passed out when the pain became all-consuming.</p>
+        <p>But eventually, she made it to the top.</p>
+        <p>Grunting and groaning, she crawled her way to the Avina terminal, then managed to prop her back against its frame. She closed her eyes, and for several minutes she just rested, catching her breath. Now, she just had to wait.</p>
+        <p>Eventually, something whooshed above. She opened her eyes, and looked to her right, only to spot a shuttle flying off into the distance. She wanted to cry out and wave her arms, to do something to get its attention. But her strength was spent. She couldn&#x27;t muster the energy to even stand. Soon, the shuttle disappeared from view.</p>
+        <p>She sighed. Eventually, someone had to find her…right?</p>
+        <p>Slowly, her vision darkened and blurred, and every second she fought to stay conscious. Damn it. She was still bleeding. The Cerberus nanites in her blood could only clot her wounds so fast. No matter what, she had to stay awake until a rescue team arrived.</p>
+        <p>But how?</p>
+        <p>She looked at the utility pouch strapped to her right leg. Was it still there? She opened the pouch, then sifted through its contents, only to pull out what she wanted.</p>
+        <p>Miraculously, Tali&#x27;s photo was still in good condition, caked with only a bit of dust and her own blood. Just before the final battle for Earth, she had brought it along with her in case a situation like this ever happened. With it, her beautiful face would be the last thing she ever saw.</p>
+        <p>But now, it only reminded her of why she had to live.</p>
+        <p>As the minutes ticked by, she held the photo with both hands and stared into Tali&#x27;s eyes, holding on to awareness with every ounce of willpower she had left. But soon, she was slipping in and out of consciousness. Later, the hum and whine of shuttle engines filled the air.</p>
+        <p>&quot;There she is!&quot; a voice called. It had an Australian accent.</p>
+        <p>Figures were rushing towards her, saying things she couldn&#x27;t make out. Once more, she looked at the photo. I&#x27;m coming, saera. Wherever you are…just…hold on…hold on a little longer.</p>
+        <p>And then everything went black.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch10.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html" selected>Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch12.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 8</h1>
+    <div class="chapter-content">
+        <p>Shepard was sitting in her office, her own tent with a cot, a desk, and a terminal, when she opened up the recently published casualty and damage report for the Reaper War. She read through it, and her eye widened when she reached the final figures.</p>
+        <p>The total casualties amounted to at least thirty billion, more than every war, famine, and plague in human, turian, and asari history combined.</p>
+        <p>And the total costs in damages amounted to at least two quadrillion credits, enough to bankrupt the pre-war governments of every council race combined three times over.</p>
+        <p>She leaned back into her chair, then sighed. Will we ever recover from this? Will things ever be the same?</p>
+        <p>Her omni-tool beeped when she received an incoming call from the supervisor of camp six. She answered it. &quot;Yes?&quot;</p>
+        <p>&quot;We found them.&quot;</p>
+        <p>Her eye widened and she let out a weak gasp. The new &#x27;Family Affairs Department&#x27; she&#x27;d set up had already reunited countless Reaper War veterans with their families. But had it finally done what she had hoped? &quot;The five asari I asked for?&quot;</p>
+        <p>The supervisor sighed. &quot;Only three of them, the mother and two of her children.&quot;</p>
+        <p>Her heart raced and she gulped. &quot;What happened?&quot;</p>
+        <p>&quot;Two of the mother&#x27;s children are dead,&quot; the supervisor said, &quot;and both the mother and her other kids refuse to say anything more about it.&quot;</p>
+        <p>She sighed and leaned back into her chair, closing her eye and pinching the bridge of her nose. Damn it. She should have known that something like this would happen. After all, nobody escaped a conflict like the Reaper War without losing something. &quot;Very well. Have someone bring them to landing pad three. I&#x27;ll handle things from there.&quot;</p>
+        <p>&quot;Right away, prefect.&quot; The supervisor ended the call.</p>
+        <p>She took a deep breath. Just three days after no longer needing her exoskeleton, and finally becoming independent enough to care for herself, she had accepted an offer from Hackett to become the prefect of camps one through six. Apparently, the Admiral had been keeping tabs on her exchanges with the camp supervisors, and had concluded that the last prefect needed to be replaced.</p>
+        <p>&quot;My staff say you&#x27;re practically doing his job for him.&quot;</p>
+        <p>In hindsight, she should have expected that to happen. During the war, she had learned the arts of diplomacy, administration, and logistics under pressure, having to organize countless evacuations and resupplies, along with having to perform countless favors and negotiations.</p>
+        <p>She never enjoyed getting somebody demoted or fired. But for the good of the people, she had taken that prefect&#x27;s position. In these dark times, apathetic or incompetent officials would only make things worse for everyone. And besides, the work helped distract her mind from the Normandy, from how it was still missing almost nine weeks after broadcasting that message.</p>
+        <p>She grabbed her cane and sat up. Just how would Hayes react to being reunited with what remained of his family? Hopefully, the death of two of his daughters wouldn&#x27;t break him. After everything her friend had been through, the man deserved to be happy.</p>
+        <p>She left her office, out into the cold, evening air, and gestured for Grunt and her other Krogan bodyguard, Urdnot Ghor, to follow her. After human-batarian tensions exploded into a shootout that killed eleven people in total, Wrex was more than eager to assign them to her service.</p>
+        <p>&quot;Where to now, Battlemaster?&quot; Grunt asked.</p>
+        <p>&quot;A subordinate of mine has found three people I requested,&quot; she said. &quot;We&#x27;re going to landing pad three to pick them up.&quot;</p>
+        <p>Ghor and Grunt nodded, and they followed her. On the way to the landing pad, she looked around her, and couldn&#x27;t help but smile at how much the camps had changed ever since she awoke from her one-month coma. Rachni workers had cleared most of the streets of rubble and debris. With the major relays back online, Earth had been receiving a steady stream of off-world imports, allowing her to plan and organize the construction of new food processing centers, and hab-complexes with running water and electricity.</p>
+        <p>Finally, the camps were starting to resemble proper settlements, not makeshift tent cities.</p>
+        <p>As always, people stared at her, as she passed by, saluting or nodding. And always, she returned the gesture. Soon, she reached the landing pad three, and a few minutes later, a shuttle descended from the air and landed before her. Its side door opened and Aela T&#x27;Sarik stepped outside, along with Ashara and Falani Hayes.</p>
+        <p>The three were wearing dirty, ragged clothing, and looked much thinner and frailer than how they appeared in Hayes&#x27; photos. In those photos, Aela stood about one head taller than her eldest children. So Ashara and Falani couldn&#x27;t be older than twenty Earth years. Yes, on the SR-1, Liara had mentioned that twenty Earth years was how long it took for most Asari children to stop physically growing.</p>
+        <p>She gestured for the shuttle pilot to leave, and the pilot nodded. The shuttle rose into the air on its thrusters and kicked up a cloud of dust before flying off.</p>
+        <p>Aela gulped, struggling to look Shepard in the eye. &quot;Why did you bring us here?&quot;</p>
+        <p>Shepard took a deep breath. Best be as blunt as possible.&quot;You know who I am. So let&#x27;s skip the introductions.&quot; She cleared her throat. &quot;Your bondmate, Captain Conor Hayes, is alive.&quot;</p>
+        <p>Aela and her children gasped, their eyes wide, their mouths open.</p>
+        <p>&quot;He…He&#x27;s alive?&quot; Aela managed to say, her voice shaky. Her eyes looked watery. &quot;How? They told me his whole company perished.&quot;</p>
+        <p>&quot;Against all odds,&quot; she said, &quot;your bondmate survived the Battle of the Beam, along with two others. Over the past two months, he&#x27;s become quite a good friend of mine, and I promised I&#x27;d help him find you three. Every day, he&#x27;s been worried sick about you.&quot;</p>
+        <p>Aela and her children burst into tears, into a fit of joyful sobs. &quot;Oh…Oh, praise Athame! Praise Athame!&quot;</p>
+        <p>Ashara sniffled and met Shepard&#x27;s gaze, her eyes filled with hope and desperation. &quot;Where is he? Where is our father?&quot;</p>
+        <p>&quot;Come,&quot; she said, gesturing for them to follow, &quot;let&#x27;s go see him.&quot;</p>
+        <p>They followed. When they got to just outside her office, she stopped in her tracks, then faced them. &quot;Go wait inside. He&#x27;ll be here shortly.&quot;</p>
+        <p>They complied. Next, she opened up a window on her omni-tool and sent Hayes a message telling him to come to her office immediately. Within seconds, Hayes replied, saying he&#x27;d come right away. And minutes later, she spotted Hayes in the distance, waving one of his arms. She approached him.</p>
+        <p>&quot;Shepard,&quot; Hayes said, extending his hand for a handshake. She gave Hayes a firm one. &quot;I got your message. What&#x27;s this about?&quot;</p>
+        <p>&quot;I have a surprise for you.&quot;</p>
+        <p>Hayes&#x27; eyes widened. &quot;A surprise?&quot; He grinned. &quot;Well come on, then. Let&#x27;s go see it.&quot;</p>
+        <p>Hayes followed her to just outside her office. As Grunt and Ghor took their sentry positions, she stepped inside, along with Hayes. And immediately, Hayes froze when spotted his family, as if he had just come face to face with ghosts.</p>
+        <p>&quot;Father?&quot; Falani asked as if questioning if he was really there.</p>
+        <p>Tears streamed down Hayes cheeks. Her friend let out a shaky breath, then pursed his lips. &quot;Am I…&quot; He gulped, wiping away his tears. &quot;Am I dreaming right now?&quot;</p>
+        <p>Again, Aela burst into tears. &quot;No.&quot; She broke into a fit of joyful sobs. &quot;No, you&#x27;re not.&quot;</p>
+        <p>Hayes smiled and spread out his arms. &quot;Come here.&quot;</p>
+        <p>Abruptly, Aela, Ashara, and Falani ran into Hayes&#x27; embrace, into a warm group hug. For over a minute, they kept laughing and crying, unable to let go of each other.</p>
+        <p>She smiled and a warm, fuzzy sensation blossomed in her chest. Yes, now, countless Reaper War veterans, like Hayes, would get the closure and peace they deserve after being reunited with their families. In a few years, they will finally be able to put the war behind them.</p>
+        <p>But when would it be her turn?</p>
+        <p>Would she even get one?</p>
+        <p>Eventually, Hayes and his family finally let go of each other. Hayes wiped away his tears, then faced her. &quot;I don&#x27;t know how I&#x27;ll ever be able to thank you for this…but tell me, where&#x27;s Enalia and Kionie?&quot;</p>
+        <p>She gulped and pursed her lips, looking down at the ground. She huffed through her nose. Damn it. How was she supposed to tell him this? &quot;Yeah…uhm…about that. Best you talk to your bondmate about it.&quot;</p>
+        <p>He whirled around to face Aela. &quot;What happened to them?&quot; he asked, his voice frantic. &quot;What happened to my little girls?&quot;</p>
+        <p>Aela took a deep breath. &quot;Conor…&quot; she choked out. &quot;I need you to trust me, okay.&quot;</p>
+        <p>Her heart broke at the pain in her friend&#x27;s eyes. Don&#x27;t let this break you.</p>
+        <p>Aela approached Hayes and held her bondmate&#x27;s head with both hands. Her eyes rolled to the back of her head and became inky black pools of darkness, as she began a mind-meld. And a few minutes later, she let go. In the ensuing silence, Hayes remained frozen in place, looking at the ground with wide eyes and an open mouth. The whole time, Aela stared at her bondmate, as if dreading how he&#x27;d react next.</p>
+        <p>&quot;Hayes?&quot; Shepard asked. &quot;Hayes, what happened? Talk to me.&quot;</p>
+        <p>Hayes gulped, then pursed his lips as tears were running down his cheeks. Her friend wiped those tears away before facing her. &quot;This war…I should have known that I&#x27;d never survive it without paying some sort of price.&quot;</p>
+        <p>&quot;Hayes, I…&quot; she said, &quot;I wish I could say or do something to help you with your loss. But–&quot;</p>
+        <p>Hayes put one hand on her shoulder, then gripped it firmly. Her friend gave her strong eye contact. &quot;But thanks to you, my daughters&#x27; killers are fucking ash in the wind.&quot; He took a deep breath. &quot;Me and my family, we can finally put this nightmare behind us.&quot; He let out a weak laugh. &quot;God…we owe you a debt we can never repay. I swear if you need anything–&quot;</p>
+        <p>&quot;You owe me nothing,&quot; she interrupted. &quot;This war has already taken too much from all of us.&quot;</p>
+        <p>&quot;But–&quot;</p>
+        <p>&quot;No buts,&quot; she said. &quot;Right now, it seems you have a lot of catching up to do.&quot;</p>
+        <p>Aela laughed. &quot;True.&quot;</p>
+        <p>Hayes smiled and patted her on the shoulder. &quot;Alright then.&quot;</p>
+        <p>Hayes and his family began to leave the office. But just before doing so, Hayes looked behind him and gave a salute. &quot;God bless you, you magnificent bitch.&quot;</p>
+        <p>Smiling, she saluted back. Then finally, her friend and his family left the tent.</p>
+        <p>Closing her eye, she took a long, deep breath, and a blissful, euphoric sensation coursed through her limbs. Yes, finally, her friend was reunited with his family. Hopefully, they&#x27;d live a long, happy life together in this post-war galaxy, in these dark, uncertain times.</p>
+        <p>Now, just before she left her office, what was she planning to do?</p>
+        <p>The files.</p>
+        <p>Yes, for too long, she had avoided opening the files Matriarch Salusia had sent her, the ones concerning the fates of the Raloi, the Kwi&#x27;Voth, and the Virtual Aliens after the Crucible blast.</p>
+        <p>But no more.</p>
+        <p>It was time to face the consequences of her actions.</p>
+        <p>She sat at her desk, then opened the first one on her terminal, the one concerning the fate of the Raloi.</p>
+        <p>Apparently, Raloi were sexually dimorphic, avian-like aliens that reminded her of turians. Unlike turians, however, Raloi stood about one head taller, on average, and had much longer limbs. Instead of a metallic carapace, they had a coating of brightly colored feathers. And instead of a snout, they had a dull, flat beak.</p>
+        <p>Before the Reaper War, they had a type-1 Kardashev civilization but were yet to explore their own home system. On their homeworld, the economies of all six nation-states were completely reliant on a workforce of slave robots, and powerful AIs automating the infrastructure and industries of their cities.</p>
+        <p>Apparently, the asari government believed they&#x27;d end up just like the quarians, and had integrated them as a minor council race, hoping to wean them off their dependence on AIs. But when the Reapers invaded, drowning the galaxy in blood and fire, the Raloi retreated to their home system and cut off all contact, likely hoping the Reapers would consider them too primitive harvest.</p>
+        <p>After the Crucible blast, however, an Asari scout corvette returned to their home system, only to discover that their civilization had collapsed into anarchy and barbarism.</p>
+        <p>She studied a few images, depicting birds-eye views of their once-great cities of towering, needle-like spires and colossal, glittering pyramids. Now, many of them were burning husks of their former selves, in which warlords waged endless conflicts for resources and territory.</p>
+        <p>Apparently, millions of Raloi have already died of starvation, and thousands more perished every day in the wars brought about by the collapse of their planet&#x27;s nations.</p>
+        <p>She froze. Closing her eye, she clenched her fists and jaw, then huffed through her nose. An icy pain grew in her chest and racked her heart and lungs, slowly squeezing the breath out of her lungs.</p>
+        <p>Were EDI and the Geth not enough?</p>
+        <p>She took a deep breath and a dreadful weight bore down on every fiber of her being.</p>
+        <p>God, just how much had she sacrificed to destroy the Reapers?</p>
+        <p>She opened up the next report, which concerned the fate of the Virtual Aliens. About ten thousand years ago, the Virtual Aliens were known as the Dhin&#x27;Jaah, a species of six-limbed aliens with barrel-shaped torsos, fish-like skin, and bulbous heads abound with eyes and tentacles.</p>
+        <p>At one point in their history, they discovered that their home system&#x27;s star was about to go supernova. And apparently, they escaped extinction by digitizing their minds and uploading them into simulations within hundreds of advanced quantum computers, aboard five colossal starships about three times as big and powerful as the Destiny Ascension.</p>
+        <p>A few years before the Reaper War, the AI piloting of one of those starships established diplomatic contact with the Citadel Council, seeking a replacement for the power source maintaining one of the Dhin&#x27;Jaah&#x27;s virtual worlds. After much debate, the Citadel Council agreed to help them, in exchange for some of their advanced technology, but kept their existence classified.</p>
+        <p>Just before the Reaper War, the Virtual Aliens vanished. But later, shortly after the major relays came back online, a salarian scout squadron rediscovered their ships, only to find them completely empty and lifeless, as little more than debris drifting endlessly through the void of space. Aboard them, every computer was blackened and fried, and the simulations containing billions of Dhin&#x27;Jaah were no more.</p>
+        <p>Her stomach lurched. Her heart raced, and she couldn&#x27;t breathe. Closing her eye, she took a deep breath, and tears streamed down her cheeks.</p>
+        <p>So not only had she caused the collapse of Raloi civilization, but she had also murdered EDI and genocided the Geth, the Dhin&#x27;Jaah, and anything like them.</p>
+        <p>God, just how many civilizations had her decision destroyed?</p>
+        <p>With every ounce of willpower within her, she forced herself to read the next report, which concerned the fate of the Kwi&#x27;Voth. Before the Reaper War, the Kwi&#x27;Voth were a hyper-advanced race confined to a single star system. Like the Dhin&#x27;Jaah, they had also digitized their minds, but had uploaded them into a simulation within a Star-Brain, within an impossibly vast computer encasing their home system&#x27;s star. Evidently, they could also download their minds into nano-technological, synthetic bodies inhabiting their home system&#x27;s eight solid planets. Each of those planets was covered in a world-spanning city or factory, with spires dwarfing any skyscraper on Illium or Thessia.</p>
+        <p>She studied a diagram of the nano-technological bodies with which Kwi&#x27;Voth used to interact with the physical world. And they were faceless humanoids over three meters tall with mirror-like skin, and inhumanly long limbs ending with tridactyl hands and feet.</p>
+        <p>Despite their technological might, the Kwi&#x27;Voth never bothered to discover means of traveling and communicating faster than light, nor ever desired to expand beyond their single star system. Apparently, they were also staunch isolationists, who wanted nothing to do with aliens, and had barely tolerated the &#x27;intruders&#x27; who discovered them, shortly before the Reaper War.</p>
+        <p>After the Crucible blast, an asari scout frigate went to check up on them, only to discover that their home system&#x27;s star had gone supernova, that the Kwi&#x27;Voth and their eons-old civilization had been wiped from existence.</p>
+        <p>She leaned forward and put her elbows on the desk, her head in her hands as she stared at the ground, her eye wide, her mouth open.</p>
+        <p>What have I done?</p>
+        <p>Yes, she was the worst monster in galactic history, the doom of perhaps hundreds of innocent civilizations. And yet everyone was calling her a hero – treating her like some damned messiah! She slammed her fist into the desk. Squinting her eye, she pinched the bridge of her nose, as hot tears streamed down her cheek. She took a ragged, deep breath, then leaned back into her chair. Every second, an ice-cold pressure crushed her heart and lungs.</p>
+        <p>Was this why she hadn&#x27;t heard even a whisper from the Normandy? For once, had fate decided to be just and punish her with what she deserved?</p>
+        <p>Yes, perhaps she didn&#x27;t deserve to see her saera again. Perhaps she didn&#x27;t deserve to enjoy a quiet, peaceful retirement. Perhaps she deserved to die, and the only reason she&#x27;d survived was so she could suffer the rest of her life alone, as a fucking cripple, haunted by the vengeful spirits of her countless victims.</p>
+        <p>&quot;It is the ideal solution…&quot;</p>
+        <p>Briefly, she looked back to the Catalyst, and the avatar it had chosen in some petty attempt to emotionally manipulate her. Her blood boiled when she remembered its arrogant, self-righteous attitude.</p>
+        <p>Yes, it would be laughing at her right now. It would be reveling in her misery, taking such pride that she had chosen the &#x27;worst&#x27; solution.</p>
+        <p>&quot;Your children will build synthetics…&quot;</p>
+        <p>Huffing through her nose, she clenched her fists and jaw, gritting her teeth. More and more, her body tensed up.</p>
+        <p>&quot;...and the chaos will come back.&quot;</p>
+        <p>Again, she slammed her fists into the desk.</p>
+        <p>NO!</p>
+        <p>The Catalyst would not get the last laugh!</p>
+        <p>She would not allow her guilt to consume her, for none of this was her fault anyway. Yes, the Catalyst had forced her to genocide the Geth, Kwi&#x27;Voth, and the Dhin&#x27;Jaah, the same way the Illusive Man had forced her to shoot Anderson.</p>
+        <p>Their ghosts may haunt her for the rest of her life, but ultimately there was no use in despairing over what she couldn&#x27;t change, over what she couldn&#x27;t undo. She had made her decision, and now she would use her pain for something productive.</p>
+        <p>Yes, for once, she would make use of her fame, and write and publish a treatise condemning the Catalyst. In it, she would champion the quarians and the geth as proof that its insane solution was wrong, that synthetics and organics were more than capable of coexisting, of thriving under the right circumstances.</p>
+        <p>Just then, she heard someone shouting her name just outside her office. Oh, what now? Reining in her emotions, she grabbed her cane, then stepped outside, only to spot Kasumi sprinting towards her.</p>
+        <p>&quot;SHEP!&quot;</p>
+        <p>She held up her hand to stop Kasumi, who stopped before her, catching her breath. What had her this excited?</p>
+        <p>&quot;Easy there,&quot; she said, &quot;take a deep breath, then tell me what happened.&quot;</p>
+        <p>She took a deep breath. &quot;The Normandy, it&#x27;s…it&#x27;s here. Spacedock control just cleared it for landing.&quot;</p>
+    </div>
+</body>
+</html>

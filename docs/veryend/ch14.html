@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 11</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch13.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html" selected>Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch15.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 11</h1>
+    <div class="chapter-content">
+        <p>Shepard awoke in the darkness of her cabin, with the blue glow of her empty fish tank as the only light source. Tali was lying right beside her, with her head on Shepard&#x27;s chest, letting out an adorable, trilling hum with every rise and fall of her chest. Shepard smiled.</p>
+        <p>I could get used to this.</p>
+        <p>Yes, she wanted to wake up like this every day. Now, she wouldn&#x27;t dare move until Tali awoke and found Shepard next to her, just like she&#x27;d promised.</p>
+        <p>So how could she pass the time?</p>
+        <p>She opened up a window on her omni-tool and checked the time. Apparently, it was half-past eleven in the morning. Next, she opened up her inbox and found Admiral Hackett&#x27;s reply to the message she had sent him yesterday.</p>
+        <p>Dear Admiral Shepard,</p>
+        <p>I understand. The supervisor of camp two will make a more than worthy replacement. I wish you the best in whatever you choose to do with your retirement.</p>
+        <p>Sincerely,</p>
+        <p>Admiral Steven Hackett.</p>
+        <p>She let out a contented sigh. Yes, now, she was a civilian. She no longer had any obligations to humanity and was free to spend her retirement however she wished. So today, she&#x27;d better meet up with Shala and settle whatever issue she wanted to discuss in private.</p>
+        <p>On her omni-tool, she began to type out a message addressed to her.</p>
+        <p>Dear Admiral Raan,</p>
+        <p>The last time we saw each other, you said you wanted to speak with me in private. So today, when are you soonest available?</p>
+        <p>Seconds later, a message appeared in her inbox. It was from Shala.</p>
+        <p>Dear Admiral Shepard,</p>
+        <p>An hour from now, a shuttle will be waiting for you at landing pad A-23, ready to take you aboard the MFV Kelek&#x27;Miin. Please do not keep the pilot waiting.</p>
+        <p>Keelah Se&#x27;lai.</p>
+        <p>She closed her omni-tool, then took a deep breath. Again, she looked at Tali, and her cute, little nose twitched before she nuzzled into her further, gripping Shepard&#x27;s ankle with one of her feet.</p>
+        <p>&quot;You are the greatest, most wonderful thing to have ever come into my life. As long as I have you, I don&#x27;t need anyone or anything else.&quot;</p>
+        <p>&quot;Not even Rannoch?&quot;</p>
+        <p>&quot;Not even Rannoch…&quot;</p>
+        <p>She smiled. Still, she was reeling from that exchange, from how it blew her away and filled her heart with indescribable peace and joy. She had no doubt that Tali meant every single word, that she loved her unconditionally, more than anyone or anything in the galaxy.</p>
+        <p>So damn it, why couldn&#x27;t she just confess?</p>
+        <p>What was holding her back?</p>
+        <p>Suddenly, Tali stirred. She opened her big, beautiful eyes, and yawned before meeting Shepard&#x27;s gaze. She smiled, and a warm, euphoric sensation bloomed in Shepard&#x27;s chest. God, she&#x27;s beautiful.</p>
+        <p>&quot;Good morning, beautiful,&quot; she said. &quot;Sleep well?&quot;</p>
+        <p>Tali giggled. &quot;Oh, more than well,&quot; she kissed her, &quot;that was the best sleep I&#x27;ve had in months.&quot;</p>
+        <p>Shepard smiled, then began stroking Tali&#x27;s cheek. &quot;I&#x27;m glad. After everything you&#x27;ve been through, you deserve nothing less.&quot; She let out another contented sigh. God, she could lay like this forever. She didn&#x27;t want to get out of bed. &quot;So…about Shala. Why do you think she wants to speak with me in private.&quot;</p>
+        <p>Tali sighed. &quot;She wants to test you, to gauge exactly how you feel about me. Still, she doubts that our bond is real, that you love me just as much as any quarian male caught in Silz&#x27;asul felz.&quot;</p>
+        <p>She gulped. Yes, she could see where Shala was coming from. Caught in Silz&#x27;asul felz, the eternal dance of souls, quarians were easy to take advantage of. Theoretically, any alien could abuse their quarian partner as much as they liked, and that quarian would do nothing about it, except blame themself.</p>
+        <p>She pursed her lips. &quot;Do you think she, or others, might try to separate us?&quot;</p>
+        <p>&quot;No,&quot; she said, &quot;my auntie is no fool. She knows I would never forgive her if she ever tried to do something like that. And I have no doubt that you&#x27;ll convince her our bond is real. But whatever happens after that…never forget that my home is – and always will be – with you.&quot;</p>
+        <p>Shepard kissed her soft lips, then smiled. Tali had so much faith in her. No matter what, she would not let Tali down. &quot;And mine will always be with you.&quot;</p>
+        <p>Briefly, she checked the time on her omni-tool. The shuttle would arrive in about forty-five minutes. &quot;Just minutes ago, she sent me a message, saying a shuttle would arrive soon to take me to her flagship.&quot; She sighed. &quot;So I guess I&#x27;d better get ready.&quot;</p>
+        <p>She sat up and was about to get out of bed. But just as her feet touched the floor, Tali wrapped her arms around Shepard&#x27;s waist and rested her chin on the commander&#x27;s shoulder. &quot;No, please,&quot; she said. &quot;Just lie with me a little while longer.&quot;</p>
+        <p>Shepard laughed. &quot;As much as I&#x27;d love to, you know I can&#x27;t keep your auntie waiting. It&#x27;s unprofessional.&quot;</p>
+        <p>&quot;To Shlak with being professional.&quot; Tali kissed Shepard&#x27;s shoulder. &quot;My auntie can wait.&quot;</p>
+        <p>&quot;Tali, I–&quot;</p>
+        <p>&quot;Oh, come on, Jane.&quot;</p>
+        <p>She kissed Shepard&#x27;s neck. &quot;You&#x27;re so warm.&quot; She kissed it again. &quot;You smell so good, and we&#x27;ll have to wait so long before can do this again.&quot;</p>
+        <p>She sang her heelrou, whilst kissing and licking Shepard&#x27;s neck, her breasts flush against the commander&#x27;s back. And already, heat was gathering between Shepard&#x27;s thighs.</p>
+        <p>Indeed, Tali did have a point. For the next week or so, the Normandy would be swarming with repair teams. With resources so scarce and stretched so thin, they might have to wait weeks before they could make love again in another clean room.</p>
+        <p>Oh, what the hell. Shepard faced her, and they began exchanging kisses, their lips smacking, their tongues playing. Closing her eye and humming with bliss, she cupped Tali&#x27;s neck, then gently pushed her back onto the bed.</p>
+        <p>Yeah, Shala could wait.</p>
+        <p>Admiral Shala&#x27;Raan sat in her office on the MFV Kelek&#x27;Miin, listening to Kel&#x27;Shaiso&#x27;s third symphony, whilst reading Zaal&#x27;s latest report on the rebuilding efforts on Rannoch. Apparently, things were going smoothly, despite the Geth&#x27;s sudden and unexpected demise. In just over a year, the fleet&#x27;s entire civilian population should be settled into the old planetary capital, Catyn, which the Geth had maintained for centuries as a memorial. She sighed. They never hated us. Yes, their help in the rebuilding process would have been invaluable, and they could have provided her people protection when still they were so weak and vulnerable.</p>
+        <p>Weak and vulnerable...</p>
+        <p>She clenched her fists. By the ancestors, that would not remain so!</p>
+        <p>One day, the quarian people would regain the glory and grandeur of the old Veil Republic.</p>
+        <p>Her omni-tool beeped, receiving an incoming comm-request from the adjutant she&#x27;d sent to bring Admiral Shepard onto her flagship. She answered it.</p>
+        <p>&quot;Has she arrived?&quot; she asked. For some reason, Shepard was late, even though she&#x27;d asked her not to keep the shuttle pilot waiting. Keelah, she&#x27;d better have a good explanation.</p>
+        <p>&quot;She has, Admiral,&quot; her adjutant said, &quot;she&#x27;ll arrive in your office shortly.&quot;</p>
+        <p>&quot;Why is she late?&quot;</p>
+        <p>&quot;I&#x27;m not sure. She only said that Tali&#x27;Zorah kept her…occupied for longer than expected. But I have my suspicions.&quot;</p>
+        <p>&quot;What suspicions?&quot;</p>
+        <p>&quot;There were bite marks on her neck.&quot;</p>
+        <p>&quot;What are you insinuating?&quot;</p>
+        <p>Her adjutant sighed. &quot;Are the rumors true? Tali&#x27;Zorah, has she bonded to her human Captain? Do they walk in life as one?&quot;</p>
+        <p>&quot;That remains to be seen,&quot; she said. Ancestors, was this Tali&#x27;s childish way of defying her, of proving that quarians could join with humans and adapt to them safely? How else could Shepard have gotten bite marks on her neck? &quot;For now, keep your suspicions to yourself and speak nothing of this. Is that understood?&quot;</p>
+        <p>&quot;Understood, Admiral.&quot;</p>
+        <p>&quot;Good.&quot; She ended the call, then slumped into her chair.</p>
+        <p>In preparation for this meeting, she&#x27;d done as much research as she could on humans with the recently restored planetary intranet, trying to discern whether it was truly possible for a human and a quarian to walk in life together as one.</p>
+        <p>Admittedly, she could see why Tali would have been curious about such a notion, at least when it came to physical intimacy. Like quarians, humans evolved from tree-climbing mammals. Indeed, the praimaets of Earth had much in common with the khalaero of Rannoch. So unsurprisingly, humans were not so alien anatomically. Their genitalia were compatible with those of quarians, and many humans were far from ugly or repulsive. Indeed, during Tali&#x27;s trial, she&#x27;d caught more than a few unbonded fleet sisters – and even Admiral Xen – staring at Shepard, as though she was some exotic, forbidden delight.</p>
+        <p>She sighed. If Shepard and Tali had truly linked suits, and completed the week of seclusion, then clearly humans and quarians faced no insurmountable barriers to physical intimacy.</p>
+        <p>But what about emotional intimacy, the pathways to the mind, the heart, and then the soul?</p>
+        <p>Undoubtedly, Tali was bonded to Shepard, caught in Silz&#x27;asul felz. No sane quarian would have risked illness for just a kiss, unless that kiss was for their lifemate. Indeed, if she had been in Tali&#x27;s situation, torn away from her beloved Garu for so long, she would have reacted the same way. As soon as possible, she would have dragged him to the nearest clean room, and joined with him, until they were both sweating and panting in each other&#x27;s arms.</p>
+        <p>Indeed, the true enigma here was Shepard. Ancestors, how exactly did she feel about Tali?</p>
+        <p>From her actions alone, she clearly loved Tali deeply and powerfully. But would her feelings change? If forced to choose between Tali and her duty to humanity, would she choose the latter?</p>
+        <p>She had no idea.</p>
+        <p>Humans were so unpredictable, with utterly alien courtship and bonding practices. Yes, although most humans seemed to be monogamous like quarians, they rarely stayed with one mate for life. Often, human couples unbonded and separated in a terrible ritual called deevorse. And often, they struck or betrayed each other for reasons she couldn&#x27;t comprehend.</p>
+        <p>Keelah. One day, would Admiral Shepard strike and betray Tali before demanding the deevorse ritual? Or would she behave differently, like those humans who stayed with one mate for life?</p>
+        <p>She let out a frustrated sigh. Ancestors, the more she tried to understand human bonding, the less it made sense. Tali, you naive, foolish child. What have you gotten yourself into?</p>
+        <p>Hopefully, Shepard would clarify things.</p>
+        <p>A few minutes later, Shepard stepped into her office, flanked by two armed escorts. Even in her current condition, she carried herself with such confidence and authority, as though her injuries were only a slight inconvenience. Shala gestured for the escorts to leave, and they nodded and complied.</p>
+        <p>Once they left, she cleared her throat. &quot;Admiral Shepard. How good of you to arrive.&quot;</p>
+        <p>&quot;The pleasure is mine, Shala,&quot; Shepard said, taking a seat, &quot;Sorry for being so late. Tali, she kept me–&quot;</p>
+        <p>&quot;Occupied for longer than expected?&quot; She tilted her head. &quot;Hhhm, I wonder what you were doing, especially given the bite marks on your neck.&quot;</p>
+        <p>Shepard&#x27;s eyes widened and she blushed before looking away. She gulped, then cleared her throat before meeting Shala&#x27;s gaze once more. &quot;Tell me…uhm…this music. What is it? I&#x27;ve never heard anything quite like it&quot;</p>
+        <p>She laughed. Unlike most aliens, humans were easy to read. Their body language cues were not so different than those of quarians. &quot;Oh, no need to be embarrassed, Shepard. It is only natural that Tali would smother you with affection, after all that she&#x27;d suffered. But to answer your question, this music is a timeless piece over three thousand years old, composed just shortly after my people developed radio-wave communications. It is among the few pieces of our art to have survived the Morning War.&quot;</p>
+        <p>&quot;Like the Zendaerias?&quot;</p>
+        <p>She smiled. Keelah, of course Tali would tell Shepard about it. But does Shepard understand what it means? &quot;Ah, so I see Tali has told you about it.&quot;</p>
+        <p>&quot;She has,&quot; Shepard said. &quot;I know it&#x27;s a timeless masterpiece among your people about the power of Silz&#x27;asul felz, about how it compelled Zhoru&#x27;Trosk to unite the southern clans and topple the Krael empire. Someday, I&#x27;d love to read it. But I&#x27;m sure you didn&#x27;t bring me here so we could discuss quarian art.&quot;</p>
+        <p>She smiled. Impressive. Tali had educated Shepard well. &quot;Indeed, I haven&#x27;t.&quot; She took a deep breath. Ancestors, how to begin? &quot;Shepard, allow me to preface this discussion by telling you that I – and many others – consider you to be the greatest friend of the quarian people. Time and time again, you&#x27;ve gone out of your way to help us. And we will never forget your role in reclaiming the homeworld, that if not for you, the quarian people would be extinct.&quot; She leaned forward and put her hands on her desk. &quot;So I believe you&#x27;ve more than earned a chance to explain yourself.&quot;</p>
+        <p>Shepard&#x27;s brow furrowed. She looked tense, as if preparing to defend herself. &quot;To explain myself?&quot;</p>
+        <p>&quot;Calm yourself,&quot; she said. &quot;This is not a trial or an interrogation. I only wish to understand.&quot;</p>
+        <p>&quot;Understand what?&quot;</p>
+        <p>She cleared her throat. &quot;Tell me, out of all the human and asari women you could have chosen as a mate, why pick one of our own, somebody who could never give you children, much less kiss you outside a clean room without becoming ill or succumbing to an allergic reaction?&quot; She tilted her head. &quot;Your actions baffle me. Keelah, what makes Tali special enough to be worth dying for, to be worth what you did for her on Haestrom, at the trial, and on Rannoch itself?&quot;</p>
+        <p>For a moment, Shepard remained silent, looking pensive, as though thinking about what she was going to say next. Soon, she took a deep breath, then met Shala&#x27;s gaze. &quot;Admiral, I think it&#x27;s only natural that you&#x27;d be concerned about an alien trying to bond with one of your own. I wouldn&#x27;t blame you for thinking that it could never happen, that I could never love her as deeply and as powerfully as another quarian. But let me give you my perspective.&quot;</p>
+        <p>She took a deep breath through her nose. &quot;The answer to your question is simple, Shala.&quot; She leaned forward, giving Shala strong eye contact. &quot;Tali means that much to me because she made life worth living again. Without her, I never would have relearned how to trust or love somebody. I never would have defeated Saren, the Collectors, or the Reapers because, honestly, the stress would have fucking broken me. Through it all, she was the one thing that kept me going – and nobody could ever love me the way she does. Nobody! I&#x27;d rather die alone than be with somebody else!&quot;</p>
+        <p>Shala recoiled and her eyes went wide. Shepard had spoken those words with the same passion, the same ferocity with which she had defended Tali during Tali&#x27;s trial. Keelah, even now, it was a sight to behold.</p>
+        <p>Shepard took a deep breath. &quot;Becoming her lifemate, Shala, has been the greatest experience of my life, one I wouldn&#x27;t trade for anything.&quot; She let out a weak laugh, and her eyes looked wet with tears. &quot;Frankly, it&#x27;s all been so overwhelming.&quot;</p>
+        <p>Shala tilted her head. &quot;Overwhelming?&quot;</p>
+        <p>&quot;Yes,&quot; she said, &quot;overwhelming. No species loves more deeply, more powerfully, and more selflessly than quarians. And I have no doubt that many of my kind would find yours more desirable than asari if they knew that.&quot;</p>
+        <p>Shala&#x27;s eyes went wide, and her mouth fell open. Ancestors, did Shepard truly just say that? &quot;Us? More desirable than asari?&quot;</p>
+        <p>&quot;Yes,&quot; she said, &quot;because what&#x27;s normal for your kind – the boundless, unconditional love between two lifemates – is a naive fantasy to mine.&quot;</p>
+        <p>&quot;A naive fantasy?&quot; she asked. &quot;I don&#x27;t understand, Shepard. If that&#x27;s the case, then why do so many human bondmates strike and betray each other? Why do so many unbond and separate in the terrible ritual of deevorse? Keelah, is it normal amongst humans for your actions to contradict your desires?&quot;</p>
+        <p>Briefly, Shepard looked away and sighed. &quot;One thing you need to understand, Shala, is that just because two humans are married does not mean that they are bonded.&quot;</p>
+        <p>Inwardly, she groaned. Oh ancestors, help me. Could this get any more confusing? &quot;Then mayruyez, what are they for? What is the relationship between the huzbend and the wyfe?&quot;</p>
+        <p>&quot;Human marriages,&quot; Shepard said, &quot;are nothing like quarian bondings. I hate to say this, but often, they have nothing to do with love. They&#x27;re really just contracts between human families meant to combine resources and to form new social connections.&quot;</p>
+        <p>&quot;So a huzbend and a wyfe, are they more like partners in business than actual bondmates?&quot;</p>
+        <p>&quot;Sadly yes,&quot; Shepard said. &quot;That&#x27;s often the case. A lot of husbands and wives are like business partners obligated to reproduce and raise children.&quot; Briefly, she looked away and let out a weak laugh. &quot;Growing up, I was a very, very lucky girl to have parents that actually loved each other.&quot;</p>
+        <p>She leaned back into her chair and put one hand on her mask. Keelah, no wonder so many human huzbends and wyfes struck and betrayed each other. More often than not, mayreed human couples shared no bond, and the deevorse ritual was an escape from the prison in which they had jailed themselves. But ancestors, why do humans trap themselves in such prisons in the first place? And why were couples like Shepard&#x27;s parents the exception and not the norm? &quot;Shepard, I must apologize, but still I&#x27;m struggling to grasp such an…alien kind of relationship, why two people would ever put themselves in such a situation.&quot;</p>
+        <p>Shepard sighed. &quot;Ok. Think of it this way.&quot; She cleared her throat. &quot;First, I assume you&#x27;re bonded, right?&quot;</p>
+        <p>&quot;I am,&quot; she said. How is this relevant? &quot;I&#x27;ve been with my beloved Garu for thirty-two years. He&#x27;s on this ship right now.&quot;</p>
+        <p>Shepard nodded. &quot;Now imagine if you were forced to abandon him. Imagine if you had to live the rest of your life with somebody you didn&#x27;t love, say Admiral Han&#x27;Gerrel, and give him children. All because your clans believed that your &#x27;arrangement&#x27; brought them political benefits more important than your personal desires.&quot;</p>
+        <p>Her eyes went wide as she looked at the ground. Just the thought of that scenario sent a terrible chill through her insides. Yes, trapped in such a nightmare, with no hope of ever seeing her beloved Garu ever again, the agony of Felz&#x27;elt would consume her. The pain would be unbearable and she would kill herself.</p>
+        <p>&quot;That,&quot; Shepard said, &quot;is what the worst marriages are like, and sadly…many humans are trapped in ones not much better, with no escape.&quot;</p>
+        <p>&quot;Keelah…&quot; For a moment, she looked at the ground. &quot;How have most humans not died of loneliness? Why do they torture themselves by mayring somebody with whom they share no bond? And why do so few of them walk in life with somebody who truly completes them? It&#x27;s…tragic, Shepard. Tragic.&quot;</p>
+        <p>&quot;It is,&quot; Shepard said. &quot;Many, many humans are desperately lonely and fantasize every day about having a soulmate.&quot; Briefly, she broke eye contact, then pursed her lips. &quot;Unfortunately, many learn the hard way that real people are flawed and constantly change, that almost nobody is like the soulmate they always imagined.&quot; She sighed. &quot;Often, they&#x27;ll have no choice but to settle for somebody…less than ideal, and they&#x27;ll only end up resenting that person for being so imperfect.&quot;</p>
+        <p>&quot;And Tali,&quot; she said, &quot;is she like this &#x27;unattainable saera&#x27; you&#x27;ve always imagined?&quot;</p>
+        <p>&quot;Yes,&quot; Shepard said. &quot;I will never meet anyone better.&quot;</p>
+        <p>Keelah. Now, everything made sense. Humans, in their relentless drive to seek perfection in all things, only made themselves miserable.</p>
+        <p>But what about her shortcomings? Did Shepard tolerate or accept them? &quot;You don&#x27;t mind that she can&#x27;t give you children? That you can&#x27;t kiss or join with her outside a cleanroom?&quot;</p>
+        <p>&quot;Don&#x27;t make the mistake of thinking that I&#x27;m just tolerating her flaws and alien differences,&quot; Shepard said. &quot;No. I love and accept them just like she loves and accepts mine.&quot;</p>
+        <p>Shala smiled. Good. Shepard&#x27;s answer to her next question would tell her everything else she needed to know. &quot;Now, for my next question, I need you to be completely honest with me.&quot;</p>
+        <p>Shepard nodded. &quot;Very well.&quot;</p>
+        <p>She took a deep breath. &quot;Hypothetically, suppose that our species became mortal enemies, and that you&#x27;ve been forced into a situation in which you had to choose between either Tali or your duty to humanity.&quot; She tilted her head. &quot;What is your decision?&quot;</p>
+        <p>&quot;I would choose Tali.&quot;</p>
+        <p>Her eyes went wide and her mouth fell open. Shepard didn&#x27;t even hesitate! &quot;You…you would betray your own species?&quot;</p>
+        <p>&quot;Tali would do the same for me, Shala,&quot; Shepard said. &quot;You know that.&quot;</p>
+        <p>&quot;True,&quot; she conceded, looking at the ground. Caught in Silz&#x27;asul felz, it was normal for quarians to make such extreme decisions. &quot;But what if choosing Tali only led to your death? To humans everywhere condemning you as a traitor?&quot;</p>
+        <p>&quot;I would still choose Tali.&quot;</p>
+        <p>&quot;Why?&quot;</p>
+        <p>&quot;Because at least then I&#x27;d die with no regrets.&quot;</p>
+        <p>&quot;So it seems Kal&#x27;s praise for you was not unfounded.&quot; Smiling, she leaned forward and entwined her fingers on the desk. Shepard truly is like Zhoru&#x27;Trosk reborn as a human. &quot;Yes, in your own human way, I believe you&#x27;ve bonded to her, that you&#x27;re caught in something akin to Silz&#x27;asul felz.&quot; She sighed. &quot;Tell me, though…what are your future plans?&quot;</p>
+        <p>&quot;Now that I&#x27;m retired,&quot; Shepard said, &quot;and no longer have any responsibilities to humanity or the Alliance, all I want is to live the rest of my life with my beloved on Rannoch, helping your people rediscover and rebuild everything you&#x27;ve lost. That is…if you&#x27;ll allow me.&quot;</p>
+        <p>She sat back in her chair. &quot;We&#x27;d be more than happy to have you, Shepard. Until we return to Rannoch, however, I&#x27;d better contact Admiral Korris, and tell him to secure you a plot of land for a house. After that, I&#x27;d still have to find you a jeweler willing to make you a pal&#x27;tec vis surden.&quot;</p>
+        <p>Shepard tilted her head.&quot;I&#x27;m sorry, a pal&#x27;tec vis surden?&quot;</p>
+        <p>&quot;Ah,&quot; she said, &quot;it seems Tali told you nothing about it. Yes, in all likelihood, she believed we&#x27;d never accept your bond as genuine, and saw no use in ever mentioning it.&quot;</p>
+        <p>&quot;What is it?&quot;</p>
+        <p>&quot;In your human Inglish,&quot; she said, &quot;it roughly translates as &#x27;symbol of bonding&#x27;. It&#x27;s not too different than one of the ceremonial rings humans exchange during mayruyez.&quot;</p>
+        <p>Shepard&#x27;s eyes widened in realization. &quot;Oh, I see.&quot;</p>
+        <p>&quot;Anyways,&quot; she said, &quot;both the jeweler and Admiral Korris should contact you soon. After you provide them with any specifications you desire, both your new home and your pal&#x27;tec vis surden should be ready by the time we return to Rannoch. There, I&#x27;ll conduct you and Tali&#x27;s bonding ceremony.&quot;</p>
+        <p>&quot;That&#x27;s excellent, Shala,&quot; Shepard said. Smiling, she stood up. &quot;So I suppose everything has been settled then.&quot;</p>
+        <p>&quot;It has,&quot; she said, standing up. She extended her hand for a handshake, the traditional human greeting. And Shepard accepted it. &quot;Take care, Shepard. May the ancestors be with you.&quot;</p>
+        <p>Shepard nodded. &quot;And to you as well.&quot;</p>
+        <p>With that, Shepard left her office. In the ensuing silence, she sat back in her chair and sighed. Keelah, when news broke out that Tali&#x27;Zorah, the Reclaimer herself, had entered Silz&#x27;asul felz with Jane Shepard, the great savior of the galaxy, how would the quarian people react? And what would this historic bond mean for the future of human-quarian relations?</p>
+        <p>Only time would tell.</p>
+        <p>But whatever happened, one thing was certain.</p>
+        <p>She – and all of Clan Raan – would support them wholeheartedly.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch12.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html" selected>Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch14.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 10</h1>
+    <div class="chapter-content">
+        <p>Jane Shepard was sitting at the Normandy&#x27;s mess hall table, drumming her fingers on its surface, when Tali put her hand on Shepard&#x27;s thigh.</p>
+        <p>&quot;So there I was,&quot; Garrus said, &quot;firing shot after shot at the nastiest pack of those red-furred…&quot;</p>
+        <p>She stopped listening to Garrus&#x27; hunting story and looked at Tali. Tali was sitting right beside her, and Shepard&#x27;s heart turned to mush at the way she was looking at her. Even now, over an hour and a half since the ship had landed, she kept staring at Shepard, as if awestruck by her presence. She had never been further than an arm&#x27;s length away and kept touching her, as though confirming that she was real.</p>
+        <p>Her free hand met the one Tali had placed on Shepard&#x27;s thigh, and she gave it a gentle squeeze.</p>
+        <p>&quot;I wrestled with the pack leader,&quot; James continued, &quot;and the pendejo kept snarling and growling, trying…&quot;</p>
+        <p>She was only partially listening. But still, she couldn&#x27;t help but marvel that her crew had survived for over three months on an alien world, having to hunt and forage like ancient hunter-gatherers. It couldn&#x27;t have been easy.</p>
+        <p>And her beloved…</p>
+        <p>Her heart broke at the thought of how much Tali must have suffered, of how she had believed Shepard was dead but chose to live on, racked with crippling psychological pain.</p>
+        <p>How did she ever cope?</p>
+        <p>There was so much she wanted to say to Tali.</p>
+        <p>But If only they could get some time alone.</p>
+        <p>Tali caressed Shepard&#x27;s thigh, and she smiled. God, she couldn&#x27;t wait to get to Rannoch and set up their new life. She couldn&#x27;t wait to wake up every morning to Tali&#x27;s heelrou and find her nuzzled right beside her.</p>
+        <p>So perhaps she should take her first steps towards making that future a reality.</p>
+        <p>She stood up. &quot;If you&#x27;ll excuse me, I have to use the bathroom.&quot; Tali looked at her, longingly, and began to wring her hands. &quot;I&#x27;ll be back in no time,&quot; she whispered into an audio receptor of Tali&#x27;s helmet.</p>
+        <p>And then she made her way to the bathroom.</p>
+        <p>&quot;What&#x27;s the matter, Tali?&quot; she heard Garrus ask on the way there. &quot;Can&#x27;t handle a whole minute without her?&quot;</p>
+        <p>Tali scoffed. &quot;Remember Garrus, I have a shotgun.&quot;</p>
+        <p>Soon, she entered the bathroom and locked herself within the nearest stall before sitting on the toilet. She then opened a window on her omni-tool and began typing out a message addressed to Admiral Hackett.</p>
+        <p>Dear Admiral Hackett,</p>
+        <p>Circumstances have changed. Just over ninety minutes ago, the SSV Normandy docked at the London spaceport, and it turns out my crew survived their ordeal unharmed. So as inconvenient as this might be, I will be resigning as prefect of camps one through six effective immediately. The supervisor of camp two is a hard-working and very competent individual, so he will make a more than worthy replacement.</p>
+        <p>I hope you understand.</p>
+        <p>Best Regards,</p>
+        <p>Ret. Admiral Jane Shepard.</p>
+        <p>She pressed send, then left the bathroom and went back into the mess hall. There, she took her seat beside Tali. And for the next half hour or so, she listened to more of her crew&#x27;s experiences on that alien world, about their numerous hunting expeditions, about how the Normandy&#x27;s plumbing had failed, and everyone had to wash with buckets of water collected from the river and the nearest streams.</p>
+        <p>Eventually, Ashley yawned. Yes, now was the time to wrap this up.</p>
+        <p>&quot;Well anyways,&quot; she said, standing up, &quot;it&#x27;s getting late. After everything you&#x27;ve been through, I&#x27;m sure all of you are just dying for a hot meal and a comfy bed.&quot;</p>
+        <p>Ashley laughed. &quot;Damn right, skipper.&quot;</p>
+        <p>&quot;There will be plenty of time to catch up more in the morning.&quot; Her gaze met Tali&#x27;s, and she didn&#x27;t need to say anything. Without hesitation, Tali followed her towards the elevator and Shepard wrapped one arm around her waist. As they waited for the elevator to arrive, she pulled Tali close to her, and Tali began to make heelrou.</p>
+        <p>She smiled. &quot;I know you&#x27;re excited. But already, Miss Vas Normandy?&quot;</p>
+        <p>Tali giggled. &quot;Oh, shut up, you bosh&#x27;tet.&quot;</p>
+        <p>The elevator arrived, and they stepped within. On the brief way up to deck one, Tali nuzzled into her, and a warm, euphoric sensation filled her chest. Adrenaline rushed through her veins in sheer anticipation for the moments to come.</p>
+        <p>When the elevator arrived on deck one, they stepped outside. The decontamination unit initialized, and seemed to take forever to rid them of foreign contaminants. But eventually, it ended. Then she and her saera entered their cabin.</p>
+        <p>&quot;Aaah,&quot; she said, taking off her coat. At the same time, a hiss filled the air, as Tali took off her mask, &quot;home sweet home.&quot;</p>
+        <p>She glanced at her fish tank, and just like Garrus had said, it was empty. The crew had eaten every fish within when levo food stores had run out.</p>
+        <p>She stepped down the small staircase, towards the foot of her bed. &quot;Everything looks just like how I left it.&quot; She sat on the bed and took off her socks and shoes, only to hear a weak sob.</p>
+        <p>Her attention snapped to Tali, and tears were streaming down her cheeks.</p>
+        <p>&quot;Tali?&quot; she asked softly. Why was she crying? Did it have to do with the pain she had suffered during their separation? &quot;Tali, are you okay?&quot;</p>
+        <p>Tali looked at her and smiled. &quot;Oh, I…I&#x27;m sorry, Jane. I&#x27;m fine. It&#x27;s just…&quot;</p>
+        <p>Shepard stood up and approached Tali. Looking deeply into her eyes, she held her close with one hand and stroked her cheek with the other, wiping away her tears. &quot;It&#x27;s just what?&quot;</p>
+        <p>Tali let out a joyful sob and leaned into her touch. &quot;All of this, everything that&#x27;s happened in the past few hours, it still feels so…so surreal. Just days ago, I was convinced we&#x27;d never share this cabin again, that I&#x27;d have to live on as only half a person. And yet here we are, with the worst finally behind us. Even now, I can&#x27;t help but wonder if I&#x27;d died and finally found you amongst the ancestors.&quot;</p>
+        <p>Shepard kissed her, then rested her forehead against hers. Their noses touched. &quot;I know how you feel. For over two months, I waited…and waited for any sign that you were still out there, for any sign that you were still alive. Just hours ago, I was convinced I&#x27;d never see you again, that your photo and the memories we made would be all I&#x27;d have left of you.&quot; She kissed her again, then started caressing the small of her back. &quot;I was fully prepared to live the rest of my life alone. And yet here we are, with nothing standing between us.&quot; She let out a weak laugh, and her eyes watered. &quot;So yes…maybe we really did die. Maybe we really did find each other amongst the ancestors.&quot;</p>
+        <p>Tali burst into a fit of joyful sobs. Shepard&#x27;s gaze met hers. Her pulse climbed in the ensuing silence.</p>
+        <p>Then Tali grabbed Shepard&#x27;s head and mashed her lips against Shepard&#x27;s, kissing her hungrily and passionately. Shepard wrapped her arms around her, then pulled her into her, closing her eye, humming with bliss. Then soon, Tali pushed her onto the bed and straddled her waist. Deepening the kiss, she slipped her tongue into Shepard&#x27;s mouth. Shepard did the same, and their tongues brushed and swirled against each other, as she ran one hand up Tali&#x27;s back, and the other down onto her buttocks.</p>
+        <p>Every second, her heart pounded faster, flooding her with adrenaline. Every second, her breathing grew faster, and blood rushed to her clit, making it swell and throb painfully.</p>
+        <p>Soon, Tali&#x27;s heelrou filled the air, and a warm, heavenly sensation coursed through her, relaxing her every muscle.</p>
+        <p>Oh, how she had missed this.</p>
+        <p>It had been far too long.</p>
+        <p>Soon, they grew breathless and Tali broke the kiss, her cheeks flush as she panted.</p>
+        <p>&quot;Undress,&quot; Tali whispered in Shepard&#x27;s ear before dismounting her. Sitting on the edge of the bed, she removed her helmet, her gloves, her boots, and then her neck collar. Meanwhile, Shepard removed her shirt and her pants, baring her breasts. Then once more, they were facing each other, their knees on the bed.</p>
+        <p>Tali ran one hand across Shepard&#x27;s recently-acquired scars. &quot;Keelah…&quot; She looked at her with such love, such concern, &quot;what…what happened to you?&quot;</p>
+        <p>Holding Tali close with one hand, Shepard cupped her neck with the other, then pressed her lips to hers in a long, slow kiss. When their lips parted with a faint smack, she looked deeply into her eyes, her nose touching Tali&#x27;s own. &quot;It&#x27;s nothing. Just the small price I had to pay to come back to you.&quot;</p>
+        <p>Tali smiled and let out a weak laugh. Then once more, they were exchanging kisses. Meanwhile, Shepard ran her hands along Tali&#x27;s curves, along her thin waist, her wide hips, and her luscious breasts, teasing her, removing the belts, buckles, and cloths around her suit. Sweating, she removed her astronaut hood and planted kisses all over her neck, her cheeks, and then her lips.</p>
+        <p>During one kiss, Tali let out a hungry growl, then pushed Shepard back onto the bed. She stared at her, her eyes brimming with lust. &quot;No more teasing. Just lie there and watch while I unsuit for you.&quot; She bit her lip. &quot;And then you&#x27;ll be mine.&quot;</p>
+        <p>Shepard&#x27;s eyes went wide. Her mouth fell open, and she couldn&#x27;t help but feel taken aback. She grinned. Ooh, so assertive! &quot;As you command, Miss Vas Normandy.&quot;</p>
+        <p>She did as Tali asked and removed her boxers. Meanwhile, Tali got off the bed, then completely captured Shepard&#x27;s attention when she began to unsuit.</p>
+        <p>Unlike Shepard, Tali had always been an incredible dancer, able to move her body with inhuman grace and fluidity. As she stripped for Shepard, she swayed her hips and touched herself in ways that drove her wild. Shepard couldn&#x27;t look away. The longer she watched her, the faster her heart raced, the more she sweated, and the harder it got to breathe. Ceaselessly, she battled the urge to pounce on her, to ravage her like some dirty whore.</p>
+        <p>But she restrained herself.</p>
+        <p>Tali looked at her and smiled. &quot;Like what you see?&quot; she asked playfully. She giggled, and soon she was completely naked. Hardly able to breathe, Shepard marveled at her wide, luscious hips; her lean, toned waist; her round, perky breasts; and her glowing, white eyes. Yes, she was perfect, an exotic, alien beauty that always left her awestruck.</p>
+        <p>Just then, Tali climbed onto the bed and crawled over Shepard, planting kisses on her neck, her cheeks, and then her lips, huffing through her nose and trilling with delight. The whole time, Shepard held her close, and her soft, delicate skin felt heavenly against hers. Soon, the warm wetness between Tali&#x27;s legs leaked onto Shepard&#x27;s inner thighs, and her clit throbbed and tingled. Soon, they were both sweating and panting, and…</p>
+        <p>Fuck, she couldn&#x27;t take this much longer. If she didn&#x27;t–</p>
+        <p>Just then, Tali leaned back, and their lips parted. Breathing heavily, she reached behind her with one hand and tilted Shepard&#x27;s hips. Carefully, she lowered her wet slit against Shepard&#x27;s, and inch by inch, their folds slid together. As they did so, the pressure against Shepard&#x27;s clit and the surrounding heat tingled its every nerve.</p>
+        <p>&quot;Oh, god…&quot; She moaned, closing her eye, and throwing her head back into the mattress. She stared into Tali&#x27;s eyes. &quot;Tali…&quot;</p>
+        <p>Biting her lip, Tali planted her hands on Shepard&#x27;s chest, then began to roll her hips back and forth, or in circles, moving her waist like an exotic dancer. The whole time, they never broke eye contact, and she looked at her with all the love and lust her eyes could convey.</p>
+        <p>Yes, she was in paradise right now.</p>
+        <p>As Tali rode her, Shepard ran her hands up Tali&#x27;s thighs, onto her waist, and then her breasts. They were intoxicatingly soft and plush. When she moved one hand up to Tali&#x27;s supple neck, Tali tilted her head and sucked on Shepard&#x27;s thumb.</p>
+        <p>The sight sent her into a lust-fueled haze.</p>
+        <p>She sat up, and Tali grabbed Shepard&#x27;s head and pulled her in for a deep kiss. Holding Tali as close to her as possible, Shepard huffed through her nose, whilst Tali hummed with bliss. Their tongues twirled. And every second, she rolled her hips faster and faster, becoming sexually feral. Soon, she broke the kiss and rested her forehead against Shepard&#x27;s, gasping, moaning louder and louder.</p>
+        <p>Until she cradled the back of Shepard&#x27;s head, and arched her back into her, letting out an ear-piercing moan of ecstasy.</p>
+        <p>Panting, Tali went limp in her arms. Lying back down on the bed, Shepard grabbed her hips, then thrusted away. Wet clops filled the room, and Tali kissed and licked Shepard&#x27;s neck, her heelrou loud and intense.</p>
+        <p>For a moment, she lost herself in the experience, enraptured in a feast of euphoria. With every thrust, the pressure in her groin mounted…and mounted…</p>
+        <p>Until it exploded in an earth-shattering orgasm.</p>
+        <p>Amidst it, she wrapped her arms around her saera and held her tight, her pussy spasming as she moaned in ecstasy. Breathing heavily, she lay back down on the bed, limp and drained. Her beloved did the same, lying atop her, and for a while, they didn&#x27;t move.</p>
+        <p>Wrapping one arm around Tali, she savored the feel of her skin against hers, of their hearts beating in sync. Closing her eye, she listened to her heelrou, and her every muscle relaxed.</p>
+        <p>But eventually, Tali shivered.</p>
+        <p>Shepard opened her eye. &quot;Cold?&quot;</p>
+        <p>Tali nodded, and Shepard melted at the way she looked at her. Smiling, she covered them both with the blanket, then shut off the lights with the small control panel on the nightstand. Tali cuddled into her, and Shepard wrapped one arm around her waist and held her tight.</p>
+        <p>She let out a deep, contented sigh.</p>
+        <p>Yes, the pain she suffered on the Citadel had been worth it. Without a doubt, she would have crawled through the rubble a hundred times, a thousand times, if she knew this moment was to come.</p>
+        <p>Rannoch, here we come…</p>
+        <p>Tali&#x27;Zorah lay atop her saera in the darkness of their cabin, under the sheets of its soft, plushy bed. All night long, they had alternated between making love, lightly napping, and talking about their future, making up for as much lost time as possible. But now, Shepard was sound asleep. Now, she basked in her body heat and listened to her heartbeat, watching Shepard&#x27;s chest rise and fall with every breath.</p>
+        <p>Earlier, they had agreed to adopt their first orphan, a quarian boy, at least five years after settling into their new lives on Rannoch, and their second orphan, a quarian girl, at least three years after that. Undoubtedly, she&#x27;d name her son Zhoru, just like the boy in her dreams. But what about her daughter? Perhaps she&#x27;d name her Aelina, after the great founder of Clan Zorah itself.</p>
+        <p>Jane stirred. &quot;What was I supposed to do?&quot;</p>
+        <p>Again, Shepard was talking in her sleep. Keelah, what was she dreaming about? Was it a nightmare?</p>
+        <p>&quot;I didn&#x27;t have a choice…It was you or us…&quot;</p>
+        <p>You or us? Was she referring to EDI and the Geth, just like Kasumi had said?</p>
+        <p>&quot;No…No, you can&#x27;t do that…Stop!&quot;</p>
+        <p>She gasped and sat up explosively. Panting, she looked all around her, as if she had just woken up to an ambush.</p>
+        <p>Ancestors, what kind of nightmare had she just woken up to? What was robbing her of the peace she deserved, haunting her every waking moment? Her experience on the Crucible?</p>
+        <p>Whatever it was, Tali would not allow it to consume her.</p>
+        <p>She sat up and put her hand on Shepard&#x27;s arm. &quot;Jane? Jane, please, calm down.&quot;</p>
+        <p>As soon as she said that, Shepard looked at her.</p>
+        <p>&quot;It was just a dream, Jane,&quot; she said. &quot;Please, come back to bed.&quot;</p>
+        <p>Shepard gulped, then did as she asked. Again, they were lying on the bed, under its sheets. Shepard spooned her, and she nuzzled into Shepard.</p>
+        <p>&quot;Jane?&quot; she asked, breaking the silence.</p>
+        <p>&quot;Yes?&quot;</p>
+        <p>Was now a good time to ask? &quot;What were you dreaming about?&quot;</p>
+        <p>Shepard paused. Tali turned and faced her. And Shepard&#x27;s eyes were full of shame.</p>
+        <p>&quot;Nothing serious,&quot; Shepard said eventually. She took a deep breath, &quot;just about…some of the decisions I&#x27;ve had to make recently, that and their consequences.&quot;</p>
+        <p>Like what happened to EDI and the Geth? &quot;Like what?&quot;</p>
+        <p>Again, Shepard went silent, unable to meet her gaze. She pursed her lips, then exhaled. And Tali&#x27;s heart broke at the pain and guilt in Shepard&#x27;s eyes. Already, her eyes were growing wet with tears.</p>
+        <p>&quot;You were…talking in your sleep,&quot; she said, &quot;saying that you didn&#x27;t have a choice, that it was either &#x27;you or us&#x27;.&quot; Shepard&#x27;s body stiffened up. Her lip quivered, and her eyes were wet with tears. Oh, ancestors help her. Tali put one hand on Shepard&#x27;s cheek. &quot;Saera?&quot;</p>
+        <p>Shepard&#x27;s body relaxed, and she met her gaze.</p>
+        <p>She moved closer to Shepard until their noses were touching. &quot;Whatever happened on the Crucible, whatever decisions you had to make, I…I can&#x27;t imagine how difficult they must have been for you. Keelah, I can see the pain in your eyes. I know how hard you&#x27;re fighting to keep it buried, to keep it locked away forever. But never forget that you don&#x27;t have to suffer it alone.&quot; She kissed Shepard, then started stroking her cheek.</p>
+        <p>Shepard gulped. &quot;I was going to tell you. It&#x27;s just…&quot;</p>
+        <p>&quot;That the pain is still too raw? That you still can&#x27;t put it into words?&quot;</p>
+        <p>&quot;Yes, I…&quot;</p>
+        <p>&quot;It&#x27;s okay,&quot; she said, &quot;I understand. Just remember, whenever you&#x27;re ready to talk about it…&quot; She kissed Shepard again, &quot;I&#x27;ll be there for you.&quot;</p>
+        <p>Shepard smiled and let out a weak laugh. &quot;I promise I will.&quot; Once more, she met her gaze. &quot;Tell me, though…were you still awake when I started talking in my sleep? Have you gotten any rest at all?&quot;</p>
+        <p>Ancestors, Shepard always downplayed her problems and focused on listening to Tali&#x27;s own. She was always so selfless, more quarian than over half the people Tali knew.</p>
+        <p>&quot;I…I don&#x27;t want to sleep.&quot;</p>
+        <p>Shepard kissed her, then began stroking her cheek. &quot;Why?&quot;</p>
+        <p>She melted at the way Shepard was looking at her. She took a deep breath. &quot;On that fre&#x27;eg ball of a planet, there were so many nights where I dreamt about you, about the life we always wanted. They always started off so happy, but every time, they&#x27;d end the same way, with you and our son running towards the beam, with Harbinger burning you to ash. Every time, I&#x27;d wake up screaming and…&quot;</p>
+        <p>&quot;And I wouldn&#x27;t be there?&quot;</p>
+        <p>Keelah, Shepard understood her so well. She let out a joyful sob, and tears streamed down her cheeks. &quot;Yes, you…you wouldn&#x27;t be there. I&#x27;d always wake up in the darkness of this cabin, feeling so cold and so lonely, reminded that you were gone, that I&#x27;d never feel complete ever again.&quot; She burst into tears, and Jane embraced her, letting her cry into her shoulder. &quot;Keelah, it was horrible. So horrible, Jane. Every day, I wanted to die. I wanted to die and join you amongst the ancestors.&quot;</p>
+        <p>When she stopped crying, Jane cupped the back of her neck, then pressed her forehead to Tali&#x27;s. &quot;Tali. The pain you went through…I&#x27;m sorry.&quot;</p>
+        <p>&quot;You have nothing to be sorry for,&quot; she said with as much conviction as possible. &quot;None of it was your fault. If I hadn&#x27;t–&quot;</p>
+        <p>Shepard put one finger on her lips. &quot;Sssh. Don&#x27;t finish that sentence.&quot; She kissed her, then started caressing her cheek. &quot;It wasn&#x27;t your fault either. What matters now is that we&#x27;re alive, together again, with nothing standing between us.&quot; Once more, she kissed her. &quot;This is real, saera.&quot; She kissed her once. &quot;I&#x27;m real.&quot; Twice. &quot;I&#x27;m yours.&quot; Then she pulled her in for a long, slow one on the lips. Tali leaned into it, humming, letting her tongue play with Shepard&#x27;s. Soon, their lips separated with a faint smack. &quot;And you can be damned sure I&#x27;ll be right beside you every time you wake up.&quot;</p>
+        <p>Tali burst into a fit of happy sobs. &quot;Keelah, this…this is paradise. I don&#x27;t think I&#x27;ll ever be happier.&quot;</p>
+        <p>Shepard laughed. &quot;Is that so?&quot;</p>
+        <p>&quot;Yes,&quot; she said, letting her body relax, &quot;you are the greatest, most wonderful thing to have ever come into my life. As long as I have you, I don&#x27;t need anyone or anything else.&quot;</p>
+        <p>&quot;Not even Rannoch?&quot;</p>
+        <p>&quot;Not even Rannoch,&quot; she said, tracing her fingers along Shepard&#x27;s broad, but scarred chest. &quot;Without you, a house there would have felt meaningless and empty anyway.&quot;</p>
+        <p>Shepard let out a weak laugh, and a single tear streamed down her cheek. &quot;Come here.&quot;</p>
+        <p>They made love once again. The whole time, a soothing euphoric sensation coursed through her limbs, and she felt as though she were lying atop the softest cloud. In the afterglow, she lay her head on Shepard&#x27;s chest, singing her heelrou.</p>
+        <p>And for the first time in months, she drifted off to sleep without a worry in the galaxy.</p>
+        <p>Yes, the nightmares would haunt her no longer.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch16.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html">Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html" selected>Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch18.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 14</h1>
+    <div class="chapter-content">
+        <p>On a beach on the outskirts of camp one, Jane Shepard tapped into her biotics, then hurled a fist-sized piece of rubble into the air. It arced over the ocean of murky, grey water ahead, but then a sharp crack-boom split the air, and that piece of rubble exploded into a cloud of dust.</p>
+        <p>“Another perfect shot,” she told Garrus.</p>
+        <p>Garrus lowered his sniper rifle. “That’s nineteen points, Shepard. You have quite a lot of catching up to do.”</p>
+        <p>She sighed. “Yeah. Seems like I do.”</p>
+        <p>Above, the sky was choked with smog and ash and was the usual shade of light grey, during the daytime. Around her, rubble and debris littered the shore, along with two beached Reaper corpses. But thankfully, the wind was only a light breeze.</p>
+        <p>At least that’s not throwing off my aim.</p>
+        <p>Garrus handed her the rifle, and she took it. “Your turn.”</p>
+        <p>She’d been playing this game with Garrus for about an hour. So far, Garrus had missed only once, and she had missed all but five of her shots.</p>
+        <p>I’ll get the next one. She took the rifle</p>
+        <p>“Ready?” Garrus asked, grabbing a fist-sized piece of rubble on the shore.</p>
+        <p>She nodded. “Toss away.”</p>
+        <p>Garrus hurled the piece of rubble, and it arced over the ocean, high into the air.</p>
+        <p>Aiming down the rifle&#x27;s scope, she held her breath, trying to line up her shot. No matter how hard she tried, her hands kept shaking, throwing off her aim. But nonetheless, she pulled the trigger. The recoil slammed into her shoulder, and the rifle roared with an ear-splitting crack-boom.</p>
+        <p>Had her shot landed?</p>
+        <p>She lowered the rifle, then spotted the piece of rubble falling into the ocean.</p>
+        <p>Momentarily, she scowled and gripped the rifle tighter. Another miss. Closing her eye, she let out a frustrated sigh.</p>
+        <p>Yes, the doctors had told her she’d never be a soldier again, that the nerve damage across so much of the left side of her body would affect her motor abilities for the rest of her life. It was a miniscule price to pay. But had she really deteriorated this much? In her prime, she had graduated from the N7 program, as one of the best marksmen, able to land perfect headshots on moving targets nearly half a kilometer away. Now, she had the marksmanship of a conscript barely out of boot camp.</p>
+        <p>And to think that she had let Garrus win their shooting contest on the Citadel.</p>
+        <p>“Hey,” Garrus said, nudging her arm.</p>
+        <p>She stirred, then looked at Garrus.</p>
+        <p>“If you’ve had enough of this,” Garrus said, “then let’s stop here. No need to declare a winner.” He turned and made his way towards the two lawn chairs nearby. “Come. Let’s have a drink.”</p>
+        <p>“Yeah,” she said. “I think I’d like that.”</p>
+        <p>She sat on the lawn chair. Meanwhile, Garrus opened the small cooler he had brought along with him, then got out a six-pack of dextro beer, along with one of lemon sodas.</p>
+        <p>“I know you promised Tali that you’d never touch alcohol again,” Garrus said, handing her the pack of lemon sodas. “So I got you these, your favorite.”</p>
+        <p>“Thanks,” she said, taking them. Immediately, she cracked one open, then took a sip. She reclined into the lawn chair and sighed.</p>
+        <p>Yes, tomorrow, Garrus would leave Earth and head back to Palaven to assume his new duties. Today was the last day of the ‘leave’ Victus had granted her best friend as a courtesy. And this outing would be the last time they’d see each other in person for perhaps many years.</p>
+        <p>So better she asked this now.</p>
+        <p>“Garrus?”</p>
+        <p>“Yes, Shepard?”</p>
+        <p>She sighed. “I hate to bring up something so negative. But since you’re leaving tomorrow, I think it’s best I ask you this now.”</p>
+        <p>“What?”</p>
+        <p>She looked into Garrus’ eyes. “What exactly happened to Tali after the Normandy crashed on that uncharted world?”</p>
+        <p>Garrus broke eye contact, then took a deep breath through his nose. “I was wondering when you would ask this. But before I say anything, let me ask you a question.” Garrus paused. “Why?”</p>
+        <p>“About three weeks ago,” she said, “Tali and I, we…we had a very emotional talk, and she told me that Liara just barely managed to stop her from killing herself. Since then, it’s been bothering me, and I need to know the specifics. I need to know exactly what she went through.”</p>
+        <p>Garrus sipped his beer. “Why not just ask her?”</p>
+        <p>“I don’t want her to relive those experiences any more than she has to,” she said. “And besides…you can give me an outside perspective.”</p>
+        <p>“Fair enough,” Garrus said. Garrus took another sip of this beer. “After we left you behind, Tali was in very bad condition. I’m talking, multiple suit breaches, a cracked visor, broken bones, and countless cuts and burns. Ashley and James helped me take her to the med-bay, and Chakwas kept her sedated for the next two or three days. Even then, she kept calling out your name, as if somehow you could save her from the pain.”</p>
+        <p>Briefly, she broke eye contact. She pursed her lips. Just how terribly had Tali suffered, getting torn away from her? “What happened next?”</p>
+        <p>“About a day after we crashed,” Garrus continued, “she woke up. The first thing she did, apparently, was ask where you were, and whether you were okay. And spirits help me, I…” Garrus slid one hand down his face. “Ihad to give her the bad news.” Garrus huffed through his nose, then hummed. Garrus met her gaze. “The way she reacted Shepard, I…”</p>
+        <p>Her pulse climbed. “How did she react?”</p>
+        <p>“You and me,” Garrus said, “we’ve both seen and experienced some of the worst things imaginable.” Garrus took another sip of his beer, then looked at the ground. “But I’ll never forget how she reacted. Never. It’ll haunt me for the rest of my life.”</p>
+        <p>Her heart pounded. What havoc did Felz’elt wreak on Tali’s mind? What did it make her do? “What happened?”</p>
+        <p>“When I told her that you were most certainly dead,” Garrus said, “she just…froze and went silent. She wouldn’t respond to anything anyone said or did. Then suddenly, she stormed off and locked herself in your cabin.”</p>
+        <p>She pursed her lips. “For how long?”</p>
+        <p>“Three days.”</p>
+        <p>Her eyes went wide, and she gasped. “Three days?”</p>
+        <p>“Yes,” Garrus said, “three days. During them, I tried to talk to her, and so did Liara and Ashley. But no matter what, she just wouldn’t respond.” Garrus took another sip of his beer. “Sometimes, whenever I left her a few tubes of nutrient paste outside the door, I’d hear her…wailing like some tortured, dying animal. Once, she even went on this long, crazed rant in Khelish and got so angry I was sure she’d pass out.”Garrus took a gulp of his beer. “Instead, she only broke down into a crying mess.”</p>
+        <p>“You did this to her,” said an insidious voice in the back of her mind. With all her willpower, she silenced it, but couldn’t help but scorn herself. God, just how close to insanity had Felz’elt pushed Tali? “Did she ever come out?”</p>
+        <p>“Eventually, she did,” Garrus said. He took another sip of his beer. “Spirits, at first, I thought she’d finally come to her senses, that she was finally trying to heal and move on. But I couldn’t have been any more wrong. Immediately, she started working herself to death with these insane twenty-hour shifts.”</p>
+        <p>Again, her eyes widened, and her jaw dropped. “Twenty hours?”</p>
+        <p>Garrus nodded. “Yes, twenty-hour shifts. According to Ken, Gabby, and Adams, she’d hardly speak the whole time and refused to take breaks. As Ken once told me, she might as well have been a walking corpse, a lifeless husk of a woman, just going through the motions.”</p>
+        <p>She finished her lemon soda, then tossed away the can before cracking open another. Yes, after the Mindoir Massacre, she’d become very familiar with such a state of mind, with feeling dead on the inside, going through life on auto-pilot. “And this went on for how long?”</p>
+        <p>“To be honest,” Garrus said, “I don’t remember. But eventually, Gabby woke me up one night and begged me to force her to take a break. I agreed, then went to confront her.” Garrus took a gulp of his beer. “When I did, I made a very stupid mistake.”</p>
+        <p>“What?”</p>
+        <p>“I mentioned your name,” Garrus said. He snorted, then let out a deep hum. “When I did, she shoved past me and stormed off. Again, she locked herself in your cabin and wouldn’t come out for another day. No matter how much I banged on the door, and begged her to talk to me, she wouldn’t respond. It was as if I didn’t exist.”</p>
+        <p>Oh, God help her. “And what happened after that?”</p>
+        <p>“After that,” Garrus said, “I forced her to regularly go foraging with Liara and sometimes Traynor. I thought if she spent more time around people, then maybe she’d improve, that maybe she’d open up.” He finished his beer, then tossed the empty bottle aside. “But it was no use. No matter how hard Traynor or Liara tried, she would not open up. Every day, she’d get worse and worse until…”</p>
+        <p>“Until you had enough?”</p>
+        <p>“Yes,” Garrus said, “until I had enough. One day, she decided to sleep in and let Liara and Traynor go foraging without her. And that’s when it was time for an intervention, when there was only one option left to save her from herself.”</p>
+        <p>“What did you do?”</p>
+        <p>“I gathered Liara, Ashley, Ken, Gabby, and Adams,” Garrus said, “and then we went up to deck one. As expected, she’d locked herself in your cabin. If necessary, I would have dragged her out of there by force, but thankfully, Liara knew just what to say.” He cracked up another beer. “After Tali let us in, we told her that the only option left was for Liara to mind-meld with her, so she could share her pain with all of us.”</p>
+        <p>“Garrus, did all of you really do that?” she asked. “Just for her?”</p>
+        <p>“We did,” Garrus said. “After a loud, terrible argument, Tali finally agreed to let us do this.” Garrus took a sip of his beer. “And I was the first person Liara showed Tali’s pain.”</p>
+        <p>I should have been the first. Yes, circumstances had made that impossible, but still, she couldn’t help but feel a little jealous. Before going to Rannoch, she would certainly have a chat with Liara, and have Liara show her Tali’s pain. “And what was it like?”</p>
+        <p>Garrus looked away, and for a moment, he remained silent. “Shepard, I…I thought I knew grief and pain after Sidonis’ betrayal. But her pain…” Garrus huffed through his nose, then slid one hand down his face. “... it&#x27;s like the mental equivalent of having every plate peeled off your body, over and over again. In her position, I don’t think I would have lasted very long.” He took a gulp of his beer. “Spirits, she must be a very, very strong woman.”</p>
+        <p>You don’t need to tell me twice. She gulped down the rest of her lemon soda. “After that, did she start to get better?”</p>
+        <p>“Slowly,” Garrus said. “Liara practically became her therapist. And sometimes, during their sessions, she’d go on for hours about how much you’ve done for her, about how much she loved you, and how you’re death left an ‘aching void’ in her soul that would never heal. Soon, she stopped isolating herself in your cabin…and then we got your message.”</p>
+        <p>She and Garrus paused, with only the crashing waves and the whistling wind breaking the silence.</p>
+        <p>You will never suffer like that again. Yes, just as Tali had offered, she’d make every second Tali suffered enduring Felz’elt worth it a hundred times over.</p>
+        <p>“Garrus,” she said, “I can’t begin to describe how thankful I am for what you and the others did to help her. This…this is the greatest thing you’ve ever done for me, a gift I can never repay.”</p>
+        <p>“No repayment is necessary,” Garrus said. “After everything you’ve done for us, this is the least we could do.” Briefly, he looked away. “And personally, I…”</p>
+        <p>“What is it?”</p>
+        <p>Garrus gulped. “Personally, I couldn’t have let her kill herself. Because if she did, then well…your sacrifice would have been for nothing.” He took a gulp of his beer. “I would have failed you in the worst way possible, and I don’t think I would have been able to forgive myself. It would have been so much worse than losing my team on Omega.”</p>
+        <p>Facing Garrus, she leaned forward. “You have never failed me. Do you understand that?”</p>
+        <p>“I know,” Garrus said. “I know. It’s just…well…” Garrus gulped, then let out a throaty hum. “Anyways, it’s all behind us now. Everything turned out just fine.”</p>
+        <p>“Indeed it did,” she said. You’re better than you realize, friend. “Indeed it did.”</p>
+        <p>For the next few minutes, she watched and listened to the waves crashing against the shore. She let out a contented sigh. Yes, even now, the future seemed bright. But what did it have in store for Garrus? What exactly were her friend’s new duties?</p>
+        <p>“So Garrus,” she said, “what’s Victus having you do now? As a courtesy, I know he gave you some time to wrap up any personal affairs on Earth. But you never told me anything about your new duties.”</p>
+        <p>Garrus exhaled through his nose. “Victus and what’s left of Hierarchy High Command have promoted me to Admiral.” He finished his second beer. “And Victus himself wants me to be his deputy.”</p>
+        <p>“You don’t sound very excited about it.”</p>
+        <p>“Because I’m not,” Garrus said, tossing aside the empty bottle. “To be honest with you, Shepard, I’m going to miss our days of saving the galaxy, of when it was just us and the others on the Normandy, winning against the odds. Now, everything will be just…boring.”</p>
+        <p>“Boring?”</p>
+        <p>“Yes,” Garrus said, “boring. As an Admiral, I’ll be forced to take a less hands-on role in any future conflicts, and my days of being a bachelor will be over.”</p>
+        <p>“I take it you’re not much of a one-woman kind of man then.”</p>
+        <p>“I never was,” Garrus said. “Whenever I’ve let a woman get that close, things always ended badly.”</p>
+        <p>“I see,” she said. “So is this some kind of etiquette for high-ranking officers?”</p>
+        <p>“It is,” Garrus said. “Newly promoted Generals and Admirals are expected to become the Patriarch of a new–” Garrus uttered an unpronounceable, untranslatable word in the turian language.</p>
+        <p>She raised her eyebrows and tilted her head. “I’m sorry, a what? All I heard was a bunch of clicks, hisses, and hums.”</p>
+        <p>Garrus snorted, then let out a throaty hum. “Think of them as important families, with a lot of militaristic traditions.”</p>
+        <p>“Ah,” she said, “so the Hierarchy has some kind of military aristocracy.”</p>
+        <p>“The–” Again, Garrus said that alien word. “--are much, much more complicated than that. I don’t think any non-turian could ever truly understand them. But yes, a military aristocracy is a good approximation.”</p>
+        <p>She sighed. “Sounds like you’re under a lot of pressure.”</p>
+        <p>“Spirits, you have no idea,” Garrus said, reclining into his lawn chair. Garrus sighed. “Quite frankly, Shepard…It’s overwhelming.”</p>
+        <p>She raised her eyebrows. “Overwhelming?” Again, she leaned forward. “Hey, your mistakes are in the past. Since then, you’ve grown so much past them.” She cracked open another can of lemon soda, then took a sip. “Remember our talk about the ruthless calculus of war?”</p>
+        <p>“I do.”</p>
+        <p>“I meant every word,” she said. “You did the best you could with whatever you knew, and it was more than enough. Fantastic, actually.” She took another sip of her lemon soda. “Yes, I can definitely see why Victus would promote you to Admiral, and why he’d make you his deputy.”</p>
+        <p>“Why?”</p>
+        <p>“Well, not only have you proven yourself as a capable leader and strategist,” she said, “but you’re also humble…and a bad turian.”</p>
+        <p>“Wait, wait, wait,” Garrus said, “I don’t understand.”</p>
+        <p>“Because you’re so humble,” she continued, “you’ll always take your responsibilities seriously and give nothing but your absolute best. And because you’re a bad turian, you’ll always be flexible…and never give bad orders.”</p>
+        <p>Garrus’ eyes widened. Garrus broke eye contact. “Oh…I see…”</p>
+        <p>“Never forget that I have faith in you,” she said. “If you ever become the next primarch, I have no doubt you’ll be a great one.”</p>
+        <p>Garrus’ mandibles flared. “There you go again, convincing me that I’m better than I think.”</p>
+        <p>She chuckled. “You are, Garrus. You are.”</p>
+        <p>“Anyways,” Garrus said, putting the rest of his beers in the small cooler he’d brought along with him. “Let me ask you a question now.”</p>
+        <p>“Oh,” she said, “well go on. Ask.”</p>
+        <p>“This book of yours,” Garrus said, “what exactly is it about?”</p>
+        <p>“Ah,” she said. “Yes, my book. Well, if I’m going to tell you about it, then I guess I should start with what happened after I made it up the beam.”</p>
+        <p>Garrus faced her, then leaned forward. “Yes, what happened? You never told me.”</p>
+        <p>She sighed. “Remember that ‘talk’ with Tali I just told you about? Well, in it, I finally told her about my actions on the Crucible and how I felt about their consequences.”</p>
+        <p>“Their consequences?”</p>
+        <p>“Yeah,” she said, “I’ll get to them.”</p>
+        <p>She took a deep breath, then told Garrus everything about her actions on the Crucible. The whole time, Garrus remained silent, as if listening carefully.</p>
+        <p>When she finished, she and Garrus paused.</p>
+        <p>“By the spirits…” Garrus said, “to have something like that on your conscious, I can’t imagine how…”</p>
+        <p>“It’s okay,” she said. She finished the rest of her lemon soda. “Tali, she’s already helped me deal with a lot of the guilt and shame. To deal with the rest, I’m writing this book to show everyone why the Catalyst is wrong, why synthetics can coexist with organics, and why the ‘chaos’ will not come back.”</p>
+        <p>“Yes,” Garrus said, “the Catalyst was definitely wrong. And you proved that its solution was flawed the moment you brokered peace between the quarians and the geth.” Garrus sighed. “Shame the geth are gone now. With them, we could have rebuilt everything so much faster. And EDI…what are you going to tell Joker?”</p>
+        <p>She looked at the ground, then took a deep breath through her nose. Indeed, what was she going to tell Joker? That she murdered his only love for the greater good? “I…I don’t know. But at some point, I’ll have to tell him. If he hates me for what I did, and can forgive me, then so be it.”</p>
+        <p>Garrus put one hand on her shoulder. “Hey, when that moment comes, I doubt it’ll be easy. But knowing Joker, I’m sure he’ll understand.” Briefly, Garrus broke eye contact. “Yes, he might hate you for a while. But eventually, I have no doubt that he’ll forgive you. He just isn’t the type of person to hold on to grudges.”</p>
+        <p>She smiled. “Thanks. I guess you might have a point. But I guess we’ll just have to wait and see.”</p>
+        <p>“Yeah,” Garrus said, “I guess only time will tell.” Garrus cleared his throat. “But anyways, your book, how much progress have you made.”</p>
+        <p>“Over the past three weeks,” she said, “I’ve written about sixty thousand words, or about two-hundred pages worth of content. Every few days, I’ve been sending chapters to Tali, Wrex, Bakara, Hayes, and two of the quarian admirals, making changes based on their feedback.”</p>
+        <p>“Send them to me as well,” Garrus said. “With my new position, I can do a lot to promote your work. And if I ever become primarch, then I’ll make sure every turian in the galaxy knows about your cause.”</p>
+        <p>Her eyes widened. “You’d really do that?”</p>
+        <p>“Of course I would,” Garrus said. “That’s what friends are for right?”</p>
+        <p>“Yeah, that’s what friends are for.”</p>
+        <p>“And don’t forget Liara,” Garrus continued. “Recently, we’ve been talking quite a lot, and apparently, she’s gained quite a few friends in high places.”</p>
+        <p>“I’ll do that, Garrus,” she said. “Thanks.”</p>
+        <p>Garrus’ omni-tool beeped. Checking it, Garrus closed his eyes, then let out a reptilian hiss.</p>
+        <p>“Something wrong?”</p>
+        <p>“Duty calls,” Garrus said, “looks like our little get-together is over.” Garrus stood up. “Come, I’ll give you a ride.”</p>
+        <p>She stood up, as Garrus folded his lawn chair. She did the same, then followed Garrus to the sky car parked nearby. Once they were inside, Garrus turned on the engine. The sky car rose into the air. And then it zoomed ahead, towards the heart of camp one.</p>
+    </div>
+</body>
+</html>

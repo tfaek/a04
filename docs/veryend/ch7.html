@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch6.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Prologue 1: To Understand Her Alien Mind</option>
+                <option value="ch2.html">Prologue 2: Will You Be My Saera?</option>
+                <option value="ch3.html">Prologue 3: Until The Very End</option>
+                <option value="ch4.html">Chapter 1</option>
+                <option value="ch5.html">Chapter 2</option>
+                <option value="ch6.html">Chapter 3</option>
+                <option value="ch7.html" selected>Chapter 4</option>
+                <option value="ch8.html">Chapter 5</option>
+                <option value="ch9.html">Chapter 6</option>
+                <option value="ch10.html">Chapter 7</option>
+                <option value="ch11.html">Chapter 8</option>
+                <option value="ch12.html">Chapter 9</option>
+                <option value="ch13.html">Chapter 10</option>
+                <option value="ch14.html">Chapter 11</option>
+                <option value="ch15.html">Chapter 12</option>
+                <option value="ch16.html">Chapter 13</option>
+                <option value="ch17.html">Chapter 14</option>
+                <option value="ch18.html">Chapter 15</option>
+                <option value="ch19.html">Chapter 16</option>
+                <option value="ch20.html">Chapter 17</option>
+                <option value="ch21.html">Chapter 18</option>
+                <option value="ch22.html">Chapter 19: Epilogue</option>
+            </select>
+            <a href="ch8.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 4</h1>
+    <div class="chapter-content">
+        <p>She&#x27;s sipping Ual tea on the balcony of her cliffside residence, basking under the warmth of Tikkun&#x27;s morning rays, when somebody gently wraps their arms around her waist. A familiar scent fills her nostrils, and a soothing warmth courses through her limbs. Closing her eyes, she hums with delight and melts in the embrace.</p>
+        <p>Jane kisses her bare neck. &quot;Good morning, beautiful.&quot;</p>
+        <p>She smiles and looks up into her lifemate&#x27;s handsome face. They share a brief kiss. &quot;Good morning. Is Zhoru still asleep?&quot;</p>
+        <p>Jane laughs. &quot;Last night really tired him out. But let me go check.&quot; She kisses the top of Tali&#x27;s head. &quot;In the meantime, how about you get started on breakfast. I&#x27;ll be down to help you shortly.&quot;</p>
+        <p>Jane goes back inside. Soon, Tali finishes her tea, then does so as well. Humming a tune of her mother&#x27;s favorite folk song, she enters the kitchen and opens the fridge.</p>
+        <p>Then suddenly, the ground quakes with earth-breaking power.</p>
+        <p>She loses her balance and tumbles to her side. One after the other, glasses and bowls fall from every shelf and shatter against the floor. Regaining her bearings, she makes it to her feet.</p>
+        <p>But then a Reaper horn booms outside, loud enough to split the air.</p>
+        <p>Her bowels turn to water. Icy pain racks her chest, and she can&#x27;t breathe. No. This can&#x27;t be happening. This can&#x27;t be real. They&#x27;re supposed to be dead!</p>
+        <p>&quot;JANE!&quot; she shouts. She runs up the stairs, then towards Zhoru&#x27;s room. &quot;JANE!&quot;</p>
+        <p>She rushes through the door, only to find herself not in her son&#x27;s room, but back in the ruins of London, on the downward slope leading to the beam. Briefly, she checks her body, and once more she&#x27;s trapped inside her suit, instead of wearing her morning robes.</p>
+        <p>At the bottom of the slope, Jane and her son are walking hand-in-hand towards the beam.</p>
+        <p>She sprints after them as fast as her legs will allow. &quot;JANE!&quot;</p>
+        <p>On the way down the slope, she passes by dozens of blackened, mangled corpses strewn amongst the rubble, along with countless burned-out tanks and other armored vehicles. By the time she&#x27;s near the bottom, Harbinger descends from the sky, then lands by the beam with a thunderous boom, kicking up a cloud of dust. Its Reaper horn blares loud enough to rattle her bones.</p>
+        <p>&quot;JANE!&quot; she screams, her heart thundering in her chest. Harbinger charges up its cannon, aiming it directly at her family, and she sprints toward them with everything she has. &quot;PLEASE! DON&#x27;T GO! DON&#x27;T GO!&quot;</p>
+        <p>She reaches the bottom of the slope, only to lose her footing and fall onto her chest. Frantically, she gets up. But then Harbinger fires its cannon. A red-hot lance of molten metal spears through the air, then strikes the ground with an ear-splitting boom.</p>
+        <p>The blast disintegrates her son and lifemate to ash.</p>
+        <p>Tali woke up screaming and thrashing, her heart hammering inside her chest. Panting, she sat up and looked all around, taking in her surroundings. Yes, she was in Jane&#x27;s cabin, in total darkness aside from the blue glow of the nearby fish tank. She glanced at the holo-clock on the nightstand, then took a deep breath before once more laying down.</p>
+        <p>She had about an hour before the start of her next shift in engineering. But she had overslept. Two hours ago, she was supposed to help Liara and Traynor forage for food in the local forests, now that levo food stores were running dangerously low. No doubt, they&#x27;d tell Garrus about her absence, and inevitably he&#x27;d storm up to deck 1 and scold her behavior, saying she needed to spend time around others, to take the steps necessary to heal.</p>
+        <p>And move on.</p>
+        <p>Move on. Nowadays, no two words left such a vile taste on her tongue. Keelah, how could she simply forget the lost half of her soul, and stop mourning the life they&#x27;d never share? As much as she loved her crewmates like family, they were still aliens with…different cultures and psychology. So how could they ever understand her pain?</p>
+        <p>She sighed. Was this how you felt everyday, father?</p>
+        <p>Yes, now, she truly understood his cold, distant demeanor…and couldn&#x27;t help but feel sorry for him. For her, he had chosen to live on. Despite his agony, he had tried to be the best father he could be. But in the end, he had failed.</p>
+        <p>For no quarian survived Felz&#x27;elt unchanged.</p>
+        <p>A few tears streamed down her cheeks, and she smiled. I forgive you. For the first time in her life, she felt no bitterness or resentment towards him and hoped he was finally at peace with the ancestors, reunited with her mother for eternity. But nonetheless, one thing was certain.</p>
+        <p>She would not follow in his footsteps.</p>
+        <p>She would not live on as a slave to duty, as a cold, bitter husk of her former self. She was done. She had no love or devotion left to give. And without Jane, Rannoch was a hollow prize anyway. No future there was worth living.</p>
+        <p>She closed her eyes and tried to go back to sleep. But for ten minutes, she tossed and turned. Over and over, that nightmare replayed in her mind.</p>
+        <p>A part of her wanted to relive it, if only to feel Jane&#x27;s touch, to relish her scent and the warmth of her body heat. But another part of her wanted to scour it from her mind. Yes, there was no point in fantasizing about the house they&#x27;d never have, about the family they&#x27;d never raise. That would only drive her to madness.</p>
+        <p>Just then, someone knocked on the door, just outside the cabin. &quot;Tali?&quot;</p>
+        <p>Closing her eyes, she took a long, deep breath and cringed. It was Garrus. Here we go again.</p>
+        <p>Garrus banged on the door. &quot;Tali, come out. Don&#x27;t make us come in there.&quot;</p>
+        <p>Us? Outside the cabin, a brief argument ensued, but she couldn&#x27;t make out anything anyone was saying. Just who had he brought along with him?</p>
+        <p>&quot;Tali?&quot; Liara asked gently. &quot;Tali, please, come out. We just want to talk.&quot;</p>
+        <p>&quot;Yeah,&quot; Ashley said, &quot;We&#x27;re not here to scold or lecture you.&quot;</p>
+        <p>&quot;Aye,&quot; Ken said, &quot;We&#x27;re only here to support you, lass.&quot;</p>
+        <p>&quot;We&#x27;re your family,&quot; Gabby said.</p>
+        <p>&quot;And we won&#x27;t just give up on you,&quot; Adams said.</p>
+        <p>She wanted to tell them to go away, to leave her alone and let her wallow in misery. But eventually, she&#x27;d have to come out for her shift in engineering, and no doubt they&#x27;d wait there all day. Gritting her teeth, she huffed through her nose, then got out of bed and went to unlock the door. It opened and revealed them waiting outside.</p>
+        <p>&quot;What do you want?&quot; she asked.</p>
+        <p>&quot;Can we come in?&quot; Liara asked.</p>
+        <p>Whether she liked it or not, she knew they&#x27;d come in anyway. &quot;Sure. Come in.&quot;</p>
+        <p>She turned on the lights, then sat on the bed&#x27;s edge, while the others sat on the nearby couch.</p>
+        <p>Garrus took a deep breath through his nose. &quot;Sooo…after I came back from hunting with James and Ashley, Traynor told me you didn&#x27;t show up for foraging today, that this is the second time Liara&#x27;s spent over an hour trying to get you to come out of this cabin.&quot; He sighed. &quot;I guess I shouldn&#x27;t be surprised. I thought keeping busy and interacting with others would help you heal and recover. But it looks like I was wrong. Over the past month, you&#x27;ve only been getting worse every day.&quot;</p>
+        <p>She looked towards the ground, and the ensuing silence felt painfully long. Garrus spoke the truth. Indeed, every day, Felz&#x27;elt sunk its claws deeper into her psyche and pushed her further along a downward spiral into madness. But what was he planning? She gulped and her pulse climbed. An extreme measure?</p>
+        <p>&quot;Lately, I&#x27;ve been beating my head against the wall, as humans say, trying to understand why you&#x27;re acting this way,&quot; Garrus continued, &quot;why you can&#x27;t just move on and accept what happened.&quot;</p>
+        <p>Tali clenched her fists and jaw, and let out a fierce growl. Keelah, would she never hear the end of this?</p>
+        <p>&quot;But then it dawned on me,&quot; Garrus said. &quot;You&#x27;re not turian. This whole time, I&#x27;ve been trying to help you as though you were turian.&quot;</p>
+        <p>Her muscles relaxed. She tilted her head, her eyes wide, her mouth agape. What was he trying to say?</p>
+        <p>&quot;I&#x27;m sure you know,&quot; Liara said, &quot;that no two species think in the same way. Turians, for instance, value self-discipline, duty, and rationality far more than others. Humans are extremely ambitious, individualistic, and unpredictable. And us asari are the most far-sighted, the most willing to settle disputes with words rather than violence. But aside from being tech-savvy…you quarians are a mystery.&quot;</p>
+        <p>&quot;So we figured,&quot; Ashley said, &quot;what if your brains are just wired differently? What if we can&#x27;t understand how you&#x27;re feeling no matter how hard we try?&quot;</p>
+        <p>Garrus huffed through his nose. &quot;So that leaves us with only one option to help you. If this doesn&#x27;t work, then nothing will.&quot;</p>
+        <p>Her pulse spiked. &quot;W-What?&quot;</p>
+        <p>Everyone but Liara stood up.</p>
+        <p>&quot;We&#x27;ll wait outside,&quot; Garrus said.</p>
+        <p>Suddenly, it dawned on her what they wanted to do. Her heart raced, and an icy bolt rushed down her spine. She sprang to her feet and rushed after Garrus and the others. &quot;Oh, no, no, no. You can&#x27;t do this! Please, you don&#x27;t know what you&#x27;re doing!&quot;</p>
+        <p>No, Liara couldn&#x27;t mind-meld with her and experience the moment Jane left her behind. She couldn&#x27;t relay that experience to the others and let them experience it too. The pain would only cripple them.</p>
+        <p>&quot;Oh, on the contrary,&quot; Garrus said, stopping in his tracks. He turned to face her, &quot;we know exactly what we&#x27;re doing.&quot;</p>
+        <p>&quot;This is the only way,&quot; Ashley said.</p>
+        <p>&quot;Yep,&quot; Gabby said, &quot;even if this only makes you feel just a wee bit less lonely, just a tad more capable of bearing the pain, it will all be worth it.&quot;</p>
+        <p>&quot;Aye, it will,&quot; Ken said, &quot;you deserve to be happy, lass.&quot;</p>
+        <p>Adams nodded. &quot;We won&#x27;t just watch our chief engineer fall apart like this.&quot;</p>
+        <p>She burst into tears, then began to pace around. &quot;Keelah, why…why are you doing this?&quot; She managed to say. Her voice was choked with emotion. &quot;Why suffer through so much pain just for me?&quot; Her voice cracked when she said that, and she began to sob. &quot;Please, don&#x27;t…don&#x27;t do this. Save yourself. There&#x27;s no hope for me.&quot;</p>
+        <p>Liara sighed. &quot;This might be hard for you to believe, Tali. But there&#x27;s still hope for you. Even without Shep–&quot; She gulped, &quot;…without her, you can still find happiness again.&quot;</p>
+        <p>&quot;How?&quot; Tali almost shouted, her voice full of desperation, &quot;She was my happiness, Liara. The other half of my soul.&quot;</p>
+        <p>Briefly, Liara broke eye contact and pursed her lips. &quot;None of us will pretend to understand what she meant to you.&quot; She let out a joyless laugh. &quot;Goddess, I never could have loved her the way you did. But ask yourself this: if she could see you now, what would she think of your behavior?&quot;</p>
+        <p>For a few seconds, she paced around. She pointed at Liara. &quot;You…You don&#x27;t understand. Us quarians, we…we don&#x27;t experience loss the same way as other species. We can&#x27;t just–&quot;</p>
+        <p>&quot;Answer the question, Tali,&quot; Garrus said. &quot;How would she feel if she saw you right now, just falling apart without her?&quot; He growled. &quot;Spirits, she gave her life for you! And this is how you repay her? By dishonoring her sacrifice? By–&quot;</p>
+        <p>&quot;YOU THINK I DON&#x27;T KNOW THAT? YOU THINK I HAVEN&#x27;T TRIED?&quot; she shouted, and everyone gasped and recoiled with shock, their eyes wide, their mouths agape.</p>
+        <p>Panting, she sat on the couch and looked down at the ground, her eyes stinging with tears, her hands shaking as she clutched her head. Nice work, you bosh&#x27;tet. Now they&#x27;ll definitely want to help you. She took a deep breath. &quot;Everyday…&quot; She gulped. &quot;Every day, I&#x27;m failing her…and I&#x27;m not strong enough to do anything about it.&quot;</p>
+        <p>Liara scooted closer to her and put a hand on her knee. &quot;You have nothing to be ashamed of. You want to know why?&quot;</p>
+        <p>&quot;Why?&quot;</p>
+        <p>&quot;Because your pain,&quot; Liara said, &quot;is too great for any one person to bear. Alone, nobody can endure it without it consuming them eventually. So let us share it with you, Tali. Give us a chance to guide your every step down the path to recovery, to show you that life is still worth living, even if it might never be the same.&quot;</p>
+        <p>She sniffled. &quot;Why?&quot;</p>
+        <p>&quot;Because you&#x27;re more than just a crewmate,&quot; Adams said.</p>
+        <p>&quot;More than just a friend,&quot; Gabby said.</p>
+        <p>&quot;More than just a fellow sister in arms,&quot; Garrus said.</p>
+        <p>&quot;You&#x27;re family,&quot; Ashley said.</p>
+        <p>&quot;Since our days on the SR-1,&quot; Liara said, &quot;we&#x27;ve always endured every hardship together, and let that hardship only strengthen our bond. So instead of letting her sacrifice drive us apart forever, let&#x27;s use it to bring us closer than ever.&quot;</p>
+        <p>&quot;And to let our shared pain,&quot; Garrus said, &quot;be a life-long reminder of what she meant to us, of why we&#x27;ll continue to honor her memory until our last breaths.&quot;</p>
+        <p>&quot;So what do you say, lass?&quot; Ken asked.</p>
+        <p>&quot;Will you at least give us a chance?&quot; Gabby asked.</p>
+        <p>She closed her eyes and took another deep breath. Keelah, what should she do? No doubt, she was among the luckiest people in the galaxy to have such caring, devoted friends. But could their alien minds handle the agony of Felz&#x27;elt? If they truly understood it, would they realize she was doomed and give up on her? Or would they come together and try even harder to &#x27;fix&#x27; her?</p>
+        <p>Whatever the case, she owed them at least a chance to do that. As Garrus just said, this was the only option they had left. If this failed, then nothing would save her.</p>
+        <p>&quot;Fine,&quot; she said, &quot;do what you need to do. But don&#x27;t say I didn&#x27;t warn you.&quot;</p>
+        <p>Everyone but Liara left the cabin to go wait just outside the door. Liara stood up and went to the bathroom. &quot;I&#x27;m just going to sterilize my hands. In the meantime, try to relax, Tali. The calmer your mind, the smoother this will go.&quot;</p>
+        <p>She laid back on the couch, then took a series of deep breaths through her nose. Gradually, her heart rate stilled. Gradually, her muscles loosened up and her hands grew less shaky.</p>
+        <p>Soon, Liara came out of the bathroom, then sat beside her. &quot;Now, to do this, I&#x27;m going to need you to take off one of your gloves.&quot;</p>
+        <p>She sighed. This would be the first time she&#x27;d ever done anything like this. &quot;Very well.&quot;</p>
+        <p>She popped the seals around her left glove, then slipped it off and revealed her bare hand.</p>
+        <p>Liara held it with both of hers. &quot;Now, look into my eyes.&quot;</p>
+        <p>She complied, and an electric sensation raced up her arm, up her neck, and then up to her skull, tingling her every nerve.</p>
+        <p>&quot;Good,&quot; Liara said, her voice echoey and distorted. Her eyes rolled to the back of her head, then became inky black pools of darkness. &quot;Now…embrace eternity.&quot;</p>
+        <p>Her vision went black. In what felt like only seconds, her mind flashed through weeks, months, and then years worth of memories, from her first days on the SR-1 to her last night with Jane before the final battle for Earth. It all happened too fast for her mind to process.</p>
+        <p>But then the visions slowed and settled on the moment Janeleft her behind.</p>
+        <p>Her heart pounded, and the vision slowed and grew hazy. A sharp, cold agony squeezed the breath from her lungs, and abruptly her body stiffened. No, no, no, no, no! Stop this! Please! Get me out of here! I can&#x27;t…I can&#x27;t–</p>
+        <p>&quot;Tali?&quot; Liara&#x27;s voice rang in her skull and sent a soothing sensation coursing through her limbs. &quot;Tali, listen to me. Focus on the sound of my voice. I know this is hard, but just remember that none of this is real. Through all of it, I&#x27;ll be right beside you. Understood?&quot;</p>
+        <p>She took a deep breath. Understood.</p>
+        <p>Once more, the vision cleared and thrust her back into that moment.</p>
+        <p>&quot;Get back to Rannoch,&quot; Shepard says. Their eyes meet, and her heart breaks at the raw pain in Shepard&#x27;s eyes. Gently, she puts one hand on Tali&#x27;s mask, and her knees go weak. An ice storm of agony ravages her chest and she sobs and struggles to breathe. &quot;Build yourself a home.&quot;</p>
+        <p>&quot;I…I have a home,&quot; she manages to say.</p>
+        <p>As Shepard pulls away, her eyes are wet with tears, and Tali can&#x27;t bear to meet her gaze. This is the end, she realizes. All was lost, and she wasn&#x27;t going to get her happy ending.</p>
+        <p>She burst into tears, and once more the vision slowed to a crawl and grew hazy. Liara, please…stop this. I can&#x27;t–</p>
+        <p>&quot;Yes, you can, Tali!&quot; Liara snapped. &quot;Just take a deep breath and hold on a little longer.&quot;</p>
+        <p>She took another deep breath, and once more the vision cleared and resumed.</p>
+        <p>&quot;Come back to me.&quot; Her words sound hollow. At that moment, something snaps within her. A terrible weight bears down on every fiber of her being, and an impenetrable darkness enshrouds her mind. More and more, the ice storm in her chest intensifies, racking and suffocating her heart and lungs until she&#x27;s completely breathless.</p>
+        <p>As Garrus pulls her inside the Normandy, she wants to scream, to break free and rush towards her lifemate before it was too late. But she can hardly muster the energy to speak. Soon, her vision blurs. The noises around her distort, becoming unintelligible noise.</p>
+        <p>And then she slips into unconsciousness.</p>
+        <p>When Liara let go of her hand, she opened her eyes, only to see her friend staring at the ground, her eyes wide, her mouth agape.</p>
+        <p>&quot;So?&quot; she asked, putting her glove back on. With a sharp hiss, it resealed. Her pulse climbed. Was Liara ok? Did the experience cripple her? &quot;Do you understand now?</p>
+        <p>Tears were streaming down Liara&#x27;s cheeks as she met her gaze. &quot;Is this…is this what you felt about her?&quot; Briefly, she smiled and looked away, wiping away her tears. &quot;Goddess, it&#x27;s so beautiful. No wonder you&#x27;re in so much pain.&quot;</p>
+        <p>Her pulse stabilized and she exhaled. Oh, Keelah, thank the ancestors she&#x27;s okay. &quot;So now you know that–&quot;</p>
+        <p>&quot;That quarians pair-bond for life, and fear Felz&#x27;elt more than death itself?&quot; Liara asked. &quot;Yes. But why didn&#x27;t you tell us?&quot;</p>
+        <p>She looked towards the ground and began wringing her hands. &quot;Well, it…it&#x27;s because–&quot; she gulped, &quot;it&#x27;s because no words in human Ingleesh, asari Ula&#x27;rhis, or turian Khin&#x27;khaar can accurately describe what I&#x27;m feeling. For you, losing your mate is such a different experience. So even with the best translator in the galaxy, I never thought you would understand.&quot;</p>
+        <p>Liara sighed. &quot;Perhaps that&#x27;s true.&quot; She stood up, wiping away more of her tears. &quot;In any case, I better go share this with others. We&#x27;ll need some time to…process all of this. In the meantime, though, can you promise us something?&quot;</p>
+        <p>&quot;What?&quot;</p>
+        <p>&quot;As bleak as things seem now,&quot; Liara said, &quot;promise that you&#x27;ll at least try to recover and talk to us about your feelings.&quot;</p>
+        <p>She broke eye contact and sniffled. &quot;I-I don&#x27;t know, I–&quot;</p>
+        <p>&quot;Tali,&quot; Liara said firmly, &quot;I know this is hard. I know this is the worst pain you&#x27;ve experienced. But for us, please, make the commitment.&quot;</p>
+        <p>She took a deep breath. &quot;Very well.&quot; In all likelihood, nothing would come of this. But for them and Jane, she&#x27;d at least try. &quot;I…I promise.&quot;</p>
+        <p>Liara smiled. &quot;That&#x27;s all we ask.&quot; She made her way towards the exit. &quot;We&#x27;ll see you soon.&quot;</p>
+        <p>When Liara left the cabin and joined the others, she checked the ship-time on her omni-tool. She had about twenty minutes before the start of her shift in engineering.</p>
+        <p>She sighed and let out a frustrated growl. She wanted to rest more, but that talk and the mind-meld had consumed so much time. Just ten more minutes. She lay on her side in a fetal position.</p>
+        <p>&quot;Every day, I&#x27;m failing her…and I&#x27;m not strong enough to do anything about it.&quot;</p>
+        <p>Was that true, now that the others understood her pain? Did it even matter? Honestly, she had no idea. If there was &#x27;light at the end of the tunnel&#x27;, as humans say, then she still couldn&#x27;t see it, much less find a reason to pursue it at all.</p>
+        <p>She sniffled, as tears streamed down her cheeks. Is it worth it? Life without her was so empty, so pointless, and not worth this pain. But how else could she honor her sacrifice?</p>
+        <p>She took a deep breath. If you&#x27;re with the ancestors, saera, then please…help me. Show me how to honor your sacrifice.</p>
+        <p>She couldn&#x27;t do this alone.</p>
+    </div>
+</body>
+</html>
