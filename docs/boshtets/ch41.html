@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 41</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch40.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html" selected>Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch42.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 41</h1>
+    <div class="chapter-content">
+        <p>Tali pulled the cloth aside and stepped into her living cubicle. Following the pull of the Neema&#x27;s artificial gravity on her tired body, she dropped down on the bed. The mattress was hard and not even close to being as comfortable as the one on the Normandy had been. She rolled onto her back and noticed for the first time ever since she had been returned to the flotilla - four...no, five days it had been, she believed – that her room was missing any features one would&#x27;ve expected from a home. The nightstand, most Quarian&#x27;s only piece of furniture safe for their beds, was empty, and the cloth making up the ceiling and three of her four walls – the fourth one being the actual wall of the former cargo bay these quarters were set up in - was brown and without a pattern. Usually, that was the very first thing people customized wherever they moved; in fact, most people simply owned their &#x27;walls&#x27; and took them from place to place, keeping whatever had made up the cubicle&#x27;s wall before they got there under their bed and reinstalling it when they left. Tali had always been one of the few who didn&#x27;t do that, instead she liked to play around with whatever she found in a new place. Until Jane had gifted her the giant, Zorah - patterned purple cloth that had made up the walls of her room on the Normandy, that was. There wasn&#x27;t a doubt in her mind that she would&#x27;ve kept that magnificent piece until the day she died.</p>
+        <p>It was gone now, together with so much else, and looking around she found that she really didn&#x27;t care about how barren the room was.</p>
+        <p>She had spent the last sixteen hours, with some short breaks of course, rushing back and forth between the drive core and the upper portside engine. It had begun to slightly lag behind in output two days ago, so now that the flotilla had reached it&#x27;s next stop, some uninhabited system in the Terminus where they&#x27;d be picking up water and material for fertilizer, they were taking the time to all but disassemble the engine itself as well as it&#x27;s power supply from the drive core.</p>
+        <p>Tali realized that the system&#x27;s name was something she probably should&#x27;ve cared about, as well. But frankly, she didn&#x27;t.</p>
+        <p>Lying on her bed, she pondered if she shouldn&#x27;t be doing something right now; she was tired, yes, but after all she was off duty for the entirety of the shift – another sixteen hours. Quarians lived by shifts, not simulated days, but those shifts still somewhat allowed a day and night cycle close to Rannoch&#x27;s. The &#x27;day&#x27; had thirty-two hours, half of that was one&#x27;s shift, the other half was one&#x27;s free time, of which a Quarian slept eight hours on average. Some people slept in the middle of their free shift, others at the beginning or the end. A Quarian had no trouble staying not just awake, but alert and focused for twenty-four hours in a row, a trait that had served Tali well on the Normandy with the human&#x27;s short days. For Adams and the other engineers, she had appeared like some &#x27;Ubermensch&#x27;.</p>
+        <p>At the thought, Tali smiled for the first time in days. The engineering team at least had made it out without a casualty.</p>
+        <p>Tali did not feel like going outside at all. She was new on the Neema, and while she got along just fine with everyone she had met and worked with so far, the things that were on her mind were not exactly something one could talk about to a new acquaintance. Raan had looked after her twice already and even her father had been there when she arrived and then called her for a short talk two shifts ago, but they were obviously both very busy and Tali didn&#x27;t know what to tell them anyway. Han was on a training ship that was off to a tour. He had messaged numerous times of course, but all he could apparently come up with was to tell her he&#x27;d be there for her once he got back. Not that she blamed him, she was thankful her brother would be around soon.</p>
+        <p>They understood the loss, sure. But none of them had seen Sovereign like she had. None of them had heard the thing&#x27;s words in person. They didn&#x27;t understand that now that Jane was gone, whatever chances they might&#x27;ve had to stand against the Reapers were likely ruined.</p>
+        <p>Tali found that right now, she was missing Ashley even more than before.</p>
+        <p>Having little hope of actually finding sleep anytime soon, Tali still closed her eyes, but turned on music before. Jane&#x27;s playlist. It was the only thing she listened to these days. In fact, listening to it was about the only thing she did at all outside of work. It was all that was left.</p>
+        <p>She skipped a bunch of songs that were way too upbeat for her state of mind until finally, she heard the drums opening up the intro of Gone Away.</p>
+        <p>Maybe in another lifeI could find you therePulled away before your timeI can&#x27;t deal, it&#x27;s so unfair</p>
+        <p>She had liked the song from the time she&#x27;d first heard it, but these last couple of days it had taken up permanent residence in her head.</p>
+        <p>And it feelsAnd it feels likeHeaven&#x27;s so far awayAnd it feelsYeah, it feels likeThe world has grown coldNow that you&#x27;ve gone away</p>
+        <p>Had a younger Jane listened to this song after Mindoir the way Tali was listening to it now? She clenched her jaws, the grief welling up in her chest and threatening to make her sob. She didn&#x27;t want to cry again, the walls were too thin here.</p>
+        <p>The world had grown cold indeed.</p>
+        <p>Leaving flowers on your graveTo show that I still careBlack roses and Hail MarysCan&#x27;t bring back what&#x27;s taken from me</p>
+        <p>Jane didn&#x27;t even have a grave. She was floating through the void somewhere and would do so until the end of time, at least what was left of – Tali cut the thought off, but not in time to protect herself from the mental image of Jane&#x27;s burnt and mutilated body. It wasn&#x27;t the first time her imagination had gone running wild about this particular topic.</p>
+        <p>I reach to the skyAnd call out your nameOh, please let me tradeI would</p>
+        <p>When this part had come on during her first listening after the attack, she had been a little shocked at how much it reverberated in her. But it was true. She really did wish that if someone had to die there, it would&#x27;ve been her and not Jane.</p>
+        <p>At least then the others could go on without me. But they can&#x27;t, Jane is dead. And I feel like I might as well be.</p>
+        <p>She did eventually end up crying again some time later, but got herself back under control sooner than she had the previous time.</p>
+        <p>Two months after the attack</p>
+        <p>&quot;Doc?&quot;</p>
+        <p>Liara opened her eyes and pushed herself off the armrests to look at the door. It was being filled out by the massive form of Jacob Taylor.</p>
+        <p>&quot;Miranda has finished her readings. The Illusive Man will see you both now.&quot;</p>
+        <p>She simply nodded and got up, not overly eager to exchange words with the man. She had brought Shepard&#x27;s body here for hope&#x27;s sake, and because of Lawson&#x27;s and Taylor&#x27;s actions on Vostralska. That didn&#x27;t mean that she had forgotten any of the thing she had seen on Edolus, Nodacrux and elsewhere. Rogues, Lawson had explained. Perhaps that was true. It was most certainly just what anyone in her situation would have said.</p>
+        <p>She followed Taylor through a couple of corridors until finally, he stopped and stepped aside, extending his left to indicate the right door for her. She passed him by without looking at him. Inside, she found Lawson already waiting; the usually calm and controlled woman had an air of impatience around her. &quot;There you are, good. Step on the scanner over there.&quot;</p>
+        <p>Liara complied and a few taps on Lawson&#x27;s omnitool later, a holographic scanner was sizing her up; the same was happening to Lawson. It appeared they were going to speak face-to-face, in a way. The scan finished and the holo turned into a display creating an almost perfect illusion all around her. She was standing in a big room, the walls of which were difficult to make out; presumably, they were all part of one big window. The room was empty safe for an elevator somewhat off center and a singular chair with a big holographic console with dozens of displays behind it. She realized that the chair had been turned around for this meeting. In it sat the Illusive Man. Liara had spoken with him before, but now was the first time he got to see him. A man looking to be somewhere around the middle of his species&#x27; lifespan, he was slim with a striking face. In his hand was a cigar that right now, he was drawing from. Unwilling to wait for the Cerberus leader to invite anyone to speak, she turned to her right, to Lawson. &quot;So? How bad is it?&quot;</p>
+        <p>The addressed shot a quick look to her employer before answering. &quot;Well, she&#x27;s dead.&quot;</p>
+        <p>As much as she had hoped it&#x27;d be otherwise, Liara had almost expected that. It still hurt, and it wouldn&#x27;t have been easy to keep her voice steady. Fortunately, Lawson continued.</p>
+        <p>&quot;Most bones in her body are broken, and the skin on her left arm, both legs and most of her torso is burned to various degrees. The left limbs are both beyond rescue, that much is clear. This is all consistent with Jeff Moreau&#x27;s report of the commander being hit by an explosion. The shrapnel from that explosion appears to be embedded into her suit, with only larger pieces actually having punctured it. Most organs are likely to have been torn by the blunt trauma or penetrated.&quot; She cleared her throat and continued. &quot;The saving graces are that her head wasn&#x27;t directly hit and that she wasn&#x27;t directly exposed to space, at least as far as I can tell. The suit held tight; all punctures appear to have been immediately molten shut by the shrapnel&#x27;s temperature.&quot;</p>
+        <p>Liara felt like the ground was about to give out underneath her feet. She had known that the chance was slim, but to hear the state Shepard was in laid out in this detail was almost more than she could take.</p>
+        <p>The Illusive Man seemed to have no such troubles. &quot;We did expect the damage to be extensive, Miranda. Can you fix it?&quot;</p>
+        <p>The Asari wouldn&#x27;t have believed it possible, but Lawson actual seemed uneasy when she continued. &quot;Sir, she was frozen deep by the cold of space. On one hand this is what allows us to even try in the first place, as this way, there was no time for her brain to suffer cellular damage. But we have to expect fracture damage of the tissue..it&#x27;s not a gamebreaker, but it&#x27;ll complicate things. The real issue are the ice crystals. Frozen in this manner, her cells will be full of them. They will cause extensive damage upon thawing. In the rest of her body, we can compensate or simply replace. But the brain...&quot;</p>
+        <p>&quot;Shepard&#x27;s brain needs to remain exactly the same as it was. Surely this obstacle can be overcome?&quot;</p>
+        <p>Lawson grimaced. &quot;There was an article in the New England Journal of Medicine late last year by one Doctor Frank Wilson. The details are... complicated, but I believe that he might have made significant headway towards a solution - &quot;</p>
+        <p>&quot;Excellent!&quot; The Illusive Man took a sip from his glass. Some alcohol, it looked like. &quot;I will set everything in motion to recruit him as soon as possible. Doctor Wilson will be yours to command and ready to begin before the end of the week.&quot;</p>
+        <p>Lawson looked shocked – another expression Liara hadn&#x27;t expected the woman to be capable of. &quot;Sir, you need to understand that I cannot promise...&quot;</p>
+        <p>&quot;I know, Miranda. I know. But if anyone finds a way, it&#x27;ll be you. So stop worrying and just do it, and I&#x27;ll make sure you have anything you need.&quot;</p>
+        <p>&quot;Now wait just a moment.&quot;</p>
+        <p>It was the first thing Liara had said since the beginning of the conversation, and the other two looked at her as if they had forgotten her presence. &quot;What you&#x27;re intending to do...it sounds like something the Collectors would&#x27;ve done, tampering with a corpse.&quot;</p>
+        <p>Somehow, the Illusive Man managed to sound sincere when, without missing a beat, he said: &quot;You can believe me Doctor T&#x27;Soni, I understand your concern. However, this won&#x27;t be anything of the sort. Quite the contrary. We will bring about the greatest breakthrough medicine has seen in a hundred years. What better person to be the first human being to truly come back from the dead than Shepard? Her importance for our victory in the coming war cannot be overstated. You know this to be true. That is why you agreed to bring her body here in the first place, despite all the atrocities you believe our organization to have committed.&quot;</p>
+        <p>She gritted her teeth. The problem was, the man was correct.</p>
+        <p>If this works out, Shepard might hate me for allowing this. But...that doesn&#x27;t matter. Ultimately, it doesn&#x27;t matter.</p>
+        <p>A realization set in, both sobering and relieving. At this point, I couldn&#x27;t stop them even if I wanted to. I made my decision when I brought her here.</p>
+        <p>&quot;Fine. You are correct.&quot; , she said out loud. &quot;Do you have any idea what the collectors would want with Shepard&#x27;s body?&quot;</p>
+        <p>The Illusive Man took his time with an answer, choosing to take a drag from the cigar first. &quot;I don&#x27;t exactly know it yet, but I am entertaining the possibility that the Collectors are working for the Reapers. Shepard got one of them destroyed, less than a month later she becomes the target of two exceptionally well planned ambushes in less then a week, the second one by a ship that I have reason to suspect might be a collector vessel, and then those same collectors attempt to bring her body into their possession.&quot; He tapped his cigar on the tray, ridding it of a long piece of ash. &quot;The Collectors are known to be...well, collectors, of noteworthy specimen of all kinds of sentient and non-sentient species. So one could certainly interpret their interest in Shepard as a mere coincidence.&quot; He looked her straight in the eyes. &quot;I do not believe in coincidences.&quot;</p>
+        <p>She mulled it over for a while. It made sense, so much was true. But ultimately, even if the Illusive Man was correct, the Collectors were out of reach for her. Unlike someone else.</p>
+        <p>&quot;Maybe you are right. Either way, there is nothing that can be done about them, is there?&quot;</p>
+        <p>The leader of Cerberus tilted and shook his head. &quot;For now, no. Nobody has any idea what kind of numbers and power the Collectors have, or where their homeworld is even located.&quot;</p>
+        <p>She nodded. &quot;There is one more thing. Feron, the agent who helped me. We would&#x27;ve never been able to secure Shepard if not for his help. We ha-&quot;</p>
+        <p>&quot;I know what you want me to do, ...&quot; , the Illusive Man cut her off, &quot;...but I cannot authorize any of my assets for such an action. Our objective was to secure Shepard or at least her body, and we achieved it. I will not invest resources into trying to rescue an exposed double agent of dubious loyalties who is most likely already dead.&quot; His eyes and voice had an underlying edge of steel to them as he said this, and his face left no doubt that this decision would be final. Liara tossed a brief glance to Lawson, who had told her the same thing on the way here.</p>
+        <p>&quot;I cannot say that I am surprised. If you will not help me, I will do it on my own.&quot;</p>
+        <p>That seemed to surprise the man.</p>
+        <p>&quot;If that is what you want , I won&#x27;t try and stop you. But are you sure you realize whom your up against? So far, the Broker most likely has no intentions of any kind towards you. The Broker holds no grudges, except towards traitors, and there is nothing new you could tell them; they will be very much aware that we have Shepard now. But trying to rescue your friend would essentially mean declaring war on them. A daunting prospect for any single person, to say the least.&quot;</p>
+        <p>She contorted her face to a bitter smile. &quot;Your concern for my well-being is touching.&quot;</p>
+        <p>He did not return the smile, nor the acid. &quot;But I am concerned for your well-being. You are the leading expert on the prothean extinction and the reapers. After we&#x27;ve succeeded in bringing her back, Shepard might need you.&quot;</p>
+        <p>She knew not what to reply, so she just turned to leave, but stopped when he slightly raised his voice after her.</p>
+        <p>&quot;One more thing, Doctor. I trust that we see eye to eye on the importance of discretion in this matter.&quot;</p>
+        <p>Liara almost lost her cool. Just the thought of Tali or Garrus getting their hopes up just for it all to probably not work out anyway would&#x27;ve been enough for her to not mention it to anyone, even if the situation with the Broker hadn&#x27;t been what it was. She couldn&#x27;t suppress an irritated snort.</p>
+        <p>&quot;Do you take me for a complete fool!?&quot;</p>
+        <p>And with that, she left the holograph.</p>
+    </div>
+</body>
+</html>

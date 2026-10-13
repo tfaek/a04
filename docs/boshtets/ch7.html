@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch6.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html" selected>Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch8.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 7</h1>
+    <div class="chapter-content">
+        <p>“Anyone&#x27;s been giving you any trouble that I missed?”</p>
+        <p>Shepard was walking across Zakera Ward&#x27;s market&#x27;s fifth&#x27;s floor, making her way to a shop called “Sirtus Armor and Equipment”, Tali in tow. Before this, they had visited an electronics store with a large subsection of military-grade omnitools to get the young woman a more modern model. She had protested, of course; in fact, she had not even mentioned that her model was outdated and frankly, worn down. It had been Kaidan who had admiringly told Shepard how astonished he was that somehow, Tali managed to get her, as he had called it, &#x27;hunk of junk&#x27; to perform at, and often above, the level of his own, Alliance – issued, and five years younger model. She had of course said that Shepard shouldn&#x27;t spend so much money on her equipment and that her heavily modified model was up to the job, but Shepard had simply showed Tali her sizable bank account (courtesy of Barla Von) and asked her if she wouldn&#x27;t agree that if she could get an old model to perform like that, her capabilities with an up-to-date model would be even more valuable, and that therefore it was in the best interest of the mission and the entire crew to get her a new one. She had not had another answer to that than a meek &#x27;yes&#x27;, and so now, during a quick stop for resupply and an evening of shore leave at the Citadel, Shepard had grabbed her and headed off to the ward, accompanying her both to make sure that she actually bought something top of the line instead of something modest and to take care of any problems which were sadly expected to arise for a Quarian on the Citadel. The first reason had already come to pass, just like Shepard had anticipated, the second one had not, a pleasant surprise.</p>
+        <p>“No, no. There&#x27;s been the occasional stare, but nobody has said anything. It&#x27;s not the presidium after all, these people are used to seeing...undesirables - “</p>
+        <p>“You&#x27;re not an undesirable.”</p>
+        <p>“I know, Shepard. It&#x27;s just that that&#x27;s how most people see us...anyway. I think having you with me helps a lot. Thank you.”</p>
+        <p>“Don&#x27;t mention it. This nonsense is getting me worked up, I almost wish some dumbass would say something so I could go off on them.”</p>
+        <p>She squirmed a little. “I&#x27;d rather not attract any more attention than necessary...”</p>
+        <p>“I wasn&#x27;t serious, Tali. Though I do think I&#x27;d enjoy it at least a little...” She giggled. “Maybe I would too. You&#x27;re good at shouting at people.”</p>
+        <p>They walked in silence for a little until Tali spoke up again. “Where are we actually going, Shepard? We just passed a public transport terminal. Is there something else we&#x27;re going to pick up?”</p>
+        <p>Shepard grinned. “Indeed. We&#x27;re going to an armor shop.”</p>
+        <p>She cocked her head. “An armor shop? But you just bought that Scorpion armor two weeks ago, and I thought you liked it. Did it take some damage I didn&#x27;t notice?”</p>
+        <p>Shepard&#x27;s grin widened. “We&#x27;re not buying anything for me, Tali.” They arrived at the shop. “I&#x27;m not letting you go into combat like this any longer. You&#x27;re the most vulnerable out of all of us, you need to be protected adequately. “</p>
+        <p>She turned to voice protest. “These suits are made out of tough material, and I have the strongest shields out of all of us Shepard. I am protected - “</p>
+        <p>Shepard held up her hands to silence her. “I know your shields are strong and that your suit provides some protection, but it&#x27;s not enough, Tali. As it stands, any round that gets through your shields is a mortal danger even if it doesn&#x27;t hit anything vital, and that&#x27;s even more true for knives, or the claws of these husks the Geth use. Your suit is not armor. I know that you cannot wear a complete hardsuit like I would prefer you to do, but from what the owner told me on voice call, this shop should be able to provide a workaround of sorts. And don&#x27;t give me the money talk again, you know I have enough of it, and you know I am right. So shut it now and let yourself be equipped like our mission demands, no more arguing.”</p>
+        <p>Giving up her argumentative stance, she slumped a little, nodded and they entered the shop, where a Turian wearing a practical overall filled to the brim with all manners of tools and gadgets approached them. “Spectre Shepard! It&#x27;s an honor to have a member of your ranks in my shop. The licenses for anything your kind might be interested in are simply impossible to obtain for someone like me. I am Sirtus, we spoke already.” They shook hands.</p>
+        <p>“Pleased to meet you, Sirtus.”</p>
+        <p>The man&#x27;s eyes shifted to Tali. “So this is your quarian associate.” He let go of Shepard&#x27;s hand and extended his one to Tali, as well. “Welcome in my shop, Miss...?”</p>
+        <p>She stood silent for a second, most likely perplexed that a Turian would be so polite to her. “Z-zorah, Sir. Thank you.”</p>
+        <p>The Turian laughed and turned. “Don&#x27;t thank me yet. Wait until you&#x27;ve seen what I have in store for you. I think I&#x27;ve come up with something worthy of a Spectre&#x27;s team. Come then.” With a purposeful gait he led them around a corner into another room which was mostly empty save for a couple of benches which had pieces of armor for various races scattered across them as well as some mounted tools. He halted and stood by a table in the corner. On top of it, there were numerous pieces of ballistic mesh and plates as well as a couple of unopened boxes.”So. I can&#x27;t say that I&#x27;ve had a lot of experience outfitting Quarians, but since you said a hardsuit is out of the question, we&#x27;ll have to make something work with a more modular setup. “ He gesticulated towards Tali. “I take it you stow grenades and other such equipment in those pouches on the suit?”</p>
+        <p>“Yes.”</p>
+        <p>“Well, no longer. We can&#x27;t have you fumbling underneath your armor in the middle of a firefight, and it would impede the armors effectiveness and even potentially hurt you, anyway. What we will do ...” ,he picked up a chestplate, “... is to empty them and put the contents into the pouches on the outside of your plate instead, just like everyone else does it. You&#x27;ve got anything on you right now?”</p>
+        <p>“Nothing of the sorts, no...”</p>
+        <p>He set down the plate and took a step towards her.”Good. Turn around. She obliged, and he got out a measuring tape. “Lift your arms for a second please...” He got to work taking measure of her chest and waist, and Jane , watching the ordeal, couldn&#x27;t help but notice that she liked what she saw. She really does have a nice figure. “That one won&#x27;t do it...” Sirtus briefly returned to the table, rummaging through the different pieces he had laid out there, and returned with another chest piece. “Put this on...yes, like that...hold on to it, I&#x27;ll put the back on you...” He got the back plate out, a smaller piece that covered from the shoulders until just below the ribcage but let the lower back free for unimpeded movement. He clicked the connections in place and fastened them before patting Tali on the shoulder and stepping back. She turned around, bending her body, testing her mobility in this armor. Jane paid close attention; Tali was used to moving a certain way in combat, upsetting that too much would be a problem. However, there seemed to be little risk of that. Just as in the back, the frontal plate covered only the ribcage;“We will cover the lower torso with ballistic mesh “ Sirtus explained, “ I just could not find actual full-torso plate armor that would fit a Quarian, and I&#x27;ve never even heard of it to be honest. Your people don&#x27;t really believe in it, do they?”</p>
+        <p>Tali shrugged. “Our marines mostly wear special suits with pieces of mesh over them. We prefer speed and maneuverability over armor. With the plasma weapons the Geth use, most affordable armor plating is outmatched anyway, so we put our faith in our shields instead, and in being quick so we&#x27;re not getting hit in the first place. It&#x27;s not ideal for dealing with anyone else, but ballistic mesh is a decent solution for when we have to deal with pirates.”</p>
+        <p>Sirtus and Jane nodded; it was interesting how different enemies and philosophies produced different approaches to personal protection. “Okay. Well, you know your suit best. Here is a whole bunch of different mesh pieces, the attachment is self explanatory. Armguards and all that are over there, I see you&#x27;re not in need of shinguards. I suggest you strap in yourself, you will know best what does and doesn&#x27;t impede you and your emergency injection ports.” She nodded and got to work, leaving Jane and the Turian to converse in the meantime.</p>
+        <p>“I like your shop, Sirtus. You are correct that I wouldn&#x27;t buy here myself, Spectre gear is a level above, of course. But I think I would have a lot of trouble trying to get her outfitted half this well anywhere else.”</p>
+        <p>The Turian laughed. “Ah well, you could find this stuff pretty much anywhere...”</p>
+        <p>Jane insisted. “Yes, but not your help, finding a solution for her special needs, and preparing this all. Before I found you, I talked to three others, and they all blew me off. You know how it is with Quarians on the Citadel.” She could see Tali tense up, but she was sure she was right about this man.</p>
+        <p>And indeed, the Turian nodded solemnly. “Yes, it is a disgrace. I...can sympathize, I think I have an idea of how it feels, albeit for different reasons.”</p>
+        <p>Jane lifted an eyebrow. “How so? I did have the impression that you were a little, uh, different from most Turians I&#x27;ve met. No offense.”</p>
+        <p>Sirtus laughed again. “None taken, for you would be correct, or at least not too wrong. What you need to understand is that a lot of the uptight attitude you probably associate with Turians in general is actually just the Hierarchy. Age fifteen, they all get drafted into the military, where they get their very own state-issued stick up the rectum and their head screwed on just how the Hierarchy likes it. I grew up in the Terminus. Not an easy place to live in for almost anyone, but we&#x27;re free.”</p>
+        <p>“Why come here then?”, Shepard asked.</p>
+        <p>“I have a family now.”, the Turian shrugged. “If you&#x27;re not wealthy, the Terminus just isn&#x27;t safe, not even Illium is, really, so I got them out of there. I have lived six years here on the Citadel now, I will be a Citizen by next months&#x27; end. And all of that without being part of the Hierarchy, or getting abducted by pirates or pressed for protection money by mercs. It&#x27;s a good life here.”</p>
+        <p>“I think I&#x27;m done.” , Tali interrupted their conversation. They turned to look at what she had come up with. It certainly followed the philosophy she had outlined earlier, but it was much better than what she had had before. She had donned hardshell armguards that protected her forearms as well as the back of her elbow but had removed the gauntlets; Shepard understood why. For her work, tactile sensation was important, and having gauntlets on over her suit&#x27;s gloves would ruin that. Her shoulders and upper arms were protected by mesh, and so was the lower portion of her torso. Her upper legs were strapped into plates that left the knees free, with her lower legs stuck in her trusty &#x27;boots&#x27; as usual. The only other addition was a plate codpiece that seemed to have been taken from a human or Asari hardsuit, probably a Phoenix, judging from the shape.</p>
+        <p>Jane nodded approvingly. “Very good. You can move well in it?” In way of an answer, she bent down with straight legs, touching the floor with her fingers before performing a number of jumping jacks. Damn, she jumps high. Quarian legs are no joke.</p>
+        <p>“It doesn&#x27;t impede me, Shepard. And it doesn&#x27;t weigh much at all.” She put her hands to her hips. “I am pretty sure even with me in armor and you not, I can still outrun you.” Shepard grinned. There was a way to go still, but Tali was definitively becoming more confident in their banter.</p>
+        <p>“We&#x27;ll find an opportunity to test that.” She turned towards Sirtus. “Well, this is certainly satisfactory. We&#x27;ll take this, as well as a full set of spares. Can you have it all delivered to our ship by tomorrow morning?”</p>
+        <p>Sirtus flared his mandibles. “Yes I can, but we&#x27;re not all done yet.” He stepped towards Tali. “This is great, but there is still one glaring weakness here.” He knocked on her visor like one might knock on a door. “These visors are remarkably resilient for glass, but at the end of the day, they&#x27;re glass. Can&#x27;t help it of course, buuuut...” he walked over to the table and retrieved one of the boxes, “...we can put something over it.” He opened the box and pulled out an object that looked like a copy of Tali&#x27;s visor, just larger and not opaque. Tali gasped. “An overvisor! Where did you get it?”</p>
+        <p>The Turian shrugged. “Back in the Terminus days, actually. Bought it from a Batarian. No idea where he got these, but somewhere down the line they&#x27;re probably from pirates or other scum who pilfered it from Migrant Fleet Marines. Doesn&#x27;t matter either way. What matters is that it&#x27;s for a female helmet, and I have models of all three visor sizes. Now, lets see...yes I guessed right. It will fit.” He went to work on Tali&#x27;s helmet and with just a few movements fixed it into it&#x27;s proper rails on Tali&#x27;s helmet. The result was a transparent mask on top of Tali&#x27;s original, purple one, with a millimeter of air in between. Sirtus looked upon his handiwork with visible satisfaction. “This setup is over half as resilient as the faceplates of any heavy helmet you&#x27;ll find the Alliance using, and twice the strength of the visors of those. Won&#x27;t stop a bullet from most distances of course, but that&#x27;s not really the point anyway. The free space between the visors protects very well from blunt force. If she takes a bad fall or a blow to the face, it will crack the overvisor but not her actual visor, leaving her personal sealed environment intact.”</p>
+        <p>Jane whistled, now thoroughly impressed. “This is much better than anything I expected to come from this whole visit. Good job, Sirtus. I&#x27;ll have what we already agreed on as well as this and all spares of this size that you have. Have it delivered to the Normandy, docking bay 422. “ They remained for a couple more minutes, Tali getting out of her new armor while Shepard and Sirtus took care of the payment and said their goodbyes.</p>
+        <p>Exiting the store, Tali turned her head towards her commander. “Thank you, Shepard. I mean it.”</p>
+        <p>Shepard smiled at her. “Nothing to thank me for. I won&#x27;t have any of my team go out there with anything less than the best we can get our hands on. Combat is never truly safe, but at least it&#x27;s notably safer for you now.” She knew her well enough by now to know that Tali was beaming at her.</p>
+        <p>“Thank you anyway. You&#x27;ve been better to me than I ever dreamed of any pilgrimage captain being. Keelah, even having a captain in the first place is such a...privilege. I wish I had something more to offer you in return than what you already have.”</p>
+        <p>Shepard&#x27;s smile widened. “The Intel that made me a Spectre, a valuable teammate, a skilled engineer, and a friend all in one? I think that&#x27;s a good deal for some armor, Tali.”</p>
+        <p>She looked down, and Shepard was sure that if Quarians could blush, she was doing it right now. She remained silent for a long moment, before speaking in the most serious tone Shepard had heard from her all day. “Thank you for being my friend , Shepard.”</p>
+        <p>Shepard&#x27;s smile faded and she halted, putting a hand on Tali&#x27;s shoulder. This was not a moment for playful banter anymore. She damn well would have Tali understand completely that she genuinely thought of her as a friend and not just a combat engineer who also happened to be good company, and if she had to get sappy for it, so be it. “No Tali, thank you. I think you underestimate how much I like having you around. ” Tali tensed up and stared at her, apparently dumbstruck by her declaration. She just can&#x27;t believe someone actually values her, and not just her work or skills. Damn. Shepard&#x27;s smile returned as a smirk. “Come now, the others are already there.”</p>
+        <p>“Where?”</p>
+        <p>“At the restaurant, of course. You think I&#x27;m gonna spend an evening on the Citadel without treating us to some decent food? And yes, the place does have sterilized dextro food.“</p>
+        <p>…..</p>
+        <p>Later that night, the crew incrementally made their way back to the Normandy. Kaidan and Liara had left first, citing their eagerness to get some extra sleep, then Garrus and Wrex had gone off on their own to find some, as Wrex put it, &#x27;proper alcohol&#x27; , and so Tali had remained with Ashley and Jane for about another half an hour after that until they decided to leave. For Tali, the evening had been absolutely amazing. She had eaten solid food for the first time in years – the restaurant was apparently really high quality, and had had sealed bubbles for their plates that had grip-in &#x27;gloves&#x27; worked into them that allowed Tali to actually grip fork and knife and cut her food. She had to eat in quite small bites, of course, since even the larger induction port underneath her indicator light was only about two centimeters in diameter, but compared to nutrient paste, it was heavenly. And the kind of food it was – it had been steak. Juicy and tender steak of some Palaven animal. It had not just been the first time in years Tali got to actually chew something, but the first time in her life that Tali had experienced the texture of meat in her mouth, and she found that it was well worth the slight ache of her atrophied jaw muscles. And with the rest of the team, with whom she was getting along greatly at this point – Liara was a little awkward, Kaidan was a little reserved, and Garrus still teased her sometimes, but it was all good, and she liked them all anyway- being such great company, a group of actual friends, she had been the happiest she had been in a long time. And so, when Shepard and Ashley decided to use the toilets at the C-Sec academy since they apparently could barely walk anymore (complete with a tipsy declaration from Ashley about how she &#x27;wouldn&#x27;t mind one of these suits right now, just relax and ...let it flooow...&#x27; ), Tali didn&#x27;t even think about the potential trouble of her traversing the Citadel alone, she just set off on the rest of the way to the Normandy on her own. This would turn out to be a mistake.</p>
+        <p>Surprisingly enough, the trouble actually did not occur in the C-Sec academy full of officers with less than favorable ideas about Quarians – but then again, it had been about twenty meters from the elevator they had come from to one that one had to take to get to the dock- but in the docking area. Less than three seconds after exiting the elevator, she found herself ambushed by an olive skinned human woman with a camera drone.</p>
+        <p>“Tali&#x27;Zorah?”</p>
+        <p>“Uh, yes?”</p>
+        <p>The camera drone came to life, blinding Tali for a second before her mask adjusted for the light that was being shone directly at her face.</p>
+        <p>“Khalisa bin Sinan al-Jilani, Westerlund News. Miss Zorah, you have been cited- “</p>
+        <p>“Wait! I know you! You&#x27;re that reporter who tried to make Shepard look bad on camera!” She remembered the bosh&#x27;tet now, she had seen the interview after the fact. The woman had twisted Shepard&#x27;s words at every turn to make it look as if Shepard was selling humanity out to the council. Shepard had of course not fallen for any of it, but the intention was bad enough.</p>
+        <p>“I was merely doing my job, asking the hard questions humanity deserves answer for. If the Commander was here right now, I&#x27;m sure she would agree.”</p>
+        <p>“M-maybe...” She was definitively not going to tell this woman about how the Commander was probably peeing like a cut fuel line right now due to drinking a little too much of this amber liquid the humans called beer which apparently just passed right through the human kidney, no filtering whatsoever.</p>
+        <p>The reporter didn&#x27;t let up for a second. “However that may be, your testimony to independent reporter Emily Wong made quite the big waves here on the Citadel. Do you think that the punishment the officer in question received was enough?”</p>
+        <p>“The...what? He did? I don&#x27;t actually know anything about what happened about this...I did not really expect anything to come of it...” Before she knew it, Tali was wringing her hands and looking slightly down. Keelah, what have I started? If C-Sec is in hot waters, will Shepard get into trouble for this? They&#x27;ll want revenge after all...oh keelah, now I&#x27;m squirming on television...wait...can she even just record me like that? Doesnt she need-</p>
+        <p>“Are you really not aware? C-Sec launched an investigation into the matter and suspended the officer who almost lost the evidence against Saren for three months, and demoted him. He also got his pay cut by thirty percent for a year. The human ambassador - “</p>
+        <p>Tali gasped. Udina had gotten involved in this!? Why? And that det&#x27;kazuat was getting what he deserved? She didn&#x27;t know if she should be amazed or terrified right now.</p>
+        <p>“The human ambassador got involved!? But...why?”</p>
+        <p>Al-Jilani&#x27;s expression somehow managed to convey clearly how she not actually meant what she said, while still speaking with a voice that would leave anyone who watched the recording -which only showed Tali – utterly convinced of her conviction. “The Alliance opposes racial discrimination in every form, against anyone.” Her tone then became much more aggressive. “This &#x27;mistake&#x27;, made by a Turian in favor of another Turian, almost cost humanity a great deal, and you, a Quarian, your life. Humanity knows how it feels to be treated like second – class citizens.”</p>
+        <p>Tali was taken aback. Was this woman serious? Udina did not strike her as the kind of man who let himself swayed by a bleeding heart. And while humans had by and large been the people that had been best to her since she&#x27;d left the flotilla, she had made contact with less friendly elements of that race, too. “I- I guess...”</p>
+        <p>“So you would agree that the council is treating humanity like step children, trying to throw us a bone by appointing one woman Spectre and acting like that solves the Saren problem, instead of sending their fleet in to protect our colonies from these attacks, which are clearly motivated by racial hatred?”</p>
+        <p>“I, uh...I suppose a fleet would help, but...” Tali&#x27;s hand wringing intensified. She was falling apart in front of this woman and she knew it, and she had no idea how to get out of this situation without making it even worse.</p>
+        <p>“Do you not think that there would have been more drastic action taken if a turian colony had been attacked in the manner that Eden Prime was?”</p>
+        <p>“M-maybe, I don&#x27;t know, I mean-</p>
+        <p>“That&#x27;s enough.” a firm voice interjected, and Tali relaxed. Thank the ancestors, there she is.</p>
+        <p>“Commander Shepard! What do you say to-”</p>
+        <p>“I&#x27;ll tell you what I say to all this: I say you get the hell out of here. I am a Spectre and an Alliance officer, so there is an argument to be made that I have a duty to talk to you. That is not true for my team. You will not ambush my crew ever again, do you understand me?”</p>
+        <p>“Wait, are you saying Miss Zorah belongs to the crew of the Normandy?”</p>
+        <p>“That is exactly what I am saying, however that is not what is important for you right now. What is important is if you have understood me? And turn that goddamn drone off right now before I do so!”</p>
+        <p>The journalist bickered some more, but complied and got out of the way after Shepard continued to angrily stare her down. In the background, Tali watched in awe while Ashley giggled to herself, still tipsy, evidently very amused by the whole scene. Finally, the elevator doors closed and Al-Jilani was gone.</p>
+        <p>“Keelah, Shepard. Thank you. I&#x27;m glad you showed up when you did. She jumped me the moment I got off the elevator. I tried not to say something stupid, but...well, it looks like you just saved me again.”</p>
+        <p>Shepard&#x27;s features softened and she showed a small smile. “It&#x27;s fine, Tali. From the few bits I heard at the end, you didn&#x27;t do too bad. That woman has made admirals shit the bed. It&#x27;s no shame to end up a little run over by her.”</p>
+        <p>Tali smiled and tilted her head. Pulls me out of the fire and first thing she does is comfort me. That&#x27;s Shepard. “Thank you, Shepard. But...I&#x27;m afraid you might get some trouble with C-Sec, or the Turian councilor. Some of the things she said... “</p>
+        <p>Shepard just laughed. “C-Sec can&#x27;t do squat to me, I am a Spectre. Yes, they could act prissy if I ever need their cooperation, but in case they should really stoop so low, that just means they&#x27;re so unprofessional they probably would not have been of much help anyway. And Sparatus...he hates me anyway. “</p>
+        <p>Ashley chuckled and put a hand on Tali&#x27;s shoulder. “Don&#x27;t worry, Tali. The Skipper wouldn&#x27;t want it any other way.”</p>
+        <p>Tali looked at her friend&#x27;s face and realized that she was right. “You&#x27;re right.“She really would not. She&#x27;s like... keelah, get a hold of yourself. You&#x27;re terribly silly. “Thanks, Ash.” She looked back to Shepard. “Thanks both of you. You&#x27;ve all been so good to me. And this evening...I...I don&#x27;t think I&#x27;ve been this happy in years. “ The humans just grinned at her.</p>
+        <p>“Only the best for a friend.” Shepard said.</p>
+        <p>Ashley huffed. “For a little sister, you mean.” They laughed and made their way towards the ship.</p>
+    </div>
+</body>
+</html>

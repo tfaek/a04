@@ -1,0 +1,191 @@
+Chapter 30
+
+The Kodiak sat down on the ground with a wet scrunching of squashed vegetation. It was a new model of shuttle that entered service for the Alliance just a few months ago, but already proven it's worth in numerous scenarios, and so Shepard had made it one of her highest priorities during the Normandy's stay in the dock to procure one for her command. It had taken a bit of rearrangement, and the cargo bay was positively stacked now, but fortunately, the Kodiak's weren't too large – which limited their usefulness for the deployment of large contingents on ground troops, but was of no hindrance to her five people small team. Their pilot, a small man called Wu, opened the door and it slid to the side, presenting the vibrant jungle to Jane's eyes.
+
+After the Normandy had slid into system unnoticed, the long-range scanners confirming that they were actually a bit early with only one flotilla made up of five ships present in system so far, she had snuck up to the planet and dispatched the Kodiak, which had quickly descended to just above the treeline and then flown at that minimal altitude for thousands of kilometers, using the cover of mountain ranges, hills and valleys wherever possible before finally landing them about eight kilometers from their target. In order to be absolutely sure they wouldn't be spotted prematurely, they would have to traverse that last bit on foot.
+
+Jane hopped out of the shuttle and ran over to the next tree, hearing the fast steps of the others behind her and to her sides as they fanned out, setting up a three hundred sixty degree cordon around the shuttle – she was not expecting contact at all, in fact she was absolutely sure that the enemy had not the smallest inkling to their presence, but that didn't mean she was going to take unnecessary risks by casually strolling out of the shuttle like a rabble of militiamen. They hadn't even all made it to positions yet when Wu already took off again, moving away to stand by at a safe distance. As expected, no shots rang out – they were alone. After waiting for a couple of minutes, intently listening to the jungle, trying to make out any voices, snapping branches, rustling leaves or other signs of enemies from between the calls of numerous species of alien fauna, she finally got up and relaxed, speaking into her comm, still not willing to raise her voice if not necessary.
+
+“Alright, let's go. We have quite some way to go and we don't know how much time we have, so we'll have to stick to a good pace! All ready?”
+
+One by one they came in, and after quickly consulting her helmet's HUD to confirm the direction, she got going, leading her team into the jungle – Ashley and Tali fanned out behind and to the sides of her, Garrus bringing up the rear, and Liara in the center.
+
+ 
+
+ 
+
+Miranda Lawson sat down her coffee without taking her eyes off of the datapad she was reading. The Weasel was currently sitting in dead space near Omega, using it's top of the line communication equipment to silently tap into Blue Suns radio chatter – the mercenaries had unknowingly captured one of Cerberus's operatives on the massive space station, and from what they had been able to gather so far, were now interrogating him – the man had disguised himself as a dealer, which was as effective as it was dangerous, since the perceived potential profits to be made from his capture had apparently been the only reason the otherwise silently and inconspicuously operating spy had attracted the attention of the Blue Suns, who were thankfully still completely unaware of his real identity, in the first place. She had her crew continue to listen in while she worked at her desk; they needed to learn where the mercenaries where keeping their man before they could decide when and how to launch a mission – and whether it'd be a rescue mission or an assassination.
+
+The operative had known the risks.
+
+Miranda was pulled out of her reading by the chime of an incoming call from someone she had assigned high priority to. When she read the name as her finger was already moving to accept, a frown appeared on her face. Something told her she wasn't going to like what she was about to hear.
+
+A man in his thirties appeared on her holoscreen.
+
+“What is it, Kulinski?”
+
+Vitali Kulinski was one of her longest standing contacts within the AIS, and one of her most trusted 'business partners' period – she had actually met and worked with the man in person, and he knew her name and who she actually was. The man was not Cerberus and had little love for the organization, but when the interests of humanity were concerned, he was more often than not willing to go behind his superiors backs when their bureaucracy threatened to get in the way of what had to be done. In the beginning, she had suspected him to be trying to play her, but that was years past. Now she knew that when Kulinski called, one better listened closely and needed not worry about the validity of the information.
+
+“After your last update on the Shepard situation, I didn't think about it at first. But then I heard some stuff, pirate movements...now it's not like it didn't add up, but that's just it. It all added up a little too nicely, you see? How some of that intel supposedly came to our knowledge....hella convenient. Wouldn't have set me off usually, but with that Wells and Shepard situation in mind...”. He cracked his neck. “I set my eyes on Wells. And what do you know, he called in sick today. So I broke some rules and took a good close look...from what I can tell, Wells received a large amount of money over the darknet yesterday.”
+
+Miranda groaned. “No.”
+
+Usually, Kulinski enjoyed the rare instances where he got to tell Miranda something she didn't want to hear, but from the look on his face, today was an exception. “Yes. I've already been at his apartment, he's not there. Last of him that I was able to find is a shot from a surveillance camera at the spaceport. Well's a traitor.”
+
+She shoved aside her irritation at this turn of events. “What steps have you taken to inform your superiors?”
+
+He frowned. “Working on it, but I have to cook up a story first. I can't just tell them I raided Well's apartment on a hunch after all.”
+
+“Yeah, yeah, of course not. So how long will you take?”
+
+“Hours. Does Shepard have that kind of time?”
+
+She closed her eyes and sighed. Her last update from the Normandy had been three hours ago, just as she had been on final approach to Vostralska III.
+
+“No, she doesn't. There's no helping it...we won't be able to uphold proper discretion.”
+
+Miranda briefly entertained the thought of trying to get Kulinski to do it, but quickly dismissed it. Not only would the man not be willing to do that, it would also take longer, probably end up being traced back to her operation anyway, and frankly, Kulinski was simply more valuable than her freshly installed contact on the Normandy, as frustrating as it was.
+
+“Thanks, Kulinski. I'll take care of it myself.”
+
+The agent simply nodded and closed the connection, leaving Miranda alone to ponder her next step. Not that there was much to ponder; time was of the essence, and so she grudgingly prepared the access codes provided to her by Lieutenant Mills that would allow her to reach the Normandy directly instead of doing so over the comm buoy network – while making it abundantly clear that she had special access. Which would no doubt result in the leak in the ship's firewalls to be found and closed, and that would most likely mean that Mills would be identified in a matter of hours once the imminent crisis was over and his fellow communication specialists had a chance to find out how on earth some supposed AIS agent had managed to directly tap into their systems. And Miranda had no idea how she was supposed to extract the man in time.
+
+At the end of the day, he had known the risks. Cursing, she pushed the button.
+
+ 
+
+A couple of seconds later, Miranda found herself in a vidcall with some sergeant she didn't know, a young woman staring into the camera as if she had seen a ghost. “Wha- who are you!? How did you get into this system!? This is a classified military vessel!” The woman began typing furiously, no doubt setting a whole slew of programs in motion to identify and isolate the intruder in the Normandy's computers.
+
+“My name is Miranda Lawson, Alliance Intelligence, and how I got into your system is not important right now. I need to speak to the executive officer immediately. “
+
+ 
+
+Miranda rarely used her real name during operations, but with a course of action as blunt as this, there was no point in trying to be more secretive than absolutely necessary. This entire incident would no doubt be examined closely, and the AIS knew full well who she was and what she looked like anyway. The sergeant looked at her indecisively for a couple of seconds. “That AIS code does check out....fine.”
+
+After a second., the image changed to a balding man of fifty three years Miranda was somewhat familiar with – Charles Pressly, the Normandy's executive officer. He did not look happy.
+
+“Since I doubt that you'll be inclined to tell me how the hell you got into these systems: Who are you and what do you want!?”
+
+Not a single muscle in her pokerface as much as twitched. “I am Miranda Lawson, Alliance Intelligence. I have crucial information that needs to reach Commander Shepard asap.”
+
+At the mention of the intelligence agency, Pressly's already wary expression grew dark. “Does it concern the operation we are currently running for your colleague Wells?”
+
+“That's just it. As of just now, Wells is a confirmed traitor. The intel he provided you with cannot be trusted.”
+
+Pressly's eyes widened. “Are you saying - ?”
+
+She interrupted him. “That Vostralska III is probably a trap? Yes.”
+
+ 
+
+ 
+
+Garrus lowered his rifle and activated his comm – he wasn't wearing a helmet, preferring as usual to leave his visor open, but using the translator implant's ability to pick up the vibrations of his larynx allowed him to be transmitted to everyone else's helmets loud and clear while actually barely even whispering. “So far, I count three. One of them is guarding the warehouse, the other two are patrolling the small building. I've caught glimpses of more inside, but no headcount.”
+
+He glanced over to Shepard, who was kneeling concealed in a bush about ten meters to his left. She seemed to ponder something. It didn't take her long though. “Alright, “, the human began, “I'm not camping here for god knows how long to find out if that Turian who's supposed to be here is actually gonna show up or not. We're here to kill Tugok. Right now, that looks like a manageable task. I don't feel the need to add who knows how many more pirates to the mix just to make it more interesting.” She tapped a finger on her knee for a couple of seconds. “Here's how it's going to go. Ash, you stay here with Garrus. The other three of us circle around the back. Once we're in position, you will take out the sentries and then advance on the main building. That'll get their attention. Then we break in from behind and finish them off.”
+
+Garrus flared his mandibles. “Kind of risky, isn't it? The three of you alone against who knows how many are in there?”
+
+Shepard shook her head. “It'll be fine. There shouldn't be more than a dozen in that building, and even if there are, we have a powerful biotic, an angle, surprise, and two damn good shotguns. And if I take Ash with me, they'll just take you for a sniper, not an actual assault, they'll put up a three – sixty, and then we'll have to whittle them down over hours. Then all their filthy friends will come down here and we'll be lucky to get out in one piece. No, we're doing it this way. Garrus, you're in charge over here.”
+
+Garrus nodded, satisfied with the reasoning. He watched as Shepard, Liara and Tali began quietly slipping back into the jungle, away from the treeline.
+
+Williams voice was in his ears. “See a good spot for me?” He just pointed with a talon, moving slowly. He was already in position, and if he didn't take care, he might be spotted. Williams got out her marksman rifle and slowly, carefully, began crawling in the direction he had indicated, coming to rest in a decent spot, half covered by the huge leafs of some giant fern. If she had any misgivings about taking orders from him, she didn't show them at all, and he doubted that she had. If someone had told either one of them about this six months ago, he'd have laughed at it and Williams probably would've punched them, he mused. The power of shared combat experiences.
+
+ 
+
+They waited now, holding still, observing the clearing with it's two buildings, looking over the scopes of their lowered guns, ears on high alert for any unexpected movement in the brush around them. But aside from some small animals and the three Batarians patrolling the clearing, nothing moved until after a little less than half an hour Garrus had Shepard's voice in his ear again.
+
+“Garrus, come in.”
+
+“Garrus.”
+
+“We're in position. Open fire at your discretion.”
+
+“Copy that.”
+
+“Shepard over.”
+
+ 
+
+He looked over to Williams, who had obviously listened in, and already had her gun brought up. He brought up his own and began to take stock of how he wanted to take these shots while pushing the comm button on his rifle. “Williams, I'll take down the two moving ones once they're close together, you take the one that's standing still. No offense.”
+
+“Copy, none taken.“
+
+“Good. Once they're dead, we switch to assault rifles and advance. I'm thinking about the corner of the warehouse for me. The best position from where you are is probably that bump over there. I go first, you cover me, then you go, business as usual.”
+
+“Copy that. Ready to fire once you do.”
+
+Silence settled in. Right now only one of the two patrolling guards was in his line of sight, so Garrus lowered his rifle again, waiting for his time to strike, keeping his breath slow, low and steady. Finally the guy stopped and touched his earpiece, getting out a cigarette immediately afterwards.
+
+Perfect.
+
+A minute later, his two targets were standing directly next to each other, relaxing with cigarette in hand. Slowly and calmly, knowing he had all the time in the world, Garrus raised his rifle; it was the one Shepard had gotten him, and he loved it. Offering two barrels of differing calibre, this rifle packed the punch necessary to penetrate heavy armor while still offering the alternative of a lower calibre and higher rate of fire whenever one needed to engage a multitude of soft targets in quick succession. Which was exactly what Garrus was about to do. He brought his first target into his sights and realized that with the way they were standing right now, there was actually a better way to do this. He locked in the large calibre again and began to aim, halted his breath, and gently caressed the trigger. The weapon jerked in his hands, and the two Batarians in front of the main building went down like sacks of wet sand, the round punching straight through both of their unarmored bodies. Less than a second later, much the same happened to the other one, Williams taking only a short moment to react and strike him down before he knew what was happening, let alone had any chance to react.
+
+“Let's go!” , he shouted, not bothering with comms anymore now that their presence was most definitely announced. He quickly changed to his assault rifle and broke through the vegetation, making for the warehouse at a full sprint. Harsh voices could be heard from the main building, but were swiftly drowned out by William's gunfire, a series of short bursts not intended to actually hit anything, but all the more efficient at garnering the pirate's attention. Which they got. Garrus did not make it to the corner of the warehouse without his shields being hit by at least some of the shots fired in his direction, many more of them churning up the ground around him. Either these amateurs were even more incompetent than he had hoped, or their sudden and lethal assault had them losing their bearings. Garrus reached his cover and immediately leaned out to fire, sending his assailants back into cover with a long burst that put a line of holes into the concrete and sheet metal of the crappy building the Batarians were holed up in. He would not be able to keep this up for long of course, but he did not have to; William's way to her new position was much shorter than his had been. Seconds later, the marine hit the dirt and added her own fire to his. The need for suppression gone, Garrus took cover to get out his marksman rifle. If he could net himself a couple of kills, it would make it easier for the other three.
+
+ 
+
+Not that they appeared to need it tough. He had only gotten off a couple of well aimed shots as barely over a minute after the assault had started the small building was shaken by a series of explosions. The torrent of fire pouring down on Garrus' position abruptly stopped and the scene fell silent for a second, just for the noise to resume a second later, but this time clearly confined to the inside of the house. Garrus poked his head out of cover to take stock of the situation. There seemed to be bloody mayhem going on in there as only a handful of Batarians had gotten back to fire at him atnd Williams. He quickly dispatched one of them, disappeared back behind his corner and commed Shepard.
+
+“Shepard, Garrus. It would be dangerous, but I think we can push in. Dou you need us?”
+
+“Negative, hold position!”
+
+That was that, and so Garrus waited in silence, or comm-silence at least, as the combat raged on inside. Finally, the glass of the windows was blown out alongside several pirates as the azure glow of a particularly powerful blast of biotics lit up the clearing which, the sun hanging low in the orange early evening sky, was completely covered by the shadow of the gargantuan trees.
+
+Shepard's voice came through. “Garrus, it's done.”
+
+He breathed a sigh of relief. “Good to hear. We're coming inside.”
+
+Staying alert in the event of any unexpected survivors, they left their cover and quickly made their way over to the building. It wasn't much, just two stories high on the layout of an ordinary family home, but considerably less nice than one. It was bare concrete both on the outside and inside. The warehouse was the real deal in this place. Garrus opened the front door and found himself in a staircase, with the entire floor being one big room off to the sides. Tali was walking down the stairs as Shepard appeared from the right with Liara. The floor was littered with batarian corpses. He looked at his friend. “Did you confirm the kill on our guy?”
+
+Shepard nodded.
+
+“Great. Then let's get out of here. I don't want to-” He stopped himself as Shepard's comm came alive.
+
+“Commander, come in!”
+
+Garrus instinctively gripped his gun tighter. He did not like the tone of Pressly's voice one bit.
+
+“Shepard speaking. We just finished the job. What's going on?” From her voice and expression, it was clear to Garrus that Shepard was already suspecting bad news as well.
+
+“We were just contacted by the AIS. This agent Wells is a traitor!”
+
+Garrus felt a knot of ice form in his stomach. He formed the thoughts in his head at the same time as Shepard said it out loud.
+
+“You're telling me we were lured here!?”
+
+Garrus tuned the conversation out and stepped next to one of the windows, bringing up his gun to watch through the scope. The jungle was as thick on this side of the clearing as it had been where he and Williams had waited, so his line of sight was uncomfortably short in most places, but with his advanced optics and the visor, he still had a good shot at spotting anyone who might try to sneak up on them.
+
+“The entire pirate flotilla just turned and began making full speed for the planet, Ma'am! You need to get out of there!”, Pressly gained back Garrus' attention, almost making him miss several heat signatures moving their way in a fashion far too organized for any animal.
+
+Shepard cursed. “Damn it! Wu, get your ass here on the double! I want to be gone before whatever trap these assholes were trying to set up is sprung!”
+
+Garrus lowered the rifle and began stalking towards the opposite window. “Too late. I already spotted four closing in from south-west, and...yeah, there's at least two more of them coming in from the north.” He could hear the others scrambling to the windows and began lining up a shot.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 

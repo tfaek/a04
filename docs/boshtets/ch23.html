@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 23</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch22.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html" selected>Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch24.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 23</h1>
+    <div class="chapter-content">
+        <p>Jane crept through the undergrowth of the small forest besides the highway west of town. She had been at this for an hour now, careful to make as little sound as possible and not stir the vegetation. Finally she reached the back door of Arash&#x27;s shop. It was mostly a hardware store, but the chubby Iranian had also sold ammunition for the common hunting rifles; out in the rural colonies, that mostly meant outdated gunpowder weapons like double-barreled shotguns and repeating rifles like her stepfather&#x27;s trusty K-98 she was holding right now. The over two hundred fifty year old german model and similar ones from the time of the world wars were still in use with country folk like the settlers of Mindoir for the simple reason that mass effect weapons of the types which were accessible for civilians tended to make a terrible mess of most animals, especially smaller ones like most birds and rodent equivalents, while not having enough punch to put down larger prey in any humane fashion. The older guns came with different ammunition types and were just as accurate as well as, most importantly, much easier to get a license for – they were primitive and no match for modern weapons, after all.</p>
+        <p>Which was exactly what Jane was counting on. It was a reasonable assumption that any batarian looters would have simply ignored the primitive cartridges.</p>
+        <p>Entering the shop through the half open backdoor, the first thing she saw was Arash. Slumped against the wall, with several holes in his chest, the wall behind him a dark red with his dried blood. On the ground, slipped from his now limp fingers, a gun. Jane did not even shake her head at the scene anymore, she simply stepped over the body and got to searching. There was no time to treat the man with the proper respect. It didn&#x27;t matter, not anymore. Having shopped here often enough, she knew exactly where to look, and she turned out to have been right. She found three full boxes of clips for her particular gun; 90 rounds. Lots of dead batarians, if she could just keep it together...lots of more scratches for the butt. She had four so far, she&#x27;d get the fifth one soon enough...</p>
+        <p>“Shepard. Come on, kid.”</p>
+        <p>Jane startled to consciousness and blinked, her eyes taking a couple of seconds to adjust to the bright morning light. Anderson was standing over her, having woken her up with a firm touch to the shoulder. Shepard sat up on the couch she&#x27;d been sleeping on for the last two days, stretched, and yawned long and loud.</p>
+        <p>“Dammit, Sir. I feel like I could&#x27;ve slept for another eight hours.”</p>
+        <p>The older man chuckled. “Not like you wouldn&#x27;t deserve to. But our meeting is in one hour. You can sleep all you want after that.” He glanced over to Garrus and Wrex who were still asleep, taking up most of the rest of Anderson&#x27;s large living room in his apartment on Zakera ward. “Come now. Get yourself presentable and let&#x27;s get out of here. I know a good cafe on the way where they make bacon and eggs just like home.”</p>
+        <p>Jane grinned. Anderson knew her well. Straining her sore back to reach her crutches, she got up off the couch and made her way to the bathroom, briefly brushing her teeth and applying some deodorant before deciding that she would not trim her hair today either. Her usual short cut had grown , from what it looked like, an adventurous centimeter longer at this point, and she kind of liked it. Made her look more...dignified. Perhaps just what she would need for her meeting for the council today. Besides, she was curious what Tali would say. She could still remember how amazed Tali had been when she had first come aboard and noticed that human men grew hair in their faces.</p>
+        <p>Wait &#x27;till she finds out some women do it too...</p>
+        <p>Quarians were the only other known sapient race that had hair at all, but they didn&#x27;t have facial hair, apparently; she actually did not know just where on their body except their heads they did have hair, as Tali hadn&#x27;t told her and she had not asked. There was the extranet of course, but she had refrained from looking up pictures of Quarians; she had thought of it, but it felt like invading someone&#x27;s privacy, in a way. All she knew was that they naturally grew hair on their heads, and that most of them used a chemical from the suit to prevent that, as it was obviously impractical, given that they wore helmets all the time. Not Tali though; she kept it long, as a reminder of her mother.</p>
+        <p>Bet her hair is beautiful...dammit.</p>
+        <p>And there was her mood gone; now that Saren was dead, she dreaded the inevitable moment when Tali would tell her goodbye and head back to the fleet. At least she&#x27;d get herself back under control then.</p>
+        <p>Following Anderson, she stepped out into the ward, though not for long as they immediately were picked up by an Alliance shuttle; aircars were still shut down, all traffic in the Citadel&#x27;s “sky” being military or otherwise official at the moment. They spent the short ride to the presidium in silence, both of them occupied with the view out of the passenger windows; now, with time to actually look around, and in the light of day, the amount of destruction Sovereign&#x27;s attack and defeat had wrought on the ancient space station could be clearly seen, and it was simply staggering. One of the other wards, she could not remember the name, seemed to still be burning in places; the presidium itself had had its most pressing issues already taken care of, but it was still littered with crashed vehicles, pieces of Sovereign, and just general debris. Stepping out of the shuttle with Anderson&#x27;s help, she took in her surroundings; large numbers of keepers – where on earth did they all come from all out of a sudden? - were hard at work across the entirety of what she could see, intermingled with workers of all races as well as C-Sec agents and, unusual enough, large numbers of Alliance soldiers. Especially the various pieces of Sovereign had large contingents of armed forces around them, as they had been cordoned off with ample safety distance.</p>
+        <p>“Lot&#x27;s of Alliance around here.”, she commented to Anderson as they made their way to whatever cafe apparently , somehow, was open in all this chaos.</p>
+        <p>The older man sighed. “Yes. I didn&#x27;t want to bother you with the details too much the last two days, god knows you deserved some rest. You&#x27;ll hear most of it in the meeting, I suppose. But...it&#x27;s been bloody. C-Sec has taken heavy casualties. The Citadel fleet has had it even worse; not much left of it to be honest, and if the 5th fleet hadn&#x27;t gone out of their way to save the Destiny Ascension, it might as well be disbanded.”</p>
+        <p>“That bad? Jesus.”</p>
+        <p>“Yeah. And even for that little victory, we paid with a lot of blood. I don&#x27;t know the exact figures, but last thing I&#x27;ve heard from the 5th were eight cruisers gone, something like two thousand and counting killed and a thousand five hundred wounded. Those Geth are bloody tough bastards. Let alone Sovereign. That thing erased anything it fired at in one volley, 100% casualty rate every time.”</p>
+        <p>She shook her head in disbelief. The thought that this monster had been just a vanguard...she had to get the council to see sense. Otherwise...it did not bear thinking about.</p>
+        <p>We&#x27;ll cross that bridge when we get there...</p>
+        <p>“Still doesn&#x27;t really explain the heavy Alliance presence. The Turians must be having a fit right now.”</p>
+        <p>Anderson shook his head. “No, Shepard. The Turians have actually been...forthcoming and full of praise, from what I&#x27;ve heard. They&#x27;re a people of soldiers, after all. They respect what humanity has done here. What we&#x27;ve sacrificed.” He weighed his words for a couple seconds. “They always said we had to earn their respect. The 5th might&#x27;ve just done that.”</p>
+        <p>Shepard had nothing to answer that with. She was impressed. Garrus was a great guy of course, but aside from her friend, who had managed to see past his prejudices pretty quick after some initial incidents with Tali and Wrex, she had always perceived Turians as overly rigid, prone to sticking to preconceived notions and difficult to convince otherwise. Maybe she had been wrong, she had dealt almost exclusively with military types, after all. Would certainly be a welcome surprise, for a change.</p>
+        <p>They reached the cafe, and Jane&#x27;s question as to how it still operated in this mess was answered. It had been lucky to not get damaged at all during the fighting, and now it served as the place to go for decent food for the workers and soldiers in this area of the presidium. The place was pretty full, but they found a free table and did not have to wait more than a few minutes until they could order. After receiving their bacon and eggs – this particular breakfast was a love they shared – and digging in, Anderson continued their conversation.</p>
+        <p>“I&#x27;ve said it before, but, quite the team you&#x27;ve assembled there. Don&#x27;t think I had ever seen a worried Krogan before.” They chuckled. “He seems a decent fellow though, as far as I can tell after hosting him for two days. An unusual man for his species.”</p>
+        <p>“I&#x27;m afraid so. Wrex is...old. And bitter. He is not a fan of what has become of his people. Don&#x27;t wanna delve too deep into it without asking him first, but...he used to be a political figure on Tuchanka.”</p>
+        <p>“Really?”</p>
+        <p>“Yes. He tried to reform clan Urdnot. Didn&#x27;t go over too well. That&#x27;s why he left and became a mercenary in the first place. In some ways, he&#x27;s as hard a man as you&#x27;d expect from a centuries old hired gun, but by and large, he&#x27;s a good guy. And a good friend.”</p>
+        <p>Anderson smiled. “You&#x27;ve always had a talent for inspiring loyalty in all kinds of people.”</p>
+        <p>“Learned that from you, Sir. Just like most of the rest of it. “</p>
+        <p>The Captain snorted, but Jane could see that the man was touched. The two of them had known each other for over thirteen years now; for eleven of these years, she had been in the alliance, and Anderson had watched her career from day one, helping her out or kicking her in the butt, as the situation required, whenever and wherever he could. Jane had no illusions about the fact that without Anderson, she&#x27;d most likely not be where she was, and that wasn&#x27;t even taking into account that Anderson had been among the Alliance forces who had arrived just in the nick of time to prevent the Batarians on Mindoir from getting to the very last of the survivors.</p>
+        <p>Trying to cover up his smile at his former protege&#x27;s words, David kept the talk about the younger woman&#x27;s team going.</p>
+        <p>“Wasn&#x27;t the only concerned one, either. Vakarian actually tried to help digging you out, and after he fell on his ass he just sat there and waited. Wouldn&#x27;t leave until we had gotten to you.”</p>
+        <p>Shepard grinned. “Yeah, that&#x27;s Garrus. He&#x27;s a real brother. Still no bloody idea what he was doing in C-Sec. Don&#x27;t get me wrong, from what he told me he wasn&#x27;t bad at the job...at least not when he wasn&#x27;t busy breaking this or that rule, but operations like this one, they&#x27;re his calling, Sir. Excellent grasp of tactics. He was actually my second in command for the ground team, at the end of it. Still is, if he wants to stick around. But honestly, by rights, the man should be a Spectre himself. One of the best shots I&#x27;ve ever seen.”</p>
+        <p>Anderson raised his eyebrows. That was quite the praise from someone like Shepard; N7 training had no shortage of good marksmen, and the woman had gotten around doing joint exercises with both the Turian and the Salarian militaries over the course of this remarkable career.</p>
+        <p>“Heard anything from Chief Williams? Or Dr. T&#x27;Soni?”</p>
+        <p>Shepard took a sip of water before replying. “Yes, I actually spoke with each of them yesterday. They&#x27;re being released from ICU today, Williams gets transferred to a basic ward, Liara to intermediate care. Ashley didn&#x27;t have it so bad, they fixed the artery and cleared out the haematoma before it could compress the brain too much. Liara though...she had a mild case of peritonitis after that wound, but they got it under control. She should be out of the hospital by the end of the week.” She shrugged. “Modern medicine is crazy.”</p>
+        <p>Anderson nodded at that, it was damn true. He was still baffled by the wonders even just plain Medigel could work. Unlike Shepard, Anderson could remember the time before humanity had joined the galactic community. Then he remembered the one squad member they had so far not spoke about, and allowed himself a teasing grin.</p>
+        <p>“Let&#x27;s not forget someone, though. Jane, huh?”</p>
+        <p>Shepard scratched her neck and gave him a weary look.“Tali? She&#x27;s doing well, they&#x27;re letting her go tomorrow. What about her?”</p>
+        <p>Anderson&#x27;s grin became a smirk as he tilted his head. “Come on, Shepard. Don&#x27;t bullshit me.”</p>
+        <p>The younger woman sighed. “I&#x27;m not bullshitting you. Yes, we&#x27;re close. But that&#x27;s it, Sir. It&#x27;s better that way.”</p>
+        <p>Anderson raised his eyebrows, but ultimately shrugged and let it go. He had just wanted to tease the woman a little, but obviously he had hit a sore spot there. Not that he should be surprised , when he thought about it in retrospect; he had never once seen Shepard with a woman, or heard her talk about one. He was sure the commander had her &#x27;needs&#x27; covered, she was quite the attractive woman after all, but there was nothing to indicate that the woman had a whole lot of lady experience worth noting beyond ,most likely alcohol fueled, one time encounters. And a Quarian probably wasn&#x27;t the easiest kind of woman to be interested in,going by what he knew about their culture and circumstances. He looked at the time, which was running short, especially with Shepard being quite slow in her current condition. Leaving a sizable tip, he got up and gestured the Spectre to do the same. “Come, it&#x27;s almost time. Let&#x27;s try and beat some sense into these people.”</p>
+    </div>
+</body>
+</html>

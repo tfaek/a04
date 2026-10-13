@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 19</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch18.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html" selected>Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch20.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 19</h1>
+    <div class="chapter-content">
+        <p>Garrus&#x27; talon gently caressed his trigger. A shot rang out, and the pistol that had been slowly lowering it&#x27;s muzzle towards Fai Dan&#x27;s temple fell to the ground. A couple of heads turned to him, but Shepard, who had been lining up a shot herself, was faster on the uptake and immediately broke into a sprint, closing the distance to the unofficial leader of Zue&#x27;s Hope, who was standing there frozen, staring at the ruin of his hand. Wounded, hurting and struggling against the Thorian&#x27;s influence, the man was restrained easily. Garrus lowered his rifle and relaxed, blowing the breath he had been holding through his nose.</p>
+        <p>Four are enough.</p>
+        <p>The last hours had been absolutely nerve wrecking. Apparently having deduced their reluctance to shoot the colonists, the Thorian had spread them out as much as possible in these confined spaces, denying them any further opportunities to neutralize larger groups with a single gas grenade. And so they had been forced to employ biotics and good old fashioned hand-to-hand to get the job done without spilling blood – a lengthy and exhausting process. At least it had paid off – after about an hour, they had made it to the ship and reconnected with Williams and Alenko, and now, two hours later, the entire colony was accounted for, about two thirds of them paralyzed, the rest tied up, and after struggling against their restraints initially, they were now lying almost perfectly still, staring straight ahead with empty eyes like puppets with their strings cut – it seemed the Thorian had accepted that these slaves were useless for now and decided not to devote any further mental capacity to them, but not to release them, either. Garrus had to admit that the sight was chilling, even though he didn&#x27;t show it. Kaidan and the girls had no such reservations and were clearly distraught.</p>
+        <p>The entire team was covered in bruises and scratches and getting tired. The fact that they had been forced to shoot one more colonist didn&#x27;t help. It had happened towards the end of the whole action – after spending the bulk of it&#x27;s forces trying to delay them, the Thorian had pulled together most of who had been left in an ambush. It had been quite decently executed, he had to admit; they had received fire from two sides. The fact that they had even walked into that still vexed him, and if he was any judge, Shepard was furious, too; but at the end of the day, the Thorian&#x27;s thralls unnatural discipline and ability to remain perfectly immobile lent itself just too well to such tactics to realistically expect to go three hours in urban combat against them without getting caught out at least once.</p>
+        <p>It had been a close one; even with their piss poor shooting, the sheer weight of fire from the colonists had taxed their shield to the breaking point, and Liara had already been far too tired to put up a large barrier. So Shepard had chosen to seek their salvation in aggression – a typical Shepard approach – and, banking on their shields and armor to hold , they had simply broken into the closer position at a full sprint, a biotic shove from Wrex silencing it&#x27;s inhabitants for long enough for them to get close and knock them all out could. All but one young man whom nobody had seen – until the moment he popped up behind a large barrel and started to unload his Avenger into Tali&#x27;s already weakened shields at full auto. A split second later, his brain had ended up splattered across the wall, Shepard&#x27;s hand cannon delivering the lethal shot – not that it mattered, as the poor sod was absolutely riddled with holes from several of the team&#x27;s guns by the time his body hit the floor. Ever since, their commander had been silent and, when she spoke, terse. Meanwhile Tali was a shadow of herself, skulking along at the back end of the formation. Probably thinks Shepard blames her. Meanwhile, the idiot is blaming herself. Can&#x27;t we just go kill this thing and have a drink afterwards? He sighed inwardly. He had come to appreciate this rag tag squad, he really had, but for all the ways in which he wasn&#x27;t a very good Turian, he did find himself somewhat missing the simplicity of the Turian mindset at times. Funnily enough, the closest match to his view on these things was Wrex. Who would&#x27;ve thought that the Turian and the Krogan would end up seeing eye to eye the most.</p>
+        <p>Garrus returned his attention to the situation at hand, torn from his thoughts by the groaning of the crane as it lifted one of the prefabs up into the air, revealing the stairs beneath. Thinking about it, that one was in a weird spot from the start. The machine creaked as it ground to a halt, the living container suspended in the air.</p>
+        <p>&quot;Where should I set it down?&quot;</p>
+        <p>The question had been Tali&#x27;s who was standing at the crane controls. Spirits, girl, just put it anywhere. She must be really rattled. Shepard seemed confused by the question.</p>
+        <p>&quot;Just put it on the ground, who cares. Let&#x27;s go.&quot;</p>
+        <p>The Quarian quickly nodded and obliged, her hands twitching towards her navel as she stepped down from the machine, stopped in the blink of an eye, but not fast enough to escape Garrus&#x27; notice.</p>
+        <p>Seconds later, the team stood assembled in their usual formation, Garrus bringing up the rear. Shepard turned around. &quot;Alright people. You&#x27;ve all done a great job today, but we&#x27;re not finished yet. We have no idea what awaits us down there, so look alive! Move out.&quot;</p>
+        <p>With these words, Shepard began cautiously moving down the stairs, and they followed. The lower level they entered now were damp and warm, as opposed to the general drought of the rest of this place. Large, long roots could be seen breaking through and creeping up the walls, occasionally crossing their path as almost knee-high obstacles on the floor.</p>
+        <p>The distance they covered couldn&#x27;t have been very far, half a kilometer at most, but the going was slow. The corridors here were constantly crossing each other and making turns, necessating constant vigilance and making it hard to keep to a direction – not that Garrus was sure what direction they were even trying to cling to. But the vegetation and dampness grew and grew as they wentt, so it appeared that Shepard was on the right track.</p>
+        <p>Finally, a corridor opened up into a large and high, circular chamber ; perhaps some kind of vent or shuttle entrance, he reasoned, but his speculations were cut short by the sight of what inhabited the place now. Blocking the sunlight falling in from above, a large knot of organic material hang in the middle of the shaft, held in place by a number of thick tendrils which protruded from the thing&#x27;s bulk and ended in large bulges on the wall, in the spots where the roots covering most of them converged. It appeared they had found the Thorian. Before he could make any real headway in trying to come up with a way to kill this thing, it suddenly moved; two meter wide flaps that looked like flesh and leaves at the same time falling aside to reveal what looked almost like a disgusting, alien head of about two meters height and width, staring down on them with a dozen eyes from it&#x27;s position about four meters above them. The &#x27;face&#x27; contorted, opening it&#x27;s &#x27;mouth&#x27; , which was really just a bundle of tentacles, but what came out where not words, but...a person?</p>
+        <p>Garrus had to look twice, but in the end, he really was looking at a green, butt naked Asari that was biotically lowering herself down to their level – and she didn&#x27;t look friendly at all. Just as her feet touched down on the floor, the sounds of claws scraping along walls and fast steps coming closer could be heard from the rooms around them, and in the background, he could see a Creeper unfolding itself on the gallery on the other side of the shaft. Garrus gripped his gun tighter and rushed to the left to hold down the corridor that had to lead to the other gallery; when he got there, there were already Creepers running at him. Just as he opened fire, he could hear Liara&#x27;s soft grunt behind him as she unleashed her biotics.</p>
+        <p>…..</p>
+        <p>Roughly four hours later</p>
+        <p>Shepard sagged and turned away from them, supporting herself on the console, as if a great weight had just been taken off of her. Liara too faltered, and Kaidan jumped off his seat to catch her. Relaxing the muscles that had been in the process of doing just the same when Kaidan had beat him to it, Garrus leaned back into his chair and turned his head back towards their commander.</p>
+        <p>So...what did you see? Anything new?&quot;</p>
+        <p>Shepard just shook her head softly, not even turning to answer, and no sound escaped her lips. Liara answered instead. &quot;It is a warning. About the reapers...sent out across the entire prothean empire. But it came too late.&quot; The Asari stared at her knees, the look on her face one of grief. An uncomfortable silence settled in.</p>
+        <p>The one to break it was, of course, Ashley. &quot;That doesn&#x27;t really help us at all. We knew that already.&quot;</p>
+        <p>Shepard raised a hand, and the Chief swallowed any further words she might have intended to say. &quot;It was still worth a shot. And while we didn&#x27;t learn anything new, at least we have confirmation now. The protheans really were destroyed by the reapers, and the reapers really were some sort of machine race.&quot; She sighed. &quot;Why on earth Saren would want to bring them back, or what the Conduit is supposed to be...well. We&#x27;ll have to ask him when we catch him.&quot;</p>
+        <p>She turned around and looked at them, dark rings under her eyes. Only now Garrus noticed how tired the woman looked; thinking about it, it was no surprise. It had been a long day, and they had spent well over half of it fighting. He reckoned that if Turian faces weren&#x27;t as rigid as they were, he&#x27;d probably look quite similar right now.</p>
+        <p>&quot;As much as I&#x27;d like to have gotten a solid lead on Saren&#x27;s or the Conduit&#x27;s whereabouts out of this, you all did a good job today. Many people owe you their lives. Get a good meal inside of you and take your well deserved rest. All dismissed.&quot;</p>
+        <p>One after the other, everyone got up and left – safe for Garrus. Shepard threw him a questioning look, but before the human could say anything, she was interrupted by Joker&#x27;s voice on the intercom.</p>
+        <p>&quot;I&#x27;ve got the council on the line, Commander. Do you want me to patch them through to you now?&quot;</p>
+        <p>Shepard sighed and palmed her hand. After pinching the bridge of her nose and massaging it for a second, she finally answered, sounding just as tired as she looked. &quot;Patch &#x27;em through, Joker.&quot;</p>
+        <p>She thrust herself off of the console and straightened her back, looking at Garrus. &quot;Not a good idea to keep someone like the councilors waiting.&quot;</p>
+        <p>And with that, she somehow wiped about half the exhaustion of her face, put on the stern look the Hero of Elysium was typically portrayed with and turned towards the holo gallery before accepting the call.</p>
+        <p>The transparent figure of the three councilors formed in front of them, their eyes quickly zeroing in on Shepard; Garrus knew that they could not see him since the holo transmitter in this room recorded only one person, and that was Shepard, since she was standing on top of it. They would still be able to hear him though, so he sat still and listened.</p>
+        <p>&quot;Shepard, &quot; Valern immediately began. &quot; Report of entity titled &#x27;Thorian&#x27; fascinating. So are supposed further revelations regarding the fate of the Protheans, even if only repeating earlier claims.&quot;</p>
+        <p>If Shepard was vexed by the way the Salarian councilor subtly, but unmistakably made clear what the council though of her visions, she didn&#x27;t show it.</p>
+        <p>&quot;It was fascinating alright...and, as you&#x27;ve read, not cooperative. In any way, it&#x27;s dead now.&quot;</p>
+        <p>She might have wanted to continue, but the turian councilor didn&#x27;t let her.</p>
+        <p>&quot;Of course it is, you were there. Did it ever cross your mind that this...life form could have held far more valuable information? Information that will never be extracted now because you killed it!&quot;</p>
+        <p>Even almost two meters away, Garrus could hear Shepard&#x27;s knuckles crack at that one, but apard from that, the Spectre remained cool.</p>
+        <p>&quot;I didn&#x27;t exactly have a choice, councilor. As stated by the report, it attacked us with lethal force, and it also practically held the entire population of Zue&#x27;s Hope hostage.&quot;</p>
+        <p>&quot;I am sure you took all relevant aspects into accounts when you made your decisions in the field, Commander.&quot; , Tevos&#x27; level voice came through the channel as her holo nodded amicably. &quot; And I believe the results prove you right. You know what Saren was after on Feros, the Geth detachment he sent was destroyed almost completely, and the colonists were saved.&quot;</p>
+        <p>She was about to continue, but was cut off by Sparatus. &quot;Of course it was. Shepard would do anything to save a human colony.&quot;</p>
+        <p>Garrus couldn&#x27;t help but raise a browplate – it was common knowledge that the turian councilor wasn&#x27;t too happy about Shepard&#x27;s admission to the Spectres, or humans in general, but the vitriol and, frankly, lack of professionalism on display was positively astounding for a Turian of any significant rank, let alone their species&#x27; highest representative with the council. Perhaps a close friend or relative killed in the Relay 314 Incident?</p>
+        <p>Shepard&#x27;s patience finally seemed to run out and even though he was looking at the woman from behind, Garrus needed little imagination to know how her face looked like right now. Her voice came out dangerously low. &quot;What the hell is that supposed to mean?&quot;</p>
+        <p>Tevos did not give her Turian counterpart a chance to respond; her usually soft and warm voice suddenly carrying a steely note, and so did her eyes which were fixed firmly on Sparatus&#x27; face, who was glaring right back. &quot;The Turian councilor simply meant to remind you of the immense importance of any and all relics of the protheans and their era. As a Spectre, you are free to take this into account in whichever way you see fit to accomplish your mission.&quot;</p>
+        <p>Some tense seconds passed with the two aliens eyeing each other, but Garrus, not having spent years as a detective for nothing, knew who would back down here from the start, and he was proven right. Finally, with a low growl, Sparatus looked away. Valern , probably having barely managed to contain himself during what to a salarian must have felt like an eternity of wasted time, broke the silence.</p>
+        <p>&quot;Yes, yes. Mission comes first. Supersedes scientific interest in this case. Shepard already proven ability to recognize situations where mission supersedes civilian survival. Insinuations not constructive. &quot;</p>
+        <p>If any of the councilors noticed Shepard flinching ever so slightly at that comment, none showed it.</p>
+        <p>With Valern having said his piece and Sparatus pouting, it was once again Tevos to wrap the brief meeting up.</p>
+        <p>&quot;What are your next steps, Shepard?&quot;</p>
+        <p>The Spectre shrugged, and , a rare sight, seemed lost for words for a moment.</p>
+        <p>&quot;Frankly, I don&#x27;t know yet. It stands to reason that Saren assumes the Conduit to be located somewhere on the other side of the Mu relay, but that relay connects to hundreds of systems. We do not know at this time if he already knows which one it is. &quot; It was visible even from behind how much humanity&#x27;s first Spectre hated to admit that she was fumbling in the dark. &quot;We will continue to wait for any and all moves he makes and try to intercept him. Additionally, I have called in a favor from – and paid a nice sum of money to – the Shadow Broker.&quot;</p>
+        <p>The councilors exchanged a few glances, and Sparatus seemed to be about to burst from smugness, but he managed to keep his mouth shut this time, and so the Asari was the one to answer Shepard.</p>
+        <p>&quot;Thank you for your report, Commander. The Council congratulates you on your success in resolving this situation with minimal bloodshed and will inform you immediately if new information about Saren&#x27;s plans or whereabouts presents itself via any of our own channels. Good hunting, Commander.&quot;</p>
+        <p>The holographic forms of the councilors vanished, and what remained was one visibly spent commander Shepard. Garrus rose from his seat and made the steps over to lay a hand on his friends shoulder. The human turned and looked up to him. Garrus had never seen her look so exhausted before. He spent a moment mulling over what profound piece of his mind he could possibly give his friend that would perk her up right now, but quickly had to admit that he hadn&#x27;t any.</p>
+        <p>&quot;You look like shit, Shepard. Come on, let&#x27;s get a meal and a beer into you. Or two.&quot;</p>
+        <p>Shepard, shaking her head, cracked a huge smile, and snorted.</p>
+        <p>…...</p>
+        <p>They were still snickering about some quip of his when they descended the stairs and entered into the mess shortly after. The rest of the team and most of the crew eating briefly turned their heads at the, for at least the Alliance crew, unusual sound of their commanding officer laughing. They paid them no heed and just got themselves something to eat, Shepard even actually grabbing herself a beer. Then she made her over to sit across from Tali, who was sitting by the wall, somewhat by herself. Garrus suppressed a smirk. Of course.</p>
+        <p>The young Quarian looked up. The foodtube still attached to her mask, her voice sounded slightly muffled. &quot;What has you two in such a good mood?&quot;</p>
+        <p>&quot;The real question&quot;, Shepard said and cracked open the beer can, &quot; is, why are you not in this kind of mood? After all, we are only completely without a lead on a violent madman who is trying to bring back a race of killer robots.&quot;</p>
+        <p>Garrus mood fell. Great. He needn&#x27;t have feared, though.</p>
+        <p>&quot;Jokes aside Tali, we&#x27;re going to get the bastard soon enough, and even if its not what we hoped for, we did learn something today. And if Saren was willing to stick his neck out this far to get it, this... &#x27;Cipher&#x27; might just end up being instrumental in finding the Conduit, or dealing with it when the time comes.&quot; She took a sip. &quot;As far as today is concerned, we just saved an entire colony and ExoGeni is about to drown in legal cases. I&#x27;d say that counts as a good day.&quot;</p>
+        <p>Garrus found himself raising a browplate. He had expected Shepard to spend at least a day brooding after the casualties of the day. Apparently, the woman could learn.</p>
+        <p>Tali was obviously less enthusiastic. &quot;I&#x27;ll try to look at it from that angle.&quot;</p>
+        <p>Shepard&#x27;s eyes widened for a moment, before closing in a frown. She sighed and bent forward, resting her arms on the table before continuing quieter. &quot;Damn it. I&#x27;m &#x27;s about that guy we shot.&quot;</p>
+        <p>Tali didn&#x27;t respond. In fact, she didn&#x27;t even look at them.</p>
+        <p>&quot;Listen...I know how you feel. And me simply telling you this won&#x27;t fix it. But it&#x27;s not your fault. Every one of us could have paid more attention to that one spot. None did. Not me, not Garrus. Not even Wrex, and he&#x27;s been doing this for a thousand years.&quot;</p>
+        <p>Finally, she raised her head a little. &quot;It&#x27;s just...he could be living his life now. He probably has family at Zue&#x27;s Hope. And now he&#x27;s gone. Because I made a mistake.&quot;</p>
+        <p>&quot;He is gone because the Thorian turned him into a weapon.&quot; , Shepard insisted. &quot;If we hadn&#x27;t killed him, you would be dead now in his stead. And maybe someone else, too. Truth be told, even if we had spotted him immediately, the outcome would probably have been the same. There were just too many of them at once. You did nothing wrong. It is that simple.&quot; She squeezed Tali&#x27;s shoulder. &quot;Don&#x27;t dwell on it.&quot;</p>
+        <p>She still didn&#x27;t look Shepard in the eye, but nodded, at least. &quot;I&#x27;ll...try that.&quot;</p>
+        <p>Shepard leaned back in her chair and simply looked at Tali pensively, her food untouched Garrus, who had been slowly and carefully eating while listening in, paused for a moment to appraise them. And just like that her good mood is gone. Well. He took another bite. They&#x27;re both too harsh on themselves. And they&#x27;re both blind, too. Spirits, someone needs to give them a hand.</p>
+        <p>&quot;Your food&#x27;s going cold, Shepard.&quot; The woman in question looked downright startled for a moment, but did eventually pick up her fork and knife and start eating. Garrus crushed a bone between his jaws and savored the marrow on his tongue. .</p>
+        <p>&quot;Listen Tali, I&#x27;ve seen my fair share of room clearing in my day. These things happen to the best. Which we belong to, by the way.&quot; He swallowed, enjoying the scraping of small splinters of bone against his oesophagus. &quot;So, Shepard. Since Saren is nowhere in sight, what are we going to do next?&quot;</p>
+        <p>The commander took a couple of seconds to answer. &quot;Well...let me see. I suppose...I suppose I will have a talk with Hackett. There&#x27;s been reports of Geth activity in the verge. Nothing major, so I haven&#x27;t paid in any attention so far. But with nothing else coming up...&quot; She shrugged. &quot;I&#x27;m sure Hackett will be more than happy to point us in the right direction.&quot;</p>
+        <p>Shepard seeming less than enthusiastic about the ordeal, it was once upon on Garrus to spread good spirits. &quot;See, Tali? Geth to kill on the horizon.&quot;</p>
+        <p>She just looked at him, and it was impossible to tell wether she was irritated, amused or simply speechless. Until she finally chuckled and shook her head before emptying her foodtube with one last,loud slurp and disconnected it from her mask. &quot;You&#x27;re terrible, Garrus.&quot; Tali leaned back and relaxed somewhat. &quot;Thank you.&quot;</p>
+        <p>He twitched his mandibles and cut off the next slice from the slab of meat on his plate. &quot;My pleasure.&quot;</p>
+        <p>…..</p>
+        <p>Later that night, for the first time in weeks, Tali had trouble getting sleep. Too many thoughts were running wild in her head. The face of that poor colonist. The outstretched claws of the Creepers. The sound of gunfire. For some reason, her brain even came up with the question of what her father would do to get Han to take those extra courses. Or what Han would come up with to try and dodge them, she supposed.</p>
+        <p>After tossing and turning on her bed for another hour, she finally gave up and slid out through the curtains that made up her makeshift &#x27;room&#x27; in the corner of the storage bay. Silently, she stalked past the gargantuan form of Wrex, who was sleeping with his back against a crate, his every long, slow breath like the low rumble of a powerful engine. Not that bad an analogy, if she thought about it. For a moment she considered stopping by the engine room to kill some time with the third shift, but then she got into the elevator instead, aiming to get herself some water, and perhaps, some better company.</p>
+        <p>Ascending to deck 2, Tali realized how much she hoped to run into her captain. They had barely spent any time together during the past couple of weeks, basically ever since she slept well. It occurred to her that Shepard probably hadn&#x27;t over night lost her sleeping problems. She had probably written dry reports or simply stared at her ceiling while Tali had been sound asleep all these nights. She sighed. I shouldn&#x27;t feel guilty for sleeping at night. And she wanted it this way.</p>
+        <p>The elevator opened, and immediately, she could hear the muffled sound of music being played behind a door. She rounded the elevator shaft to find the mess mostly unoccupied, safe for two third shift members in the back whom she exchanged a respectful, but wordless nod with. Unsure of how to proceed, she slowly walked over to her drawer and got herself a bottle of purified water. Slowly sipping away at it, she stood there, thinking about how lost she probably looked, until finally, something inside of her went &#x27; Screw it...&#x27; and she put the thing down, walked over, and pressed the communicator.</p>
+        <p>&quot;Hey Shepard, it&#x27;s me.&quot;</p>
+        <p>Shepard simply opened the door in way of an answer. Entering, she found the commander sitting at her desk, an open can of beer and several datapads next to the dektop Shepard looked up from.</p>
+        <p>&quot;Shepard, I, uh, wanted to ask about what we know about those Geth you mentioned. Size of the force, disposition, what they might be after... you know.&quot;</p>
+        <p>&quot;Shepard raised an eyebrow. &quot;In the middle of the night?&quot;</p>
+        <p>&quot;Yes. Why not?&quot;</p>
+        <p>She snorted. &quot;Yes, why not...&quot;</p>
+        <p>&quot;After all, you&#x27;re working too.&quot;</p>
+        <p>She smirked.</p>
+        <p>&quot;What?&quot;</p>
+        <p>&quot;I&#x27;m not actually working. I am, uh... assembling a playlist.&quot;</p>
+        <p>Tali certainly hadn&#x27;t expected that, and so she was at a loss for words for a moment. But only a moment. &quot; What, is the paperwork that boring?&quot;</p>
+        <p>She leaned back in her chair and sighed. &quot;It actually is, but it doesn&#x27;t matter because for once, I&#x27;m mostly up to date with it anyway. Got a lot done these last couple of weeks, basically all the stuff I had lying around from the earlier months of this campaign. And even some stuff from before that.&quot;</p>
+        <p>Tali froze. Keelah...I&#x27;ve been keeping her from her work all this time. &quot;Oh...I, uh, guess I should leave you to it then...&quot;</p>
+        <p>&quot;What - wait!&quot; She was sitting straight in her chair before Tali had even half turned. &quot;I&#x27;m gonna go insane here if I have to look at one more document.&quot;</p>
+        <p>Smiling underneath her mask, she turned back, relaxing a little. If Jane wanted her here, she wouldn&#x27;t say no. Definitely not. She sat down in the armchair to the left. &quot;You could just go to sleep, you know.&quot;</p>
+        <p>She grinned mirthlessly. &quot;Yeah, about that...it&#x27;s one of those nights I guess.&quot;</p>
+        <p>&quot;I thought you were in a great mood.&quot;</p>
+        <p>She just snorted.</p>
+        <p>Minutes passed by in not at all uncomfortable silence, with the music still playing in the background; songs from all over the last two hundred years, in several different human languages. Tali didn&#x27;t understand a word, and while she could have used the links her visor&#x27;s HUD automatically displayed to find the texts, she instead chose to simply enjoy the rhythm of it while Shepard continued to work on something on her desktop. When Shepard finally sat down her beer with a finality that, without having to look, let Tali know that it was empty, over half an hour had passed. Shepard leaned back and looked at her.</p>
+        <p>&quot;Wanna watch a documentary again?&quot;</p>
+    </div>
+</body>
+</html>

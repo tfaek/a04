@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch13.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html" selected>Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch15.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 14</h1>
+    <div class="chapter-content">
+        <p>Kaidan&#x27;s comm crackled to life with the voice of commander Shepard. &quot;This is Shepard. We&#x27;ve made contact with the enemy an- &quot; her voice cut out for a second as the hardsuit&#x27;s system automatically detected a couple of shots sounding through and dialed down the volume to protect Kaidan&#x27;s ears. &quot;...peat, hostiles are Batarians! Have Varren with them. We have taken the control room and Tali is currently at work getting the torch under control. Status!&quot;</p>
+        <p>He activated his output to speak, but Wrex beat him to the punch. &quot;We dropped the mammals off at their stop and are now on the way to the last torch. Wrex out.&quot;</p>
+        <p>Ignoring Ashley&#x27;s snort behind him, he made his report. &quot;Alenko here. We&#x27;re about to make the final approach to our entry point.&quot;</p>
+        <p>It took a few seconds before their commander replied. &quot;Look alive, they&#x27;re all going to be on alert now. I can hold here, and Tali is making progress. She should be able to guide you through the process once you&#x27;re there. Good hunting and out.&quot;</p>
+        <p>Kaidan nodded even though Shepard couldn&#x27;t see it and quickly addressed the others one last time. &quot;As I was about to say, we go all at the same time. Ready?&quot; Liara nodded, but the Gunnery Chief showed no reaction, instead she tensed up, her eyes widening behind her visor and then narrowing as she slowly brought up her rifle. &quot;Might be time for a new plan, LT. They just sent two snipers up to the roof. If we make a run for it now, they&#x27;ll make us pay for it.&quot;</p>
+        <p>Kaidan followed the direction her rifle was pointing and saw, for a second, a humanoid figure, before it disappeared behind a concrete railing. A curse formed on his lips, but he wiped it off – this was just an inconvenience. &quot;We move with smoke then. Suppressive fire on my command. I&#x27;ll throw the smoke, we move when it&#x27;s up. Once we make it to the airlock, we&#x27;ll be out of their line of fire. Everyone got that?&quot;</p>
+        <p>&quot;Ready, LT.&quot;</p>
+        <p>He didn&#x27;t even bother looking at the Chief, he knew full well she had done this kind of thing more than once before. He did give Liara a quick look, though. He was greeted by the determined gaze of two blue eyes that had gained a steely edge to them since Noveria that made them distinctly different from what they had looked like a mere week ago. &quot;I am ready.&quot;</p>
+        <p>&quot;Fire!&quot;</p>
+        <p>Quickly, both women emerged from their cover just enough to be able to shoot out of it, laying down a hail of short bursts out of their assault rifle or, respectively, SMG. Kaidan&#x27;s smoke grenade was already on it&#x27;s way, it&#x27;s flight supported a little by some biotic power he had added in to improve his throw. It traveled a solid thirty five meters or more before hitting the ground where it came to rest after some more rolling around, having begun to spray out it&#x27;s contents before even landing.</p>
+        <p>&quot;Hold fire!&quot;</p>
+        <p>The guns went silent, allowing the weapons to cool down just for a couple of seconds. Kaidan watched the roof intently; the snipers would surely have understood by now what was up, where their position was and that they were about to get up and move. They would know that their moment to land a hit would be just as they had left their cover completely but were not inside the protection of the smokescreen yet. And that meant that they would have to move into their firing positions right about...</p>
+        <p>He brought up the his SMG and hosed down the general area of where he had seen the movement, having little hope to actually hit anything , but that was not the point. &quot;Move!&quot; They followed the command, breaking cover. Williams snapped off a short burst at another part of the roof; she had probably spotted the other one. Then they were all running, continuing to shoot wildly but now, in full sprint, their fire was so inaccurate it could not even be relied upon to keep the enemy&#x27;s heads down. Kaidan felt a pang of uneasiness in his belly. Just a couple steps more... he flinched as the air cracked with the unmistakable round of a high calibre round whizzing past. One moment later he was behind the smokescreen. Crouching down, he turned around and saw Williams stumble towards him, holding her shoulder with a pained expression. He grabbed her by the arm and began dragging her along, but she shook him off and they ran on, reaching the safety of the small alcove around the airlock, where Liara was already waiting. Losing no time, Kaidan opened his omnitool to try and gain access to the door&#x27;s system – the Batarians weren&#x27;t stupid, the one&#x27;s on the roof would have told the others inside where they were making their entrance. If they didn&#x27;t get in there quick, they would have to face a hot, and possibly entrenched, welcome – coming through a narrow door. A situation he&#x27;d rather avoid. Still, Ashley had obviously been hit. Not averting his eyes from his work, he asked: &quot;You okay, Chief?&quot;</p>
+        <p>The hissed tone of her reply allowed him to basically hear her clenched teeth. &quot;Glanced off the pauldron. Gonna have a hell of a bruise, but it won&#x27;t affect my combat effectiveness. Hurts like a bitch though.&quot;</p>
+        <p>He just nodded and stopped thinking about it; Williams was tough, and she&#x27;d make sure he was safe during his hacking. Seconds later, he had breached the firewall and the lock opened, admitting them into the chamber, and some seconds and one pressurization later, they burst through the inner door, and into the fire. The batarians had prepared a welcoming committee.</p>
+        <p>Not a sufficient one though. A minute later, Two varren and four batarians lay dead, some riddled with bloody holes, others violently deformed next to the walls they had been biotically slammed into. He frowned slightly, feeling the migraine coming already after the massive effort it had taken him to maintain the barrier they had needed to make it from their entrance to some decent cover. That was all he allowed himself; Shepard had given him the lead for this part of the team, and a leader didn&#x27;t wallow in his own problems when the mission wasn&#x27;t done yet. He just led. And there were still hostiles to be killed in this building.</p>
+        <p>Roughly half an hour later, the three of them stood in the control room, somewhat winded, but victorious and having suffered nothing more than a few scratches. The terrorists had fought hard and to the last, but ultimately, neither their equipment nor their training were up to the job of facing a fire team made up of two experienced Alliance marines with spectre-grade guns and a powerful Asari biotic. Their numbers had not been great enough to allow them to drown the squad in bodies even if they had had the heart to attempt that, which they hadn&#x27;t, and so their dogged resistance had only served to slow the Normandy team down. Which might still be enough. The clock is ticking...</p>
+        <p>Nodding towards the exits, he sent his two companions to stand guard while he would take care of the torch. He did not expect anything to happen, but in the unlikely case that there were still stragglers not only alive, but willing to fight them, he would not have them be caught by surprise. Sitting down in the comfy chair in front of the main console, he activated his comm to report.</p>
+        <p>&quot;Shepard, this is Alenko. Torch site two taken and intact. No contacts as of now.&quot;</p>
+        <p>It took only a second before the voice of his commander responded, sounding significantly more relaxed now. &quot;Good job. We got no contacts left, either. They stopped trying to force their way in after I killed about half a dozen of them, and then they just up and left about ten minutes ago. I suspect that they are gathering their forces for something...either to protect the last torch, or to take back yours. So keep your eyes open. Kaidan, Tali will instruct you on the reconfiguration of the torch now...Garrus, you&#x27;re listening in?&quot;</p>
+        <p>Whatever Shepard and their resident Turian talked about, Kaidan heard none of it, as Tali wasted no time filling him in on the torch&#x27;s systems. Her personality had become somewhat tempered by the events of the past months, with her gaining a great deal of professionalism, but her enthusiasm getting to teach him about a piece of technology, even if it was something as relatively banal as a fusion torch, could still be felt underlying her hasty explanations. He smirked to himself more than once as he occasionally had to reign her in to keep her from trailing off. It wasn&#x27;t the right time for this now. Still, he hoped that she kept this trait about her. It was not just endearing, but something that would serve her well for the rest of her life whatever she eventually chose to do after this. God knew he wished he himself could be a little more like that sometimes.</p>
+        <p>It did not take them long, and so less than ten minutes had passed when they cut the connection and Kaidan got to work getting everything he still had to do in order while Tali and Shepard would do a sweep of their area to confirm it was free of hostiles and try to figure out where they had gone. Ashley and Liara had remained silent during his talk with the Quarian, but now that he was working in silence, it didn&#x27;t take long for the Asari to speak up.</p>
+        <p>&quot;I just do not understand this. These Batarians gain nothing from destroying a human colony like this, they are slavers.&quot;</p>
+        <p>Ashley scoffed. &quot;These bastards don&#x27;t care about what you and I think makes sense. They hate us for simply existing. Think they&#x27;re better than everyone else. Call us animals. Humans , Asari, Salarians, everyone but themselves. From what I&#x27;ve heard, they even do it to their own kind.&quot; She spat on the ground. &quot;Pathetic squints. You&#x27;d think they&#x27;d ask themselves how it is that if they&#x27;re oh so great, they can&#x27;t do anything but raid undefended colonies and run off like the cowards they are when the navy shows up on the scanners &quot; Kaidan frowned upon hearing the racial slur, but said nothing. He felt like he really couldn&#x27;t fault Ashley right now, and while she had initially held reservations against their alien crew, she had managed to overcome that, so this was just a grudge against the Batarians, not aliens in general. And having a grudge against Batarians wasn&#x27;t just seen as acceptable in the Alliance military, it was expected. But the Gunnery Chief wasn&#x27;t done.</p>
+        <p>&quot;I say they know damn well that we humans are just better than them, and it makes them even madder.&quot; He could not see their faces as he was working, but he just knew there was more coming.</p>
+        <p>&quot;Shouldn&#x27;t have stopped at Torfan...we should&#x27;ve burned Kar&#x27;shan to the goddamn ground.&quot;</p>
+        <p>&quot;That&#x27;s enough of that, Chief.&quot; Kaidan didn&#x27;t truly begrudge her attitude, it was a fairly common one throughout the military. He even agreed to an extent, safe for the statement about how humans were supposedly just better. The Batarians were at a low point in their species&#x27; history right now; humanity had demonstrated it&#x27;s own potential for cruelty and depravity more than sufficiently in the past. He did not miss the slight hint of irritation in her voice when she curtly responded, &quot;Sir.&quot;</p>
+        <p>He shook his head. He was being lenient and she knew it. If she wanted to sulk, she could be his guest. Silence returned for some minutes, interrupted only by the sounds of him working the console. Liara was once more the one to break it.</p>
+        <p>&quot;The commander has...history with the Batarians herself. I did some superficial research after she recruited me. Given the...fervor she has displayed at the occasions where we have encountered Batarians before, I wonder how this mission is going to affect her.&quot;</p>
+        <p>Kaidan had no intention to chip in to the women&#x27;s conversation unless necessary; not only had he work to do, he generally found listening more interesting than talking anyway. A man could learn a lot more if he knew when to keep his mouth shut and those of the ones around him moving.</p>
+        <p>&quot;What&#x27;s that supposed to mean?&quot;</p>
+        <p>He raised an eyebrow at the rather confrontational answer from Ashley. What was her problem? He thought she had gotten over her bad attitude towards aliens. She had even reached out to Liara after the death of matriarch Benezia, and he had seen the two spend time talking every now and then in the past days. Was it...could it be because the Asari had voiced her thoughts about Shepard specifically? Shepard certainly was an attractive woman...Kaidan&#x27;s professionalism had prevented him from wasting any thoughts on such matters regarding other service members for years, but now that he thought about it, it made sense. Shepard was attractive, and Kaidan would definitely have at least pondered it if they had met under other circumstances. Ashley was a bold one, bordering on brashness. Just the kind of marine to throw the regulations to the wind and just go for what she wanted...and if that should indeed be Shepard... but she was best of friends with Tali and had been since week two or so. She hadn&#x27;t been at the table when Shepard had pretty much lost herself in the girl&#x27;s dancing a couple of days ago, but surely, Ashley had noticed all the other things going on?</p>
+        <p>He switched the lever to plug in the secondary power supply and pressed the button to run the final diagnostic.</p>
+        <p>But perhaps Ashley simply didn&#x27;t see Tali as a threat, be it because of the suit or because the two actually talked about these things and the Chief knew things he didn&#x27;t...perhaps he was wrong, and Tali wasn&#x27;t even into Shepard at all? Or perhaps he was wrong about Ashley, and she was just being a blunt object as usual? Or he was wrong about both?</p>
+        <p>He almost missed Liara&#x27;s reply over all his thinking. &quot;I believe the Commander to be a substantially more sentimental woman than one would expect from someone of her reputation.&quot; Now he raised both eyebrows. Liara was smart, certainly smarter than he was, but people were not her specialty, so her picking up on Shepard&#x27;s emotional state somewhat surprised him. He agreed, though. &quot;The events surrounding Corporal Toombs seemed to affect her deeply. I do not believe that she had planned to beat Doctor Wayne beforehand.&quot;</p>
+        <p>He could hear Ashley&#x27;s armor chafe as she presumably shrugged. &quot;I don&#x27;t blame her. Could&#x27;ve shot that bastard right there, I&#x27;d be with her.&quot;</p>
+        <p>Jesus Ash, you&#x27;re a likable brick, but damn, you&#x27;re a brick.</p>
+        <p>Liara&#x27;s voice held none of the exasperation the Chief&#x27;s missing of the point induced in Kaidan.&quot;I do not blame her either. Blame is not the point. The point is that the Commander has acted irrationally on more than one occasion when the situation strongly affected her emotionally. There was Dr. Wayne, there were those reckless charges when we fought those pirates...and then the hot labs on Noveria.&quot;</p>
+        <p>When Ashley spoke again, she sounded far more pensive. &quot;Yes, that was weird. No other CO I&#x27;ve ever had would&#x27;ve done that, so much&#x27;s for certain...I just figured she was that great a woman. Loyal to her team to a fault, you know. A true captain, just how they&#x27;re supposed to be. Like she escaped from a book or something where she was the larger than life hero, just that now she is here, and she is real. &quot;</p>
+        <p>Mkay. So was I right about her after all? Or does she just admire Shepard as a leader?</p>
+        <p>He had turned around by now, content to let the diagnostic run on it&#x27;s own as it would take another minute to complete, and so he could see Liara nod animatedly. &quot;That is what it comes down to. But why she acts that way is just it. I don&#x27;t think the Commander is the way she is just because. I think the things she has experienced have molded her to be this way.&quot; She stopped herself, a somewhat embarassed impression on her face. &quot;I do realize that that is a true statement for virtually everyone who has ever lived...but with Shepard, because she is such a big name, and with how the Alliance always portrays her, at least I just somewhat assumed that her qualities were just entirely intrinsic... a woman born to be a hero, if you will. But that is not true. She grew into that woman. And because of that, she might not be as stable as one would think.&quot; She stopped again and looked down , now definitely looking embarassed. Kaidan could already hear the teases Ashley might come up with over this, but one look showed him that he needn&#x27;t worry as the Chief was obviously deep in thought now herself.</p>
+        <p>He was about to turn back to the console when she finally said something. &quot;I think you&#x27;re right. Shepard might need us more than we think. Both in general...and maybe even before this day is over.&quot;</p>
+        <p>Kaidan was torn if he should end all this talk about their commander&#x27;s mental state now like most lieutenants would have done ages ago, or do what he wanted and voice his agreement. The radio relieved him of the duty to make that decision when the thoughtful silence in the room was broken by the voice of Garrus coming over the squad&#x27;s general channel.</p>
+    </div>
+</body>
+</html>

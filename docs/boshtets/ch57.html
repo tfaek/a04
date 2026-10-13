@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 57</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch56.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html" selected>Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch58.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 57</h1>
+    <div class="chapter-content">
+        <p>&quot;Heard from your father yet?&quot;</p>
+        <p>Tali didn&#x27;t answer immediately, seemingly to enraptured by the footage of a Rostygian Megalofex, the second largest land carnivore known to the galaxy, bringing down it&#x27;s prey. The thing looked like a crossing between a Tyrannosaurus Rex and a dragon, holding some only marginally less ferocious looking animal in place with it&#x27;s bulging forelegs to deliver the killing blow, a savage bite. The jaws of it were easily large enough for a grown Krogan to comfortably step through.</p>
+        <p>They had gotten back to their habit of watching documentaries almost immediately after picking her up on Haestrom, as soon as she&#x27;d had enough energy to do much else than eating and sleeping. They both slept much better these days, but even with all their duties there was still an hour or two of peace a day to be found, and while Jane had gotten reasonably jovial with some of the team and crew by this point and there was of course Garrus around as well, the hours spent with Tali were what truly helped her stay on course in a reality that seemed stacked up to drive her insane. Ever since her &quot;timeout&quot; as she&#x27;d come to think of it, almost every day contained upwards of half a dozen little assaults on her resolve, and Anderson&#x27;s reaction to her association hadn&#x27;t exactly helped. The people on the ship might have been alright, but she was still taking money from the people behind Akuze, Edolus and Nodacrux.</p>
+        <p>Ironically, for all the inner conflict threatening her focus these days, she slept like a baby, much unlike back when she&#x27;d been mostly free of such troubles. But who knew what Cerberus had really done to her brain? Jane certainly didn&#x27;t want to.</p>
+        <p>&quot;No. To be honest, it&#x27;s worrying me. I expected him to explode. He should&#x27;ve send me a message days ago.&quot; She shrugged. &quot;Not that I&#x27;m complaining.&quot;</p>
+        <p>Jane sighed; at this point, she was quite familiar with Tali&#x27;s relationship to her family, and the fact that it wasn&#x27;t always the easiest. Still, she wasn&#x27;t quick to comment. She rarely ever did, mostly just when Tali asked for her opinion. For all her understandable complaining, Jane was convinced that Tali still loved her father very much, and she certainly wouldn&#x27;t have appreciated someone giving her unasked for advice if it&#x27;d been her own.</p>
+        <p>&quot;Probably the best thing that could&#x27;ve happened.&quot;, she eventually mused. &quot;Maybe they&#x27;re just accepting your decision. Probably don&#x27;t like it, sure, but you said yourself they&#x27;re taking the Reapers seriously.&quot;</p>
+        <p>&quot;Yeah, maybe.&quot;</p>
+        <p>She sounded about as sceptic as Jane felt, and they went back watching in silence for a while. Jane allowed herself to get lost in the fascinating footage of the animals of the Rostygian prairie and the soothing narration of David Attenborough the Fourth.</p>
+        <p>&quot;How&#x27;s Han doing?&quot;</p>
+        <p>&quot;He&#x27;s alright. With the Broker situation, he&#x27;s been accepted into medical training for now, pilgrimage or not. No use having a young man wasting around. He&#x27;s still a &#x27;nar Rayya&#x27;, of course, so not a proper adult.&quot;</p>
+        <p>&quot;Must be annoying for him.&quot;</p>
+        <p>&quot;You have no idea. I guess a human&#x27;s equivalent would be a grown man living in his mother&#x27;s basement.&quot;</p>
+        <p>&quot;But he&#x27;s not a leech! I&#x27;m sure he&#x27;s working hard.&quot;</p>
+        <p>&quot;Everybody is working hard. You haven&#x27;t really proven yourself until you&#x27;re back from the pilgrimage.&quot;</p>
+        <p>Jane lifted an eyebrow, but she was hardly going to try and argue about Quarian culture with her. &quot;Is there no other way around it? Not everyone&#x27;s cut out to go out into the galaxy alone and come out successful.&quot;</p>
+        <p>She shrugged. &quot;You can join the marines. It&#x27;s not the most prestigious way to complete your pilgrimage, but better than coming home with a poor gift.&quot;</p>
+        <p>&quot;So not something your father would appreciate.&quot;</p>
+        <p>Tali turned her head and looked at her. &quot;Nothing Han would appreciate, either. Father would grumble of course, but with the way things are right now, he&#x27;d accept it. He&#x27;s...harsh, and demanding, and sometimes overreaching...&quot; She caught Shepard&#x27;s amused expression and decided to break off her little list. &quot;But he wants what he thinks is best for us. Anyway, Han&#x27;s determined to get a proper pilgrimage done as soon as he can.&quot;</p>
+        <p>&quot;One more reason to put an end to the Broker, then.&quot; Jane scratched the back of her neck. &quot;Just gotta hope Liara turns up something useful.&quot;</p>
+        <p>&quot;Hm.&quot;</p>
+        <p>It took Shepard a minute to try and come up with something that might lift her spirits a little bit. &quot;Whatever he eventually brings home, I don&#x27;t think it&#x27;s gonna stack up to your gift, though.&quot;</p>
+        <p>She chuckled softly. &quot;Which I got from you. Very subtle, Shepard. But if you&#x27;re trying to make me like you, don&#x27;t bother. I already like you.&quot;</p>
+        <p>&quot;That&#x27;s good to hear, Miss vas Neema.&quot; She hated it when Shepard called her that.</p>
+        <p>&quot;Oh shut up. And yes, the Geth data was received pretty enthusiastically.&quot;</p>
+        <p>&quot;I can imagine. Did anything come of it yet?&quot;</p>
+        <p>She actually nestled with her fingers for a couple of seconds before snapping out of it. &quot;I...uh...I&#x27;m actually not at liberty to talk about it.&quot;</p>
+        <p>Jane snorted. &quot; All right then, keep your secrets. I just hope your people will share when the time comes. We haven&#x27;t seen the last of the Geth, that&#x27;s for sure.&quot;</p>
+        <p>&quot;Hm.&quot;</p>
+        <p>&quot;What?&quot;</p>
+        <p>&quot;I don&#x27;t know if my people will be overly enthusiastic to share anything with a galaxy that has been kicking us while we&#x27;ve been down for the last three hundred years.&quot;</p>
+        <p>There was a bit of a sharp edge to her voice; Jane knew it wasn&#x27;t directed at her, though. &quot;I get it. But if they really find new ways to fight the Geth, the more people have them the better for everyone. Including you.&quot;</p>
+        <p>She sighed. &quot;If. I&#x27;m not on that team, but I haven&#x27;t heard about anything groundbreaking yet. I can&#x27;t imagine a reason why my father would keep me out of it if there had been a breakthrough.&quot;</p>
+        <p>&quot;I thought you couldn&#x27;t talk about it.&quot;</p>
+        <p>&quot;Telling you that I don&#x27;t know anything is hardly &#x27;talking about it&#x27;. &quot;</p>
+        <p>Jane snorted. &quot;Are you a lawyer now, Miss vas Neema?&quot;</p>
+        <p>&quot;Quarians don&#x27;t have lawyers. It&#x27;s the duty of the captain and their officers to educate themselves on the intricacies of our law.&quot;</p>
+        <p>&quot;Well, thank god this is a human ship.&quot;</p>
+        <p>&quot;Dammit...fold.&quot;</p>
+        <p>Garrus took a sip of his beer as he watched Jack accept Zaeed&#x27;s chips with a shit eating grin. &quot;Not your day, old man.&quot;</p>
+        <p>The so disrespectfully addressed didn&#x27;t bother to reply, preferring to treat himself to another drag of his cigar instead. He&#x27;d actually offered Garrus one once; obviously, he couldn&#x27;t have accepted even if he wanted to. The cranky old warhorse had found that really funny somehow.</p>
+        <p>&quot;Nah, not really.&quot;, he eventually answered, not seeming too bothered by it.</p>
+        <p>They were sitting around a table in the cargo hold the mercenary had turned into his quarters; the three of them plus Donnelly, so only the regulars today. Garrus hadn&#x27;t really reached out to anybody in the weeks he&#x27;d been on board now, the ship being a Cerberus vessel and all - let alone the fact that most days, he was hardly in the mood for company anyway. Shepard had dragged him down here one time, and it had stuck; for Garrus, that was. Shepard had never been a big poker player - which was quite fortunate, because this way, she could keep Tali occupied with something else. As easy to read that woman was most of the time, at a poker table that opaque facemask was an undeniable advantage Garrus could do without ever being on the receiving end of again.</p>
+        <p>Leaving the Quarian aside – and Daniels too, the engineer was a menace - he was comfortable enough playing against pretty much anyone on the ship. Donnelly was passable, and Chakwas had been too, on the few occasions she&#x27;d attended; Zaeed was actually pretty good for the most part, but his irritation with a bad hand got the better of him from time to time. Jack was actually terrible. The girl had the impulse control of a spoiled brat, which made her phenomenal run today all the more surprising.</p>
+        <p>&quot;I feel like I&#x27;m finally getting the hang of this.&quot; She got on with dealing everyone new cards. &quot;Maybe I&#x27;ll start actually making some money off of you guys after all.&quot;</p>
+        <p>Donnelly scoffed. &quot;Ah, keep dreaming girl. Got a couple o&#x27; good hands today. We&#x27;ll see how well you&#x27;ll do when your luck runs out.&quot;</p>
+        <p>Garrus failed to stop an irritated flair of his mandibles. The man got annoyingly competitive at times. Fortunately, Jack didn&#x27;t rise to the challenge.</p>
+        <p>&quot;Sure, sure.&quot; Lighting another cigarette, she looked at Garrus. &quot;Do you know what&#x27;s up next?&quot;</p>
+        <p>Their brief stay on Illium lay almost three weeks behind them now. In lack of a lead on the collectors or the Broker, they&#x27;d spent the time doing odd jobs, mostly on behalf of team members. Jacob had been the first, dragging them all the way to the Rosetta Nebula investigating a curiously late SOS from the last ship his father had served on. The trip had certainly ended up being worth it, but not in a good way.</p>
+        <p>The man had been in a sour mood ever since. Not that Garrus blamed him.</p>
+        <p>After that, they&#x27;d actually visited Tuchanka, which had been a surprisingly bearable time with Wrex around and all that, even though it had involved a thresher maw, and then they&#x27;d taken a short detour to blow up Jack&#x27;s childhood home, which had improved her mood considerably – and somehow ignited a fierce loyalty towards Shepard in the young woman.</p>
+        <p>Garrus would probably never understand how Shepard did it, but given the lunatic in question he wasn&#x27;t too envious.</p>
+        <p>He shrugged. &quot;No idea. Might hit some pirates if nothing else comes up, I suppose. &#x27;Training exercise&#x27;, you know it.&quot;</p>
+        <p>Zaeed and Jack chuckled, knowing full well that he&#x27;d only been half joking.</p>
+        <p>&quot;Not that I want to spoil your fun,&quot; , Donnelly began, &quot; but we&#x27;ve been in the dark for a while now, haven&#x27;t we. Nothing new of the damn bugs.&quot;</p>
+        <p>The old mercenary grunted, studying his hand. &quot;Aye. And I don&#x27;t think they&#x27;re just scared to come out either. Bastards are probably planning something.&quot;</p>
+        <p>&quot;Why don&#x27;t you ask your boss?&quot; Jack asked Donnelly. &quot;I&#x27;m pretty sure if she doesn&#x27;t know it yet, Shepard doesn&#x27;t either.&quot;</p>
+        <p>Garrus tensed a bit, but continued to study his hand. His friends did not need him to jump at every little piece of gossip for them – and at the end of the day, she wasn&#x27;t far off anyway. Not for the first time he thought to himself that if they physically could, they&#x27;d probably been sharing the bed for a long time already.</p>
+        <p>Donnelly might have noticed his reaction, or perhaps he just wasn&#x27;t that much of a fool. At any rate, he declined to answer, taking a sip from his can of beer instead. Unfortunately, Jack didn&#x27;t take the hint.</p>
+        <p>&quot;I wonder what they even do up there all the time. Pretty sure she can&#x27;t come out of that thing, right?&quot; She looked at Garrus with a face that said very clearly how aware she was what she was doing - the little shit was just trying to get a rise out of him. As he was still contemplating how to put her back in her place, Massani did it for him.</p>
+        <p>&quot;What&#x27;s wrong, Darling? You wishing she&#x27;d take you up to the lodge for a change?&quot;</p>
+        <p>The convict just grinned. &quot;Is this supposed to be embarrassing? I sure as hell wouldn&#x27;t say no to the girlscout. Not like there&#x27;s a whole lot to pick from on this ship if you wanna have some fun.&quot;</p>
+        <p>Garrus groaned. &quot;Alright, that&#x27;s it. Keep your unmet needs to yourself, Jack. Can we just play, please?&quot;</p>
+        <p>She chuckled like the annoying little prick she was, probably happy to have pissed him off in the end, but she shut up and they played another couple of rounds. The evening was pleasant enough all things considered, but when he made his way back to the battery about an hour later to get some sleep, he was interrupted by the chime of his omnitool.</p>
+        <p>&quot;Shepard?&quot;</p>
+        <p>&quot;Garrus, we&#x27;re changing course.&quot;</p>
+        <p>&quot;Where we going so- whatever, where are we going now?&quot;</p>
+        <p>&quot;The flotilla, they&#x27;re trying Tali for treason.&quot;</p>
+        <p>&quot;What!?&quot;</p>
+        <p>&quot;Yeah, that was my reaction as well.&quot;</p>
+    </div>
+</body>
+</html>

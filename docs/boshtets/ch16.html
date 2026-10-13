@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 16</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch15.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html" selected>Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch17.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 16</h1>
+    <div class="chapter-content">
+        <p>The Mako&#x27;s rear hatch came open, impacting the floor of the cargo bay with a loud crack. Before the servicemen in the hold where even finished with relaxing again after jumping from the sudden noise, their commander already came stomping down the hatch turned gangway, a dark look on her face, and began to make her way over to the lockers without a word. Garrus just looked after her bewildered for a second before shaking it off and following after the woman.</p>
+        <p>The hostage situation on X57 had not met a happy end, and Shepard hat been in a foul mood ever since. Garrus understood; twenty three people were dead, and even though they had not had a real choice, and it had been the Batarians who did it, not them, it still left a bad taste in his mouth. But it had been the right decision – Garrus was just worried wether or not the woman who had made it saw it that way herself. She had clearly been torn over what to do; there was no other possibility of why she would have entertained Balak&#x27;s nonsense for so long otherwise. Shepard was not a woman to listen to villain&#x27;s monologues; &quot;this isn&#x27;t some damn videogame&quot;, she used to say. And then Balak, that complete and utter fool, had pushed the worst buttons he could have possibly pushed. The result had been a certain freelance captain&#x27;s brain splattered upon the wall – and twenty three dead humans. A decision of life and death made out of rage. Garrus didn&#x27;t mind; it had been the right decision, and if Balak had helped Shepard reach it, that might have just have been the one good thing the bastard had ever done in his life. But the Turian knew his friend&#x27;s feelings on revenge, and her worries about what indulging oneself could lead to for a woman in her position. And now this had happened. As he stowed the last of his weapons into the locker, intent to get a warm meal into himself first before cleaning them, he twisted his mandibles in a turian frown. Shepard must be furious with herself.</p>
+        <p>He glanced over to the woman, who was still busy, as was most of the team, since they obviously didn&#x27;t stay in their armor, as opposed to him and Wrex, who stayed in theirs almost all of the time because both of them had gotten used to viewing it as second skin rather than a piece of equipment.</p>
+        <p>Unwilling to stand around awkwardly, Garrus turned around and walked back over to the Mako. His baby hadn&#x27;t seen any heavy duty on this mission; the terrain on that rock had been, well, rocky, but since they had never come under fire at all, they had been able to avoid the worst of the holes and boulders, sparing the paint job for once, and , more importantly, the wheels. Not to think of the axle. But from what he had seen in the technical specifications for the tank, breaking a Mako&#x27;s axle was supposed to be almost impossible, thankfully. He got torn from his thoughts by the sounds of Shepard slamming her chest piece into her locker with a grunt. Spirits. He had seen Shepard angry before, but this kind of unprofessional behavior was a first. Well, so was condemning twenty three people to death, even if justified, so he couldn&#x27;t blame the commander too much. However, it was clear that it was making everyone uncomfortable. Kaidan being quiet was nothing unusual, but he seemed positively subdued right now; perhaps he wasn&#x27;t taking what had happened too well, either. Liara seemed close to tears; she had cried more than once when after the final firefight against Balak&#x27;s terrorists, they had rushed towards the habitation area and found nothing but rubble and corpses, a lot of them blown to pieces horrifically. Ashley was just finishing up, back into her blues, her rifle in one hand as she sat down at her table in the corner and began to disassemble it, a solemn expression on her face. Wrex had already left the bay via the elevator, presumably to devour a mountain of food equivalent to four dinners for human men. In her corner, Ashley sat down her rifle and buried her face in her hands for a second before folding them together in front of it, pressing her forehead against them with her eyes closed, her lips moving soundlessly.</p>
+        <p>Shepard herself was finally finishing up as well, still looking like she was about to explode any second. As the commander began walking towards the elevator, Garrus took a deep breath and strode to her side, not sure what in the spirit&#x27;s name he should say, or if he should say anything at all. His friend barely acknowledged his presence, only glancing over quickly, not slowing down. Seconds later, she came to a halt in the elevator and turned around, looking at Garrus with such anger in her eyes that the Turian actually stopped in front of it, unsure if he should enter or not.</p>
+        <p>Screw it. &quot;Shepard...today is one of those victories that doesn&#x27;t feel like one at all, I know. But you have to look at the bright side. We saved four million people. That&#x27;s gotta be worth something. And that asshole Balak will never get to try anything like this again.&quot;</p>
+        <p>Shepard scoffed and looked away for a second before turning her gaze back to him, her face not relaxed one bit. &quot;Yeah, and we even got to &#x27;get in close and personal&#x27; with his men afterwards. I suppose I should be happy.&quot;</p>
+        <p>Garrus dropped his jaw, dumbfounded over getting his words from earlier thrown in his face now, and in this manner, but before he could make a retort, Shepard already cut him off mid – inhale, raising a hand and cringing.</p>
+        <p>&quot;Listen, I know you didn&#x27;t mean it that way. Just...just let it go, okay?&quot; With that, she slammed the door control and the elevator closed, the sound of it beginning to ascend able to be heard a moment later. I should&#x27;ve just kept my damn mouth shut. I didn&#x27;t want to talk to anyone either directly after Saleon.</p>
+        <p>Still bewildered, Garrus turned around to see just about the entire team stare at him, but the one who caught his eye was Tali; about halfway between her &#x27;room&#x27;, where she had gone directly after she had finished stowing her guns and strapped on armor pieces into her locker, she stood looking at the closed elevator shaft door, her fingers wringing furiously. A second later, she looked over to him, her hands stopping their dance in front of her waist and balling to fists at her sides instead as she whirled around, and disappeared behind her purple curtains, the faint sound of a keelish curse to be heard.</p>
+        <p>Was she going to say something to Shepard? Looking after her, he came to the conclusion that he was an idiot. She would&#x27;ve known what to say to Shepard. Or not to say anything. He sighed and walked over to his locker; he wasn&#x27;t too keen on going to the mess hall any time soon after this, so he might as well get to cleaning his rifle. What a bloody mess of a day. Spirits damn it all.</p>
+        <p>…...</p>
+        <p>Shepard burst through the opening door of the elevator, forcing a neutral expression on her face. She had indulged herself enough, her team and crew were not to blame for her failure and it only did her further shame to let it out on them. Still, she did not feel in any state to deal with them, or anyone for that matter, right now, so she intended take refuge in her cabin for a while. Perhaps she&#x27;d find the drive to report to Hackett somewhere in there. Somewhere in the shower for example.</p>
+        <p>It was not to be. She hadn&#x27;t made it halfway to her door when a deep, rumbling voice called out for her. &quot;Shepard.&quot; Goddammit, not you too. Now you decide to be touchy feely with me !? Her outward expression unchanged, she turned around and walked a couple of steps towards Wrex until she stood besides the Krogan who was currently seated at one of the tables, two empty plates stacked on top on each other next to three others who were still stuffed with food. Besides the mess sergeant and Corporal Weasland getting himself a bottle of water from the fridge, they were alone in the hall.</p>
+        <p>&quot;Wrex?&quot; She braced herself, determined not to lash out at the old mercenary like she had on Garrus down in the cargo hold, regardless of how undoubtedly krogan his incoming well meant advice would be. But Wrex surprised her.</p>
+        <p>&quot;I&#x27;ve been thinking. Now that we have this business over with, I want to finally go after my armor. I&#x27;m not some pup, I understand priorities, so I waited with this. But we have nothing else important to do right now, and no new lead on Saren. This is the time.&quot;</p>
+        <p>On another day, Shepard might have been amused at how matter- of- factly Wrex had just all but dictated to his commander what the proper course of action should be, and perhaps come up with a quip to get across that she agreed to it because she agreed, not because the Krogan&#x27;s demeanor actually swayed her; today, she found herself lacking the mentally energy to bother, so she just nodded and turned around, answering on her way to her room. &quot;Okay.&quot;</p>
+        <p>She didn&#x27;t bother to check for Wrex&#x27;s reaction before she entered her cabin and closed the doors behind her. Groaning, she sank into her chair, resting her face in the palm of her hand. Her omnitool beeped, and she gave it a quick look – a text message from the Terra Nova government, applauding her and her teams action today and inviting them for a formal celebration in their honor. She groaned again. The bloody fools thought they were heroes.</p>
+        <p>Well, they were. While the aliens in her team might have their personal reasons to go after Saren with her, today they had thrown themselves into the fire purely to save a colony of another race they had little to no connection to. She wasn&#x27;t surprised about it at all; they were all great people, including Wrex, even though he had a messy history he did his best to hide his true intellect and colors behind. But her? Once again, she had failed to live up to her office today. She knew that nobody would criticize her for her actions, even though her killing Balak had resulted in the deaths of twenty three innocent people; the upper echelons would undoubtedly commend her for making the &#x27;tough decision&#x27; and &#x27;seeing the bigger picture&#x27;. She could see where they were coming from; when she took a step back and thought it all over again, she could even agree, even though she hated it. But it had not been the thought of all the lives Balak would go on to destroy if he were to be left alive that had guided her hand into slaying the terrorist. It had been plain old base hatred and anger.</p>
+        <p>She activated her omnitool and brought up the files of the twenty three victims, forcing herself to read the names and view the pictures of each and every one of them, gritting her teeth to make it through, her vision growing blurry as a tear rolled down her face. It may not have been her fault that they were dead; she might have been in the right, or even compelled to by duty, to sacrifice them anyway. But in the end, some meaningless words of a lowlife thug and her temper had sealed their fate, not a well thought through, carefully weighed decision. Today, she had let her anger drive her to a decision that should have been made out of grim necessity; what kind of disaster might it drive her to tomorrow?</p>
+        <p>Jane Shepard undressed herself and stepped into her shower wondering just how much better than for example Saren she truly was.</p>
+        <p>…...</p>
+        <p>Ashley pulled the chain through the barrel of the rifle before her and sighed. She took care of the guns as thoroughly as she always did, as the state of a soldiers&#x27; weapon was a focal point of the state of the soldier themselves, but right now it felt more like a welcome distraction than a genuine task. The mood these last couple of days had been subdued, to say the least. The deaths of the hostages om X57 had affected everyone, except Wrex apparently – though not everyone in the same way and to the same degree. As far as she herself was concerned, what had happened was sad, but had been necessary. She had included the dead in her prayers, and that was all she could do, really. At least that&#x27;s what she knew was the right way of looking at it; it still didn&#x27;t feel quite right. But she was getting there. Garrus seemed more bothered by Shepard than the actual event, working on his baby – they had picked up some upgrade for the electronics the last time they had been on the Citadel that he had been talking about for weeks, and now he was gleefully installing it – in no apparent foul or subdued mood, only looking worried at all when the commander came down to the hold – which had been exceptionally rare these last couple of days. Usually, the commander made a point to speak to every member of the team at least once a day, but the last three days since the incident, she had barely left her cabin, except for the mission to retrieve Wrex&#x27;s armor they had been on yesterday, and once to speak to Tali, though only very briefly, so it had probably been a professional talk. It was clear the Turian was unsure of how to help his friend – she wouldn&#x27;t have believed it two months ago, but it was true, her commander was friends with a Turian, and while Ashley herself was not sure if she would ever be able to shake her feelings about his species, she had to agree that Garrus was a good guy, and a good man to serve with.</p>
+        <p>Tali, as far as Ashley could tell, seemed the most distraught of them, second only to the commander herself. Her usual upbeat demeanor was missing, and more than once Ashley had seen the Quarian cast long glances after Shepard when the commander had turned to disappear in her cabin after wolfing down a meal in record time and with minimal conversation. When Shepard had asked for volunteers for the raid against the pirate boss who held Wrex&#x27;s armor yesterday, Tali&#x27;s hand had been up the quickest – quickly followed by those of the entire rest of the team, which, as hard as it was to believe, seemed to have actually touched the old chunk of scales and muscle. During the actual combat, she had made a point to stay even closer to Shepard than usual, engaging any hostiles who set their sights on Shepard with a level of aggression that was quite unusual for Tali when there were no Geth involved.</p>
+        <p>A small smirk made his way onto her lips. Tali so obviously cared about the commander that if she were a human, she&#x27;d be thinking her younger friend had a crush on the woman.</p>
+        <p>She faintly shook her head as she grabbed a rag and began to work a finger inside of the ammo block chamber. She really didn&#x27;t understand what was going on with Shepard. It was obvious that the woman had a strong moral compass and was exceptionally compassionate for a career soldier, so the fact that Shepard was bothered by what had happened wouldn&#x27;t have surprised her; but it was plain to see that she wasn&#x27;t just bothered, she was angry. Since she hadn&#x27;t been treating anyone in particular differently, but was simply behaving strange to everyone, it was only logical to assume she was angry with herself, but Ashley couldn&#x27;t wrap her head around why. All Shepard&#x27;s tactical decisions that day had been correct, her priorities had been set correctly, they had been fast and efficient. No other commander would have been able to pull it off any better, and nobody would have been able to save those hostages – safe for, of course, letting Balak go, saving twenty three now over an all but guaranteed hundreds or thousands down the road, and that was if the bastard would even have stuck to his word and not detonated the explosives anyway just as he would have been about to slip out of range. No, Shepard had done everything right.</p>
+        <p>But then again, she wasn&#x27;t the one who had to make that decision, and it still felt somewhat wrong even though she knew it was right; it was probably normal that Shepard felt more strongly over this. She would get over it. And if not, they would just have to help her. Garrus had tried and gotten burned , but that had been just after the fact. Perhaps now, a couple of days later...Ashley had not forgotten the length Shepard had gone to to console her and build her back up after Eden Prime, and she wouldn&#x27;t shy away from returning the favor. If she just knew how...her first thought was to find and send Shepard a fitting verse from the bible, but then she remembered that the commander had described her faith as fickle. Perhaps it would throw Shepard off and distract from what she was trying to say. Not that she was exactly sure what one would say.</p>
+        <p>They needed someone to talk to her who knew her well, or at least as well as anyone here. Someone who would know what to say. Someone like...</p>
+        <p>&quot;Hey, Ash.&quot;</p>
+        <p>Not extracting her still twisting and turning finger from the gun, Ashley turned towards the slightly synthesized voice and smiled. &quot;Hey back. What&#x27;s up?&quot;</p>
+        <p>Tali took a second to answer, and Ashley could tell she was nervous. It had taken her a while to really learn how to read the Quarian, but if you knew what to look for, it was quite easy and intuitive actually; she deployed very pronounced body language at almost all times, and her glowing eyes behind the mask allowed one to get at least some estimate of what the face underneath was doing. Right now, Tali had her hands deliberately placed at her sides and very still, a state in which they were almost exclusively when the girl was consciously stopping them from wringing in front of her waist. Ashley raised an eyebrow, prompting her friend to spit it out.</p>
+        <p>&quot;Do you...have time later?&quot;</p>
+        <p>She shrugged. &quot;Yes. What do you wanna do?&quot;</p>
+        <p>Tali squirmed. &quot;Do you remember how you said you&#x27;d teach me how to braid my hair?&quot;</p>
+        <p>&quot;Yeeees?&quot;</p>
+        <p>&quot;Well...it&#x27;s time. It has gotten way too long, either we braid it, or I have to cut it. Either way, something needs to happen. It&#x27;s driving me crazy in here.&quot;</p>
+        <p>Ashley snorted and finally got her finger out of the rifle. &quot;Sounds like an emergency. This boomstick here is almost done, so I could be with you in just a couple of minutes.&quot; She could see Tali&#x27;s eyes lighten up underneath the mask, and she lowered herself on her toes, but instead of beginning her signature adorable bounce, she stopped herself.</p>
+        <p>&quot;Ahm...there&#x27;s one more thing. You need to put your armor on. Full suit, with re-breather helmet. I&#x27;d like to, you know...not get sick.&quot;</p>
+        <p>She raised her eyebrows. &quot;Damn, I didn&#x27;t even think about that...I&#x27;ll do it of course. But...you do realize when we&#x27;re doing the hair, I&#x27;ll see your face, right?&quot;</p>
+        <p>Tali shrugged and said nothing, and while Ashley didn&#x27;t exactly think of herself as well versed in alien cultures, this one did throw her off.</p>
+        <p>&quot;Really Tali, just like that? I thought this was kind of a big deal for your people.&quot;</p>
+        <p>The Quarian giggled and actually bounced on her toes now. &quot;Oh please, we&#x27;re both girls.&quot;</p>
+        <p>And with that, she turned around and left.</p>
+        <p>Half an hour later, Ashley smirked inside her helmet at the confused looks she was getting from everyone in the CIC – at least until Pressly barked at them to return their attention to their stations and if they had &quot;never seen a marine before!?&quot; . A short walk later, she arrived at the cockpit, where Tali and Joker were sitting and chatting, the pilot left with very little to do while the ship was in FTL. At the sound of Ashley&#x27;s boots on the metal floor of the corridor, Tali got up and stepped over to the airlock, opening the inner hatch and then losing no time with getting inside. Before Ashley could follow after her, she could not help but notice she shit eating grin on Joker&#x27;s face.</p>
+        <p>&quot;Have fun in there, you two!&quot;</p>
+        <p>She frowned, but was not one to waste an opportunity, so she quickly dialed her external speakers up to max and said: &quot;Shut up Joker, or I&#x27;m gonna have an unfortunate accident and trip on you.&quot;</p>
+        <p>Enjoying the snickering to be heard from the command center and Joker&#x27;s pained expression - the expression of a man who knew he had been had in front of everyone – Ashley turned left and entered the airlock, the door swiftly closing behind her. As the decontamination ran its course, she resisted the urge to rest against the wall and instead took stock of her younger friend. She looked somewhat nervous again.</p>
+        <p>&quot;Nervous after all?&quot;</p>
+        <p>The Quarian nodded meekly, and Ashley grew a little concerned.</p>
+        <p>&quot;Are you sure it&#x27;s safe?&quot;</p>
+        <p>&quot;Yes, yes!&quot; Tali said, stepping a little closer. &quot;I&#x27;ve thought it through well. The decon unit is really good, and while this room isn&#x27;t a proper clean room, I have exposed myself to it more than once by now, mostly with my hand and feet, but once I actually let in some air and breathed it, and I only had a mild reaction after that.&quot; She forcibly extracted her hands from each other. &quot;So, it should be okay.&quot;</p>
+        <p>&quot;What is it then?&quot;</p>
+        <p>Tali looked away for a second before answering. &quot;Well...I did speak the truth before, revealing your face isn&#x27;t that big of a deal between members of the same sex. It&#x27;s just...we only do it when necessary, and that isn&#x27;t very often. The only person who has seen me in recent years was my aunt Raan, that was back when I got my pilgrimage suit. We don&#x27;t actually get it for the pilgrimage, we get it when we have finished growing and live in it for our a couple of years until the pilgrimage and then the pilgrimage itself. I got this one six years ago, and ever since then, nobody has seen my face in person. I showed pictures to my brother, that&#x27;s it.&quot;</p>
+        <p>Ashley suddenly felt almost solemn about all this. &quot;Tali I...feel honored.&quot;</p>
+        <p>The Quarian took a step closer and dropped a gaze for a moment before mustering the courage to look her in the eyes again, and Ashley knew she was smiling. &quot;It&#x27;s fine, Ash. You were true to your word, you have been like a sister to me.&quot;</p>
+        <p>Having said that, Tali reached up underneath her hood – realk, Ashley remembered – and pressed or undid something, Ashley couldn&#x27;t see what exactly she did. A hiss of air could be heard – apparently the inside of the suit was pressurized to some degree. Such technical thoughts quickly made place for Ashley&#x27;s mounting curiosity when Tali grabbed her mask with both hands and pulled it out of it&#x27;s hinges so that now, the only thing holding it in front of her face was her hands. Behind the familiar deep purple, a deep breath could be heard, and then the three-fingered hands dropped, and with it the mask that had obscured Ashley&#x27;s friend&#x27;s features for as long as she&#x27;d known her.</p>
+        <p>Her first thought was the amazement of how human it was. Framed by the helmet and some sort of net tightly fit around her scalp, a young woman&#x27;s face presented itself to her that could have easily passed for human if one didn&#x27;t know better. The face was quite a bit more angular than what was normal for humans, with high cheekbones and a cute little nose, but again, if one didn&#x27;t know they&#x27;d most likely just think the girl had unusual genetics. Such potential for confusion disappeared the moment when Tali, who had so far clamped her eyes shut and held her breath – apparently this had indeed been a bigger deal for her than she had been willing to admit at first – opened them and revealed the glowing orbs that had been so essential in letting those around her take guesses at how she was feeling underneath her mask. At first it looked as if her eyes were really just that, uniformly white and emitting light, but when Ashley looked closer, she could faintly make out a pupils. Apparently her fascinated silence unsettled Tali, since the Quarian cocked her head slightly and began to blush.</p>
+        <p>Finally, Ashley broke out of her revery and grinned. &quot;I knew you blush under that thing! I knew it!&quot;</p>
+        <p>That made her blush even more, and the Gunnery Chief couldn&#x27;t help but laugh, but quickly caught herself. &quot;Sorry for staring, but I was just so fascinated. I knew you guys looked similar to us, but damn. You could easily pass for a human. You know, if one doesn&#x27;t look at your hands. Or feet. Or legs...but you get what I&#x27;m saying.&quot;</p>
+        <p>An eyebrow was raised, the way it slightly changed the shape of the eyelid beneath it confirming another of the deductions Ashley had been making for months. &quot;I&#x27;m not sure if I do.&quot;</p>
+        <p>She chuckled again, enjoying this little moment in the midst of their dangerous and often violent quest. &quot;I&#x27;m saying that you&#x27;re really pretty. I don&#x27;t know what quarian guys are like of course, but as far as our&#x27;s are concerned, you would turn some heads in your direction if they could see you.&quot; She allowed herself to tease the girl a little. &quot;Or, well...turn even more heads, I mean.&quot;</p>
+        <p>Tali&#x27;s blush, a deep purple coloration of her normally light lavender skin, returned immediately. She blushes fast. The color just changed completely over two or three seconds. &quot;Wh-what?&quot;</p>
+        <p>&quot;Oh please, don&#x27;t act like you haven&#x27;t noticed. That suit of yours is snug in all the right places. And again, I don&#x27;t know what the quarian guys like, but human men ? Well...&quot; She could barely keep herself together anymore watching Tali squirm like this, but somehow, she managed to maintain a straight face as suddenly, her earlier thought came back to her and she decided to take this at least one little step further before she&#x27;d let it be. &quot;You know, I&#x27;ve definitely seen the commander sneak a peek more than once...&quot; I mean it&#x27;s true, Shepard has checked her out.</p>
+        <p>Tali&#x27;s eyes shot wide in shock, and Ashley finally broke and burst out laughing at the speechless alien in front of her who had turned out so similar to herself in so many ways. After a few seconds she managed to shut her gaping mouth and punched the armored woman in the chest.</p>
+        <p>&quot;You bosh&#x27;tet! You&#x27;re teasing me!&quot;</p>
+        <p>That got another round of laughter out of her, but finally she got it together and defended herself. &quot;Maybe. But it&#x27;s not like I&#x27;m making this up, you are pretty. As far as humans are concerned.&quot;</p>
+        <p>Tali&#x27;s looked to the ground for a second. &quot;Really?&quot;</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>The Quarian seemed to contemplate that for a moment, staring right past Ashley, straight at the door, but quite obviously at nothing in particular.</p>
+        <p>&quot;Oh.&quot;</p>
+        <p>Ashley chuckled again. &quot;Now come on missie, you promised me hair.&quot;</p>
+        <p>&quot;Oh. Oh, yes, of course.&quot; Dexterous fingers working almost frantically to Ashley, but, as she had learned by now, merely at a normal industrious pace for her younger friend , quickly pulled the purple hood with the swirl pattern back over the rest of Tali&#x27;s helmet and down to her shoulders before going to work at the wiring and tubes now revealed, undoing them all over the course of about a minute. After that, it was clamps again, and with another hiss, the tightly fit dark grey mesh around her throat loosened somewhat and sagged a bit. A second later, Tali grabbed the helmet and lifted it off, freeing her hair.</p>
+        <p>Just like her face, the quarian hair was quite similar to a humans, but subtly different, falling in fewer and notably thicker strands. Again, in a dark room, nobody would have noticed. The really notable difference were her ears, which seemed to have the same basic structure than human ones,but instead of being roughly oval, came in a shape reminiscent of two leafs of clover while the earhole itself was covered by a flap of cartilage that looked pretty much like a human tragus.</p>
+        <p>The hair itself was black, wavy but not curly, and was more than shoulder length. Ashley whistled through her teeth. &quot;Damn girl. It looks really nice. I bet all the quarian guys were going crazy over this back at the flotilla, with most of you shaving it and all. Must make you almost exotic.&quot; She stopped herself when the obvious problem with that came to her attention. &quot;Or maybe not. It&#x27;s not like they could see it.&quot;</p>
+        <p>Tali giggled and turned around, presenting her back to the older woman. &quot;Well, my father always loved mother&#x27;s hair,so maybe you are right. I wouldn&#x27;t know. As you said, no man has ever seen it.&quot;</p>
+        <p>Grabbing the hair with her armored hands, Ashley furrowed her brow. &quot;So...I guess it is pretty logical actually, but I never really thought about it. You never had a boyfriend, did you?&quot;</p>
+        <p>Tali shrugged. &quot;Well, there was some teenage stuff with that one boy from my class, texts and presents, you know. Just silly stuff. But my father shut it down.&quot;</p>
+        <p>Ashley&#x27;s frown deepened. &quot;That guy again? He didn&#x27;t exactly impress me the last time I heard of him. &quot; She continued to pull all of Tali&#x27;s hair together behind her neck, trying to take stock of what she was working with. She noticed the Quarian squirming a bit.</p>
+        <p>&quot;He meant well. And he was actually right. I later found out that he was just doing it for a bet.&quot;</p>
+        <p>&quot;What!?&quot; Ashley huffed, thinking about how the thickness of Tali&#x27;s hair would change any braids she was used to. &quot;That&#x27;s incredible. Turns out teenage boys are jerks no matter the species, huh?&quot;</p>
+        <p>Tali giggled. &quot;Maybe. But it&#x27;s normal for parents to break these things up anyway. Romantic relationships before the pilgrimage are frowned upon. One shouldn&#x27;t get attached to someone so early in life when you have no idea yet where it might take you. You could run into trouble on your pilgrimage and take years to return, or you could discover a new skill and end up on a completely different ship than you thought of. And then there is the problem of genetic diversity. We need to keep marriages between people born on the same ships to a minimum, or we would essentially inbreed ourselves in just a couple of generations.&quot; She shrugged. &quot;It&#x27;s not forbidden or anything, not even really looked down upon; the few such bonds that happen are way to rare to cause any harm. They just barely ever happen. The pilgrimage just works for my people...in many ways.&quot;</p>
+        <p>As Tali had once more gotten lost giving Ashley a talk about her people, – not that she didn&#x27;t find it interesting – her friend had finally come up with something. &quot;So, at first I thought I&#x27;d just be doing a bun. Simple and effective. It&#x27;s how I do it. But I don&#x27;t have to be in a helmet the entire time, and my hair isn&#x27;t as thick or long as yours anyway, so your bun would be bigger. Probably too big.&quot;</p>
+        <p>&quot;So what are you going to do?&quot;</p>
+        <p>&quot;Oh, I think I got an idea, and it&#x27;s going to look wonderful. Just because noone can see it doesn&#x27;t mean it can&#x27;t be beautiful...&quot;</p>
+        <p>&quot;That&#x27;s nice, but I have to live like this. I...I would prefer it to be practical.&quot;</p>
+        <p>Ashley snorted. &quot;Relax, it will be. It will leave the ears free and everything.&quot; She got out some of the elastic bands she had brought and quickly soaked them in disinfectant. &quot;We&#x27;re going to make a small bun of the hair in the middle...and two nice braids of that on the sides, and then I&#x27;m gonna knot those together with the bun on the back.&quot; She grinned gleefully. &quot;God, this is like being home and helping Sarah get ready for a night out.&quot;</p>
+        <p>&quot;You told me about her before. That&#x27;s the one who beat up her boyfriend.&quot;</p>
+        <p>Ashley laughed. &quot;I&#x27;m not sure how she would like being summed up in that one sentence, but yes, that&#x27;s the one. She is going to graduate high school this year, so I guess if she was a Quarian, her pilgrimage would be up next.&quot;</p>
+        <p>Tali seemed to be thoughtful for a while. &quot;I have been wondering for a while whenever the topic came up...without a pilgrimage or some other rite, how do young human adults prove that they are a useful member of society and worthy of truly being considered an adult?&quot;</p>
+        <p>She had to think on that for a minute, and so a while passed in silence as Ashley braided her friends hair, the thickness of the alien strands actually coming in quite handy, since she was doing this with gauntlets on. &quot;Well...you just have to stand on your own two feet at some point. From what you&#x27;ve told me, Quarians are like one big family, where everyone looks out for each other. Human&#x27;s aren&#x27;t like that. You have your own family to back you up, at least usually, but aside from that...you&#x27;re on your own. Being an adult means being able to take care of yourself and support yourself.&quot; She stopped for a moment. &quot;There&#x27;s gonna be tons of exceptions I guess, but generally, that&#x27;s the gist of it.&quot;</p>
+        <p>She stopped her work for a moment as Tali briefly turned her head to look back at her. &quot;Humans are weird.&quot; She turned back around and Ashley continued. &quot;I don&#x27;t know if I could live like that.&quot;</p>
+        <p>The older woman scoffed. &quot;Of course you could, you&#x27;re doing it right now. You got here all by yourself, and as much as we like you, we&#x27;re keeping you around because you&#x27;re good, not out of sympathy.&quot; She patted her shoulder. &quot;The fact that you&#x27;re absolutely adorable doesn&#x27;t hurt, though.&quot;</p>
+        <p>&quot;Wha- I&#x27;m not adorable!&quot; Tali huffed, crossing her arms in front of her chest, which, given the fact that Ashley was standing behind her, she found hilarious.</p>
+        <p>&quot;Oh, yes, yes, you are. Watching you crawl all over this ship when you first got here, with your eyes practically bulging out just looking at and touching everything was the sweetest thing. It was a bit like watching a puppy.&quot;</p>
+        <p>&quot;Now you&#x27;re just teasing me. I know what puppies are, and I&#x27;m not...that.&quot;</p>
+        <p>&quot;True, you&#x27;re not as fluffy.&quot;</p>
+        <p>&quot;Oh, shut up.&quot;</p>
+        <p>The rest of the work went by in silence, only interrupted by the occasional word to tell Tali to hold her head a certain way. When Ashley was done, she grabbed her friend by the shoulders and gently turned her around, smiling widely.</p>
+        <p>&quot;Turned out real nicely, if I do say so myself.&quot; And she meant it. Tali&#x27;s new hairstyle would serve her well underneath her helmet, but would not have had looked out of place on any fancy occasion.</p>
+        <p>The quarian looked curious, activating her omnitool to get a picture of herself. Holding her wrist above her head, her eyes went wide and her lips parted slightly. &quot;Ash, I...thank you. I love it.&quot;</p>
+        <p>She grinned. &quot;Could you...take a picture for me? I can&#x27;t get a good one like this.&quot;</p>
+        <p>She nodded and obliged. As she sent it to her friend, she found herself unsure. &quot;Ahem...can I keep it? Not going to show it around , I promise.&quot;</p>
+        <p>Tali, who at this point had üut everything but her mask back on already, nodded vigorously. &quot;But of course! I want you to have it. And I know you wouldn&#x27;t show it around.&quot;</p>
+        <p>Ashley felt a smirk tug at her lips as she gave in to the temptation of teasing the Quarian a little more. &quot;Maybe we should show it around. I meant what I said. I&#x27;m sure we can find you a nice guy around here...&quot;</p>
+        <p>&quot;Ha, ha, ha. I doubt human men would be interested in a Quarian.&quot;</p>
+        <p>Ashley sighed, not having intended to end up touching on Quarian complexes again. &quot;Don&#x27;t be so sure about that. I say it again, I didn&#x27;t lie one bit.&quot; , she said, getting ready to open the door while Tali finished putting her mask back on. &quot;Shepard did check you out.&quot;</p>
+        <p>Tali almost jolted at those words, freezing still for a second before hastily finishing her seals. &quot;R-really?&quot;</p>
+        <p>&quot;Yes, really.&quot; She hit the door control.</p>
+        <p>&quot;Oh. Oh...&quot;. With these words, Tali fell silent as she quickly walked out of the airlock and down the corridor as Ashley undid her helmet, enjoying the feeling of fresh air on her face again. By the time she was done, her friend had already made it to the stairs down to the CIC; a confused Ashley, not used to being left standing like that by the Quarian (or anyone, for that matter) looking after her. She could&#x27;ve sworn that the girl was bouncing again...her contemplation was cut short when Tali happily waved at someone, and when her eyes followed the direction, she found Shepard, who had just entered the CIC from the stairs and reacted to Tali&#x27;s enthusiastic greeting with a nod and the first small hint of a smile she had seen from the woman in days before turning towards Pressly, the lately ever present lines in her face darkening again. Shepard did not see how the young Quarian looked after her for several seconds before suddenly, almost ashamedly, turning and hurrying down the stairs.</p>
+        <p>Wait a second...no way. Really? Yes, really. Of course, you blind cow. Oh ho ho... Oh my...</p>
+    </div>
+</body>
+</html>

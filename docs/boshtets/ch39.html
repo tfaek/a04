@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 39</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch38.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html" selected>Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch40.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 39</h1>
+    <div class="chapter-content">
+        <p>In a large room full of consoles and monitors, deep inside a titanic artificial structure floating along in the eternal thunderstorm circling an uninhabitable, unexploitable, and altogether insignificant if meteorologically intriguing world, sat a being who considered himself the most powerful man in the galaxy. And as of right now, this man was feeling rather uncomfortable.</p>
+        <p>&quot;You have failed.&quot; the deep voice on the other end of the connection judged. The Shadow Broker&#x27;s ire stirred within his gigantic chest, but was suppressed by his intelligence and discipline – and fear. He knew better than to argue with the voice, or try and find excuses. He knew all too well what kind of power the voice spoke for, and he had an educated guess about just who he was actually talking to. That guess didn&#x27;t help him one bit with keeping his voice steady. Still he managed.</p>
+        <p>&quot;Regrettably, yes. The Cerberus involvement was an unforeseen complication. But my resources are far from depleted, and they will not manage to surprise me again. I - &quot;</p>
+        <p>&quot;No.&quot;</p>
+        <p>The voice carried such power and malicious will that even being interrupted in such a manner, an often lethal challenge on the planet the Shadow Broker had grown up on, didn&#x27;t even make him angry. He simply bore the humiliation. Nobody had spoken to him like this in sixty years. But this &#x27;business partner&#x27; was decidedly out of the ordinary. The voice continued.</p>
+        <p>&quot;It is unsure if Shepard will let herself be lured into a trap of your making again, and her timely elimination is of higher priority than the potential benefit of seizing her alive.&quot;</p>
+        <p>The Yahg nodded tentatively. &quot;If that is what you want, I can have it be done...tomorrow. It should even be possible to secure her bod-&quot;</p>
+        <p>An awful blaring sound shut him up, sent a shiver down his spine and made all of his spines stand up.&quot;No. You will be given as little opportunity as possible to fail again. All you will give me is a time and a place, and I will have it done myself. Do not fail me again, or our bargain is forfeit. But if you do this to my satisfaction, I will uphold my end.&quot;</p>
+        <p>The connection was cut and the Shadow Broker finally allowed the tension to seek itself an outlet, his entire body trembling, but not only from fear now, but also from excitement. It was a dangerous game he was playing, he was painfully aware of it. But the Reapers would be here in time wether he chose to engage with them or not, and the potential benefits...not for the first time since he had learned of this opportunity, he had to swallow, the prospect of what he was envisioning making him salivate like he had in the best moments of his many hunts all those years ago on his homeworld; the moment when he had gotten as close to the prey as possible and was just about to burst out of cover and dig his teeth in.</p>
+        <p>Garrus put the rifle back in it&#x27;s place and closed his locker. Over the last days, it had seen some heavy action on Vostralska, and when that had been over, the shooting range on Arcturus station, but now it was back in pristine condition. He sighed.</p>
+        <p>Cleaning that rifle had kept him distracted for a while; now that it was done he&#x27;d have to go back to the dour mood that had taken a hold of the Normandy. The near disaster situation they had just survived was reason enough for anyone to lose their humor for a while, but on top of that Williams&#x27; death had shocked many of the crew deeply. It was even worse than when Alenko had died; back then, everyone had been so caught up in the immediate fallout of Virmire that there had barely been time to think, let alone mourn. Now, the crew had been twiddling their thumbs on Arcturus for almost two days. And in truth, Alenko simply hadn&#x27;t been as well integrated into the crew as Ashley, sticking to the others on the ground team, a short list of friends on the crew, and a lot of the time himself. Losing a comrade was easier when you hadn&#x27;t known them too well.</p>
+        <p>Not that Garrus didn&#x27;t care, he did. But as much as he wasn&#x27;t much of a good Turian usually, he found that the loss of Williams affected him differently than the humans. Where they were mostly sad and subdued, Garrus was driven. He hadn&#x27;t lost or deprived himself of sleep, but he hadn&#x27;t taken any additional rest either despite the exertions of Vostralska, and apart from a visit to Shepard in the hospital, he had spent his entire waking time on Arcturus either eating, shitting, or shooting.</p>
+        <p>They had taught one particular company of Blue Suns a lesson, sure. But there were more where those had come from, and even more in other places, and then there was a dozen other mercenary groups. And pirate captains, and warlords, corrupt intelligence officers...the attempts on Shepard wouldn&#x27;t end until they found out the culprit and eliminated them for good. Revenge for Williams would be good, too. He growled a little, thinking about the fact that her body was still lying on that damned planet. Shepard had vowed to sneak the Normandy back in there and retrieve her as soon as the situation with the council allowed, but they were both painfully aware that it was unlikely for too much of her to be left by then.</p>
+        <p>The council. Garrus hadn&#x27;t been there for Shepard&#x27;s talk with them, but he had gotten a good account. They hadn&#x27;t been too happy with Shepard operating in the Terminus in any capacity, but had accepted that it had been a sound decision. They hadn&#x27;t been happy at all that Shepard had so far not begun to go after the alleged and supposed Geth activity they had wanted her to investigate. And they had been positively furious that she had dared to speak to the Quarian admiralty board behind their back. Shepard hadn&#x27;t gone into detail too much, but just as one would expect, Udina had apparently been the most egregious of them all, even going so far to threaten that he&#x27;d set heaven and hell in motion to take the Normandy from Shepard if she took her back into the Terminus &quot;just to retrieve a body&quot;.</p>
+        <p>The elevator doors closed behind Garrus as he flared his mandibles at the mere thought of that insufferable little asshole. Those who want power are the last ones you&#x27;d want to have it, isn&#x27;t that what they say?</p>
+        <p>At any rate Shepard, and thus all of them, had been essentially leashed for now. The council would be giving Shepard direct orders which supposed Geth target to engage and would be expecting timely reports. They wouldn&#x27;t technically tell Shepard how to do her job, she was a Spetre after all. The tasks would merely be so straight forward that it essentially made no difference. If this had been an ordinary punishment for an unruly operative, it would merely have been insulting. But it was damn clear the council was happy for any excuse to keep Shepard from investigating what they clearly knew was still her real interest.</p>
+        <p>They had a Reaper sit on their damn tower and almost kill them all. Apparently that wasn&#x27;t enough to knock sense into them, but even these blind fools wouldn&#x27;t think for a second that we would ever lie to ourselves like they do.</p>
+        <p>He spent some more time ranting in his head about what in the galaxy these idiots had to be thinking and how stupid it all was. This carried him all the way through exiting the elevator, walking over to the counter and retrieving the meal Crosby had prepared and kept in the heater, as he did every day roughly around this time. Not that it was much work, with Garrus being the only one on board using these dextro rations – Tali needed her own, obviously – it simply wouldn&#x27;t have been sensible to have anything but field rations on board. He opened the packaging and found the same mixture of meat and stashy carbohydrates than every day. Turian rarely ate vegetables – their food did that for them.</p>
+        <p>Due to his work, he had missed the main lunch rush and the mess was mostly empty. That was fine by him. Not that he minded company of the crew, he played Skyllian Five with some of them regularly. But in his irritated state, he preferred to sit alone to try and let his anger dissipate.</p>
+        <p>Wolfing down his meal quickly, Garrus found himself wondering when they would leave the station. Shepard, clearly battered but on her own two feet again at least, had boarded the Normandy two hours ago. She had held a short speech about how the crew had once again outdone themselves these last couple of days, how they wouldn&#x27;t forget Williams and how the council were pieces of shit. Not that she&#x27;d put it that eloquently, of course. Then she had dived into some boring meeting with Pressly and the other officers that Garrus had elected to sidestep to go clean his rifle instead. His omni-tool pinged. It was a message from Shepard, addressing the ground team.</p>
+        <p>All three of us left here. Even Garrus couldn&#x27;t help but feel sad.</p>
+        <p>Meeting in my cabin at 16:00 to discuss candidates for the ground team. The Normandy leaves at 15:00.</p>
+        <p>He raised a browplate. Not wasting any time. Good.</p>
+        <p>By the time he had finished his meal, he could hear familiar steps coming down the stairs from the CIC. He turned his head to see that it was the woman he had expected. Quickly putting his tray away, he leaned into Shepard&#x27;s doorframe before it could close behind the commander. He took a good look at the woman who had already sat down at her desk. She was breathing marginally heavier than usual, and her eyes missed their usual spark.</p>
+        <p>&quot;You look tired.&quot;</p>
+        <p>Shepard just shrugged. &quot;I feel like shit. Doesn&#x27;t matter, I won&#x27;t be doing anything for the next weeks.&quot;</p>
+        <p>Garrus waggled his mandibles up and down, eliciting a puzzled look from his commander.</p>
+        <p>&quot;...Is that a question?&quot;</p>
+        <p>The turian couldn&#x27;t help but snicker at his friend&#x27;s momentary confusion. Even after the better part of a year, she hadn&#x27;t fully understood turian body language. &quot;Yes.&quot;</p>
+        <p>&quot;Well, two things. One, I&#x27;m honestly in no state to be doing anything than sitting in front of this desk right now. I gotta agree with Chakwas for a change. Two...you know what&#x27;s up with the council. They&#x27;ve given me a nice long list of assignments and they expect me to report back soon. A good amount of them is purely nautical. So as long as I can&#x27;t do much else anyway, we&#x27;re going to try and get as much of this bullshit done as possible. With some luck, it might get them off our backs for a while.&quot; She sighed and rubbed her eyeballs. &quot;Maybe we&#x27;ll split off Liara to go and do something useful on her own in the meantime. Maybe send you with her. We&#x27;ll talk about that later.&quot;</p>
+        <p>Garrus nodded. &quot;And what&#x27;s our first stop?&quot;</p>
+        <p>&quot;The Amada System.&quot; The look on her face betrayed her feelings exactly, and Garrus most definitively shared them. He scoffed.</p>
+        <p>&quot;Amada!? That&#x27;s in the Terminus. These people...I...oh forget it, I just calmed down from a rant about these idiots, I don&#x27;t want to get worked up again.&quot;</p>
+        <p>Shepard grinned. &quot;Better that way. I was going to try and catch some sleep.&quot;</p>
+        <p>The Turian was genuinely surprised. &quot;Sleep, in the middle of the day? You? That bad?&quot;</p>
+        <p>&quot;Oh, get out of here mom.&quot; There was no mirth in the jest, and Garrus took his leave. Even Shepard was crestfallen, it seemed. Not that Garrus was surprised. Shepard cared a lot. Too much, most Turian officers would have undoubtedly said. Garrus wasn&#x27;t so sure anymore. Shepard&#x27;s accomplishments spoke for her, and as far as Garrus was concerned, he had never served under a better superior officer. Or a better woman, for that matter.</p>
+        <p>Jane Shepard sat at the edge of her bed and patiently waited for the woman leaning against her to say something.</p>
+        <p>The meeting some hours prior had been productive enough, with everyone agreeing that the best additions to their team would be one more biotic and a heavy weapons specialist. There had been more than one dossier provided by Hackett fitting both of these profiles, all accomplished N6 operatives. In the end, Shepard hadn&#x27;t taken very long to decide who she wanted – in both cases, the deciding factor had been things Shepard had heard about some of these people. There weren&#x27;t that many people in the higher N tiers after all. It was quite possible to keep a good overview if you knew the right people, and Shepard most certainly did.</p>
+        <p>At that point, the Normandy had already been some hours into their trip towards the Amada system, where they would arrive the day after tomorrow – the nearest relay was some distance away in the Sahrabik system of all places, which made the council&#x27;s bitching about &quot;diplomatic consequences&quot; with the Terminus systems all the more ridiculous. There hadn&#x27;t been any issues of course, the stealth system were doing their job as usual – and honestly, Jane doubted any would be looking for trouble anyway. As much as the Council was apparently losing sleep over the hurt feeling of warlords and other Terminus scum, neither they nor the Alliance were organizations to be trifled with over trivial bullshit, and after exiting the relay, they had immediately set course for the edge of the system after all.</p>
+        <p>After leaving the system, she had intended to go to sleep. She was genuinely having trouble to stay active more than a few hours at a time. Walking around and talking loudly were more exhausting than she had ever known – this shot through the lung was the worst injury she had ever received, and even with modern medicine it would take time until she was fully healed. Just some decades ago, she certainly wouldn&#x27;t have been out of the hospital this soon, let alone walk around on her own.</p>
+        <p>Her plans had been foiled by Tali, however. Some time after the meeting she had come to Shepard&#x27;s door and asked if she could come in. A minute later she had been fighting down tears.</p>
+        <p>It wasn&#x27;t like Shepard had consciously expected something like this, but she wasn&#x27;t surprised either. She hadn&#x27;t been in the right state of mind to notice it, but in hindsight it had been very strange how Tali had barely mentioned Ashley during her visits to the hospital. Tali probably hadn&#x27;t felt comfortable with the topic there.</p>
+        <p>She just sat there and let Tali talk, cry and whatever else she needed, not speaking much herself. In her experience, a friendly arm around the shoulders was often the best one could do. Especially if one wasn&#x27;t quite sure what to say. While she hadn&#x27;t been as close with Ashley as Tali had been, she had still considered her a good friend and one of the finest people she had ever fought side by side with. In truth, she was pretty sure she didn&#x27;t feel much better than Tali herself right now.</p>
+        <p>It was just that she had mostly stopped crying a long time ago.</p>
+        <p>Tali&#x27;s sobs and more or less incoherent ramblings had slowly died down and eventually stopped a minute ago. Jane could feel her moving and let her go. When she turned her neck, she found Tali looking up to her. Naturally trying to read her face was difficult, right now her expression seemed blank or at least nothing too distinctive. Shepard felt like she really needed to say at least something to her.</p>
+        <p>&quot;It&#x27;ll take a while before it gets better.&quot; She sighed. &quot;But you know that already, don&#x27;t you.&quot; Her realk was ruffled where she had been lying her head on the commander&#x27;s shoulder, so Shepard raised a hand and gently flattened it. Tali&#x27;s eyes perhaps got a little wider as Shepard touched the cloth. For a moment she was worried it might&#x27;ve an inappropriate thing to do, remembering that from what she had pieced together, the realk was a very personal item. But it felt right, and everything she knew about her friend&#x27;s body language told her that Tali didn&#x27;t mind at all, perhaps even the contrary. Tali tilted her head a little and looked her in the eyes . Captivated, Shepard kept her hand in place for a moment. Then both her hand and Tali&#x27;s gaze dropped towards their laps.</p>
+        <p>&quot;Actually, I...I think I do feel a little better already. Thanks for being there for me.&quot;</p>
+        <p>Their hands were touching, and so Shepard grabbed hers and squeezed without thinking about it.</p>
+        <p>&quot;Always. And I know how you&#x27;re feeling. I miss her too.&quot;</p>
+        <p>She nodded and got up,clinging to Shepard&#x27;s hand for a bit longer than the commander would&#x27;ve expected. &quot;Good night, Jane. You must be really tired.&quot;</p>
+        <p>At least in front of Tali, she couldn&#x27;t be bothered to try and play it off.</p>
+        <p>&quot;Honestly, yes. I am.&quot;</p>
+        <p>&quot;Sleep then. I&#x27;ll see you tomorrow morning. I think I&#x27;ll have a good night after all.&quot;</p>
+        <p>Seven days later</p>
+        <p>Shala&#x27;Raan brushed past a gaggle of whispering Quarians hurrying towards some task and into living space 13 of the Neema. Like the vast majority of living spaces on Quarian ships, it was a repurposed cargo bay, the actual living quarters serving cabins for the higher ranks as well as family homes for those with small children. Her mask&#x27;s display nudged her to the right, and so she changed directions to get there quicker. She only wished she&#x27;d been there when the girl arrived.</p>
+        <p>This was a bloody mess.</p>
+        <p>&quot;Frekk!&quot;</p>
+        <p>Some uneasy glances were sent her way; a cursing admiral hurrying through the crowd was not a daily occurrance, at least not if the admiral in question wasn&#x27;t Gerrel.</p>
+        <p>Hearing the news about the Normandy had been like a slap to the face. Fortunately, someone within the Alliance had actually cared enough to make sure they were informed that Tali had survived and was unharmed. Just what that actually meant, Raan wasn&#x27;t so sure.</p>
+        <p>Tali had suffered a lot in her short life already, and it had made her strong. But to lose one&#x27;s ship, crew and captain in a single disastrous event was one of the most brutal things to happen to any person, let alone a Quarian. Frankyl, as relieved as she was that the girl had made it out alive, Raan was worried sick about the state she was likely to be in. She looked over her shoulder; Rael wasn&#x27;t far off. Ever since the message from the alliance had reached them, he had been more like himself than at any point during the past six years.</p>
+        <p>They had intended to be there when Tali arrived; just her and Rael. But the Neema&#x27;s damned docking bay just had to produce an issue at the worst possible moment, and so they were now scouring the ship for the girl, who had apparently wandered off, presumably aimlessly, until she had eventually stopped here.</p>
+        <p>Raan passed a group of loudly conversing workers and finally, sitting hunched over and gaze downwards on a pipe, she could see Tali. If she hadn&#x27;t had reason to expect otherwise, Raan would&#x27;ve simply thought she was tired.</p>
+        <p>&quot;Tali.&quot;</p>
+        <p>The addressed looked up, her eyes came to rest on Shala just as she finally closed the distance and came to stand in front of her. They looked about as empty as the sound of her voice when she said:</p>
+        <p>&quot;Hello, Raan.&quot;</p>
+    </div>
+</body>
+</html>

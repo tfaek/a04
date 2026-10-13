@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 44</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch43.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html" selected>Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch45.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 44</h1>
+    <div class="chapter-content">
+        <p>The two guards in their red honor guard&#x27;s realks spared Tali merely a brief glance as she passed them with a respectful nod; they had no doubt been informed of her arrival beforehand, and by now she had become a regular sight on the Neema&#x27;s bridge anyway. She read her father&#x27;s text message once more as she waited by the captain&#x27;s station.</p>
+        <p>Tali, report to Gerrel immediately. This is an emergency.</p>
+        <p>Her father being terse was the norm, but this text did not even come with the usual formal signature that he put under every piece of mission related communication he sent her, daughter or not. She had to admit, she was concerned.</p>
+        <p>Eventually, admiral Han&#x27;Gerrel came hurrying around from navigations, two officers on his heels he dictated orders to as he went. They were still busy making notes when he sat down in his chair, and he didn&#x27;t stop talking for another twenty seconds or so. Then he grabbed a bottle of water from a magnetic holder on the left armrest&#x27;s outside and took a single sip.</p>
+        <p>&quot;Tali, you&#x27;re here. Good.&quot; He put the bottle back. &quot;It&#x27;s about your brother.&quot;</p>
+        <p>She felt like she had been punched in the gut. &quot;Han? What is wrong!?&quot;</p>
+        <p>&quot;We don&#x27;t know exactly. The human colony he works on sent out a short call an hour ago. It&#x27;s completely garbled, not a word understandable. That&#x27;s concerning enough, but here&#x27;s the kicker: Shortly after, there was another message. Sent directly to the flotilla! And from what the specialists were able to make intelligible, it&#x27;s a distress call from Han himself. The colony appears to have been attacked by an unknown enemy.&quot;</p>
+        <p>It took Tali a few moments to process what she&#x27;d heard, her rational thinking struggling hard to not get drowned out by her fear for her brother. &quot;I&#x27;m thankful, but..we don&#x27;t usually intervene in...things... like this.&quot;</p>
+        <p>Gerrel scoffed. &quot;Because we rarely have the option. We can&#x27;t just send marines to operate in council space, and it&#x27;s not like we could be there in time anyway. But this time...&quot; he brought up the star map. &quot;It&#x27;s here in the Terminus, just two clusters over, and we&#x27;re not too far off from the relay right now. You could be there in ten hours.&quot;</p>
+        <p>She straightened, hope and the desire to get going almost making her twitch. &quot;Me?&quot;</p>
+        <p>&quot;Of course you, he&#x27;s your brother and you&#x27;re experienced with humans. You&#x27;ll be attached to Prazza&#x27;s team again.&quot;</p>
+        <p>She nodded. Prazza was a good man, she had served under him before.</p>
+        <p>&quot;Anything else, admiral?&quot;</p>
+        <p>He appraised her for a moment, then shook his head. &quot;No. Get your gear and report to shuttle bay 14 in thirty three minutes, they&#x27;re waiting to take all of you to the Kaiwotz. She will be your transport. Now go and good luck out there. Keelah&#x27;Selai.&quot;</p>
+        <p>&quot;Keelah&#x27;Selai.&quot;</p>
+        <p>Riding the elevator down to the third deck, Tali struggled to clear up her mind. &#x27;He sent a message, that means he&#x27;s safe for now&#x27; ,she told herself; knowing full well it was a half truth at best. The thought of anything happening to Han made her sick.</p>
+        <p>I told him he should go into Alliance space, damn it.</p>
+        <p>After the Normandy&#x27;s destruction and Jane&#x27;s death, it had been Han who had pulled her out of her hole. Raan had called often and tried her best, sure, and even her father had reached out, albeit somewhat clumsy. Tali honestly believed that the two of them had understood very well how she had felt at the time; but they simply hadn&#x27;t known how to get through to her nearly as well as her brother had. There hadn&#x27;t been much joy these last years, but Tali owed every last bit of it to him.</p>
+        <p>I can&#x27;t lose him. Not him too.</p>
+        <p>The doors opened and she hurried towards her cubicle, ashamed of her selfish thoughts. It was true, though; if anything happened to Han, she had no idea what she&#x27;d be going on for. She had willed her way out of the grief and self pity that had gripped her after Jane had died, but nothing could change the fact that any real effort to stop the reapers had died with her. For a while, Tali had deluded herself that there might be a way to continue what Jane had started; if nothing else, it would have honored her memory. But she had soon hit reality. Even if the admiralty board had been willing to support such a mission, she didn&#x27;t even have an idea of where to start looking or what for, and neither Garrus or Liara had ever answered her texts. Wrex had gotten one of them once and sent a reply that, having been held up by the dismal network conditions on apparently wartorn Tuchanka had reached her weeks later. He had expressed his own sorrow over Shepard&#x27;s death – in a very Krogan way, obviously, promising to eat the cowards who had done this if he ever got his hands on them - and informed her that he was already doing what he could. He obviously hadn&#x27;t shared many details, but it looked like he was about to unify the entire planet under his rule.</p>
+        <p>She doubted that it&#x27;d be enough.</p>
+        <p>But there was nothing she or her shunned people could do, and so Tali had resigned herself to the fact that if anything of substance would be done about the reapers, she wouldn&#x27;t be a part of it. And so she had tried to find purpose in her people, as she had done before her pilgrimage; it hadn&#x27;t worked. In the end, her peoples very existence was still facing a bigger threat than even the Geth that Gerrel and her father had her fight on over a dozen different missions she had taken part in over the months, many of them involving heavy fighting, intended or not. At least she was able to forget it all for a few minutes or hours at a time when in combat.</p>
+        <p>She loved her father, she really did. But the real reason Tali even tried to do more with her life than just to function was Han these days. It had killed him to see her the way she had been back then, and she couldn&#x27;t do that to him, no matter how pointless it all felt to her.</p>
+        <p>Like all Quarians, Tali owned very little and most of it was with her at all times. Therefore &#x27;packing&#x27; really only consisted of getting her spare omnitool from her cubicle and throwing a last glance to the holo on her nightstand, right now it was showing a picture of the Normandy in the Alliance docks on the Citadel. As she turned to leave, a call came in. Her father.</p>
+        <p>He didn&#x27;t wait for her to speak when she accepted.</p>
+        <p>&quot;Tali, Gerrel informed me he briefed you. Are you on route?&quot;</p>
+        <p>&quot;Leaving my place just now. I&#x27;m going straight to the shuttle from here.&quot;</p>
+        <p>&quot;Good.&quot; He sighed. &quot;I wanted to go myself, but Raan and Koris talked me out of it...and they&#x27;re right. This mission is already delicate enough without a member of the board directly taking part in it. And with your experience with the humans, you&#x27;re probably the best one for this task anyway.&quot;</p>
+        <p>He sounded somewhat defeated.</p>
+        <p>&quot;I&#x27;ll bring him back, father. I promise.&quot;</p>
+        <p>&quot;Don&#x27;t make promises about things you can&#x27;t control. Now go and get your brother. Keelah&#x27;Selai.</p>
+        <p>&quot;Keelah&#x27;Selai.&quot;</p>
+        <p>The connection closed and she was left standing next to her bed wondering. If her father was nervous enough to call her even though he actually didn&#x27;t have anything new to tell her, it meant he was seriously worried for Han. Which only got her even more anxious.</p>
+        <p>Tali parted the curtain and stepped out into the crowded corridor,two quick steps carrying her into the current of people heading in the rough direction she needed to go. She wished they&#x27;d move faster.</p>
+        <p>&quot;Shepard. I&#x27;m pleased to finally meet you.&quot;</p>
+        <p>She scoffed. &quot;Forgive me, but I can&#x27;t really say the same.&quot;</p>
+        <p>So this was the Illusive Man. A good looking guy seemingly in his fifties – but in this day and age, one couldn&#x27;t truly tell that with rich people - sitting in a comfy chair and smoking a cigar. The office he was situated in – and in which Jane appeared to stand herself, thanks to the actually impressive holo quality of this &#x27;quantum entanglement communicator&#x27; or whatever the hell it was called – was spartan, containing nothing but the man and chair himself as well as a large, currently inactive desk. No doubt the leader of Cerberus usually had at least half a dozen holo screens open at a time. The walls were one single big window admitting the light of some unknown star inside.</p>
+        <p>&quot;Understandable.&quot; The Illusive Man took a drag from his cigarette. What a pretentious name. &quot;Given what you believe to know about my organization, I don&#x27;t blame you for your hostility.&quot;</p>
+        <p>&quot;Believe to know, yes... Miranda already explained to me that all those things I saw were just your own rogues. Whom you just couldn&#x27;t deal with yourselves apparently. Damn convenient.&quot;</p>
+        <p>Jane had spoken quite a bit more to Lawson these last three days. She was wary of the Cerberus operative, but Lawson had been her only source of information on the state of the galaxy two years later.</p>
+        <p>The man tilted his head. &quot;Unfortunately, we didn&#x27;t know about most of their transgressions until after the fact. So I did not deem it justified to invest the resources it would have taken to stamp them out. A tragic decision in hindsight, but people in positions such as yours or mine have to make decisions with incomplete information regularly. I believe I&#x27;m not the only one in this room who wishes they had known certain things earlier and perhaps had made different decisions at certain points.&quot; Another drag. &quot;Now, I understand completely that you won&#x27;t believe this just because I say so. But look at it this way: Cerberus saved you from the Shadow Broker on Vostralska and then retrieved your remains from the Collectors. And now you stand here, the first woman to ever rise from the dead. All from my purse.&quot;</p>
+        <p>&quot;If you think you own me now because of this...&quot;</p>
+        <p>The Illusive Man held up a hand. &quot;I am merely pointing out that my organization has demonstrated our goodwill quite thoroughly. If that doesn&#x27;t convince you...remember what you saw on Lazarus station. The work we did there. The people doing it. Does Miranda Lawson really strike you as a madwoman who would get the idea to inject a man with Thresher Maw acid to find out god knows what? Or turn them into Geth husks!?&quot;</p>
+        <p>Shepard gritted her teeth. &quot;I barely know your pretty little creature, and from what I&#x27;ve seen she&#x27;d do pretty much anything if she felt it&#x27;s necessary. I cannot trust you in this, and I don&#x27;t believe you. So one last thing: I hope you&#x27;re aware I&#x27;ll kill you if you&#x27;re ever stupid enough to be in one room with me.&quot;</p>
+        <p>The Illusive Man actually grinned, if very subtly so. &quot;Fortunately, meeting in person is not necessary for a fruitful cooperation.&quot;</p>
+        <p>Jane grimaced, her very innards getting irritated by the prospect of talking business with, presumably, the man behind Akuze.</p>
+        <p>If only Wayne had opened his goddamn mouth. It might&#x27;ve given me a hint now.</p>
+        <p>&quot;Miranda said you want to make me an offer, yes. She also said you recognize the Reapers.&quot;</p>
+        <p>The man took a swig from some liquor a quiet server had brought in. &quot;The greatest threat to humanity we have faced in our brief existence. Yes.&quot;</p>
+        <p>&quot;Good, because that&#x27;s the only reason i&#x27;m even speaking to you. What do you know, and what do you propose?&quot;</p>
+        <p>&quot;Did Miranda brief you on the missing colonies?&quot;</p>
+        <p>She forced herself to put her disdain of all this aside and focus on the matter at hand.</p>
+        <p>&quot;No.&quot;</p>
+        <p>&quot;Well then. This situation began to develop mere weeks after your death. Human colonies are simply disappearing. Every man, woman and child gone, without a trace or even signs of a fight. We believe it&#x27;s an agent of the Reapers.&quot;</p>
+        <p>An eerie feeling tried to take hold in Jane&#x27;s gut, the Illusive Man&#x27;s words bringing back bad memories of the empty town on Akuze; she zeroed in on the problem to zone it out.</p>
+        <p>&quot;Sovereign wanted to harvest all life in the galaxy. What would the Reapers get out of abducting a few human colonists?&quot;</p>
+        <p>The Illusive Man got up and started walking towards Shepard&#x27;s hologram. &quot;It&#x27;s not just a few, Shepard. There are almost a hundred thousand colonists missing by now. I think that counts as harvesting.&quot;</p>
+        <p>Jane failed to mask her shock. &quot;A hundred thousand! How did the Alliance let this happen!?&quot;</p>
+        <p>The man waved it off with the hand holding the cigar. &quot;The Alliance is too concerned with their newfound status as a council species and their diplomatic relationships to intervene. The crux is that these attackers only target colonies in the Terminus.&quot;</p>
+        <p>The penny dropped.</p>
+        <p>&quot;They&#x27;re not willing to defend these people because they&#x27;re afraid of the backlash operating in the Terminus might cause.&quot;</p>
+        <p>The Illusive Man nodded. &quot;Exactly. Though to be fair, there&#x27;s another reason as well. Many of these colonies were founded in the Terminus explicitly to get out from under the Alliance&#x27;s influence, and so a lot of them wouldn&#x27;t even be willing to accept Alliance garrisons if they were offered.&quot;</p>
+        <p>&quot;That doesn&#x27;t matter. I need to talk to that mongrel Udina. And Hackett, too. He does still command the fifth fleet, right?&quot;</p>
+        <p>&quot;In a way. Admiral Hackett is now the supreme commander of the Alliance military.&quot;</p>
+        <p>Jane raised her eyebrows. &quot;That&#x27;s...actually amazing.&quot;</p>
+        <p>&quot;I don&#x27;t entirely share your enthusiasm, but you are not wrong. Hackett has spent the last two years pushing for military buildup and more decisive action in the Terminus. But he has to tread lightly. His success and fame have carried him into this office and made him a difficult to remove entity, but even he cannot afford to utter the word &#x27;Reaper&#x27; too loudly.&quot;</p>
+        <p>Jane scoffed. &quot;They branded me a madwoman, I know. Lawson already told me.&quot; She shook her head. &quot;It doesn&#x27;t matter, I&#x27;ll just have to get through to them. Make your offer then so I can get out of here.&quot;</p>
+        <p>They stood right in front of each other now. The Illusive Man took a sip of his drink.</p>
+        <p>&quot;You still think you can bring the Council and the Alliance on board? I believe you&#x27;re in for a disappointment. And this is where I come in. I am willing to provide you with a ship, a crew, and funding. All I want you to do for that is to investigate the missing colonies and the Reapers however you see fit. Your mission, your command.&quot;</p>
+        <p>&quot;I&#x27;d never work for you.&quot;</p>
+        <p>&quot;You wouldn&#x27;t be working for me, you&#x27;d be working with me.&quot;</p>
+        <p>&quot;With you holding all the chips.&quot;</p>
+        <p>&quot;Would you rather have no ship than a borrowed one? You need to set your personal feelings aside, Shepard.&quot;</p>
+        <p>He&#x27;s not wrong. She hated it, but that was how it was. Still, damn him to hell. Hackett will figure something out.</p>
+        <p>The Illusive Man seemed to suspect her train of thought. &quot;It is your decision. I would ask however, that you make it after you&#x27;ve seen this threat for yourself.&quot;</p>
+        <p>&quot;I&#x27;ll look into it. In Alliance Blues.&quot;</p>
+        <p>&quot;In that case, you will be too late.&quot;</p>
+        <p>Jane didn&#x27;t like one bit where this was going. &quot;Too late for what?&quot;</p>
+        <p>The Illusive Man returned to his seat and activated a hologram. &quot;Not for what, but for whom. Three hours ago, contact to another colony has been lost: Freedom&#x27;s Progress. A tiny colony, about thirty thousand people. Light defenses, no kinetic shields. Communication simply seized in the middle of a transmission. It&#x27;s been that exact pattern every time we were able to observe so far.&quot;</p>
+        <p>She cursed inwardly. &quot;The Alliance won&#x27;t come, will they.&quot;</p>
+        <p>&quot;Perhaps they will, later. When the place has already been looted by the usual Terminus scum and any clues about the attackers identity will be lost. We cannot let that happen. This is the first time we have caught them in the act. It&#x27;s the opportunity to learn more that I&#x27;ve been waiting for for a year.&quot;</p>
+        <p>&quot;Why haven&#x27;t you already sent somebody then?&quot;</p>
+        <p>&quot;Because I am convinced that you will insist to go with.&quot; He pushed some buttons on the display, and a picture of a Quarian came up; male. He seemed vaguely familiar. &quot;Is that...&quot;</p>
+        <p>&quot;Yes, that is Han&#x27;Zorah, your friend&#x27;s younger brother. He is currently working as a medical assistant on Freedom&#x27;s progress.&quot;</p>
+        <p>Bloody hell. It was as if Jane could feel gears set in motion, but she didn&#x27;t understand to what end.</p>
+        <p>&quot;No way that&#x27;s a coincidence.&quot;</p>
+        <p>&quot;I agree. This fits my assumption of the enemy being an agent of the Reapers. Why else would they go after people associated to you, albeit loosely ?&quot;</p>
+        <p>&quot;And the Shadow Broker is working for them.&quot;</p>
+        <p>The Illusive Man perked up. &quot;Ah, I see Miranda made good use of your time getting here. Yes, I believe the Shadow Broker is in cahoots with the Reapers. That&#x27;s why he tried to have you captured two years ago, and why he attempted to kill you in your sleep now that you&#x27;re back. Since their attempt to deal with you directly failed, they&#x27;re now going after people you might care about to get at you that way.&quot;</p>
+        <p>Jane grimaced. Dead for two years, the Reapers out there, her status unclear and a terrorist organization trying to cozy up to her. Her position was delicate enough as it was already, she didn&#x27;t need one of the most powerful organization in the galaxy trying to kill her.</p>
+        <p>&quot;I&#x27;ll have to end the Broker.&quot; She didn&#x27;t say it with any particular bravado, it was simply a realization.</p>
+        <p>Her conversation partner took a long drag from the cigar. &quot;Eventually. But for now, you need to rescue Zorah and secure any evidence possible. Who is taking the colonists? How are they doing it without a fight? Whatever you can learn is crucial.&quot;</p>
+        <p>Shepard shoved her irritation aside. &quot;Fine. This needs to be done, so I&#x27;ll do it. Afterwards, I&#x27;m gone.&quot;</p>
+        <p>The Illusive Man leant back in the armchair. &quot;I believe I might have what it takes to change your mind about that. But for now...good luck, Commander.&quot;</p>
+    </div>
+</body>
+</html>

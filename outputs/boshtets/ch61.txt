@@ -1,0 +1,187 @@
+Chapter 61
+
+The stair down to engineering clanged under Jane's boots as she descended. With the Normandy hanging in low orbit above a gas giant out in no man's space along the edges of the Terminus, undergoing some much needed maintenance after the tribulations of the past days, she'd finally managed to find some time to come down here to check on Tali, something she hadn't managed nearly as much as she'd wanted to considering what had happened.
+
+It had been a mere four days since her exile, and while she seemed to be holding up well, Shepard'd have liked to support her as much as she could. But the needs of their mission had superseded that, and then they'd spent almost three days trying their best simply to survive and shake off their pursuers.
+
+Shortly after leaving the flotilla, she'd been contacted by the Illusive Man, informing her of a supposedly disabled collector cruiser floating in the Corvus system. Jane had been skeptical from the start, but the opportunity had been to great to pass up, and so they had investigated with all due caution. Her fears had come true, and the whole affair had quickly devolved into a hectic retreat, but they had indeed gained valuable intel from that gamble, both on the strategic and the scientific side. Mordin hadn't left his lab ever since, obsessing over the samples he'd taken and the implications of the collector's true, now revealed nature. On the strategical side of things, the increasing likelihood of the collectors only actually heaving the one ship changed the game completely, to the point that Jane had actually sent a message to Anderson on a secure channel. Even with the Alliance unwilling to step in, them having a clear picture of the situation was better than nothing. Perhaps they'd see sense one day.
+
+In terms of her own operation, the revelations meant that their prospects of actually succeeding had just multiplied. She'd been preparing, and struggling to come up with a plan, to deal with an entire species. If the collectors were, in truth, just a vanguard force, beating them with what she had might actually be somewhat possible.
+
+All in all, one would have thought the mood on board to be ecstatic – but it was anything but. Not only had the Illusive Man willingly maneuvered them into a trap, their escape had also come with a catch. In order to regain control from the collector's computer virus, Joker had seen no other option but to unshackle EDI. A decision the wiry pilot had made completely on his own, the ship's external communications completely shut down alongside almost everything else. Needless to say, there had been a series of heated arguments about the matter. Tali had gone livid, and Miranda hadn't been much calmer. It had to have been the least guarded Jane had ever seen her. She suspected the only reason neither of them had attempted to strangle the man was that he'd been flying the ship almost the entire time, the collector cruiser hot on their tail, following after them in spite of numerous FTL jumps. The chase had lasted over 60 hours, until EDI had finally rooted out the last traces of the collector's virus infecting her systems. So distraction had been had in ample amount, and tempers had been given some time to cool down.
+
+As far as Jane was concerned, the deed was done and they'd just have to wait and see wether it turned out a curse or a blessing.
+
+The door admitted her into engineering where she found Tali and her two engineers seated at their stations.
+
+"What's going on here, I thought you guys were working!"
+
+Tali and Daniels actually startled, while Donnelly just grinned and regarded Shepard with a nod. Daniels rolled her eyes, but got out a "Commander." before returning to her work. Tali leaned back in her seat a bit and crossed her legs.
+
+"Hi."
+
+Jane leaned against the wall. "Hey there. What's the status down here?"
+
+"Well, we've finished the more urgent replacements, and now we're running some diagnostics to see how well it all functions together. I've got a list of adjustments we have to do already...those couplings you got from Omega aren't transferring power properly to the new flux capacitor, I'll have to -" She stopped herself and looked up. "I'm afraid it's quite boring. The ship is ready to fly, I'll say that. But if nothing too urgent comes up, it'd be best if we could stay here for...at least one day, honestly."
+
+Jane nodded. "Fine by me. As always, give word if there's something you need." She hesitated for a moment, not sure how to best approach the subject. In the end, she decided to just be blunt about it. "So. How do you feel about EDI, now that you've had some time to think about it?"
+
+Tali uncrossed her legs and leant forwards a bit. "Does it matter? It's done either way."
+
+"Well, I'm asking you."
+
+She sighed. "Given what was going on, Joker didn't have a choice. If he hadn't done it, we'd all be dead now. Or worse. So I went and apologized to him. Beyond that...my people were almost wiped out by sentient AI, and now the ship we live in is governed by one that makes the Geth look like stupid animals. If EDI wants to kill us, we're dead. That's a fact."
+
+"I thought EDI had agreed to relinquish control of the life support systems."
+
+"EDI is the ship now, Jane. If it wants to, it will find ways around the blocks. There is no way to completely disconnect the life support from the rest of the system."
+
+"I understand."
+
+"Good." She lowered her head, her hands working the folds of her realk. "Look, I don't hate EDI, and it hasn't given us reason to distrust it. Aside the fact that it's a damned AI, that is. But it's just too powerful. If it ever decides it's not worth having us around any more, it can snuff us all out like a candle. Well, all except us down here, I suppose. It can't actually fix itself, after all. Yet." She looked up to Shepard. "I don't want to be that guy, but I just can't understand how you can be so comfortable with it."
+
+Jane blew some air through her lips and considered her answer. "I guess I just feel like I know EDI well enough to trust her. They built her to have a personality. EDI's got things she wants, and things she thinks are right and wrong."
+
+"Or it just wants you to think that. Or she, whatever. I'm not sure if I'll ever be able to think of an AI as a she either, to be honest."
+
+Jane shrugged. "I get you, but it just kind of came naturally. And I don't think EDI is playing us. She could've gotten rid of us several times over by now if she wanted." She regarded Tali for a moment. "You haven't talked to her much, have you? About anything not related to the ship, that is."
+
+"I haven't really felt the desire to."
+
+"Well, maybe you should try it sometimes, she's not that bad."
+
+Some notification started beeping, and Tali turned around forcefully, quickly pushing some buttons. When the noise did not immediately cease, she increased her efforts, engaging her omnitool and making some more adjustments. "Oh come on, you little bosh'tet!" The issue, whatever it had been, seemed to have been resolved, for the turned around, shrugging apologetically.
+
+"Sorry. I've got a small fever, and I'm taking it out on the poor drive core. Don't worry, it's nothing serious. I just got sloppy doing a suit repair."
+
+"What happened?"
+
+"I got hit back on the collector ship. Just a grazing shot, but enough to allow some external material in. That's not a big deal usually, the suit seals damaged partitions off immediately, and as long as you stick to the proper procedure nothing should happen. But well, I didn't, and so I got half my suit contaminated with the stuff. It's all levo, so there's no risk of an actual infection, it's just my useless immune system acting up. I'll be fine in a few days."
+
+Jane shook her head. "It's not like this is news to me, it's not the first time you've been sick after all. Still boggles my mind, though. I don't know if I could live in a suit my whole life."
+
+She laughed. "You know how much I like getting out of this thing every once in a while. But it's fine, really. We've gotten pretty good at treating them almost like a second skin, and finding other ways than our faces to show who we are. I could pick out my brother in a crowd of a hundred other Quarians."
+
+"How? I mean, I could pick you out no problem, you've got your realk and your own way of folding the hood and your straps and all that, but I honestly didn't see anything overtly special on Han. I only knew it was him from the way he'd behave."
+
+She stood up and, elegantly pivoting in front of Jane, came to lean on the handrails opposite to her, and Jane could see she was raising an eyebrow at her.
+
+"And then there's that, true. Alright, I see what you mean."
+
+She relaxed from her little pose and giggled. "I mean, you are not that wrong. It's just that we're used to it – obviously. So it doesn't bother us most of the time. And for what it's worth, it makes the times when you do get to take it off really special. We're still trying all the time to get past them, of course. The most intimate thing we can do with another Quarian is to link our suit environments. We get sick at first, and then we adapt. Eventually we get so accustomed to another that we can be in the same clean room together. It is our most important gesture of trust, of acceptance."
+
+Her hands briefly moved towards each other, but she stopped the movement and gripped the railing again.
+
+"I haven't trusted anybody that much. Except for...well, no Quarians. You know what I mean."
+
+Jane smiled. "You know I feel the same, and it does sound like a beautiful tradition. But you shouldn't feel like you need to prove anything to me."
+
+"I know. Well, not that I know, but I didn't mean it like that. It's just that it's not exactly a tradition, it's, uh, more of a practicality, or rather a necessity...wow, it's really hot in here. " Tali looked down for a moment,and took a deep breath.
+
+"It's just that the practice also signifies a willingness for, and, uhm, is the prerequisite for...uh...intimacy. I wasn't trying to...it isn't always like that." She gripped her mask in one of her imitations of human gestures she'd gotten used to. "How did we even end up talking about this?"
+
+Jane snorted, not about to simply let this go. "Wait a minute, Tali. It sounds like you are suggesting something."
+
+"What could I possibly be suggesting?" She leaned back, looking Jane in the eye the whole time, and her voice, a bit shaky at first, became more steady and sincere with every word. "I mean, a young woman get's rescued by a dashing commander who whisks her away on a wild adventure to save the galaxy? How could she possibly develop any kind of interest in her?"
+
+A smile plastered itself on Jane's face, and she almost would've laughed when she realized how oblivious she had been, but she could see Tali looking at her anxiously.
+
+"You've got nothing to be embarassed about. I've felt the same way about you for a long time."
+
+Tali all but collapsed with excitement. "Really? I didn't...you never said anything. Well...good."
+
+They looked at each other for a long moment, and Jane's lopsided grin only got wider when she noticed just how intensely focused on their stations Donnelly and Daniels appeared to be.
+
+I think we just provided the gossip for days to come.
+
+The silence seemed a bit too much for Tali to bear. "Anyway, I...should get back to work. Thanks for coming by, and...talking."
+
+And with that, she turned around and, from one moment to another, seemed just as completely engrossed by her work as her two engineers.
+
+"Alright. I'll, uh...see you later."
+
+The door closed behind Jane, and she started ascending the stairs feeling a strange mixture of bemusement and joy.
+
+ 
+
+The door closed behind her and Tali relaxed a little bit. But just a little bit. She was still completely clueless as to how she had managed to say what she had said, or what had come over her to even decide to try and say that, but now that it seemed to have worked, she felt as if she was about to explode - partly with joy, but also with confusion.
+
+"Ken."
+
+"Yeah, boss?"
+
+"Go take a break."
+
+"But I just got back from my br-"
+
+"I said go take a break!"
+
+The man opened and closed his mouth, shrugged, and trotted out of the room, leaving Tali with a somewhat bewildered Gabby. The Quarian took a couple of quick steps towards the human.
+
+"I need your help."
+
+"I, uh..."
+
+"Please!"
+
+"Of course, sure, it's just...what's wrong? Wasn't that pretty good what just happened?"
+
+"I don't know! You're the human, you tell me!"
+
+"Tali, this is ridiculous. You know the commander much better than I do."
+
+The Quarian squirmed. "I guess that's true..."
+
+"So what's the problem?"
+
+"I don't know, I guess I'm scared? What if she doesn't actually like me? What if I'm just...interpreting something into it that she didn't mean?"
+
+The look on Gabby's face said it all.
+
+"Girl, everyone on this ship who cares about these things knows that the woman likes you. Actually, the only reason your talk there surprised me is because I would've thought you were already doing it." She raised an eyebrow. "So you actually were watching documentaries all that time. Huh."
+
+Tali stared for a moment before coming to the realization that Gabby was simply correct, and a huge smile spread on her face. Not that the engineer could've seen it. "Oh thank you, Gabby." She grabbed the engineer in a crushing hug,lifting her off the ground for a second in her exuberance.
+
+When she got back to her station, the next hours felt as if the work was doing itself.
+
+ 
+
+ 
+
+Liara sat still, staring at the holographic desktop of her personal console, still displaying the symbol for an ended call. The blocky form of her custom encoder, among the best money could buy on this planet and then some,stood next to the desk, and she put her feet up on it, trying to force calm onto herself. Inside, her mind was racing. She wanted to meet up with Sekat immediately,and she would, but nevertheless precautions and next steps ought to be taken. It would be best to inform Shepard at once; and she would need to stash copies of this intel so that Shepard could find it if something happened to her before she got here. It was a concession to the grim reality of her situation here on Illium. Liara prayed to the goddess that the Broker was not aware of what she was about to learn. If they were, her life would be in peril very soon.
+
+Today, she would find the Shadow Broker. Two years of work. Two years of mistrust and lies, of looking over her shoulder constantly. In these upcoming days, she would make it all worth it.
+
+Extending her hand to pick up the datadisk she'd saved a recording of her conversation with Sekat on, Liara was just about to get up when the noise of breaking glass made her flinch. She turned around to find, to her astonishment, that about half of her window front had been shattered and the shards blown all over her apartment, the edges jagged and razor sharp. That was when she noticed that her omnitool was blinking frantically.
+
+Shields at sixty per cent.
+
+Finally she understood, and a wave of fear sent a jolt of electricity through her body. She turned and hit the deck, bringing her console between herself and her attacker. In cover, she fought to calm herself. The console was one and a half meter wide and almost as tall; she was safe for the moment. Her breathing slowed a bit, and her analytical mind took hold again.
+
+They know already.
+
+She wanted to curse and ask how it was possible, but the answer was painstakingly obvious.
+
+My network has been compromised.
+
+Now Liara did curse, flinging filthy words from her mother tongue she hadn't mouthed in decades. She looked around. Her shields were back at eighty. There was no way to know how much of the round's power had been used up by the supposedly bullet proof glass; and therefore, there was no way to know if she'd be able to take another hit.
+
+But she couldn't exactly stay here, either. Liara eyed her door. It was just a couple of meters; not a lot of time to line up a shot. Completely out of the question for anyone but an absolute crack shot. Unfortunately, the Broker wasn't in the habit of hiring cheap assassins. Still, she was confident enough in her shields and her barrier to bet her life on it.
+
+The problem was, she still had to leave a copy for Shepard. Once she was out of here and sent her distress call, she'd have to go dark. Shepard had to be able to find the Sekat connection herself.
+
+Liara took a deep breath, willed her barrier into being and rose up. The first shot came immediately, slamming into her barrier like a freight train. Unobstructed due to the large, gaping hole in her window, the round was powerful enough to almost strip it away completely. With trembling fingers, the feeling of impending doom an unbearable sensation between her shoulder blades, she hammered the eject. She couldn't help but imagine the shooter loading in the next round as the drive protruted, painfully slow. The instance it was at all possible, Liara all but wrenched the disk free and threw herself to the right – not a moment too soon. Another round barely missed her, punching a hole clean through her workstation, the holo display fizzling out with a low buzz.
+
+Crawling on all fours, she brought the remains of her window between herself and the rough direction her would-be assassin had to be in.
+
+"Dim! Dim!"
+
+Berating herself for not having this idea earlier, she watched with relief as the undamaged sections of her window front immediately became as visually impenetrable as a solid wall. She could only hope it would be impenetrable for whatever optics the shooter might have as well. Not wasting any time, Liara made her way to her locker, keeping to cover as best as possible despite the dimmed windows, and armed herself.
+
+It was not the only place in the apartment where she kept weapons, but it was the only one where she kept what she'd need right now. With a pistol on her right hip and a collapsed submachinegun on her left thigh, she took the object she'd need to execute the last thing she had to do before she could leave.
+
+At the foot of the stairs up to her bed, propped up in a cabinet, was a prothean relic about the size of a toaster. As extravaganza as it might have seemed in any other person's apartment, it would not raise suspicion at all in hers. She was an archaeologist after all. Or had been, at least. It was also completely irrelevant – as in, holding this relic was not what this particular cabinet was there for. Which was why she couldn't be seen, which was what this little gadget would allow her to achieve. Alongside keeping her alive of course, since the cabinet stood squarely in the unprotected part of her home, and Liara felt no desire to brave another round from what had to be a particularly large calibre rifle.
+
+She primed and tossed the smoke grenade, and after three seconds, it began puffing out black smoke with a loud hiss. Through the smoke, almost microscopically small scraps of hot, glowing metal whirled, making sure the fog was as impenetrable for any type of thermal optic as it was for the bare eye. Liara waited a couple of seconds until she was certain her attacker's sight would be obscured now, then she rushed over to the cabinet and hid the disk in the secret stash embedded within the base. As soon as she had managed that she hurried to get away while she still could, already planning her route as she went. The last thing she did before disconnecting her omnitool from all networks was to set the sending of her distress call in motion.
+
+The final battle of her private war had begun.

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 61</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch60.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html" selected>Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch62.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 61</h1>
+    <div class="chapter-content">
+        <p>The stair down to engineering clanged under Jane&#x27;s boots as she descended. With the Normandy hanging in low orbit above a gas giant out in no man&#x27;s space along the edges of the Terminus, undergoing some much needed maintenance after the tribulations of the past days, she&#x27;d finally managed to find some time to come down here to check on Tali, something she hadn&#x27;t managed nearly as much as she&#x27;d wanted to considering what had happened.</p>
+        <p>It had been a mere four days since her exile, and while she seemed to be holding up well, Shepard&#x27;d have liked to support her as much as she could. But the needs of their mission had superseded that, and then they&#x27;d spent almost three days trying their best simply to survive and shake off their pursuers.</p>
+        <p>Shortly after leaving the flotilla, she&#x27;d been contacted by the Illusive Man, informing her of a supposedly disabled collector cruiser floating in the Corvus system. Jane had been skeptical from the start, but the opportunity had been to great to pass up, and so they had investigated with all due caution. Her fears had come true, and the whole affair had quickly devolved into a hectic retreat, but they had indeed gained valuable intel from that gamble, both on the strategic and the scientific side. Mordin hadn&#x27;t left his lab ever since, obsessing over the samples he&#x27;d taken and the implications of the collector&#x27;s true, now revealed nature. On the strategical side of things, the increasing likelihood of the collectors only actually heaving the one ship changed the game completely, to the point that Jane had actually sent a message to Anderson on a secure channel. Even with the Alliance unwilling to step in, them having a clear picture of the situation was better than nothing. Perhaps they&#x27;d see sense one day.</p>
+        <p>In terms of her own operation, the revelations meant that their prospects of actually succeeding had just multiplied. She&#x27;d been preparing, and struggling to come up with a plan, to deal with an entire species. If the collectors were, in truth, just a vanguard force, beating them with what she had might actually be somewhat possible.</p>
+        <p>All in all, one would have thought the mood on board to be ecstatic – but it was anything but. Not only had the Illusive Man willingly maneuvered them into a trap, their escape had also come with a catch. In order to regain control from the collector&#x27;s computer virus, Joker had seen no other option but to unshackle EDI. A decision the wiry pilot had made completely on his own, the ship&#x27;s external communications completely shut down alongside almost everything else. Needless to say, there had been a series of heated arguments about the matter. Tali had gone livid, and Miranda hadn&#x27;t been much calmer. It had to have been the least guarded Jane had ever seen her. She suspected the only reason neither of them had attempted to strangle the man was that he&#x27;d been flying the ship almost the entire time, the collector cruiser hot on their tail, following after them in spite of numerous FTL jumps. The chase had lasted over 60 hours, until EDI had finally rooted out the last traces of the collector&#x27;s virus infecting her systems. So distraction had been had in ample amount, and tempers had been given some time to cool down.</p>
+        <p>As far as Jane was concerned, the deed was done and they&#x27;d just have to wait and see wether it turned out a curse or a blessing.</p>
+        <p>The door admitted her into engineering where she found Tali and her two engineers seated at their stations.</p>
+        <p>&quot;What&#x27;s going on here, I thought you guys were working!&quot;</p>
+        <p>Tali and Daniels actually startled, while Donnelly just grinned and regarded Shepard with a nod. Daniels rolled her eyes, but got out a &quot;Commander.&quot; before returning to her work. Tali leaned back in her seat a bit and crossed her legs.</p>
+        <p>&quot;Hi.&quot;</p>
+        <p>Jane leaned against the wall. &quot;Hey there. What&#x27;s the status down here?&quot;</p>
+        <p>&quot;Well, we&#x27;ve finished the more urgent replacements, and now we&#x27;re running some diagnostics to see how well it all functions together. I&#x27;ve got a list of adjustments we have to do already...those couplings you got from Omega aren&#x27;t transferring power properly to the new flux capacitor, I&#x27;ll have to -&quot; She stopped herself and looked up. &quot;I&#x27;m afraid it&#x27;s quite boring. The ship is ready to fly, I&#x27;ll say that. But if nothing too urgent comes up, it&#x27;d be best if we could stay here for...at least one day, honestly.&quot;</p>
+        <p>Jane nodded. &quot;Fine by me. As always, give word if there&#x27;s something you need.&quot; She hesitated for a moment, not sure how to best approach the subject. In the end, she decided to just be blunt about it. &quot;So. How do you feel about EDI, now that you&#x27;ve had some time to think about it?&quot;</p>
+        <p>Tali uncrossed her legs and leant forwards a bit. &quot;Does it matter? It&#x27;s done either way.&quot;</p>
+        <p>&quot;Well, I&#x27;m asking you.&quot;</p>
+        <p>She sighed. &quot;Given what was going on, Joker didn&#x27;t have a choice. If he hadn&#x27;t done it, we&#x27;d all be dead now. Or worse. So I went and apologized to him. Beyond that...my people were almost wiped out by sentient AI, and now the ship we live in is governed by one that makes the Geth look like stupid animals. If EDI wants to kill us, we&#x27;re dead. That&#x27;s a fact.&quot;</p>
+        <p>&quot;I thought EDI had agreed to relinquish control of the life support systems.&quot;</p>
+        <p>&quot;EDI is the ship now, Jane. If it wants to, it will find ways around the blocks. There is no way to completely disconnect the life support from the rest of the system.&quot;</p>
+        <p>&quot;I understand.&quot;</p>
+        <p>&quot;Good.&quot; She lowered her head, her hands working the folds of her realk. &quot;Look, I don&#x27;t hate EDI, and it hasn&#x27;t given us reason to distrust it. Aside the fact that it&#x27;s a damned AI, that is. But it&#x27;s just too powerful. If it ever decides it&#x27;s not worth having us around any more, it can snuff us all out like a candle. Well, all except us down here, I suppose. It can&#x27;t actually fix itself, after all. Yet.&quot; She looked up to Shepard. &quot;I don&#x27;t want to be that guy, but I just can&#x27;t understand how you can be so comfortable with it.&quot;</p>
+        <p>Jane blew some air through her lips and considered her answer. &quot;I guess I just feel like I know EDI well enough to trust her. They built her to have a personality. EDI&#x27;s got things she wants, and things she thinks are right and wrong.&quot;</p>
+        <p>&quot;Or it just wants you to think that. Or she, whatever. I&#x27;m not sure if I&#x27;ll ever be able to think of an AI as a she either, to be honest.&quot;</p>
+        <p>Jane shrugged. &quot;I get you, but it just kind of came naturally. And I don&#x27;t think EDI is playing us. She could&#x27;ve gotten rid of us several times over by now if she wanted.&quot; She regarded Tali for a moment. &quot;You haven&#x27;t talked to her much, have you? About anything not related to the ship, that is.&quot;</p>
+        <p>&quot;I haven&#x27;t really felt the desire to.&quot;</p>
+        <p>&quot;Well, maybe you should try it sometimes, she&#x27;s not that bad.&quot;</p>
+        <p>Some notification started beeping, and Tali turned around forcefully, quickly pushing some buttons. When the noise did not immediately cease, she increased her efforts, engaging her omnitool and making some more adjustments. &quot;Oh come on, you little bosh&#x27;tet!&quot; The issue, whatever it had been, seemed to have been resolved, for the turned around, shrugging apologetically.</p>
+        <p>&quot;Sorry. I&#x27;ve got a small fever, and I&#x27;m taking it out on the poor drive core. Don&#x27;t worry, it&#x27;s nothing serious. I just got sloppy doing a suit repair.&quot;</p>
+        <p>&quot;What happened?&quot;</p>
+        <p>&quot;I got hit back on the collector ship. Just a grazing shot, but enough to allow some external material in. That&#x27;s not a big deal usually, the suit seals damaged partitions off immediately, and as long as you stick to the proper procedure nothing should happen. But well, I didn&#x27;t, and so I got half my suit contaminated with the stuff. It&#x27;s all levo, so there&#x27;s no risk of an actual infection, it&#x27;s just my useless immune system acting up. I&#x27;ll be fine in a few days.&quot;</p>
+        <p>Jane shook her head. &quot;It&#x27;s not like this is news to me, it&#x27;s not the first time you&#x27;ve been sick after all. Still boggles my mind, though. I don&#x27;t know if I could live in a suit my whole life.&quot;</p>
+        <p>She laughed. &quot;You know how much I like getting out of this thing every once in a while. But it&#x27;s fine, really. We&#x27;ve gotten pretty good at treating them almost like a second skin, and finding other ways than our faces to show who we are. I could pick out my brother in a crowd of a hundred other Quarians.&quot;</p>
+        <p>&quot;How? I mean, I could pick you out no problem, you&#x27;ve got your realk and your own way of folding the hood and your straps and all that, but I honestly didn&#x27;t see anything overtly special on Han. I only knew it was him from the way he&#x27;d behave.&quot;</p>
+        <p>She stood up and, elegantly pivoting in front of Jane, came to lean on the handrails opposite to her, and Jane could see she was raising an eyebrow at her.</p>
+        <p>&quot;And then there&#x27;s that, true. Alright, I see what you mean.&quot;</p>
+        <p>She relaxed from her little pose and giggled. &quot;I mean, you are not that wrong. It&#x27;s just that we&#x27;re used to it – obviously. So it doesn&#x27;t bother us most of the time. And for what it&#x27;s worth, it makes the times when you do get to take it off really special. We&#x27;re still trying all the time to get past them, of course. The most intimate thing we can do with another Quarian is to link our suit environments. We get sick at first, and then we adapt. Eventually we get so accustomed to another that we can be in the same clean room together. It is our most important gesture of trust, of acceptance.&quot;</p>
+        <p>Her hands briefly moved towards each other, but she stopped the movement and gripped the railing again.</p>
+        <p>&quot;I haven&#x27;t trusted anybody that much. Except for...well, no Quarians. You know what I mean.&quot;</p>
+        <p>Jane smiled. &quot;You know I feel the same, and it does sound like a beautiful tradition. But you shouldn&#x27;t feel like you need to prove anything to me.&quot;</p>
+        <p>&quot;I know. Well, not that I know, but I didn&#x27;t mean it like that. It&#x27;s just that it&#x27;s not exactly a tradition, it&#x27;s, uh, more of a practicality, or rather a necessity...wow, it&#x27;s really hot in here. &quot; Tali looked down for a moment,and took a deep breath.</p>
+        <p>&quot;It&#x27;s just that the practice also signifies a willingness for, and, uhm, is the prerequisite for...uh...intimacy. I wasn&#x27;t trying to...it isn&#x27;t always like that.&quot; She gripped her mask in one of her imitations of human gestures she&#x27;d gotten used to. &quot;How did we even end up talking about this?&quot;</p>
+        <p>Jane snorted, not about to simply let this go. &quot;Wait a minute, Tali. It sounds like you are suggesting something.&quot;</p>
+        <p>&quot;What could I possibly be suggesting?&quot; She leaned back, looking Jane in the eye the whole time, and her voice, a bit shaky at first, became more steady and sincere with every word. &quot;I mean, a young woman get&#x27;s rescued by a dashing commander who whisks her away on a wild adventure to save the galaxy? How could she possibly develop any kind of interest in her?&quot;</p>
+        <p>A smile plastered itself on Jane&#x27;s face, and she almost would&#x27;ve laughed when she realized how oblivious she had been, but she could see Tali looking at her anxiously.</p>
+        <p>&quot;You&#x27;ve got nothing to be embarassed about. I&#x27;ve felt the same way about you for a long time.&quot;</p>
+        <p>Tali all but collapsed with excitement. &quot;Really? I didn&#x27;t...you never said anything. Well...good.&quot;</p>
+        <p>They looked at each other for a long moment, and Jane&#x27;s lopsided grin only got wider when she noticed just how intensely focused on their stations Donnelly and Daniels appeared to be.</p>
+        <p>I think we just provided the gossip for days to come.</p>
+        <p>The silence seemed a bit too much for Tali to bear. &quot;Anyway, I...should get back to work. Thanks for coming by, and...talking.&quot;</p>
+        <p>And with that, she turned around and, from one moment to another, seemed just as completely engrossed by her work as her two engineers.</p>
+        <p>&quot;Alright. I&#x27;ll, uh...see you later.&quot;</p>
+        <p>The door closed behind Jane, and she started ascending the stairs feeling a strange mixture of bemusement and joy.</p>
+        <p>The door closed behind her and Tali relaxed a little bit. But just a little bit. She was still completely clueless as to how she had managed to say what she had said, or what had come over her to even decide to try and say that, but now that it seemed to have worked, she felt as if she was about to explode - partly with joy, but also with confusion.</p>
+        <p>&quot;Ken.&quot;</p>
+        <p>&quot;Yeah, boss?&quot;</p>
+        <p>&quot;Go take a break.&quot;</p>
+        <p>&quot;But I just got back from my br-&quot;</p>
+        <p>&quot;I said go take a break!&quot;</p>
+        <p>The man opened and closed his mouth, shrugged, and trotted out of the room, leaving Tali with a somewhat bewildered Gabby. The Quarian took a couple of quick steps towards the human.</p>
+        <p>&quot;I need your help.&quot;</p>
+        <p>&quot;I, uh...&quot;</p>
+        <p>&quot;Please!&quot;</p>
+        <p>&quot;Of course, sure, it&#x27;s just...what&#x27;s wrong? Wasn&#x27;t that pretty good what just happened?&quot;</p>
+        <p>&quot;I don&#x27;t know! You&#x27;re the human, you tell me!&quot;</p>
+        <p>&quot;Tali, this is ridiculous. You know the commander much better than I do.&quot;</p>
+        <p>The Quarian squirmed. &quot;I guess that&#x27;s true...&quot;</p>
+        <p>&quot;So what&#x27;s the problem?&quot;</p>
+        <p>&quot;I don&#x27;t know, I guess I&#x27;m scared? What if she doesn&#x27;t actually like me? What if I&#x27;m just...interpreting something into it that she didn&#x27;t mean?&quot;</p>
+        <p>The look on Gabby&#x27;s face said it all.</p>
+        <p>&quot;Girl, everyone on this ship who cares about these things knows that the woman likes you. Actually, the only reason your talk there surprised me is because I would&#x27;ve thought you were already doing it.&quot; She raised an eyebrow. &quot;So you actually were watching documentaries all that time. Huh.&quot;</p>
+        <p>Tali stared for a moment before coming to the realization that Gabby was simply correct, and a huge smile spread on her face. Not that the engineer could&#x27;ve seen it. &quot;Oh thank you, Gabby.&quot; She grabbed the engineer in a crushing hug,lifting her off the ground for a second in her exuberance.</p>
+        <p>When she got back to her station, the next hours felt as if the work was doing itself.</p>
+        <p>Liara sat still, staring at the holographic desktop of her personal console, still displaying the symbol for an ended call. The blocky form of her custom encoder, among the best money could buy on this planet and then some,stood next to the desk, and she put her feet up on it, trying to force calm onto herself. Inside, her mind was racing. She wanted to meet up with Sekat immediately,and she would, but nevertheless precautions and next steps ought to be taken. It would be best to inform Shepard at once; and she would need to stash copies of this intel so that Shepard could find it if something happened to her before she got here. It was a concession to the grim reality of her situation here on Illium. Liara prayed to the goddess that the Broker was not aware of what she was about to learn. If they were, her life would be in peril very soon.</p>
+        <p>Today, she would find the Shadow Broker. Two years of work. Two years of mistrust and lies, of looking over her shoulder constantly. In these upcoming days, she would make it all worth it.</p>
+        <p>Extending her hand to pick up the datadisk she&#x27;d saved a recording of her conversation with Sekat on, Liara was just about to get up when the noise of breaking glass made her flinch. She turned around to find, to her astonishment, that about half of her window front had been shattered and the shards blown all over her apartment, the edges jagged and razor sharp. That was when she noticed that her omnitool was blinking frantically.</p>
+        <p>Shields at sixty per cent.</p>
+        <p>Finally she understood, and a wave of fear sent a jolt of electricity through her body. She turned and hit the deck, bringing her console between herself and her attacker. In cover, she fought to calm herself. The console was one and a half meter wide and almost as tall; she was safe for the moment. Her breathing slowed a bit, and her analytical mind took hold again.</p>
+        <p>They know already.</p>
+        <p>She wanted to curse and ask how it was possible, but the answer was painstakingly obvious.</p>
+        <p>My network has been compromised.</p>
+        <p>Now Liara did curse, flinging filthy words from her mother tongue she hadn&#x27;t mouthed in decades. She looked around. Her shields were back at eighty. There was no way to know how much of the round&#x27;s power had been used up by the supposedly bullet proof glass; and therefore, there was no way to know if she&#x27;d be able to take another hit.</p>
+        <p>But she couldn&#x27;t exactly stay here, either. Liara eyed her door. It was just a couple of meters; not a lot of time to line up a shot. Completely out of the question for anyone but an absolute crack shot. Unfortunately, the Broker wasn&#x27;t in the habit of hiring cheap assassins. Still, she was confident enough in her shields and her barrier to bet her life on it.</p>
+        <p>The problem was, she still had to leave a copy for Shepard. Once she was out of here and sent her distress call, she&#x27;d have to go dark. Shepard had to be able to find the Sekat connection herself.</p>
+        <p>Liara took a deep breath, willed her barrier into being and rose up. The first shot came immediately, slamming into her barrier like a freight train. Unobstructed due to the large, gaping hole in her window, the round was powerful enough to almost strip it away completely. With trembling fingers, the feeling of impending doom an unbearable sensation between her shoulder blades, she hammered the eject. She couldn&#x27;t help but imagine the shooter loading in the next round as the drive protruted, painfully slow. The instance it was at all possible, Liara all but wrenched the disk free and threw herself to the right – not a moment too soon. Another round barely missed her, punching a hole clean through her workstation, the holo display fizzling out with a low buzz.</p>
+        <p>Crawling on all fours, she brought the remains of her window between herself and the rough direction her would-be assassin had to be in.</p>
+        <p>&quot;Dim! Dim!&quot;</p>
+        <p>Berating herself for not having this idea earlier, she watched with relief as the undamaged sections of her window front immediately became as visually impenetrable as a solid wall. She could only hope it would be impenetrable for whatever optics the shooter might have as well. Not wasting any time, Liara made her way to her locker, keeping to cover as best as possible despite the dimmed windows, and armed herself.</p>
+        <p>It was not the only place in the apartment where she kept weapons, but it was the only one where she kept what she&#x27;d need right now. With a pistol on her right hip and a collapsed submachinegun on her left thigh, she took the object she&#x27;d need to execute the last thing she had to do before she could leave.</p>
+        <p>At the foot of the stairs up to her bed, propped up in a cabinet, was a prothean relic about the size of a toaster. As extravaganza as it might have seemed in any other person&#x27;s apartment, it would not raise suspicion at all in hers. She was an archaeologist after all. Or had been, at least. It was also completely irrelevant – as in, holding this relic was not what this particular cabinet was there for. Which was why she couldn&#x27;t be seen, which was what this little gadget would allow her to achieve. Alongside keeping her alive of course, since the cabinet stood squarely in the unprotected part of her home, and Liara felt no desire to brave another round from what had to be a particularly large calibre rifle.</p>
+        <p>She primed and tossed the smoke grenade, and after three seconds, it began puffing out black smoke with a loud hiss. Through the smoke, almost microscopically small scraps of hot, glowing metal whirled, making sure the fog was as impenetrable for any type of thermal optic as it was for the bare eye. Liara waited a couple of seconds until she was certain her attacker&#x27;s sight would be obscured now, then she rushed over to the cabinet and hid the disk in the secret stash embedded within the base. As soon as she had managed that she hurried to get away while she still could, already planning her route as she went. The last thing she did before disconnecting her omnitool from all networks was to set the sending of her distress call in motion.</p>
+        <p>The final battle of her private war had begun.</p>
+    </div>
+</body>
+</html>

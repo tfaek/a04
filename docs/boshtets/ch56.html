@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 56</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch55.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html" selected>Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch57.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 56</h1>
+    <div class="chapter-content">
+        <p>The office was silent. From his spot at the window front overlooking the trading floor, Garrus had a spectacular view. The floor outside was bustling with people, most of them very obviously the kind of person that had done well for themselves and liked to show it. They were as shiny and clean as Illium itself, or at least as the image Illium liked to present. Garrus hadn&#x27;t been here before, but he knew full well that the planet was just as vicious as Omega, albeit decidedly more elegant. He turned back to the room, leaning on the glass.</p>
+        <p>Liara was as easy to read as ever; tense and anxious, though she did not break eye contact with Shepard. He understood her well – the revelation she&#x27;d just dropped on them caused conflicting feelings even in himself, and he wasn&#x27;t even the one whom she&#x27;d made that decision for.</p>
+        <p>Tali was an equally open book; even with her mask and back when he&#x27;d just gotten to know her, the Quarian&#x27;s inner working hadn&#x27;t exactly been a mystery to him. With body language as second nature and accentuated as hers, they wouldn&#x27;t have been to anyone, much less someone who saw through people for a living. She was sitting to Shepard&#x27;s left, stock still like a stature, her glowing eyes visibly peering at the woman. No doubt she was torn between hugging Liara or clobbering her with something; with both impulses overwritten by her concern for the commander, and how Shepard would take it. In the end, she&#x27;d just go along with however Shepard felt.</p>
+        <p>For a couple of moments after the Asari had finished, the woman herself barely even reacted at all; the point Liara was getting to had been clear to see for a bit before she actually got there, so Shepard had had some seconds already to get used to the thought, Garrus supposed. Examining her faced, the Turian saw neither surprise nor anger; instead, Shepard was looking at the woman who&#x27;d saved Shepard&#x27;s life with an expression Garrus had found there directed at himself before. Some of those times had followed what he, looking back, held among the few things he&#x27;d done in life that he was genuinely proud of.</p>
+        <p>Shepard regarded her with a slow, respectful nod. Then she got up, stepped over and enveloped the also rising Asari in a tight, firm hug, grinning lopsidedly. Garrus flared his mandibles; he couldn&#x27;t have blamed his friend if she&#x27;d taken it differently, but this was certainly the more productive reaction. Not to mention the fact that as much as he hated the Cerberus situation, the more Garrus thought about it, the more he came to the conclusion that some gratitude and a damn hug was the least she deserved for pulling all this off.</p>
+        <p>Still sitting in her chair, Tali relaxed and they shared a brief look. He&#x27;d been right.</p>
+        <p>They&#x27;d arrived on Illium a mere half hour earlier. Going out to test the Nos Astra waters and see Liara, Shepard had taken only Garrus and Tali with her. When they were immediately greeted by security mechs and an Asari who clearly knew who they were, Garrus had already feared the entire visit was about to go down the drain; instead they&#x27;d found their docking fee already paid and their old friend waiting for them.</p>
+        <p>In the past weeks, Garrus had spent the odd minute or two wondering how Cerberus had even gotten a hold of Shepard&#x27;s body in the first place. The idea that Liara might&#x27;ve played a role had already popped up in his mind, and seeing the odd mixture of elation and anxiety she&#x27;d been displaying since the moment they stepped through the door had brought the suspicion up again. So he was probably less surprised than the others when she eventually dropped the bomb.</p>
+        <p>Liara separated herself from Shepard and smiled widely. &quot;Goddess, I...I didn&#x27;t think I&#x27;d feel this relieved. With all that Cerberus has done, I could barely look myself in the eyes for a while.&quot;</p>
+        <p>The human shrugged. &quot;I see why you&#x27;d feel that way, but you shouldn&#x27;t. If not for Cerberus, I&#x27;d still be dead. Doesn&#x27;t undo anything they&#x27;ve done, but that&#x27;s how it is.&quot;</p>
+        <p>She sat back down, producing a data disk from one of the pouches strapped to her belt. &quot;In lieu of the partners one would prefer, you gotta arrange with the ones you&#x27;ve got. And that&#x27;s why I&#x27;ve got this for you.&quot;</p>
+        <p>T&#x27;Soni accepted the disk from Shepard&#x27;s stretched out hand and began checking it over with some arcane piece of tech Garrus did not recognize. &quot;What is it?&quot;</p>
+        <p>&quot;Data on the Shadow Broker. The Illusive Man says they&#x27;d compiled it months ago, it&#x27;s all they&#x27;ve got. They tried to find their hideout and got stuck somewhere. Allegedly it&#x27;s got something to do with extrapolated FTL vectors of unregistered ships, missing stockpiles, fuel, that sort of stuff. He seems to believe you might have the missing puzzle piece, or at least an idea where to find it.&quot;</p>
+        <p>&quot;I might, &quot; the Asari answered, already back at her desk, rummaging through the drawers. &quot;What is your goal, Shepard? Just revenge?&quot;</p>
+        <p>&quot;No. The Broker is cooperating with the Collectors...&quot;</p>
+        <p>&quot;I&#x27;m aware.&quot;</p>
+        <p>&quot;Which I know for a fact work for the Reapers.&quot;</p>
+        <p>&quot;I read Anderson&#x27;s report.&quot;</p>
+        <p>&quot;Then you know why the Broker needs to be dealt with. To make matters worse, they&#x27;re determined to take me down. On Freedom&#x27;s progress, they tried to get their hands on Tali&#x27;s brother. A couple of days ago they went after Tali herself. I&#x27;m getting worried who&#x27;s next. My aunt? You? Sooner or later they&#x27;ll succeed. We gotta put an end to this before that happens.&quot;</p>
+        <p>Liara eventually put a matte black device roughly the size of a pen on her desk and sat down behind it. &quot;You don&#x27;t have to ask me twice, believe me. But even if this stash really does contain something of value, it will take me a while to find it. And to make sense of it, once I do.&quot;</p>
+        <p>Shepard snorted. &quot;I figured as much. All the better I&#x27;ve got other things to do as well, then. You might be able to help me with some of them,too. &quot;</p>
+        <p>Liara stopped and looked at Shepard, gesturing her to continue.</p>
+        <p>&quot;I&#x27;m looking for two people. One of them is supposed to be operating here on Illium – a justicar by the name of Samara. &quot;</p>
+        <p>The Asari raised her eyebrows. &quot;You wouldn&#x27;t need an information broker to tell you that, her arrival has made quite the waves. Justicars are highly respected among my people, but they almost never leave Asari space. Their code isn&#x27;t very compatible with interstellar society, and they are somewhat strict about it&#x27;s application.&quot;</p>
+        <p>&quot;She can be as strict as she likes, as long as she kills Collectors for me. I&#x27;ve read a bit about their order. Going on a quest to defeat kidnapping bugs that serve evil machines who want to wipe us all out sounds like something I shouldn&#x27;t have too much trouble convincing her of.&quot;</p>
+        <p>Liara laughed. &quot;No, but getting her to let off whatever she&#x27;s pursuing right now could prove a bit difficult.&quot;</p>
+        <p>&quot;So you know where she is?&quot;</p>
+        <p>&quot;Not exactly...she was investigating some red sand dealing rings. I think there was a murder. It&#x27;s not exactly something I care too much about, to be frank. But I&#x27;ll forward you one of my contacts in the local police force. They will be monitoring her, no doubt.&quot;</p>
+        <p>&quot;Thanks, Liara. You&#x27;re a godsend.&quot;</p>
+        <p>She smiled again, and Garrus knew her well enough to know it was genuine, but he couldn&#x27;t help but notice that it wasn&#x27;t the girlish, overjoyed grin a compliment from Shepard would have caused in the Liara of two years past. Time had changed them all.</p>
+        <p>&quot;There&#x27;s someone else I&#x27;m looking for. Not even an idea what part of the Terminus he&#x27;s in right now, I was really just hoping you could give me a rough idea where to start.&quot;</p>
+        <p>The Asari fiddled with her notebook. &quot;Maybe, maybe not. Who is it?&quot;</p>
+        <p>&quot;Thane Krios, the assassin. The Illusive Man insists he&#x27;s the best.&quot;</p>
+        <p>&quot;I&#x27;ve heard of him...but I don&#x27;t think he&#x27;s taking jobs any more.&quot;</p>
+        <p>Shepard scoffed. &quot;I imagine he&#x27;s made enough money.&quot;</p>
+        <p>&quot;I am certain he has. You are missing the point, though. Krios retired years ago after some personal tragedy. The odd job he&#x27;s taken since seemed to be, uhm, &#x27;passion projects&#x27;, for lack of a better term. Killing some people he allegedly had history with, or who simply needed killing.&quot;</p>
+        <p>&quot;All the better. I&#x27;ve got a passion project of my own, you know.&quot;</p>
+        <p>Liara tilted her head, conceding the point.&quot;You can be very convincing, it&#x27;s true. I suppose there are some calls I could make.&quot;</p>
+        <p>Thane Krios listened. From his vantage point in the unfinished ceiling hiding behind a stack of tiles, he had eyes on Dantius, but not on the actual target. He had taken the opportunity to watch the woman and her team in action earlier, and there would be plenty more in the coming days – from up close and personal, too. Thane would have no trouble assessing the situation and setting up his move.</p>
+        <p>He listened calmly as the Asari spouted her last, angry words. He&#x27;d read up on her before the mission; she really was a nasty peace of work. Exactly the kind of person he&#x27;d been keeping himself occasionally busy with these last couple of years.</p>
+        <p>Elegantly and light footed, Thane climbed from one beam to another, coming to stand directly above her small squad of remaining mercenaries. In doing so, he pulled at the string he&#x27;d set up in the minutes prior. Several meters back from where he was now, a can of sealing gel tipped over, alerting the people below.</p>
+        <p>&quot;Check the other entrances!&quot;</p>
+        <p>One, two, three.</p>
+        <p>He dropped. The guards, following the order, had turned. One of them, a human, heard his landing; these mammals with their elaborate ear cartilages had a truly impressive sense of hearing, including it&#x27;s directional interpretation.</p>
+        <p>He crushed the woman&#x27;s larynx before she even realized what she was looking at. Her wheezing, panicked breathing as she bent over and clutched her throat alerted the others; Thane quickly shot the two standing towards Shepard&#x27;s group through the head, then spun around, dodging a kick from the last one, an Asari. He grabbed the extended leg, pulled her close and broke her neck. Then he shoved the corpse at Dantius, who had eventually managed to level her own pistol, absorbing her shot and knocking her off balance. A second later he was inside her guard, controlling her weapon with his left and pressing his own gun into her just underneath the ribcage, angled upward, and shot her through the heart.</p>
+        <p>Nassana Dantius was dead before he&#x27;d even finished laying her to rest on her console.</p>
+        <p>&quot;Nice entrance.&quot;</p>
+        <p>Thane did not look up; a Drell&#x27;s sense of hearing might not have been entirely as advanced as that of a human&#x27;s, but his implants certainly were, and so he knew not only where the voice had come from, but also what kind of person it probably belonged to: a young human woman. Still, as curious as he was to see this group, this was the time to pray. For what he had just done, but more importantly for what he was about to set out to do.</p>
+        <p>&quot;I came a long way to talk to you.&quot;</p>
+        <p>The woman herself. Thane answered. &quot;One moment. Prayers for the wicked must not be forsaken.&quot;</p>
+        <p>&quot;You really think she deserves that?&quot;</p>
+        <p>&quot;Not for her. For me.&quot;</p>
+        <p>Thane had always thought that the best way to lie was to not lie at all, but to instead speak the a truth, the actual meaning of which was best hidden beneath layers of context and omission the specific listener would never be able to pierce. And it really was true; Thane had played the part of the double agent before, but rarely had a deception been anywhere near as magnificent as the one he was about to try, and the people he had done it to had usually deserved their fates. Shepard was a woman whom Krios, after a thorough study of the material on her the Broker had supplied him with, genuinely respected; the commander truly did not deserve the role Thane had devised for her.</p>
+        <p>But the reward that this collaboration with the Broker promised was simply too great.</p>
+        <p>&quot;The measure of an individual can be difficult do discern by actions alone. Look at you, for instance. All this destruction, chaos.&quot; It was time to steer the conversation away from himself and onto the reason Shepard had come. &quot;I was curious to see how far you would go to find me. Well, here I am.&quot;</p>
+        <p>He looked up and straightened; it appeared the commander had forgone bringing her entire entourage on this mission. He could see the unmistakable, scarred faces of Garrus Vakarian and Zaeed Massani, the lithe form of the Quarian Zorah, and the young human had to be the powerful biotic he&#x27;d been briefed on. There was also a curiously equipped Asari he did not recognize – as in, she wasn&#x27;t equipped with much at all. Even her suit hardly looked like something to be worn in combat. She wasn&#x27;t a maiden anymore, either. Not an encouraging sight for any potential opponent who had their wits about them - from experience, Thane knew to assume an old Asari&#x27;s actual power to be all the greater the less they bothered with conventional weaponry.</p>
+        <p>&quot;How did you know I was coming at all?&quot;</p>
+        <p>&quot;I didn&#x27;t. Not until you marched in the front door and started shooting.&quot;</p>
+        <p>That was a bold faced lie, of course. Thane suspected that the entire reason the Broker had chosen to hire him was that his name was on the list of potential recruits Shepard had gotten from the Illusive Man. The commanders appearance on Illium had been a welcome opportunity, especially with a high profile &#x27;target&#x27; like Dantius readily available. And just about a hundred more of her ilk scattered throughout the planet, of course.</p>
+        <p>&quot;Nassana had become paranoid. You saw the strength of her guard force. She believed one of her sisters would kill her.&quot; He threw Shepard a glance. &quot;You were a valuable distraction.&quot;</p>
+        <p>The human snorted. &quot;Let&#x27;s cut to the chase. I need you for a mission.&quot;</p>
+        <p>&quot;Indeed?&quot;</p>
+        <p>&quot;Are you familiar with the Collectors?&quot;</p>
+        <p>&quot;By reputation.&quot;</p>
+        <p>&quot;They are working for the Reapers, abducting entire human colonies. Freedom&#x27;s Progress was their handiwork, same for Horizon and more than a dozen others.&quot;</p>
+        <p>&quot;I see. And the Reapers are also involved? I read about your reports. Quite the controversial material.&quot;</p>
+        <p>&quot;I&#x27;ll be happy to introduce you in depth, believe me.&quot;</p>
+        <p>Thane nodded. The Broker hadn&#x27;t mentioned anything explicit about the Reapers, other than Shepard&#x27;s obsession with them, and Krios was more than curious to hear it from the woman herself. Even he, a quite well informed man, had only been able to catch fragments of what exactly had transpired two years ago, behind the scenes of the battle of the Citadel and the famed hunt for Saren.</p>
+        <p>&quot;Attacking the Collectors would require passing through the Omega 4 relay, would it not? No ship has ever returned from there.&quot;</p>
+        <p>&quot;They said nobody could find Illos, either.&quot;</p>
+        <p>Thane nodded, conceding the point. He found himself liking this woman. Shepard had the right kind of attitude for what she was doing, so much was certain.</p>
+        <p>&quot;You have built a career on achieving the impossible, it is true.&quot;</p>
+        <p>Thane stepped forward, taking in the sights of the sprawling megacity far below.</p>
+        <p>&quot;This was to be my last job. I&#x27;m dying.&quot;</p>
+        <p>Thane had always been very aware of the distinct possibility that he might not grow old. He&#x27;d imagined a quicker, more violent end though, and that was what he&#x27;d made his peace with. The prospect of succumbing to an illness after months or years of infirmity, with his oaths unfulfilled, had driven him up the walls. It had been part of why he&#x27;d gone after people like Dantius – doing something was better than nothing. By the time the Broker called, Thane had almost been at the point of resorting to a desperate gamble just so he wouldn&#x27;t have to go out without having tried at least.</p>
+        <p>&quot;Low survival odds don&#x27;t concern me. Your colonists do. I will work for you, Shepard. Free of charge.&quot;</p>
+        <p>They shook hands like honest people; and it wasn&#x27;t entirely a lie. After all, he would work for the Commander, and hard. It just wouldn&#x27;t be for free.</p>
+    </div>
+</body>
+</html>

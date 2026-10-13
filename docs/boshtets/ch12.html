@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch11.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html" selected>Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch13.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 12</h1>
+    <div class="chapter-content">
+        <p>Tali stood at her workplace in engineering, it was half way through first shift, which meant that it was just about noon in the ships internal twenty four hour cycle, which was apparently synchronized with the city of Toronto on earth, the human home planet, where the System&#x27;s Alliance had their capital – while Arcturus station was the seat of parliament and government, a space station was hardly a good fit for a capital city, at least any space station that wasn&#x27;t the Citadel. It was the second day of the planned three day shore leave, and most of the crew was out and about in the wards, but at least a skeleton crew had to remain at all times, and as far as engineering was concerned, for today&#x27;s first shift, that was her and Adams. She liked working with the early-middle aged man; he was a good teacher and had acquainted her with all the Normandy&#x27;s systems at lightning speed, and while he wasn&#x27;t as interesting to talk to as Shepard, she still enjoyed listening to him tell her about his children and the things his wife lamented they got up to in his absence.</p>
+        <p>She was about to open her mouth to make a suggesting about using the shore leave to take apart the casing of the second starboard engine and finally fix that minor fluctuation in it&#x27;s heat routing towards the banks, when she heard the door to the cargo hold open and a very familiar step entering their domain, followed shortly after by the associated voice.</p>
+        <p>&quot;Mornin&#x27; , Adams.&quot;</p>
+        <p>The Lieutenant chuckled. &quot;Good morning, Ma&#x27;am.&quot; He left his console be and turned around, grinning at Shepard. &quot;You do realize it is 1200, don&#x27;t you Commander?&quot;</p>
+        <p>Her captain return the grin tiredly and scratched the back of her neck, groaning at the movement. Tali failed to contain a short giggle, and Adams, while remaining respectfully reserved, was obviously quite amused too. Shepard, Wrex and the boys had taken it a bit too far last night, and it looked like she was paying the price now, the skin under her eyes darkened, a sign she had learned to associate with a lack of sleep in humans.</p>
+        <p>&quot;I woke up half an hour ago, so I say it&#x27;s morning. My ship, my rules.&quot; At this, Adamn snorted once, but relented and turned to get back to his station, stopping when Shepard addressed him again. &quot;Think you can lend Tali to me for a couple of minutes, Adams?&quot;</p>
+        <p>The smirk returning to his face, the chief engineer nodded. &quot;I think I&#x27;ll manage alone for a while, Ma&#x27;am.&quot;</p>
+        <p>Having expected that answer since they weren&#x27;t really doing anything big or urgent right now, Tali had already turned around and closed half of the distance from her workplace to where Shepard was standing. &quot;Hey, Shepard. What&#x27;s up?&quot;</p>
+        <p>Shepard turned herself towards her and adopted a cheeky grin. &quot;Oh, you&#x27;ll see. It&#x27;s a surprise.&quot; With that, she got going towards the exit, leaving Tali with not much choice but to hurry after her.</p>
+        <p>&quot;A surprise? What have you done again, Shepard?&quot; , she tried to tease her, while scouring her brain for what Shepard was talking about. Was it simply going to be Garrus waiting on the other side of the door, ready to scare her? After last night&#x27;s drunken debauchery, she wasn&#x27;t so sure if she&#x27;d put something like that past a shore-leave Shepard, immature or not. Or had Shepard perhaps...keelah, she couldn&#x27;t have bought something again, could she? Tali&#x27;s equipment was top notch, the armor was in good condition, and Shepard had said herself that her shotgun was &#x27;pretty damn neat&#x27; . In way of an answer, the woman only chuckled to herself, leaving her to speculate, until they finally stepped into the bay, where Shepard lead her over to Wrex&#x27;s side, to an empty spot next to the starboard engineering door that wasn&#x27;t being used to stow crates or gear. It had been like this for the entire time she had been here, and had served as a sparring place more than once, including that one terribly embarassing time where Shepard wanted to try out if Quarian kicks were what everyone made them out to be and had ordered her to give Shepard a shot to the ribs. The stupid bosh&#x27;tet had, when she thought no-one was looking, winced with every movement for two days.</p>
+        <p>Now, it was being occupied by two boxes, one much longer than deep and wide, the other almost a cube, and a third one, somewhere in the middle.</p>
+        <p>&quot;Shepard...?&quot; She had given up on guessing at this point. Shepard still didn&#x27;t answer her question, choosing instead to walk over to the boxes and start opening one. Fine, if she wanted to savor this, Tali would let her, and so she leaned against the bulkhead, crossing her arms over her chest doing her best trying to look uninterested – but she had little faith in herself doing a good job of it, since as much as she knew that was what Shepard wanted to see, she simply couldn&#x27;t stop herself from at least subtly bouncing on her toes from the anticipation. Shepard was many things, but boring or unimaginative wasn&#x27;t one of them, and whatever she had come up with now was promising to be interesting.</p>
+        <p>By now, Shepard had opened the long box and laid it&#x27;s contents out on the floor, a number of poles, metal angles and screws, and was getting to the second one. Garrus,looking surprisingly good, though that might have been just her having little experience with how a hungover turian was supposed to look like, approached and appraised the commander with a skeptic look before shooting a questioning glance at her, which she could only answer with a shrug. Seconds later, the box came open and Shepard hunched over it, grabbing something inside with both hands and shaking, slowly but surely loosening the traction the object and the box had on each other before finally yanking it out.</p>
+        <p>It was a cot. &quot;A...bed?&quot; Shepard ignored her question, looking up only shortly to , to her evident satisfaction, see Tali standing closer now, still in apparent confusion, before grinning widely and getting to folding the thing apart. Finally, she put it down and plopped down on it, the bed squeaking a little at the sudden weight.</p>
+        <p>&quot;Shepard, please! What is this?&quot;</p>
+        <p>Her grin lost it&#x27;s cockiness and morphed into a simple, warm smile. &quot;Your new bed.&quot;</p>
+        <p>&quot;B-but...I don&#x27;t need... I mean, the pod is great, and even if it wasn&#x27;t, it wouldn&#x27;t be proper-&quot;</p>
+        <p>&quot;The pod isn&#x27;t fine Tali, it&#x27;s been close to three months and you&#x27;re still not sleeping properly. This spot is perfect, it&#x27;s free and close enough to the drive core for you be able to hear it and be comfortable.&quot;</p>
+        <p>She was at a loss for words for a while, wringing her hands furiously as the human in front of her simply watched her, Shepard&#x27;s face betraying her amusement, and Garrus felt much the same, judging by the low chuckle escaping him. &quot;Th-thank you, Shepard...really...&quot; she looked about, somewhat confused. &quot;But it&#x27;s a little...public, isn&#x27;t it?&quot; She felt terrible complaining about this incredibly generous gift, but their sleep was one of the few activities where any Quarian could expect, and was used to, some privacy, and the thought of trying to sleep here in the cargo hold just like that, with the third shift people passing through and seeing her curled up and unconscious was immensely uncomfortable. &quot;I-I&#x27;m sorry, Shepard, this is so nice, I don&#x27;t mean to...&quot;</p>
+        <p>Shepard simply snorted and got back up, gesturing towards the poles on the ground. &quot;Calm down Tali, you are right. Which is why the surprise encapsulates more than just the bed. That down there, is your new room. Or cubicle, to be more precise.&quot;</p>
+        <p>She felt like passing out. &quot;Wh-what!? But Shepard! I can&#x27;t ha- it isn&#x27;t right! I don&#x27;t deserve-&quot;</p>
+        <p>&quot;Jesus Christ, Tali. I&#x27;m the acting captain, I say who deserves what, and I think that everyone on my ship deserves a proper damn sleeping place, and at this point I&#x27;ve come to the conclusion that the pod&#x27;s just don&#x27;t do it for you. Besides, it&#x27;s going to be really small, pretty much just a screen around the bed. &quot; She nodded towards the last box. &quot;Come on, open that one yourself.&quot;</p>
+        <p>With trembling fingers, equally giddy about and horrified of what might be in store for her now, she got out her boot knife and opened the box, putting aside the cover to reveal...something very familiar to her, the swirling wave pattern of clan Zorah embroidered on a purple field. It stretched out across a large, folded stack of cloth, metal rings worked into the edge on one side of the fabric.</p>
+        <p>Keelah...she didn&#x27;t...</p>
+        <p>Shepard bent down and gripped the cloth, pulling it out of the box and unfolding it with some flicks of her elbows, revealing it to be a veritable carpet, larger than that even. &quot;Tali , meet your new walls.&quot; She gestured towards the poles on the floor. &quot;You won&#x27;t have a proper door, but it&#x27;s essentially the same. Like a shower curtain, just as a room.&quot; She gave her one of her lopsided grins, and Tali noticed her fingers were doing their thing in front of her waist again.</p>
+        <p>&quot;Sh-Shepard, I...I don&#x27;t know what to say...&quot;, she shook her head. &quot;This is the nicest thing anyone outside of the flotilla...no, this is the nicest thing anyone except my mother has ever done for me, period. Thank you. But...I can&#x27;t accept this.&quot; She saw Shepard frown. &quot;It&#x27;s just not fair, Shepard. I-it&#x27;s not everyone else&#x27;s fault that I don&#x27;t sleep very well, this...this is...it&#x27;s a warship, nobody has a room to themselves. It&#x27;s preferential treatment. I-I don&#x27;t deserve that, and I don&#x27;t want to...&quot; She had cast her head down towards the end, feeling terrible about having to turn down such a generous and well thought out gift.</p>
+        <p>Shepard sighed, stepped in front of her, and put a hand on her shoulder. &quot;Tali. Everyone is getting gifts from me this shore leave. You&#x27;re all getting Spectre grade weapons later today. Assault rifles for me and Ashley, SMGs for Liara and Kaidan, a marksman rifle for Garrus - &quot; she could see the Turian&#x27;s eyes light up and his mandibles flare in the corner of her vision – &quot; and pistols for everyone. I&#x27;ve got some money to spend. Courtesy of that volus, Barla Von.&quot; Shepard smirked, somewhat sheepishly. &quot;It&#x27;s not like I wasn&#x27;t already wealthy before becoming a Spectre, but between that guy&#x27;s investment skills and the salvage from some of our operations it has been piling up. You&#x27;re getting only a pistol because honestly, your shotty is a piece of art, so this here...&quot; she gestured around the area that was to become Tali&#x27;s &#x27;room&#x27; - &quot; is just peanuts compared to what I&#x27;m spending on some of the others. If you absolutely have to know.&quot;</p>
+        <p>She nodded several times in quick succession, her fingers wringing furiously from her complete embarassment. Of course she thinks of everyone, that what she&#x27;s like, how could I even think...keelah...</p>
+        <p>&quot;Y-yes Shepard, I suppose that&#x27;s fair...I...keelah, this is so embarassing.&quot; She hit or hand on her mask trying to palm her face as had been happening more than once lately since she had been picking up some gestures from all the humans around her. Not sure what to do with her hands now as she really didn&#x27;t want to continue wringing them together, she just stood there for a moment, looking at Shepard, who was still just standing there with an amused, but warm expression on her face, and then back towards the large cloth with her color and pattern on it , a question forming in her head. &quot;Where did you even get this, anyway?&quot;</p>
+        <p>&quot;Easy, snuck a picture of your hood and sent it to a tailor on the Citadel. Been lying around there waiting for pickup for a while now.&quot;</p>
+        <p>The tiny voice in the back of her head pointed out that this meant that Shepard&#x27;s justification about everyone getting presents didn&#x27;t hold up anymore, but that ship had already entered FTL. The embarassment had begun to be replaced by sheer amazement. &quot;Keelah, a bed and a room! It&#x27;s just like home, too, you know? On the flotilla, we make the rooms out of cloth, too. Makes it easier to rearrange and move. Cheaper, too.&quot;</p>
+        <p>Shepard snorted. &quot;I know, Tali. You explained that one before.&quot;</p>
+        <p>&quot;Sorry...&quot; , she said, slightly embarassed again, but the negative feeling failed to take proper hold as she watched Shepard, with the help of Garrus, get started at installing the poles that would make up the suspension for what would soon be her cubicle. A piece of home out here on her pilgrimage.</p>
+        <p>&quot;Shepard, I...I know you don&#x27;t think this is such a big thing, but it really is. I don&#x27;t know what you say, honestly, except thank you.&quot;</p>
+        <p>Shepard turned around and just smiled that lopsided grin of hers, though without humor this time, just warmth. &quot;That&#x27;s quite alright.&quot;</p>
+        <p>…...</p>
+        <p>Jane closed the door behind herself and slumped against it, finally relaxing, groaning from the pain the movement sent trough her battered ribs. The firefight against the pirates they had intercepted and boarded today had turned out tougher than expected, with the criminals having several quite powerful Asari biotics in their ranks. Her team had eventually prevailed, of course, wiping the pirates out to the last – two of them had tried to surrender, but Wrex hadn&#x27;t cared, and quite frankly, while she would&#x27;ve taken them prisoner herself, Shepard didn&#x27;t deem scum like this worth the effort of starting an argument with the Krogan. However, before they had died, one of the biotics had managed to slam a heavy crate into her chest at high speed; as Dr. Chakwas had just confirmed, nothing was broken, but that was solely thanks to her armor, and she felt like a ruin. Stifling another sound of pain, she got her shirt off and let it drop to the floor carelessly, the rest of her clothes following soon after, her mind bent on getting to the bliss of her shower as quickly as possible.</p>
+        <p>A minute later she was standing with her forehead against the metal wall, letting the warm water rinse over her, once more incredibly thankful for the fact that she, being a captain now for all intents and purposes, had her own shower. However, being on a ship, one couldn&#x27;t indulge themselves like this too much; after all, the water supply was limited. So she willed herself to straighten up, stop the water, and begin soaping herself, hissing when her hands passed the large hematoma on her left ribcage. She looked at it, for the first time actually, as so far only Dr. Chakwas had had a an actual visual look at it, scanners doing most of the work of confirming that nothing was broken. She grinned to herself, thinking about how good it was that Tali hadn&#x27;t seen it, she had already been worried enough when she had noticed that Shepard had been hurt. During the mission itself, she hadn&#x27;t given any indication of it that she could think of, but the girl was ridiculously perceptive when it came to these things.</p>
+        <p>Tali. The thought of her favorite Quarian made her cringe again, annoyed at what an idiot she was. When she had woken up the next &#x27;morning&#x27; after their trip to Flux a couple of days ago, she had immediately remembered Tali&#x27;s dancing, and her staring, and had spent about a quarter of an hour just lying in her bed trying to understand the whole thing. In the end, it had really been more of a matter of admitting it to herself than of actually understanding it – she was a damned fool, and had developed feelings for a teammate. Given how attached she had gotten to this team – something she hadn&#x27;t planned, but certainly wasn&#x27;t going to try and change now, it was what it was, and she would live with the eventual downsides of it – this probably shouldn&#x27;t have been as much of a surprise to her. She was a woman after all, and Tali was, despite of how fierce she could be, a sweet girl at heart, and they really had spent a ridiculous amount of time together over the past months. Again, not something she had planned that way. In a way, her present, Tali&#x27;s &#x27;room&#x27;, had been both a blessing and a curse because of this. At the time of her initial realization, she had been conflicted, since giving Tali what was, as she refused to not think of at least a little smugly, a bloody awesome gift, wasn&#x27;t exactly going to be conductive to what she knew she had to do – distance herself from her a little in a way that would help her come to her senses without giving her the cold shoulder she did not deserve. In the end it had turned out brilliantly, since her idea with the room had actually worked, and Tali appeared to sleep much better now; in fact, she hadn&#x27;t seen her at all in the last couple of nights, and while she definitely had caught herself missing her company, it was better this way, both for her to straighten her stupid head out, and for Tali, too. Both because after all, she really did deserve proper rest like everyone else, but also because the last thing Tali needed was her, as Tali insisted Captain, trying to take a good friendship down an entirely different road. She didn&#x27;t even want to start imagining what kind of social faux pas this probably was in quarian culture. Well, perhaps there was one good thing at least about the Quarian immune system – if she was being like this without even being able to see Tali&#x27;s face, she&#x27;d probably have been head over heels by now if she could.</p>
+        <p>Grinning mirthlessly at her own stupidity, she dried herself off and got to gathering together the dirty laundry and preparing a clean uniform for when she would get up, before getting into bed. She&#x27;d write that report later.</p>
+        <p>Not nearly enough time had passed when she was abruptly awoken by Joker&#x27;s voice coming over the intercom.</p>
+        <p>&quot;Commander , Admiral Hackett is waiting to speak to you in the comm room. Priority five. I already have the Normandy on course to our mission, Ma&#x27;am.&quot;</p>
+        <p>Shepard had been almost completely awake by the time Joker had finished saying &quot;Admiral Hackett&quot;, and any residual drowsiness instantly vanished when she heard the words &quot;Priority Five&quot;. Whatever was going on, there were going to be thousands of lives at stake and it was happening soon. Her concern had only grown further when the pilot told her that they were already on course – while giving the pilot of someone else&#x27;s ship direct orders was certainly within the power of an admiral, it was only ever done in order to humiliate a captain – or in moments of the most extreme urgency.</p>
+        <p>Having dressed herself with the frantic efficiency of a seasoned soldier, she squeezed herself trough her door as it opened and sprinted up the stairs to the CIC, taking two steps with every stride. Barely a minute after being woken up, she came to a halt in front of the comm room&#x27;s big screen, on which Hackett was already waiting. She saluted, as she always did for the old man even though she technically didn&#x27;t have to anymore, and Hackett returned the salute, but did so even quicker than usual.</p>
+        <p>&quot;Shepard, &quot; he said, abandoning even the low amount of formality he was known for, &quot; there is a situation developing in the Asgard system. You&#x27;re already in the cluster and can make it there in just under three hours. Noone else is close. &quot;</p>
+        <p>Jane frowned. &quot;Asgard...Terra Nova. Is the colony in danger, Sir?&quot;</p>
+        <p>The older man&#x27;s face was a mask of stone as usual. &quot;Half an hour ago, the communication to a research asteroid in the system was lost, asteroid X57. The problem is that this asteroid is mobile.&quot; His eyes left whatever they had been reading and transfixed Shepard. &quot;And it has adopted a collision course with Terra Nova.&quot;</p>
+        <p>Shepard&#x27;s eyes widened. &quot;How big is this asteroid exactly, Sir?&quot;</p>
+        <p>&quot;Bigger than the one that took out the dinosaurs. And it&#x27;s going to hit just a couple thousand kilometers away from the main colony. There are four million people living down there.&quot;</p>
+        <p>Jane&#x27;s stomach fluttered for a second; the dimensions of this mission that she had been woken up to so rudely were staggering. But within a second, she fought it down, as she always did. Not a good time to get wet feet. &quot;How do I stop it, Sir? What do we know about the situation on the asteroid?&quot;</p>
+        <p>&quot;Absolutely nothing. The loss of communications wasn&#x27;t even reported to the Alliance until ten minutes later, when the thing changed it&#x27;s course. The controllers thought it was just a technical issue.&quot; The admiral sighed. &quot;Can&#x27;t blame them, really. Bottom line is, we know nothing. Except for how to fix it. The asteroid is being propelled by three fusion torches the scientist installed. You need to capture them and use them to change course. I do not assume that you need to be lectured on what happens to a moving object in space, Commander, so I will trust that you understand that capturing these torches intact is of the greatest importance.&quot;</p>
+        <p>Again, Shepard simply nodded. She would need technical expertise on this one to figure out how to change the course...good thing she had Kaidan and Tali with her. To the general, she simply said, &quot;Understood, Sir. If that is all, I&#x27;ll go and make ready.&quot;</p>
+        <p>The older man returned the nod curtly and sat back in his chair. &quot;Good. We are currently scrambling to evacuate the colony as much as possible, but with no actual navy assets in system, you can imagine how many people we will be able to save that way. There is no alternative to that asteroid being diverted, and I have not a shred of doubt that you will accomplish the task. Now go and save four million lives, Commander. Hackett out.&quot;</p>
+        <p>The connection cut and Jane took one deep breath. Four million lives. Then she exhaled and turned around, striding towards the exit with purpose. There was work to be done.</p>
+    </div>
+</body>
+</html>

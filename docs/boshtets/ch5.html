@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch4.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html" selected>Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch6.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 5</h1>
+    <div class="chapter-content">
+        <p>Tali finished her last assignment from Adams, reported to him, and then made her way towards the Cargo hold, nervously wringing her hands. She wasn&#x27;t sure what Urdnot Wrex wanted from her.</p>
+        <p>After their unsettling find on Edolus yesterday, the Normandy was now one day out from their new target in the Century System of the Hawking Eta Cluster. Some ex- alliance officer had apparently gone off the rails and now lived a life as the leader of a community of radical biotics. Kaidan had told the group some things about how human biotics had been treated in the past, with more than a bit of bitterness involved, so Tali could understand that some of them wanted to get away from the alliance and to be left to themselves. However, two Alliance negotiators had gone missing, presumed killed, and that could not be overlooked. But this was not what was on Tali&#x27;s mind. What was on the young Quarian&#x27;s mind was the fact that this &#x27;morning&#x27; , Shepard had ordered her to report to Wrex after her shift in engineering for some &quot;training&quot;. So Tali had spent her entire shift wondering with no little amount of trepidation what training with a Krogan would look like. She opened the door to the cargo hold and, after a short moment of hesitation, made her way over to Wrex, who was already looking in her direction with one of his big, red, alien eyes.</p>
+        <p>&quot;Quarian. Come &#x27;ere. &quot; Tali made way to follow his demand, but then that little voice in the back of her head acted up again. Shepard says you shouldn&#x27;t get used to this.</p>
+        <p>&quot;My name. Is. Tali.&quot;</p>
+        <p>He just laughed. &quot;I know! Good answer. You have fire, young&#x27;n. Just needs to be stirred up a little. All part of training.&quot;</p>
+        <p>He pushed himself off the wall he was leaning against and stood up to his full size. He really was a giant. With 172 centimeters, Tali was tall by Quarian standards, but in front of him she felt like a child. Don&#x27;t show it. So she put her chin up and feigned confidence. &quot;Shepard said you want to teach me something?&quot;</p>
+        <p>He nodded. &quot;Shotguns. You&#x27;re crafty with &#x27;em. Your marines trained you well. But there&#x27;s still things you don&#x27;t know. When you spend a couple of centuries doing dirty work across the galaxy, you pick up a couple of tricks along the way. And I&#x27;ll show &#x27;em to you.&quot;</p>
+        <p>&quot;Wh-why me?&quot;</p>
+        <p>&quot;Because you&#x27;re the one here who&#x27;s good with a shotgun. The Turian over there is too scared to get close - &quot;</p>
+        <p>&quot;Hey! I heard that!&quot; , came the muffled protest from somewhere under the Mako.</p>
+        <p>&quot;I&#x27;m counting on it, Vakarian!&quot; came Wrex&#x27;s response, but it didn&#x27;t sound angry. Tali had noticed that the two of them seemed to be building some sort of positive working relationship. It was mostly founded on insulting each other, so she didn&#x27;t really get it, but it worked for them. And Garrus wasn&#x27;t thatbad. He was insufferable most of the time, but he had apologized to her for what he had said about her people the other day, and he appeared to mean most of what he said in good fun. Tali could tolerate him. Meanwhile, Wrex continued. &quot;That squishy Asari we picked up would break her arm if we tried to give her a real gun. Williams back there swears on her rifle. Alenko tries to stick to his pistol so he doesn&#x27;t strain himself too much for his biotics. And Shepard already knows everything there is to know about shotguns. Now come on.&quot;</p>
+        <p>He opened his locker and gestured Tali to do the same. After getting out his gigantic shotgun, he walked to the middle of the hold and waited until she was next to him. &quot;Good, you already got it turned off. What I&#x27;m gonna show you...&quot; He noticed the engineer&#x27;s wide eyed stare at the absolute cannon in his hands. &quot;Like it? Too bad. This one here is for Krogan only. If any of you tried to shoot this, it&#x27;d break your arm. Illegal too. Hehe. Now. I&#x27;ll show you how to fire two shots at once.&quot;</p>
+        <p>Tali&#x27;s interest was peaked immediately.&quot;Two shots at once?&quot;</p>
+        <p>&quot;Yes. It&#x27;s easy. You just unfold the gun normally. It&#x27;s gonna shear off a load of pellets from the ammo block to be ready to fire. Now you could fire a round, then pump to shear off the next batch of pellets, and then fire a round again. But what you can do instead, is just pump the rifle without having fired. Now you have twice the amount of pellets in the chamber. When you fire the gun now, it will generate twice the heat which of course means you&#x27;ll come closer to overheating, but with the pellets fusing together &#x27;cuz there&#x27;s more of &#x27;em than there are supposed to, you&#x27;ll not only shoot more down range, but a lot of it will have more juice to it. It&#x27;s a good way to end a fight with just one shot, or to combat armor if you&#x27;re stuck on a shotty that doesn&#x27;t have slugs. Which would be most of the shotguns non Krogans use. It&#x27;s not ideal; better use a heavy pistol against armor, or a rifle. But in a pinch, it&#x27;s okay. &quot;</p>
+        <p>Tali was completely enraptured by the technical aspects of what he was explaining now. &quot;Yes, I can see that working...if pellets fused together, they have more mass, like little slugs...&quot;</p>
+        <p>&quot;Exactly. Just don&#x27;t miss, &#x27;cuz if you do, you&#x27;re standing there with a damn near overheated gun in your hands and nothing to show for it.&quot;</p>
+        <p>&quot;Obviously.&quot; She lowered her gun. &quot;Well, I&#x27;ll have to try that out on the next mission, or if that happens before, when Shepard takes us to a shooting range. But, I have to say...that gun you have is ...interesting. Can I see it?&quot;</p>
+        <p>The old Krogan laughed. &quot;Be my guest. It&#x27;s a Claymore. Human design made specifically for Krogan, and if there&#x27;s one thing we Krogan really know how to appreciate, it&#x27;s big guns.&quot; His enthusiasm died down for a moment, and he grumbled to himself. &quot;About the only thing we&#x27;re appreciating these days...anyway. It&#x27;s obviously too big for all of you squishies, but that&#x27;s not even the best thing.&quot; He flipped a switch. &quot;This thing can fire either buckshot or slugs. 21 milimeter slugs. Not from an ammo block, obviously. Have to lug em around in magazines and reload manually. And not as accurate as rifles. But it&#x27;s worth it. Outside of strong biotics, shielded vehicles like those armatures we met on Therum, or a damn thresher maw, I&#x27;ve yet to meet the thing that doesn&#x27;t go down from just one of these.&quot;</p>
+        <p>Tali was impressed. &quot;It&#x27;s so simple, but effective. It&#x27;s like a handheld cannon...no wonder the Turians didn&#x27;t know how to help themselves in the rebellions except for - &quot; She jolted as she realized she had been about to bring up the genophage to a Krogan.</p>
+        <p>Oh keelah, what did you just say!?</p>
+        <p>Wrex just laughed, but there was no mirth in it. &quot;Yeah. The Turians would agree. Good thing you can always just sterilize your opponent, ain&#x27;t that true, Garrus!?&quot;</p>
+        <p>Muffled curses from underneath the Mako. These two really were strange together.</p>
+        <p>Wrex turned one of his eyes back to me. &quot;Now, young&#x27;n. Training&#x27;s not done yet. Put that gun away.&quot; Tali obliged, and he too stowed his one into his locker. Then they returned to the middle of the hold.</p>
+        <p>&quot;Now. Got any experience in hand to hand ?&quot;</p>
+        <p>&quot;No? I mean...I was taught the basics of self defense before I left the fleet...I know how to do a proper kick...but aside from that...&quot;</p>
+        <p>He nodded. &quot;Gotta make use of what you have.&quot; He looked down over my body. &quot;You&#x27;re a fit one. Strong legs. Good. Now put those to the test, show me your technique. Kick me.&quot;</p>
+        <p>&quot;I-I don&#x27;t know, I don&#x27;t want to - &quot;</p>
+        <p>&quot;Girl. You&#x27;re not going to hurt me. Just take care you don&#x27;t hurt yourself.&quot;</p>
+        <p>He just stood there expectantly, so Tali took two steps back, remembered what her training, what she had done to that Turian in the alleyway on the Citadel, and went for it, turning with the left foot as a pivot and slamming the right one into the plate protecting Wrex&#x27;s abdomen. He swayed ever so slightly backwards before stabilizing himself and grumbling approvingly. &quot;Good. Might have actually felt that if I wasn&#x27;t wearing armor. Which is all you can really expect from kicking a Krogan. A Turian would be lying on the ground now.&quot; His lips spread in a toothy grin. &quot;But you already know that.&quot; She blushed a little,embarassed by the compliment for violently killing someone. Tali didn&#x27;t feel guilty, but still, it felt strange being responsible for the death of a sentient being, and it wasn&#x27;t something she was as comfortable with as the old mercenary obviously was. Which made a lot of sense, of course.</p>
+        <p>&quot;So think wisely the next time you&#x27;re about to make her angry, Vakarian!&quot;</p>
+        <p>Garrus finally crawled out from underneath the Mako and whatever he had been doing there. &quot;I imagine this is what Krogan fathers do with their little girls, teaching them how to shoot and kick things. It&#x27;s cute, honestly. Wrex, I can really picture you as her dad, or perhaps her uncle.&quot;</p>
+        <p>Now Tali was just getting more embarassed.</p>
+        <p>&quot;Oh, I like that one. So behave yourself Vakarian. If you make my new niece angry, I&#x27;ll kick your ass.&quot;</p>
+        <p>Garrus feigned terror. &quot;Oh please no. Please don&#x27;t hurt me, Uncle Urdnot.&quot;</p>
+        <p>Before Wrex could respond, the hold was filled with Ashleys laughter. The gunnery chief had seemed a little more friendly to us non- humans the last couple of days, especially to Tali, but this was still a surprise for the Quarian.</p>
+        <p>&quot;Oh please Wrex, don&#x27;t hurt him...too bad. You two are my entire entertainment down here, I don&#x27;t want him to sulk and no longer talk to you because you hurt his pride.&quot;</p>
+        <p>Now even Tali started giggling, and Wrex soon joined in with the deep, rumbling chuckling of his own. So Garrus just climbed on top of his vehicle and presented his talons to them all in a turian gesture that probably meant nothing polite.</p>
+        <p>&quot;Well then, niece. You can kick, that&#x27;s good. I&#x27;m not the right one for you to train punches with, you&#x27;d just break your fingers. “ Tali raised a hand to object, but he cut her off. “Yes, I know Quarians have armored digits. Still gonna break hitting armor full force, believe me. And I&#x27;m not stripping here. Wouldn&#x27;t want the other guys to develop feelings of inadequacy, after all. So we&#x27;ll train movement instead...try to keep kicking me. Without me swooping you off the ground and putting you on my hump until you beg me to let you down again.&quot;</p>
+        <p>So they went on training. Wrex moved slow, much slower than what Tali knew he was capable of, but it was still hard to not get caught while also finding the time to deliver some kicks with decent technique. It was good training though, towards the end of the hour Tali was already much better at kicking from positions that were not the basic guard she had been taught on the flotilla. When the hour was up, the Krogan suddenly moved very quick and scooped his &#x27;niece&#x27; up from the floor as if she weighed nothing. Tali found herself sitting on his hump, trying to keep her balance as Wrex raised his arms triumphantly and roared his victory cry. Ashley just about lost it, and Garrus looked very amused , too; and their fun only got better when Wrex began to stomp towards engineering and the Quarian on top of him had to desperately cling to his armor in order to not fall off. &quot;Wrex! Where are you going!?&quot;</p>
+        <p>He just laughed. &quot;To engineering of course. I&#x27;m sure they&#x27;ll find the sight of you like this very entertaining...&quot;</p>
+        <p>&quot;Oh keelah...&quot;</p>
+        <p>Ten hours out from the next mission, the ship was in FTL on autopilot. Joker was bored. Being in FTL was nothing unusual for a pilot of course, so they all had their methods to keep themselves occupied in ways that allowed them to still snap back to action in the blink of an eye if needed. Most of the time Joker just played Galaxy of Fantasy. But today he just wasn&#x27;t really feeling it. He had already read all the news articles he had downloaded before entering FTL, too.</p>
+        <p>Well, he could think of one thing...</p>
+        <p>Jeff went into his personal files and scrolled through, spending some minutes deciding on the right video. After all, he had time. Imagine you&#x27;re sitting in a fancy restaurant; yes you could just take the first entry on the menu and it will probably be alright, might even be good. But why not take your time choosing something that really tickles your fancy that day. He finally settled on one he actually hadn&#x27;t watched in a while...skip all the useless &#x27;plot&#x27;...and play.</p>
+        <p>The loud moans of a woman filled the cockpit. Joker slammed down on the mute button, but not before hearing a horrified: &quot;Joker!&quot; The voice had a somewhat synthesized undertone to it, so he knew exactly who had just busted him. Fighting down the embarassed cringe on his face, the pilot turned his chair around and gave Tali his most innocent face.</p>
+        <p>&quot;Sorry, uh, that was supposed to go to my earpiece...&quot;</p>
+        <p>She crossed her arms over her chest and tilted her head. &quot;I hope so. So this is what you&#x27;re doing all day, huh?&quot;</p>
+        <p>&quot;Hey, FTL flight is every pilots nightmare. I have nothing to do. For hours and hours on end. And no, I don&#x27;t actually spent all the time watching porn.&quot;</p>
+        <p>Nothing about her stance changed, but her eyes shifted slightly, giving the object of her scrutiny the impression of a skeptic look on her mostly concealed face. Joker gave her his most shit eating grin. &quot;I play video games instead...&quot;</p>
+        <p>She could no longer keep it up and doubled over laughing. &quot;Keelah Joker, you&#x27;re terrible.&quot; She sat down in the co- pilot&#x27;s seat. He didn&#x27;t mind; he had already had a couple of short chats with Tali and liked her. She neither pitied him, nor made fun of him; she simply treated him normally, and for a man like him, that was quite rare.</p>
+        <p>He decided to tease her a little. &quot;Don&#x27;t give me this shit, Tali. I bet that mask can function as a display. I bet that&#x27;s all you&#x27;re doing when you&#x27;re standing on your console in engineering waiting for some lengthy diagnostics to finish.&quot; She shot up from the backrest she had been comfortably snuggled into, sitting up straight and clamping down on the armrests with her big strong alien fingers before bringing them together in front of her to wring them frantically. Huh? Oh...oh!</p>
+        <p>&quot;I-I don&#x27;t...this isn&#x27;t...at work I...rarely ever...&quot;</p>
+        <p>It took everything he had to not lose his deadpan. This is much, much better than I anticipated.</p>
+        <p>Joker was still thinking about where to take it from here when she suddenly stopped her fidgeting and went on the offensive. &quot;Screw this! I am a young woman who is forced to live in a suit and I have...needs! I can&#x27;t evenkisssomeone without risking my health! It is completely natural that young Quarians sometimes seek some sort of relief!&quot;</p>
+        <p>His jaw dropped. Damn, he hadn&#x27;t even thought about this. Alright, stop the teasing. Mostly. &quot;Hey, you think the guy who just got caught red handed is gonna judge you?&quot; She relaxed. Good, crisis averted. &quot;I didn&#x27;t even think about that. How do Quarians even ...you know...do it?&quot;</p>
+        <p>&quot;Well, when a couple wants to be intimate, they have to go to a clean room. And even then, that just eliminates the risk of external contaminants. The two still have to adapt to each other. It usually takes about half a year until we have gotten used to each other enough to be able to...you know...without getting sick.&quot;</p>
+        <p>&quot;Sounds...complicated.&quot;</p>
+        <p>&quot;It is. Which is why almost all Quarians only ever take one partner. We were always very loyal to our partners compared to most other species, though its not like some of the crazy stuff you&#x27;ll find on the extranet...&quot; she trailed off for a second, &quot;and now on the flotilla, with the suits and the added difficulty of intimacy, divorce and re-marriage, let alone infidelity, have basically vanished. There are less risky ways to be together of course, but it&#x27;s just not the same..not that I would know, but...that&#x27;s what everyone says.&quot;</p>
+        <p>&quot;So, most of you basically go like what, ten years plus from being a horny teenager to being able to actually live out your sexuality? Yeah, I can understand doing some handiwork from time to time. Hell, we humans have none of that shit to deal with , and we still..&quot;</p>
+        <p>Aight, so I&#x27;m casually discussing masturbation with an alien right now. This is weird even for me.</p>
+        <p>He decided to change the subject before things could get even weirder. &quot;Anyway, did you want something?&quot;</p>
+        <p>She perked up, having sunken back into the chair before. &quot;I&#x27;m going to use the airlock again. I&#x27;m gonna lock it this time, too.&quot;</p>
+        <p>&quot;Wanna make the wall squeak again?&quot; A short giggle.</p>
+        <p>&quot;Maybe. But mostly, I want to take my mask off. &quot;</p>
+        <p>Now he raised an eyebrow. &quot;Isn&#x27;t that dangerous?&quot;</p>
+        <p>&quot;That&#x27;s the thing. The airlock is not a real clean room, so I could theoretically get sick. Which is why I left the mask on last time. But I thought about it, and any contamination in there would be so minor, if I get a reaction it should be so weak that it should not affect my work or my mission readiness, and it could even help me train my immune system. But most importantly it will allow me to take this damn thing off for a couple of minutes.&quot; She pointed at the visor.</p>
+        <p>Joker nodded understandingly, even though he doubted that he couldtruly understand it. &quot;Well, have fun. I&#x27;ll make sure our dashing Commander doesn&#x27;t interrupt you again.&quot;</p>
+        <p>&quot;What? I don&#x27;t – I mean..oh, shut it you bosh&#x27;tet.&quot;</p>
+        <p>He just grinned to himself as she stood up and got into the airlock. Yeah, I&#x27;ve definitely put my money on the right horse...</p>
+        <p>Ashley&#x27;s face contorted in a grimace of disgust as cold water splashed against her butthole. Ugh...Reaching over to the toilet paper, she ripped some off and went to work. It came black clean on the first wipe. Well, that makes up for it...almost. Just as Ashley was about to get up, she heard the door to the women&#x27;s restroom open and someone coming in. It didn&#x27;t sound like boots, more like someone walking barefoot, yet not at the same time. The strange footfalls interchanged with the soft chime of an omnitool notifying it&#x27;s owner of an incoming call. The next moment, the owner of the strange sounding feet became clear when a voice with a slightly synthesized ring to it spoke out in it&#x27;s distinct accent. &quot;H-hello, father. It&#x27;s good to see you.&quot; Tali&#x27;s getting a call from her dad? Damn, this is awkward. I&#x27;ll just stay in here for now...</p>
+        <p>&quot;Tali. Raan informed me of your message. I thought I had brought you up to be responsible and think of the fleet, yet now I hear you are dallying on a human ship! Explain yourself.&quot;</p>
+        <p>What the...? What an ass!</p>
+        <p>&quot;Th-this is important, father. Saren..&quot;</p>
+        <p>&quot;Saren is a problem of the council races! The races that let our people die and cast us out!&quot;</p>
+        <p>&quot;But father, the Geth...&quot; At mention of the Geth, the man actually shut up, but the poor girl still stopped talking for some seconds, as if unsure if she was actually allowed to talk. Ashley had noticed that the Quarian presented the curious paradox of being headstrong and outspoken in one moment and insecure and shy in the next, depending on the situation; the Gunnery Chief was definitely witnessing one of those situations right now, and she suspected that she was listening to the man responsible for it all,too. &quot;Saren commands the Geth, father. I do not know how, but I...I intend to find out.&quot;</p>
+        <p>Her father seemed to calm down a little. &quot;The involvement of the Geth is indeed curious. However, that is none of your concern. Your task is to find a suitable gift and return as soon as possible.&quot;</p>
+        <p>Seconds went by in silence. &quot;Shepard saved my life. I have to repay her. And I&#x27;m being paid here, father. That will help me with my pilgrimage.&quot;</p>
+        <p>The man on the other end of the call scoffed. &quot;You already repaid that human by giving her the information that made her a Spectre. You owe her nothing.&quot;</p>
+        <p>Now Tali seemed to become agitated herself. &quot;Owe her nothing? Did Raan not tell you what she did? She came down on the C-Sec executor for how they treated me, and she went to the press too! The woman has been nothing but good to me! And you want me to abandon her!?&quot;</p>
+        <p>This is getting more and more personal...guess I&#x27;ll have to sit here and not move a muscle until she leaves.</p>
+        <p>&quot;The commander seems to be a good woman, I&#x27;m not denying that. But your duty is to your people, not aliens you meet on your pilgrimage. &quot;</p>
+        <p>Tali continued to raise her voice. &quot;The pilgrimage proves that we are willing to give ourselves for the greater good. If I walk away from this, what does that say about me? About our people!? The geth are our creations! And I am to just look away as they go around killing!?&quot;</p>
+        <p>Uh-oh, Ashley thought. If she had figured this father-daughter relationship out right, the man would not be used to, and not take kindly to, being talked back to. She was proven right. &quot;What the Geth do is neither our responsibility, nor our problem! Return to your pilgrimage immediately, Tali!&quot;, the girl&#x27;s father all but shouted at her.</p>
+        <p>&quot;I amon my pilgrimage!&quot;</p>
+        <p>An ominous silence followed, before Tali&#x27;s father spoke again, his voice dangerously low. &quot;I hoped that you would see reason, but it seems I have not taught you as well as I hoped! Tali, I orderyou to leave that ship at the next port.&quot;</p>
+        <p>Tali gasped &quot;Y-you wouldn&#x27;t dare!&quot;</p>
+        <p>&quot;I do. You will-&quot;</p>
+        <p>&quot;No.&quot;</p>
+        <p>&quot;...no?&quot;</p>
+        <p>&quot;No! No! No! How dare you! My pilgrimage is my responsibility! You have no right to tell me how to get it done! You cannot order me! Not even you! This is...this...you...&quot;</p>
+        <p>&quot;Tali! I am your father! You wi-&quot; The voice was cut off abruptly. She hang up on him, Ashley realized. You go, girl! Show him. Herjubilation for the younger woman did not last long, as seconds later, she could hear her sobbing. Scrambling to rise and pull her pants back up, Ashley burst out of the stall and hurried over to Tali, who was slumped against the wall, still sniffling. Not thinking about it, the older woman enveloped her in a hug. Hugs work wonders, and she didn&#x27;t really know what to say, or If she hould even say something at all. Tali tensed up at first, but after a second or two she responded eagerly and clung to her like a vice, obviously happy for someone to hold on to right now, albeit a human who she didn&#x27;t even know too well. In that moment, she reminded Ashley a lot of her sisters. &quot;H-how much did you hear?&quot;</p>
+        <p>&quot;Well...all of it.&quot;</p>
+        <p>She tensed up again. &quot;Keelah...I can&#x27;t believe my father would try that. How can he not see how important what I&#x27;m doing here is?&quot;</p>
+        <p>Ashley did not answer, for she had no answer. So she asked a question instead. &quot;Your dad&#x27;s a bit of a hardass, huh?&quot;</p>
+        <p>Tali giggled in her arms. &quot;Yes...&quot; She untangled herself from the human and looked at the floor. &quot;I...I&#x27;ve never before told him no.&quot; She started to tremble a bit. &quot;On one hand, I&#x27;m terrified of how he will react to this. But on the other hand...keelah, this feels so good.&quot;</p>
+        <p>Ashley grinned. &quot;You&#x27;re growing up, girl.&quot;</p>
+        <p>The Quarian&#x27;s head snapped back up. &quot;I am grown up! I fight as well as you do! I-&quot;</p>
+        <p>&quot;Woah!&quot; , the Gunnery Chief said, holding out her hands in defense. &quot;Not what I meant. I know you&#x27;re a big girl and can look after yourself. But this is part of growing up as well. Drawing that line between your parents and yourself. All parents have ideas and plans for their children. Some of it is good, some is bad, a lot of it might be good for someone else, but just not for you. Sometimes, you have to fight to break free. To become your own person.&quot;</p>
+        <p>The younger woman looked at her for a long while, mulling over her words. &quot;Did you fight with your father a lot?&quot;</p>
+        <p>Ashley laughed. &quot;You wouldn&#x27;t imagine. Me and my sisters were a handful. But we had a point...sometimes at least.&quot;</p>
+        <p>&quot;You have sisters?&quot;</p>
+        <p>&quot;Yes, three of them.&quot;</p>
+        <p>&quot;Four children!? That...makes sense, I guess. Living on a planet and all.&quot;</p>
+        <p>&quot;What, don&#x27;t you have siblings?&quot;</p>
+        <p>&quot;Just one, my younger brother. Families on the flotilla are only allowed two children. It keeps the population stable without outstretching our resources.&quot;</p>
+        <p>Ashley turned towards the mirror over the sink. &quot;Damn.&quot; She washed my hands before, following a spontaneous impulse, opening her bun to run her wet fingers through her now free flowing hair. Tali was watching her throughout the entire ordeal. Through the mirror, Ashley caught her staring in the mirror and cocked an eyebrow. &quot;Tali?&quot;</p>
+        <p>&quot;N-nothing, I&#x27;m sorry...&quot;</p>
+        <p>&quot;What, no, I was just wondering what you were thinking.&quot;</p>
+        <p>&quot;No, it&#x27;s stupid and bad...&quot;</p>
+        <p>&quot;Spill it already.&quot;</p>
+        <p>&quot;It&#x27;s just...I was thinking about how you can just do that, while my nose is blocked right now just because I wanted to touch my face for the first time in four months. You were nice to me and now I&#x27;m being envious, it&#x27;s nor fair, and I&#x27;m sorry.&quot;</p>
+        <p>Ashley turned around and stared at her, dumbfounded. She shouldn&#x27;t have been, really, but she was. &quot;What no, forget that. What did you just say!? Are you sick?&quot;</p>
+        <p>&quot;Not really...just a little. I use the airlock sometimes to take parts of my suit off after doing a decon cycle. At first I only took off the gloves but...I wanted to feel fresh air on my face again, and...touch my hair. Last time before that was over four months ago...&quot; She looked to the ground again, seemingly embarassed. Jesus Christ, she is stuck in that thing and can&#x27;t do any of the things we all take for granted, and we&#x27;re shoving it in her face the whole time just by being around her.Struggling to come up with something nice, Ashley went for one of the things she knew would almost always work at least a little to cheer a woman up, as long as it wasn&#x27;t coming from some random creep. &quot;Quarians have hair? I bet it&#x27;s beautiful. What does it look like?&quot;</p>
+        <p>Tali seemed to look for words for a couple of seconds, perhaps a little flustered. &quot;A lot like yours, actually...it&#x27;s a little thicker I think, but it is black too, and I keep it long for a Quarian...it&#x27;s probably a little longer than my shoulders right now...I think I might actually need to cut it soon, it&#x27;s getting kind of bothersome in here...&quot; she trailed off again, probably pondering how she could not even freely choose her hairstyle because of the damn flashlights.</p>
+        <p>Ashley sighed. &quot;You could help me with my hair, you know...I have this boring bun, but I know prettier ones, too. Just can&#x27;t do &#x27;em alone. Maybe you could use something like that to stow away your own hair inside of your helmet..you know, that way it would take up less space. You could have it grow much longer that way.&quot;</p>
+        <p>Tali stood in front of her, her freaky, but also kind of beautiful glowing eyes wide, wringing her fingers in front of her waist. &quot;Y-you would teach me that?&quot;</p>
+        <p>Ashley gave her her best smile, for she knew that she had her now, and laid a hand on the Quarian&#x27;s shoulder. &quot;Sure. I taught all my little sisters, I&#x27;m a good teacher. &quot; So she turned back around to the mirror, got the small stool from the corner of the room and sat down. &quot;So, this is what we do first...&quot;</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 54</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch53.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html" selected>Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch55.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 54</h1>
+    <div class="chapter-content">
+        <p>Recommended listening for this chapter: https://www.youtube.com/watch?v=6o8hm0_q2D8</p>
+        <p>Jane took a step into the passenger compartment; satisfyingly, it only took a second for all eyes to converge on her. Everybody was ready to go.</p>
+        <p>„Alright, we&#x27;ll advance in two teams. Team one is me, Grunt, and Jack. We&#x27;re going to punch through their lines as fast as possible, and if I can help it, we&#x27;re not stopping until we&#x27;ve linked up with the Quarians. Team two is everyone else. All you have to do is keep our backs free of enemies and keep up. Miranda&#x27;s in charge.&quot;</p>
+        <p>There were a couple of surprised looks, but nobody spoke up, not even Jack. Jane did not take the time to explain Garrus and Jacob the reasons, or instruct them what they were supposed to do instead; she&#x27;d briefed them both beforehand. She took up position at the as of yet still closed exit, a sinking feeling in her stomach betraying that the pilot was already lowering them down to the ground. Behind her, Miranda was organizing her people. Jane didn&#x27;t bother to listen too closely; she trusted that Miranda would be up to the task. Instead, she waited with one hand on her rifle and the other holding on to the webbing, tense as a spring and ready to go.</p>
+        <p>Finally, the door slid aside, permitting them outside. The shuttle was hovering a meter above the ground – Jane used the extra height for a wider jump and hit the ground running. A second later, the floor tiles shook from Grunt&#x27;s impact. The pilot had sat them down on a small clearing in the ruins, whatever it may once have been; a plaza, a crossing, or even a landing pad, who knew. The important thing was that there was nothing to block out the sun, and so their shields were already draining from the radiation. By the time Jane had reached the shadow of a huge, broken pillar with jagged edges and rents hinting at a violent end to whatever it had once held up, her own shields were already down to half strength, and it had only taken her a couple of seconds. She turned around to check on Jack, who was much the same.</p>
+        <p>As usual, Grunt hadn&#x27;t bothered to bring a shield generator, relying on his armor and thick skin instead. When Jane had warned him to the dangers of radiation, the Krogan had simply laughed it off and claimed that whatever it was could hardly be worse than Tuchanka.</p>
+        <p>Shepard would&#x27;ve insisted, but Mordin had actually agreed with that. So she&#x27;d let it go.</p>
+        <p>As of now, the big reptile looked no worse for wear, looking at her through the sensory equipment of his heavy faceplated helmet. Jane had held it once; in places, the thing was over a centimeter thick. Jane nodded at him. &quot;Let&#x27;s go.&quot;</p>
+        <p>She set off at the double,hugging the shadows wherever possible, jumping over debris as she went. She had no precise aim as of yet, other than to move west. Given the radiation, EDI&#x27;s scans had been far less informative than usually, but at least she&#x27;d been able to roughly pin down the area of the fighting. Jane stayed attentive as best as she could under the circumstances, but she wasn&#x27;t expecting serious enemy contact too soon; the Geth&#x27;s sensors were no doubt suffering as much as the Normandy&#x27;s and the shuttle&#x27;s own, and so there shouldn&#x27;t be a way for them to have determined their landing zone precisely enough to mount an interception. Whatever forces the Geth would throw at the team would have to wait for them to come by – at most, they&#x27;d run into the odd scout or two.</p>
+        <p>Haestrom was dead. How much of it was due to the radiation and how much due to the war three hundred years ago was inscrutable, but the landscape was utterly devastated. The place they were currently in had evidently been a city; now it was a graveyard made of dust, rubble and half collapsed, burnt out skeletons of skyscrapers and blocks. The only living things Jane saw were the occasional pack of bugs scurrying through the debris. At one point they crossed a bridge that afforded them a wide view over the surrounding countryside. It was a barren wasteland pockmarked with blackened craters.</p>
+        <p>About five minutes in, Miranda broke the comm silence. Her voice was half drowned out by white noise even though she was little over a hundred meters away. This place was insane.</p>
+        <p>&quot;Shepard, according to the photos the pilot made coming down, there should be a big street coming up. Crossing it could be risky.&quot;</p>
+        <p>She&#x27;d known that of course, but it had troubled her little, and just as Miranda finished speaking Jane and the other two came to stand among exactly that which she had half expected to find. She pushed the speaker trigger on her rifle and responded.</p>
+        <p>&quot;It&#x27;s not an issue. The fighting&#x27;s already passed.&quot; The proof of that was laid out around them, and out on the street itself. In the ruins around them, Jane could see several destroyed Geth slumped to the ground, against walls or against whatever had been their cover. Most had been taken out singular, high caliber head shots; others were perforated in half a dozen places, lying in a puddle of their internal fluids as a testament to the presence of a well operated machine gun. Jane counted five; how many more had been torn apart by explosives and now supplied the odd limb or head lying around, she could not tell. There were well over a dozen more out in the street, together with a collapsed armature. The ruins on the other side of the street were blackened in several places. Looking closely, Shepard recognized the red form of a downed Geth flamer among the fallen. Her jaw tightened, the firefight that had happened here playing out vividly in her mind.</p>
+        <p>&quot;Fuck.&quot; Jack stepped up beside her, visibly taken aback by the carnage. Jane was reminded that for all her bravado and experience with violence, she&#x27;d never been in a proper warzone before. &quot;Those Geth have no chill.&quot;</p>
+        <p>Guessing that she was probably commenting on their apparent willingness to throw themselves into the fire, Jane answered: &quot;Those aren&#x27;t really the Geth themselves. They use these &#x27;bodies&#x27;, but the Geth themselves are programs. For the most part, they can upload themselves back into another server when their mobile platform is destroyed.&quot;</p>
+        <p>&quot;So they can come at you like fucking zombies, and they don&#x27;t even have to be afraid.&quot; The young woman shook her head. &quot;Can they even be afraid?&quot;</p>
+        <p>Shepard shrugged. &quot;No idea, and I don&#x27;t care.&quot; Miranda&#x27;s team had caught up by now, so she turned around to address her directly. &quot;Looks like the Quarians made a stand on the other side. We&#x27;ll cross over and see how things are. Cover us.&quot;</p>
+        <p>Miranda nodded. &quot;You think you might still find anyone there?&quot;</p>
+        <p>&quot;Just the dead.&quot; She boxed Grunt in the shoulder, who was busy testing his strength on a downed Geth&#x27;s neck. &quot;Let&#x27;s go.&quot;</p>
+        <p>The Krogan snapped the thing&#x27;s head off without any apparent effort and chuckled. &quot;Right. I want to finally see them in action. Plates are getting&#x27; itchy...&quot;</p>
+        <p>Without another word, they set off in a sprint. Jane had tensed up a bit, but as expected nobody opened up on them - for the same reason they hadn&#x27;t met any resistance yet. The Geth simply couldn&#x27;t know where exactly they were coming from. They probably knew it now, though. She would&#x27;ve bet money that there was at least one of their little drones hidden in a shadow somewhere, observing the street with the unnatural patience and complete stillness typical for these machines. And a functioning comms unit, of course. Things would heat up soon.</p>
+        <p>But not yet, and Jane was grateful for that. Had the Geth held the other side, there wouldn&#x27;t have been a chance in hell to cross it. It was a very wide street, six or eight lanes judging by what little remained of it&#x27;s markings, and even just running across it underneath the searing sun taxed their shields to the breaking point. Trying to force a crossing under fire would&#x27;ve been impossible; the Geth had been wise to bring armored support. Without that, Jane had no doubts that they would&#x27;ve taken even more casualties than the roughly twenty lying around in various states of destruction and dismemberment. Far more.</p>
+        <p>As they reached the other side, her apprehension increased. From up close, it looked even worse. A two-fingered, suited hand stuck out of a pile of rubble in the middle of a house front. Window shooter, she reckoned, taken out by an armature pulse cannon. Maybe the machine gunner that had taken such a toll on the attackers. Jane stopped to examine it; wiping off the dust with her fingers, she could make out red wrappings. She let out a relieved breath and tore herself away from it to inspect the site further. Jack and Grunt were on point and had taken up positions; none had anything to report.</p>
+        <p>Most of the place, and several surrounding ruins, were blackened from fire; there was ash in the air, and the ground was obstructed by several collapsed wooden beams, most of which had been reduced to charcoal. There were spots of dark red on the floor and walls in several places the flames hadn&#x27;t touched, but no more bodies; someone had taken hits, but not died from them, or at least not died here. One spot was large enough that Shepard doubted the wounded could&#x27;ve walked away from it on their own. &quot;They didn&#x27;t overstay their welcome...&quot; she mused to herself. &quot;Had time to carry their wounded with them.&quot; She climbed onto a piece of intact wall and looked down the alley they had to have retreated along; it was pockmarked with bullet holes, but again there were no bodies.</p>
+        <p>It looks like the Quarians were taken by relative surprise, too. Can&#x27;t have been more than two squads here... They would&#x27;ve set up more people here if they could&#x27;ve. Set up their MGs and made the Geth pay for that crossing, then ran away when the flamers closed in.</p>
+        <p>She activated her comms. &quot;Miranda, you can come over. We&#x27;re pressing on immediately. And hurry up, they&#x27;ll know where we are now.&quot;</p>
+        <p>They met the enemy soon after. Two Geth had been standing still, listening and looking out for them. True to how Jane remembered the machines, they opened fire faster than any unaugmented organic could&#x27;ve matched.</p>
+        <p>But Jane was far from unaugmented now. By the time her companions had jerked to a halt, she already had her rifle half way up. She pulled the trigger barely a second after the Geth platform that had been waiting for them. Fighting like this was a simple matter of who&#x27;s shield broke first; a game Jane was sure to win. With the remarkable speed and computing power typical of it&#x27;s kind, it took the Geth all of three rounds slamming into it&#x27;s shields to apparently realize this, because it backed down behind cover. The shield broke anyway in the last moment, and half of it&#x27;s left arms casing was torn clean off as it disappeared behind an intact section of wall.</p>
+        <p>The other Geth, which hadn&#x27;t had a clear shot at her, had opened up at Jack instead. The biotic shrieked in surprise and jumped into a side alley. Then she threw a wild haymaker at the air and hurled forth a wave of biotic energy that leveled the heap of rubble the synthetic had been lying on, making debris shoot off violently and slamming the machine into a pipe so hard it caved it&#x27;s head in. Amazingly, it was still functional enough after that to try and rise; just in time to get the barrel of Grunt&#x27;s shotgun in what passed for it&#x27;s face, shattering the apparatus completely. The first Geth fired; a burst from point blank range rang out and ricocheted off the thick armor of the Krogan&#x27;s right arm. Grunt lifted his weapon with one hand and, almost contemptuously, dispatched the attacker with a single shot of his own. He turned around to them and huffed. &quot;These don&#x27;t seem so tough.&quot;</p>
+        <p>&quot;There&#x27;ll be more, and bigger.&quot;</p>
+        <p>&quot;Counting on it.&quot;</p>
+        <p>Not breaking stride, Jane gave a quick report to Miranda. The Geth would be on them in force any moment now.</p>
+        <p>The altercation had taken place in a ragged, several men wide and tall hole in the wall of a large building. Entering it, they found that it had to have been a mall or a storehouse before the war, most of it&#x27;s space being taken up by tall racks that formed a grid of corridors. Jane hastened her step; she had absolutely no interest in getting in a fight in this place, especially with the Geth. Their shared consciousness would let them continue to coordinate as if the shelves weren&#x27;t there, while she and her people would stumble around trying to guess where anyone even was in relation to each other.</p>
+        <p>Fortunately, it did not come to that. At what had to be roughly the opposite end of the building from where they had entered it, they came up against a door. It was a metal swing door with a handle; probably a back or side entrance. Perhaps one day long past, the retail workers here had frequented this very door getting to and fro whatever constituted the quarian equivalent of a smoke break. Grunt blew it out of it&#x27;s hinges with a single try by throwing his massive weight against it shoulder first. Daylight burst in from outside, briefly blinding Jane until her eyes adjusted. When the clatter and clang of the dented metal clashing against a railing and tumbling to the ground died down, it was replaced by the sound she&#x27;d been waiting for – distant gunshots.</p>
+        <p>Which, just a moment later, were in turn replaced by much closer gunshots, complete with that of rounds hitting Grunt&#x27;s armor and the concrete around him. To Shepard&#x27;s surprise, the Krogan actually jumped back inside. His massive head swung around. &quot;Machine gun. Medium.&quot;</p>
+        <p>&quot;How far?&quot;</p>
+        <p>Grunt shrugged. &quot;Twenty meters? Maybe more.&quot;</p>
+        <p>Jane hesitated for a moment. Only a moment. She contemplated bringing the underslung grenade launcher to bear, but dismissed the idea. She had a feeling she&#x27;d need those rounds later.</p>
+        <p>&quot;Jack! Barrier. Grunt in front.&quot; She folded the rifle in and clamped it into place at the small of her back. Then she drew her pistol and the machete. &quot;Go!&quot;</p>
+        <p>It was a reckless move that would&#x27;ve made any instructor pull their hair out. They charged head first into a prepared machine gun position, without any preparation or support. The action relied completely on their superior equipment and the strength of Jack&#x27;s biotics.</p>
+        <p>The gamble paid off. Having come under heavy fire from the MG and at least half a dozen of rifles, Jack let her barrier collapse barely past the half way point. There was a short fluttering of apprehension when, momentarily, Jane feared she might&#x27;ve made a terrible mistake, that the biotic had exhausted herself earlier than Jane had expected. The opposite was true: Instead of simply collapsing, the barrier&#x27;s kinetic energy had surged outwards in a blast that threw several Geth clean off their feet and the machine gun&#x27;s aim wildly off.</p>
+        <p>By the time the fire intensified again, they were already in amongst them.</p>
+        <p>As he came, Grunt fired his Claymore from point blank. It wasn&#x27;t a very clean shot,most of the buckshot glancing off the Geth gunner&#x27;s curved head plates. Still, it was enough to knock the machine off balance. It never had a chance to get it&#x27;s sights back on target before the massive Krogan already barreled into it. Shepard left her companions to it and turned towards the right, were two more of the machines were rising up to shoot at them. She fired at the same time as they opened up; by her second shot, her shields had been drained to thirty percent. It was a savage, point blank encounter. The first having collapsed it&#x27;s shields, the second shot went clean through the closer synthetic&#x27;s head, dropping it.</p>
+        <p>Jane immediately wished she&#x27;d shot the further one first. It had used the time she&#x27;d taken to kill it&#x27;s companion to take cover behind a thick slab of sheet metal with a ridiculously conveniently placed hole through which it was now shooting at her. Her shields were dwindling fast.</p>
+        <p>She fired twice in quick succession, both shots missing the mark. Left without other options, she threw herself into the shelter of a knee high, toppled concrete pillar, a round glancing off her pauldron as she dived. Crawling on her elbows and knees and cursing, she frantically reloaded the pistol, the Geth&#x27;s fire still coming on, sending dust and small debris fly through the air and clatter against her armor.</p>
+        <p>Finally, the barrage seized. Jane swung herself over the pillar. Immediately, the fire resumed, but it came in single shots now. The Geth had come dangerously close to overheating it&#x27;s gun. Knowing better than to try and get at it through it&#x27;s firing slit, she circled around to get behind it&#x27;s cover, wildly firing as she went, hoping merely to throw it&#x27;s aim off a bit. It didn&#x27;t work out very well, the synthetic being above fear. Jane took a glancing hit to the backplate and was knocked off balance. Gritting her teeth, she launched into the final jump that would carry her out of the damn thing&#x27;s sight.</p>
+        <p>And with that, it was all over. She exploded forward, past the sheet, and brought her machete to bear, first down on the Geth&#x27;s weapon that was coming up to aim at her, then, with the return swing, it&#x27;s head, severing some cables. The machine was not yet down, striking out with a fist; but the movement was slow and clumsy. Jane span out of the way effortlessly, picked up the momentum and rammed the machete home. Her enemy slumped to the ground and she stood over it, breathing heavily.</p>
+        <p>A heavy foot fell to her left, and she startled. Grunt&#x27;s deep chuckling. &quot;Had some trouble there, Shepard?&quot;</p>
+        <p>She spat. In the distance, the gunfire continued. &quot;Tough fuckers, aren&#x27;t they.&quot;</p>
+        <p>Grunt nodded. &quot;You didn&#x27;t promise too much.&quot;</p>
+        <p>&quot;That was a delaying action...they&#x27;re trying to get the job done before we get there. Come on. We need to get to those Quarians.&quot;</p>
+        <p>It didn&#x27;t take them much longer. There was one more defensive line; this one was considerably stronger than the first, and was reinforced by an armature. It proved formidable enough that Jane, much to her chagrin, saw no other option than to wait a minute, regroup, and then push with the entire team as one. It cost them precious time to to move everyone up and into position, but at least they broke through quickly once the attack actually got rolling.</p>
+        <p>Now she was running forward again, hunched over to present a smaller target. Rounds impacted on her shields and the balustrade she was hugging for cover. She&#x27;d left the rest of the team behind – better to make contact with the Quarians alone. An entire squad suddenly jumping into one&#x27;s hole was bound to startle anyone, with potentially fatal consequences.</p>
+        <p>A final leap forward saw her hitting the dirt hands first, the Geth&#x27;s line of fire broken by a, from the look of it, fresh pile of debris. Behind her, her team was engaging the enemy on a wide front. Jane had no doubts they would destroy the Geth swiftly. Now it was on her to make sure nobody with an understandably itchy trigger finger got spooked. An accident of that kind was the last thing they needed now. She crawled forward over the ancient, corroded steps leading up to the ridge.</p>
+        <p>They had emerged from the relatively intact buildings they&#x27;d approached through out onto a field of ruins. The burned out, dusty husks of houses and blocks had given way to what could only be described as one giant heap, or rather carpet, of rubble, with the pitiful remainders of pillars and wall segments sticking out of it as a reminder of what had once stood here. Jane had seen her fair share of warzones in her time, but she&#x27;d rarely fought in big cities, and never had she seen this scale of destruction applied to one.</p>
+        <p>The area had become the scene of heavy fighting. The Geth were besieging what could only be a Quarian position, situated on the top of a long ridge, the ends of which got lost behind buildings in both directions. The reminders of a railway, Mordin had quickly deduced – while overloading a Geth trooper&#x27;s shields and bringing it down with a precise burst from his SMG, of course. The old Salarian was nothing if not a multitasker. The Quarians were sitting on top of it, which was a good place for them to be given that they&#x27;d been pinning down several squads of Geth in the ruins, picking off a good amount of them as well. There was even a burnt out armature to attest to their fighting spirit.</p>
+        <p>But their clearly wasn&#x27;t a way out for them either. As Shepard and her squad fell upon the hastily formed defenses of the now surrounded Geth on this side of the railway, it was clear to see that the Quarians were under fire from the other side as well, and with heavy ordnance at that.</p>
+        <p>Now she had almost made it. Her position up here on the slope with the Geth in the ruins not entirely eradicated yet was a perilous one even with her team watching her back as best as they could, and her shields took sporadic fire all the way up. But they held. Finally, Jane let herself slide down into the road bed – to the view of a pair of muzzles pointed at her.</p>
+        <p>&quot;For fuck&#x27;s sake, do I look like a Geth to you?&quot;</p>
+        <p>The guns stayed up, and neither of the two people holding it reacted, or at least not in a way visible to her. They were Quarians, after all. Resigned, Jane took a look at her surroundings. The railway bed served the Quarians well, in the manner of a particularly heavily fortified trench. She could see about a squad worth of them on their feet; not all of them standing entirely upright anymore. There were several others sitting or lying on the ground. Not all of them were still moving. Someone fired a shoulder mounted rocket launcher at a target downhill before immediately taking off at a full sprint; a moment later, the position he had shot from was obliterated by a plasma blast that shook the very foundations of the railway. Jane cursed; she knew exactly what kind of machine fired such a weapon.</p>
+        <p>A Quarian in a red suit limped into her field of vision from the other side. &quot;Lower those weapons, dammit! Get back in the line!&quot; He grunted and sat down on a gutted engine casing or some such, one of innumerable dotting the entire railway – antigrav tech, or at least it had been. &quot;Kal&#x27;Reegar, migrant fleet marines. We saw their troopship go down, figured there&#x27;d be help incoming. Surprised to see a human, though.&quot;</p>
+        <p>Jane got up on a knee. &quot;Jane Shepard, Alliance. Used to be, anyway.&quot;</p>
+        <p>&quot;Shepard!? You mean you&#x27;re Tali&#x27;s old captain?&quot;</p>
+        <p>&quot;Just the one.&quot;</p>
+        <p>The man shrugged. &quot;Thought you&#x27;d be taller. But whatever. How did you even know – ah, fuck that, I can hardly be picky right now. What are you doing here?&quot;</p>
+        <p>&quot;Saving your ass. I&#x27;m here for Tali.&quot;</p>
+        <p>&quot;Aha. Well, looks like we&#x27;re in this together then. Tell your people to move up, my boys are being careful with those triggers, don&#x27;t worry.&quot;</p>
+        <p>Jane nodded and gave the order as she followed Kal to the other side of the trench. Again, she noticed a limp in Reegar&#x27;s step. On closer inspection, a patch of suit on his thigh was covered in what looked a bit like construction foam. Getting her first look at the battlefield in front of her, Shepard suppressed a curse. Down the ridge, there was an open yard filled with debris and wrecks of centuries old train cars. To the right, there was a tall wall isolating who knew what. Even just at a glance across the field, she could see half a dozen Geth up and running, and again that number shooting. Which meant that there would be dozens more she hadn&#x27;t made out. Which fit the volume of fire coming their way well. And over them all towered the colossus that had set itself up at the foot of the tower at the other end of the yard.</p>
+        <p>The Quarian hunched behind a boulder and pointed a finger at the tall building facing them. &quot;The observatory. Tali&#x27;s in there with our findings. Didn&#x27;t like it of course, but she&#x27;s the only one who understands the science of it all. She has to make it out of here, no matter what.&quot;</p>
+        <p>&quot;No argument here. What the hell were you even doing in the middle of Geth space?&quot;</p>
+        <p>&quot;The fuck do I kn - listen Shepard, I&#x27;m a soldier, not a physicist. It&#x27;s something with the sun, it&#x27;s dying faster than it should. Don&#x27;t ask me how the hell that&#x27;s supposed to be worth my men&#x27;s lives.&quot;</p>
+        <p>His voice was terse, and Shepard understood him well. They&#x27;d come across a number of dead marines on the last couple hundred of meters.</p>
+        <p>&quot;So Tali is definitely still alive?&quot;</p>
+        <p>&quot;Yes. The walls of that thing are meters thick, and there&#x27;s only one entrance. Look there, they&#x27;re trying to get in, hey, Jaal! Pick that thing off, now!&quot; A high calibre shot rang out and a platform that had broken cover to try and run up to the door fell. Just a second later though, half a dozen more of them jumped out, carrying large machinery. Kal cursed. &quot;Fre&#x27;eg! They&#x27;re putting up a shield generator! We-&quot; He stopped himself and ducked. Jane did the same, and an instant later the entire trench shook with another impact from the colossus&#x27; plasma cannon.</p>
+        <p>&quot;Damn that thing! Shepard, the Geth are about platoon strength. Bad enough, but the real problem is that colossus. We&#x27;ve got the firepower to whittle it down, but the bosh&#x27;tet has repair drones. It huddles up behind that wreck there and fixes it&#x27;s shields, and we can&#x27;t get at it from here. I tried to get closer, but one of the bastards put a round clean through my suit.&quot;</p>
+        <p>&quot;Saw that. How bad is it?&quot;</p>
+        <p>The Quarian laughed coarsely.&quot; I&#x27;m swimming in painkillers and antibiotics right now, but at least I won&#x27;t die from an infection in the middle of the battle. That&#x27;d just be insulting.&quot;</p>
+        <p>&quot;Alright...here&#x27;s how we&#x27;re going to do this.&quot; She tucked her head in as a salvo of rapid fire strafed the position. A couple meters further down the line, a Quarian reacted too slowly and went down hard, half his head torn away. Reegar spared him a brief glance, but otherwise, showed no reaction. Jane went on.</p>
+        <p>&quot;I&#x27;ll take a small group and go down there. The rest of my people stay here with you and give us cover. We&#x27;ll get in close and take down that colossus...then we&#x27;ll just see from there.&quot;</p>
+        <p>The Quarian nodded. &quot;I don&#x27;t like someone else sticking her head out for us, but truth is, I can&#x27;t run and my men are dead tired. We&#x27;ll do it your way, Shepard.&quot;</p>
+        <p>As he said it, Jane&#x27;s team started spilling into the trench. She set eyes on the colossus again. &quot;We can&#x27;t go over the top with that thing shooting. We&#x27;ll have to force it down first, then we go.&quot;</p>
+        <p>Reegar nodded. &quot;You brought a launcher of your own, good. With two of them, we&#x27;ll be able to keep it in check...&quot; He trailed off, focusing on something. &quot;Damn it. The Geth are working the door.&quot;</p>
+        <p>Jane clenched her jaw. &quot;Do you have a line to Tali?&quot;</p>
+        <p>&quot;No. The walls are too thick, and the Geth cut the antennas.&quot;</p>
+        <p>Jane grunted. &quot;We&#x27;re running out of time. Jacob! Hey! Open fire on that walker! Grunt, Zaeed, Jack, with me! The rest of you, fire at will!&quot; Watching them coming over, Jane folded her rifle and stowed it at the small of her back, then pulled out the shotgun.</p>
+        <p>This would be one of those engagements.</p>
+        <p>The three of them formed up around her. She pumped the weapon and took a moment to look them over. Zaeed appeared to be almost bored, all seasoned professionalism. Grunt, in stark contrast,was twitching like a preschooler told to wait a minute before he&#x27;d be allowed to run off and play football with his friends. Jack just stared back at her, not a trace of her usual bravado left. It had been replaced with a serious calm. &quot;You guys all good?&quot;</p>
+        <p>&quot;Shit,&quot;, she spat. &quot;Who do you take us for?&quot;</p>
+        <p>Battle hasn&#x27;t got to her too much, then. Good.</p>
+        <p>Shepard pointed over her shoulder. &quot;We&#x27;re going over the top. We need to get in close to that walker and bring it down. And we need to do it before the flashlight heads make it into the observatory. Questions? Good. Got that charge still on you? Good. Come on ,then.&quot; She primed a smoke grenade, Zaeed mirroring her, and lobbed it a couple meters over the top. The mercenary didn&#x27;t need to be told to throw his one further out. Down the trench, another plasma round slammed into the position and obliterated a section of the ridge, violently blowing debris, dirt and a surprised, yelling Quarian inwards. Jacob and Reegar&#x27;s man took the cue and popped out of cover, launchers on their shoulders.</p>
+        <p>Jane, who&#x27;d already had a foot standing in a nook about halfway up the railroad bed&#x27;s wall, brought the whole power of her augmented muscles to bear and exploded over the top.</p>
+        <p>Tali checked her trap for the fifth time, hands shaking. She could hear the Geth outside working the door with fusion cutters. She had physically disabled the outer panels; even the Geth could not hack a closed network. But now it looked like all that had achieved was buy her a few more minutes of waiting to die.</p>
+        <p>She had sporadically checked what was left of the outer cameras, and so she knew that there was still fighting going on outside. But it was no good. Reegar and his men were outnumbered and hopelessly outgunned, and would slowly but surely get whittled down one by one. The only reason that colossus didn&#x27;t just stomp up the ridge and end it all in a minute was that in such a close engagement, there &#x27;d be a small risk of the valuable machine being actually damaged. So the shared consciousness rather expended some of it&#x27;s cheap and replaceable trooper platforms.</p>
+        <p>Tali couldn&#x27;t believe that it was going to end like this. She&#x27;d seen her fair of action in the past year and a half, and she&#x27;d barely ever cared if she would make it out alive. And now, just that hope had returned to her life, she would die here, on this dusty, forgotten, worthless rock. For some data on a deteriorating star. On her own father&#x27;s orders, no less.</p>
+        <p>Something heavy hit the door, making the entire, hundreds of kilograms heavy piece of steel resonate loudly in the tight confines of the observatory. Tali flinched and tore herself away from her bomb, running back down he corridor, around the corner and into the main control room. She jumped over the console facing the door and laid out her weapons and half of the clips she had left.</p>
+        <p>I will die in this room.</p>
+        <p>Tali choked down a tear and tensed, fighting desperately to keep her shaking limbs in check. I&#x27;m sorry, Jane. Keelah, if only I&#x27;d just gone with you.</p>
+        <p>There was a deafening shriek of abused metal and a final, thundering blow, and then she could suddenly hear the gunfire from outside. Followed a moment after by the distorted screeching of Geth.</p>
+        <p>She counted to three, then she pushed the trigger. The blink of an eye later her improvised bomb, consisting of the two frag grenades she&#x27;d had on her, was set off via wire. There was a flash of light and a gust of air; Tali had preemptively shut down her helmet&#x27;s auditory systems for this moment. An unprotected person might&#x27;ve gone deaf right there, eardrums blown out by the obscene power of two powerful explosives in a confined space. She was about to turn them back on when a secondary explosion followed the first one, a lot weaker than the first, but hotter. Flickering light remained afterwards, illuminating the corridor.</p>
+        <p>Shuddering, Tali realized she had just avoided a painful death on the wrong end of a flamer.</p>
+        <p>Eventually, the roaring of the flames died down enough for her to to be able to hear the fight outside again, and she found herself desperately hoping for a moment, even if at best, it would be a short while longer before they&#x27;d come for her. Then she heard their steps.</p>
+        <p>The first trooper jumped around the corner, rifle raised, much good it did the synthetic. Tali dispatched it with the twice pumped blast from the shotgun she&#x27;d held ready; over less than ten meters, missing was difficult and the hot, fused chunks of buckshot cut through it&#x27;s shields like butter, embedding themselves deeply in it&#x27;s neck and upper torso, just above the plating.</p>
+        <p>By the time she&#x27;d pumped the shotgun, the next one was already shooting at her. The console was good, heavy cover, and most of the rounds found metal or concrete instead of her shield. Then she hit the trooper with a blast of focused energy from her omnitool, followed by well aimed shot from her own gun. It went down hard.</p>
+        <p>Her shields took a hit, system alarms starting to blare in her ears. Gasping, she ducked, catching a brief glimpse of the newest attacker as she did so. A shock trooper. Tali cursed and pumped the shotgun twice; then she stood up straight, ignored the troopers immediate blast that almost completely stripped her off her shields, and put the thing down.</p>
+        <p>Ducking behind the large desktop in the console&#x27;s middle, Tali pumped the gun once more. Plasma rounds punched clean through the thing and chipped away at the concrete of the console itself, forcing her to crouch on her knees. Before she got there, her shields finally collapsed. Tali noticed that the gun in her hands was refusing to clear. Overheated.</p>
+        <p>Tali froze for half a second; then, shocked how fast it had gotten to this, she pulled her last trump card. She dropped the gun; there wouldn&#x27;t be time to reload. Then she activated her spare omnitool she&#x27;d spent the last hours modifying exactly for this purpose, and lobbed it over the console. An instant later, the room was filled with the shrieking of Geth. She jumped up, grabbing her pistol from the console as she did so. Barely more than arm&#x27;s reach away, four Geth convulsed in violent spasms; the omnitool&#x27;s tiny mass effect core had expended all it&#x27;s energy, overloading any and all electrical systems caught in the blast. She put two rounds through the closest one, then two more through the one right of that. Doing the same to the third one, Tali noticed that there were already more of them streaming around the corner. And all she had left before she&#x27;d have to reload were two rounds.</p>
+        <p>There was a movement in right corner of her eye.</p>
+        <p>Unthinking, Tali jumped backwards, saving her life. A shotgun blast cut through the air mere centimeters from her mask. Landing on her toes, she watched astonished as in front of her, a form unraveled itself out of thin air. It was a huge platform, one head taller than a shock trooper, it&#x27;s plating all black. In it&#x27;s mechanical hands was a heavy plasma shotgun. Which it was in the process of turning her way.</p>
+        <p>Using every inch of strength in her body, Tali launched herself at the machine, reaching out with her left. She just needed to touch it -</p>
+        <p>The plasma shotgun came flying at her, eating the overload she&#x27;d had ready on her abused, borderline overheated omnitool, and knocking her off balance. Before she had a chance to regain it, a rock hard fist crashed into her abdomen just below the sternum. The sheer force of it drove the air out of her lungs and folded her, and the pain almost got her to pass out. Somehow, she found it in her to pull her knife from her boot and straighten up; her hand was immediately crushed, making her drop the blade with a pained yell. Then the Geth closed it&#x27;s other hand around her neck and lifted her up.</p>
+        <p>Tali could feel her lungs sucking on clamped shut airways. There was no hope of moving her right hand, so she hammered the Geth&#x27;s arm with her left. It did not budge. She tensed her abused belly and brought up her legs, wedging them in between her and the Geth. She pushed with all her might- for one second, and the synthetic did not move an inch.</p>
+        <p>Blackness started to creep in from the corners of her eyes. Panic rose in her chest. She kicked the Geth in the chest, one, two, three times. Fruitlessly. Tali realized that the moment had come. Still she continued. When her legs finally hang down limp what felt like an eternity later, it was because they literally refused to obey her frantic mind. As did the rest of her body. She could feel her right arm slacken and drop when the Geth let go of it. Time slowed down. Her left hand brushed on her hip. The world went dark on Tali; her field of view was filled almost entirely by the bright light of the Geth&#x27;s head looking at her. She could vaguely make out movement in the background. Even more of them.</p>
+        <p>The machine jolted and dropped her like a radioactive piece of core casing. Completely limp, Tali wound up in a hopeless pile of barely conscious Quarian. She did not try to get up as her senses gradually came back to her. Eventually, a set of hands grabbed her under the armpits and lifted her up. It took all she had to straighten her neck and look death in the face.</p>
+        <p>Death, though, had decided not to show. Instead, she found herself confronted with a very worried Jane Shepard. Shepard was shouting something, but the ringing in her ears shut it out. For one terrible moment, Tali feared she might be hallucinating. Then Shepard pulled her in and held her tight, and Tali knew that somehow, she&#x27;d did it again. Incredible relief washed over Tali. A single sob shook her her, and Shepard squeezed harder.</p>
+        <p>&quot;It&#x27;s fine, we&#x27;ve got you now. We&#x27;ve got you. Jesus Christ, I really thought I&#x27;d lost you.&quot;</p>
+        <p>She realized that Jane&#x27;s voice was slightly shaking, too.</p>
+        <p>&quot;Ugh, Shepard?&quot;</p>
+        <p>There was a laughably muscled green Krogan standing next to them, awkwardly shifting his weight from one foot to the other.</p>
+        <p>&quot;You good in here? Can I go back out to the others now? You said I would get to kill that colossus...&quot;</p>
+        <p>&quot;Yes, Grunt, you can go. I&#x27;ll be right behind you. Have fun.&quot;</p>
+        <p>The lizard whirled around and stampeded back outside, crushing fallen Geth platforms under his heavy footfalls.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 58</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch57.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html" selected>Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch59.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 58</h1>
+    <div class="chapter-content">
+        <p>Tali stood next to Joker&#x27;s seat, peering through the viewport and felt herself dragged back in time to the first time she had brought Jane home to the fleet. Jane stood at her side just as it had been back then, and again her anxiety continued to grow the closer the Normandy got. And they were close already; the flotilla could be seen with the naked eye by now.</p>
+        <p>And yet, everything was so different. Treason. In the one and a half days since she had gotten the message from the board, Tali hadn&#x27;t slept and barely eaten. Even now, hours after her last measly meal she could feel a residue of nausea in the pit of her stomach. Her mind was spinning in vain, trying to find an answer to the question of what she&#x27;d possibly get accused of and coming up blank. The other question was how her father could ever let this happen. Again, she was at a loss as to how something like this could have gotten past him, and why he hadn&#x27;t contacted her. He should&#x27;ve warned me, she thought not for the first time. Something&#x27;s wrong.</p>
+        <p>They&#x27;d entered the fleet&#x27;s weapon range minutes ago; the exchange with the picket ships had been tense. The flotilla had the Normandy flagged as Cerberus, and it had been made clear to them that if not for Tali&#x27;s presence, they&#x27;d already been fired upon. It all felt bitter on her tongue. Never in a million years had she imagined coming home could be like this.</p>
+        <p>The next minutes went by in a blur. Joker said something encouraging, but she&#x27;d already forgotten the words mere seconds after he spoke them. Jane&#x27;s occasional touch on her shoulder grounded her in the here and now, but throughout the shuttle ride her mind was focused entirely on the moment they were going to set foot on the Rayya and she would finally learn what she was being accused of.</p>
+        <p>Except for the pilot, it was just the two of them. Garrus had wanted to come as well, but Shepard had worried that showing up in the company of a Turian might not be the wisest move, and so he&#x27;d stayed behind.</p>
+        <p>Eventually the small vessel shook with the impact of the docking clamps and tube, and the hisses off pressurization could be heard through the airlock. She got up and took a deep breath. &quot;Alright. We&#x27;re here now. Let&#x27;s go.&quot;</p>
+        <p>After passing through the docking tube, they arrived in an emptied bay. They were greeted by a squad of fleet marines; none of them were heavily armed, though. Tali breathed a little easier. A man rounded the corner, and she recognized him instantly- it was Kar&#x27;Danna, captain of the Rayya. She&#x27;d been around him a lot in earlier years. As befitted his status, he addressed Shepard first.</p>
+        <p>&quot;Captain Shepard, Tali&#x27;Zorah told me a lot about you. I wish we could be meeting under more pleasant circumstances.&quot;</p>
+        <p>&quot;Tali has helped my and my crew out of many difficult situations. I&#x27;m here to return the favor.&quot;</p>
+        <p>Kar&#x27;Danna nodded. &quot;And you will have opportunity to do so. As captain of the vessel she serves on, your word carries weight.&quot; He shifted his gaze. &quot;Tali, it pains me to have you coming home like this. I wish I could help you in some way, but the trial requires that I be officially neutral.&quot; He shrugged apologetically. &quot;However, I&#x27;m here if you need to talk.&quot;</p>
+        <p>&quot;Thank you, Captain. Do you know...&quot;</p>
+        <p>&quot;They are charging you with bringing active Geth aboard the fleet.&quot;</p>
+        <p>She couldn&#x27;t believe her ears. &quot;What!? That&#x27;s insane!&quot; Doubt gnawed at her initial, furious reaction within seconds. They wouldn&#x27;t do this if something hadn&#x27;t happened. Maybe if I sent something that was only damaged, not permanently disabled...no. No. I was careful. There is no way.</p>
+        <p>Jane and Danna were both looking at her, and Tali realized that she&#x27;d spoken out loud and was wringing her fingers. With some effort, she forced herself to stop and straighten up.</p>
+        <p>Kar&#x27;Danna stepped half aside, making way. &quot;The trial will be held in the garden plaza. Preparations just got underway when you arrived, but admiral Raan wishes to speak to you before it begins. So you better hurry.&quot;</p>
+        <p>She thanked him and got going, Jane&#x27;s heavy footfalls following behind her and her mind in even more turmoil than before. After a couple of meters, Jane said something; Tali barely even noticed and had to ask her to repeat it.</p>
+        <p>&quot;You sent disabled Geth parts to the fleet?&quot;</p>
+        <p>&quot;Parts. Sent them, brought them back with me..whatever worked quickest, depending on the deployment.&quot; People were almost openly staring at them as they passed. &quot;My father needed them for his work with the Geth data. I&#x27;ve been doing it for almost two years. I never heard of any issues! And there wouldn&#x27;t be. I know what I&#x27;m doing!&quot;</p>
+        <p>&quot;I know you do.&quot;</p>
+        <p>&quot;Any idea what they needed them for?&quot;</p>
+        <p>She took a moment to answer as they kept pushing on towards the garden plaza; the fact of the matter was that was what she&#x27;d been thinking about herself.</p>
+        <p>&quot;Like I told you, the group didn&#x27;t send me any reports. Just requests. I thought they were analyzing them, or using them for weapon tests. What else to do with them?&quot;</p>
+        <p>It wasn&#x27;t far anymore, and two minutes later they were approaching the plaza. Raan was waiting for them outside. When she spotted them, she pushed off the wall she&#x27;d been leaning on and came up to meet them.</p>
+        <p>&quot;Tali&#x27;Zorah vas Normandy, I am glad you have come. I could only delay them for so long. Commander Shepard.&quot;</p>
+        <p>Tali felt as if she&#x27;d been struck.</p>
+        <p>&quot;Vas Normandy?&quot;</p>
+        <p>&quot;Yes. Since you&#x27;re serving on Commander Shepard&#x27;s vessel, the board has moved to try you under that name.&quot;</p>
+        <p>&quot;How could Gerrel let that stand!?&quot;</p>
+        <p>&quot;He was overruled. I had to recuse myself because of our history together.&quot;</p>
+        <p>&quot;Excuse me, &quot; Jane shoved in. &quot;I don&#x27;t quite understand. I take it being associated with a human ship is a bad sign?&quot;</p>
+        <p>&quot;They stripped me of my ship name.&quot; Tali had never felt so humiliated in her life. &quot;That&#x27;s as good as declaring me exiled already.&quot; With a sinking feeling, the realization set in that she was in even more trouble than she&#x27;d already believed. &quot;If you had to recuse yourself, I imagine father had to do the same.&quot;</p>
+        <p>There was an awkward pause before Raan answered. &quot;You will see inside. One more thing: Shepard, as her Captain it falls to you to represent Tali in this trial. There are no formalities or legal pitfalls for you to worry about, just make your point as good as you can.&quot;</p>
+        <p>Jane straightened, not hesitating for a heartbeat. &quot;I&#x27;ll do whatever I can.&quot;</p>
+        <p>Raan nodded. &quot;I expected no less. Come now, they are eager to begin. It was hard enough stopping them from just trying you in absence.&quot;</p>
+        <p>The older woman turned and Tali found herself shocked to a standstill, unable to comprehend what she&#x27;d done to deserve this. &quot;They&#x27;re treating me like a criminal.&quot;, she croaked out.</p>
+        <p>Jane put her heavy hand on Tali&#x27;s shoulder.&quot;You&#x27;re not alone in this, Tali. I&#x27;m right here with you.&quot;</p>
+        <p>Unthinking, she grabbed Jane&#x27;s hand for a moment and squeezed tight, trying to ground herself in the moment and calm her mind. &quot;I know. Thank you.&quot; They stepped inside the garden plaza.</p>
+        <p>The plaza was the pride of the Rayya; as a child, Tali had spent many hours here with her friends, playing hide and seek and similar games between the priceless Rannochian plants that grew here; it was one of only three such installations on the entire fleet. The place was always busy, but today it was packed, rows and rows of onlookers crowding the room to the point of only a tight corridor down the center remaining. The room was buzzing with the voices of the hundreds of Quarians present; it was impossible to try and make out what any of them were saying.</p>
+        <p>More than one head turned when they entered, and their number only grew. By the time they&#x27;d closed in on the stage at the back wall of the plaza, the room had fallen almost silent and it felt as if all eyes were watching them.</p>
+        <p>Raan had already climbed her chair; it was propped up behind and above the judges lecterns. Barred from participating herself due to the requirements for neutrality, she would oversee the proceedings instead. As expected after the shock outside, there were three lecterns with Gerrel, Koris and Xen manning them. Han&#x27;Gerrel favored her with a subtle nod as she neared, but Zaal&#x27;Koris met her with a glare that could have taken a Krogan aback. She looked around, but her father was nowhere to be seen. She strained her neck to find him in the crowd, but was interrupted by Raan bringing the last of the idle conversations to a halt.</p>
+        <p>&quot;This conclave is brought to order! Blessed are the ancestors who kept us alive, sustained us, and enabled us to reach this season. Keelah&#x27;Selai.&quot;</p>
+        <p>The room echoed, and so did Tali.</p>
+        <p>&quot;The accused, Tali&#x27;Zorah vas Normandy, has come with her captain to defend herself against the charges of treason. Jane Shepard vas Normandy, as her captain It falls to you to represent her in this trial. Will you speak for her?&quot;</p>
+        <p>There was some murmur in the ranks of onlookers; it wasn&#x27;t hard to see why. This had to be the first time an alien had served in such a position. Jane, of course, was unfazed, taking two steps forward to stand at the defendant&#x27;s lectern, her bulky, armored frame making the thing look almost comically inadequate. &quot;&quot;If it helps Tali, I will. But in her heart Tali remains a proud member of the fleet. I see her captain is serving as a judge today, which is good. But I have to say I find it appalling that none other of her own people was allowed to stand at her side today.&quot;</p>
+        <p>Koris scoffed. &quot;Nobody was forbidden from doing so, this is a simple matter of procedure.&quot;</p>
+        <p>Gerrel&#x27;s head whipped around. &quot;You are shameless, Koris. The human is right, you did this on purpose. Don&#x27;t expect me to stand here silent and listen to you try to lie to us.&quot;</p>
+        <p>Koris was going to answer something no doubt equally bellicose, but Raan beat him to it. &quot;Admirals, please. This is not the matter of the day.&quot; Watching the two of them settle back into their positions, she continued. &quot;Tali, you stand accused of bringing active Geth to the fleet. What have you to say in your defense?&quot;</p>
+        <p>&quot;Tali was under orders by her father to supply him with Geth parts for his research. The pieces were acquired during her deployments with the marines, so youre surely already aware of everything she brought back that way. After that...explain to me, admirals, how could Tali have sent Geth to the fleet while serving on the Normandy?&quot;</p>
+        <p>&quot;To clarify,&quot; , Xen spoke up for the first time, &quot;we&#x27;re not accusing her of sending back entire units. Only parts that could spontaneously reactivate.&quot;</p>
+        <p>Tali&#x27;s confusion was reaching ever new peaks. &quot;But...that&#x27;s insane! I only sent back parts that were definitely permanently disabled. I checked everything twice! I was careful!&quot;</p>
+        <p>Koris crossed his arms in front of his chest, the contempt palpable in his voice. &quot;Then explain how the Geth seized the lab ship your father was working on!&quot;</p>
+        <p>The words hit her like a punch in the gut. &quot;Wha-what? What are you talking about!?&quot;</p>
+        <p>&quot;Tali, as far as we know, the Geth killed everyone on the Alarei.&quot; , Gerrel replied. &quot;your father included.&quot;</p>
+        <p>&quot;Oh, keelah...&quot; She had trouble to stand, but before she could do more than sway a little, Jane took hold of Tali&#x27;s suit straps and gently guided her down onto her chair. The crowd in wild uproar, the noise in the room was deafening. Jane&#x27;s armored first coming down on her lectern still managed to crack loudly over all of it.</p>
+        <p>&quot;You&#x27;ve got some fucking nerves on you! Springing this on her like that! What the hell kind of trial...&quot;</p>
+        <p>The rest of Jane&#x27;s tirade got lost in the roar of the crowd and that of the blood in her ears. Panic threatened to overwhelm her, and her digits clamped onto her knees for dear life, trying her hardest just to not collapse. Focusing on the turmoil in her body, the turmoil in her soul slowly faded into the background, and when her lightheadedness eventually subsided and her legs began to feel as if standing on them might be a reasonable proposition again, she&#x27;d regained a semblance of calm – and of perspective. There was only one thing to do.</p>
+        <p>She jumped up and stood next to Jane, prompting her to break off whatever she&#x27;d been saying.</p>
+        <p>&quot;Shepard, we have to take back the Alarei.&quot;</p>
+        <p>&quot;I agree. Your admiral Koris here, however, seems to have some reservations.&quot;</p>
+        <p>&quot;Several strike teams attempted to rescue the Alarei&#x27;s crew just after they sent their last message, but they were repelled, and the Geth defenses will have become even stronger since. The ship is a death trap now. The safest course of action would be to simply destroy it.&quot; Koris shrugged. &quot;But if you&#x27;re looking for an honorable death instead of exile...&quot;</p>
+        <p>Tali could not believe what she was hearing. &quot;I am looking for my father, you bosh&#x27;tet!&quot;</p>
+        <p>&quot;Your offer to assist with the Alarei is greatly appreciated, Commander.&quot;, Raan intersected. &quot;And we accept.&quot;</p>
+        <p>&quot;Agreed.&quot; , Gerrel cut in before Koris, and Xen nodded her ascent. &quot;And Tali, know that should you die on this worthy mission, we will see to it that your name is cleared of all charges.&quot;</p>
+        <p>&quot;We can discuss that later.&quot; The distaste and coolness with which Koris said this made her blood boil, and for some moments it was all she could do to not run up to the admiral and scream in his face. What in the ancestor&#x27;s name had she ever done to this man?</p>
+        <p>&quot;Then it is decided. Tali, you are hereby given leave from the Rayya to attempt to retake the Alarei. The trial will be resumed upon your return or determination that you&#x27;ve been killed in action.&quot; Raan looked her in the eyes. &quot;May the ancestors be with you. Keelah&#x27;Selai.&quot;</p>
+        <p>The room erupted into a roar of chatter as everyone set to discussing the developments with pretty much everyone around them at the same time. All exits immediately clogged with people as they attempted to file out of the hall. Tali turned her back to the Chaos and put her eyes on Raan. She was sure her &#x27;auntie&#x27; had meant well, but she was furious nonetheless. Jane had been faster though, and was giving her an earful by the looks of it. Tali moved to join in, but was stopped by Han&#x27;Gerrel.</p>
+        <p>&quot;Tali, I&#x27;m so sorry for all of this. They wanted it bad, we couldn&#x27;t stop them.&quot;</p>
+        <p>&quot;But why...it&#x27;s like they&#x27;ve made up their minds already. Raan said they even wanted to do the trial in my absence! The Alarei was taken two days ago, and instead of taking it back they worry about me? Why did nobody tell em about the Alarei? Why are they doing this to me? Admiral!&quot;</p>
+        <p>&quot;The Alarei hasn&#x27;t been taken or destroyed yet because I didn&#x27;t allow it. It was Raan&#x27;s idea, but I support it wholeheartedly. That&#x27;s also the reason we didn&#x27;t tell you. When the Alarei fell...I was in the middle of organizing the boarding force. Just about to send them, in fact. Then Koris and Xen came around with the trial. Those two, of all people. It hadn&#x27;t even been an hour yet. I don&#x27;t know what Koris offered her, but...with Raan bullied into recusing herself, I couldn&#x27;t do anything but this. This is your chance. Your only chance.&quot;</p>
+        <p>Tali&#x27;s head spun. &quot;I still don&#x27;t understand why Koris is so hellbent on exiling me.&quot;</p>
+        <p>He sighed. &quot;Politics, Tali. Think about it. This..disaster is already the biggest scandal of the decade, hell, what am I saying, the century. Someone will end up with the blame, and Koris&#x27; got exact ideas of who&#x27;s that going to be. And make no mistake, Tali...even if your father was still around to defend himself- &quot;</p>
+        <p>&quot;I will find him!&quot;</p>
+        <p>Gerrel looked at her pityingly for a long moment. &quot;Yes, I&#x27;m sure you will.&quot; He cleared his throat. &quot;The point is, someone made a horrible mistake, and in the end it&#x27;s in your fathers responsibility. His legacy is in tatters, and so is our entire movement. But that&#x27;s not important now. What&#x27;s important is that that&#x27;s apparently not enough for the old suitwetter. He want&#x27;s a scapegoat.&quot;</p>
+        <p>&quot;But...me?&quot;</p>
+        <p>&quot;Of course you. You are Rael Zorah&#x27;s daughter, you&#x27;re a celebrated young up and comer, and you&#x27;re firmly in your father&#x27;s and my camp.&quot; He made another pause. &quot;You&#x27;re also the only one associated with this whole mess who&#x27;s around to be tried. &quot;</p>
+        <p>&quot;But...they don&#x27;t have any proof! All they know is that I brought the parts! This isn&#x27;t right! They can&#x27;t do this!&quot;</p>
+        <p>Gerrel stepped closer and put a hand on her shoulder. &quot;Of course this isn&#x27;t right, girl, but they can do it. There are Geth right in the middle of the fleet, Tali. The people are hysterical. The conclave is...beyond outraged. They want to see heads roll, they won&#x27;t give a damn. And I am outnumbered here.&quot; He sighed. &quot;Unless you can bring us solid proof of your innocence, there is nothing I can do for you, you understand?&quot;</p>
+        <p>She nodded numbly, overwhelmed with what she&#x27;d heard.</p>
+        <p>&quot;Come, there&#x27;s someone you&#x27;ll want to see before you leave. It was difficult enough getting him on board with the plan.&quot;</p>
+        <p>It didn&#x27;t take long – her brother had apparently sat in one of the front rows, were he&#x27;d remained during the general exodus. Just seconds after Gerrel had said the word, Han closed his arms around Tali and they held each other tight. None of them spoke for a while.</p>
+        <p>&quot;Father&#x27;s...gone, Tali.&quot;</p>
+        <p>&quot;We don&#x27;t know that. I will find him.&quot;</p>
+        <p>He nodded feebly. &quot;I want to come with you.&quot;</p>
+        <p>&quot;Out of the question,&quot; , Shepard interrupted. &quot;We can&#x27;t take a civilian with us.&quot;</p>
+        <p>&quot;But he&#x27;s my father too!&quot;</p>
+        <p>Jane put a finger on the boy&#x27;s sternum. &quot;I know. But this is my operation, and you&#x27;re not coming, and that&#x27;s that.&quot; She pulled back her hand. &quot;It&#x27;s too risky. I don&#x27;t want Tali to lose what&#x27;s left of her family.&quot;</p>
+        <p>The fact that even Jane took her father for dead stung, and Tali clenched her teeth but said nothing. Jane still noticed.</p>
+        <p>&quot;I&#x27;m sorry, Tali. We will do everything we can, we&#x27;ll search that ship up and down. I just...don&#x27;t get your hopes up, okay? It&#x27;s been two days.&quot;</p>
+        <p>&quot;I know, Jane. Don&#x27;t. Please.&quot;</p>
+        <p>Jane nodded. &quot;Of course. Sorry.&quot; She took a deep breath. &quot;Raan just gave me the long and short of what&#x27;s really going on here. I assume Gerrel did the same for you?&quot;</p>
+        <p>Tali nodded. &quot;Yes, he did.&quot; She breathed a deep, heartfelt sigh. &quot;I can&#x27;t believe this is happening.&quot;</p>
+        <p>Jane looked down on Tali with a sad look on her face. &quot;I can. Politicians...&quot; She shook her head. &quot;Let&#x27;s go. The sooner we get this done, the better.&quot;</p>
+        <p>Jane checked her shotgun one last time; some of the others around her were doing the same with their weapons. Nobody spoke; except for Samara, everyone present had been present on Haestrom, so none of them had taken the surprise prospect of squaring off against them in the tight confines of a ship lightly.</p>
+        <p>Except for Grunt, of course.</p>
+        <p>As usual these days, Jane had decided to split the team up. She was here with Tali, Samara, Jack, Grunt and Mordin, while Garrus and everybody else was in the other shuttle. It had been provided to them by the Quarians for this mission, and the added flexibility to their deployment had immediately made her wish the Normandy was large enough to fit a second Kodiak.</p>
+        <p>The Quarians had also provided them with were the plans of the Alarei. She&#x27;d studied them over at the Normandy together with Garrus, Tali and Miranda; the ship had turned to be a repurposed Quarian-made picket boat. Like most Quarian vessels, it consisted of a long tubular spine keeping the engines, thrusters and most other vital systems, while the circular ring at the front end contained the bridge and most of the space that the crew actually lived and worked in – whatever this work had looked like, exactly. Jane was not entirely enthusiastic about finding out. The plan was simple: They would enter the ship at the back end, where they would first push towards the engine room to disconnect the thrusters from bridge control. Tali was confident that the Geth could not have hacked their way through the Alarei&#x27;s system yet, but everyone agreed that eliminating any risk of the synthetics trying an escape needed to eliminated as soon as possible.</p>
+        <p>After that, they would methodically push up the ship&#x27;s spine, flushing out the Geth and inspecting the ship for survivors and evidence until eventually, they&#x27;d be in position to assault the bridge. Once that was taken, Tali would quickly reestablish control of the Alarei&#x27;s systems, and any remaining Geth would be easy pickings. Jane had even briefly contemplated if it might have been worth to assault the bridge directly; but with only one shuttle bay in that part of the ship and the enemy&#x27;s defenses most likely thickest around that area, she&#x27;d come to the conclusion that it was too dangerous. These Geth had already repelled a boarding attempt by the fleet marines; their numbers had to be considerable.</p>
+        <p>The Kodiak&#x27;s side door shot open of it&#x27;s own accord, and the vacuum of the depressurized passenger compartment joined with open space. Directly in front of them, illuminated faintly by the light of the stars, but more importantly bright and stark by the Kodiak&#x27;s own searchlights, was the Alarei. It was mere meters away, a testament to Wu&#x27;s abilities as a pilot. Jane jumped, bracing her stomach against the disgusting, lurching sensation of sailing through the void. Even after just three or four seconds of that, hitting the ship&#x27;s hull and clamping onto it with her magnetized boots and gauntlets was pure relief. A moment later, Tali landed to Jane&#x27;s left and immediately started to climb her way down towards the airlock they&#x27;d been aiming for, where she began to interface with it&#x27;s outer controls. At the other side of the ship Kasumi, having been instructed on some of the peculiarities of Quarian programming by Tali earlier, would be doing the same. Something at the edge of Jane&#x27;s vision drew her attention, and she looked up – to find a Geth staring at her through a nearby window.</p>
+        <p>&quot;They&#x27;ve seen us. Hurry up.&quot;</p>
+        <p>Not a minute later they were inside, the airlock&#x27;s inner doors opening in front of them just as the room had finished re - pressurizing. Jane and Grunt were in front, guns raised, and a biotic barrier protected the entire team, with Jack ready to pick up the instant Samara&#x27;s strength should waver.</p>
+        <p>Nothing came. They stepped out into an empty corridor. Jane noticed movement far to her left and whirled around, but all she caught was sight of a single Geth trooper disappearing around a corner.</p>
+        <p>Grunt chuckled. &quot;Running already? Hmm.&quot;</p>
+        <p>Jane was far less optimistic, but satisfied nonetheless. &quot;Looks like we were right. The majority of their forces must be near the bridge, or they would&#x27;ve tried to box us in here.&quot; She stopped to think for a second, before holding a brief conversation with Garrus, making sure the other team had gotten in as well, which they had, also not encountering any resistance yet. &quot;Let&#x27;s get moving&quot;, she said. &quot;They&#x27;ll have figured out what we&#x27;re after by now. The sooner we get to engineering, the less time they have to prepare. Move!&quot;</p>
+        <p>She was proven right soon. The Alarei wasn&#x27;t a huge vessel, measuring only two hundred meters stern to bow. Which meant that while they didn&#x27;t have far to the engine control room, neither did the Geth&#x27;s reinforcements.</p>
+        <p>&quot;Two troopers, 3 more, another...&quot; Kasumi, using her cloaking device to scout unseen, was giving Shepard and Garrus the count via radio. &quot;Two of the big ones...&quot;</p>
+        <p>Moving as fast as they could without being reckless, they stayed in formation all the way until they burst through the door and straight into the carnage. Jack simply blowing it out of it&#x27;s hinges with her biotics took the synthetics by surprise, but they rallied as quickly as they always did. The engine room was a square about ten meters across, most of it taken up by consoles – which the Geth that weren&#x27;t busy installing something on the opposite door had taken up cover behind. At a quick glance, Jane estimated their strength at about a dozen. A quick salvo took one off that number. Samara caught all their firepower with a biotic barrier even as she projected it forward to knock them all off their balance – a move she&#x27;d picked up from Jack.</p>
+        <p>Then something behind them exploded, and both their biotics sailed past her and Grunt, slamming into the ground. Mordin and Tali fared a little better, staggering into cover and beginning to return fire. Jane herself didn&#x27;t even miss a step, and if Grunt had even felt the blast, he gave no indication of it. He was already ripping through his third Geth trooper.</p>
+        <p>Jane fired and ducked behind a console. Shields at sixty percent. She&#x27;d seen another at her ten o&#x27;clock before taking cover and popped out on the other side to bring it down. She did, but she&#x27;d not counted on the two others that had appeared there in the meantime. It turned into a murderous, short ranged slugfest. One down, shields at fourty. Second down, shields at thirty. She aimed and pulled the trigger – to be answered by an empty click.</p>
+        <p>Too disciplined to curse out loud, she pulled the hand cannon and blew the synthetic away with one clean headshot. At this range, the Carnifex all but ignored it&#x27;s shields.</p>
+        <p>Slinking back down into cover now that those enemies in an angle to penetrate it were dealt with, she allowed herself to actually curse. Shields at fifteen percent because of a stupid mistake.</p>
+        <p>Fortunately, it mattered little in the grand scheme of things. The Geth were simply outmatched, and once Garrus and his team had rounded the trap and came in from the back – Tali had had the presence of mind to warn them about the IED – they didn&#x27;t even have the numbers on their side anymore.</p>
+        <p>Keeping the gun in her right, she got out of cover and walked over to her two biotics. &quot;You two alright?&quot;</p>
+        <p>Samara had already been standing, proud and upright as she always did. &quot;I will inform you of my own accord should any problems ever arise.&quot; Jack just nodded and grinned at Shepard.</p>
+        <p>Jane abstained from commenting on Samara&#x27;s needlessly abrasive tone. The Justicar was centuries old and deservedly proud; Jane was lucky to have her at all. The fact that she was, by her own admission, unused to working in a group was something Jane gladly put up with.</p>
+        <p>Completing the task they came for took Tali mere minutes. In the meantime, Jane caught up with Kasumi.</p>
+        <p>&quot;Kasumi, where are you?&quot;</p>
+        <p>&quot;I think I&#x27;ve reached the crew compartment. The ring, you know.&quot; There was a pause for about half a minute. &quot;Shep, I see Geth moving out of the spine, I think they&#x27;re retreating.&quot;</p>
+        <p>As they were just about to move out, she called in again. &quot;Shep, I can&#x27;t go further. Too many, too dangerous. Meet you on your way here.&quot;</p>
+        <p>And with that, she dropped out of the channel, not even waiting for Shepard to say something. She accepted that as well. She&#x27;d understood weeks ago that she&#x27;d never instill proper military discipline in this team, and so she&#x27;d settled for getting them all to follow orders and give their very best – and adapting around their quirks where necessary.</p>
+        <p>&quot;Alright. You&#x27;ve all got the plans, so fan out as briefed. Keep your eyes open for anything that could prove useful...and for the Geth. But especially for survivors.&quot;</p>
+        <p>As she said it, her eyes fell on the bloodied corpses of the engineers and deckhands that had died defending this place. Not for the first time in similar situations, she reflected on the strange feeling of feeling nothing when one felt as if they were supposed to feel something.</p>
+        <p>I&#x27;ve done this kind of shit too often.</p>
+        <p>They split up further; the Alarei had four main corridors along her spine, so they were sweeping each one with a fireteam. Jane waited and watched as the other teams filed out of the engine room, Mordin&#x27;s – made up of the Salarian himself as well as Samara and Grunt – having to clamber up a ladder to reach their destination, the smallest hallway of the four. Thinking about it now, perhaps she shouldn&#x27;t have assigned Grunt to sweep the maintenance tunnels on a Quarian vessel.</p>
+        <p>She called them back and they swapped tasks. A minute later, she took her first step down the Alarei&#x27;s main service tunnel, Tali to her right and Jack to the left.</p>
+    </div>
+</body>
+</html>

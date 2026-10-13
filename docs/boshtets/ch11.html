@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 11</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch10.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html" selected>Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch12.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 11</h1>
+    <div class="chapter-content">
+        <p>The Normandy sat still in the void, still in the Pax system, discharging built up energy to make ready for her venture back to the Citadel; not that it was truly needed, but venting energy in the proximity of the Citadel was considered very bad form, and so the executive officer had decided to do so here – Pressly made virtually all of these decisions, acting almost as captain most of the time, Shepard only too happy to let the experienced navigator and organizer take care of the technical aspects of their mission while she focused on the ground operations and the question of where to go. With Pressly and Joker, the job of getting them there was in excellent hands. Currently, the ship was in it&#x27;s night cycle, and so most of the crew, including all of the ground team, were asleep, or at least in their sleeping places. Tali herself wasn&#x27;t even that tired yet, but even in the day and age of modern medicine the dull pain in her strained left ankle wasn&#x27;t going to get better from walking or standing around, so the comfort of the her pod was very alluring right now.</p>
+        <p>Tali had just crawled into her pod when her omnitool began to chime. Bringing it up to her face, she took a look at the notification, half expecting Ashley to have sent her some terrible joke cartoon again. Instead, her eyes almost popped out of their sockets when she realized she was looking at her father&#x27;s ID. The bosh&#x27;t... man was apparently still not willing to let the decision go. She scoffed furiously. She had been angry at her father more than once in her life; almost always, she had relented without a word, and the few times where she had talked back to him, she had done so meekly, accepting the inevitable outcome of her fruitless effort before she had even opened her mouth.</p>
+        <p>Her defiance of him weeks before had been the first time ever that he had not gotten his will from her. Had he called to simply order her around again, expecting his daughter to have changed his mind, or be able to be made to do so with some more berating? Or had he perhaps cooked up some punishment to make her bend to his will? A cold fear crept into her belly at the mere thought of being taken away from the Normandy, her home away from home, the only place where she had ever been neither &#x27;the Quarian&#x27; nor &#x27;the admiral&#x27;s daughter&#x27;, but just Tali. With trembling fingers, she accepted the call. For all his audacity, he was still her father. She could not just ignore him.</p>
+        <p>The head of a male Quarian appeared on the holo display, but he was smaller than her father, and his realk and mask were green. There were only so many ways to customize envirosuits, at least with the rather limited resources most Quarians were able to divert to such a relatively vain purpose, but there was only one man in clan Zorah who wore green. Underneath her mask, her eyes first widened in recognition, and then jubilation.</p>
+        <p>&quot;Han!&quot;</p>
+        <p>It was clear to see that beneath his visor he was smiling as well. &quot;Hello, big sister. How are you doing?&quot;</p>
+        <p>She laughed. &quot;I&#x27;m doing great. Well, actually, I strained my ankle and broke a rib earlier today...but it&#x27;s fine.&quot; She shook her head, suddenly disbelieving of what she had just said. &quot;Keelah Han, it&#x27;s insane. If you had told me a couple of months ago that my pilgrimage would have me break bones and it&#x27;d just be a mild case of &#x27;business as usual&#x27;, I&#x27;d have looked at you like you&#x27;re some crazy person.&quot;</p>
+        <p>His brother&#x27;s &#x27;expression&#x27; had grown concerned. &quot;You broke a rib ? How? I heard you work on this human frigate. Did you slip or something?&quot;</p>
+        <p>She would have looked down, but since she was lying on her back in a sleeper pod that was not an option; so she looked towards the side as she somewhat sheepishly answered, &quot;I was flung against a wall by an Asari commando...&quot;. She could see and hear her brother gasp in shock. &quot;...but don&#x27;t worry, Garrus blew her head off.&quot;</p>
+        <p>&quot;What the fre&#x27;eg are you doing fighting Asari commandos!? What have you gotten into?&quot;</p>
+        <p>She shuffled awkwardly. &quot;Well, you already know I work for the first human Spectre...it&#x27;s just that I&#x27;m not primarily an engineer here on the Normandy. Primarily, I&#x27;m on her ground team.&quot;</p>
+        <p>Her brother looked at her wide eyed, a hint of awe creeping into his voice. &quot;You- you are on the team of a Spectre?&quot;</p>
+        <p>She just shrugged, a detached voice at the back of her mind wondering why she was so relaxed about this, when one would have thought she&#x27;d be giddy, or bursting with pride. &quot;Well, I told you I&#x27;m good with a shotgun. And there is always a use for someone who&#x27;s good with an omnitool...&quot; She giggled. &quot;All the more so with Shepard. She&#x27;s a brilliant woman in her own way, but she couldn&#x27;t maneuver her way through a simple parallel circuit.&quot;</p>
+        <p>&quot;What&#x27;s she like?&quot;, her brother asked, all his usual sarcasm and juvenile crap gone, apparently blown away by the fact his sister was not just working for, but fighting shoulder to shoulder with a member of the galaxy&#x27;s legends.</p>
+        <p>&quot;She is a good woman.&quot; A couple of days ago, you would have said she is the greatest woman who ever lived, the detached voice in the back of her head commented. &quot;She is an experienced soldier and a very good fighter. But not stupid. She will get us through this hunt successful and in one piece. Maybe because I was being a silly girl who&#x27;d rather obsess over some fantasy than acknowledge the real woman, she shot back. She got more serious, almost somber, thinking about what else one should absolutely know about Commander Shepard, and added, &quot;She cares about her people.&quot; She would most definitely not mention to her shithead of a little brother that Shepard was also a kind soul at heart who she was harboring a serious crush for.</p>
+        <p>Han was quiet for a long moment. &quot;Who is Garrus?&quot;</p>
+        <p>&quot;Co-worker of mine...almost a friend, honestly.&quot;</p>
+        <p>&quot;Garrus sounds Turian.&quot;</p>
+        <p>She could just feel the shit eating grin he had on his face. With an exasperated sigh, she answered. &quot;Yes, he is a Turian. Completely insufferable, too. But he&#x27;s alright.&quot; He tilted his head skeptically. &quot;He is okay, I swear! He said some typical turian things when we first met, but he actually apologized later!&quot;</p>
+        <p>Her brother finally broke and laughed. &quot;Fre&#x27;eg, father is going to be so mad when I tell him you&#x27;re friends with a Turian!&quot;</p>
+        <p>&quot;We are not friends! Okay, maybe we are, but he&#x27;s an exception!&quot;</p>
+        <p>Han just laughed even more.</p>
+        <p>&quot;You&#x27;re not telling him! You, you, you...you&#x27;ll get into trouble if he learns you used this connection. So you won&#x27;t tell him. Hah!&quot;</p>
+        <p>Finally, his guffawing stopped. &quot;Calm down Tali, I wouldn&#x27;t have told him anyway. It&#x27;s just too funny to pull your leg.&quot; He gave her the most cheeky, self-satisfied expression any Quarian was capable of getting past their visor.</p>
+        <p>She gasped at the little bosh&#x27;tet&#x27;s audacity. &quot;You little bosh&#x27;tet!&quot; He laughed again, and this time, she joined in. &quot;It&#x27;s so good to hear your voice, Han. What is going on at home?&quot;</p>
+        <p>He shrugged. &quot;Nothing special, same old same old. &quot; Looking to the side at something, he added, &quot;Father is apparently working on something big with Gerrel, so, exactly the same business as always. Raan is trying to help me convince father to let me take the preliminary course for medicine and biology. It&#x27;s...he isn&#x27;t too thrilled.&quot;</p>
+        <p>She nodded empathetically. &quot;I&#x27;m not surprised.&quot; She bit her lip, not sure how to say this. &quot;I know this is important for you, it would give you a better start into the field after your pilgrimage...but please, be open for a compromise. Father is...overbearing sometimes, but he only means well. Mostly means well.&quot;</p>
+        <p>Han scoffed and shook his head violently. She steeled herself for what was about to come. &quot;I can&#x27;t believe this! After you told him off, I thought you would have finally grown a spine! Ancestors, father was so mad! Served him right for trying to tell you what to do on your own damn pilgrimage! &quot; The ranting, immature side of her little brother, rebellious, sometimes just for being rebellious&#x27; sake, was rearing it&#x27;s ugly head. She could deal with it; he was only sixteen after all. It was normal to be like this sometimes at that age, she reasoned. It was still tiring, however.</p>
+        <p>&quot;Han...&quot;</p>
+        <p>&quot;No! I can&#x27;t believe you want me to dance to his tune like you did, when you just saw what that gets you!&quot; He shook his head again, exasperated now. &quot;I really thought you had finally understood-&quot;</p>
+        <p>&quot;Shut up!&quot; , she snapped, her irritation with his juvenile bickering finally boiling over. &quot;If I hadn&#x27;t taken all those extra courses father organized, the survival and weapons training, I&#x27;d be dead now! Several times over!&quot; She paused for dramatic effect. &quot;Father may be a bosh&#x27;tet sometimes , but he knows the galaxy a great deal better than you! And so do I now, for that matter. And I&#x27;m telling you it&#x27;s exactly as nasty and dangerous as he always says. So get those ancestors damned training courses!&quot; She took a couple of deep breaths, looking both to calm herself and for the next words to say to try and get some sense into the boy&#x27;s thick skull. &quot;And before you ever dare to call me spineless again, you go and kill yourself some Rachni, alright?&quot;</p>
+        <p>He nodded dejectedly, but she wasn&#x27;t sure if his heart was in it. &quot;I&#x27;ll...think about it, alright?&quot;</p>
+        <p>She sighed. &quot;Alright.&quot; She was going to say more, but he cut in, changing the topic.</p>
+        <p>&quot;So...I heard Keenah is dead?&quot;, he asked quietly. He looked at her again now, looking for she knew not what. A tight knot formed in her throat at the thought of her friend; Han had always liked her, and she him. When Han had been very young, her parents had sometimes let Keenah look after him when they both had to be somewhere at the same time. She just nodded twice in way of an answer.</p>
+        <p>&quot;How?&quot;</p>
+        <p>She winced, but if he wanted to know, she would tell him. &quot;Shot in the stomach. One of Saren&#x27;s men.&quot;</p>
+        <p>&quot;Did you kill him?&quot;</p>
+        <p>The question startled her, but not for long. There had always been more of his namesake in Han than he&#x27;d like to admit; or perhaps it was just a male thing.</p>
+        <p>&quot;Yes, I killed him.&quot;</p>
+        <p>He nodded solemnly. &quot;Good. I-&quot; His head snapped around and he stood up, hunching over to keep his head in front of the camera. &quot;Fre&#x27;eg, it&#x27;s father. Gotta go. See you!&quot;</p>
+        <p>The connection was closed before she could even reciprocate the goodbye. She sighed , wondering if her father had caught him or not. Not that Han would care too much, he had turned angering father into an art form, and a sport. For some minutes, Tali just lay there, looking at the roof of the pod, enjoying the softness of the surface below her and the relaxation the &#x27;pillow&#x27; – the pod&#x27;s head compartment was a specialized mesh that adapted to the head of the sleeper – provided to her neck. Sleepiness did not come yet, however, and so she brought up her omnitool again, and after some browsing, decided to go through some of the music Shepard had sent her. Shepard had apparently quite the old-fashioned taste in it, preferring songs of a lot different genres, but most of them fairly old, the youngest one in the list before her being seventy three years old, with most of them being considerably older, having originally been recorded in the twenty first, and in some cases even twentieth century of the human calendar. She found one from 2103 and hit play, closing her eyes and gently rocking her head with the beat soon after.</p>
+        <p>The night was still young, and already, Shepard was pretty hammered. They had arrived at the Citadel around 0800 of the Normandy&#x27;s cycle, which happened to be around midday Citadel time. Shore leave was put into effect mere two hours after, every urgent task aboard the ship finished or at least set up so that the skeleton crew on shift would be able to handle them, even Ashley had been able to be convinced to stretch out the second cleaning of the guns over the coming three days of leave after giving them a quick once over with the help of Garrus. Not willing to put up with jetlag for three mere days, the team had decided to hold their well deserved visit to Flux in what amounted to the ship&#x27;s evening, not the station&#x27;s.</p>
+        <p>&quot;...I had reach...she had flexibility.&quot; Garrus finished his story, flaring his mandibles with the punchline, eliciting a pained expression from Kaidan, deep, rumbling laughter from Wrex, and exasperated eye-rolling from Ashley. Shepard herself could only shake her head; the Turian was quite the talker when he had some drinks in him. For her part, she had been downing beers one after the other for about two hours now, and was definitely feeling the effects; while she was genuinely interested in what the others would have to tell as well in watching them interact in a more relaxed setting, part of the reason she had barely said a word in the last half hour was the fact that when she had tried, she had noticed that her speech was somewhat blurred in a manner quite unbecoming of a commander. And so she just leaned back and relaxed as Wrex launched into another tale, this one about him single handedly taking out a ship full of pirates in the Terminus.</p>
+        <p>They were all listening intently when their revery was broken by Tali barging in on the table, coming to stand next to Ashley. The Quarian was completely sober, not having touched any alcohol, with the argument that &quot;You people are just trying to get me drunk so I&#x27;ll finally tell you what bosh&#x27;tet means. Forget it!&quot; . Quickly getting bored with the war stories, she had dragged Liara off to the dance floor. Shepard felt a pang of guilt at the thought of her Asari teammate; she had convinced Liara to come with, whats with her understandably not being in the brightest mood after her mother&#x27;s demise yesterday, arguing that going out might get her mind off of it at least for a couple of hours, and then she had barely talked to her, unsure of what to say that wouldn&#x27;t be too personal for the group setting, but also not expecting her to be in the mood for idle conversation. She had already begun to wonder if she had made a mistake encouraging her to come when Tali had stepped up. If Tali was aware of what she had done Shepard didn&#x27;t know, though she suspected it; looking at Liara gently swaying with the rhythm, seeming not exactly enthusiastic, but at least somewhat at peace, it seemed that Tali&#x27;s ploy had worked. And now she had chosen her next victim. By the time Shepard zoned back into the here and now, the marine had already relented.</p>
+        <p>&quot;Fine, fine, I&#x27;ll come dancing! Not exactly my thing, but it&#x27;s gotta beat Vakarian bragging about his sex life.&quot;</p>
+        <p>The Quarian recoiled and tilted her head. &quot;Ugh. I did not need to hear that.&quot; Garrus looked around the others, finding noone to jump to his side. Before he could try to give a retort, the Quarian had already turned around, dragging Ashley with her. Wrex resumed his tale, and the attention switched back to him. The story wasn&#x27;t bad at all, but it was the umpteenth of it&#x27;s type today, and Shepard was feeling somewhat drowsy from the alcohol, so she leaned back in her seat and closed her eyes, just savoring the feel of sitting in a soft, warm spot in safety, surrounded by friends. She hadn&#x27;t felt this way in a long time. Jane still was not sure if this newfound attachment was a good or a bad thing, but it sure as hell felt great. She felt Kaidan move to her right and opened her eyes, just in time to see the Canadian put his glass back on the table. He turned and smirked at his commander. &quot;Got your fill, commander?&quot;</p>
+        <p>She snorted. &quot;Jesus Christ, Kaidan, we&#x27;re drunk. Stop calling me that. &quot;</p>
+        <p>The man chuckled. &quot;Sorry, Shepard. Habit.&quot; They toasted to nothing in particular as Wrex and Garrus were launching into some of their near constant arguments, both finishing their beers. Kaidan nodded contently and put down the empty glass. &quot;I gotta say, I like this place. They got some okay beer from earth, nice seats, the food wasn&#x27;t half bad, and the music is at least bearable. Looks like how a bar should be is one of these things that just stay the same across species.&quot;</p>
+        <p>Jane lifted an eyebrow. &quot;&#x27;At least bearable&#x27;? What kind of music do you like, then?&quot;</p>
+        <p>&quot;Classics, honestly. Bach, Wagner, that stuff.&quot;</p>
+        <p>Shepard laughed. &quot;Really? Guess I shouldn&#x27;t be surprised. You are the intellectual type.&quot; She got an amused look from her lieutenant. &quot;What, it&#x27;s true. Half the time I see you off duty, you&#x27;re sitting in that corner in the mess looking pensive.&quot;</p>
+        <p>Kaidan smirked. &quot;Well, from what I&#x27;ve heard, I&#x27;m not the only one here who likes the old stuff. Tali showed me the playlist you sent her. Those are some classics in their own right by now.&quot; Shepard laughed and nodded, it was true, she had an odd taste in music herself. &quot;Actually Shepard, I like that era too. More for it&#x27;s pop and techno, so your playlist with all the rock on it wasn&#x27;t really my thing, but it was a good time for music. You know, back when it was still the norm for artists to compose music themselves, not this computer generated crap they make today.&quot;</p>
+        <p>Jane slapped the tabletop violently, feeling a need to underscore the canadian&#x27;s sentiment. &quot;Damn true. No idea how people can listen to that stuff.&quot; Garrus broke their conversation off, dragging Kaidan into the argument he was having with Wrex, some ridiculous nonsense about using biotics to deflect a sniper round back to the shooter.</p>
+        <p>Enjoying her happy buzz, Shepard let her gaze wander over the bar, just taking in the sights. She had come around quite a bit, but sitting in a bar full of aliens of all species in and out of Citadel space was still an interesting experience. Turians sat around tables playing card and dice games that didn&#x27;t look familiar at all, a pair of volus in the corner chatted animatedly, and at the edge of the dance floor she saw an Elcor, attempting somewhat clumsily to bob with the beat, his people&#x27;s bulk and, from the point of view of races accustomed to lower gravity, sluggishness, doing him or her a bit of a disservice in this situation. Jane had no idea of Elcor body language, but since they had been at it for quite a while, she guessed that the alien was probably enjoying it nonetheless.</p>
+        <p>From here, she started looking through the dance floor, trying to find their three ladies. She finally made out Liara on the other side of it, not dancing any more, but nursing a drink instead, looking melancholic. Shepard sighed; she hadn&#x27;t deluded herself that a night out would somehow magically erase the pain; what had transpired on Noveria was the kind of thing that hurt for life, and there was nothing she could do to change that, she knew. Seeing the Asari she had come to think of as a friend like this still cut her. She contemplated going over and trying to talk to her, but just as she was about to will her somewhat heavy-feeling body into motion, she noticed Ashley emerging from the dancing crowd and approach her. Liara looked surprised at first, and Ashley looked uncharacteristically insecure, but whatever she said got a small smile out of the Asari, and soon after, they seemed to have struck up a conversation; watching them from here, Shepard couldn&#x27;t tell if it was a deep talk or if they were just shooting the shit, but from how she had come to know Ashley, she knew that the marine was capable of both; she was just happy that Ashley was willing to do this. She had noticed that over the past two months, Ashley had mostly gotten over her reserved nature when dealing with the non-human teammates, but seeing it in action was nice nonetheless. She smiled and took a deep sip from the new beer that had arrived in the meantime. Content with the state of these two, she scanned the crowd where Ashley had come from for the last of the team&#x27;s three other women.</p>
+        <p>Finding Tali out from the people around her turned out easier than expected, courtesy of the fact that she was the only Quarian in the room. Unlike the other two, she was still at it, having found herself a spot in the corner of the floor where she wouldn&#x27;t be seen by as many people and making it her own, though that didn&#x27;t mean much as she danced pretty much in place and in a manner that took the narrow space into account quite well, avoiding wide arm movements. The music on right now was a fast beat overlaid with what sounded somewhat like a violin, and Tali somehow managed to work with both of them at the same time, one leg tapping the ground to the beat while the rest of her body flew like water, turning, stretching and swaying with fluid movements while her arms moved up and down, with her hands sometimes simply moving through the air along her body, other times directly on top of it in a undeniably sensual manner, making Shepard wonder for a second how Tali of all people, who had more than once started to splutter when the banter of the team had stumbled into dirty territory, could then go and dance like that in a bar full of complete strangers; but those thoughts were quashed very quickly by just how tantalizing a show it was.</p>
+        <p>Jane had noticed before that Tali had a nice figure, but so had almost every woman she interacted with on a daily basis, the Normandy was a warship crewed by professional soldiers, after all. But somehow she had never really appreciated it before, at least that was what it felt like. Tali&#x27;s lithe yet curvy form, dominated by those wide hips she was swinging around so enthusiastically right now, had a grace to it Shepard had rarely seen in anyone. She had always thought Tali&#x27;s hood looked nice, but just like she was looking at the Quarian as a whole in a somewhat new light at this moment, she hadn&#x27;t really noticed before just how nicely it went with the rubber-like material of her suit, or the blue of her mask, the silver shimmer of her eyes notably absent right now as she was evidently completely lost in her movement and the music. How had she noticed this before? She really was pretty...</p>
+        <p>Jesus Christ, Jane!</p>
+        <p>She snapped herself out of it and focused on the beer in front of her, feeling her cheeks flush in embarassment. Good god, you stared. At least nobody- Her train of thought was interrupted when she noticed Kaidan leaning over to her, the quite possibly only, and definitely biggest shit eating grin Jane had ever seen from the lieutenant on his face, Wrex and Garrus also watching her closely. The canadian nodded towards Tali, confirming Jane&#x27;s fears.</p>
+        <p>&quot;What do you say Shepard, want me to go ask the DJ if he can play Hip&#x27;s don&#x27;t lie for the two of you?&quot;</p>
+        <p>Shepard groaned and hid her face in her hands, wishing she could disappear into the ground to escape from the three men&#x27;s howling laughter.</p>
+    </div>
+</body>
+</html>

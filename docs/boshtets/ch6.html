@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch5.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html" selected>Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch7.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 6</h1>
+    <div class="chapter-content">
+        <p>Garrus stood at the ready with the rest of the team safe for Liara, who was not yet cleared by Shepard to go on combat missions because Shepard wanted to take her to a shooting range first, and waited for the docking tube to connect to the MSV Ontario, where their next mission would take place. He didn&#x27;t truly understand the details, but apparently many human biotics had suffered abuse in the early days of humanity&#x27;s foray into the galactic community, and some of them had turned to terrorism. And so the team, just two days after talking down Major Kyle who had been connected to a similar group, were at it again, this time to hopefully rescue a politician. Or not, Garrus had little love for these people. Shepard spoke up. &quot;Alright, we are here to rescue an Alliance representative by the name of Burns. The biotics kidnapped him because as chairman for the subcommittee for transhuman studies he decided to deny them reparations for what has been done to them. As I&#x27;m sure Alenko would agree, I wouldn&#x27;t be too sorry to see that idiot go. However, we can&#x27;t have terrorists murder elected leaders, even if their grievances are legitimate, so we will not let that happen. Still, I would prefer to keep the bloodshed to a minimum. Questions? Good. Open the lock, Joker.&quot;</p>
+        <p>The airlock opened and they quickly crossed the docking tube, opening up the lock on the other side and filing into the Ontario&#x27;s docking area. As had quickly become standard procedure, Garrus was in the back, though he was holding his assault rifle this time. The interior of a ship was not really the best environment for a sniper or a designated marksman. Still, he got into position to fire into the next room as the rest of them positioned themselves to the sides of the door to the main cargo hold. Shepard silently counted down from three, and Tali opened it. Wrex and Shepard took point as usual.</p>
+        <p>Inside, they both came under fire immediately, but seemed unperturbed. Garrus was last into the room, and by the time he had surveyed the area, it was already over. Shepard was getting up from the ground to which a biotic throw had knocked her, Wrex struggled to peel the squashed remains of a human from his right foot, and two terrorists were shivering with their hands in the air, standing among the bodies of their comrades who had been too stupid or too stubborn to surrender.</p>
+        <p>&quot;Williams, Wrex, keep an eye on them. The rest is with me, let&#x27;s go.&quot; Shepard didn&#x27;t waste time. With their defense smashed, the terrorists would most likely get even more unhinged. The rest of them were probably on their way to execute Burns right now. The team hurried through the corridors of the ship, clearing room after room with no resistance, until they finally came across their target.</p>
+        <p>An older human man was kneeling on the ground, with a younger one pressing a pistol to the back of his head. Two more humans were standing in the corners of the room, aiming their guns at the squad.</p>
+        <p>&quot;Stay back! Take your ship and go, or I&#x27;ll kill him!&quot;</p>
+        <p>Shepard sighed. Garrus knew why – the hard part of this assignment had begun.</p>
+        <p>&quot;Listen, I cannot do that and you know it. I will not leave here without Burns, and all of you. You simply need to decide if you want to leave alive or dead. You know you can&#x27;t take us on.&quot;</p>
+        <p>The man cursed. &quot;And why would I want to live? You...you don&#x27;t know how it is! We have terrible headaches every day, and we are the lucky ones! Have you seen the rows of young people, crippled for life!? Or the ones who aren&#x27;t even themselves any more? There&#x27;s nothing left for us. Might as well go out in a blaze and take this bastard with us.&quot;</p>
+        <p>Shepard held out a hand, not aiming her gun at the terrorists anymore – there was no need, the other three of them had that more than covered. &quot;Wait! Think about how that will reflect on you! There are still people fighting to make things better for you and your people. You think murdering Burns will help their cause?&quot;</p>
+        <p>Garrus was intrigued. They were past the point to which any Turian operative would have bothered to plead with these people. Himself, he would&#x27;ve just shot them already. The biotic seemed to waver.</p>
+        <p>&quot;Y-yes, they&#x27;re trying. And where has it gotten us? Nowhere! All the petitions, and this bastard has just waved us off!&quot;</p>
+        <p>&quot;I was wrong!&quot; , Burns yelled. &quot;I didn&#x27;t realize how desperate the L2s were. I will revise my decision! I promise!&quot;</p>
+        <p>The younger man scoffed. &quot;You just want to save your skin!&quot;</p>
+        <p>He probably isn&#x27;t wrong about that.</p>
+        <p>The biotic scowled at Shepard. &quot;You tell us to go through the official channels, to be patient. Again. You can only say that because you don&#x27;t know how it is! You haven&#x27;t lived this!&quot; Shepards jaw worked, but no words left her mouth. Perhaps we&#x27;d just have to shoot them after all...but Alenko spoke up.</p>
+        <p>&quot;Well, I do. I&#x27;m an L2, just like you. I have the migraines, just like you. You don&#x27;t see me holding people at gunpoint over it, and believe me, I have reason to be bitter. I was at braincamp, I got beaten up by the Turians. Hell, you look so young, you probably weren&#x27;t even around to see the really bad times. So how about you calm the hell down and give up, instead of not only throwing your life away, but making it even harder for the rest of us, too? I get enough shit already, I don&#x27;t need a bunch of murderers making people mistrust us even more.&quot;</p>
+        <p>The leader looked just about to lose his mind.&quot;You&#x27;re one of us, and you&#x27;re with them!? You sold us out!&quot;</p>
+        <p>&quot;No, he decided to do something useful with what he&#x27;s been given, and make the best of his life!”, Shepard bellowed harshly. “Like most biotics. You would destroy their efforts. You would harm the people you claim to want to help.&quot; The biotic was shaking now. Shepard&#x27;s voice softened. &quot;Come on boy, put that gun down and live.&quot;</p>
+        <p>The pistol fell to the floor, and so did the weapons of the other two. Garrus rushed in to secure the one who had spoken, while Kaidan and Shepard did the same to other two, with Tali helping the old politician up. As the Turian led his prisoner out of the room, he could hear Shepard hissing to Burns. &quot;Listen closely now, Burns. This entire mess is your fault. I had to kill four young people today, because you couldn&#x27;t be arsed to do your research properly before deciding – or perhaps you did and you&#x27;re just a heartless bastard. I don&#x27;t care. What is important is this: You better stay true to your word, or next time, I won&#x27;t bother trying to talk &#x27;em down, and if that means your brains end up on the floor, I&#x27;ll piss on them.&quot;</p>
+        <p>Garrus couldn&#x27;t help but smirk. Shepard&#x27;s methods were certainly not Turian, but perhaps that wasn&#x27;t so bad.</p>
+        <p>….......</p>
+        <p>&quot;Hey you two. Sleep well?&quot;</p>
+        <p>Jane blinked and startled to consciousness. She was sitting in the mess hall next to Garrus, who was digging into his breakfast. Across from them was Tali who appeared to be about as surprised with the situation as Shepard was. &quot;Di-Did we fall asleep here?&quot;</p>
+        <p>Shepard groaned. &quot;Looks like it. I told you those documentaries are the best soporific there is.&quot; She stretched herself, her back and neck hurting like hell. &quot;Shouldn&#x27;t have watched one here. I feel like I was mangled.&quot;</p>
+        <p>Garrus chuckled. &quot;What were you two watching?&quot;</p>
+        <p>&quot;Documentaries about world war two.&quot;</p>
+        <p>&quot;Yeah, I heard about that. Humans are crazy. No wonder your military is this good. Trained against each other all that time.&quot;</p>
+        <p>Tali, who had gotten up in the meantime, returned to the table with a tube of nutrient paste. &quot;Keelah, everything hurts. Shepard, if we want to watch something like this again, we need to find another place. Like the floor for example. Would still be an improvement.&quot; Shepard just nodded and got up to get some breakfast herself.</p>
+        <p>When Jane returned with bacon and eggs, Garrus set down his cutlery and cleared his throat. &quot;So, about that hostage situation yesterday. Was that human standard procedure?&quot;</p>
+        <p>Shepard shrugged. &quot;I don&#x27;t even know. I&#x27;m a soldier, not a cop. I wasn&#x27;t trained for this.&quot;</p>
+        <p>Garrus chuckled. &quot;So it&#x27;s just the Shepard method. Thought as much. Well, it served you well. Burns is alive and who knows, he might have learned something.&quot;</p>
+        <p>Jane returned to her plate, but saw Tali looking at her wide eyed. &quot;Keelah, you came up with that on the fly? I thought for sure we&#x27;d have to kill them all, and that that old man would be dead.&quot;</p>
+        <p>Shepard shrugged again, getting a little embarassed now. &quot;I just tried to appeal to what they cared about. If you ignore pirates and other scum like that for a second, most of the time people have a good reason for what they do. They just have twisted logic, or they can&#x27;t see the better way to act because they are too angry, or desperate. I would&#x27;ve hated to have to kill these people. I&#x27;m just happy it worked out.&quot;</p>
+        <p>This hardly helped, now even Garrus was looking at her. &quot;You really are something else, Shepard.&quot;</p>
+        <p>Jane occupied herself with her breakfast to escape their praises and grumbled something about just doing her job.</p>
+        <p>After a while of silent eating, she found a new topic. &quot;So Tali...I think I&#x27;ve had enough of world war two for now...&quot; The quiet little slurping sound Tali made when she ate stopped as she looked up to Shepard. Shepard had to fight for a second to keep it together; the sight of Tali looking up to her with a nutrient tube sticking out from underneath her masks &#x27;chin&#x27; was just too much. &quot;Do you still want to learn about human culture?&quot;</p>
+        <p>&quot;Well, yes. Though somewhat disturbing, it has been interesting so far.&quot;, she nodded.</p>
+        <p>&quot;That&#x27;s just the point. I directed you headfirst into humanity&#x27;s darkest years as your first introduction into our history. I don&#x27;t want you to think we&#x27;re all insane warmongers.&quot;</p>
+        <p>She cocked her head. &quot;I could never think that Shepard. After all, aside from Fist, you humans have been the nicest to me out of all the species since I left the flotilla.&quot;</p>
+        <p>Shepard didn&#x27;t know what to say to that at first, so Ashley, who had by now sat down beside them, beat her to the punch. &quot;Well Tali, you&#x27;re definitely my favorite alien, so the feeling is mutual. &quot;</p>
+        <p>Even with the mask, I could see Tali beaming at the Gunnery Chief, while Garrus just looked skeptical – and got a tongue stuck out at him for it. &quot;Suck it, Vakarian.&quot;</p>
+        <p>Jane snorted; it was good to see Ashley finally let loose around the non-alliance crew. She nodded to her. &quot;I didn&#x27;t know the two of you get along so well. I&#x27;m happy to hear it.&quot;</p>
+        <p>Tali perked up. &quot;It&#x27;s true! Ashley explained human religion to me, so I explained the worship of the ancestors to her. We&#x27;ve been chatting ever since.&quot;</p>
+        <p>Shepard raised an eyebrow. &quot;You&#x27;re preaching the lord&#x27;s good word to the aliens, Williams?&quot;</p>
+        <p>&quot;Uh, no, Ma&#x27;am. Might be a good idea though. Maybe Vakarian just needs Jesus.&quot;</p>
+        <p>The Turian looked completely exasperated. &quot;I need...who?&quot;</p>
+        <p>&quot;Jesus.&quot;, Jane said. &quot;And thinking about it, you definitely need Jesus, Garrus.&quot; By now the Turian was completely lost, so he just flared his mandibles in exasperation and retreated from the table. Shepard felt the need to reign this in before it got out of hand. &quot;In all seriousness though Ashley, I trust you&#x27;re not actually going to try and evangelize our alien crew members?&quot;</p>
+        <p>She sighed. &quot;No, Ma&#x27;am. Unless they come to ask me about it, I won&#x27;t pester them. I&#x27;m not some damn Jehova&#x27;s witness!&quot; She had gotten rather worked up. &quot;Uh, Ma&#x27;am.&quot;</p>
+        <p>Now it was Shepard&#x27;s turn to sigh. &quot;Didn&#x27;t mean to imply that, Ashley.&quot;</p>
+        <p>&quot;I&#x27;m sorry Ma&#x27;am, it&#x27;s just...I&#x27;m used to being condescended to by my superiors whenever they find out about my faith.&quot;</p>
+        <p>Shepard shrugged. &quot;Well, it&#x27;s your lucky streak. I&#x27;m not the kind of Commander to do that, and especially not about the faith.&quot;</p>
+        <p>She raised an eyebrow. &quot;The faith? Not &#x27;ones&#x27; faith? Are you saying...?&quot;</p>
+        <p>&quot;I don&#x27;t know. I was raised that way, but I haven&#x27;t read the bible or prayed in years. It just kind of sticks with me. Half the time I&#x27;m really not sure if I even believe at all anymore, but then I think about this galaxy we live in and all the races in it and how ridiculous it is that it&#x27;s supposed to be a giant coincidence. So, yeah. Wouldn&#x27;t exactly call myself a proper Christian if that&#x27;s what you mean, but I get it.&quot;</p>
+        <p>Ashley shrugged. &quot;More than fine with me, Ma&#x27;am. I meant it when I said I&#x27;m not some crazy person. I&#x27;m happy you have an open mind at all.&quot; She decided to change the subject. &quot;Now, I believe you were about to try and pick a movie to watch with my little sister here.&quot;</p>
+        <p>Tali sat dumbfounded. &quot;Ashley, y-you mean that?&quot;</p>
+        <p>&quot;&#x27;Course I do. We&#x27;ve fought together, I&#x27;ve given you big sister advice, hell, you&#x27;ve helped me braid my hair. That makes it pretty much official. And as your bigger sister, I have to make sure this woman here doesn&#x27;t make you watch any indecent flicks.&quot; As Tali practically melted, Jane found herself slightly annoyed at Ashley&#x27;s shameless insinuations. Looking back at these days in retrospect, she was pretty much correct of course, but still.</p>
+        <p>&quot;Williams...&quot;</p>
+        <p>&quot;Sorry, Ma&#x27;am. Still, please don&#x27;t make her watch some disgusting horror movie. Ma&#x27;am.&quot;</p>
+        <p>&quot;Williams, we&#x27;re watching stuff because we can&#x27;t sleep. You really think I&#x27;m gonna whip out the human centipede 27?&quot;</p>
+        <p>&quot;The human centipede?&quot;, Tali asked skeptically.</p>
+        <p>&quot;You don&#x27;t want to know!&quot;, Ashley and Shepard answered in unison.</p>
+        <p>„Any more life signs on the ship?“</p>
+        <p>Shepard hoped sincerely that the answer would be no. She had thought the Husks on Eden Prime would remain the most horrific thing she&#x27;d ever have to see in her life, but Dr. Saleon&#x27;s pitiful victims had blown the cyber- zombies out of the water. Their bloated bodies, sunken in faces...and the claws! What in god&#x27;s name had this madman tried to achieve? Jane would have been angry at the Salarian, or wondering how he justified any of this. But the way she saw this, the situation seemed clear: Saleon had been killed and devoured by his hungry creations. A fitting end. She&#x27;d have to lie to say that she pitied the bastard at all.</p>
+        <p>She was about to be disappointed.</p>
+        <p>„Just one, Ma&#x27;am.“</p>
+        <p>This answer brought exactly those emotions she&#x27;d just thought about right to the front of her mind. It seemed to be the same for Garrus. „The bastard is still alive! He&#x27;s locked himself away somewhere here. He&#x27;s probably thanking his lucky star for his rescue right now.“ He flared his mandibles as he advanced down the corridor without having been ordered to do so. „He&#x27;ll be wishing he&#x27;d never been born soon enough...“</p>
+        <p>Shepard frowned, but did not yet stop the Turian. She&#x27;d have to find the right words first. Garrus had been worrying for the entire time they had been here now; for the entire last two days, honestly. Ever since he had come by to inform Shepard of his lead of Saleon and asked her to go after the man, the Turian had been on edge. Jane had wanted to believe that it was just the tension of finally being able to catch a horrific criminal that got away, and perhaps it was just that, but Garrus&#x27; demeanor hinted at something deeper, and no later than when they had set food on the Fedele and laid their eyes on the atrocities here it had become absolutely clear that this case held a very personal meaning for the former detective. With every horrifically deformed monstrosity they had gunned down, his expression somehow darkened even more, until he was visibly fuming. Not that Shepard wasn&#x27;t angry herself; she was, anyone with a heart had to be furious at what they had seen here. But Garrus seemed to be baying for blood like his life depended on it.</p>
+        <p>They followed him down the corridor, three humans and a Krogan. Liara and Tali, bless their hearts, had been impacted the most by what the team had found on this ship, and after they had chanced upon a group of smaller abominations – must have used to be kids- Tali had first thrown up, then thrown up more, and then continued to dry heave. Shepard didn&#x27;t blame her. So they took the pitiful Quarian, her usual fortitude thoroughly shattered by the vomit pooling in her helmet, back to the Normandy, and even though she argued against it, Shepard decided to leave the already quite queasy looking Liara there, too. She&#x27;d have to talk to both of them after this, see if they were okay. Hell, even she already knew she was going to relive this day in her nightmares - and she had seen a lot.</p>
+        <p>“Garrus, slow down!”</p>
+        <p>The Turian didn&#x27;t listen. “Garrus!”</p>
+        <p>Finally, he stopped and waited to let them catch up. He sighed. “I&#x27;m sorry Shepard. It&#x27;s just...he has to die. Painfully. “ His speech degraded into growling. “This...it ends now. He chokes to death on his blood, I...”</p>
+        <p>Shepard cut him off. “We all want to bring this bastard to justice. Doesn&#x27;t mean we go running off like bloody amateurs. Keep it together,Garrus.”</p>
+        <p>The Turian froze for a second as his anger seemed to grow further, but in the end he just nodded. “Yes, Shepard.”</p>
+        <p>Satisfied. Jane took point again. “We already cleared out all the holds. Over there is the access to the main corridor of the crew compartment. Only place he could be. We&#x27;ll find him there.” They made their way through the ship in silence, keeping their weapons half way up even though they knew there shouldn&#x27;t be any more of the experiments left stalking around. The experience that lay just behind them had gotten under everyone&#x27;s skin and kept them on edge. Jane&#x27;s mind was made even more uneasy by knowing that there was a heated argument ahead. She would have to teach Garrus a lesson today, or at least try. If she messed it up, the Turian&#x27;s attitude and loyalty might end up compromised. Still, as much as she wanted to go over what she would say in her head, she forced herself to concentrate on her surroundings instead; she had learned that she always found the best words when she was just winging it. Two minutes later, they reached the other end of the ship. There was a locked door. The team exchanged glances. Shepard nodded, and Garrus banged at the door. “Open up! Rescue party!”</p>
+        <p>A couple of seconds later, the door opened, revealing a small room with a cot, a table with some monitors, and an aging Salarian inside. “Oh thank you! Thank you for saving me from these...things! They came out of nowhere and ate the entire crew! If I hadn&#x27;t locked mys-”</p>
+        <p>Jane didn&#x27;t even let him finish. “That him, Garrus?”</p>
+        <p>The Turians face was a grimace of barely contained fury and glee in equal parts. “Yes. That is Dr. Saleon.”</p>
+        <p>Saleon&#x27;s eyes shot wide in terror. “Saleon? No! My name is Heart! Heart! Please, he&#x27;s insane, you can&#x27;t-”</p>
+        <p>Garrus stepped forward and grabbed the scrawny man by the throat before headbutting him to the floor and beginning to take off his gloves, revealing his talons. “I wonder, did you even bother with anaesthetics Doctor? Because I won&#x27;t.”</p>
+        <p>Shepard could feel her human companions being taken aback. Wrex most certainly didn&#x27;t care, or maybe he approved. It was irrelevant. She stepped forward and put a hand on Garrus&#x27; shoulder. “No.”</p>
+        <p>The Turian&#x27;s head shot around and came to rest glaring at her, their faces only centimeters apart. “What!?”</p>
+        <p>“You heard me. If we were to kill him, we&#x27;d do it quick and clean. But we&#x27;re not killing him. We- “</p>
+        <p>“Shepard! What!? Are you blind!? You&#x27;ve seen what he did! He deserves to die! Die screaming!”</p>
+        <p>Jane ignored the blatant insubordination; it wasn&#x27;t the point now. She valued her crewmember&#x27;s opinions, and sometimes, that meant dealing with things like this, especially if she wanted to actually make someone understand instead of just forcing them in line. “Yes, he does. And he will rot in prison for the rest of his life. Not the same, but that&#x27;s the best we can get. Think, Garrus. There is no way he did this on his own. He must have had suppliers who brought him material and new subjects. He must have had some type of...customer, or customers. To whatever fucked up end. You kill him now, we&#x27;ll never find out, and they all go free, unpunished.”</p>
+        <p>In Garrus&#x27; face, Jane could see understanding and frustration battling it out. Garrus knew that she was right, he just hated it. “Come on, what is worse? This filth getting to live out his days in prison instead of the violent death he deserves, or who knows how many others like him going free and doing this to even more people?” The Turian closed his eyes and slumped. Shepard knew she had him now. A frustrated growl escaped Garrus, and he whirled around to deliver a savage kick to the abdomen of the Salarian still reeling on the ground. Shepard was about to speak up, furious about Garrus apparently blowing her advice, and orders, to the wind, but then the Turian got out his cuffs out and restrained Saleon, not without twisting his arms a little more forceful than perhaps might have been needed. Jane had never been a friend of excessive violence, but in this instance, she really did not find it in herself to care; instead, when the Doctor squirmed and protested in Garrus&#x27; grip as the Turian pulled him on his feet and shoved him forward, she got a punch at the bastard&#x27;s face in herself, and she enjoyed it.</p>
+        <p>Guilty pleasure.</p>
+        <p>They made their way back to the Normandy in silence; even Saleon kept his mouth shut now. Entering the ship proper through the forward airlock, they found Tali waiting for them. Garrus wordlessly rushed off to deliver his charge to the brig, Wrex and Ashley, visibly tired, following him at a much slower pace. Shepard found herself in a triangle made of herself, Tali, and Kaidan.</p>
+        <p>“So,” Tali said somewhat awkwardly, “you actually brought him in? I could&#x27;ve sworn Garrus would rip his throat out with his teeth.”</p>
+        <p>Jane was too drained to be amused. “Yeah, he would have.”</p>
+        <p>“Why didn&#x27;t he?”, she asked. Kaidan beat Shepard to the punch. “Because our Commander has a silver tongue if I&#x27;ve ever listened to one.”</p>
+        <p>Her head tilted in her &#x27;skeptic&#x27; stance. “A what?”</p>
+        <p>“A silver...never mind. She just always knows what to say.”</p>
+        <p>She looked at Jane again, and chuckled. “Yes, yes she does.”</p>
+        <p>Shepard stared at her feet, half from exhaustion, half from embarassment. Kaidan seemed to sense it. “I mean it, Ma&#x27;am. I was impressed when you managed to talk those biotics down...”</p>
+        <p>“We did that together, Kaidan.”</p>
+        <p>“...still. You did more than well today, Ma&#x27;am. Garrus is a good guy, just needs some...guidance? I think you might have done more for him today than you might realize right now.”</p>
+        <p>Jane just nodded weakly and the Lieutenant walked off, leaving her with Tali. She remembered Tali&#x27;s earlier state. “So, you&#x27;re doing better?”</p>
+        <p>She nodded. “Yes, me and Liara both. Thank you for...understanding. It&#x27;s just these...things...”</p>
+        <p>Shepard held up a hand to stop her. “Forget about it. I felt like vomiting, and I&#x27;m a career soldier. I&#x27;ve seen shit. The fighting wasn&#x27;t even tough, and still, even Wrex is completely drained. Why you think that is? None of us got out of bed this morning expecting to mow down zombiefied children.” She didn&#x27;t answer, and Shepard didn&#x27;t push, trusting that this had gotten it into her thick skull, and hoping to drop the dreadful subject. Tali either agreed, or at least got the hint, because she changed the topic. “Kaidan is right, you know.”</p>
+        <p>Shepard grinned for the first time in hours. “Yeah well, it&#x27;s just like I told you guys the other day. Garrus wanted to kill the bastard, sure. Hell, I wanted to kill him, too. But that would have meant all his accomplices might get away. He knew that already, just had to remind him.” Jane swept a hand across her face. “I should check up on him...”</p>
+        <p>Tali nodded and turned towards her right, walking over to the Co-Pilot&#x27;s seat. “See you later, Shepard.”</p>
+        <p>Jane found the Turian in the cargo bay, for once not working on the Mako, but sitting on top of it, rested on his hands, his legs hanging off the side of the vehicle. His head turned towards Shepard as she approached. “Shepard. I wanted to apologize for my behaviour.”</p>
+        <p>Jane waved it off. “Screw that, it was a special situation. Hold this.” She produced two beers she had been holding in her left and handed them up to Garrus, who took them, and so Jane , her hands now free, climbed up the Mako&#x27;s side and sat down next to the Turian. “So. Good day at the office, huh?”</p>
+        <p>Garrus chuckled. “Saleon&#x27;s finished. So yes, I guess.” He shook his head. “Those people on that ship...that was exactly why I wanted to shoot him out of the sky way back when.”</p>
+        <p>Shepard nodded and took a sip from her beer. “Yeah, maybe that would&#x27;ve been better.”</p>
+        <p>Garrus looked at her wide eyed and cocked his mandibles.”Surprised to hear you say that. We discussed that matter before, and you seemed to disagree.”</p>
+        <p>“No, I disagreed with your attitude, or what I thought your attitude was. I told you if you don&#x27;t care about bystanders, you&#x27;re just...what did I say?”</p>
+        <p>Garrus snorted. “I believe your exact words where &#x27;a terrorist with a badge&#x27;.”</p>
+        <p>Jane frowned. “Yeah, a little harsh maybe, but true in principle. It&#x27;s just evident that you indeed do care. It really would&#x27;ve been better for these people, and a whole lot of other people too, if they had been blown up back then. “ They drank in silence for a while, until Shepard continued. “C-Sec still made the right call that day.”</p>
+        <p>Garrus seemed to disagree, but he did not flare up, instead he just calmly asked: “How so?”</p>
+        <p>“They couldn&#x27;t know, Garrus. You can&#x27;t make a call like that unless you&#x27;re absolutely certain. And even then, there could have been further casualties from the debris if they had shot that ship down.”</p>
+        <p>The Turian nodded. “Yeah, I get it. Now. It&#x27;s just...frustrating. But I&#x27;ll get over it. The bastard is locked up. He won&#x27;t hurt anyone else. With his evidence and his files, C-Sec will track down all of his partners. I can finally get it out of my head.”</p>
+        <p>Shepard raised an eyebrow. “You blamed yourself for him getting away?”</p>
+        <p>“No. Yes. I don&#x27;t know. I knew it wasn&#x27;t my fault, but it felt like it was.”</p>
+        <p>Jane nodded. “After Akuze, I spent months going over and over it again in my head, every little detail. Intellectually, I knew from the second the first thresher came out of the ground, that there was no way I could have predicted this. Hell, I was just a corporal, it wasn&#x27;t even my job to think about such things, I led four men, not the bloody platoon. But in my heart...”, she took a moment to gather herself. “The distress beacon had hinted at light pirate forces, so command sent one platoon to investigate. After the first assault, our Lieutenant and all the higher ranking NCOs were already dead. I had ten people left with me. We remained on solid ground. Got picked off with acid spit one by one...in the end, it was just me and three others. There were fifty meters left to safety, but it was soft ground. We all ran at the same time. Three men got eaten, one woman survived. I wasn&#x27;t even the fastest sprinter of us final four, just the luckiest. Hardly a day goes by where I don&#x27;t wonder why the hell I&#x27;m alive and all those others are not. So yeah...I think I know how you felt.”</p>
+        <p>Garrus huffed. “Spirits. I had read about Akuze on the extranet, but...”</p>
+        <p>“Yeah.”</p>
+        <p>“Well...for what its worth, I think this day will finally give me some peace of mind. Maybe one day, you will find that too.”</p>
+        <p>“Maybe.”</p>
+        <p>Garrus raised his bottle. “To peace of mind, then.” They clinked and drank.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch14.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html" selected>Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch16.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 15</h1>
+    <div class="chapter-content">
+        <p>The second the pressurization was complete, the inner door of the third torch&#x27;s control building flew inwards as the massive foot of an equally massive reptile impacted against it, some biotics thrown into the kick for good measure. Directly behind the relocating sheet of metal two very unlikely and different comrades exited the airlock into the building proper, weapons raised, eyes wide awake and alert. They relaxed seconds later when it had become apparent that nobody was there to oppose them. Wrex huffed, sounding almost offended. &quot;The cowards have run, I&#x27;m telling you.&quot;</p>
+        <p>Garrus didn&#x27;t respond. With the other two torches having already been attacked, he had expected the terrorists to dig in thoroughly here, they certainly had had enough of a warning. So he had utilized the Mako&#x27;s armament&#x27;s sights to make a preliminary sweep of the entire area – which had turned up nothing. That had been suspicious in and of itself, but it was entirely possible that the terrorists knew that they had an armored vehicle and chosen to avoid having to fight it, opting to instead lay a trap for them in the building itself. But to not come under fire upon entering? There would not be a better opportunity for the Batarians. Surely they could not have been so incompetent to simply not notice that they were coming, and through which airlock?</p>
+        <p>Having taken cover, he listened intently, but other than the sounds of his own and Wrex&#x27;s breathing, there was nothing. No harsh voices of Batarians bellowing orders, no feet running through the corridors, just silence. It appeared that Wrex was probably right.</p>
+        <p>&quot;Seems that way. Let&#x27;s stay alert. There is always the possibility that this is some sort of stupid plan.&quot;</p>
+        <p>Wrex scoffed. &quot;Hmpf. Those Pyjaks aren&#x27;t smart enough to come up with anything that would give us any trouble.&quot; He started stomping towards the door on the right of the room, and Garrus followed, keeping his weapon half raised, but somewhat relaxing nonetheless.</p>
+        <p>&quot;Of course not. After all, I am here to protect you.&quot;</p>
+        <p>The Krogan just snorted. &quot;Don&#x27;t get too full of yourself , Turian. This isn&#x27;t exactly ideal sniper distance.&quot;</p>
+        <p>&quot;Well fortunately, I am excellent with assault rifles and pistols as well.&quot;</p>
+        <p>&quot;Of course.&quot;</p>
+        <p>He raised a browplate. &quot;So curt today, Wrex.&quot;</p>
+        <p>&quot;I am not getting into a discussion about shotguns with you again.&quot;</p>
+        <p>Now it was Garrus time to flare his mandibles and hiss in what constituted the turian equivalent of snorting. They cut the banter and advanced silently through the complex for a couple of minutes, remaining vigilant, but not meeting any resistance along the way. Garrus was certain now, the terrorists had indeed run, probably to try and escape, they had to have come here with a ship after all, and since they had to his knowledge not detected it yet, it was probably still intact.</p>
+        <p>&quot;These bastards are going to find a nasty little surprise waiting for them when they try to take off this rock. I&#x27;m sure Joker is itching for the Normandy to lose her virginity.&quot; He twitched a mandible, thinking. &quot;Unless they&#x27;re not retreating at all. They might be regrouping to try and take back the torches. If they&#x27;re sufficiently fanatical, perhaps they would be willing to go down with the asteroid just to ensure the colony&#x27;s destruction.&quot;</p>
+        <p>Wrex shook his head. &quot;No way. They are cowards. They came here expecting to kidnap this asteroid, steer it to the planet, and then fly off with a couple of fresh and valuable slaves as bonus, watching the colony die in their rear view ports. They&#x27;ll run.&quot;</p>
+        <p>Garrus said nothing, as he was inclined to agree with him.</p>
+        <p>&quot;I just hope we catch them before they take off. I&#x27;d rather not have to kill a bunch of hostages to nail these guys.&quot;</p>
+        <p>They rounded a corner, Wrex lazily pointing his gigantic shotgun towards the hypothetical enemy before confirming that as expected, nobody was there, and dropping it before shrugging his mighty shoulders. &quot;I&#x27;m with you on that one – because if it comes down to that, it&#x27;ll be Shepard&#x27;s call, and I&#x27;m not sure if she has the guts to do the right thing in that kind of situation.&quot;</p>
+        <p>Garrus flaired his mandibles. Usually he would&#x27;ve said that doubting if Jane Shepard, of all people, had &#x27;the guts&#x27; to do something, was utterly ridiculous, but this was just the kind of situation where the woman&#x27;s highly impractical understanding of morals might come in and mess things up again.</p>
+        <p>&quot;Truth be told, you might have a point. I don&#x27;t think it has anything to do with &#x27;guts&#x27;, she certainly doesn&#x27;t lack those … &quot;</p>
+        <p>Wrex nodded and interjected ,&quot;You know what I meant.&quot;.</p>
+        <p>The Turian nodded and continued. &quot;Some of the things she said to me...letting the Rachni Queen go...she does seem to have trouble seeing the...bigger picture sometimes. At first I thought it was just the normal human thing, you know. Always trying to save everyone, caring too much about the individual...but now I think it&#x27;s really just Shepard. Ashley wouldn&#x27;t have let the queen go.&quot; He hesitated for a second. &quot;I&#x27;m not sure if Shepard would be fine with me telling you this, but if I got you figured out correctly, you probably noticed it for yourself anyway, so what gives. How upset she was after she beat up Doctor Wayne.&quot;</p>
+        <p>Wrex nodded again, his usual disinterested demeanor gone, revealing once more that there was more to the old mercenary than what he chose to project outwards most of the time. &quot;Of course I noticed that. Not a bad thing to want to stick to one&#x27;s principles though. Even if those principles are stupid.&quot; They started climbing a set of stairs. &quot;Still, the woman is too soft. She has a hell of a quad, but deep down she&#x27;s soft.&quot;</p>
+        <p>Garrus had not yet determined whether or not he agreed with the Krogan when they reached the door to the control room and opened it. Stepping into the room, they found a mess. The console had been thoroughly blasted to pieces and left a smoking ruin.</p>
+        <p>&quot;Crap.&quot;</p>
+        <p>…...</p>
+        <p>Tali and Shepard had almost completed their sweep of the building and the surrounding area, so far finding nothing but a couple of Batarian and human corpses, when Garrus voice came through the comm. &quot;Garrus to all. Shepard, we&#x27;ve taken our objective without a fight...but it&#x27;s worthless. They sabotaged the control panel before they ran. It&#x27;s a smoking mess. The torch is still burning...pushing it&#x27;s last prescribed vector, presumably.&quot; The commander, instead of answering, turned to Tali, who took the hint and tuned in.</p>
+        <p>&quot;It might not matter. Kaidan, how are things at your end?&quot; She hoped the lieutenant had managed, they needed at least two torches under control if they wanted to prevent a disaster, and they needed them soon.</p>
+        <p>&quot;Just ran the final diagnostics. The torch has powered down and is finishing its realignment as we speak, aaand...powering back up. Torch B is fine and will be pushing the new vector at full burn within the minute.&quot;</p>
+        <p>She was about to congratulate Kaidan on his good work when Shepard beat her to the punch. &quot;Good work everyone. Pressly, I know you&#x27;re listening in. The fact I haven&#x27;t heard from you means you still haven&#x27;t detected their ship, I assume?&quot;</p>
+        <p>&quot;Correct, Ma&#x27;am. It is probably hiding away at some completely different place in the system where we&#x27;ll never realistically find it. What we have found is their shuttles. They&#x27;re parked around the central habitation complex. We have also detected and are still detecting several smaller heat signatures convening on that place. Probably ground vehicles.&quot;</p>
+        <p>Shepard didn&#x27;t miss a beat. &quot;They&#x27;re pulling everything they have left together, either to make a stand, or to run. If they have brains they&#x27;ll know they have no chance, but I won&#x27;t count on a bunch of bastards who would try and steer an asteroid into a colony to have brains.&quot; She hesitated for a second, probably weighing her options. &quot;Garrus, circle back and pick up the other three at torch B. Tali and I will begin the way on foot, you can track us and pick us up along the way.&quot;</p>
+        <p>&quot;Understood.&quot;, replied the Turian.</p>
+        <p>&quot;Good. Unless there are any questions, everyone knows what they have to do for now. Shepard over.&quot;</p>
+        <p>Since nobody responded, Shepard seemed to take it that everyone was on their jobs, as she simply turned around and got going, notably relaxing, even going so far as to collapse her rifle and stow it on her lower back. Tali caught up to her with a couple of long strides.</p>
+        <p>&quot;Getting careless, commander?&quot; She still felt a little nervous teasing her at all, let alone on a mission, but she knew Shepard liked it. And indeed, she could hear a faint hint of a smile in the commander&#x27;s voice.</p>
+        <p>&quot;You have to take the breaks where you can catch them. The clock is no longer ticking and the enemy have retreated. We&#x27;re safe until we hit the bunker.&quot; Her voice got considerably more serious when she continued a couple of seconds later. &quot;We have seen only bodies so far, but...not a whole lot of them. This asteroid had a crew of dozens of people.&quot;</p>
+        <p>She felt uneasiness creep into the pit of her stomach as she considered the implications of that. &quot;You think they might have been taken prisoner?&quot; Shepard nodded, and she continued : &quot;Prisoners can become hostages quickly...&quot;</p>
+        <p>Shepard nodded again. &quot;That&#x27;s what I&#x27;m worried about. These scum probably planned to take them with as slaves when they would have made their escape after the asteroid had reached the point of no return.&quot; She scoffed. &quot;Little bonus on the side, so to speak.&quot; Tali said nothing as she could hear clearly how bitter Shepard was even just speaking about it. She was actually quite relieved at how the mission had gone so far; after Shepard&#x27;s display of wanton abuse against one batarian dead she had been worried the commander would boil over and do something rash. Keelah, I wouldn&#x27;t blame her. Four million lives depending on us, and it is her lifelong arch enemy behind it. So far however, nothing like that had happened; Shepard had decimated the terrorists with her typical lethal efficiency while Tali had powered down and realigned the fusion torch, only the occasional muttered &#x27;Squint&#x27; or similarly racially charged insult betraying Shepard&#x27;s emotions. Tali found herself uneasy with Shepard&#x27;s racism, but could not bring herself to think much less of her for it. She knew her own feelings towards the Geth, and while the Batarians might not have done to the humans anything close to what the Geth had done to her people, they certainly had done so to Shepard. She had done her best to avoid the subject after accidentally bringing it up at one of their late night talks once, but that one time had been enough to understand just how devastating the raid of Mindoir must have been. Tali still mourned the loss of her mother; she didn&#x27;t even want to try to imagine how the loss of one&#x27;s entire family, all at the same time no less, must have felt, and still feel.</p>
+        <p>Their nightly talks – she once more found herself thinking about how she missed them. She had been sleeping like a baby ever since she had gotten her new &#x27;room&#x27; , and it was amazing, but at this point, just a couple of days in, she had caught herself trying to think of some excuse to just so happen to stumble into Shepard during one of the commander&#x27;s nightly trips to the mess hall.</p>
+        <p>&quot;You&#x27;re happy with your new drone?&quot;</p>
+        <p>She startled, having completely forgotten over her ruminations that they were actually having a conversation. After taking a second to compose an answer, she started explaining to Shepard how while the drone had performed satisfactory overall, the controls were somewhat sluggish, and it was, in her opinion, still too loud, and how those Varren would have definitely noticed it if they hadn&#x27;t been busy feeding, and how she might go about fixing these issues. The enthusiasm of talking tech almost made her forget where they were – almost. Not enough that she would have missed that behind Shepard&#x27;s visor, she seemed to be sporting at least the hint of a smile for the first time that day.</p>
+        <p>About half an hour later, they had been picked up by the Mako which at that point already held the rest of the ground team, and arrived on a ridgeline overlooking the central habitation bunker. Jane, Garrus and Kaidan where hunched over the frontal screens. Tali, having vacated her seat for Kaidan so they might hold their planning, was hunched in the back, next to Wrex, listening in. &quot;Their shuttles are parked on the opposite side of the complex. We could swing around and destroy them from the safety of the Mako. Then we have all the time in the world to flush them out methodically and efficiently, without having to worry about containing them, or them escaping.&quot;</p>
+        <p>She heard armor scrape as Shepard most likely shook her head. &quot;No, we need to keep that avenue of escape open for them. They cannot get away anyway; not with the Normandy in system. There is no way their ship, wherever and whatever it is, is heavy enough to take her on, especially not with the stealth advantage on her side. So we want them to run for the shuttles and take off. The more make it to their shuttles, the less we have to fight. And then the Normandy can blow them all up in space. Safer that way.&quot;</p>
+        <p>Garrus hissed in a manner that Tali still wasn&#x27;t sure of what it meant, though it did seem that it was some amused sentiment.</p>
+        <p>&quot;Didn&#x27;t think you would be willing to miss out on killing Batarians up close and personal.&quot; She tensed up. Garrus you stupid bosh&#x27;tet... There were a couple of seconds of silence, with the very air inside the tank seeming to be wondering wether the Turian had finally overstepped one boundary too many with his incessant jabs at anyone and anything – he had, over the course of the past months, managed to step on the feet of pretty much everyone at least once, with the exception of Wrex who simply didn&#x27;t care – and Shepard.</p>
+        <p>But the commander finally appeared to decide to just let it go one more time. &quot;I suspect there is a hostage situation. The asteroid has a crew of several dozen people. Tali and I found only three bodies at torch A. So unless you guys have stumbled over body piles you didn&#x27;t report to me, these people are in there, and might still be alive.&quot; She turned towards her turian friend, and her voice took on a cold edge, making it clear that while she wasn&#x27;t going to spend time talking about it now, she most definitely had not been amused by that last one. &quot;So getting up close and personal might endanger potential civilian survivors.&quot;</p>
+        <p>The Turian twitched his mandibles. &quot;Yeah...listen, it is probably the best if we -&quot;</p>
+        <p>He was interrupted by the comm crackling to life, but instead of Joker&#x27;s or Pressly&#x27;s, the voice Tali heard was that of a woman. &quot;Hello? Hello, is anyone pick this up!? Jesus, please answer..&quot;</p>
+        <p>Shepard&#x27;s hand was at the comm at lightning speed. &quot;This is Commander Shepard of the Alliance. Who is this?&quot;</p>
+        <p>The other person was apparently not very familiar with military radio discipline, as she broadcasted her relieved sigh over the channel before answering. &quot;Thank god. Listen, I can&#x27;t talk long, they&#x27;re looking for me. You shut down the torches, that is good. At least the colony is saved. But they&#x27;re still here. Please, you have to help us!&quot;</p>
+        <p>Shepard had gotten out her best Commander voice – just that Tali had learned by now that it wasn&#x27;t an act. &quot;Calm down, we&#x27;re gonna get you out of there. What is your name?&quot;</p>
+        <p>&quot;K-Kate. Bowman.&quot;</p>
+        <p>&quot;Very good, Kate. Can you tell me how many there are?&quot;</p>
+        <p>&quot;I..I don&#x27;t know exactly. Maybe two dozen? And a couple Varren.&quot;</p>
+        <p>&quot;Thank you, Kate. What about the hostages, how many are still alive, and where are they being kept?&quot;</p>
+        <p>Bowman, who had sounded at the verge of tearing up for the entirety of the exchange, finally broke down in a short fit of sobbing before she caught herself and responded quicker than Shepard could try and come up with some comforting words. &quot;Th-They never got me, so I don&#x27;t exactly know, but from the corpses lying around...maybe around twenty. They&#x27;re keeping them...oh my god! They found me! I-&quot;</p>
+        <p>A clattering sound could be heard, most likely the radio being dropped. Since Kate had simply kept the output on the entire time, it still was on, and so they could hear her terrified yelling, followed by the sharp sound of a brutal slap, and soft crying after that – until it was drowned out by a harsh voice. &quot;I got her! Finally. Had a radio...dammit, she was probably communicating with those animals outside! They could be here any second! Quick! Finish the triggers, and get those damn explosives in place now!&quot; The next thing that could be heard was a crunch before the the signal was abruptly lost.</p>
+        <p>She knew what Shepard would say, and she did not turn out to be wrong. &quot;We&#x27;re going in. Now!&quot;</p>
+        <p>…</p>
+        <p>Jane broke through the smokescreen they had created to cover their advance and her shields lit up like a christmas tree almost immediately, as did those of her team around her, the defending terrorists on the roof desperately hosing them down. A grim smile appeared on her lips – once they were inside, the enemy would have no chance, and they knew it. The stretch from the relative safety of the smoke to the cover of the complex&#x27;s main entrance was just a couple of meters, and so nobody&#x27;s shields came even close to failing. Going in through the front door was not usually something she&#x27;d do in a situation such as this, but they were pressed for time. She took up position next to Wrex, ready to storm inside the second the door opened. Tali didn&#x27;t disappoint, and so the entire team rushed into the large airlock, keeping up their formation. Just a couple of seconds later, Tali had the inner door open and all hell broke loose.</p>
+        <p>The terrorists had had plenty of time to prepare, and so they had. Exiting the bottleneck that was the airlock, the team was met by an absolute hailstorm of fire from at least a dozen small arms, including a machine gun. Shepard had expected this, and so they did not even try to fight here; instead, she rushed towards the first door to the left. Behind her came everyone else safe Wrex, who simply stood and roared as he fired off his enormous shotgun, actually netting himself a kill even under this heavy fire before he finally turned and hurried after the others. The team made it to the cover of the adjacent corridor by the skin of their teeth, Liara , who&#x27;s large biotic barrier had made the mad dash possible in the first place, collapsing from exhaustion the second she was in temporary safety.</p>
+        <p>Jane wasted no time in organizing the squad. &quot;Kaidan, stay with Liara. The rest with me, we rush down this corridor and take them from the left. Move!&quot;</p>
+        <p>She did not wait for the confirmation she knew was coming, and instead started sprinting down the hallway. The faster and the more aggressively they acted, the more disorganized the terrorists would be, and the easier this would turn out. Behind her she could hear the quick steps of her team. Seconds later, she burst through the door to the right, admitting her into the same room again that they had just been in, but this time, there was no united front of Batarians ready to shower them in bullets. The machine gun was still aimed at the airlock, some of the braver terrorists were inching their way towards the door they had disappeared into, while the others were still crouched in their positions, unsure of what to do. The one closest to Shepard whirled around, alarmed by the sound of the opening door, but it was already too late. Before he could react, Shepard&#x27;s machete impacted his unprotected face, biting deep into his skull while the blade&#x27;s owner was already taking shots at another enemy with her heavy pistol. Unable to yank it free on the fly, she just left the machete there, gripping her pistol with both hands now – the Spectre grade weapon was so powerful that it broke down the terrorist&#x27;s shields with a single shot even though it was technically a sidearm. She did not get to claim much more lives with it though, as by this point, her team had fanned out from behind her and were laying into the Batarians with no less fervor than herself. It wasn&#x27;t a firefight, it was a slaughter, and it was over in less than a minute.</p>
+        <p>All the rest they allowed themselves when it was done was the time it took for Shepard to walk over to the body of the first guy she had killed here and pry free her machete, than cleaning it on the man&#x27;s clothes and sheathing it – this was the second time this had happened today, perhaps Batarian bones had a greater tendency to trap blades? She switched to her shotgun and the team, now bolstered by Kaidan and the somewhat recuperated Liara, continued their search of the building. They had no idea of where the hostages might be, so they had no choice but to sweep the entire bunker complex. She considered splitting up again to cover more ground, but dismissed the idea; she did not want to risk a two man team stumbling over the entire presumed one dozen batarians plus Varren that were left at once and potentially get in trouble. And so they moved from room to room as quickly as was possible without being reckless, stumbling over stragglers more than once along the way; it appeared the Batarians had completely lost their overview of the situation, for they all seemed to be scurrying for safety independently of each other. Good, she thought. Run to your shuttles. Spares us the hassle of killing you ourselves.</p>
+        <p>Shepard had, over the years, come to enjoy the rush of battle, but certainly not the killing itself; but with these Batarians, she could not help but feel a grim satisfaction every time one of them fell to the ground in a pool of their own blood. Reflecting on this, she came to the conclusion that she definitely should be uneasy about that – but she could not bring herself to not feel this way; she was too caught up in the words she had heard over the radio when Kate had been captured. There were explosives in this building, probably somewhere close to the hostages, and every passing minute gave the terrorists more time to encrypt the trigger systems even more.</p>
+        <p>After about two thirds of the building had been cleared, they rounded a corner to find no less than three Batarians at once. Weapon snapped up to deliver death, but the Batarians surprised them by leaving theirs down and the one standing closest to them raising a hand. &quot;Wait! Wait! Let&#x27;s talk!&quot;</p>
+        <p>She couldn&#x27;t believe her ears. &quot;What!?&quot;</p>
+        <p>&quot;We never wanted this. It doesn&#x27;t have to end in bloodshed!&quot;</p>
+        <p>She scoffed. &quot;Are you serious!? You come here, kill people, try to murder an entire colony, and now that your neck is on the block you want to talk!?&quot;</p>
+        <p>The batarian&#x27;s voice trembled, but he kept himself together. &quot;Listen lady, we&#x27;re not mass murderers. This wasn&#x27;t our idea. We came here to make some cash, that&#x27;s what we were recruited for. But once we came here, Balak flipped out, went on a rant about how he was going to teach the ani – you humans a lesson and all that, and ordered us to hijack the torches. What were we going to do?&quot; He shrugged his shoulder almost apologetically. &quot;We thought this was going to be just a quick slave grab.&quot;</p>
+        <p>At these words, whatever it had been inside Jane that had held her back from acting on her impulse before, broke. &quot;Just a quick slave grab...&quot; She shook her head in disbelief at the audacity. &quot;Go to hell.&quot;</p>
+        <p>She did not even bother to look down when seconds later, she stepped over them as they died choking on their own blood. The squad did not encounter any more of the Batarians until there was only the D block left – the personal quarters and mess. She scoffed. &quot;What kind of idiot holds hostages in their own rooms. Figures. Bloody squints.&quot; She did not pick up on how silent her team had become.</p>
+        <p>Again, they took up position, and again, Tali fiddled with the door systems for a couple of seconds, before it slid open and the bright light of the mess hall fell into the dimly lit corridor they had approached it from. They entered the room in the same perfect formation they had done so often today, but nobody opened fire – for now. On top of a flight of stairs stood a lone Batarian in the open, a couple more of the ugly bastards crouched in cover to both sides of him. It took every ounce of her willpower, but Shepard held her fire. She did not have to wait long for the man to speak.</p>
+        <p>&quot;Animals. Hold your fire, or all your friends in there will die.&quot;</p>
+        <p>The rage about the insult coming from this bastard wanted to wash over her, but she forced it down. Batarians or not, she was a Spectre, and she would not blow a mission over some mean words.</p>
+        <p>&quot;Say your piece.&quot;</p>
+        <p>&quot;It is simple: You will let us walk out of here, get into our shuttles, meet up with our ship, and leave the system.&quot; To her left, she could hear Ashley scoff.</p>
+        <p>&quot;Why the hell would I do that?&quot;</p>
+        <p>&quot;Because I have twenty three of your kind bound in their rooms back there, together with a bunch of explosives that have their triggers tied to my lifesigns. You attack us, I push the button and they die. You kill me before I can press the button, that triggers the bombs too, and they die.&quot; His four eyed, alien face split with a cruel smile, exposing his sharp, long teeth. &quot;You have lost, human.&quot;</p>
+        <p>&quot;Says the man who got his entire strike force butchered by a single squad. Your plan to destroy Terra Nova has failed. The name Balak will be a laughing stock throughout the hegemony.&quot; Coming up with these taunts to try and buy time was all too easy for Shepard right now – her desire to scream in this bastards face still bubbling just under the surface. While she was speaking, she had opened a private channel to Tali, in which , after finishing, she whispered: &quot;Tali, is he bluffing?&quot;</p>
+        <p>She did not like the answer. &quot;No. I can detect a signal, and it is coming from him.&quot;</p>
+        <p>&quot;Can we jam it somehow?&quot;</p>
+        <p>&quot;We have no jamming equipment here. Nor in the Mako. I-I&#x27;m sorry, Shepard, but there&#x27;s nothing I can do.&quot;</p>
+        <p>She gritted her teeth, but forced out a response to Tali instead of the &quot;God damn it!&quot; she really wanted to scream out at nobody in particular. &quot;It&#x27;s fine. Stay sharp.&quot;</p>
+        <p>&quot;...council abandoned us! What I was going to do here is nothing compared what you humans have done to...&quot;</p>
+        <p>Balak was ranting now. Usually, Shepard would have been amazed at the cognitive dissonance of the man, and the Batarian&#x27;s ability to genuinely perceive themselves as the victims in a situation in which they had been the aggressor at every turn, but right now, her thoughts were racing with something far more important.</p>
+        <p>Garrus chimed in from the left, ignoring the rambling batarian. &quot;We have no choice, Shepard. He cannot leave this place alive. He is too dangerous. It sucks, but we have to take this blood onto our hands.&quot; Jane barely heard him.</p>
+        <p>She had heard the name Balak before, she remembered now. It had been in some briefing months ago, where the man had been mentioned as one particularly devious freelance captain in the unofficial service of the Hegemony, one of many of his kind. These people were essentially pirates whom the batarian Hegemony supported and set up to assault human ships and colonies in the Traverse and the Terminus, all under the guise of plausible deniability – everybody in the intelligence community and a lot of people associated to it knew full damn well that these freelancers were agents of the Hegemony in all but writing, but there was not enough proof for the Alliance to be forced into a, as of right now, politically inopportune war – yet. The mere thought made Shepard&#x27;s blood boil – the damned politicians were willing to let humanity&#x27;s frontier folk suffer just so their precious machinations wouldn&#x27;t be upset. She forced herself to focus on the situation – Balak was still spewing nonsense.</p>
+        <p>&quot;What? We cannot just let these people die because he might be a danger in the future! We have to save them!&quot; That was Liara. The shy scientist, firmly speaking up in the middle of a standoff. Shepard would&#x27;ve smiled if she hadn&#x27;t been absolutely consumed by the racing thoughts in her head.</p>
+        <p>Balak was dangerous, he had proven that today. He had to be stopped. But at what cost? Let twenty three people die today to potentially – no , most likely – save two hundred tomorrow? If not two thousand? Inside, she groaned as indecision gripped her heart, a feeling she was not familiar with. This was the kind of decision any man and woman in her line of work dreaded. Her entire career, she had thanked god that she had been spared it so far – but now her day had come.</p>
+        <p>&quot;What is it, Shepard? Not so arrogant anymore?&quot;</p>
+        <p>Hearing her name snapped her out of her thoughts. How..? Her confusion must have been written on her face, and Balak laughed mockingly. &quot;Yes, I know who you are. They plastered your face all over the news. The first human Spectre!&quot; He hit the railing with a massive fist. &quot;Your kind has not even been around for fifty years, yet they grant you what we would have deserved centuries ago!&quot;</p>
+        <p>She was still helplessly trying to come to a decision – Who am I to make this kind of decision? I&#x27;m a Spectre. Still, these people did not sign up to be soldiers. Can I really just sacrifice their lives, even if I have a good reason and that sacrifice will save countless more in the future?</p>
+        <p>Out loud, she used the apparent wound the Batarian had just betrayed in his pride to , again, buy herself more time. &quot;You didn&#x27;t like that, did you? I think you just cannot accept that we humans are better than you.&quot; She could hear Ashley chuckle darkly.</p>
+        <p>That set the pirate off, and there came another tirade, giving Jane precious time to think. Don&#x27;t I have to do this? Am I hesitating because I want to save these people, or do I just want to keep my hands clean? Fuck! Balak&#x27;s racist ranting continued, fueling Shepard&#x27;s anger. My conscience doesn&#x27;t matter. People do. But that includes these twenty three people. Balak seemed to calm down, coming to an end for now. But it also includes all those he will kill if I let him go...what do I do, for fuck&#x27;s sake!?</p>
+        <p>&quot;...one would think you in particular would know your betters, Shepard. After all, you had the opportunity to learn your lesson at a young age. &quot; She could feel her blood running cold. &quot;Mindoir...I remember that raid. I was just a lowly crewmate back then. Piss poor loot in those miserable huts that pass for housing among your kind.&quot; Burning rage began to drown out all other thought in Jane&#x27;s head. She barely noticed that both her team and Balak&#x27;s men began shuffling uncomfortably. The Batarian smiled his ugly grin again. &quot;But the slave yield! Your kind are so docile after some years with their implants. It&#x27;s like deep down, you know what you are really good for, you just need to be reminded.&quot; A snarl escaped Shepard&#x27;s lips, but Balak did not get the hint.</p>
+        <p>&quot;Oh keelah, no...&quot; said someone to the direct right of her, but she didn&#x27;t even register who had spoken the words, or what they meant.</p>
+        <p>&quot;After they put your name on every news report, I tried to track down your family, you know. A shame they chose to resist back then. It would have been so glorious to get my dick sucked by the sister of Commander Shepard...&quot;</p>
+        <p>With a furious roar of equal parts agony and hatred, Jane held down the trigger of her rifle until it overheated, turning Balak into a lifeless, perforated lump of meat, his blood covering the wall behind where he had stood and soon, the ground beneath him. Nobody moved; not even Balak&#x27;s men dared to open fire, too shocked at the utter extermination of their leader and the dawning realization that they would not make it out of here alive. For all of two seconds, Jane felt the satisfaction of her kill. Then the explosions began, and her grim joy turned into terror.</p>
+        <p>Oh god,no. Please no! As the world around her erupted into chaos and bloodshed once more, all she could do was close her eyes and just stand there in shame. It appears I have made my choice.</p>
+    </div>
+</body>
+</html>

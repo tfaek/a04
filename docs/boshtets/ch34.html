@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 34</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch33.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html" selected>Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch35.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 34</h1>
+    <div class="chapter-content">
+        <p>The door slammed shut and Jane was left alone in the dim light of the storeroom she had been crammed into. She was sat on a metal chair next to the wall, her hands cuffed to the rack at the back of the room. Blood was running down her lips and dripping into her lap.</p>
+        <p>She groaned and tried to lean back against the shelves behind her, as far as that was possible. They had given her a good trashing; the Batarians among the Blue Suns had clearly relished the chance to beat on one of the most hated enemies of their kind. She had fought hard to not show any pain to the aliens; these animals would not see her broken. Their cowardice had only served to make her angrier.</p>
+        <p>And Jane was angry. Furious even, so much that she had to force herself to stop fantasizing about what she would do to that Salarian and his cronies and actually start thinking about her situation. It was abysmal. She had been stripped down to her undersuit and disarmed, she was beaten and bloodied, and while it was apparently only a flesh wound and had been somewhat treated by a Blue Suns medic, the bullet wound in her left leg hurt like hell and wasn&#x27;t going to help at all with whatever plan of action she&#x27;d be able to hatch. She looked around; the only light falling into the room came from the hallway outside, falling through the rather large slits above and beneath the poorly fitted door, but it was enough to see that safe for her, the chair and the empty shelves bolted to the wall, there was nothing inside. Jane pulled at her handcuffs, not expecting to find the rack giving at all, and her expectations were met. She cursed. For the life of her, she couldn&#x27;t see how she would make it out of here without outside intervention.</p>
+        <p>Her thoughts wandered to her team. She was fairly confident that they had made it out, which meant that Liara should be fine, if out of commission; it was Garrus and Tali she was worried about. Either one of them had it in them to do something crazy – like trying to get down to the planet and rescue, no, reinforce her. Her and Ashley. They wouldn&#x27;t even know yet. Jane sighed. She had been a soldier for too long and seen too much for her resolve to be shaken by it, but nevertheless Ashley&#x27;s death weighed heavy upon her heart. In the back of her mind, the what ifs were threatening to get going – what if they had simply all made a run for it instead of splitting up? They might have made it.</p>
+        <p>Or we might have put ourselves even deeper in the shit, and now Ash wouldn&#x27;t be the only one dead.</p>
+        <p>She forced the thoughts out, knowing full well that they would return in force if she somehow survived this, and tried to speculate about the situation in space. Since she was still planetside, the Normandy had to have managed to pick up the Kodiak in time to turn, leave the atmosphere and engage the pirate flotilla – if those even were pirates, given the fact that the intelligence for this mission was worse then fucked – and stall them. With her stealth capabilities and potent firepower, she should be able to keep the enemy from making planetfall for a good while – pretty much indefinitely in fact, if she managed to pick off one or two of those corvettes, a task Pressly, Joker and the rest of the crew were most certainly capable of.</p>
+        <p>Jane blew a deep breath through her nose and grimaced. She was completely powerless, and the situation, as far as she could guess, would be resolved by whoever got reinforced first – and they were in the middle of the Terminus. Not the best spot to be in.</p>
+        <p>She searched for a position to rest her head on the shelf with the least amount of discomfort and closed her eyes. Whatever was going to happen, it wouldn&#x27;t hurt to try and get some rest.</p>
+        <p>Not like she had any other options anyway.</p>
+        <p>Outside the building, a certain Quarian squatted down in a bush in the treeline and took stock of the situation. The Blue Suns were somewhat standing watch around the building, but they did so extremely lazily, standing around with lamps on, smoking cigarettes and talking to each other – and not particularly quiet, either. It seemed as if they were convinced that they were alone on this planet now, and this entire security detail was more about making sure no sleepy mercenary got jumped on by some wild animal if they decided to stretch their legs a little.</p>
+        <p>At least one small advantage for her.</p>
+        <p>Tali spent some minutes in that spot, remaining absolutely still, eyes and ears peeled to make sure there were no guards actually taking their task seriously and patrolling the woods surrounding the warehouse silently and without lights. As she sat there, Tali tried to make out a good point of entry, but to her chagrin, the only thing she could see from here were two backdoors – and they were both quite frequented, with Blue Suns troopers coming out and in every minute, and several of them hanging out by the left one.</p>
+        <p>There is no way I&#x27;m getting in through one of these.</p>
+        <p>In a way, this obstacle held a hidden blessing, since it delayed the need for an answer to the question of what exactly she&#x27;d do once she was inside.</p>
+        <p>I&#x27;ll cross that bridge when I get there, that&#x27;s what Jane would say.</p>
+        <p>Tali slipped back deeper into the twilight of the forest of which she knew that for all those aliens, it was pitch black, and began slowly creeping around the left of the building, hoping to find a better point of entry somewhere – she had no real idea of how that could look like, but no better idea either. After about a minute of careful sneaking, her olfactory filters presented her nose with a no doubt – and thankfully – much reduced odor. It was the unmistakable stench of feces.</p>
+        <p>Curious, Tali decided to, instead of turning the filters off, brave the smell in order to follow it to it&#x27;s source. In the mild night breeze and with her not really used to using her nose in this manner, it took her a while, but eventually she seemed to be closing in on it, the increasingly unbearable stench accompanied by the trilling noises of what she presumed to be animals. A couple of paces later, she no longer had to presume as she parted the vegetation in front of her to find a shallow pit filled with excrement, scores of large insects crawling all over it, digging in vigorously. Tali retched, not for the first time this day, and finally, frantically, shut off her olfactory filters. The combination of sight and smell was so disgusting she even uttered a quiet &quot;Keelah!&quot; in spite of the situation.</p>
+        <p>When the Quarian had regained her composure some seconds later, she looked around to see that the source of the feces was a large pipe coming from the direction of the warehouse.</p>
+        <p>Of course they wouldn&#x27;t bother with proper waste disposal...this place is not supposed to see much use. They just let the animals eat it all.</p>
+        <p>Thankfully no longer able to smell any of it, Tali circled around the big heap of dung, careful not to get too close to any of the insects feeding on it – they had only six legs, but still looked far too much like spiders for her liking. One of the critters surprisingly turned to disappear into the forest, almost streaking her leg. She shuddered and suppressed a yelp.</p>
+        <p>Standing in front of the pipe, Tali hovered her mask in front of the opening. Measuring about a meter in diameter, it did not seem to narrow inside.</p>
+        <p>A shitty solution for a shitty situation.</p>
+        <p>Looking down at herself, Tali decided to at least take off the realk. Her life was going to hinge on avoiding anything that would give her away – and the purple cloth would soak up the filth and make her stink even worse. Her bare suit would just let it peel off, at least for the most part.</p>
+        <p>The fact that it would be shame to ruin the beautiful piece didn&#x27;t even cross Tali&#x27;s mind.</p>
+        <p>Two minutes later, the realk was folded and hidden under a bush to the side and all pouches and belts reattached properly. Sighing deeply, the Quarian grabbed onto the pipe and pulled herself up, ignoring the disgusting feeling of her toes digging into the brown sludge accumulating at the bottom of it. Tali ducked to bring her head in front and got on all fours.</p>
+        <p>It&#x27;s a start.</p>
+        <p>She started to crawl up the pipe, hoping that nobody was going to take a dump the next couple of minutes. Fortunately, the pipe soon turned out to be relatively empty, only a slim sliver of filth slowly running down its lowest point, so it was possible to avoid touching it by crawling with her hands and feet kept wide apart, clinging to the sides of the pipe like some insect. It was akward and quite taxing, but it allowed Tali to keep clean, and as far as he was concerned, that would&#x27;ve been worth it even if her survival had not potentially hinged on not smelling like a dung heap. And it wasn&#x27;t like the way was long.</p>
+        <p>The quarian crawled for about two minutes without hitting any obstacles. At this point, she had turned on the lamp of her helmet, the complete darkness this deep into the filthy tunnel far too thick for even her eyes to pierce. Finally, she could see a turn coming up some twenty meters into the distance, and some light falling into the pipe from up ahead as well. She turned off the lamp and intensified her efforts to move as silently as possible, and a minute later she got to peek her head out of the sewage, pistol in hand. She was sitting in what was obviously the central joining of all the building&#x27;s toilets, a multitude of narrow pipes coming out of the walls. There wasn&#x27;t even a door, but simply a ladder leading up the one side of the quadratic, small layout but very high, room.</p>
+        <p>I suppose I should be thankful whoever built this decided to make the central juncture accessible at all.</p>
+        <p>Hurrying in order to try and not get showered in shit on the final stretch, Tali ascended the ladder. It wasn&#x27;t very high, only about ten meters or so. Having reached the top and easily hacked through the locking mechanism of the hatch there – not like it had ever been meant to keep anything out, after all - the Quarian climbed off it and onto the floor proper of what appeared to be a bit of a maintenance room, if not the central maintenance hub for the entire building. While big, the warehouse wasn&#x27;t that big after all, so it stood to reason neither would this room be. The walls were lined with consoles, most of the inactive, only some monitors actually indicating standby. She paid them no heed, her gaze lingering on the door instead. The part of Tali that had driven her to this mad attempt urged her to just take her chances and open it, but her caution won out. If she opened this door and two Blue Suns just happened to have a chat in the hall, she was done for, and Jane with her. She got back to looking around, trying to find an alternative; she didn&#x27;t have to look for long.</p>
+        <p>The air ducts are built for manual maintenance, of course! The batarians can&#x27;t afford mechs for some backwater warehouse like this.</p>
+        <p>A few seconds, steps up the ladder, and some quick handiwork later, the grille covering the duct came off. Precariously holding the heavy metal object in one hand while holding the entire weight of her body with the other as she awkwardly folded herself inside, she once more thanked the ancestors for the impressive strength and toughness her father&#x27;s rigorous regiment and the trials of service under Jane Shepard had fostered in her body. Her entire arm burning, she cautiously put the thing loosely back on. Thinking about it as she began to creep into the dim light of the duct, she was probably being paranoid. There was no way anyone seeing that grille lying on the ground would realistically think of infiltration. Not with the situation being as it was, or at least with how they ought to think it was. But still.</p>
+        <p>Better paranoid than dead.</p>
+        <p>Tali crept through the ducts for the better part of an hour. She moved deliberately slowly, and the fact that she had trouble telling where voices were coming from only made it worse. Listening intently to figure out if it was safe to move on, she couldn&#x27;t help but take in the content of the mercenaries&#x27; conversations; what she heard only made her despise them more. They were thugs masquerading as soldiers, nothing more. Finally, the Quarian&#x27;s ears picked up a familiar voice. One she was extremly happy to hear.</p>
+        <p>&quot;...sit here and have a nice chat with you, you&#x27;re deluded!&quot;</p>
+        <p>The reply came swift, but the speaker talked very fast and came through somewhat muffled, so Tali couldn&#x27;t understand a word. She inched closer, but soon had to stop since there silence again. It lasted for a long moment, then Jane spoke again.</p>
+        <p>&quot;If you&#x27;re not gonna leave me alone, might as well give me some answers. Who do you work for?&quot; There was the sound of metal clattering on metal, and she continued. &quot;You&#x27;re a biotic Salarian. I thought those are all STG. But the STG wouldn&#x27;t send one guy with a bunch of useless mercs to do their dirty work. Wouldn&#x27;t have a reason, anyway.&quot;</p>
+        <p>&quot;Not wrong. Just saved their men, after all.&quot;</p>
+        <p>So Jane was talking to a Salarian. Explains the speed. Their leader, apparently?</p>
+        <p>&quot;Don&#x27;t imagine a biotic Salarian comes cheap. Not a lot of people got that kind of money. So who wanted me gone that badly? The Hegemony? Cerberus?&quot;</p>
+        <p>The other guy actually laughed. &quot;Both. No doubt. Not my employers, though.&quot;</p>
+        <p>Silence, and then the noise of a chair scraping over the floor.</p>
+        <p>&quot;Deduction game entertaining. Let you keep guessing. Reveal soon. Not dumb. Maybe figure it out.&quot;</p>
+        <p>Steps. A door opening and closing again.</p>
+        <p>Tali waited a couple of seconds before she dared to move forward again. Just some meters and she had reached the vent from which she could look into the room where Jane was. It was an empty storage room from what she could see, dimly lit through the slits of the door. The only thing she could see of Jane was her legs.</p>
+        <p>With a titanic effort Tali stopped herself from hopping out of the vent and freeing her right then and there. There was no way they&#x27;d get far enough away before someone noticed. With trembling fingers, she once again got to work on her omnitool.</p>
+        <p>Thousands of kilometers away, Garrus Vakarian woke up from the chime of his tool in the blink of a an eye. He hadn&#x27;t slept deeply anyway. Seeing that he had been contacted by the exact person he had hoped to do so, his eyes widened. Tense, he opened the message.</p>
+        <p>Garrus, Tali. In position to exfiltrate Shepard. Need distraction. Do not contact.</p>
+    </div>
+</body>
+</html>

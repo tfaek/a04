@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 60</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch59.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html" selected>Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch61.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 60</h1>
+    <div class="chapter-content">
+        <p>An uproar swept the hall. Quarians of all creeds were shouting over each other. Looking around, it seemed to Jane that the majority of them were outraged, but she could see some cheering idiots too. She gritted her teeth.</p>
+        <p>Accepting Tali&#x27;s decision had been difficult enough, but watching the consequences play out was much harder. At least Tali was standing tall again; throughout Shepard&#x27;s improvised speech, she&#x27;d been worried Tali might collapse. But when Raan had announced the decision, she&#x27;d straightened again. Looking at her, Jane noticed that she was glaring at Koris.</p>
+        <p>The admiral did not hold her gaze for long.</p>
+        <p>Over the course of about a minute, Raan and the marines scattered throughout the plaza slowly brought the gathering to order. When it was possible to do so again, Gerrel took the word.</p>
+        <p>&quot;Commander Shepard. While this outcome is regrettable, it is no fault of yours. The admiral board afford you our thanks for representing one of our people during this trial.&quot;</p>
+        <p>Jane could just about stop herself from scoffing, even if her ire wasn&#x27;t directed at Gerrel. &quot;With all due respect, admiral, I did not represent one of your people. I represented one of mine.&quot;</p>
+        <p>&quot;That you did, Shepard.&quot;</p>
+        <p>As Raan formally wrapped up the proceeding, Shepard noticed Tali looking at her and turned. &quot;I&#x27;m sorry.&quot;, she said.</p>
+        <p>&quot;Don&#x27;t be,&quot; she answered, sounding somewhat choked up. &quot;It&#x27;s not your fault.&quot;</p>
+        <p>&quot;It&#x27;s your decision, &quot; she shrugged, &quot;but I still don&#x27;t agree with it.&quot;</p>
+        <p>&quot;The good of the fleet comes first, my father taught me that much. If not much else. Thank you for honoring my wishes.&quot;</p>
+        <p>She nodded. &quot;So what now?&quot;</p>
+        <p>&quot;I need to talk to Han. &quot;</p>
+        <p>&quot;Oh.&quot;</p>
+        <p>Watching Tali leave, she found herself impressed with how composed the quarian was after a day such as this. And while she wished Tali&#x27;d decided different, thinking about it Jane realized that to ask that of her would have been to ask her to change who she was: selfless to a fault. And strong enough to deal with what that means. That&#x27;s my Tali.</p>
+        <p>Feeling drained, she let herself drop into the defendant&#x27;s seat she hadn&#x27;t used at all so far and leaned back, closing her eyes. The relative peace lasted for all of ten seconds.</p>
+        <p>&quot;What in the world where you thinking!?&quot;</p>
+        <p>She snapped aware. Raan was standing in front of her, her demeanor transporting her anger no less loudly than her words. &quot;Do you know how difficult it was to make it possible for you to board the Alarei? And you pissed on it!&quot;</p>
+        <p>&quot;It was Tali&#x27;s decision. I supported her.&quot;</p>
+        <p>&quot;What do you mean, it was Tali&#x27;s decision? What in the void did you find over there!?&quot;</p>
+        <p>She considered her answer for a second. &quot;A lot of dead bodies, including Rael&#x27;Zorah&#x27;s. Anything else isn&#x27;t mine to share. Ask Tali. All I&#x27;ll say is that she considered it necessary to do this. For the good of the fleet.&quot;</p>
+        <p>&quot;I don&#x27;t give a vorcha&#x27;s ass about the fl- I wanted to protect Tali! That&#x27;s what you were supposed to do!&quot;</p>
+        <p>She rose, beginning to get angry now. &quot;That&#x27;s exactly what I&#x27;m doing, and I&#x27;ll die trying if I have to.&quot;</p>
+        <p>Raan relaxed a little, looking taken aback.</p>
+        <p>Jane softened. &quot;She&#x27;s an adult. She doesn&#x27;t need you or me to make her decision for her.&quot;</p>
+        <p>There was a long moment of silence, during which Raan simply looked at Shepard&#x27;s face. &quot;I think I understand.&quot; , she finally stated. &quot;Take good care of her, Shepard.&quot; With that, she turned and began making her way over to the Zorah children, who were standing in a tight embrace halfway across the by now mostly empty hall. Jane was too far away to hear what they were saying, but she could see both their shoulders twitching with sobs. She gritted her teeth and let out a strong curse.</p>
+        <p>She spent almost an hour in the plaza, waiting for Tali who was talking to Raan and Han the entire time, with Gerrel briefly stopping by to say his goodbyes as well. She passed some of the time chatting with Kal&#x27;Reegar, who had apparently fully recovered from his injuries on Haestrom, and had a short exchange with Miranda over the radio, coordinating their next destination. Having to leave immediately was not a surprise; they would have done so no matter the outcome.</p>
+        <p>Eventually, Tali extracted herself from what was left of her family and walked over to Shepard, looking composed still,but decidedly tired.</p>
+        <p>&quot;Keelah,&quot; , she said as she sat down next to her. &quot;I&#x27;m sorry for dragging you into Quarian politics.&quot;</p>
+        <p>She shrugged. &quot;I&#x27;m sorry all of this happened.&quot;</p>
+        <p>&quot;Yes. Me too.&quot;</p>
+        <p>She knew not what to say, and there was a moment of silence Jane, decidedly unusually with Tali, found somewhat awkward.</p>
+        <p>&quot;Jane, what you said there earlier..I&#x27;ve never had someone speak like that on my behalf. Thank you.&quot;</p>
+        <p>&quot;It was all true.&quot;</p>
+        <p>She looked down upon her lap. &quot;Thank you for being there for my father and me.&quot;</p>
+        <p>&quot;Anytime.&quot; She sighed. &quot;I just wish there would&#x27;ve been another way.&quot;</p>
+        <p>&quot;Me too.&quot; She tried herself at inflecting a bit of cheer into her voice. &quot;If nothing else, it was fun watching you shout.&quot;</p>
+        <p>She felt the strong need to scratch her chin and cursed the helmet preventing her from doing so. &quot;Tali, about your father, what he said to you, what he did...you deserved better.&quot;</p>
+        <p>She looked back up and into Shepard&#x27;s eyes. &quot;I got better. I got you.&quot;</p>
+        <p>Jane said nothing, simply looking back. They stayed like that for a number of seconds, and she felt as if she should have replied somehow, but eventually a ventilation shaft some meters behind them noisily came to life and broke their reverence. She got up.</p>
+        <p>&quot;Come on, Miss vas Normandy. Let&#x27;s get back to our ship.&quot;</p>
+        <p>By the time they set foot on the Normandy again, Tali&#x27;s spirits seemed to have dampened; something Jane had expected to happen eventually. She&#x27;d been strong and put up a brave face all day, but the stress and hurt of the day was bound to eventually shine through. When they were through the airlock, Tali excused herself and left for the port observation deck. Jane cringed a little.</p>
+        <p>&quot;Take us out of here, Joker. But take the scenic route.&quot;</p>
+        <p>&quot;Aye aye, commander.&quot; The pilot&#x27;s usual demeanor was notably absent.</p>
+        <p>Reaching the CIC, she found that Tali had already left, bet it via the elevator or a ladder, and herself beset by Chambers with the usual reports and some messages. Thinking that if she&#x27;d been in Tali&#x27;s position she&#x27;d rather been alone right now as well, she sighed, put her yeoman off until she&#x27;d at least peeled herself out of her armor and stowed her weapons away, and began making her way to the armory, were thankfully, she found Jacob already waiting to give her a hand.</p>
+        <p>Descending the last steps of the ladder, Tali hoped she wouldn&#x27;t meet anyone in the corridor. With Jane, it was alright, but she couldn&#x27;t stand everyone&#x27;s pitying looks. Crossing the few meters to the observation deck, her wish was granted. The only person she was going to run into was the one she expected to, and she was already waiting inside.</p>
+        <p>The door slid open, and Kasumi rose from her couch in the corner, the one she&#x27;d converted to a bed. She hadn&#x27;t gotten so much as a scratch in the fights on the Alarei, but it had still been several hours of combat and Tali wasn&#x27;t surprised that the small woman would be tired.</p>
+        <p>&quot;Hey. I watched what happened.&quot;</p>
+        <p>Tali had no reply to that, and simply sat down on the couch facing the viewport. The human&#x27;s eyes lit up with understanding. &quot;Oh, of course. Should I go?&quot;</p>
+        <p>&quot;No, I don&#x27;t mind you being here. Thank you.&quot;</p>
+        <p>She really didn&#x27;t. In the few weeks she had been back on the Normandy now, Tali had gotten along well enough with almost anyone, but made few new friends. One of them was the thief. With Ken and Gabby her subordinates, Tali had found herself gravitating towards Kasumi; she had a curiosity for tech, albeit not the kind of tech Tali was familiar with, that had provided their common ground to start from, and was good, fun company.</p>
+        <p>&quot;Where&#x27;s Shepard?&quot;</p>
+        <p>She was also far too perceptive.</p>
+        <p>&quot;I don&#x27;t know. Getting out of her armor, I&#x27;d guess.&quot;</p>
+        <p>The thief nodded, not pressing it further this time.</p>
+        <p>&quot;You could use a drink. I know where Garrus keeps all his strong alcohol...&quot;</p>
+        <p>Despite herself, Tali snorted. &quot;Thanks, but no. If I drink that, I&#x27;m going to die.&quot;</p>
+        <p>Kasumi pulled on a bathrobe over her underwear and began shuffling over. &quot;Oh yeah, not sterilized, turian antigens, I forgot...oops.&quot; She plopped down on the couch next to Tali and fell silent for a while, taking in the view. &quot;It&#x27;s beautiful.?&quot;</p>
+        <p>Tali did not answer, focusing on the thousands of silver shapes in front of her instead. A tear was welling in her eye.</p>
+        <p>&quot;Sorry...I&#x27;m an idiot. I&#x27;ll shut up now.&quot;</p>
+        <p>&quot;It&#x27;s fine.&quot;, Tali sniffed. &quot;It really is beautiful. It&#x27;s why I came here. See it one last time, you know?&quot;</p>
+        <p>&quot;Is there really nothing you can do?&quot;</p>
+        <p>Tali shrugged. &quot;Nothing&#x27;s set in stone, I guess. Maybe something we find on the collector homeworld could be worth my reinstatement, or maybe we&#x27;ll find something that could help my people fight the Geth. They do work for the Reapers, after all. But honestly...yes, I am sad, but getting exiled doesn&#x27;t even bother me as much as I thought it would. I would&#x27;ve thought it would destroy me.&quot; She sniffed again. &quot;But now that it&#x27;s happened...I can take it. I wasn&#x27;t exiled for a lapse in judgement or a horrible mistake, I was exiled for the good of the Quarian people. It was my own decision. And now I never have to feel bad about staying on the Normandy again. I can live with that.&quot;</p>
+        <p>Kasumi nodded. &quot;You&#x27;re quite the person, you know that?&quot;</p>
+        <p>&quot;I&#x27;m not sure about that. I try my best.&quot;</p>
+        <p>&quot;Well, I am sure. And someone else is, too. Shepard let EDI tap into her helm feed so we could watch the trial live. I saw a lot of Quarians on your side there. And I heard Shepard&#x27;s speech.&quot; She shuffled a little closer. &quot;Shepard really cares about you, I hope you know that.&quot;</p>
+        <p>The Quarian looked down on her wringing fingers; they were moving slow, looking almost deliberate even though she didn&#x27;t do it consciously at all. It was a habit she&#x27;d taken to since Jane&#x27;s return, replacing her nervous fidgeting of old. She took it as a sign both of how she&#x27;d matured and how Jane coming back had healed her after two years of hopelessness.</p>
+        <p>&quot;Yes, she does. And I know what you want to say.&quot;</p>
+        <p>&quot;So?&quot;</p>
+        <p>Tali sighed. &quot;For what it&#x27;s worth, I&#x27;m free now. I&#x27;d rather not be, but I am. I can do what I want. But right now, I just left my brother behind, my father is dead and now we&#x27;re leaving my home for good. So all I want to do right now is to sit here and take a good look at it while I still can.&quot;</p>
+        <p>Kasumi nodded and smiled her friendly, knowing smile. &quot;Okay.&quot;</p>
+        <p>And then she, on a very rare occasion, barely said a word for the next hour as the bulk of the fifteen thousand strong migrant fleet slowly passed by, merely breaking the quiet to ask about the name and designation of a particularly large or unusually looking ship every once in a while.</p>
+    </div>
+</body>
+</html>

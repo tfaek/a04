@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 22</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch21.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html" selected>Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch23.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 22</h1>
+    <div class="chapter-content">
+        <p>The first thing that struck Anderson when he filed out of the finally fixed elevator with a gaggle of medics behind him was the shocking severity of the devastation. The automated systems of the Citadel had contained the hull breaches with mass effect fields, keeping the atmosphere in the room, but aside from that, the council chamber was a ruin. Rubble, glass shards and pieces of Sovereign were lying all over it. He rushed up the stairs to see that deeper into the room, the destruction only got worse. Here the debris formed large heaps and piles, so that Anderson&#x27;s first thought was that no one could have possibly survived this. Fortunately, he was mistaken. A retching sound alerted him to Chief Williams, who was slumped on all fours on the floor some twenty meters ahead, keeping herself propped up on her hands, a pool of vomit on the ground beneath her and her entire face red with blood rinsing down from her forehead. He rushed to get to her, but was overtaken by two medics, so he left them to it and climbed a large metal beam to get a better view, and now, from the elevated position, he could see the rest of the team. Vakarian was kneeling next to Benezia&#x27;s daughter, who lay on the floor, her face a pale shade of blue that seemed decidedly unhealthy. The haphazardly closed gash on her abdomen and the large pool of blood she was in left little room for imagination as to why she was in that way. As soon as the doctor who had rushed by him had finished her interrogation of the Turian, Anderson stepped to the man&#x27;s side and gripped his shoulder.</p>
+        <p>&quot;Vakarian!&quot;</p>
+        <p>The former C-Sec officer just stared back at him wordlessly. A large laceration on his forehead had covered half his face in blood, and one of his crest&#x27;s was obviously broken. His blue armor was pitch black at the front. He looked like death. But Anderson could not be gentle right now.</p>
+        <p>&quot;Saren?&quot;</p>
+        <p>&quot;We killed him.&quot;</p>
+        <p>&quot;Shepard?&quot;</p>
+        <p>The Turian just shook his head in way of an answer and gestured towards the back of the room, before limping off towards another medic. Following Vakarian&#x27;s gesture, Anderson made his way past another pile of rubble, following the angry grunts. How he had not heard them before was beyond him, and the same went for the desperate cries that alternated with them.</p>
+        <p>The Krogan, Urdnot Wrex, was digging through the largest mountain of debris in the entire room, made up of bits of concrete and steel in equal measure, but mostly, the largest still intact piece of Sovereign in the entire council chamber. Next to him, tugging weakly at the rubble with her left arm, the right one hanging limply from her shoulder, was Tali&#x27;Zorah, most of her right side covered in her own blood, pulling at a large metal beam to no avail, screaming in frustration and, presumably, pain.</p>
+        <p>&quot;Shepard! You there!?&quot;</p>
+        <p>Anderson had never heard concern in a Krogan&#x27;s voice before. The Quarian meanwhile sounded not only concerned, but about to lose her mind.</p>
+        <p>&quot;Shepard! Jane! Can you hear us! JANE!&quot;</p>
+        <p>He stepped towards Zorah, as he was not about to get close to the obviously upset Krogan, and laid a hand on Zorah&#x27;s shoulder. Her head snapped around to him, the eyes underneath her visor wide open and shining bright. &quot;Ca-Captain Anderson !?&quot;</p>
+        <p>&quot;Miss Zorah. Is Shepard...is she in there?&quot;</p>
+        <p>&quot;Yes! Come on! We need to get her out!&quot;</p>
+        <p>With these words, she seemed to have completely forgotten his presence, getting back to lifting up smaller pieces after giving up on the beam she&#x27;d been pulling at earlier. Looking at the mess in front of him, Anderson&#x27;s heart sank, but he forced himself to fight down the sorrow.</p>
+        <p>If anyone could still be alive in there, it would be that woman.</p>
+        <p>He turned around and barked commands at the men and women who were still without a task, putting them to work at the debris that most likely contained Shepard, living or dead, and got stuck in himself, too. Soon he was drenched in sweat, but he just tossed his uniform jacket aside and kept at it, until finally,one of Wrex&#x27;s shouts was answered, barely audible. &quot;I&#x27;m fine! I&#x27;m down here!&quot;</p>
+        <p>Locating the source of the shouting, Anderson got down on his hands and raised his voice. &quot;Shepard! Are you injured?&quot;</p>
+        <p>The voice answering was muted by the rubble between them, but just loud enough to be comprehensible. &quot;Captain! Damn good to hear your voice! I&#x27;m fine, mostly. Leg&#x27;s definitely broken though, and I&#x27;m stuck here.&quot;</p>
+        <p>Anderson couldn&#x27;t help but crack a smile at his protege&#x27;s ever calm and collected demeanor. &quot;Alright young lady, sit tight! We&#x27;ll have you out of there in no time.&quot;</p>
+        <p>Now with a concrete idea of where they had to go, they made headway faster than before. Taking a short break, Anderson confirmed that Williams and T&#x27;Soni had already been taken away. Vakarian had attempted to help with the digging, but his injured leg had collapsed under him, so he was just sitting down and observing now. Turning back to it, he was treated to the sight of the Krogan heaving up the beam Zorah had failed to move earlier, and finally, in a cave made from a large piece of Sovereign shielding her from the debris, there was the Commander, beaming at them with that shit eating grin of hers, even though her leg was squashed underneath a large rock. Before anyone else could get to her, the Quarian had rushed past all of them and was half next, half on top of Shepard in the narrow space. She shot a quick glance towards Shepard&#x27;s leg before resting her good hand on the commander&#x27;s chestplate and croaking out:</p>
+        <p>&quot;Keelah, Jane– Commander. You scared me to death.&quot;</p>
+        <p>Shepard looked back at her with a strange look on her face and gripped Tali&#x27;s forearm with her right, before trailing off towards the quarian&#x27;s shoulder.</p>
+        <p>&quot;You&#x27;re wound&#x27;s opened up again.&quot;</p>
+        <p>&quot;Oh.&quot;</p>
+        <p>As if on cue, she collapsed, but was held up by one of the Alliance soldiers before she could hit the rubble. As she was carefully dragged out of the hole, Anderson found himself addressed by a Commander Shepard who was decidedly back to battlefield mode. &quot;Get her the hell out of here, Sir. She&#x27;s lost blood, and I have no idea how long she has before the suit breaches make her real trouble. And make sure she&#x27;s taken care of properly, you know how it can be for Quarians on the Citadel.&quot;</p>
+        <p>Anderson just nodded and barked his orders before stepping down from the pile to try and convince Vakarian to finally let himself be brought to the hospital, too. The Krogan was covered in his own blood as well, but it didn&#x27;t seem to bother or impede him and he didn&#x27;t feel like arguing with a giant reptile today.</p>
+        <p>Finally, after a day that had to have aged him five years at least, David Anderson relaxed.</p>
+        <p>…...</p>
+        <p>&quot;Commander, you have a concussion, two broken coccygeal vertebrae and a newly fixated complex fracture of your left tibia and fibula. Strongly recommend you lie down!&quot;</p>
+        <p>The salarian doctor who had responded to the nurse&#x27;s calls when they hadn&#x27;t been able to stop Shepard from trying to leave her bed just as she had woken up from the short-term anaesthesia she had been put under for the surgery on her leg sounded most irritated, but Jane couldn&#x27;t bring herself to care about that right now. She had no idea how her people were faring, and before she found out she would not find rest anyway.</p>
+        <p>&quot;Listen doc, I appreciate the concern, but I have things to take care of. Give me a crutch and get out of my way. Please.&quot;</p>
+        <p>After a couple of seconds of intense staring, the Salarian closed his eyes and exhaled in exasperation before leaving the room wordlessly. A minute later,as Jane was already worrying that the man might have decided to just ignore her, he returned with a pair of crutches, a nurse and a large orthesis. &quot;Here. Put this on and go. Try to not mess up osteosynthetic fixation too much.&quot; Then he turned around and left, already muttering details of some other patient to himself. That was just fine with Jane, and so as soon as the nurse had finished helping her put the orthesis on, she heaved herself off the bed she had been sitting on. She had never needed crutches before, and the heavy weight of the orthesis on her left leg and foot certainly didn&#x27;t help, and so she probably looked rather undignified as she slowly and clumsily made her way to the door and unto the hospital floor. After getting there, she realized that she was completely lost, but before she could ask someone for directions, she was already being approached by a young man in alliance uniform who snapped her a crisp salute that Jane did her best to return with at least some modicum of proper form, despite her predicament and her splitting headache.</p>
+        <p>&quot;Commander Shepard, Ma&#x27;am. Private Metembe. I was told to take you to your team once you&#x27;re on your feet.&quot;</p>
+        <p>&quot;Lead the way, then.&quot;</p>
+        <p>Following the private as fast as she could, but still so slow that the man walked in the laborious way she remembered from herself whenever she had gone to the store with her grandmother as a girl, Jane made her way through Huerta&#x27;s Memorial. It was filled to the brim with wounded and their relatives or friends; the Geth as well as Sovereign&#x27;s debris had taken their toll on the Citadel&#x27;s population. What she was seeing here was likely being mirrored in every other hospital on the station right now. Finally, they entered into a lounge at the other end of the surgical wing, and after looking around for a second, she found Garrus, sitting in a chair in front of the reception, and Wrex, sitting on the ground next to him. Wrex looked fine; he had some blood on him, but he did not seem to be in pain.</p>
+        <p>The joys of a redundant nervous system, as he would say.</p>
+        <p>Garrus though looked badly run-down. He had been stripped out of his armor and his entire chest as well as some of his neck and what probably passed as a Turian&#x27;s belly was covered in bandages, as was a patch on his plated forehead. The blood had been washed from his face, but only roughly, and there was no missing the splint affixed to his left central crest. His leg had been injured too, as he had a stiff bandage around his right knee. As Jane hobbled over, her friends noticed her. Garrus simply looked at her, it was Wrex who spoke. &quot;Shepard! Finally done getting pampered while we sit out here ?&quot;</p>
+        <p>Shepard did not react to the jab, she was not in the mood. For all she knew, three of her team were fighting for their life. &quot;Do you know anything about the girls?&quot;</p>
+        <p>Garrus answered her. &quot;No. &#x27;Doctor- patient confidentiality&#x27;. They wouldn&#x27;t tell us anything. &quot; He flared his mandibles and scoffed. &quot;Like I needed a reminder why I can&#x27;t stand this place.&quot;</p>
+        <p>Jane sighed and turned over to the reception. &quot;I&#x27;ll get it out of &#x27;em.&quot;</p>
+        <p>When she arrived at the counter, she was treated to an exhausted sigh by a visibly overworked Asari nurse. Evidently, Asari got rings under their eyes similar too humans, but they had a lavender colour for some reason. &quot;Hello Ma&#x27;am, what can I do for you?&quot; &quot;I&#x27;d like to know about the status of three patients...&quot;</p>
+        <p>&quot;Are you married or related to any of them?&quot;</p>
+        <p>&quot;Well no, but-&quot;</p>
+        <p>&quot;Then I cannot help you. It is against the law.&quot;</p>
+        <p>Feeling the anger rise in her chest, she reminded herself that this lady was right and it was not her fault. This woman was not responsible for the fact that Shepard had zero fucks left to give about the damn law.</p>
+        <p>&quot;Listen ma&#x27;am, I know that. I also don&#x27;t care. I&#x27;m a Spectre.&quot; She raised her left arm to flash her Spectre authorization in the nurse&#x27;s face, only to discover that her omnitool had not survived the carnage of the day. &quot;Oh for fuck&#x27;s sake!&quot;</p>
+        <p>The nurse looked actually sorry now, but she wouldn&#x27;t budge. &quot;Listen Ma&#x27;am, not that I don&#x27;t believe you, but I cannot help you. If I share confidential patient information with you without proper authorization, I&#x27;m out of a job.&quot;</p>
+        <p>Leaning onto the counter for support, she started at her hands, trying to come up with a solution, and came up blank. Closing her eyes, she struggled to fight off the thoughts of her friends possibly on the brink of death while she didn&#x27;t even know about it, until she finally found herself doing something she had not done in years – praying.</p>
+        <p>Hey, uhm, God...so, I know, I&#x27;m a bloody hypocrite for only hitting you up when I need something and not really being sure if you even exist most of the time, but look, this isn&#x27;t for me. Ashley is a proper christian, prays every day , reads her bible and all that, that&#x27;s gotta be worth something, right? And Liara and Tali...sure, they&#x27;ve probably never heard about you, but they&#x27;re aliens so, can&#x27;t blame them right? And they&#x27;re good people, trust me. Well, I&#x27;m not sure why I&#x27;m even telling you this, you&#x27;re supposed to be all-knowing after all...so...yeah...just...please...let them be okay.</p>
+        <p>She was still thinking if there was something more she was supposed to say- or well, think - when a familiar and unexpected voice cut through her musings.</p>
+        <p>&quot;I believe I have the necessary authorization to lift the confidentiality in this case, Miss. Please tell the Commander everything she wants to know.&quot;</p>
+        <p>&quot;Ye-Yes, councilor. Of course.&quot; The nurse was just as baffled as Shepard was, both of them staring at Tevos who had arrived together with two Asari commandos who positioned themselves around their charge and did their best to look deterrent at anyone who came too close. Shepard straightened herself as best as she could.</p>
+        <p>&quot;Councilor Tevos. Thank you, ma&#x27;am.&quot;</p>
+        <p>Tevos inclined her head and smiled warmly before she spoke. &quot;It is I who has to thank you, Commander. Your actions today have saved not only my life, but that of the entire council, ten thousand Asari on the Destiny Ascension, and who knows how many else that would have perished in whatever plans Saren had.&quot;</p>
+        <p>She frowned at that. &quot;I know how many else. Every soul in the galaxy. I told you already Saren was just a puppet of Sovereign.&quot;</p>
+        <p>If the councilor was taken aback by Shepard&#x27;s bluntness, she did not show it. &quot;Let&#x27;s not argue now Commander. I have come here to convince myself that you are well and to extend the council&#x27;s gratitude to you and your team personally. We will hold a proper debriefing at a later date. For now, I will leave you to it.&quot; Nodding at Shepard once more, which she returned as respectfully as she could fake it after what Tevos had just said, the councilor turned around and began a brief conversation with Wrex and Garrus. Shepard did not pay attention to it, instead she looked up mouthing a silent &quot;THANK YOU&quot; and turned back to the nurse.</p>
+        <p>&quot;Alright, I&#x27;m here for Dr. Liara T&#x27;Soni, Ashley Williams of the Alliance, and a Quarian, Tali&#x27;Zorah nar Rayya.&quot; She waited tensely as the Asaris hammered away at her terminal.</p>
+        <p>&quot;Aaaalright...Williams, Ashley. Came in one and a half hours ago...left arm fractured in multiple places...concussion...fractured skull...epidural haematoma. Currently in surgery...craniotomy.&quot; Shepard winced at that, but signaled her to continue. &quot;Well Ma&#x27;am, it says here she was conscious when she got here, so it can&#x27;t have been too bad yet. Should be fine after surgery.&quot; She nodded reassuringly to underscore her words.</p>
+        <p>&quot;Thank you. What about Tali&#x27;Zorah?&quot;</p>
+        <p>&quot;Yes, the Quarian, I saw her being brought in myself...one moment...yes, here. Two cracked ribs, multiple suit breaches, extensive muscle damage on the right shoulder, moderate blood loss...contamination of the wound by foreign material...hm...dextro bacteria identified on wound-swab. Heavy antibiotics and anti-inflammatory drugs, currently in the intermediate care unit.&quot;</p>
+        <p>She let out a breath she had not realized she had been holding and closed her eyes, taking a moment to collect herself.</p>
+        <p>&quot;Okay. Thank you. What about Dr. T&#x27;Soni ?&quot;</p>
+        <p>&quot;Already pulled her up. Damn...sorry. Looks like she just got out of surgery. Deep abdominal wound and severe blood loss...apparently she needed multiple blood transfusions and they had to remove half a meter of her intestine, but she&#x27;s stable now. Currently in the ICU.&quot;</p>
+        <p>She cursed under her breath. &quot;Can we visit her?&quot;</p>
+        <p>&quot;No. No visitors in the ICU right now, they are already running above capacity. We have patients on the hallways in there, last thing we need is visitors spreading even more chaos and taking up the last bit of space we have left.&quot;</p>
+        <p>&quot;I understand. What abou-&quot;</p>
+        <p>&quot;The lady with the craniotomy will be in surgery a while longer, and after that, she goes to ICU as well. You can go see your Quarian friend though, the intermediate care unit is not as strict as the ICU. She&#x27;s in room...C214. That door over there...then the second left.&quot;</p>
+        <p>&quot;Thank you , ma&#x27;am. You&#x27;ve been a godsend.&quot;</p>
+        <p>She just nodded, though there was the shadow of a smile on her lips, and got back to the mountain of paperwork in front of her as Jane turned around and worked her way over to Wrex and Garrus to relay the news. After listening to it all with obvious relief, they shared a quick glance, before Wrex rumbled: &quot;You should go and see Tali, Shepard. She&#x27;ll be happy to see you.&quot;</p>
+        <p>&quot;You sure? I&#x27;d thought you would want to...&quot;</p>
+        <p>&quot;I&#x27;ll drop by later. Now go already.&quot; The old Krogan smiled.&quot; I know you&#x27;re worrying, so stop being so damn polite and move it already.&quot; Jane just grinned and nodded in thanks, not having the energy to deny it right now, and it would&#x27;ve been pointless anyway, Wrex was not one to be fooled.</p>
+        <p>After following the path the Asari had described to her until she arrived at the closed IMC door, where she had to press a button and announce herself before being let in as the nurse at the reception had apparently thought of everything, she kept her eye out for the room numbers. After a minute, she noticed that she had to have already passed her destination and was now walking in the wrong direction, which she quickly blamed on the headache that was still throbbing in her skull. The leg didn&#x27;t feel to nice, either.</p>
+        <p>Should&#x27;ve gotten some more painkillers from the doctor...</p>
+        <p>Finally, she reached room C214. There were no doors, just an open doorway, and so she hobbled into the large room. It had four beds, one of them empty, one holding a sleeping Salarian, the one directly to the right a Turian who was currently being looked after by two humans of the medical staff, and, in the left corner of the room, by the window, there was Tali. She was lying on her left side, facing out the window and away from the entrance, so Shepard could not tell if she was awake or asleep. Getting closer, she could see the blanket slowly rise and fall from her calm breaths. Her feet stuck out from under it, her long toes curling and uncurling slowly as if reacting to a dream. Shepard finally made her way around the bed and, stepping over Tali&#x27;s shoe/shinguard thingies, towards the chair between her bed and the window. The familiar glow of her eyes under her mask was missing,. confirming that she was indeed asleep. There was a monitor next to Tali&#x27;s head, a gaggle of cables connecting with interface points all over her suit; after doing her best not to drop too heavily into the chair as to not wake her, she took her time to inspect it, and while a lot of what was displayed on it eluded her, she was able to understand the numbers well enough. She had some trouble telling the oxygen saturation from the pulse, but after checking it back with the electrocardiogram she determined that the saturation was 98 percent and the pulse was 99 which was, if she remembered correctly, completely normal for Quarians; for some reason they had very similar blood saturation than humans, but higher heart frequencies. The only thing she did not know what to think about was the blood pressure, but given that Tali was here in intermediate care and not in the ICU, she supposed it checked out, and there would be a professional around to check it soon enough anyway, and if anything happened, that machine would alert the nurses on it&#x27;s own. Content, she rested back in the chair. She would be here when Tali woke up. Omnitool was gone...so no checking the news, too bad, she was weirdly interested in what all the journalists who couldn&#x27;t actually have had any clue yet would have to say about this day. Well...maybe she could get a public access dataslate...from the nurses...later...after she&#x27;d just...sat down for a while.</p>
+        <p>…...</p>
+        <p>When she came to again, it was dark; not so dark that she couldn&#x27;t have seen at all, as the light from the nurses headquarters down the hallway fell into the room through the doorway, but it was clear that this was the station&#x27;s artificial night. Looking around the room, she could see that the formerly empty bed had been occupied, and a fifth bed rolled in and deposited in the middle of the room, but what species the people in those beds belonged to, she could not tell.</p>
+        <p>They let me sleep here? Maybe Tevos pulled strings...or the nurse...or maybe its because im still wearing half of my armor...or maybe its the stench...i must reek horribly...Christ, I&#x27;m even smelling it myself...</p>
+        <p>&quot;Jane! Shepard!&quot;</p>
+        <p>Tali&#x27;s hushed voice and the blue flicker of her mouthpiece&#x27;s indicator light served to bring her fully back to reality.</p>
+        <p>Her eyes were focusing on Shepard&#x27;s face; the two silvery orbs Shepard had learned to read so well only half open, as Tali was probably still sleepy and they did not need to be any wider even in this dim light. She knew that for Tali, this only somewhat dark night was almost as bright as a sunny day.</p>
+        <p>&quot;Hey.&quot; she whispered back. &quot;Good to see you.&quot; She meant it, a wide smile finding its way onto her face. &quot;You had me a little worried.&quot;</p>
+        <p>&quot;Yes, me too. But I&#x27;ll be fine. They actually had someone here who knew how to treat Quarians.&quot; She yawned. &quot;Still tired though. I think I...will spend some days in this bed. It&#x27;s pretty comfortable. I haven&#x27;t slept in a real bed since I set out from the Rayya, you know.&quot;</p>
+        <p>&quot;I&#x27;ll get you a proper bed for your cubicle.&quot; Even with Tali&#x27;s limited body language lying in bed, Shepard could tell she was smiling; at this point, the subtle changes of her eyes&#x27; shapes were enough for Shepard to read her most of the time. &quot;That&#x27;s really not necessary, Shepard. You really don&#x27;t have to use so many resources...&quot; she stopped herself, perhaps knowing full well that this approach wouldn&#x27;t work with Shepard, and tried another. &quot;The others will get jealous if you pamper me too much.&quot;</p>
+        <p>&quot;Well, let them. Maybe I want to pamper my favorite Quarian. I&#x27;m the Captain, I can do what I want. Is that not so?&quot;</p>
+        <p>She giggled softly, but it descended into a mild coughing fit that tarnished the upbeat atmosphere. Clearing her throat, Jane asked: &quot;What woke you up, anyway? Do I snore?&quot;</p>
+        <p>That sent her giggling again, this time without coughing. &quot;Actually no, I woke up from the smell, you reek bestial.&quot; Shepard frowned and raised her arm to take a sniff, but seeing her embarassment, Tali took back her tease immediately. &quot;I&#x27;m just kidding. You do snore. You&#x27;re also smelling, but that isn&#x27;t what woke me up. And I already shut off my olfactory filters, so I&#x27;m fine.&quot;</p>
+        <p>&quot;How do you feel?&quot;</p>
+        <p>&quot;Pretty okay actually. I have a clogged nose, my throat is itchy, my head hurts and I have a mild fever, but it&#x27;s nothing I haven&#x27;t had before. I actually barely even feel my shoulder right now. They&#x27;ve got some strong medicine here, anywhere else outside of the fleet this could&#x27;ve gone badly. Even the Normandy isn&#x27;t that well equipped to deal with suit breaches.&quot;</p>
+        <p>&quot;What? Why&#x27;d you never say anything? We spent the last six months up to our necks in the shit, what if...not what if, you did get wounded. More than once. Are you telling me you could&#x27;ve died from some poor luck all this time?&quot; She was agitated now, the thought got her seriously worked up. Tali&#x27;s selflessness was one of her endearing qualities, but this was decidedly too much, and it wasn&#x27;t the first time either. She still hoped she could manage to beat some sense into Tali regarding this before it ended in disaster one day.</p>
+        <p>&quot;Oh keelah Jane, you&#x27;re jumping straight to the worst case scenarios again. It&#x27;s really only such a big problem in dextro biospheres, which are exceedingly rare. The only reason that breach in the council chamber was so dangerous was because there&#x27;s Turians there regularly, and that means there&#x27;s dextro bacteria. Levo bacteria can&#x27;t actually do anything to us, with them it&#x27;s just the misguided reaction of our immune systems making us sick. And the Normandy can deal with that just fine.&quot;</p>
+        <p>&quot;But what about Garrus. Hasn&#x27;t he gotten his dextro bacteria all over the Normandy at this point?&quot;</p>
+        <p>&quot;A bit, but the Normandy is a starship. The air is constantly recycled and filtered, so the amount of bacteria floating around in it is kept at a minimum. They&#x27;re still on him of course, and on the Mako and some other surfaces but...I&#x27;ll hardly get a suit breach there, will I?&quot;</p>
+        <p>&quot;And what if you get a suit breach on a mission and we have to evacuate with the Mako?&quot;</p>
+        <p>&quot;Well , medigel should usually seal those up sufficiently...&quot;</p>
+        <p>&quot;Should? Usually? We&#x27;re getting these antibiotics. I want a list when you get out of here, that clear? And don&#x27;t you dare talking about what it costs.&quot;</p>
+        <p>&quot;B-but...alright, Shepard.&quot;</p>
+        <p>Silence fell for a while, until she asked: &quot;What about Liara and Ashley?&quot;</p>
+        <p>&quot;They both had to have surgery. Pretty invasive actually. Ashley had her skull opened up...&quot; Tali gasped at that and her eyes widened in shock. &quot;...but from what they told me, she&#x27;ll be fine. Same for Liara, but she had it even worse. Blood transfusions and...a part of her intestine had to be removed.&quot;</p>
+        <p>&quot;Where are they now?&quot;</p>
+        <p>&quot;In the ICU. We can&#x27;t visit. They&#x27;re probably not even conscious, anyway.&quot;</p>
+        <p>&quot;Keelah...&quot;</p>
+        <p>Again there was silence, but it was not an uncomfortable one. Again she was the one to break it. &quot;So we did it. We won. Saren is dead. No reaper invasion. At least for now...&quot;</p>
+        <p>Shepard sighed. &quot;Tali...can we not speak of that right now? Right now, I am just glad that we all got through this alive. We&#x27;ll cross those other bridges...when we get there.&quot;</p>
+        <p>&quot;Yes, Jane. &quot; She yawned again. &quot;I feel like going back to sleep. I&#x27;ll just shut off my audio amplifiers, the snoring should be more of a welcome background sound then.&quot; She giggled again. &quot;You&#x27;re my portable sleep-supporting Tantalus drive core, Shepard.&quot;</p>
+        <p>&quot;Tali?&quot;</p>
+        <p>&quot;Yes, Jane?&quot;</p>
+        <p>&quot;Please stop calling me that.&quot;</p>
+        <p>&quot;Oh! I-I&#x27;m sorry, Shep- Commander, I-&quot;</p>
+        <p>&quot;Tali. Exact opposite of what I meant.&quot;</p>
+        <p>&quot;Oh. Uhm...okay...Jane.&quot;</p>
+        <p>&quot;Goodnight Tali.&quot;</p>
+        <p>&quot;Goodnight Jane.&quot;</p>
+    </div>
+</body>
+</html>

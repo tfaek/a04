@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 21</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch20.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html" selected>Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch22.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 21</h1>
+    <div class="chapter-content">
+        <p>The entire ground team was assembled in the comm room, only Shepard missing. Nobody spoke, everybody knew they were about to jump into the fight of their lives, and while everyone had different thoughts in their head, none was in the mood for talking. The only one who wasn&#x27;t feeling tense was Wrex, and the old Krogan was not the type to speak if there was nothing of substance to be said. After a few minutes of fidgeting and the occasional unusually deep exhale, all heads snapped to the door as it finally opened and the Commander strode into the room, Pressly on her heels. Sitting down next to Wrex, Shepard gave the floor to her XO. „Give them the sitrep, Pressly.&quot;</p>
+        <p>The older man nodded curtly and activated the monitor. A couple of button presses later, it showed the results of their long-range scanners, neatly transformed into a 3D model. &quot;There is a heavy Geth cruiser in orbit, as well two Geth frigates on patrol duty. They don&#x27;t know where here of course, and if we wanted to, we could definitely cripple one in an initial attack run, and perhaps even the other in open battle before that cruiser got into range, but the cruiser itself is untouchable for us. However, with the stealth system, it will be no problem to simply slip past them all and drop off the ground team. The enemy on the ground will probably get a visual on us when we do that, but it doesn&#x27;t matter. They won&#x27;t catch us.&quot; He cleared his throat and brought up a different image, zoomed in on an area near the foot of a great mountain range on the northern continent of the planet. &quot;This appears to be Saren&#x27;s point of interest. From this range, we cannot say much about it, other than that it appears to be ruins of some sort. We are picking up weak energy signatures from underground. What that precisely means, I can&#x27;t tell, but it seems that there is something there, and the fact that the Geth are here most likely means that it is what we are looking for. The last relevant piece of information is this: We have detected four Geth dropships in the target area. Based on the different classes we have extrapolated from the energy signatures, the Geth have an entire reinforced heavy company on the ground. The exact disposition of their forces is impossible to tell, but these dropships are capable of transporting all types of combat platforms we have so far encountered, so...expect combined arms.&quot;</p>
+        <p>He nodded at the Commander. &quot;That&#x27;s all I&#x27;ve got, Ma&#x27;am.&quot;</p>
+        <p>&quot;Thank you, Pressly.&quot; Freeing her seat up for the navigator, Shepard stood up and walked over to the monitor, studying it for a number of seconds before turning around and addressing her team. &quot;As you&#x27;ve heard, we don&#x27;t have a whole lot to go on other that the enemy is here in overwhelming force, and we do not have the time for proper reconnaissance, either. But we don&#x27;t need it. Wherever the hell we actually are right now, as far as im concerned, this isn&#x27;t council space, and even if it were, this is not the time to care about rules. The Normandy&#x27;s stealth drive will bring us in for the kill, and we will use her main guns and GARDIAN lasers to lay waste to the Geth and any other opposition while dropping us off. If we get Saren that way, that&#x27;s just fine with me. But I&#x27;m not getting my hopes up. That son of a whore won&#x27;t go down that easily. There will only be time for a couple of salvos before the Geth ships will force her off, but it should be enough to level the playing field and throw any survivors into disarray.&quot; She rubbed the back of her nose and continued. &quot;All six of us are dropping together. Ashley, you will drive the Mako, I want to be ready to deploy at a moment&#x27;s notice. Garrus at the armaments. Tali, you are on the console, but if we dismount, you&#x27;re with me, Wrex and Liara. We do not know what exactly awaits us down there or what will be the objective, so we&#x27;ll eliminate anything with extreme prejudice and ask questions later. Hell, if Saren is down there and you get him into your crosshair, I want you to blow him up with the bloody main cannon , understood, Garrus?&quot;</p>
+        <p>&quot;Sure thing, Shepard. I&#x27;d prefer to drop a poignant one liner and place a bullet between his eyes from up close, but to be honest, I am not too keen on going toe to toe with him, so the cannon it is, if at all possible.&quot;</p>
+        <p>Even Shepard couldn&#x27;t help but smirk at that, and most of the others chuckled, too. At least some of the palpable tension dissipated. The Commander continued. &quot;Tali. What about that surprise for Saren that you&#x27;ve been working on? You&#x27;ve got something?&quot;</p>
+        <p>The quarian perked up. &quot;Yes, Shepard, I have something. It is very similar to a regular Overload protocol like the ones regulary used to weaken shields. The problem is.. shields are basically one big mass effect field, so you don&#x27;t have to focus on a specific point to overload them. Just overpower the generator and it will do the trick. Cybernetics are more like guns. You need to either get into the system somehow, or be very close to find a junction, a cable or something similar, and manually apply the energy there. With guns, their computers are fabricated by standard, so if you know the model, you should not have trouble hacking them, at least temporarily. That&#x27;s how I am sometimes able to jam our enemies&#x27; guns in combat. These cybernetics though...they&#x27;re obviously custom made. So I&#x27;ll have to apply the attack...manually. Up close.&quot;</p>
+        <p>Her body language left no doubt about how she felt about the prospect of getting up close with Saren. &quot;B-but it&#x27;s not a problem. I just need to tap him once, and from what I&#x27;ve seen on Virmire, there are plenty of points of access on him. If I&#x27;m, uh, quick, I shou-&quot;</p>
+        <p>&quot;Absolutely not.&quot; Shepard interrupted her vehemently, her arms crossed in front of her chest, a stern look on her face. &quot;Wrex and I could barely hold our own against him, and while your suit and armor are good at what they do, they won&#x27;t stop a strike from Saren. Even Wrex and me got roughed up! If he gets one swipe in with his talons, you&#x27;re in big trouble, and we have no idea when we will be able to access proper medical attention. It&#x27;s too dangerous. We need to find another way.&quot;</p>
+        <p>Tali deflated. On one hand, she was relieved that she would not have to go and grapple with the traitor, who, with all his modifications, was downright monstrous. On the other hand, that left them with no tangible plan for how to actually defeat him. But before she could get lost in her thoughts, Shepard asked her the next question.</p>
+        <p>&quot;Any idea of how we could get through his shields, so we can just kill him the usual way? On Virmire, they were simply ridiculous. I wonder how he even does it.&quot;</p>
+        <p>Now that she could answer. &quot;Those can not possibly have been his personal shields. He did not wear anything big enough to be so powerful on him, and there is no way it&#x27;s integrated into his cybernetics, it would produce way too much excess heat. It has to be in his hovercraft.&quot;</p>
+        <p>&quot;And how does this help us overpower them?&quot;</p>
+        <p>&quot;It doesn&#x27;t, but it doesn&#x27;t have to. If we can&#x27;t overpower the hovercraft&#x27;s shields, we can just separate Saren from his hovercraft. Shields do not influence biotics,after all. Liara should have no trouble throwing him off the thing. And then he&#x27;ll be stuck with his personal shield, which we should have no trouble with.&quot;</p>
+        <p>The commander&#x27;s eyes wandered over to Liara, who had listened intently. Shepard raised her eyebrows in question, and after a couple of seconds of thinking, Liara nodded, cautiously at first, but then very much convinced. &quot;I can definitely do that, Shepard. He should not expect such an approach, and even if he does, from what Wrex has told me, I think I am the stronger biotic, at least in terms of peak performance. With the amount of...enhancements he has and how advanced they seem to be, I am afraid that he would probably wear me out quite easily in a prolonged fight, but that is not what we are talking about here. I am confident that this plan will work, Commander.&quot;</p>
+        <p>Shepard stared on the floor, contemplating what had been said, and any information she might have not considered. But there was none. Their plan was as good as it was going to get. She raised her head and shared one deep look into the eyes with each and every one of the people who had spent the last months going through the fire with her, and who would now do so one last time. All together.</p>
+        <p>&quot;Good. We have a simple plan, that means not much can go wrong.&quot; Smirking slightly at her own unintentional optimism, she did not miss a beat continuing. &quot;You all know your job. We all know what&#x27;s at stake. I have complete faith in the character and abilities of each and every one of you.&quot; Backs straightened at these words, determination written in every face, even Tali&#x27;s, as the eyes behind her visor seemed to glare with renewed intensity. &quot;Now let&#x27;s go down there and end this. We&#x27;re all mounted up and ready to drop in fifteen. Pressly, you have the ship. Eliminate the dropships before engaging ground targets at your tactial discretion, then slip away to harass their ships, keep them busy. I&#x27;d rather not get blown to atoms by their frigates. Dismissed, everyone.&quot;</p>
+        <p>Jane remained standing still as everyone else got up and filed out of the room, allowing herself a couple of seconds of pause. Searching her interior, she found that she was calm. They were ready for this. They would prevail.</p>
+        <p>…...</p>
+        <p>Wrex found himself transported back in time, back to the days of his youth, fighting in the late stages of the rebellion. The thunder of the Normandy&#x27;s main guns was almost deafening even with his helmet&#x27;s inbuilt hearing protection, reminding him of the turian artillery that had shelled him and his fellow Krogan so often back then. He had to say, it was enjoyable to be on the giving end of it for a change. By the time the Mako had dropped and he could get a glimpse at the outside situation by peaking over William&#x27;s head and Shepard&#x27;s shoulders, the Normandy had already laid waste to their enemies extensively, the long quiet of the ancient city they were dropping in violently disrupted by the discharges of weaponry, the fiery roars of burning Geth dropships and the shrill death shrieks of their ground troops. It was impossible to try and tell how many Geth the scattered metal remains had originally belonged to. There were enough of them left, though. The Turian was taking a toll on them with the coaxial machine gun, mowing down half a dozen before the scattered synthetics could take any sort of effective cover. A heavy impact rocked the Mako, but before Tali had even finished reporting the damage to their shields, the mighty guns of the frigate above them roared again, and the colossus that had picked on them was simply gone, a smoking crater left were it had stood. A predatory grin wormed its way on Wrex&#x27; face. This was glorious.</p>
+        <p>Pressly&#x27;s voice crackled over the comm. &quot;Ground team, Normandy. We have to break off. Good hunting and out.&quot;</p>
+        <p>Shepard&#x27;s reply was equally short; the plan was set, there was nothing to talk about. &quot;Copy that, Normandy. Ground team out.&quot;</p>
+        <p>Before any kind of question about what their next step should be could come up, the Commander had already hit the gas full stop. The Mako lurched forward, ignoring the disorganized fire from the still reeling enemy while the Turian continued to annihilate the few survivors of their initial onslaught, and Wrex finally took a second to actually analyze their surroundings. They had landed on a long, broad clearing between overgrown, half collapsed buildings of impressive magnitude. Judging by what he had seen on Feros, they were undoubtedly Prothean, just as Liara had said. Aeons before, this place might have been a grand avenue; it certainly lead to what appeared to be the biggest building in the entire place and at it&#x27;s foundation, the entrance to a cavernous tunnel. Before it, there were more Geth, and they appeared to be taking up defensive positions. It was still hundreds of meters away, but even from here he could make out the distinct silhouettes of at least two Geth armatures. There was bound to be infantry, too. He smiled again. There would be a proper fight.</p>
+        <p>Just a half a minute later, his wish was granted, as Shepard brought the Mako to a halt next to a heap of rubble from a big building to the left of the road, roughly fifty meters in front of the Geth&#x27;s positions. The synthetics were set up in some sort of ditch that might have been a canal ages ago, but had not had time to produce any proper fortifications, though they had deployed a good amount of their portable kinetic barrier generators to provide themselves with additional cover. And there was no shortage of rocket launchers and other heavy weapons amongst them. Not a good situation for their vehicle to be in, as sturdy as it was, and Shepard knew it. &quot;Ashley, take the wheel and back off! Give us fire support! The rest, with me!&quot; Wrex opened the hatches and Shepard jumped out of the Mako&#x27;s back, Tali hot on her heels. Liara was about to follow, but Wrex stopped her. The Asari had a quad, but she was soft. He was not. He&#x27;d go first. By that logic he should&#x27;ve stopped Tali too, of course, but he wasn&#x27;t going to get shot in the face by a lovesick Quarian today, and her boosted shields could probably take it anyway. In seconds, the stone and mud around them was peppered with bullets, though they could not hear it over the noise of the coaxial machine gun still going strong behind them, ripping into the Geth even as the armored personnel carrier reversed it the hell out of there. One Armature was down, the other kept up the fire on the Mako supported by the rocket troopers, while the basic platforms had shifted their fire onto their squad.</p>
+        <p>Almost platoon strength. Should be fun.</p>
+        <p>They were lying low against their side of the heap, Shepard peaking out of cover as Geth bullets filled the air around them. After about one and a half second, she pulled it back and turned to them. Behind her, the remaining Geth walker&#x27;s shields finally failed as another shot from the Mako&#x27;s 155 mm cannon slammed into them, going straight through and penetrating the machine itself, leaving only a tiny hole on the entry side, but blowing out half of its mechanical entrails out the other. It&#x27;s headlight dying immediately, the construct went limp and slumped to the ground. William&#x27;s voice filled the squad channel.</p>
+        <p>&quot;Skipper, we&#x27;ve taken out both enemy vehicles, but shields are gone. Moving into cover for now. No significant enemy forces on the scanners other than those in front of you. Over.&quot;</p>
+        <p>&quot;Copy, Ash. Stay in cover and get those shields back online, we&#x27;ll handle this ourselves.&quot; ,Shepard answered, and returned her attention to them, utilizing the comm channel to speak to them over the noise of the still incoming Geth fire. &quot;We will break into their position from the left flank. Wrex, on my command ,you deploy your smoke grenade forty meters in this &quot; , she gestured towards the Geth detachment&#x27;s left wing with her hand , &quot;direction. I deploy smoke against their center. Liara, take another one. Use your biotics to get it over to their right flank. Tali, you take the last one. Just throw it out directly in front of us.&quot;</p>
+        <p>They quickly distributed the equipment, Wrex handing one of the devices over to Liara, who was still behind him, and the commander giving one to Tali. Shepard activated the comm again.</p>
+        <p>&quot;Ash! On my command, come out, one sweep at their positions with the machine gun, left to right, one shot of the main cannon into their rightmost positions, then pop back into cover, Copy?&quot;</p>
+        <p>&quot;Copy, Skipper. Ready on your command.&quot;</p>
+        <p>&quot;Do it now!&quot; the Commander yelled, both at Williams and them, and so they rose from cover to throw the smoke grenades as close to the Geth as they could, with the exception of Tali. There was barely any opposition to this act as the Mako had successfully kept most of the combat platforms pinned down, only the Rocket Troopers defiantly returning fire against the armored vehicle.</p>
+        <p>They waited a couple of seconds for the smoke to deploy, Shepard peeking over cover again to assess their work. Wrex knew that some Geth had heat based optics, but they would not be able to pick them out through the hot smoke, and so any attempt to stop them would be random spraying. Not something handheld weapons could keep up for any length of time.</p>
+        <p>&quot;Now!&quot;</p>
+        <p>Finally.</p>
+        <p>Wrex exploded out of cover and stormed forward. In front of him, Shepard and Tali did the same. They burst through the first of the clouds they had produced out into the open. Their grenades hat landed well, but not all the Geth were blinded, and so their shields came under some amount of fire, but they pressed on. He started to roar. He felt the familiar high settling in. He&#x27;d show these overgrown flashlights what a battlemaster was! His legs carried him even faster, making him overtake Shepard as Wrex changed his trajectory towards the right. He would be the rock in front of his krannt, the one who&#x27;d take the brunt of the onslaught. The others could clean up after him.</p>
+        <p>Four seconds later and they broke into the smoke in front of the Geth&#x27;s leftward positions. Before he was through himself, he could already hear the bark of a shotgun. On her proportionally bigger and stronger legs, Tali had made it first and was getting to work. He payed her no heed; Shepard and the Quarian were a well oiled machine, and Liara was directly behind them. They would not need babysitting. So he would get to focus on having some fun on his own. A low chuckle escaped his throat at the thought, and then he was there.</p>
+        <p>The Krogan burst through a hexagonal kinetic barrier, barreling into the Geth platform behind it, knocking it to the ground. Taking a step forward and crushing the pathetic thing&#x27;s head under his heel, he scanned his surroundings in an instant.</p>
+        <p>Three left, basic platforms, pathetic. Two right. Center...shock trooper.</p>
+        <p>He blew the shock trooper into bits with the Carnage shot he had prepared back in cover; nothing like two rounds of buckshot for the price of one. Except slugs, of course.</p>
+        <p>Shields down.</p>
+        <p>The gun was too hot to return fire without overheating and would be so for another couple of seconds yet,so instead he charged left, ignoring the clatter of rifle rounds upon his thick armor, and headbutted one of the enemies there into a mess of bent metal and shattered glass before backhanding the one next to it with his weapon. He felt a hit actually penetrate his armor and bite into his hump.</p>
+        <p>Troopers couldn&#x27;t have done that.</p>
+        <p>The third one stood a couple of paces further back, so he just shot it in the face.</p>
+        <p>What else is behind me?</p>
+        <p>He whirled around and scanned the battlefield for this new foe. He did not have to look for long. A Geth destroyer, armed with a high calibre weapon, had emerged from behind a large rock and came storming towards him. Wrex roared in approval.</p>
+        <p>Finally, a real opponent!</p>
+        <p>The synthetic shot him again, but Wrex deflected the attack with a biotic barrier, choosing to not return fire yet. It would merely bring down the shields anyway. Instead, he lurched forward to meet his enemies charge. They crashed into each other with a force that would squished any other combatant on the field right then and there, coming to a halt as no clear winner emerged. Wrex regained his balance first and grabbed the thing&#x27;s gun, holding it away from him, while bringing up his own and shooting the Geth into the chest point blank, from just inches away; deep inside it&#x27;s shields. He had loaded a solid slug, too. At this range, it penetrated the armor like butter and tore the platform&#x27;s insides completely apart. The destroyer collapsed to the ground, and Wrex scoffed, disappointed.</p>
+        <p>Too easy.</p>
+        <p>He made a step towards the remaining two enemies, but he needn&#x27;t have bothered. They were blown to pieces by his three companions, who rushed to his side now, having annihilated everything behind him as expected. The old Krogan bellowed in mock-offense. &quot;Hey! Those belonged to me!&quot; Shepard laid a hand on his right pauldron.</p>
+        <p>&quot;Easy there, big guy. There&#x27;s enough for everyone.&quot; The joke and the smile accompanying it, even if one could only see the woman&#x27;s eyes, seemed genuine enough. Wrex grinned under his helmet.</p>
+        <p>Shepard&#x27;s making quips? Rare enough. Perhaps the girl is finally learning to enjoy doing what she&#x27;s good at.</p>
+        <p>Out loud, he said : &quot;Maybe, but these flashlights just can&#x27;t fight. Let&#x27;s get this over with before Saren gets away.&quot;</p>
+        <p>Surprisingly, it was Liara who spoke. Usually, she was quiet in battle, speaking only when spoken to or to call out an observation. &quot;Agreed. Let&#x27;s proceed.&quot; They proceeded.</p>
+        <p>…...</p>
+        <p>Darkness. Muffled sounds. Pain.</p>
+        <p>Ugh...what? Spirits...</p>
+        <p>&quot;Garrus! Wake up!&quot;</p>
+        <p>His eyes shot open, his vision blurry at first, but after blinking a couple of times he could see clearly again. Ashley&#x27;s face was hovering directly in front of his. He felt her hand pat his left mandible.</p>
+        <p>&quot;There you are. You okay?&quot;</p>
+        <p>He groaned. Every muscle and bone in his body ached. He was most certainly not okay.</p>
+        <p>&quot;I&#x27;m fine. Did it work?&quot;</p>
+        <p>&quot;Yes. We&#x27;re on the presidium. Come on, get out of that chair.&quot;</p>
+        <p>With her help, Garrus heaved himself out of the gunner seat and took the sniper rifle from his back, letting it drop its weight into his left as it unfolded itself, the familiar weight a reassuring feeling amidst the chaotic situation he found himself in as he stepped out of the Mako&#x27;s hatch. They were the last two, the rest of the team had already formed up and orientated themselves. Shepard noticed them and hurried over. &quot;Good morning. You alright?&quot; He just nodded. &quot;Good. You&#x27;ve got our six. Ash, you&#x27;re left flank. Move it.&quot;</p>
+        <p>The group fell into a jog, not the most safe way to traverse a combat situation usually, but there was no time. Saren was still ahead of them, and if they were too late, all would be lost. They got lucky however, reaching the elevator to the council chambers without meeting any resistance. As they filed inside, Garrus&#x27;s mind raced. Should it really turn out to be this easy?</p>
+        <p>Of course it did not. They were only about three quarters up when the elevator stooped, and so they had to break out of it and make the rest of the way on foot, scurrying up the side of the tower. Even though they were in space now, and it was not gravity, but magboots that kept them on the &quot;ground&quot;, it felt much like fighting on a normal surface – until one looked up and noticed the gigantic, imposing form that loomed above them.</p>
+        <p>Sovereign.</p>
+        <p>It really was a magnificent and terrifying sight at the same time. But there was no time to ponder it. Their advance up the exterior of the Citadel tower was met with heavy resistance by the Geth; they kept them on their toes every step of the way. But ultimately, the synthetics were simply outmatched. Shepard was both a fighter and a leader extraordinaire, the combination of talents in this one woman simply without peer. Liara was powerful even for an Asari. Tali was a menace with her shotgun and her omnitool in equal measure. Williams had always been a disciplined, reliable soldier, but now she fought with a cold, bitter hatred that lent her every movement purpose and precision, and Garrus himself had been among the better sharpshooters of the turian military back in the day. Wrex was Wrex.</p>
+        <p>In short, the uppity desk lamps didn&#x27;t stand a chance, and soon enough they were back in the council chamber, the place were only days prior they had been stabbed in the back. Garrus bristled at the thought, but immediately regained his composure. This was not a time to be unprofessional.</p>
+        <p>A futile last stand by half a dozen basic Geth platforms was swept aside without even bothering to slow down. There was no time for caution. They stormed up the stairs towards the audience dais, Shepard in the lead, and there was Saren. The traitorous Spectre turned around from the console he had been working on just as they gained a direct line of sight. Garrus did not think, he just brought up his rifle and lined up a shot, but before he could fire, Saren had already jumped off the ledge.</p>
+        <p>What?</p>
+        <p>A low humm emerged from below the console, and Saren was back, again on that damnable discoid hovercraft of his, hurling a grenade towards their center. The team slid into cover, Shepard and Tali in the middle having to jump for their lives, but making it out unscathed none the less. Garrus was on the verge of opening fire, but then their enemy spoke.</p>
+        <p>&quot;Shepard! I was afraid you wouldn&#x27;t make it in time.&quot;</p>
+        <p>Garrus glanced over to his commander, who, scowling, answered: &quot;In time for what?&quot;</p>
+        <p>&quot;The final confrontation. I think we both expected it would end like this. You&#x27;ve lost, you know that don&#x27;t you? In a few minutes, Sovereign will have full control of the Citadel...&quot;</p>
+        <p>Garrus stopped paying attention to the traitor&#x27;s monologue, and watched Shepard rolling her eyes instead, as the squad channel came alive. &quot;We don&#x27;t have time for this idiot. Kill him!&quot;</p>
+        <p>&quot;...relay will open. The Reapers will-&quot;</p>
+        <p>Saren was cut off by the sound of three assault rifles, two shotguns and Liara&#x27;s submachine gun opening up on him. The Turian&#x27;s reaction to that was downright arrogant, as he, completely unperturbed by the pointless assault on his shields, returned fire with his heavy pistol in the lazy manner of a man relaxing on a shooting range. Wrex paused his fire to assault the Turian with a biotic push, which he deflected with his own biotics – and that was Liara&#x27;s cue to strike. Her body lighting up in azure so bright that Garrus&#x27; helmet&#x27;s dimmers activated, she yanked Saren&#x27;s hovercraft out from under him and slammed it into the wall so hard it left a dent and broke into pieces. Howling with surprise and anger, the traitor fell to the petitioner&#x27;s ledge. He landed on all fours and exploded into action, returning fire accurately and fast now while frantically scanning the scene for an avenue of escape or attack, but it was over. Under the combined gunfire of all six of them, with Tali mixing in a shield overload from her omnitool for good measure, his shields collapsed in less than two seconds, and then it was a scene like from a corny action vid as Saren was rocked by countless bullets piercing him. Stumbling backwards towards the edge, the Turian dropped his gun. With immense satisfaction, Garrus peaked through the scope of his marksman rifle, his assault rifle lying overheated on the ground, and placed the last shot of the fight straight through the bastard&#x27;s skull, and watched as it was yanked backwards violently, taking the rest of the already dead body with it over the edge and unto the ceiling of the small conservatory beneath the dais, which was smashed into countless shards and did nothing to slow Saren&#x27;s corpse&#x27;s fall.</p>
+        <p>Hastily, he rushed to the edge to confirm the kill, but he need not have worried. The traitor lay in a pool of his own blood and brains. Garrus allowed himself a smirk. They had won.</p>
+        <p>&quot;Well, I didn&#x27;t get to say a poignant one-liner, but our glorious leader had that covered, even though Saren did not actually hear it, and I got to shoot the bastard between the eyes in the end. All in all, I&#x27;d say today was a good day. &quot;</p>
+        <p>A deep scoff came from his right as Wrex moved up and stood next to him, joining him in looking down at their dead foe. &quot;Well, that plan worked out pretty well. I was hoping for a fight, that was an execution. Not that he didn&#x27;t deserve it, but still. It&#x27;s...disappointing.&quot;</p>
+        <p>Garrus laughed and shook his head. &quot;You crazy old bastard!&quot;</p>
+        <p>Meanwhile, Shepard paid no head to her friends quips. Liara and Tali at her sides, she rushed up to the central console, readying the disc she had received from Vigil.</p>
+        <p>…...</p>
+        <p>Override accepted.</p>
+        <p>The simple, short line on the display in front of her electrified her like nothing had in years. &quot;It&#x27;s working! Hah!&quot; Relief washed over her so overwhelmingly she could not contain a burst of laughter, but she soon controlled herself and got back to the task at hand. &quot;Alright, now how do we open this...&quot;. Liara and Tali were pouring over the console together with her while the other three members of the team had set up a perimeter to ward off any Geth stragglers that might try to disturb them. Unsurprisingly, it was the Quarian who found the needle in the virtual haystack first.</p>
+        <p>&quot;Here! That&#x27;s it!&quot;</p>
+        <p>Not waiting for Shepard to pick up just what she meant with &#x27;Here&#x27; , she reached across the console, gently yet firmly pushing Jane&#x27;s hands out of the way, and started going to work. After just a couple of seconds, an almighty metallic groanshook the entire station as the arms of the Citadel started to open up. Looking up to the spectacle, Jane couldn&#x27;t help but smile even though the dark figure of Sovereign was still taking up most of what she could see.</p>
+        <p>Time to die, you son of a whore. The rudimentary creatures are about to tear you a new one.</p>
+        <p>Liara snapped Shepard out of her glee. &quot;Tali, see if you can set up a communications channel!&quot;. The Quarian obliged, and just seconds later, Shepard heard the comm chatter of the raging battle outside.</p>
+        <p>&quot;This is the Destiny Ascension! The council is on board, I repeat the council is on board. Shields down to 40%. Taking heavy fire! We need immediate relief! This is the...-&quot;</p>
+        <p>A familiar voice cut through.</p>
+        <p>&quot;Normandy to Citadel! Commander! Tell me that is you on the other end!&quot;</p>
+        <p>After talking to Vigil, they had instructed the Normandy to make for the Alliance 5th fleet under Hackett as quick as possible to warn them. It appeared they had managed to get there in time.</p>
+        <p>&quot;Joker! I&#x27;m in control of the Citadel! The arms are opening right now! Saren&#x27;s dead, but Sovereign is inside the Citadel! We need to kill it before it&#x27;s too late!&quot;</p>
+        <p>&quot;Aye Ma&#x27;am! I&#x27;m sitting here in the Andura sector with the entire Arcturus fleet, but that bastard closed the mass relays. You need to open them or we can&#x27;t do shit!&quot;</p>
+        <p>&quot;Copy, stand by Normandy.&quot;</p>
+        <p>Her eyes flew across the display now, but Tali beat her to it again.</p>
+        <p>&quot;That did it Commander! Here comes the cavalry!&quot;</p>
+        <p>Finally, Shepard could allow herself to step back and release some of the tension from her body as the lavender backdrop of the Widow Nebula was contrasted by the lightning of the three hundred eighty five ships strong 5th fleet exiting the nearby mass relay. It was out of her hands now. Her relaxation didn&#x27;t last long though, as the deep voice of a certain Krogan cut through it.</p>
+        <p>&quot;What the hell...?&quot;</p>
+        <p>She followed Wrex&#x27; eyes and saw a sickly red light coming from below. Wary of what on earth she was about to see now, she stepped to the edge and looked upon the most disturbing thing she had ever seen.</p>
+        <p>…...</p>
+        <p>Tali watched in disgust as Saren was transformed before their eyes. Red lightning streaked across his body, as the dead Turian – he was dead, dead, how was this possible!? - screamed. His screams were unlike anything she had ever heard, an earsplitting wail of agony as Saren&#x27;s skin and flesh melted away, revealing the unbelievable amount of cybernetics underneath.</p>
+        <p>He- he&#x27;s a machine!</p>
+        <p>Her disgust turned into terror as the six of them watched the thing that once was Saren bend and grow, protruding fearsome claws and somehow getting larger than the Turian had been in life. Then it looked at them through malicious, glowing eyes and somehow, spoke.</p>
+        <p>I AM SOVEREIGN, AND THIS STATION IS MINE.</p>
+        <p>Before the group managed to shake their shock off, the abomination had already crawled halfway up the wall from the conservatory back into the council chamber. Shepard regained her senses first.</p>
+        <p>&quot;Move! Spread out!&quot;</p>
+        <p>They scrambled to follow the order, but Sovereign was already among them. It swung itself over the edge and onto the stairs that led to the petitioners ledge, landing just meters apart from Ashley who had stayed back during the entire ordeal. The gunnery chief did not miss a beat and fired full-auto directly into the abomination&#x27;s chest from point blank range, but to little avail. A biotic push from Liara briefly brought Sovereign off balance, but only for a moment, and so it attacked Ashley before she even had the chance to overheat her gun into it. A single strike from the beasts talons saw the gun she had raised to defend herself a mangled mess, and the backhand swipe flung her across the room. Peppered with a continuous stream of bullets from Shepard&#x27;s assault rifle, Sovereign whirled around with frightening speed and leaped again, this time directly towards Liara and Garrus who had turned left after getting off the ledge. The Turian managed to get a shot off with his sniper rifle that struck the thing&#x27;s head mid-flight, and that actually impacted it enough for him to manage to evade it&#x27;s assault. By the time Sovereign had reversed it&#x27;s momentum, Garrus had already took aim and fired again, missing it&#x27;s head and striking the left shoulder instead. The armor-piercing round buried itself in the synthetic tissue and sparks flew along the beasts arm, but the Turian paid for his success by not getting away this time. Sovereign fired a blast of focused energy at him that collapsed his shields immediately and , exploding on impact, charred his armor, knocking Garrus back over the large flowerpot he had stood next to. Turning around to Liara, something finally did not go it&#x27;s way though. The Asari lit up with biotic glow again as she lifted the synthetic monstrosity in front of her several meters off the ground before slamming it back to the floor, head first. It did not have the desired effect. It took Sovereign less than a second to collect itself before it took two quick steps towards it&#x27;s assailant and, shrugging off her desperate shots, took her out of the fight with a single swing that tore open her armor and sent a fountain of blue blood through the air and Liara tumbling to the ground, clutching her intestines as they fell out of her opened belly.</p>
+        <p>Tali herself had been firing her pistol frantically throughout all this while scrambling to cover behind the railing of the stairs, where their enemy had so far ignored her, but it appeared her luck had run out. Ignoring the roaring Krogan charging it, Sovereign aimed it&#x27;s next shot for her, which smashed her cover and exploded on impact. The kinetic energy from this knocked her to the floor with enough force to daze her through her helmet. Blinking to refocus her blurry vision, she looked up, and saw her death.</p>
+        <p>The thing that had once been Saren loomed over her mid-flight as the world slowed down. It&#x27;s talons were outstretched towards her, ready to tear her to pieces.</p>
+        <p>Thank the ancestors I made sure the Geth data would reach father no matter what.</p>
+        <p>Wrex roared angrily, but Sovereign had completely juked him. He could not save her.</p>
+        <p>Should&#x27;ve told Jane.</p>
+        <p>Somehow, the mental image of Jane, Wrex, her father, auntie Raan and her little brother standing in some cargo bay, watching her body float out into space, jolted her out of her daze.</p>
+        <p>Dammit, I&#x27;m not dying here!</p>
+        <p>She tucked in her legs to reach for her knife. She would never have made it in time; but in the last moment, Sovereign was tackled by a black blur.</p>
+        <p>Jane!</p>
+        <p>Tali watched in anguish as her captain went toe to toe with the monstrosity. She had always known Shepard was good at hand to hand,but what she was witnessing now seemed to defy the laws of physics. Shepard bobbed and weaved against attacks that should&#x27;ve been too fast, and even managed to hit the thing herself with her signature machete, boots, and even her bare left fist.</p>
+        <p>She can&#x27;t keep this up.</p>
+        <p>Not having a clear shot, she watched helplessly as most of Jane&#x27;s attacks glanced harmlessly off of Sovereign&#x27;s synthetic, largely armored body for a couple of seconds, only the machete being able to at least scratch it, and even open up Sovereign&#x27;s neck, though it seemed to have no immediate effect. Just as it looked as if the human&#x27;s luck had finally run out, a three-fingered hand adorned with unnaturally long and sharp claws coming down to punish her for losing her balance after that last cut, Wrex finally connected with the abomination that had done it&#x27;s best to avoid him so far. The sight was nothing short of cathartic. The old Krogan tore into Sovereign with a howl of rage, sending it to the floor with a headbutt. When it tried to charge up one of it&#x27;s blasts, he stomped down on it&#x27;s face, visibly denting the skull. It&#x27;s attempt to tear Wrex&#x27;s gut open with it&#x27;s left arm was met by a brutal armlock that broke Sovereign&#x27;s left elbow backwards, the arm slouching uselessly to the floor. But the thing was not done.</p>
+        <p>Having deflected the left arm with both of his, Wrex found himself impaled by the talons of the right one. Bellowing in anger and pain, he kicked the thing again, but the shock from the grievous injury slowed and weakened his movements just slightly enough to allow Sovereign to get one of its legs underneath Wrex&#x27;s perineum and push him off, the Krogan&#x27;s hump impacting the council chamber&#x27;s floor with a loud thud as the beast got up on its feet, towering over him. Jane had gotten back up and fired her heavy pistol, as did Tali, having a clear shot again. Together, they annoyed it enough for it to turn around and fire another blast. Jane evaded it barely, but the explosion it caused when it smashed into the wall behind her sent her sprawling to the floor, hitting her head, and Sovereign turned back to the old Krogan who was still struggling to get back up after having been stabbed deep in the gut in no less than three places. Using it&#x27;s weakened left arm and one of it&#x27;s legs to hold him down, it raised it&#x27;s right hand to finish the job.</p>
+        <p>NO!</p>
+        <p>With a snarl of a viciousness she had not known she possessed, Tali quickly closed the distance and launched herself towards the bosh&#x27;tet that had come to kill them all. She had only been a few meters behind it and her knife had already been in her hand, so she managed to land on its back and bury her knife in its spinal column before it could do anything of substance to Wrex, who was still struggling mightily. Sovereign whirled around, but the Quarian on it&#x27;s back held on, seeing Shepard get up on her feet shakily for a short moment before the beast she was hanging onto had completed a full three-sixty. Yanking out her knife and driving it back in immediately, she noticed that it&#x27;s movements were getting slower. Before she could strike again though, she felt herself gripped at her right shoulder. Screaming in pain as the claws bit through her suit and deep into her flesh, she was thrown off violently. Managing barely to stabilize herself with her long toes and her good arm after crashing into the floor with her thorax and rolling a couple of paces, she could see Wrex and Jane engaging the monstrosity once more.</p>
+        <p>It&#x27;s too tough. We can&#x27;t beat it like this.</p>
+        <p>A loud boom thundered through the chamber, and Sovereign flinched as part of it&#x27;s right shoulder was torn off. Tali snapped around to the source of the familiar sound to see Garrus, leaning heavily on one of the small trees that adorned the council chamber, rifle in hand. The Turian&#x27;s armor was a black mess and he had a bleeding wound on his face, but he exuded pure determination.</p>
+        <p>She turned back to the brawl to see that Garrus&#x27; marksmanship had not made a notable difference. Wrex was slowing, and while Shepard fought tenaciously as ever, her movements lacked their usual precision. That fall on her head had obviously rattled her badly. Right now she was holding down Sovereign&#x27;s good arm while kicking the beasts torso as Wrex worked on bludgeoning it&#x27;s head with a metal rod he had picked up from the wreckage of Tali&#x27;s former cover. But even under this vicious assault, the machine did not let up. It rammed a knee into Shepard&#x27;s bottom so hard she was knocked off it entirely and landed one and a half meters away, then it used its newfound freedom to deflect Wrex&#x27;s next strike, taking the pipe from him and forcing him to back off to avoid a vicious flurry of swipes.</p>
+        <p>We need something else.</p>
+        <p>The sight of Jane and Wrex under pressure caused a cold knot to form around her heart, and somehow she found the strength to get up despite the protest of her brutalized shoulder and aching ribs. Lurching forward on her strong legs once more, her thoughts worked feverishly, trying to come up with a solution. And then it hit her. She jumped off the ground, groaning in pain from the act, and activated her omnitool. With Wrex and Sovereign locked in a stalemate the Krogan was losing only very slowly, she closed the distance with a speed only a Quarian or Turian could muster and latched onto the abomination&#x27;s back once more, but this time she had a goal. Firing up the custom made attack routine she had written specifically for this fight, even though she had not realized at the time just how synthetic the target would be , she buried her left hand in the large gash on Sovereign&#x27;s neck that Jane had opened with her blade. Just as Wrex , who had been surprised by the claws on formerly- Saren&#x27;s right foot opening up his leg from top to bottom, slumped to the ground with a groan of pain and Sovereign whirled around, throwing off the effectively one-armed Quarian with ease, her attack connected at the last moment. As Tali flew across the room once more, she heard the earsplitting shriek of Sovereign as excess energy erupted across it&#x27;s whole body and it fell to the ground, immobilized by a violent spasm.</p>
+        <p>When Tali managed to return her field of view to their enemy a couple of seconds later, Jane was standing over it&#x27;s still spasming body, a primed grenade in her fist. Punching through the sliced up, relatively soft tissue above Sovereign&#x27;s sternum, she buried the explosive in it&#x27;s chest before jumping back and taking cover behind a waist high wall as Tali felt herself picked up by strong arms. It was Wrex. He threw her over his shoulder and limped to cover, as Jane&#x27;s voice sounded across the hall, laced in rage like Tali had rarely heard it from her.</p>
+        <p>&quot;Fucking die, asshole!&quot;</p>
+        <p>She&#x27;s never been very eloquent when she is angry.</p>
+        <p>The explosion that came after that was the sweetest sound Tali had heard in her entire life. With Wrex gently propping her up against the wall, she closed her eyes for a second, slumping against the cool stone, just to jolt back in pain as her torn up shoulder touched the surface, hurting twice as bad as it had before now that the adrenaline was beginning to wear off. The pain brought tears to her eyes, and she realized she was shaking; the blood loss appeared to be considerable. Feeling panic rise in her stomach, she forced herself to remain calm and reached for her medigel pouch. The suits internal application was clearly not doing it. Before she could get it, Jane was already at her side.</p>
+        <p>&quot;Careful. You&#x27;re still bleeding. Don&#x27;t move, I&#x27;ll take care of it.&quot; She quickly applied medigel to the wounds on Tali&#x27;s shoulder, briefly inspecting them as she did so. A worried frown found the way onto her face. &quot;Jesus, they are deep. Didn&#x27;t nick an artery it seems, thank god, but...&quot;she looked her in the eye,&quot;what about infection? That&#x27;s a suit breach if I&#x27;ve ever seen one.&quot;</p>
+        <p>She answered through gritted teeth. &quot;I&#x27;s...ah...alright. The suit has...administered...antibiotics and immunoboosters. I&#x27;ll need...nnngggrrr...medical attention or I&#x27;m in trouble...but...I won&#x27;t die in the next hour or anything like that.&quot;</p>
+        <p>She could see in Shepard&#x27;s face that her talk of dying was not what the commander had wanted to hear, but Shepard was in Commander mode. After laying her hand on Tali&#x27;s left shoulder for a second to give her a reassuring squeeze, she just nodded curtly and got up, keeping eye contact. &quot;We&#x27;ll get you there asap. Medigel&#x27;s anaesthetic effect should kick in any second. Just hold still, I&#x27;ll go looking after the others.&quot;</p>
+        <p>And so she hurried on. Following Shepard with her gaze, Tali could see Wrex helping Ashley up, who had lost her helmet and seemed to be barely conscious, while Garrus kneeled at Liara&#x27;s side, working on her stomach. The amount of blood that had pooled around the Asari&#x27;s body sent a chill down Tali&#x27;s spine, and she found herself sending a quick prayer to the ancestors she wasn&#x27;t even sure she believed in. Then she lost sight of Liara as Shepard rushed to help Garrus, blocking her line of sight.</p>
+        <p>As the pain in her shoulder began to ease into a hot throb rather than the searing agony of before thanks to the medigel, Tali rested her head against the wall and closed her eyes listening to the comm chatter of the battle outside. Apparently, Sovereign&#x27;s shields had failed, and the Alliance was blowing the bosh&#x27;tet to hell and gone with everything they had. The Geth were mostly destroyed, the scattered survivors trying to flee to the relay. Even the Destiny Ascension had been saved. Finally, wild cheering filled the channels as Sovereign was torn apart and any semblance of comm discipline died on the spot. She smiled. They had won.</p>
+        <p>Her smile died very quickly when just seconds later the sound of crashed glass, smashed stone and bent metal filled the room. By the time her eyes had opened in shock, the rubble was already coming down.</p>
+    </div>
+</body>
+</html>

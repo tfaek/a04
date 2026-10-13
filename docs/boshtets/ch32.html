@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 32</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch31.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html" selected>Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch33.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 32</h1>
+    <div class="chapter-content">
+        <p>Tali crept through the undergrowth of the grove. Halfway back from the spot where she had parted with Garrus, she had come to her senses and slowed down, making sure to stick to cover and move as concealed as possible, using the light vegetation to her advantage. This had taken additional time, but soon proven the right call – and a vital one at that. In the spot where Tali had left Jane and Ashley behind, she had almost stumbled into an entire squad of Blue Suns. With the position abandoned, Tali had elected to follow the mercenaries – she was pretty much lost after all. Thanking the ancestors for the dusk that had fallen and was darkening the scene at a remarkable pace, she had followed them at a distance of initially about a hundred meters, but that had quickly increased – the mercenaries had been moving fast, while Tali, the shooting having at least temporarily stopped, had to move carefully in order to not make any noise that may betray her presence. Then the firing had broken out again and she had no longer been able to help herself, rushing forward and into the woods they had disappeared into. In here, even with her quarian eyes providing her with vision on par with any low-light equipment these mercenaries&#x27; helmets might have, she had found herself unable to see more than a few meters due to the heavy growth of trees and bushes, and so she was forced to move more slowly, cursing inwardly. Something was happening up ahead. Jane was in danger, she could hear it; shots were being traded. Jane and Ashley had obviously still not lost their pursuers. And she was stuck here crawling through he mud like some animal. Finally, she reached what she now realized was the treeline on the other end – this wasn&#x27;t the forest, this was just a grove, and there was an open field in front of her now that she could not step on without being spotted immediately. Especially not since it was crawling with dozens of Blue Suns, the largest group of them standing on a ridge about a hundred meters away.</p>
+        <p>A shot rang out in the distance, and Tali flinched. Fear gripped her heart with ice cold fingers.</p>
+        <p>What&#x27;s going on!?</p>
+        <p>Whatever had happened could not have been good, as the mercenaries started turning and coming in her direction; the direction they had come from, that was. Scrambling, Tali pulled back into the shadows; by now, night had fallen.</p>
+        <p>I can&#x27;t get away. I need to hide.</p>
+        <p>Trembling, she crawled into a large bush. Mere seconds later, the little forest was filled with the sound of leaves rustling and small branches on the ground breaking under the boots of dozens of armored men and women of different species. For once, Tali was thankful for her suit – she was certain that without it, her breath would have alerted any being in the proximity to her presence. But as it was, after a terrifying minute of seeing enemies who would kill her on sight pass in front of her and hearing more of them walking by mere meters behind her back as she dared not to move, the noise slowly died down as they walked further and further away, ,until she was alone again, sitting in what for other species would have been almost complete darkness, but for her was merely shades of grey.</p>
+        <p>Jane! Ashley!</p>
+        <p>The thought of what might have happened filled her with dread and finally overwhelmed the fear that was nailing her to the spot, and so she got up and, first slowly then faster, her growing concern for her friends overriding her caution, hurried over to the treeline and pushed herself through, branches clawing at her suit and realk. She stepped out onto the open field, color returning to her vision thanks to the moonlight, but her gaze was fixed on the ridge ahead. Whatever had happened here, it had been up there. She picked up the pace, soon sprinting; straining to get there as quickly as possible, even though the fear of what she might find was making her sick.</p>
+        <p>When Tali finally reached the spot, it took her a couple of seconds to notice what she was looking for, but when she did, it confirmed her worst fears. Ashley was lying still on the ground. Tali wanted to rush to her friend&#x27;s side, but something stopped her; slowly, she stepped closer. Coming around, she could now see the human&#x27;s face. She gasped. A dark hole was gaping in between Ashley&#x27;s empty eyes staring off into the distance.</p>
+        <p>Her knees gave out and she dropped down on her hands next to the body of the woman she had come to appreciate like a sister. She retched and tasted stomach acid, keeping it in her mouth and gulping it down again purely by reflex ingrained by well over a decade of life within the suit.</p>
+        <p>They&#x27;re dead.</p>
+        <p>The world seemed to sway under her feet as she pushed herself back up, stumbling away from Ashley. She stared out into the open field, across the forested hills of this ancestors -forsaken world.</p>
+        <p>I abandoned them. I should&#x27;ve been there.</p>
+        <p>Tali turned her head, searching for something without being sure what it was.</p>
+        <p>Then I&#x27;d be dead too. And we had to take Liara away. Jane wanted it that way.</p>
+        <p>Tears she hadn&#x27;t even noticed were streaming down her face pooled at the seal around her neck. As if the floodgates had been opened by that realization, her body was shaken by a mighty sob, and then another.</p>
+        <p>No...you can&#x27;t. If you break here you&#x27;ll get killed. Ashley and Jane would hate that.</p>
+        <p>Jane. Had she known what would happen and send Tali away so she&#x27;d be safe? Her tactical understanding was second to none. It was entirely possible that Jane had seen the writing on the wall when Tali herself had been too naive to. Jane. She turned once more, realizing what she had been searching for all this time. Where was Jane?</p>
+        <p>She continued searching increasingly frantically, but to no avail. Racing up to the ridge, she scanned the gentle slope looking up to it if perhaps she had missed Jane, but found nothing. She wasn&#x27;t there. Tali&#x27;s mind raced with hope. Could Jane have gotten away after all?</p>
+        <p>No, she reasoned. If Jane had gotten away, they would have gone after her.</p>
+        <p>Her eyes widened with the realization of what that meant as suddenly, everything about this disaster of a day fell into place.</p>
+        <p>They&#x27;ve taken her.</p>
+        <p>A batarian pirate captain, the perfect bait for Jane Shepard. The aliens who had ruined her life on Mindoir were always getting under her skin. Whoever had orchestrated this had known that. A traitor AIS agent, a remote planet with a pirate flotilla in system and no help anywhere near, and at least two platoons worth of mercenaries ready to strike, hiding until the right moment. The only thing baffling her was the willingness of this batarian freelancer to play bait, but who knew what the bastard had been told or promised.</p>
+        <p>This had been a trap set very deliberately to catch Jane Shepard, and only Jane Shepard.</p>
+        <p>For a brief moment, a voice in the back of her head cautioned her that perhaps, they had just taken Jane&#x27;s body. As proof perhaps, or as a trophy. White hot fury erupted in her chest and stamped those thoughts out. Jane was alive. And Tali was going to go get her. She had not the slightest idea of how she was supposed to achieve that, but it did not matter.</p>
+        <p>She stepped to Ashleys side and knelt. She could feel another sob well up and her lip quiver. &quot;Oh, Ash.&quot;</p>
+        <p>She closed Ashley&#x27;s eyelids; Tali knew not why, but somehow it felt right. &quot;I hope you&#x27;re with your god now. I...I know you&#x27;re not supposed to just lie out here. But I need to go. I know you understand.&quot;</p>
+        <p>The Quarian got up and walked over to retrieve her shotgun, which she had dropped when she had initially noticed the body. Her fingers clamped down on the familiar metal as she turned towards her fallen sister one last time.</p>
+        <p>&quot;I&#x27;ll go and get Jane. Somehow. And then we will find the bosh&#x27;tets who did this and kill every last one of them.&quot;</p>
+        <p>Tali stepped up to the ridge and looked over the forest all around. Thinking about it, there was really only one place they would have gone, and even if not, she&#x27;d probably be able to follow the trail of dozens of people stomping through this place. But before that could happen, she had to take care of one more thing. Sitting down to hide behind the ridge, she activated her omni-tool to make the necessary preparations.</p>
+        <p>The Kodiak hadn&#x27;t stood still in the Normandy&#x27;s cargo bay for more than half a second when the side door shot open. Garrus had already been waiting, carrying Liara in his arms now. The Asari had gotten weaker and quieter by the minute during their short ride up to the ship, her breath rattling in her chest, and at at this point, Garrus was genuinely afraid for her. He barely got to step out of the shuttle before he was already beset by several of the medically trained NCOs that assisted Chakwas with surgeries and in emergencies – Streblicz, Smith and Ozema had come down to the bay with a stretcher and wasted no time taking Liara out of his grip and onto the thing. From there on out, the Turian simply stood back as they hastily pushed it towards the elevator, attaching multiple devices to the Asari&#x27;s fingers and beginning to cut open her suit on the way.</p>
+        <p>As they disappeared into the elevator, Garrus allowed himself a short moment of respite, knowing that it would not return for at least a minute anyway. Closing his eyes, he sagged against the Mako. But even as he finally felt how tired he actually was, his legs remained tense as a spring as he waited for the familiar rumbling of the returning elevator. The second he picked it out among the subdued chatter of crewmembers and the noise of the drive core, his eyes shot open and he pushed himself off the tank. On the short way to the elevator, he noticed more than one person throwing him what they no doubt intended to be sneaky looks. He knew what they were asking themselves.</p>
+        <p>Where the hell are the other three? Good fucking question.</p>
+        <p>The doors opened and he stepped in, his three fingered fist slamming down on the shutter and the button for the CIC. They closed behind him and the machine set itself in motion, Garrus staring at the metal of the cabin in front of his faces. Now that Liara was off his hands, his thoughts wanted to race; but he kept himself in check. There was no point until he knew more.</p>
+        <p>Garrus burst into the CIC to find it in the middle of frantic activity. At every station, the Alliance personnel were working intensely. In the middle of it all, at the Captain&#x27;s station, was Pressly, directing it all, barking orders and taking in replies from every which way. Garrus stepped up to the man. &quot;Pressly, what&#x27;s the-&quot;</p>
+        <p>&quot;Not now, Vakarian!&quot;</p>
+        <p>He pushed down his irritation. Pressly was right, he shouldn&#x27;t have interrupted him in the middle of what for all he knew might be an ongoing space battle. Still, getting told of by Pressly of all people did not help his mood – while the older man had been nothing but professional at all times, Garrus had not missed the fact that the navigator had at least initially been less then serendipitous with having a Turian on board.</p>
+        <p>He slapped the silly feeling out of his mind. He&#x27;d been a little shit interrupting the acting captain, that was it.</p>
+        <p>&quot;Leaving atmosphere in five seconds!&quot;, someone&#x27;s voice rang out over the undercurrent of chatter.</p>
+        <p>&quot;Most forward enemy vessel closing in on intercept course! Corvette equivalent!&quot;, someone from the other direction called.</p>
+        <p>Pressly did not miss a beat. &quot;Evasive maneuver! Engage stealth! We make for the moon!&quot;</p>
+        <p>&quot;No Sir!&quot;</p>
+        <p>Garrus knew that voice well enough. Joker.</p>
+        <p>&quot;We can kill that vessel and still get away!&quot;</p>
+        <p>A vein on Pressly&#x27;s forehead started bulging. &quot;Are you mad, Moreau!?&quot;</p>
+        <p>Joker&#x27;s voice was completely lacking it&#x27;s usual mirth. &quot;I can do it, Sir. Trust me.&quot;</p>
+        <p>Garrus studied Pressly&#x27;s face. For a man who wasn&#x27;t actually a captain, he seemed to be holding up more than well. In keeping with that, it didn&#x27;t take him more than a second to make a decision.</p>
+        <p>&quot;Fine, do it!&quot;</p>
+        <p>When Joker replied to confirm the order, he sounded at least a little less serious. Garrus found himself wondering once again just where the line between being a cocky bastard and simply knowing that you were just that good actually laid. He looked up to focus on the tactical display, fading out the chatter of the CIC.</p>
+        <p>Rising rapidly from the massive orb that symbolized the planet below, a blue dot was charging a group of red dots head on. The blue dot was the Normandy, obviously; a second later, his visor had translated everything and he could make sense of the red ones. They were the enemy vessels obviously, but now that he could read their descriptions, he could see that there were five of them – one destroyer with three corvettes flanking it – and another corvette flying up ahead, just at the edge of the destroyer&#x27;s estimated weapon range.</p>
+        <p>We&#x27;ll pass by close, it should be possible to pick her off, he mused. But the window is incredibly small, and that destroyer can tear us apart. It&#x27;s insane to try.</p>
+        <p>Upon closer inspection, he noticed that their target itself had it&#x27;s estimated range outlined as well. It didn&#x27;t take long to see that no matter what, they would have to brave at least one salvo of her guns. Hopefully she didn&#x27;t have – no.</p>
+        <p>Any worries Garrus anyone might have had about that corvette potentially having a good reason to be so far out of formation were dispelled when the enemy vessel began to spin and turn, attempting an evasive maneuver at the eleventh hour. Garrus knew little of void combat, but what he did know indicated that this was generally seen as a desperate – and doomed – gambit. A second later, he could feel the Normandy&#x27;s main guns rumble, the entire deck vibrating underneath his feet.</p>
+        <p>One of the scanner specialists pumped a fist into the air. &quot;Got &#x27;em! Their shields are down!&quot;</p>
+        <p>The blue orb began veering off towards Garrus&#x27; right, towards the moon. On the tactical display, it looked to be an absolutely neck-breaking maneuver. The red dot indicating the enemy corvette disappeared. Next to him, Garrus could see Pressly smile grimly, and the same man who had spoken before confirmed the reason why.</p>
+        <p>&quot;First torpedo taken out by defensive batteries, but the second one connected, Sir. Enemy vessel completely destroyed.&quot;</p>
+        <p>The satisfaction on everyone&#x27;s face didn&#x27;t last long, though- They weren&#x27;t through the woods yet. On the display, the Normandy was still turning as fast as possible, but apparently not fast enough. At this speed and trajectory, the destroyer would be in range long enough to fire it&#x27;s long range armaments at least once. A hint of nervousness showed on Pressly&#x27;s face.</p>
+        <p>&quot;Moreau?&quot;</p>
+        <p>&quot;That destroyer is more agile than it should be, Sir! We&#x27;ll be in range briefly! Don&#x27;t worry!&quot;</p>
+        <p>&quot;Goddamit!&quot;</p>
+        <p>Pressly slipped for exactly as long as it took him to utter the curse, than the exploded into action.</p>
+        <p>&quot;Divert power! Shields, thrusters, anti-accelerators! Everything else is expendable!&quot;</p>
+        <p>Unconsciously, Garrus grabbed the railing of the captain&#x27;s station. Then the lights went almost completely out, the subtle humm of the air filtration stopped and even the HUD&#x27;s at the station dimmed. On the large display, the Normandy strained to pass by the ever closer orb of the destroyer&#x27;s range, failing to do so, until...the ship suddenly changed trajectory, shooting straight ahead, deeper into the enemy vessels&#x27; range.</p>
+        <p>&quot;MOREAU!&quot;</p>
+        <p>If Joker even noticed, he spared Pressly no answer.</p>
+        <p>&quot;Enemy barrage missed aft!&quot;. A woman&#x27;s voice, what was her name again? Clusee?</p>
+        <p>The blue dot indicating the Normandy, having braved the outer edges of the large red orb of the destroyer&#x27;s weapon range, shot out on the other side of them and rapidly began to put distance between itself and the enemy ships which, suddenly duped, began to decelerate and turn, but had no hope in hell to actually catch up, let alone before the ship would reach the moon. Garrus let out a breath he had not realized he was holding and deflated. All around him, the crew of the CIC did much the same and a round of sighs and whistles could be heard as the lights and filters came back online.</p>
+        <p>Garrus waited increasingly impatiently as Pressly took control again, directing his people towards all kinds of actions the Turian barely paid attention to. Finally, Pressly turned and actually addressed him first.</p>
+        <p>&quot;How is Dr. T&#x27;Soni?&quot;</p>
+        <p>Garrus shrugged. &quot;With Chakwas now. Don&#x27;t know more.&quot; He stepped closer. &quot;So, were making for the moon. Why? I need to get down there immediately!&quot;</p>
+        <p>The navigator shook his head. &quot;Not a chance. We&#x27;d have to sneak to the other side of the planet or they might detect us, and we can&#x27;t leave here. We need to be in position if they decide to try it despite us being here.&quot;</p>
+        <p>Garrus flaired his mandibles, irritated at the fact that he hadn&#x27;t seen it himself. &quot;We can&#x27;t get down there with them around, but neither can they. At least not just like that. Right?&quot;</p>
+        <p>The older man folded his hands behind his back and nodded. &quot;Yes. Any ship entering atmosphere is severely limited in it&#x27;s capabilities to defend itself and retaliate; even the destroyer would be easy prey for us if they did that. So they probably hoped to send down a corvette and cover it with the other three and the destroyer.&quot; He furrowed his brow. &quot;In that light, that was a really dumb maneuver by them, lost a ship for nothing. What the hell were they thinking?&quot;</p>
+        <p>Despite the situation, Garrus failed to suppress a soft chuckle. &quot;In my experience these lower echelon pirate types don&#x27;t exactly have a knack for tactics and strategy, Pressly.&quot;</p>
+        <p>The addressed seemed irritated for a second, but if he truly was so, he decided not to voice it. &quot;Be that as it may. The bottom line is, we will slip behind the moon, enter stealth there, and then begin to harass their flotilla as much as possible.&quot; He cast a long glance towards the display. &quot;That destroyer has a turnspeed like I&#x27;ve rarely seen, but still...we might be able to shave off these corvettes, and if we can do that, maybe...&quot;</p>
+        <p>His musings were interrupted by communications specialist Lieutenant Mills. &quot;Sir, incoming call. It&#x27;s that AIS woman again, Lawson.&quot;</p>
+        <p>Pressly looked as if he had stopped himself just short of a groan. &quot;Alright, relay her to the comm room.&quot; He nodded to Garrus. &quot;Come.&quot;</p>
+        <p>He turned and followed the for all intents and purposes acting captain the few meters into the communications room, coming to stand before the large main screen. Pressly worked the console.</p>
+        <p>&quot;Put her up, Mills!&quot;</p>
+        <p>A second later, the display came to life with the face and upper body of a human woman with dark hair, around thirty years old from the looks of it. She immediately struck Garrus as a person to be taken serious – and she wasted no time.</p>
+        <p>&quot;Pressly, I&#x27;ve been trying to contact you for ages but I&#x27;m sure you were very busy. How is the situa- Vakarian?&quot; The woman&#x27;s controlled exterior slipped for a moment. &quot; So you managed to exfiltrate?&quot;</p>
+        <p>Pressly seemed to be less than happy about being essentially ordered to report to a civilian, let alone a colleague of the very man who had gotten them into this mess.</p>
+        <p>&quot;How the situation is? Why would I tell you? Who the hell do you think you are, Miss!?&quot;</p>
+        <p>A hint of irritation passed over her face, but this Lawson had herself under perfect control, her voice calm and collected when she answered. &quot;I am someone who recognizes Commander Shepard&#x27;s importance, especially regarding the Reapers. &quot; Garrus shared a glance with the older man. They were not used to have outsiders know about their mission, let alone support it.</p>
+        <p>&quot;Go on.&quot;</p>
+        <p>&quot;I have been observing the Commander&#x27;s actions, and attempting to cover her back. That is why I double checked Wells, and that is why I warned you. Now. Where is Shepard?&quot;</p>
+        <p>Garrus growled, the anger over the day&#x27;s events seeking release. &quot;Down on the planet. We got bogged down and T&#x27;Soni caught a bullet to the chest. I got her off the planet...but the others are still down there.&quot;</p>
+        <p>Lawson inhaled sharply. &quot;Dammit.&quot; She chewed her lip for a second. &quot;And what is their situation?&quot;</p>
+        <p>He flared his mandibles, the same question he had asking himself for an hour now taunting him yet again. &quot;I have no idea. We can&#x27;t raise them. They&#x27;re either too busy to answer or they&#x27;re not answering to avoid detection.&quot;</p>
+        <p>Nobody in the conversation addressed the other possibility.</p>
+        <p>&quot;I...should be able to activate an... outside asset to assist. I&#x27;ll have them here in...&quot; she looked away again, &quot;...twenty two hours.&quot;</p>
+        <p>Pressly raised an eyebrow and propped himself up against the railing on his hands. &quot;That&#x27;s a damn long time for three people to hold out. But it seems it&#x27;s all we have. I already contacted Hackett..he promised to do what he can, but even he can&#x27;t just send warships into the Terminus, and if he gets the permission, those ships still need to get here. It&#x27;s going to take a while...if it even happens.&quot;</p>
+        <p>Lawson just nodded. &quot;Judging by your reaction, I infer that you can give me that time? What about the enemy vessels in system?&quot;</p>
+        <p>&quot;Stuck in orbit. They know we&#x27;re here – we actually destroyed one of their corvette&#x27;s just a minute ago. So I don&#x27;t think they&#x27;ll attempt to reinforce or retrieve their elements on the ground, at least not anytime soon. But I cannot promise that- &quot;</p>
+        <p>Garrus&#x27; omnitool chimed, distracting him from the conversation.</p>
+        <p>It should&#x27;nt ping me now, it is still combat mode, wha-</p>
+        <p>The thought cut off when he realized just who this message was from. It was a text. Garrus quickly opened it – and what he read froze the blood in his veins. Instinctively, he flattened his mandibles to his jaws and closed his eyes for a moment.</p>
+        <p>Spirits.</p>
+        <p>He raised a talon, interrupting Lawson&#x27;s and Pressly&#x27;s argument over who knew what. The older man appraised him warily. &quot;What is it, Vakarian? You look like you&#x27;ve seen a ghost.&quot;</p>
+        <p>He suppressed a sigh.</p>
+        <p>&quot;I just got a message from Tali. Williams was killed in action...and Shepard has been captured.&quot;</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 29</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch28.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html" selected>Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch30.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 29</h1>
+    <div class="chapter-content">
+        <p>As the last part of her armor, Jane slipped out of the undersuit. The thing was made to fit tight, and so it was quite the labor until she was finally free of it. She put it back into her locker and began to put on her uniform, covering her bare breasts. Next to her, Ashley did the same.</p>
+        <p>&quot;So, Skipper. I heard Liara&#x27;s finally going to reveal where we&#x27;re heading next?&quot;</p>
+        <p>She weighed her head skeptically.&quot;Eh. From what she&#x27;s been telling me so far, she has a couple of places lined up, and no clear priorities yet. I think this briefing is gonna be a bit more open ended than you imagine.&quot;</p>
+        <p>She shrugged.&quot;Hm...yeah well, you know, I think I&#x27;m going to leave that to you guys. I&#x27;m just happy we&#x27;re not immediately off to jump into some other firefight again.&quot;</p>
+        <p>&quot;What, Gunny Williams isn&#x27;t looking for a fight? Are you sick or something?&quot;</p>
+        <p>She was presumably about to launch some sarcastic response when the blaring of the intercom cut their banter off. &quot;Commander Shepard to the bridge please, Commander Shepard to the bridge please!&quot;</p>
+        <p>They shared a brief glance before they quickly finished dressing and hurried over to the elevator, where Garrus was already waiting for them and clicked the &#x27;Close&#x27; button as soon as they were in, the elevator beginning its ascent.</p>
+        <p>&quot;Thanks for waiting for us, man.&quot;</p>
+        <p>Jane&#x27;s turian friend looked down on her and waggled his mandibles. &quot;Well, since I&#x27;m going up there because of you, leaving without you wouldn&#x27;t have made much sense, would it? Pressly sounded serious. Thank the spirits.&quot;</p>
+        <p>The two humans sent him questioning expressions.</p>
+        <p>&quot;What? We&#x27;ve been on vacation for three weeks, and this diplomatic trip wasn&#x27;t exactly thrilling either. Neither is whatever Liara&#x27;s cooking up going to be. Now that is all well and good of course, but I won&#x27;t act like I&#x27;m not dying for some action.&quot;</p>
+        <p>Jane shook her head. &quot;You&#x27;re a bloody maniac, Garrus. One day you&#x27;ll learn to appreciate some goddamn peace while it lasts.&quot;</p>
+        <p>With that, the doors opened – as part of the Normandy&#x27;s recent refits and upgrades it&#x27;s notoriously slow elevator had received a significant speed boost. Taking the lead, Jane stepped out of the elevator and quickly made her way over to Pressly sitting at his station, who was already turning to meet her.</p>
+        <p>&quot;Commander! There you are.&quot;</p>
+        <p>&quot;What is it, Pressly?&quot;</p>
+        <p>The Normandy&#x27;s executive officer got up and gestured for Shepard to follow him. &quot;We&#x27;ve received a call from an Alliance intelligence agent. I have him holding the line right now, waiting for you. Said he had time sensitive information for you personally.&quot;</p>
+        <p>Shepard frowned. Intelligence types rarely meant good news, and even when they did, they usually had some ulterior motive. &quot;All three of you, with me.&quot; She turned to give a quick order to Lieutenant Mills, instructing him to relay the conversation to the comm room, and barely half a minute later, the four of them were there, the other three sitting while Jane stood in front of the big screen as it came alive.</p>
+        <p>A middle aged, slightly overweight man was looking at them. There was nothing remarkable about his face, but something in the man&#x27;s eyes cautioned Jane that perhaps, the looks might be deceiving.</p>
+        <p>&quot;Commander Shepard, good. My name is Ernest Wells, Alliance Intelligence Service. Where is your current location?&quot;</p>
+        <p>Jane raised an eyebrow. &quot;Why do you care?&quot;</p>
+        <p>If Wells was irritated with this unsatisfactory answer, he didn&#x27;t show it. &quot;Because I know the location of somebody who needs killing, but I have no assets available to take care of it.&quot;</p>
+        <p>&quot;I have my own mission. Why would I go out of my way to do your dirty work?&quot;</p>
+        <p>The shadow of a smile appeared on Wells&#x27; lips. &quot;Because this dirty work concerns batarian pirates.&quot;</p>
+        <p>&quot;I&#x27;m listening.&quot; Jane&#x27;s mouth moved before she even realized. &quot;Now tell me where they are, and I&#x27;ll tell you if I can make it.&quot;</p>
+        <p>The agent nodded. &quot;Alright. They will be on Vostralska III, an uninhabited and unnamed jungle world in the Kokori cluster.&quot;</p>
+        <p>Shepard furrowed her brow. &quot;Kokori...? Where is that?&quot;</p>
+        <p>Her XO saved her. &quot;It&#x27;s not exactly a place one needs to know, Ma&#x27;am. Only two systems, complete backwater. There isn&#x27;t even any civilization there.&quot; His expression grew cautionary. &quot;And it is in the Terminus.&quot;</p>
+        <p>Jane nodded.&quot;Thanks, Pressly. What timeframe are we talking about, Wells?&quot;</p>
+        <p>&quot;Tomorrow.&quot;</p>
+        <p>Jane didn&#x27;t even had to ask, she merely shot her XO a glance.</p>
+        <p>&quot;We can make it, Ma&#x27;am. Should probably get going as soon as possible, though.&quot;</p>
+        <p>&quot;Mmh.&quot; Jane scratched her chin. &quot;So what exactly are we dealing with here, Wells?&quot;</p>
+        <p>Wells brought up a holo display, pressed a few buttons, and in the next instant, the screen was filled with the image and details of a Batarian. &quot;Kirohuk Tugok. He&#x27;s an up and coming so called &#x27;freelance captain&#x27;. I believe you are familiar with those, Shepard.&quot;</p>
+        <p>Jane&#x27;s features darkened, and so did her mood. The memory of Balak and the people she had sacrificed to end him was not a fond one. &quot;Yes.&quot;</p>
+        <p>&quot;Then you know why he must die. I could tell you a long story about this particular one&#x27;s crimes, but what&#x27;s the point. If you do care, I attached some reading material to the file on him that I sent you.&quot;</p>
+        <p>Shepard waved it off. &quot;Sure. Now tell me how this opportunity came up.&quot;</p>
+        <p>Wells shrugged. &quot;Tugok is at odds with some other pirate captain called Blugus Grisarn, barefaced Terminus Turian. You don&#x27;t even want to know, so I&#x27;ll just say that if you manage to eliminate him too while you&#x27;re there, the galaxy will be a better place.&quot;</p>
+        <p>Jane shrugged. &quot;Fine by me. So what, are they going to make up and drink brotherhood on that jungle planet?&quot;</p>
+        <p>That actually got Wells to snort. &quot;Pretty much, actually. We know that Tugok has a base on the planet. Nothing big, pretty much just a supply depot; the Hegemony has freelancers like him put them on these god forgotten rocks to make it harder to link their activities to them. I have, just today in fact, received reliable intel that claims Tugok and Grisarn are going to meet there tomorrow to come to an agreement. Their squabble has gone on for years at this point and cost both of them a nice amount of money and men without getting anywhere.&quot;</p>
+        <p>Shepard was skeptical. &quot;And now they&#x27;re just gonna forget all about it? These pirates aren&#x27;t usually the forgiving type.&quot;</p>
+        <p>Wells laughed. &quot;They&#x27;ll still hate each other of course, but they&#x27;re pirates, Shepard. Greed first, grudges second. And they&#x27;re ruining their respective businesses. They&#x27;re probably both hoping to resume the fight and finally take the other out at some point once they&#x27;ve recuperated a bit, but for now, they will call a truce. It&#x27;s nothing special Shepard, this is completely normal for these people.&quot;</p>
+        <p>She shrugged.&quot;I&#x27;ll defer to your superior experience with the subject matter, I suppose. How much opposition is to be expected?&quot;</p>
+        <p>&quot;Not much, these kinds of meetings are touchy business. Betrayal is the only constant with pirates, and so they go to lengths to shield themselves from it. They will have agreed upon very strict rules of how many men they bring, and their flotillas will probably both wait on the edge of the system while they take to the planet to talk.&quot;</p>
+        <p>&quot;Why wouldn&#x27;t they just talk over the radio, or meet on a shuttle or something?&quot;</p>
+        <p>&quot;Most of these guys prefer to look their &#x27;business partners&#x27; in the eyes when they&#x27;re making an important deal like this. Sniffing out lies and that. And meeting places in space are much easier to sabotage and turn into death traps than solid ground under your feet. These people are paranoid. In their line of work, they have to be.&quot;</p>
+        <p>Jane nodded. &quot;How many men?&quot;</p>
+        <p>&quot;I can&#x27;t know for sure, but usually, we&#x27;re talking about a dozen per side. Maybe some more. But I&#x27;m confident you could deal with considerably more than that. They are pirates, not soldiers.&quot;</p>
+        <p>She mulled it over and sighed. &quot;Fine. And I guess I know now why you came to me. One day is much too short to have a sniper squad drift in, and you can&#x27;t project enough firepower for a frontal assault into the Terminus and still maintain plausible deniability. That is why you want the Normandy. We can slip in, cut them down and be on our way, with technically none the wiser as to who is responsible. Makes perfect sense. I&#x27;m just surprised the AIS doesn&#x27;t have their own stealth ships by now. I don&#x27;t imagine your higher ups are happy having to approach outsiders like me for something like this.&quot;</p>
+        <p>Wells shrugged. &quot;I suppose the big shots wanted to wait for the Normandy&#x27;s performance report before building more ships like her. For now, that gap persists, and until it&#x27;s closed they&#x27;ll have to lay in the bed they made, like it or not. Me bringing you in on this was approved from all the way up top. Tugok is a slippery son of a bitch we&#x27;ve been trying to get rid off for far too long to waste this opportunity now.&quot;</p>
+        <p>Shepard turned around, looking at her subordinates. &quot;Garrus?&quot;</p>
+        <p>The Turian wasted no time with his reply. &quot;The story adds up. I was actually part of a few operations busting meetings like this myself, back when I was with the Hierarchy. These setups are generally pretty much the same, deviation is suspicious. And even so, it still ends up with everyone on each other&#x27;s throats half of the time. The chances aren&#x27;t bad that they&#x27;ll do most of our work for us and we just have to mop up the rest.&quot; He shrugged. &quot;Easy job, Shepard. No reason not to do it.&quot;</p>
+        <p>Ashley nodded enthusiastically, and so Shepard turned to the other row of seats, where Pressly had sat down. Her executive officer didn&#x27;t need prodding to speak up. &quot;If the Reapers show up next week or next year, we&#x27;re dead anyway. A one day detour won&#x27;t mean anything in the end, and taking down these bastards is what we all enlisted for. It&#x27;s your call Ma&#x27;am, but I agree with Vakarian. There is no reason not do it.&quot;</p>
+        <p>The right corner of her mouth tugged upwards in a lopsided grin. &quot;Good to see we all agree on this.&quot;</p>
+        <p>She turned back to the desktop. &quot;Alright, Wells. Anything else I should know?&quot;</p>
+        <p>The AIS agent shook his head. &quot;As I said, I submitted you a dossier with everything we have on Tugok, but honestly, the only thing in there that is of practical relevance to your mission is our list of possible geographical locations of his base. Aside from that...nothing. Good hunting, Shepard.&quot;</p>
+        <p>&quot;Thanks. I&#x27;ll send you an informal report when it&#x27;s done.&quot;</p>
+        <p>&quot;I appreciate that, Shepard. Wells out.&quot;</p>
+        <p>The connection was cut, and everyone got up. &quot;Pressly, get the ship ready to depart. I&#x27;ll call Tali, as much as it sucks. I would&#x27;ve loved to give her a couple more hours at least.&quot; She sighed and brought Tali up on her omnitool as the others quickly filed out of the room. Most unusual for her, Tali didn&#x27;t actually answer the call immediately. Shepard was already considering hanging up and calling again five minutes later when she finally did.</p>
+        <p>&quot;Jane! Is everything alright?&quot; She sounded breathless.</p>
+        <p>&quot;Yes, but we need to leave. Something has come up, and we don&#x27;t have a lot of time. I&#x27;m sorry, I really wanted you to have some hours at home at least, but this can&#x27;t wait.&quot;</p>
+        <p>She was silent for a couple of seconds; no doubt cursing her luck. Shepard didn&#x27;t mind – if anything, she was satisfied to see, or at least reasonably infer, the woman finally place some emphasis on what she wanted for once. When she answered, Shepard could hear the disappointment in her voice.</p>
+        <p>&quot;I&#x27;ll be on my way in a moment. Expect me back in...ten minutes.&quot;</p>
+        <p>She raised an eyebrow. Tali&#x27;s voice sounded strange, and it wasn&#x27;t just her being out of breath. &quot;Where are you? You sound...different.&quot;</p>
+        <p>Again, an unusually long moment before she got her answer. &quot;I&#x27;m, uh, not in my suit right now.&quot;</p>
+        <p>She sighed. &quot;Ah for fuck&#x27;s sake...&quot;</p>
+        <p>&quot;It&#x27;s not a big deal Jane, I&#x27;ll make it in ten, I can get this thing back on pretty qui-&quot;</p>
+        <p>Oh for Christ&#x27;s sake, why would she think that&#x27;s what I mean. &quot;No Tali, I just hate pulling you out of your first clean room appointment in ages. I hope you at least had some..fun, I guess? What does one even do in a clean room, anyway?&quot;</p>
+        <p>&quot;F-fun? Oh, uh...yes...uhm..I...I gotta hang up, I need to...uhm...concentrate. Seal the suit properly. You understand.&quot;</p>
+        <p>&quot;Yes, sure. Sorry. See you.&quot;</p>
+        <p>Tali closed the purple curtain that was her &#x27;door&#x27; behind herself and sat down on her bed in the corner of the cargo bay. She actually had a bed now, Jane had gone through with what she had said in Huerta Memorial. It wasn&#x27;t very big, but neither was she, at least by human standards, and it was so good. From what Jane had said when Tali had picked it – Jane had dragged her to a store on the Citadel so she could try out mattresses, which had to have been the most decadent she had ever felt in her life - it was quite average for human sensibilities, but to Tali, it felt like she was lying on a cloud – all the numerous even softer variants had felt as if she was falling through the cloud. She laid down, not even bothering to crawl under the blanket – not that she needed one with the suit, but she enjoyed the feeling of weight surrounding her body - for now, simply stretching all four away from her. The heavenly feeling almost made her forget the embarassment she still felt about this blatant favoritism. After the hospital, she had given up to try and talk Jane out of these things. Maybe Ashley really did have a point...</p>
+        <p>From Shepard, her thoughts briefly drifted to the debacle of the day. She could never have brought herself to turn off her omnitool for her clean room appointment; she would&#x27;ve never forgiven herself if she had missed some emergency. But still, a part of her wished she had. Getting interrupted by Jane had to have been the worst blush she had ever had. Thankfully, Jane hadn&#x27;t been there to see it.</p>
+        <p>Someone stepped in front of her cubicle. &quot;Hey, Tali. Can I come in?&quot;</p>
+        <p>She sat up and swung her legs out of the bed, brushing the &#x27;walls&#x27; as she did so. Her room wasn&#x27;t big, even by Quarian standards. &quot;Sure.&quot;</p>
+        <p>The tapestry was lifted, and Ashley&#x27;s face appeared. &quot;Mind if I sit down?&quot;</p>
+        <p>Tali just gestured to her side, and her friend took the invitation, sitting down next to her.</p>
+        <p>&quot;So. Our little Tali is officially an adult now, and you&#x27;re officially on our crew. &quot; Tali didn&#x27;t like the grin on Ashley&#x27;s face. &quot;That means...no more excuses!&quot;</p>
+        <p>The Quarian groaned, knowing full well what she was referring to. &quot;Listen, Ash...&quot;</p>
+        <p>A finger was raised. &quot;No, you listen. You&#x27;re trying to tell me you don&#x27;t know if this woman is into you, while sitting on the bed she bought and assembled for you and coming back from a trip halfway across the galaxy she made to sort out your legal stuff.&quot;</p>
+        <p>&quot;Hey, we went there to speak to the admiralty board!&quot;</p>
+        <p>Ash just smirked. &quot;That too, yes.&quot;</p>
+        <p>Tali sighed. &quot;You make it out like it is so simple. I love our friendship. If I say something and it was all just our imagination, what is going to happen to that?&quot;</p>
+        <p>Ashley actually got serious now. &quot;Hey, I know how you feel. I do. But it isn&#x27;t just imagination, and even if it was, don&#x27;t you think your friendship is strong enough to take it?&quot;</p>
+        <p>She chuckled. &quot;Probably. But my sanity? Eh...&quot; The mere thought made her squirm. &quot;Keelah, I&#x27;m getting embarassed just thinking about it. I can&#x27;t do this, Ash!&quot;</p>
+        <p>A mockingly disapproving look was shot her way. &quot;Really, girl? You&#x27;re telling me you can stick your wrist into a husk made of Saren, but you can&#x27;t tell this woman you like her?&quot;</p>
+        <p>Tali sat up straight. &quot;Don&#x27;t just mention that like it&#x27;s nothing. &quot; The memory of Saren melting away to reveal Sovereign&#x27;s puppet still haunted her in her nightmares, and she wasn&#x27;t sure if it would ever stop to do so. &quot;But..yeah.&quot; She sighed. &quot;If she really feels like you say she does...I don&#x27;t know...can&#x27;t she just confess to me?&quot; Ash guffawed, causing Tali to pout playfully. &quot;What, I&#x27;m serious!&quot; , she shouted, raising her voice from the hushed tones they had spoken in for the entire conversation prior. &quot;It&#x27;d make this so much easier!&quot;</p>
+        <p>It took a couple of seconds for Ashley to get herself together again. When she did, she returned to the quiet volume more appropriate for the subject. &quot;Tali, waiting for the woman to make the first step doesn&#x27;t always work like you wish it would. It sucks, but they&#x27;re all dense. Especially Shepard. But...&quot; , she scooted closer, &quot;...maybe your idea of how this works is a little distorted. This isn&#x27;t a movie, Tali. You&#x27;re not supposed to just walk up to her and lay bare your soul. Go and do something with her. Just the two of you.&quot;</p>
+        <p>&quot;But we&#x27;re already doing that all the time!&quot;</p>
+        <p>The older woman rolled her eyes. &quot;Yes, but that is always you guys just stumbling into each other. Or pretending to, at least. You guys just spent more than three weeks on the Citadel, and Garrus told me you barely left the ship. The only thing outside the Normandy you guys did together was buying this bed and going to the range once! You could&#x27;ve gone to the movies, or whatever. Instead you just obsessed over the drive core.&quot;</p>
+        <p>&quot;But I like the Normandy! And Jane likes listening to me gushing over her.&quot;</p>
+        <p>A slight note of exasperation started creeping into Ashley&#x27;s demeanor. &quot;Yes, but it isn&#x27;t exactly romantic.&quot; She grabbed the sides of Tali&#x27;s helmet. &quot;Listen, girl. Next time we&#x27;re back on the Citadel, you will go out and do something nice with her. Promise it!&quot;</p>
+        <p>She sighed, defeated. &quot;Aaalriight...&quot;</p>
+    </div>
+</body>
+</html>

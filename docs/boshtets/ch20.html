@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 20</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch19.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html" selected>Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch21.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 20</h1>
+    <div class="chapter-content">
+        <p>Commander Shepard sat at the edge of her bed for what might be the last time, and checked the time. 3 more hours to the Mu relay. She rubbed her eyes for the umphteenth time and let out a breath she had not realized she was holding. She had finished all her preparations, double and triple checked everything, and made plans as far as that was possible when one was about to jump into a situation they knew basically nothing about. But now, there was nothing else to be done but wait, and so she was alone with her thoughts.</p>
+        <p>She found herself embarassed at how nervous she was. Had she tried to eat something, she was sure she wouldn&#x27;t have been able to force down more than a couple of small bites. Her mouth was dry, and she had a knot in her stomach. She was acting like a damn rookie before her first real action.</p>
+        <p>Come on Shepard. Nice Hero of Elysium you are. You should be out there making your rounds, get them confident and pumped for what&#x27;s coming. Instead you&#x27;re cowering here like a bloody civilian.</p>
+        <p>Her attempt at bravado failed to convince herself. The gravity of the situation bore down on her like the weight of the entire world. Hell, it was the weight of the world, and all other worlds, too.</p>
+        <p>If she failed in what they were about to attempt, not only would they die, but they&#x27;d doom all of galactic civilization, too.</p>
+        <p>Yeah, no pressure...</p>
+        <p>Detaching herself for a second, she supposed that her state of mind was understandable. She had been in terrible situations before, had faced down insurmountable odds and seemingly certain death. She was not nearly as comfortable with it as everyone seemed to think she was, but she had somewhat gotten used to it. It was just what her life had become; someone had to do it, and she was good at it, no point in denying that. And if someone needed to live this life, it might as well be a woman without much family left or anything better to do with herself, really. She had made her peace with the fact that she would live like this until one day something would get her years ago. She sure wouldn&#x27;t complain about it if she&#x27;d turn out to have been wrong and actually make it to her retirement, but death was not what truly frightened her.</p>
+        <p>Loss, more so. Her &quot;zoo&quot; of aliens, as she had heard it called by one agitated Rear Admiral just days ago, was without question not just the best team she had ever worked with, but over the course of the past six months, they had become her friends, hell, they had become the closest thing to a family she had had since Mindoir.</p>
+        <p>Wrex. Or Uncle Urdnot, as Garrus, that cynical bastard, had dubbed him. The name had originally been intended as a tease over the downright fatherly attitude the old Krogan had taken towards Tali, but the battlemaster had owned it and in doing so, taken all the wind out of the Turian&#x27;s sails. It was endearing, really, to watch the big bad lizard give the young Quarian lessons in the handling of a shotgun. Not that Tali hadn&#x27;t been quite capable already, but a couple centuries of experience had taught Wrex his fair share of tricks, and he seemed to enjoy sharing them with her. But the real highlight were their sparring sessions...the Krogan went easy on her, obviously, in fact he had not once actually tried to hit Tali, he just somewhat lazily grabbed for her while she dodged away and pestered him with kicks from those strong quarian legs of hers. Jane had persuaded Tali to give her a taste of it once, one shot square on the ribs, not full force of course, and even that had given Jane a colorful bruise on her ribcage. She had not complained; play stupid games, win stupid prizes. The furious stuttering and apologies on Tali&#x27;s part had only served to make the whole ordeal even more hilarious, as far as she was concerned.</p>
+        <p>Shepard still did not really understand why the Krogan had even come with her initially, but by now, she trusted the grizzled mercenary completely. After what he had swallowed on Virmire, there could be no doubt about his loyalties. Wrex wanted to see Saren dead. He probably did not give a damn about all the races he would save by achieving that goal, but honestly, after speaking to him, if Jane took Wrex&#x27;s perspective for a second, she could not blame the Krogan. Well, there was someone who would not need a pep talk from her.</p>
+        <p>Same was probably true for Garrus. Any man who would quit his job on the spot to hunt down a dangerous criminal under the command of a stranger, just because it was the right thing to do and they felt kind of irritated with their current position, was most likely just the right kind of crazy to bring along on a mission like this, and Garrus had not disappointed. The fact that a sniper and tactician of this calibre had ended up as a C-Sec detective was nothing short of a travesty. While Shepard had learned to appreciate Garrus&#x27; professional performance very quick, it had taken a while longer for them to truly warm up to one another personally , but after the ordeal with Dr. Saleon, Jane just got Garrus. Not that it was such a big achievement, the Turian was not that complicated; but that was just fine with Jane. She didn&#x27;t think of herself as very complicated either. Any other day with this much free time, they&#x27;d be sitting on top of the Mako, shooting the shit over a beer, watching someone spar or trying to get a rise out of Wrex with ever more creative jabs, truly two kindred spirits. Which was precisely the reason Garrus was not the right company for her right now; she&#x27;d have wagered a fair sum that her sarcastic sidekick was sitting and brooding alone just like herself. If he had not found something to busy himself with, that was.</p>
+        <p>Heh, he&#x27;s probably calibrating the Mako&#x27;s main gun again, for that extra 0.5 mm tighter grouping over 1000 meters that is totally gonna decide who lives and who dies...</p>
+        <p>Thinking about it, Jane envied him, actually. Perhaps she could clean her assault rifle to pass the time...but that would mean running into Ash. And Ash definitively needed a pep talk. And who could blame her. First Eden Prime , then Virmire. That woman had lost too many people in the past six months. She was tough, true, and had not let her state of mind affect her performance in any way; however, the fact that it had not happened yet did not mean it could not happen in the future, preferably at the worst possible moment. From Shepard&#x27;s experience, if these things were not dealt with, that was exactly what tended to happen. And they had dealt with it; unfortunately Virmire had happened just when she was beginning to truly leave Eden Prime behind. The death of a friend was bad enough, but when that friend had literally been chosen to die in your stead, that was something else entirely. Now, that was not actually what had happened, of course; Jane was not sure if, and how, she could have made such a decision between two people she respected and had come to consider friends. The truth of the matter was that the bomb had been more important than Kaidan; the mission came first, after all, saving Kaidan would not have mattered at all if the facility had not been destroyed. Alenko had been a dead man the second he and the salarian squad he had been attached to had been pinned down by the Geth. Alenko had known it, Shepard knew it, everyone else knew it. Hell, even Ashley herself probably knew it. But knowing something in one&#x27;s head and the heart understanding it were two very different things. Shepard sighed. She would go down before the time was up, and make sure to hammer it into Ash&#x27;s thick skull some more. After making a detour to Liara, that was.</p>
+        <p>Liara would probably need cooling down instead of encouragement, if anything. The awkward, shy archaeologist Shepard had met a little less than six months prior had been radically changed by the events that had transpired. She had always possessed an inner strength she herself probably had not realized; but ever since they had been forced to kill her mother, there had been a hardness to her. She wanted to see Saren dead far more than Garrus, for whom it was just the right thing to do and Saren just one particularly detestable bastard among many, or Wrex, for whom Saren&#x27;s actions on Virmire were more of an insult than anything. No, Liara burned with the hatred of someone who had just lost a loved one and knew exactly who was to blame. Her spirits raised a bit, Jane&#x27;s lips spread in a predatory smile. On Virmire, Liara had not been present for the fight against the traitor after a krogan battlemaster had knocked her out with a concussive shot that broke an arm and a leg and saw her carried off to the medbay when the Normandy had come in to drop off the bomb. Saren was in for quite the surprise.</p>
+        <p>Her smile dissipated fast. They would have to fight Saren again, no doubt, and this time, they needed to win. He had fought them to a stalemate last time...one man, against five. It had been insane. His shields had shrugged off everything they had thrown at him, his biotics – biotics this strong, in a bloody turian! - had kept Wrex&#x27;s own powers more than at bay, and the strength and speed of him...the rogue Spectre was more machine than flesh at this point, and it showed. He was unnaturally swift and strong. His cybernetics had allowed him to go toe-to-toe with Wrex and Shepard at the same time, and the ugly truth was, he had been winning. Quite handily at that. When they limped into the Normandy&#x27;s cargo bay after all was said and done, Wrex had bled profusely from half a dozen deep cuts, and Shepard herself had suffered a light concussion from a backhanded blow to the head as well as a strained left knee from a kick. Added biotic might from the recovered T&#x27;Soni notwithstanding, if Tali&#x27;s idea about modifying her omnitool&#x27;s shield overload routines to use the traitors fondness of cybernetics against him would not work out, they were in for the fight of their lives.</p>
+        <p>Oh, Tali. Well, she definitively did not need a pep talk, but she was the one person Shepard would probably enjoy most to give one to. Ever since Tali had joined up with her, the young woman had surprised Shepard with her strength of character. Fresh out of her insular home for the first time, first thing she had done was what? Track down some Geth and attack them, then play cat and mouse with a gaggle of hired murderers halfway across the galaxy. When she had told them that story on the citadel presidium, Shepard had immediately realized she was talking to someone special, and she had been right.</p>
+        <p>But you didn&#x27;t realize just how special, huh Janeygirl?</p>
+        <p>She grimaced as images from that one night at Flux came to mind again. They had taken some well deserved shore leave after Noveria. She and the boys had eliminated beer after beer – or ryncol, in Wrex&#x27;s case - and traded war stories, while Tali had dragged off first Liara, and then Ashley, who had been listening just as fascinated as the rest of them to Wrex&#x27;s account of his fight against a band of Terminus pirates, to the dancefloor, where she had tried to cheer the hurting Asari up... at least at first. Eventually, she had just lost herself in the music and danced off on her own. She had kept to herself, tucked away in her own little space as she had probably learned to do on the flotilla, and moved her surprisingly strong, yet graceful body in ways that had made Jane&#x27;s head spin. Shepard hadn&#x27;t even noticed that she was staring until Kaidan, who had always shared her love for old music, had asked her if he should go and convince the DJ to play Hips don&#x27;t lie for the two of them, with Garrus and Wrex bursting out laughing, understanding the insinuation even though they&#x27;d obviously never heard of the song.</p>
+        <p>She had always liked Tali, but since then her feelings had taken on an unforeseen quality, or rather, that had been when she had realized what had been brewing all along. The Quarian and she had simply clicked the day they had met, and over the following weeks and months, Tali had quickly grown into one of the best friends she had ever had. Her company had served more than once to keep Shepard calm and grounded when the strain of this extraordinary mission had threatened to get a hold of her. Thinking back, she had to admit that she probably would have actually killed Dr Wayne if not for Tali. Tali had a way to remind her of who she was, or at least strove to be, when she needed it.</p>
+        <p>And as it seemed, her cavewoman brain could not just be thankful and leave it at that. It was stupid, unprofessional and impossible, and possibly even inappropriate given the fact that she was both Tali&#x27;s captain and seven years her elder, though she wasn&#x27;t sure which kind of meaning those things held in quarian culture. The fact that she was such an idiot that she apparently could not even be platonic with a bloody alien in an envirosuit vexed her to no end. Not that the fact that Tali was an alien in an envirosuit made it any easier. Kaidan might have been an ass that day, but he wasn&#x27;t wrong. That thing was snug in all the right places.</p>
+        <p>She forced her mind off her foolishness and back to the coming battle. Tali would be an invaluable asset as usual, no doubt. Even if her proposed surprise for Saren should end up not working out, there would be Geth for sure. And when it came to screwing with Geth, the feisty engineer had no equal. The amount of times in this campaign where a tough fight had turned their way because Tali had managed to temporarily mess with the friend/foe identification of a crucial Geth platform had reached the double digits weeks ago. And if that ever failed, she really was damn handy with a shotgun. The fact that this brave, and with most topics, outspoken woman was at the same time awkward and shy if a conversation ever steered towards the topic of her own person was something Shepard probably would not have believed herself if had not gotten ample experience with that side of her by now. As contradictory as it was, it was also adorable as hell.</p>
+        <p>From one second to another, the calm that the thoughts of her companions had brought was swept away by a new wave of dread. They had been six, now they were only five. She had sent Kaidan to his death. Whom would she be forced to sacrifice next? Wrex? Liara? Tali?</p>
+        <p>Never. For what my dumb ass is worth, I&#x27;ll get her out of this alive, and if it&#x27;s the last thing I ever do, that&#x27;&#x27;s bloody worth it in my book.</p>
+        <p>Jane&#x27;s eyes found the clock again. Two hours and 47 minutes left till the Mu relay...</p>
+        <p>…...</p>
+        <p>Tali sat in the mess, slurping the last of her nutrient paste absentmindedly, as her fingers unconsciously performed their typical dance in her lap, as they had been doing for the last ten minutes now. She was still contemplating just what she was going to say to Shepard. Their captain – Commander, she reminded herself futilely – had retreated to her cabin hours ago and not come out since, most atypical for her, but not for the first time in these last couple of days.</p>
+        <p>Not that she didn&#x27;t know why that was. Since they had escaped the Citadel she had, on more than one occasion, recognized that one emotion in Shepard&#x27;s eyes, that as far as she could tell, none of the crew safe for her had noticed for the entirety of their half year adventure, that apparently only she was able to see. Fear. Commander Shepard, the archetypal hero, the immovable , stoic object, whose only outbursts of emotion during missions were those of anger that had just served to propel her towards fighting with even more grim determination, was actually capable of fear.</p>
+        <p>There had been an ever so tiny trace of it on Edolus, when a thresher maw had ambushed them. She had not thought anything of it. That thing had terrorized her to her core, and from the gasps she had heard from the passenger compartment, Kaidan and Ashley too. Only Wrex had been as unperturbed as ever. And none of them had had a traumatic near – death experience involving an entire pack of the monsters just years earlier. Except maybe Wrex, who knew what he might&#x27;ve seen in his time. So as far as she was concerned, Shepard was allowed two seconds of shock. The commander was human after all, it had turned out.</p>
+        <p>But she had seen the face again a couple of weeks later on Noveria, when the commander had tried to order them to leave her alone in the hot labs. An unnecessary risk, Shepard had argued, had it been if they all had remained to activate the neutron purge. Wrex had told Shepard that not even she could order him to back down from a fight against Rachni, and the rest of them, safe for Ashley and Kaidan who, being alliance, had had little choice, had uttered similar sentiments, but she wouldn&#x27;t budge. It had taken collective insubordination to get her out of there alive. They had all booked the incident as just another example of Shepard&#x27;s heroism, and in a way, they were correct of course. But none of them appeared to understand just how terrified the woman had been at the prospect of having six people endanger themselves in such a manner under her command. Ever since then, Tali had grown perceptive, and had managed to catch their commander in the &quot;act&quot; pretty much every time the going had gotten rough and she had had to give one of them a truly dangerous order. Her respect for Shepard had only grown from it, knowing that Shepard was just as afraid as anyone, but not for her own sake; and that she still lead them in battle with downright unnatural calm. Not that Tali would therefore do her the favor to keep herself out of trouble. After all, she was at least as afraid of anything happening to Shepard as Shepard was afraid of something happening to her. Shepard did not need to know that, of course.</p>
+        <p>And then Virmire had happened. The look on Shepard&#x27;s face when it was clear that a decision would have to be made had come close to breaking Tali&#x27;s heart and Shepard&#x27;s demeanor in the following days, as the stress and hurt of the entire operation, and perhaps a longer time than that, seemed to finally catch up to her, had done it proper. To see Shepard having to eat the council&#x27;s thinly veiled insults and unfair accusations with no defense from the ambassador had replaced her sadness with anger, let alone the fact said ambassador then proceeded to stab them all in the back. Shepard had the weight of the galaxy on her shoulders, and still, she was the one who reached out to those around her and supported them, always. Tali&#x27;s pilgrimage gift would, there was no point in downplaying it, go down as one of the most significant ones in the history of the fleet, and it was all thanks to Shepard. It had been then that she had decided that even though she could never tell the woman how she really felt about her, that she would at least give her anything else that she could, and not just on the field. And so she had attempted to cheer Shepard up, be there for her in the same manner Shepard had been there for her so often before. She was not sure how successful she had been, and how much of Shepard&#x27;s temporary return to form had been to due to her efforts, or how much had simply been the fact that between Anderson&#x27;s plan and their unanimous mutiny Shepard had simply been too busy to dwell on her thoughts much. Probably the latter, she was afraid. Because with nothing to be done while the Normandy sped towards Illos at full speed, that was over for now, and she just knew that Shepard was sitting in that cabin again, obsessing over all the ways things could potentially go awry once they actually reached their destination. Tali sighed. She never wanted to see Shepard suffer the way she had suffered on Virmire again. And that was the thought that finally had her find her courage, get up, and walk over to Shepard&#x27;s door.</p>
+        <p>Suppressing her finger&#x27;s impetus to knot themselves together in front of her waist, she hit the comm instead. Shepard answered immediately. &quot;Yes?&quot; &quot;It&#x27;s me, Co- Shepard. Can I come in?&quot; Cursing herself for almost calling Shepard by her rank again, she awaited her answer. It came in the form of the door sliding open, revealing the captains cabin. It was, for quarian sensibilities, a downright luxurious room, complete with a desk, a bed, space for a shelf and even its own bathroom. Jane sat on the edge of her bed, no datapad or anything else of the sort anywhere near her, her short hair in disarray, as if her fingers had been running through it just seconds before. The smile that found the way to her lips as Tali entered was genuine, but her eyes weren&#x27;t truly in it. Tali&#x27;s contemplations had been correct, it seemed.</p>
+        <p>She stopped next to Shepard&#x27;s desk, halfway from the, by now, closed door to where Shepard was sitting, and struggled to find words. Her fingers beat her willpower out, now, though only barely, and managed to worm around each other a couple of times before she forced them apart again.</p>
+        <p>&quot;Shepard, I...I thought you might like some company before we hit the relay.&quot;</p>
+        <p>Amazed at the fact that she had brought that out without stuttering, she was still overcome with a flush of heat, and her heart beat to her chest. Barging into Shepard&#x27;s room like this, with not even a pretense of work related reasons, was the most direct she had ever asked Shepard to just spend time with her, and while she had not said it with the intention with which she would have liked to say it, she still felt vulnerable. Had she gone too far? Was it truly her place to invade Shepard&#x27;s private space when she was clearly trying to isolate herself? Were they truly that good of friends ?</p>
+        <p>Perhaps, Garrus should&#x27;ve bee-</p>
+        <p>Her thoughts were interrupted by the wide, toothy grin that found its way on Shepard&#x27;s face as she relaxed and leaned back on the bed, supporting herself with her hands on the mattress. &quot;Yeah. I&#x27;d like that.&quot; She gestured over to the armchair in the corner, and Tali eagerly obliged. &quot;You know, I thought about checking up on Garrus, but he&#x27;s probably busy with his wife...&quot; Tali couldn&#x27;t help but laugh. Garrus&#x27; relationship to the Mako was truly that of an old couple, endless bickering and extensive needs of care included.</p>
+        <p>&quot;Are you talking about the Mako, or his rifle?&quot;</p>
+        <p>Her quip succeeded, and Jane joined her in chuckling. As much as her mind constantly asserted Jane&#x27;s position of Captain, at least as far as Quarians would have been concerned - the Alliance was just silly, she was the commanding officer of the ship, who else was Captain if not her ? - she liked thinking of Jane by her first name. It was a guilty pleasure, allowing herself , at least in thought, some of that which she foolishly wanted but knew she could never have, or even ask for. There were too many obstacles between them, and soon, she would have to leave. And then there was of course the minor problem with the gigantic genocidal sentient machines intent to kill them all, or the fact that Shepard probably didn&#x27;t look at her in that way, whatever Ashley had said.</p>
+        <p>Stop pitying yourself already. You&#x27;re here to help her, not to whine about your own problems again.</p>
+        <p>Shepard tapped her omnitool a couple of times, laid her torso down on the bed and the stereo started playing. Tali recognized the song, one of the older ones in Shepard&#x27;s playlist, published roughly two hundred years ago. Her translator did not trigger for music, because she considered translating music to be an absolute travesty, and so she did not understand a word, but she liked the sound of it. This one was not so different in principle from quarian music, wich had pretty much just two main genres: dance music and Huan&#x27;ze, which was usually slow and heavily dominated by the lyrics with just a subtle backdrop of instruments, mostly various stringed instruments and drums. Traditionally, flutes had been a big part of quarian music, but with the suits making them just too impractical, flutes had died out on the flotilla. Humans used a very wide array of instruments that often edged on drowning out the singer&#x27;s voice, though it was not like that in this song, which was a quieter one, a lament of sorts judging by the lyrics displayed on her helmet&#x27;s display. Bruce Springsteen, The River.</p>
+        <p>She relaxed in the seat and let her head drop on the edge of the backrest. There was no need to speak too soon. She still had not found the words, and the two of them had long since gotten comfortable with silence. They had spent many hours sitting in the mess together in many a third shift, when most of the crew slept. She had had trouble adapting to the silence on the human frigate, a stark contrast to the constant humm of quarian vessels, where silence usually meant the failure of a critical system, and therefore, danger. And Jane...she had not pried, but it had become self evident to her after a while that Jane did not mind an excuse to avoid her bed at all. Tali was pretty sure that she had a decent idea of why that was. There was plenty of nightmare fuel in Jane&#x27;s eventful career, and before that too. She had never asked her specifics about Mindoir, Elysium, Akuze or some of the other more infamous assignments of hers that she&#x27;d heard of, but the the few things that Jane had mentioned had told her enough. If Jane ever felt like talking about any of that in more detail, she would do so in her own time. Tali would be there for her either way, at least if she would still be around when it happened.</p>
+        <p>They had chewed through extensive amounts of their respective people&#x27;s culture and history as well as their own lives over the course of their nightly hangouts, but eventually, it had always ended with the both of them just sitting there in silence, tired but happy to at least have some company instead of turning around in their sheets to no avail. In the morning, the crew had, to everyone&#x27;s amusement, found them asleep in their respective seats more than once. That had stopped happening eventually, after Jane had surprised her with a solution to her sleeping problems during one of their resupplying stops. A comfortable camping bed as well as a large piece of purple tapestry, with her clan-pattern woven into it. The beautiful bosh&#x27;tet had secretly shot a picture of her realk and sent it to a tailor on the Citadel. While she had still been flabbergasted by this act of generosity, stammering like an idiot again, Jane and Garrus had already gone to work with it, setting up a cubicle in the cargo bay for her, just like quarters on the flotilla , and in hearing range of the Tantalus drive core to boot. She had slept well ever since. She still stayed up late sometimes to catch Jane in the mess, and even though Jane wouldn&#x27;t say it out loud, she knew Jane was happy that she did.</p>
+        <p>Zoning back into reality, Tali realized that she would not find any magical words, and so she just settled for the obvious approach. &quot;So... this is it. Everyone is pretty on edge, it seems.&quot; She fell silent for a couple of seconds more, trying to formulate it just right, until she finally accepted that she would just have to be blunt. &quot;How are you holding up, Shepard?&quot;</p>
+        <p>She wasn&#x27;t sure what kind of answer she had expected, but Shepard&#x27;s short burst of laughter had not been it. Straining her muscles against the weight of her helmet and skull, she brought it back up and looked at her. &quot;What&#x27;s so funny?&quot;</p>
+        <p>Shepard sat back up herself, her typical lopsided grin on her face. &quot;I was just sitting here thinking about the pep talks I still have left to do before we get there, and here you seem to have come by to give one to me instead. &quot; She lowered her gaze to scratch her neck, and continued. &quot;I appreciate the thought, but I&#x27;m fine.&quot;</p>
+        <p>Tali just looked at her. When that had no effect, she tilted her head, too. That got Shepard to inhale deeply, dropping back to the bed. &quot;I am fine, Tali. Believe me. I will see this through, and I&#x27;ll get you all through it in one piece. I promise.&quot;</p>
+        <p>&quot;Just us? What about you?&quot;</p>
+        <p>&quot;Me too, preferably.&quot; Shepard snorted, but Tali could tell that was not really amused. She sighed. She had known this would be difficult. She was no good at this. But Shepard needed it, if she wanted to admit it or not, and Tali would not let her down. She gathered her courage, and played the only card she could come up with.</p>
+        <p>&quot;Shepard. Jane.&quot; She felt hot again, never having called her that before. Shepard had noticed it too, propping herself up on her elbows and looking at Tali with a thoughtful expression on her face. As much as Tali would speak her mind in matters where she felt competent, outside of that, she was not the most assertive person and Shepard knew it.</p>
+        <p>&quot;I know you have to be the immovable Commander Shepard for all the others out there. But this is your cabin, and... it&#x27;s me. Don&#x27;t you think I see how much you hate it every time you have to give us a risky order? And now we&#x27;re headed into the lair of the Ill&#x27;shatz, for the final battle, and you will have no choice but to have every one of us give their all. Talk to me, Shepard.&quot;</p>
+        <p>She had wanted to say Jane&#x27;s first name a second time, not just to drive her point home as much as possible, but also because she just really liked it, but it would have been more than she could handle right now. At this point she was almost shaking from the tension, her hands buried into the armrests of the chair to keep them from coming together in front of her again. This was it, Shepard would either open up to her or blow her off and leave her with the embarassing realization that their friendship had been much deeper in her mind than in reality. It did not happen. Instead, Commander Jane Shepard, the first human Spectre and hero of Elysium, slowly erected herself back onto the edge of her bed, rested her elbows on her knees, and cupped her face in her hands for a long moment, before running them through her hair and then clasping them together in front of her chest as she looked at Tali.</p>
+        <p>&quot;I really don&#x27;t know what I&#x27;ve done to deserve you, you know that?&quot;</p>
+        <p>Relieved, but also perplexed by Shepard&#x27;s reaction, she blurted out her answer before she had had much time to think about it. &quot;Are you serious!?&quot; Shepard did not react to that with anything but with a furrowing of the brow that, as she had learned over the months , was a sign of slight confusion; Quarians were quite apt when it came to interpreting body language, but when it came to facial expressions, she had found herself somewhat lost at first, which, when she had thought about it, really should not have surprised her given the fact that even among themselves quarians barely ever saw each others face, thanks to the tinted visors they were forced to wear. Fortunately, humans and Asari seemed to share most of them, so that was at least some effort taken out of it, and Turians had such a limited range of expressions with those bony faces of theirs that in the end, it was actually quite manageable.</p>
+        <p>&quot;You&#x27;ve been there for us, for me. Always. No matter how difficult it was for yourself or how you were feeling. When I texted my cousin about the cubicle you made for me, she lost her mind. And the Geth data...and everything else. You have always done right by me when barely anyone else outside the flotilla would, keelah, far more than just right! This entire...&quot; she gestured towards the walls surrounding them &quot;...thing here, as scary as it is, it&#x27;s also been great! I work on one of the most advanced ships in the galaxy! I have friends! I have a Captain who looks out for me! And you&#x27;re asking me how you deserve me? I... I&#x27;m just trying to be there for you, for once.&quot;</p>
+        <p>Shepard had been awkwardly looking at her feet for most of Tali&#x27;s outburst, but towards the end, she slowly raised her head about half way up, giving Tali a sheepish smile and glance. Tali could sense that she finally had her now, and so she just stared back at Shepard, directly into her eyes. Eyes were the one part of a face Quarians knew all about , their own reflective ones being the only tool for facial emoting they really had behind their visors. She chastised herself for the hopeless thought, but she could not help but notice once more that Shepard&#x27;s blue ones were simply fascinating. They were her windows into Shepard&#x27;s soul.</p>
+        <p>She did not have to wait long for Shepard to speak. &quot;Tali...you have always been there for me. And I&#x27;m happy you have. You&#x27;re...a good friend. The best. I think I would&#x27;ve snapped about three times by now over the course of this insane hunt if not for you. I hope you know that.&quot;</p>
+        <p>Tali was surprised, as well as happy and concerned at the same time. She had not known that. Shepard continued.</p>
+        <p>&quot;Truth is, yes, I&#x27;m worried immensely about what we&#x27;re about to do. It&#x27;s like you said, there will be no place for errors or holding back.&quot; She looked down, scratching the back of her head again. She was struggling with her words too, it was clear to see, and at this point, she had evidently given up trying to conceal it. &quot;I might have to make a choice again. Like...Virmire. I know that it&#x27;s part of the job. I&#x27;ve known it for a long time. Virmire was not the first time. Hell, I used to be okay with it, I just..kept my distance. But still..I&#x27;ve had about enough of that for the rest of my life.&quot;</p>
+        <p>Her heart went out to Shepard. Her ideas about what was going on in Shepard&#x27;s head had turned out quite accurate, but to hear it from the woman herself was something different.</p>
+        <p>&quot;And with this mission...with this group. It&#x27;s different. I&#x27;ve rarely served with such a tight knit team. I consider all of you friends. Some of you among the best I&#x27;ve ever had.&quot; Shepard looked her in the eye as she said that, and Tali blushed, knowing who Shepard meant with that. &quot; Leaving Kaidan on Virmire, I ... don&#x27;t blame myself or anything like that, but it has reminded me of how these things can go.&quot; She paused, and then, silently, added: &quot;I&#x27;ve made my peace with Kaidan&#x27;s death, and it&#x27;s still going to stick with me for a long time. I don&#x27;t want to lose one more. In the end it&#x27;s really nothing special. I&#x27;m just afraid of the cost, that&#x27;s all.&quot;</p>
+        <p>Silence descended on them once more as Tali tried to find something to say, anything to comfort Shepard. In the end, Shepard was right, and she could not think of anything to alleviate Shepard&#x27;s concerns. It was as she had said, plain and simple. So she told her the one thing she could.</p>
+        <p>&quot;I&#x27;m afraid, too. But I&#x27;m also confident, because I know you will do your best. And that is a lot. That is all anyone can ask of you. I have faith in you, Shepard. If anyone can see us all through this, it is you. And if something...happens, I...if you can&#x27;t make it happen, no-one can. Anyway, I am with you every step of the way.&quot;</p>
+        <p>Finally, a sincere, unconflicted smile. &quot;I know. Wouldn&#x27;t want it any other way.&quot; She fell silent, as if contemplating if there was something else she should say. &quot;Sooo...&quot; She shot a look at the clock. &quot;Still two and a half hours to go. Wanna watch a short movie before I go and make my final round?&quot;</p>
+        <p>Tali nodded enthusiastically, happy that Shepard seemed a little relieved, despite of it all, at least for now, and made her way to sit down on the bed with her, their backs rested against the bulkhead behind Shepard&#x27;s pillow, her desktop serving as a monitor as it had done a couple of times already during the last weeks. Bringing up her omnitool to connect to the monitor, Shepard paused and looked over to Tali once more.</p>
+        <p>&quot;Tali?&quot;</p>
+        <p>&quot;Yeah?&quot;</p>
+        <p>&quot;Thank you.&quot;</p>
+        <p>She found herself smiling wide and tilting her head. Any time, Jane. &quot;Any time, Shepard.&quot; Shepard had visibly relaxed, and seeing her unwind, so did Tali. Shepard&#x27;s finger hovered over the selection button of the holographic display.</p>
+        <p>&quot;You know, Garrus told me about this goofy little movie you&#x27;re supposedly super into, Fleet and Flotilla, and I - &quot;</p>
+        <p>&quot;Absolutely not !&quot;</p>
+    </div>
+</body>
+</html>

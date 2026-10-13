@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 55</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch54.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html" selected>Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch56.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 55</h1>
+    <div class="chapter-content">
+        <p>The sharp stench of burning Geth assaulted Miranda&#x27;s nostrils, scratched at her throat and made her cough. The skirmish was over; the synthetics had been present at nearly platoon strength, and the colossus had proven a big obstacle, but eventually the ones that remained had begun a disciplined retreat. The colossus had stayed behind and covered them; as far as Miranda could tell, they&#x27;d cut their losses. Which meant that their objective had either been met or was now out of reach - either way, the day was done. And given that Grunt was currently triumphantly raising the colossus&#x27; torn off head high above his own, standing on top of the giant walker he&#x27;d just brought down, she was cautiously optimistic that things had gone their way.</p>
+        <p>She looked around; most of her team – her team! - had set up a perimeter, Garrus Vakarian directing Kasumi and Jack, the least militarily experienced ones, into better covers. Massani and some of the Quarians were stalking the charred, partially burning battlefield and made sure none of the Geth would ever get up again. The rest of the marines was still up on the ridge. She was satisfied with the way the engagement had gone; the Quarians were disciplined, reliable soldiers who&#x27;d given them the cover needed to go over the top and engage the Geth in close combat, and they had, with Jacob&#x27;s help, kept the colossus occupied enough for the whole attack to not end in disaster before it even got underway.</p>
+        <p>It would of course have been preferable if Shepard and Grunt hadn&#x27;t abandoned the fight just as they were about to finally close with the colossus, but the synthetics had eventually breached the door, and they&#x27;d come here for a reason after all. Miranda just hoped they hadn&#x27;t been too late.</p>
+        <p>She had a brief exchange with the shuttle, instructing the pilot to come pick them up and getting an update on the void engagement in the process. Apparently the Normandy had taken a bit of a bruising but remained functionally intact, and while the Geth cruiser remained untouchable, Joker had managed to cripple the remaining two lighter Geth vessels to the point that they were now huddling in the protection of the larger ship and the entire little flotilla had begun to limp it&#x27;s way out of the system.</p>
+        <p>Someone passed behind her back, and she turned to see Reegar making his way towards the observatory as fast as he could manage in his state. Shepard was stepping over the cut up front door, Zorah in tow. Miranda started making her way over as well, but even from a distance it was plain to see the Quarian wasn&#x27;t in her best state; she stepped out into the yard slowly, one arm draped over Shepard&#x27;s shoulders.</p>
+        <p>&quot;Are you alright, ma&#x27;am?&quot;</p>
+        <p>Zorah raised her head with obvious strain. &quot;Reegar! You made it!&quot;</p>
+        <p>&quot;And most of the boys too, ma&#x27;am. Your old captain is as good as you said.&quot;</p>
+        <p>&quot;Yes. She is.&quot;</p>
+        <p>Shepard coughed awkwardly. &quot;Miranda?&quot;</p>
+        <p>&quot;No casualties, commander, and the Geth&#x27;s ships are pulling out. I took the liberty to call for our extraction.&quot;</p>
+        <p>&quot;Good, good. Are your people okay, Reegar? Anything we can do to help?&quot;</p>
+        <p>The marine stretched his wounded leg and took a moment to answer. &quot;We&#x27;ve got some injured, but they&#x27;re not critical. Problem is...the Geth blew up our ship. You already saved our behinds once today, and I hate to ask for even more. But I&#x27;m afraid you&#x27;ll have to give us a ride out of here.&quot;</p>
+        <p>Shepard&#x27;s and Miranda&#x27;s eyes met; Shepard wasn&#x27;t going to think twice about it, she knew. Not that she disagreed. But there was an elephant in the room, and they both knew it. Shepard being Shepard though, she took it head on.</p>
+        <p>&quot;Tali tell you about my current alliances?&quot;</p>
+        <p>Reegar looked at Tali, eyes narrowed. &quot;Yes. A woman&#x27;s gotta take what she can.&quot;</p>
+        <p>&quot;Welcome on the Normandy, then. Might wanna gather your men, shuttle should be here any moment, you guys take the first trip. And take Tali with you.&quot;</p>
+        <p>The sergeant nodded crisply and, not as crisply, turned away. Shepard helped the somewhat dilapidated Zorah to sit, and took a seat of her own next to her; concluding that there was nothing for her to do right now, Miranda followed their lead. The commander unscrewed the lid of her water bottle and took a deep sip. &quot;Had any trouble out here?&quot;</p>
+        <p>&quot;To be honest, Ma&#x27;am, having you and Grunt run off when we were about to finish that thing off made things a bit chaotic. But we managed. And then they retreated, Grunt came back out and ripped the colossus apart...&quot; She shrugged.</p>
+        <p>&quot;Good. You did your job well, Miranda. Didn&#x27;t expect anything else.&quot;</p>
+        <p>She just nodded; it was awkwardly obvious Shepard was making an effort to have her feel appreciated, and it couldn&#x27;t hurt to reciprocate. Not that she had to try; there wasn&#x27;t a manipulative bone in the woman&#x27;s body, and Miranda was indeed satisfied that she and the commander were finally achieving a healthy working relationship.</p>
+        <p>Miranda looked Tali&#x27;Zorah over. The Quarian had sagged against the stone, her elaborate cloth wrappings out of place and littered with spots where the fabric had frayed out. &quot;Is Tali alright?&quot;</p>
+        <p>Zorah answered for herself. &quot;I&#x27;m fine. Well enough to speak for myself, at least.&quot; She let her gaze wander across the ruins surrounding them and sighed. &quot;We lost good people here, for...I can&#x27;t tell you, actually. But I can&#x27;t say that...I just hope the admirals get something worthwhile out of this data.&quot;</p>
+        <p>&quot;It better be valuable if they send you on a suicide mission like this.&quot;, Shepard said.</p>
+        <p>&quot;It wasn&#x27;t supposed to be one. Well, obviously. But really, this wasn&#x27;t even my first time infiltrating Geth space. We were careful, took our time coasting into the system, kept radio silence with anything stronger than a personal comms unit...to be honest, I have no idea how the Geth found us. Sheer bad luck, if I had to guess.&quot;</p>
+        <p>Shepard grimaced. &quot;Not exactly. The Geth got a tip from an old friend.&quot;</p>
+        <p>She looked at Shepard, puzzlement clearly visible, mask or not.</p>
+        <p>&quot;It&#x27;s the damn Shadow Broker. They&#x27;re not letting up...&quot; The commander sighed. &quot;We can&#x27;t continue our mission like this. I think it&#x27;s high time we finally kill that guy.&quot;</p>
+        <p>Tali stood at a console in engineering, familiarizing herself with the new Normandy. Cerberus&#x27; Normandy. With a thrice damned AI in it. Even when they were trying to be forthcoming and demonstrate their best behaviour, the underlying insanity of the organisation</p>
+        <p>still shone through.</p>
+        <p>At least her subordinates – not something Tali was all too used to having, but she had collected a little experience leading subsets of engineering departments these past two years, so it wasn&#x27;t too much of a novelty – both seemed capable enough as well as at least tolerable. It hadn&#x27;t taken long until Donnelly had given her his account of the duo&#x27;s experience at the battle of the Citadel, and Jane had vouched for the pair before Tali&#x27;d even met them. Alliance personnel. Useful idiots to Cerberus, as Jane had put it; she reckoned they&#x27;d been brought in to make the entire affair less insufferable for herself. At any rate, Tali was glad they were here. She wouldn&#x27;t have wanted to be alone with the AI, but there was no way she could&#x27;ve worked with actual Cerberus people.</p>
+        <p>So their presence had made her decision much easier. When the Normandy had dropped Reegar and the others off at Omega, Tali had stayed behind. Jane had worried that Tali&#x27;s unilateral decision would produce fallout; in truth, so was she. But she&#x27;d made up her mind, albeit it hadn&#x27;t been an easy decision. She wanted to be here, even if it wasn&#x27;t the original Normandy; she wanted to finally fight the fight that mattered again. And if she was honest, she wanted to be close to Jane.</p>
+        <p>But there was more. She simply could not imagine reporting back to the admirals in person any time soon. Eleven good men had died on Haestrom – and after spending many hours on the analysis of the data, Tali had decided for herself that what they&#x27;d gotten in return was not worth it at all. Haestrom&#x27;s sun, Dholen, was dying faster than it should. It was fascinating, truth be told, and worrying too. It was also irrelevant to the survival of the Quarian people, or the Reaper question. There were no active Geth installations in system, nothing that suggested that the synthetics had anything to do with the processes unwinding inside the star. They had known as much beforehand, from the simple long range scans that had hinted at the unusual happenings in Dholen in the first place.</p>
+        <p>And still the admirals, her father, had deemed the study of this astronomical aberration worth risking all their lives for. They&#x27;d all been dead if Jane hadn&#x27;t arrived in the nick of time. For more than a dozen more marines, it had been too late already. Some moments, she wondered if she&#x27;d been as outraged with this mission if she hadn&#x27;t been there herself. She wasn&#x27;t sure, but it ultimately did not matter.</p>
+        <p>A soft cough tore her from her thoughts, and she turned. Daniels was standing next to her with a datapad; Tali hadn&#x27;t even noticed. She apologized and brought her focus back to the work,; the new Normandy was as fascinating a technological marvel as the old one had been, and Daniels was both pleasant company and a competent colleague – both of which could be said for her sidekick as well, albeit to a marginally lesser degree – and so the hours went by fast. Hours Tali was counting down, because the place they were going to promised both progress in solving their current problems and a reunion she found herself anticipating more than she would&#x27;ve thought.</p>
+        <p>At the moment Tali finished her first complete check of the drive core and looked at the time, they were two hours and twenty seven minutes out from Illium. Apparently, Liara had settled on the illustrious Asari world, where she&#x27;d undergone a radical career change. Tali&#x27;d had to admit to Jane that she found it hard to imagine the mild mannered Liara as an information dealer on a personal vendetta against the Shadow Broker, but then again, she had changed over these past two years herself. So motivating their old friend to help them would most definitely not be an issue; not that Tali had expected it to be. And Jane already had something concrete to do for her, too; a cache with sensitive data on the Broker&#x27;s network.</p>
+        <p>Screw father. She overcame her reluctance and called up EDI. She was here to familiarize herself with the ship after all. Tjat meant all of it. Let him fume. This is were I belong.</p>
+        <p>In a dark room on an atmospheric station, at a location known only to a select few, the being known as the Shadow Broker was brooding.</p>
+        <p>Again, Shepard had reflected a blow. Already, one of the Broker&#x27;s most trusted agents was working to track down the leak – there was only one possible answer as to how the human had managed to arrive just in the nick of time to save her confidant, after all. A simple deduction that had, of course, been made by the Broker&#x27;s partners as well. The voice had chided him, had made it&#x27;s threats. The Broker was not in the habit of lying to himself, and yes, the thing still chilled him. But over the months and, at this point, years of their cooperation, he had learned to take a step back and focus on the big picture, and that perspective had alleviated his fears tremendously. Because there was another part of the truth.</p>
+        <p>The collectors needed him. If they had any agents of their own out in the galaxy, which he&#x27;d so far not caught the slightest whiff of, they evidently weren&#x27;t in any kind of position to carry out this task themselves.</p>
+        <p>Why they even bothered with all this was subject of his deepest, most strenuous ruminations. There was no doubt in his mind that the Reapers would have some sort of contingency plan that would eventually see them arrive in the Milky Way. What was it about Shepard, that they seemed this hellbent on taking her out before that? The human was competent and knew the threat, sure. But she was just one woman. The other possibility, of course, was that the reason behind the Reaper&#x27;s desire wasn&#x27;t fear or caution at all. That there was something else they had to gain from her death – and her body, which they were still keen on obtaining.</p>
+        <p>But the Broker could not come up with a plausible theory regarding what they&#x27;d ever want with it.</p>
+        <p>He tore himself from his thoughts and pulled up a contact. After a certain number of times of trying one thing and failing, it was usually best to attempt something different. Especially if that other approach had already worked once in the past. Shepard had proven a pesky habit of showing up in unexpected places at unexpected times, and her tactical acumen and sheer martial prowess had so far carried her through every skirmish.</p>
+        <p>Except that one time where it hadn&#x27;t. That time where the game had been rigged from the start. Where hadn&#x27;t been the one to show up unexpected.</p>
+        <p>The Broker made the call. It was time to stop playing to Shepard&#x27;s strengths, and return to playing to his own.</p>
+        <p>His contact replied within two minutes.</p>
+        <p>&quot;At your service, Shadow Broker.&quot;</p>
+        <p>&quot;Greetings, Gorgon. I need you to facilitate a call.&quot;</p>
+        <p>&quot;A call, Sir? You will be speaking to the contact in person?&quot;</p>
+        <p>The Broker didn&#x27;t usually appreciate stupid questions, but the occurrence was rare enough that some lenience was in order.</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>&quot;As you wish, Sir. Who will you be dealing with?&quot;</p>
+        <p>&quot;Thane Krios.&quot;</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 63</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch62.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html" selected>Chapter 63</option>
+            </select>
+            <button class="nav-button" disabled>Next →</button>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 63</h1>
+    <div class="chapter-content">
+        <p>Entering the Broker&#x27;s office, Shepard was amazed to find the creature actually present.</p>
+        <p>&quot;Commander Shepard. You made good time.&quot;</p>
+        <p>Jane gestured the team to fan out. The situation did not sit right with her. &quot;I&#x27;m surprised you are still here.&quot;</p>
+        <p>The creature shrugged, slowly. &quot;Once we get started, you might find the balance of power not tipping in the direction you expected.&quot;</p>
+        <p>The Broker&#x27;s calm and confidence was unsettling. The entire operation up to this point had gone just fine. Too fine, for Jane&#x27;s liking. He&#x27;s got something up his sleeve, or he wouldn&#x27;t sit there. Trying to take in as much of the room as she could, looking for the trap she was getting more and more worried might be about to be sprung, she said: &quot;We&#x27;ll see. But first, I&#x27;d like to ask you something. Why are you doing all this? You must know who the Collectors are working for. What do you get out of killing me?&quot;</p>
+        <p>The gigantic alien leaned back. &quot;Killing you was never the objective, obtaining your body was. Preferably in a somewhat recognizable state. Even if Miss Lawson has demonstrated that to be less of a necessity than originally thought.&quot;</p>
+        <p>The jab failed to stir anything in her, but Jane still wondered what the Broker was trying to do. Was this supposed to rile her up? Or did the thing simply enjoy demonstrating it&#x27;s knowledge of things it wasn&#x27;t supposed to know?</p>
+        <p>The alien continued. &quot;What the Collectors want with it, I do not know. And frankly, I do not need to care. Delivering you will see me rewarded with the last piece I am still missing.&quot;</p>
+        <p>Jane grimaced. &quot;Missing for what?&quot;</p>
+        <p>&quot;What do the Reapers do every fifty thousand years, Commander?&quot;</p>
+        <p>She did not give the alien the satisfaction of answering to his rhetorical question, mulling it over in silence instead. Eventually, it continued unprompted.</p>
+        <p>&quot;Wiping out spacefaring civilizations. I take it you do not know what I am, though Doctor T&#x27;Soni might have figured it out by now.&quot;</p>
+        <p>The Asari stiffened at the mention. &quot;You&#x27;re a Yahg. Your species was sentenced to indefinite containment on their home planet after they butchered and ate the council&#x27;s first contact envoys.&quot;</p>
+        <p>The beast nodded heavily. &quot;Your peoples play at ruling this galaxy, holding power over mine by pure happenstance. But they elect to ignore the coming storm. Soon it will be too late for you, and the Reapers will scour this galaxy clean of your kinds.&quot; The Yahg flared some of the bright red sails on it&#x27;s head. &quot;The galaxy will belong to the Yahg.&quot;</p>
+        <p>Shepard&#x27;s answer came out between gritted teeth. &quot;So they can get harvested too, just later? Fifty thousand good years, is that what this is?&quot;</p>
+        <p>&quot;No - which is why I need this deal. My collection of Reaper tech is extensive. Perhaps larger even than your employer&#x27;s.&quot; That thing knew exactly how much Jane hated her deal with the devil, and apparently it loved to rub it in. &quot;But there is only so much one can realistically learn from wreckage. The Collectors will reward me with fully functional pieces of technology. Shield generators, ship grade weaponry. Fifty thousand years is a long time, and my kind live long. We will be ready. The cycle will be broken. By the Yahg.&quot; The Broker rose to it&#x27;s feet.</p>
+        <p>&quot;You&#x27;ll be an indoctrinated husk.&quot;</p>
+        <p>Fangs were bared. &quot;A technological problem that will see a technological solution.&quot;</p>
+        <p>Jane nodded grimly. &quot;I think I&#x27;ve heard enough.&quot;</p>
+        <p>The Yahg actually chuckled – it was a harrowing, bone chilling sound. &quot;You have given me considerable trouble, Commander. A woman of your stature deserves some answers before she dies, but I agree. This conversation is over.&quot; Without taking it&#x27;s eyes off Shepard, the Broker continued: &quot;Now, Mister Krios.&quot;</p>
+        <p>The sudden, sinking feeling in her stomach did not slow down Jane&#x27;s response. Not even half a second had gone by when her hand cannon was already leveled squarely at the Drell&#x27;s head, Miranda and Garrus lagging not far behind. The rest of the team seemed to react either with shock, or not at all.</p>
+        <p>Nobody fired though, for Thane, looking completely unperturbed, answered the Broker&#x27;s prompt not with whatever action the massive alien had expected, but with a single world. He no longer even held his weapon in hand, having crossed his arms in front of his chest instead, a pose Jane could not remember having seen him in before even once.</p>
+        <p>&quot;No.&quot;</p>
+        <p>&quot;No?&quot;</p>
+        <p>&quot;No.&quot;</p>
+        <p>&quot;May I ask why?&quot; Amazingly to Jane, the Broker conveyed genuine curiosity more so than threat.</p>
+        <p>Thane blinked. &quot;You really do not know. I was struggling to believe it until just now.&quot; The Drell inclined his head. &quot;That a being of your intelligence and resources would struggle to grasp something so basic is beyond me. Did you really think I would not find out?&quot;</p>
+        <p>&quot;Find out what? I can remember half a dozen transactions to the disadvantage of possible present employers of yours.&quot;</p>
+        <p>The Drell shook his head. &quot;Stop this farce, it is embarrassing. You know what I am talking about.&quot;</p>
+        <p>The Yahg growled so deep Jane all but felt it in her bones and put it&#x27;s massive hands down on the desk. &quot;Your wife.&quot;</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>&quot;The agents the Batarian&#x27;s had hired made a good offer for that piece of information. It was nothing personal. But I suspect you feel otherwise.&quot;</p>
+        <p>Somehow, the Drell remained calm and composed. &quot;You are correct.&quot;</p>
+        <p>&quot;One more question. How did you find out? I reviewed their death certificates and autopsies personally. All of them died immediately when their skycar crashed.&quot;</p>
+        <p>&quot;I did not learn it from the agents themselves. Krishak had a favorite whore, and he told her quite a lot about his dealings. She did talk eventually, but not before I chemically encouraged her to do so, and that cost her life in the end.&quot; The Drell shrugged. &quot;A real tragedy. Krishak&#x27;s death had wounded her deeply, I heard it said afterwards that she took the drugs to sooth her broken heart.&quot;</p>
+        <p>Some of the Broker&#x27;s numerous pupils dilated. &quot;That woman died of a Red Sand overdose, there was nothing else in her system. My agents questioned the examiner thoroughly.&quot;</p>
+        <p>There was not a hint of a smile on Thane&#x27;s face, otherwise Jane might&#x27;ve thought he was gloating. &quot;I&#x27;m sure they did. But it appears there are secrets even the Shadow Broker doesn&#x27;t know yet.&quot;</p>
+        <p>The Yahg glowered at the Drell for a couple more seconds, before roaring in anger and gripping the table, shoving it aside with a grunt of effort, it&#x27;s bulging muscles flexing in a frightening display of strength. Screws flew through the room; the table had been bolted to the floor.</p>
+        <p>Grunt laughed approvingly.</p>
+        <p>Armored shutters at the back end of the room lifted, revealing dozens of mercenaries in position along the gallery.</p>
+        <p>Jane shot first.</p>
+        <p>The hall erupted into carnage. Jane spent her entire clip taking out a Turian with a light machine gun, while a rocket streaked past her right side and took out a mounted, armored turret. The explosion showered the nearby mercenaries in shrapnel, making their shields flare brightly and causing a temporary lull in their fire. Jacob threw the spent launcher to the ground and sprinted to the next cover, a console far too large for a man to work at comfortably. Jane joined him as fast as she could, her own shields already drained down to half.</p>
+        <p>From the relative safety of her new position, she took a moment to assess the situation. There were no casualties on their side, everyone having either reached cover in time or having no need of it – in the center of the room, Samara stood tall, surrounding herself of a biotic barrier three meters wide. It shrugged of a hailstorm of bullets, and still the justicar&#x27;s face showed merely a hint of strain. Next to her where Miranda and Jack, using their own powers to shower the enemy in lethal, weaponized mass effect fields.</p>
+        <p>Grunt had ignored the firefight altogether and instead rushed the Broker, and Jane found herself thinking that had probably been a good thing. The massive alien stood well over two meters tall and could have broken or ripped apart half her team already if it hadn&#x27;t been busy with the Krogan.</p>
+        <p>But as absurdly large and strong as Grunt was, Jane doubted he could beat this thing on his own. She was about to launch herself forward when she saw the Yahg impacted by a dark blur; it actually flinched and swatted at the new enemy, but Thane was too fast. He bobbed and weaved even as a spinning kick sent Grunt flying. Jane cursed. Those two wouldn&#x27;t hold out forever.</p>
+        <p>She switched her handgun over to her left, drew the machete from it&#x27;s sheath with her right and charged the Shadow Broker.</p>
+        <p>The Yahg moved far too fast for something of it&#x27;s size, but the Drell exceeded him, landing numerous kicks and punches. None of them seemed to achieve anything, though. Thane relied on precision rather than brawn; to this end, he knew exactly how to kill any intelligent being in the galaxy with minimum effort.</p>
+        <p>It occurred to Jane that Thane might not know how to kill a Yahg.</p>
+        <p>She came under fire from somewhere on the gallery, but ignored it. It would cease as soon as she got close to their employer. Seconds later she connected with the Broker just as the giant, having dropped it&#x27;s machine gun in the melee, reached down to retrieve a device from the ruins of his work station.</p>
+        <p>An energy shield flared to life, repelling both Jane&#x27;s blade and herself. It was as if she&#x27;d run into a wall, and she hit the ground hard. Nevertheless she forced herself to roll to the side, narrowly avoiding a stamping hoof almost the width of her chest. Then the others got back into the fight, giving her time to get up.</p>
+        <p>The Broker was using it&#x27;s energy shield both as protection and as a weapon. Grunt grappled with him over it, and the Krogan actually managed to hold it down. Then the device flared brightly and he was thrown back as if struck by an electric charge, bellowing in pain.</p>
+        <p>Thane had used the distraction to get on top of the Yahg&#x27;s back and lay into him with a knife. He&#x27;d drawn blood, too; but none of the wounds seemed to slow the beast down as of yet. Ducking under a fist, Jane closed in and slashed it across it&#x27;s leg. The blade bit deep, and the Broker flinched back - then it&#x27;s knee came forward with undiminished power. Jane did not manage to evade entirely and was flung back several meters, struggling to stay on her feet.</p>
+        <p>She cursed and emptied her entire clip. The first round struck her adversary&#x27;s shoulder, then the shield was up. The Broker was snarling now, spit dripping down the fangs of it&#x27;s wide open mouth.</p>
+        <p>Good, we&#x27;re getting there.</p>
+        <p>It had thrown Thane off and managed to hit him with a savage swing. The Drell was on the floor, meters away, and weakly trying to get up. The Broker took a step in his direction. Jane interposed herself between it and her downed man. It growled and struck at her, using the machine gun it had picked back up as a club. Jane barely managed to avoid the blow. The next one was easier to dodge, but forced her back further. She threw a quick glance over her shoulder – Thane had shakily risen to one knee. That would not be enough.</p>
+        <p>Grunt came on again, firing and repeating his shotgun as he came. It forced the Broker to retreat, so as to cover itself from both of their firearms at once. Jane used the distraction for a glimpse at the wider situation; the bigger firefight around them continued unabated. Several mercenaries lay dead, not all of them still in once piece. Back in her team&#x27;s own cover, Jacob was applying medigel to someone; before Jane could comprehend who had been wounded, she had focus on the enemy at hand once more.</p>
+        <p>The Broker had decided to rush her. Jane dodged the Yahg&#x27;s first attempt at a bear hug by way of jumping to the right, but the damn thing was too damn agile. She hacked at one of the gigantic hands reaching for her, severing some fingers; but even as the Broker bellowed in pain, his good hand closed around Jane&#x27;s head and smashed her into the ground, face first.</p>
+        <p>Dazed, Jane&#x27;s clearest sensation was the taste of blood and the disgusting, scraping feeling of a tooth sliding down her gullet. Somehow, she&#x27;d gotten on her hands and knees and pushed herself up, purely by instinct. Something hit her from below and she doubled over, just to be flipped on her back and hit the back of her head on the floor, hard.</p>
+        <p>The massive from of the Broker stood over her, raising it&#x27;s machine gun with both hands. Jane knew that she needed to get away or the blow would shatter her skull, but her strength was failing her. She was moving pathetically slowly. It would never be enough.</p>
+        <p>Then Grunt barreled into the monstrosity, deflecting it&#x27;s blow with one arm while wrenching his shotgun straight into the Broker&#x27;s teeth with the other. The machine gun dented the floor some inches to the side of Jane&#x27;s face with an almighty crack; milliseconds later, the sound was outdone by the booming report of Grunt&#x27;s obscenely oversized weapon.</p>
+        <p>The Shadow Broker crashed to the ground, oozing blood and other fluids everywhere. The thing&#x27;s face was a gory ruin that bore not the slightest resemblance to what had been there before.</p>
+        <p>The sounds of the still ongoing firefight came back into Jane&#x27;s attention, and she, weakly, tried to rise. She was stopped by two strong arms lifting her up. &quot;Good fight, Shepard.&quot; Grunt started to carry her back towards cover, shielding her with his massive bulk. &quot;I was wondering what the hell kind of enemy could beat you. Guess that settles it.&quot;</p>
+        <p>&quot;You gonna- &quot; she coughed. &quot;You gonna challenge me for the leadership now?&quot;</p>
+        <p>The Krogan laughed as he put her down in relative safety. &quot;No way, Shepard. I&#x27;m Krogan, not stupid.&quot;</p>
+        <p>A long while later, after all was said and done and the last remaining mercenaries had either laid down their arms or been eliminated, Jane returned to the Broker&#x27;s control room. Finding Liara still working on the terminals, Garrus standing guard, and Thane brooding over the Yahg&#x27;s body, and she decided it was time to have this conversation now.</p>
+        <p>She walked up to Thane with purpose. The Drell looked up expectantly, but did not move.</p>
+        <p>Then Jane&#x27;s fist barreled into his jaw and laid the lithe alien out across the floor. When she thought about this moment later, Jane came to the conclusion that Thane most likely could have avoided the strike without issue, but chose not to. He landed heavy and lay still for a moment; he grimaced shortly, but then rose without a sound of pain to stand before Shepard and look her in the eye.</p>
+        <p>&quot;Your anger at me is well deserved. I shall not deny it.&quot;</p>
+        <p>&quot;Good.&quot; Jane bristled, struggling to find somewhat calm words and not shout. &quot;You used us.&quot;</p>
+        <p>&quot;I did.&quot;</p>
+        <p>&quot;Someone could have died!&quot;</p>
+        <p>&quot;Yes. But that was always a possibility, even if I had told you.&quot;</p>
+        <p>&quot;Why didn&#x27;t you?&quot;</p>
+        <p>The Drell shrugged. &quot;If you&#x27;d known, you would have been more careful, and the Broker might have suspected my treachery. Perhaps it would have been more dangerous than it was without you knowing.&quot;</p>
+        <p>&quot;Perhaps. Or perhaps not.&quot;</p>
+        <p>&quot;We will never know.&quot;</p>
+        <p>Jane&#x27;s rage had somewhat simmered down, but the idea of punching the man a second time was still tempting. She had to will herself not to do it.</p>
+        <p>&quot;I should kick you out. I don&#x27;t know how I can trust you ever again. Or how any of them can.&quot;</p>
+        <p>&quot;I understand. But know this: I am willing to die for your cause. Now that I&#x27;ve...taken care of this last desire of my heart, I can die with peace of mind. I&#x27;d rather it be in battle than in a hospital bed. And I can still help you.&quot;</p>
+        <p>&quot;Yes, you can. And you will. I need you too much.&quot;</p>
+        <p>The Drell inclined his head. &quot;Thank you, Shepard. I am yours to command.&quot;</p>
+        <p>&quot;Good.&quot; She started walking past him, but stopped. &quot;If you ever do something like this again, I don&#x27;t know what I&#x27;ll do.&quot;</p>
+        <p>They stared into each others eyes for a very long moment until Thane broke the eye contact with a nod. Shepard left without another word.</p>
+        <p>…...</p>
+        <p>Tali forced her fiddling fingers apart, trying to get a hold of herself. Keelah, I&#x27;m like a schoolkid who got sent to their supervisor. The analogy was way off; after all, schoolkids about to be reprimanded did not generally look forward to it.</p>
+        <p>Joker drew her attention. &quot;Hey, Tali.&quot;</p>
+        <p>&quot;Hey.&quot;</p>
+        <p>&quot;Since I ended up winning that bet, you know, that one about you and the commander...&quot;</p>
+        <p>&quot;You&#x27;ve got some nerve bringing that up.&quot;</p>
+        <p>&quot;Yes, I&#x27;m amazing. Anyway. Care to hear another bet?&quot;</p>
+        <p>She sighed. &quot;You&#x27;ll say it anyway.&quot;</p>
+        <p>The pilot grinned. &quot;You&#x27;re gonna give her the Williams treatment, won&#x27;t you?&quot;</p>
+        <p>Tali felt caught. &quot;The what now?&quot;</p>
+        <p>&quot;Oh come on, you know what I mean. Leave the ship together, but she has to go in her hardsuit - on Illium? But it&#x27;s not a mission. Gee, I wonder what you guys are gonna get up to.&quot;</p>
+        <p>She scoffed. &quot;Bosh&#x27;tet.&quot;</p>
+        <p>&quot;Yeah, I&#x27;m scary intelligent. I know.&quot;</p>
+        <p>&quot;Hey, this is a surprise! I swear, if you -&quot;</p>
+        <p>Joker held up his hands. &quot;Hey, calm down. I won&#x27;t say a thing, promise.&quot; He grinned lopsidedly. &quot;Sorry Tali, I didn&#x27;t mean to be a dick. I&#x27;m just happy for you guys.&quot;</p>
+        <p>&quot;It&#x27;s alright. You&#x27;re not a dick.&quot;</p>
+        <p>&quot;I am a bit of a dick..sometimes. You can say it.&quot;</p>
+        <p>Tali chuckled. &quot;Yes, you really are. Sometimes.&quot;</p>
+        <p>Joker turned in his seat and got to work on his console as heavy footfalls on the decking announced Jane&#x27;s arrival. Tali turned around and her nervousness was replaced with a pleasant feeling of anticipation.</p>
+        <p>&quot;There you are. Let&#x27;s go!&quot;</p>
+        <p>The big, heavy helmet nodded, and she answered on her external speakers, slightly distorted. &quot;Yes. I have to admit, you&#x27;ve got me curious.&quot;</p>
+        <p>A witty response eluded her, and so she just smiled at Shepard under her mask and pushed the button.</p>
+        <p>Two minutes later, they were walking down a crowded street, surrounded on all sides by members of all species, albeit mostly Asari. This was Illium, after all.</p>
+        <p>&quot;So where are we going then?&quot;</p>
+        <p>&quot;You&#x27;ll see.&quot;</p>
+        <p>&quot;Hm.&quot;</p>
+        <p>Jane looked somewhat skeptic, as did a good number of the passers-by when they laid eyes on the armed and armored woman trudging through the throngs. Tali hoped that Jane would stop pestering her, and fortunately, she obliged.</p>
+        <p>&quot;You did well in the...on the last mission. With a lesser hacker, I think we might have lost some to the traps.&quot;</p>
+        <p>&quot;Yes, we might...thanks you. I did have Thane to help me, though. He wasn&#x27;t half bad himself with these contraptions, really helped me out. I suppose he&#x27;s had lots of experience.&quot;</p>
+        <p>Jane took a while to reply, and Tali regretted bringing the Drell up. Her captain hadn&#x27;t taken lightly to Thane&#x27;s double agent game behind their backs, and her anger still simmered just underneath the surface. Tali decided to change the subject before the mood could be ruined in earnest.</p>
+        <p>&quot;You remember what I told you before that last mission.&quot;</p>
+        <p>&quot;I do.&quot;</p>
+        <p>&quot;Good, because I meant it. Wait here for a moment, we&#x27;re there.&quot;</p>
+        <p>She entered the shop, seeing, to her surprise, another Quarian just leaving. Perhaps she hadn&#x27;t been the first to have this idea, or perhaps they just worked here. It didn&#x27;t take her long to find the person she&#x27;d been talking to and find out which room they&#x27;d be in.</p>
+        <p>&quot;What kind of place is this?&quot;, Jane asked when Tali returned to her.</p>
+        <p>&quot;A butchery.&quot;</p>
+        <p>Shepard gave her a surprised look. &quot;Uh-huh.&quot;</p>
+        <p>&quot;You&#x27;ll see it soon enough.&quot;</p>
+        <p>Indeed, it was only a minute or two until she&#x27;d found the room and they stepped into the airlock. When she turned to Jane, Shepard was looking at her curiously. &quot;A decontamination unit?&quot;</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>At this point, Shepard had to have some sort of idea of what she was up to, but said nothing. Stepping into the room proper, Tali began.</p>
+        <p>&quot;Jane, I...what we&#x27;re doing is dangerous. I&#x27;ve no doubt that we&#x27;ll get it done. I really don&#x27;t. But the truth is, we can&#x27;t be sure that all of us will come back. Or anyone at all.&quot;</p>
+        <p>Shepard held her gaze, but said nothing.</p>
+        <p>&quot;I could show you a picture, but it&#x27;s not enough.&quot; She stepped closer and put a hand on Shepard&#x27;s breastplate, mincing her words. Eventually she just blurted it out. &quot;I love you.&quot;</p>
+        <p>Even with just Shepard&#x27;s eyes visible to her, she knew Shepard was smiling. Then she took Tali&#x27;s hand in her own and put her helmet against Tali&#x27;s. &quot;I love you too.&quot;</p>
+        <p>They hugged fiercely and said nothing for a while. Eventually she stepped back from Shepard. &quot;You make me very happy, Jane. But I would have you see my face before we go back out there again.&quot;</p>
+        <p>Shepard straightened, no doubt having expected as much by now. &quot;You know I want to. But I hope you also know you don&#x27;t have to do this. I know who you are, Tali&#x27;Zorah. And I fell in love with you not knowing what you look like. It can stay that way.&quot;</p>
+        <p>It warmed her heart to hear Shepard say it.</p>
+        <p>&quot;I know. But I want to.&quot;</p>
+        <p>With that, she began the necessary steps. Sealing the suit off at the neck, opening the mask seals, disconnecting the helmet from the suit&#x27;s neck.</p>
+        <p>Then, her heart beating loudly in her chest, she grasped the helmet with both hands and pulled it up and off in one smooth motion.</p>
+        <p>Somewhat reminded of the similar occasion with Ashley, it took her a moment to build up the courage to look at Shepard. When she eventually did, she found Shepard beaming at her.</p>
+        <p>&quot;You know, I would&#x27;ve loved you even if you looked like Garrus...but thank god you don&#x27;t. I always tell him you&#x27;re prettier than him. I was right.&quot;</p>
+        <p>She grinned. &quot;Bosh&#x27;tet.&quot;</p>
+        <p>THE END</p>
+    </div>
+</body>
+</html>

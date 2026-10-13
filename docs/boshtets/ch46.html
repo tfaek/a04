@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 46</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch45.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html" selected>Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch47.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 46</h1>
+    <div class="chapter-content">
+        <p>&quot;Alright, &quot; , Jane said, &quot;let&#x27;s do this.&quot; She took half a step back, forming a circle made up of her and Tali, Tali&#x27;s squad leader, and Lawson.&quot;Our scanners picked up two ships playing catch along the edge of the system when we came in. I take it the smaller one is yours?&quot; , she addressed the man.</p>
+        <p>The Quarian nodded. &quot;The Kaiwotz, yes. She&#x27;s just a light transport, and that other ship is a Blue Suns cruiser. They&#x27;ll never catch her, but getting off of this planet could get difficult without reinforcements. Those should arrive in a couple hours, though. The Blue Suns have done their best to make enemies of our people – my best bet, the Neema and her entire escort will be here soon.&quot;</p>
+        <p>Jane couldn&#x27;t help but be surprised. &quot;Good to hear. Hell of a commitment for this kind of operation though.&quot;</p>
+        <p>Tali helped her out. &quot;Not really. You see, this isn&#x27;t just about Han anymore, or even about getting us out of here. That&#x27;s a free cruiser right there. Gerrel won&#x27;t waste a chance like this.&quot;</p>
+        <p>&quot;Well it is good to know that there&#x27;s a way out,&quot; , Miranda chimed in, &quot;but we still need to actually complete our objectives.&quot;</p>
+        <p>Jane nodded. &quot;Right. From what our scanners picked up, there is fighting going on at one more location in town. You find out anything about that yet?&quot;</p>
+        <p>Prazza shrugged. &quot;That&#x27;s what we were going to check out when the Blue Suns pinned us down; my idea was to aid any survivors and then ask them about Han and what happened here. Didn&#x27;t work out so well for now. So no, we didn&#x27;t. Don&#x27;t really know about their numbers either, but given that they only sent something like twenty plus men or so to deal with us here, there can&#x27;t be too many of them over there. Fight didn&#x27;t look that big anyway from orbit.&quot;</p>
+        <p>They had all inched a bit closer together now, looking at Prazza&#x27;s tactical map he had projected into the air with his omnitool. It presented the layout of Freedom&#x27;s Progress, complete with their own position, the known ones of the enemy, and the rough area where the other firefight had been happening when the squad had last been in contact with the Kaiwotz. Jane took a few seconds to absorb it all, then she began to lay out her plan. She pointed a finger at the Blue Suns positioned in the houses and gardens north and north east of the comms tower, the sporadic fire of whom still persisted, providing the background noise for their conversation.</p>
+        <p>&quot;Well then. With the losses they took and the three of us now with you, we should be able to take these out. Standard procedure, my team is team one and goes in first. Your own assault element is team two.&quot;</p>
+        <p>Prazza mulled it over for a moment before answering. &quot;Good plan, but that&#x27;s a tall order for three people.&quot;</p>
+        <p>Jane had to admit that the man was right. Her gaze wandered to her right and she could feel a grim smile form on her lips without her doing as she laid a hand on Tali&#x27;s shoulder. &quot;True. But I think I know someone who&#x27;d volunteer for fourth spot on the team.&quot;</p>
+        <p>Tali beamed at her through the helmet and it felt like the old times that Shepard&#x27;s yesterday had become over night.</p>
+        <p>Tali laid flat on her belly, shotgun in hand and propped up for a double blast. To her right, she could hear Jane slowly and carefully moving around in the dirt, trying to get the best view. Shepard needn&#x27;t have emphasized quiet so much; the fight they were about to intervene in was still underlaying the scene with a continuous rattle of gunfire.</p>
+        <p>Breaking out of the deadlock at the comms tower hadn&#x27;t been much of a challenge after all. There had been less Blue Suns left than anticipated – not even twenty of them. Zirri was a damn good sharpshooter, it turned out. Not that Tali thought that it would&#x27;ve mattered much. These last two years she had been relaxed and collected in battle; now with Jane back at her side, she felt positively invincible. The awareness that this was foolish was there; but for now, the Quarian was just too high on the happy surprise. Not even the day&#x27;s, or rather evenings, bloody business was able to dampen her spirits. The only thing she was worried about was Han, but somehow Jane&#x27;s mere presence made her feel like all would be well.</p>
+        <p>It was dumb and she knew it, but she couldn&#x27;t help herself from savoring it.</p>
+        <p>Right now, Shepard was spying the Blue&#x27; Suns positions they assumed had to be in front of them. They were currently situated in a brush on a small hill overlooking the town&#x27;s main road. Running from the north east down to the south west, it sliced Freedom&#x27;s Progress roughly in half. Their target was on the other side – after restarting and accessing the settlement&#x27;s system from the comms tower, it had turned out that the building in the center of the fighting, the one which the Kaiwotz hadn&#x27;t attributed any special importance to, was actually a facility of the colony militia – their mech repository, to be exact.</p>
+        <p>Her radio crackled to life and Jane came through; she was addressing not only Tali, but it her two Alliance companions and Prazza were on the channel as well.</p>
+        <p>&quot;It&#x27;s as we thought: The survivors activated their mechs, and those are now holding off the Suns. I can&#x27;t see too much from here, but it looks like we came just in time. There doesn&#x27;t seem to be a lot of firepower still coming out of that building.&quot;</p>
+        <p>&quot;Did you see any of the colonists? Militia still fighting?&quot;</p>
+        <p>That was Prazza.</p>
+        <p>Jane didn&#x27;t make any effort to conceal her disappointment when she answered. &quot;No. Not even a casualty. Whoever&#x27;s in there is probably a civilian who somehow managed to activated the mechs, and now they&#x27;re stuck and surrounded by the Suns. Doesn&#x27;t change a thing though. Our plan&#x27;s the exact same.&quot;</p>
+        <p>Two seconds of silence. &quot;I agree.&quot; , Prazza eventually responded. &quot;I&#x27;m coming up front to you. I want to see this for myself.&quot;</p>
+        <p>&quot;Understood.&quot;</p>
+        <p>The channel fell silent again. Tali felt as if she might&#x27;ve heard the slightest bit of irritation in Jane&#x27;s voice when Prazza had announced he&#x27;d come forward himself before talking their next steps. &quot;Prazza&#x27;s a very good squad leader. He&#x27;s careful, but he always get&#x27;s the job done in the end.&quot;</p>
+        <p>Reminding Tali of her presence that the young Quarian had almost forgotten about, Lawson answered before Jane. &quot;He&#x27;s wasting time. Time our witness might not have.&quot;</p>
+        <p>Tali was about to say something very frank when the one she had actually addressed chimed in to defuse the situation. &quot;Prazza&#x27;s responsible for twelve people, Miranda. He can&#x27;t just hand off the entire decision making to some stranger.&quot;</p>
+        <p>Just some seconds after, the sound of steps and the rustling of leaves announced the arrival of the man in question. Him and Jane stuck their heads together and, with view of the expected battlefield, made their plans. From her position securing the left, Tali couldn&#x27;t understand more than a word or two here and there. Fortunately, it only took them a little over a minute or so. Prazza hurried off and Jane&#x27;s voice came through her comms again, now just on their fireteam&#x27;s channel.</p>
+        <p>&quot;We&#x27;re handing this position over to Prazza&#x27;s squad. They&#x27;ll give us cover,we will cross the road and break into the Sun&#x27;s perimeter. Once we&#x27;re in there and causing chaos, the other assault team will follow up to reinforce us. Heavy team and Zirri will stay and provide fire support from here. Details when we get there.&quot;</p>
+        <p>She&#x27;s in her element, Tali mused. Even remembers some of the squad&#x27;s names already. Typical Shepard.</p>
+        <p>As much as she loved it, Tali had to admit that it was strange.</p>
+        <p>How can she have woken up only three days ago and be in this shape already?</p>
+        <p>It wasn&#x27;t that she doubted what Shepard had told her, not one bit. But they really needed to have a proper talk about where she&#x27;d been.</p>
+        <p>About a minute later, the crunching of steps in the snow heralded the arrival of the heavy team. Seeing Haul set up his machinegun to her left, Tali relaxed and began to crawl backwards, back down the slope into safety. She could hear Jane introduce one of the men into the positions of the Blue Suns Jane had spotted as she passed her. By the time she got up on her feet a couple meters down the hillside Shepard was done and begun to come after her. She and the other two humans waited for her to catch up and lead the way.</p>
+        <p>She took them down into the ditch next to the road; a couple of bushes – the vegetation in this place had leaves even during winter – provided cover as they descended into it. It was about as deep as the average person was tall, making it easy to move along completely concealed by simply ducking a little. After about a hundred meters, she stopped and squatted down, motioning them to come closer.</p>
+        <p>&quot;Alright,&quot; she said, using the comm channel again instead of saying it out loud. &quot;Don&#x27;t know how much of that you guys could see from your positions, so here&#x27;s the rundown: There&#x27;s just one more row of buildings between us and the target. They&#x27;re being held by the Suns, though. They&#x27;re firing on the target from there, and they know we&#x27;re coming. I spotted more than one of them watching the road.&quot;</p>
+        <p>&quot;Their numbers?&quot; That was Lawson, perfectly calm and focused as always. Tali wasn&#x27;t sure if she liked the woman, something about her was off-putting; but she certainly didn&#x27;t mind having her at her side in a fight.</p>
+        <p>Jane tossed a look in the enemy&#x27;s general direction, pensively humming to herself. &quot;Can&#x27;t know for certain.&quot;, she eventually answered. &quot;But there can&#x27;t be more than twenty, thirty at the most. If there were, there would&#x27;ve been more of them at the tower, and they wouldn&#x27;t take so long to fight through some mechs.&quot;</p>
+        <p>Jacob chimed in, who had so far said very little. &quot;Don&#x27;t underestimate those things, Shepard. They&#x27;ve gotten some upgrades since the last time you dealt with them. And the colony here had a surprising amount. Surprisingly high quality models too.&quot;</p>
+        <p>Jane harrumphed. &quot;The last time I dealt with them was at Lazarus station. Didn&#x27;t impress me.&quot;</p>
+        <p>Jacob chuckled. &quot;Maybe that bar&#x27;s a bit high, Shepard.&quot;</p>
+        <p>&quot;Perhaps.&quot; Lawson again, a slight note of irritation in her voice. &quot;Or maybe they just weren&#x27;t willing to take any risks. It doesn&#x27;t matter.&quot;</p>
+        <p>Tali was too busy thinking about that latest bit of information to raise an eyebrow at the agent&#x27;s tone. Lazarus station. So I guess that&#x27;s were she was treated. Wherever that&#x27;s supposed to be...it&#x27;s probably confidential.</p>
+        <p>A sound made her snap and turn around; it was the other assault team trickling into the ditch at the same point where they had a minute earlier. But they, for now at least, did not follow any further; instead they spread out, keeping low.</p>
+        <p>&quot;Anyway... &quot;, Jane reasserted the direction of the conversation, &quot; ...our entrance point is is that red house just across the street from where we are now. It&#x27;s definitely held by the enemy, and I&#x27;m pretty sure it&#x27;s their northernmost position because it&#x27;s the last house on the southern side of the crossroads. Team two will keep their heads down while the heavy team and the designated marksman suppress the rest of them. We cross the road with smoke. Team two will try to smoke the car dealership, I saw an MG there. That building&#x27;s probably their center, so that&#x27;s where we&#x27;re ultimately headed if we&#x27;re gonna break them. Once we&#x27;re on the other side, it&#x27;s on us to cause enough chaos for team two to cross the road with only the heavy team and Zirri covering them. Questions?&quot;</p>
+        <p>Nobody spoke up. After that, Tali just held her shotgun firmly and waited like she had done so many times before by now. It took another minute or two for Zirri to report in as ready, and after a quick confirmation from Prazza, she took a shot. Her position had to be a good distance off, because Tali heard the impact of the round about a second earlier than the bang. This was the cue. Jane hurled a smoke grenade forward, and Prazza did the same a hundred meters south. His teammates around him were peppering the Sun&#x27;s positions with quick semi automatic fire while the machine guns rattled on up on the hill. Tense like a spring and ready to jump, she kept on waiting – until a couple seconds later, Jane&#x27;s voice came through her earpiece.</p>
+        <p>&quot;Ready,three, two, one, GO!&quot;</p>
+        <p>As one, the four of them exploded out of the ditch and took off sprinting across the road.</p>
+        <p>The thermal clip clattering to the ground, Jane brought her gun back up and made sure that all threats had been dealt with. Bursting into the next room – how big was this damned building !? - she was finally confronted with the open door of the southern entrance. She breathed a sigh of relief and let her aching body relax a little. They&#x27;d finally taken the car dealership.</p>
+        <p>&quot;Prazza, &quot; she radioed. &quot;We&#x27;ve reached the southern door. No more hostiles on the ground floor. You?&quot;</p>
+        <p>Prazza and the second team had taken up the task of securing the upper level of the two-story building.</p>
+        <p>&quot;Wait 30.&quot;</p>
+        <p>Almost as good as the answer she&#x27;d been hoping for; if Prazza asked her to wait for half a minute, that meant that he expected to have a definitive answer ready once that time ran out. Jane&#x27;s estimate turned out correct soon after.</p>
+        <p>&quot;Shepard, we&#x27;re all clear up here. And I&#x27;ve got even better news: The surviving Sun&#x27;s are in full retreat. We got &#x27;em running for their lives.&quot;</p>
+        <p>She sagged against the wall for a second, allowing herself a lopsided grin and to close her eyes for a second. Another fight over – and without anything more than a couple of bruises and scratches. It had been a tough one; the Suns were a bunch of thugs, but they were disciplined and decently trained. With the defenders advantage on their side, Jane knew that any lesser attacker than her improvised four man team here would&#x27;ve had casualties.</p>
+        <p>Prazza would&#x27;ve lost people for sure, if he had even been able to pull it off at all; from what Jane had seen, she respected the Fleet Marines, she really did. They were exceptionally disciplined and precise infantry. But urban warfare, especially room – to - room, was chaotic and bloody. Especially against a well armed and armored opponent like these mercenaries. Even with this impressive team things had gotten way too close more than once; in the end, Jane had been damn glad to have Miranda&#x27;s freakishly strong biotics on her side - and Tali of course. Jacob was a good soldier in his own right, but he was no Ashley or Garrus, and his biotics were decidedly average.</p>
+        <p>She opened her eyes and straightened again.</p>
+        <p>&quot;Good. Then let&#x27;s get to our survivor asap.&quot;</p>
+        <p>Prazza agreed, and so the four of them wasted no time getting outside, the steps of the Quarians above them reverberating through the ceiling. The side exit admitted them into a narrow alley, which was just fine by Jane, who quickly but carefully stepped up to the edge of the building. A first look around turned up no more hostiles that Zirri in her overwatch position might have missed, just the occasional dead body of a mercenary as well as a lot of destroyed mechs. She stuck her head out to get a better view; a small risk, but potentially the best way to find any enemies still hiding around.</p>
+        <p>Nobody fired at her, and she didn&#x27;t see anyone either. And so she took a slow and tentative step out on the street between her and the mech depot. It was a mid sized building; the scars of what had to be at least half a day&#x27;s worth of constant fighting were clearly visible. Bullet holes pestered the entire fassade, especially around the windows. In front of the entrance and slumped over two of the windowsills lay damaged mechs. Halfway there, Jane decided to stow the rifle away. The fight was over. The important part now was to make sure whoever was in there understood that as well.</p>
+        <p>She stopped a couple meters in front of the main entrance, making a point to walk slowly and relaxed. Just as she was about to raise her voice and shout out her good intentions, the big doors began to slide open. Tali stepped to Shepard&#x27;s side on the left, looking tense. Probably with anticipation.</p>
+        <p>I just hope whoever is in there can tell us something useful.</p>
+        <p>It came even better than that. Just when the slit between the two parts of the gate was large enough, the nimble form of a Quarian slipped out, his realk colored with the familiar swirl pattern of Clan Zorah in white on green. They had hit the jackpot. To Jane&#x27;s left, Tali took off towards her brother. Two seconds later she had crossed the distance and enveloped the young man in a crushing hug.</p>
+        <p>&quot;And that&#x27;s how I reached this place. I hid between the mechs for an hours or so. Then I had the idea that I could maybe activate them.&quot; Han shrugged and shook his head, shaking on the chair from the memories. They- Prazza, Jane, Lawson and Tali herself had set down with her brother in a circle, having made themselves surprisingly comfortable in some office chairs. He continued. &quot;You pick some stuff up on the fleet no matter what, and the colony&#x27;s systems aren&#x27;t exactly complicated...it still took me hours to get them running. I had to start the generator first to even power up the holding pens. By the time I had it done...they were gone.&quot;</p>
+        <p>An awkward silence took hold of the room, until Jane, her eyes on one of the monitors, broke it. &quot;It&#x27;s better this way. If you had set the mechs on the collectors, they would&#x27;ve all been destroyed, and you&#x27;d be dead or worse now.&quot;</p>
+        <p>Seeing her brother reel from the harsh truth, Tali had to resist the urge to comfort him right here. There&#x27;d be time to do so in private later.</p>
+        <p>&quot;And you...you really didn&#x27;t see anyone? They&#x27;re all gone?&quot; Han&#x27;s voice was choked to the point of barely being audible.</p>
+        <p>&quot;We looked into some of the houses, and found nobody.&quot; Prazza leaned back in his seat. &quot;I&#x27;m sorry.&quot;</p>
+        <p>Han just nodded, looking down on the ground, and said nothing. Finally Tali couldn&#x27;t take it anymore and rushed over, squatting down next to him and moving in to hold her brother. He leaned into her, and she could feel him shaking. There was a lump in her own throat now, too, at the thought of what he had endured this day. She had seen the footage on the security cameras; big insectoid aliens patrolling the streets, picking up the colonists like inanimate objects, stowing them in what had to be stasis or life support pods and then floating them away. All the while he was alone and powerless. And then the Blue Suns had laid siege on him in here for almost eight hours. Tali had been in tough spots in her life, but she wasn&#x27;t sure if she could imagine how afraid he had to have been. He&#x27;d done well, he really had; but now that it was over, Han was drained and completely done. She hugged harder, and he reciprocated.</p>
+        <p>Fucking bosh&#x27;tets. We&#x27;ll send them all to hell when we take their cruiser. They&#x27;ll see what they get from fucking with us.</p>
+        <p>And take the cruiser they would. Not long after they had routed the mercenaries on the ground, they had received a transmission from the Kaiwotz informing them that she was well on route to the planet since the Neema and her support vessels had arrived in system and were chasing down the enemy ship.</p>
+        <p>For a while, she didn&#x27;t pay much attention to what was happening around them. The day was done, after all. If her help was needed securing this evidence, people could come up to her and ask.</p>
+        <p>Eventually, Han calmed down a bit and she could animate him to go to Gaal and get himself something to eat – Gaal always had a couple of extra protein bars on him. As he left, Tali got up, stretched herself and looked around; the squad were resting after the exertions of the mission, some having procured chairs, other sitting or even laying on the floor. Only Zirri and Huwal were standing watch right now.</p>
+        <p>She was just starting to wonder where Jane had gone off to when Shepard walked up to her from the right. &quot;Hey.&quot;</p>
+        <p>She looked up to her. &quot;Hey. Where are your friends?&quot;</p>
+        <p>&quot;They&#x27;re not my friends.&quot; Shepard&#x27;s expression grew weary. &quot;Can we talk? Alone?&quot;</p>
+        <p>She nodded, somewhat bewildered, and lead the way to another room. She remained standing at first, but Jane sat down at a workstation, resting her forehead on her hand and letting out a sigh. Tali was beginning to feel a little confused; this was the demeanor of a woman about to break bad news. She decided to cut to the chase.</p>
+        <p>&quot;What&#x27;s wrong?&quot;</p>
+        <p>Shepard chuckled humorlessly and looked her in the eye. &quot;Sit down.&quot;</p>
+        <p>She obliged, growing weary herself now. What&#x27;s this about? Spill it already!</p>
+        <p>Jane leaned back and bit her lip for a moment before finally beginning to speak. &quot;Listen...what I told you about where I&#x27;ve been was the truth, but I&#x27;ve left something out. I wasn&#x27;t just unconscious, I was dead. No circulation, fatal wounds, nothing going for me. Just dead.&quot;</p>
+        <p>&quot;Yeah, but...they fixed it. I mean...you&#x27;re sitting right here.&quot;</p>
+        <p>Jane had a somewhat exacerbated look on her face. &quot;Yes, but...the process was pretty invasive. I don&#x27;t know the half of it. I just know that they had me frozen, but then they thawed me somehow and now I&#x27;m a goddamn cyborg.&quot;</p>
+        <p>&quot;Wh-what?&quot;</p>
+        <p>&quot;Bones, sinews, muscle, organs. Most of it got replaced or fixed up. They swear they didn&#x27;t mess with my brain, but the rest...I look the exact same, but I weigh twenty kilos more than I used to, Tali. Twenty kilograms.&quot;</p>
+        <p>She struggled to try and understand what Shepard was trying to say; it was clear to see from the way she was carrying herself that this was a source of great distress to her. But Tali didn&#x27;t have the faintest clue as to why.</p>
+        <p>&quot;Is this...bothering you?&quot;</p>
+        <p>Shepard looked as if she&#x27;d been asked to show Tali her third arm.</p>
+        <p>&quot;Wha – yes. Of course it does.&quot;</p>
+        <p>&quot;But why?&quot;</p>
+        <p>She actually remained silent for a while, an uncertain look on her face, clearly struggling for words. Eventually she made an attempt. &quot;I...it&#x27;s just that from where I stand, I blinked once and two years are gone, the Normandy is gone, the team is gone...&quot;</p>
+        <p>Jane fixed her gaze on her mask. &quot;...and I&#x27;m not sure if I&#x27;m even still myself.&quot;</p>
+        <p>&quot;Keelah...that&#x27;s bullshit, Jane!&quot; She got up and stepped over, putting a hand on Shepard&#x27;s right shoulder as she stood next to her. &quot;You are yourself. I recognized you before you even took the helmet off, and two hours later I&#x27;ve already been through another fight at your side.&quot; She hesitated, a little afraid of adding the next sentence, but eventually she did. &quot;And those were the best two hours since two years ago. I...I missed you. And I&#x27;m so damn happy you&#x27;re here. Who gives a damn if you&#x27;ve got some tech in your body? I&#x27;ve got some, too. Maybe you human&#x27;s aren&#x27;t into it yet, but it&#x27;s completely normal. It doesn&#x27;t change who you are at all.&quot;</p>
+        <p>Shepard looked her in the eyes for a long moment, a small smile forming on her lips. &quot;Thanks. I...I&#x27;ll try to see it that way.&quot; She grinned. &quot;And I&#x27;m damn glad that you&#x27;re here, too. Believe me.&quot;</p>
+        <p>She sat back down, remembering something. &quot;Speaking of it...how did you even know that Han was here? Or that anything had happened here at all? And why didn&#x27;t the alliance tell us that you were in the hospital?&quot; She leaned forward. &quot;This doesn&#x27;t make any sense! And you still haven&#x27;t told me where they actually treated you.&quot;</p>
+        <p>Shepard rested her elbow on the table again and rubbed her forehead. &quot;Jesus, how do I say this...alright. Lawson and Taylor are not Alliance. They&#x27;re Cerberus.&quot;</p>
+        <p>&quot;What!?&quot;</p>
+        <p>&quot;That&#x27;s what I said, too.&quot;</p>
+        <p>&quot;But that doesn&#x27;t make any sense! Why would Cerberus help you? Why didn&#x27;t you say anything sooner?&quot; She had gotten up from the chair and was gesticulating wildly.</p>
+        <p>Shepard sighed. &quot;I didn&#x27;t say anything because we needed to be halfway cohesive unit to beat the Suns and rescue your brother. And I didn&#x27;t say anything afterwards because I don&#x27;t just stab people who I owe my life to in the back without a warning.&quot;</p>
+        <p>There was a bit of that Shepard steel ringing through that last part, and so she didn&#x27;t question it. She understood her.</p>
+        <p>&quot;But why would Cerberus help you? And why would you be here with them?&quot;</p>
+        <p>&quot;They helped me because they recognize the Reapers and their leader is somehow convinced that I&#x27;m crucial to defeat them. And the reason I went here with them was to get here as soon as possible, learn whatever I could and save Han.&quot;</p>
+        <p>She stood still for a while, processing what she&#x27;d heard; she hadn&#x27;t really been angry at Jane at any point, but the mere mention of the human terrorists made her blood boil and cooling down took a bit of time. Eventually, she asked: &quot; Where are they now?&quot;</p>
+        <p>Shepard shrugged. &quot;I told them that we&#x27;re done and to get lost. Miranda wasn&#x27;t too happy about it, believe me.&quot;</p>
+        <p>She suppressed the mental imagery of that woman being angry. &quot;I&#x27;m glad I wasn&#x27;t there. What will you do now?&quot;</p>
+        <p>&quot;To be honest, I was hoping to catch a ride. I need to get to the Citadel, report to the Council and the Alliance. I need to find out if they&#x27;re really not doing anything about these abductions. Or the reapers.&quot; Shepard grimaced, and Tali shuddered at the mention. For the first time in ages, the memory of Sovereign actually scared her again – it took her a second to realize why.</p>
+        <p>I have hope again.</p>
+        <p>She sat down and evened the folds of her realk a bit. Enjoying the silence, she probably wouldn&#x27;t have said anything for a while if Jane hadn&#x27;t spoken.</p>
+        <p>&quot;So...how have you been doing, Tali?&quot;</p>
+        <p>She held still for a moment, unsure of what to tell her about these last two years. Screw it.</p>
+        <p>&quot;Not so great.&quot;</p>
+        <p>&quot;What happened?&quot;</p>
+        <p>&quot;You died.&quot;</p>
+        <p>Shepard grimaced. &quot;I&#x27;m sorry.&quot;</p>
+        <p>&quot;No, I didn&#x27;t mean to – dammit. What I&#x27;m trying to say is, after you were...gone, everything just fell apart. They shipped me back to the fleet, Liara and Garrus disappeared, my father and the other admirals said we couldn&#x27;t do anything about the Reapers...I thought that was it, we lost. Nothing will be done and one day the Reapers will come and end it all. And... I missed you a lot.&quot;</p>
+        <p>Shepard clenched her jaw for moment. &quot;I&#x27;m sorry.&quot;</p>
+        <p>&quot;I said don&#x27;t -&quot;</p>
+        <p>&quot;Tali. I&#x27;m sorry you had it rough. I know it wasn&#x27;t my fault, but still.&quot;</p>
+        <p>&quot;Okay.&quot; , she nodded.</p>
+        <p>&quot;For me it felt like going to sleep and waking up, so in my head it hasn&#x27;t exactly been a long time. But for what it&#x27;s worth, I missed you as well.&quot;</p>
+        <p>She grinned and leaned back, feeling more content than she ever had in recent memory, and let her head drop into the rest. &quot;Well, now you&#x27;re here. At least for a while.&quot;</p>
+        <p>&quot;Hmm.&quot;</p>
+        <p>&quot;We should probably go and inform Prazza though. There&#x27;s no way he&#x27;ll say no to taking you to the next proper starport, but we shouldn&#x27;t spring this on him last minute.&quot;</p>
+        <p>&quot;Hmm.&quot;</p>
+        <p>&quot;What, &#x27;hmm&#x27; ? Are you even listening to me!?&quot;</p>
+        <p>&quot;Not really.&quot; Tali could practically hear the cheeky grin on her face.</p>
+        <p>&quot;So what&#x27;s so interesting then?&quot;</p>
+        <p>&quot;Well, I was just thinking about how nice your new suit looks on you.&quot;</p>
+        <p>She jolted, her cheeks flushing like they hadn&#x27;t in a long time. &quot;I- uh...thanks.&quot;</p>
+        <p>She looked at her and Shepard was wearing her biggest shit eating grin. &quot;It suits you.&quot;</p>
+        <p>&quot;Bosh&#x27;tet.&quot;</p>
+    </div>
+</body>
+</html>

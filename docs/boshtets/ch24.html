@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 24</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch23.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html" selected>Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch25.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 24</h1>
+    <div class="chapter-content">
+        <p>„I don&#x27;t believe this...&quot;</p>
+        <p>Jane touched the palm of her right hand to her face in complete exasperation. Anderson furrowed his brow, similarliy irritated. Hackett&#x27;s face was completely unreadable. Sparatus rolled his eyes, not making any more effort than Jane to disguise just how he felt about this conversation. Udina looked like he had eaten something rotten. Tevos had, as ever, a conciliatory expression, while Valern just stared. Jane couldn&#x27;t remember the Salarian Councilor ever showing any emotions. Sighing, she tried again.</p>
+        <p>&quot;A Geth ship? That&#x27;s what you take Sovereign for? That thing annihilated cruisers and destroyers with a single shot!&quot;</p>
+        <p>Valern answered. &quot;It is true that this &#x27;Sovereign&#x27; was exceedingly powerful, however, that does not prove that it was not, in fact, a Geth creation. It was most likely a prototype, far beyond even the Geth&#x27;s own usual technology. Our current hypothesis is that it must have been based on recovered Prothean technology from sites in the Perseus Veil that we here in council space would naturally not know about.&quot;</p>
+        <p>&quot;And why would the Geth use this technology just to build one gigantic dreadnought , but then not improve the rest of their fleet, too?&quot;</p>
+        <p>&quot;We believe your actions in your campaign against Saren forced their hand. They most likely came to the conclusion that striking us before we could properly prepare for their assault would have greater chances of success than taking their time to rearm their fleet to the level they no doubt originally intended.&quot;</p>
+        <p>&quot;Which,&quot; Tevos cut in, silencing her Turian colleague who had also opened his mouth with one of her rare, but always effective glares, &quot;...is why we want you to focus on the Geth for now. If they possess this level of technology,,the danger their fleets could pose in the future is immense. This defeat must have stung, but I doubt we have seen the last of them.&quot;</p>
+        <p>At her side, Anderson finally succumbed to his irritation and let his head drop into his hand, his elbow propped up on the table. Jane lowered her eyes to the tabletop in front of her for a while, contemplating her options before playing her last card, though she had little actual hope to achieve anything with this.</p>
+        <p>&quot;Councilors, I assure you, Sovereign was not Geth tech, prothean - derived or otherwise. Ask the Quarians, if you won&#x27;t hear it from me. Hell, if you&#x27;re willing to have another meeting after she&#x27;s released from the hospital tomorrow, I&#x27;m sure Tali&#x27;Zorah would be thrilled to explain in detail just why that is a ridiculous assertion.&quot;</p>
+        <p>Finally, Sparatus composure snapped. &quot;Yes, the Quarians. Who&#x27;s understanding of the Geth was so adept that they lost their homeworld to them after accidentally turning them into AI. I am not interested in the opinions of these vagabonds.&quot;</p>
+        <p>The atmosphere at the table got even tenser now. Jane, ignoring the protestations of her left leg, stood up from her chair, resting her knuckles on the table, and glared at Sparatus, her jaw clenched. Hackett, for the first time in the meeting, showed a reaction, raising his left eyebrow. Anderson raised both of his, clicked his tongue and leaned back in his chair. Udina scowled at nobody in particular. Tevos closed her eyes in the manner of a mother plagued by particularly unruly children. Valern&#x27;s face remained as unmoved as ever.</p>
+        <p>&quot;That vagabond has a name, which I just told you, and is a big part of the reason you, esteemed councilor, are still drawing breath to insult her and her people with!&quot;</p>
+        <p>The Turian didn&#x27;t miss a beat. &quot;Your Tali&#x27;Zorah might be the greatest person to ever walk this station for all I care, even the Quarians are bound to produce someone capable every now and then. That doesn&#x27;t change a thing about her people at large, and it doesn&#x27;t change the fact that you have your orders, Spectre, and sending one of your followers here to parrot your paranoia will not change that, which is why we will not waste our time with it. Take. A seat.&quot;</p>
+        <p>My...what!?</p>
+        <p>&quot;Councilor Sparatus. We just had six months of you telling me I&#x27;m crazy end with me saving your scaly ass in the end, via an action that defied your direct orders, because they were stupid and would have resulted in your death and the deaths of everyone on this station. And now you have the gall to call me paranoid!?&quot; Jane&#x27;s voice came out dangerously low at first, rising to a near shout towards the end.</p>
+        <p>Sparatus growled and looked like he was about to try and bite Shepards head off. &quot;Sit. Down. Shepard.&quot;</p>
+        <p>Shepard did not, she remained standing, not averting her angry gaze from Sparatus eyes. After a couple of seconds, with both Tevos and Anderson becoming visibly uncomfortable, but apparently unable to find words, it was Hackett who made an attempt to defuse the situation before it would come to blows, which at this point Jane would&#x27;ve been just fine with.</p>
+        <p>&quot;Please, Shepard. The council has made their stance on Sovereign clear, and the turian councilor&#x27;s personal opinions on the quarian people are not the subject of this hearing, as distasteful...&quot; - at this point Sparatus took his eyes off Shepard and glared at Hackett instead, who did not appear to give as much as a single damn - &quot; ...they might be. And if the doctors could see you right now, we&#x27;d have a mutiny at our hands. So please, do take a seat.&quot; He diverted his gaze from Shepard to Tevos. &quot;And perhaps we could proceed to the other subject of today&#x27;s meeting.&quot;</p>
+        <p>Seething, Jane obliged the request. Hackett was right, there was no point in butting heads with the idiot. Besides, she was curious what other subject this meeting could have, as Anderson had not told her anything about this; after a quick questioning glance and a apologetic shrug in answer to that, however, she realized that the Captain simply had not been informed of this beforehand, either.</p>
+        <p>It was Udina who spoke up. &quot;That would be most welcome, yes.&quot;</p>
+        <p>Tevos nodded, evidently happy to move on from the near physical altercation between the two notorious squabblers. &quot;Excellent. Ambassador, we once more extend our formal and heartfelt gratitude to humanity&#x27;s deeds and sacrifices during the war against Saren and the Geth. The thousands of brave alliance men and women who have put their lives on the line to defend this station, the council, at the entire galactic community, represent everything the alliance has come to stand for. Therefore, we, the council, have unanimously&quot;- at this point both Tevos and Valern sent a quick, steely glance over to Sparatus - &quot;...agreed that humanity has proven itself worthy to join us on this council.&quot;</p>
+        <p>That was a bombshell. Janes head spun, and she leaned back in her seat, speechless for a second. Was this an opportunity? At least one councilor who recognized the reaper threat for what it was would be better than none, but that depended entirely on who made the cut...Udina, the fool, was probably the most likely candidate. In that case, Jane feared, this might even end up hindering her efforts, Udina was clearly still resentful over the punch Anderson had laid him out with in his own office. The fact that this punch had ended up saving his life seemed to only make it worse. Anderson seemed to be similarly flabbergasted. Hackett was, as usual. a stone stature; but then again, he had evidently known beforehand. Udina meanwhile seemed downright gleeful.</p>
+        <p>&quot;As humanity&#x27;s representative, I, in the name of all mankind, am honored by your offer, councilors, and humbly accept. &quot;</p>
+        <p>Oh you pompous son of bitch. &#x27;In the name of all mankind I am honored&#x27;...Jesus Christ.</p>
+        <p>Her irritation was probably written plainly on her features, but evidently, nobody cared. Not that she expected them to, she was a soldier, not a politician. Her opinion on this was utterly irrelevant, and she wasn&#x27;t even sure why she was in the room for this.</p>
+        <p>Cheerfully, Tevos continued. &quot;Very well. Our office will be expecting the list of possible candidates we asked you to prepare, and come back to you with our preference as soon as possible.&quot;</p>
+        <p>&quot;Of course, Councilors. Though I can already tell you that I have the support of the alliance parliament, so this should be all but a formality. We should probably get to the details - &quot;</p>
+        <p>She had heard enough. Interrupting Udina, Jane shot out of her seat as well as her leg allowed. &quot;You do that. I&#x27;ve had enough of your company for today.&quot; She was looking at Udina, but the rest of the council evidently felt addressed as well, as Valern, in one of his rare displays of emotion, blinked and disapprovingly wrinkled his pathetic excuse for a nose, while Sparatus stiffened and clearly prepared to say something no doubt strongly worded but was stopped by Tevos laying a hand on his forearm before looking over to Jane, conciliatory as always. &quot;Very well, Commander. You are no doubt still exhausted from your exploits and injuries. We expect you to get on your new assignment in due time, but what exactly constitutes due time is, as always, yours to determine, within reason. Take some time to rest.&quot;</p>
+        <p>Jane bowed her head slightly, trying to ease some of the tension; she had taken it a little too far, she supposed, and slapping away the hand of the only councilor who seemed to actually be somewhat well disposed to her would be foolish. &quot;Thank you, Councilor. You are most kind, as always.&quot;</p>
+        <p>&quot;You&#x27;re no longer needed either, Captain. The matters we have left to discuss are not related to your duties.&quot; , Udina said, probably enjoying the chance to take Anderson down a peg. If the man cared about being unceremoniously kicked out of the meeting, he didn&#x27;t show; if anything, he seemed relieved, standing up with nothing more but a curt nod to Admiral Hackett.</p>
+        <p>Who responded by getting up himself.</p>
+        <p>&quot;And not to my duties, either. I thank you for your invitation, councilors, but I am a busy man, so I will have to excuse myself.&quot;</p>
+        <p>Exchanging polite nods with the politicians, Hackett led the way out of the room, gesturing Anderson and Shepard through the door and towards another room across the hallway. Hobbling after Anderson, Jane wondered what this would be about now. The Admiral was a disciplined man who kept his cards close to his chest, not making enemies where he did not have to.</p>
+        <p>A wiser man then myself, that&#x27;s for sure. Probably gonna tell us how he really feels about all this. No point in voicing his opinion in there, they had made up their minds from the get-go.</p>
+        <p>Hackett holding the door open for them, they filed into the room, Anderson standing in a corner while Jane took the welcome opportunity to sit down on a table. Her leg had already gotten better, but not so much that she wanted to be standing if she could help it, let alone walk. The Admiral closed the door behind them and walked over to the window, clasping his hands behind his back while looking outside. Silence fell. Anderson and Jane both waited for Hackett to about half a minute later, he did. &quot;So. You know the council&#x27;s stance on the reapers now. I suppose I could have warned you, but there&#x27;s not much good will left to be squandered between Shepard and Sparatus anyway, and if nothing else, it was entertaining.&quot; They smirked at that, cherishing what little humor was to be found in this disappointment. Hackett turned around.&quot;In all seriousness, from what I could gather the council is determined to make sure this version of events is the only one that gains any traction in the public. The economy is troubled enough as is after the Geth attack, the stock markets all over citadel space have been in free fall ever since the battle. The people are afraid of a long war with the Geth. Last thing the council needs right now is talk of a menace from the past that is poised to bring the apocalypse.&quot;</p>
+        <p>Jane snorted. &quot;The reapers wont give a damn about what the council needs, or about the stock markets.&quot;</p>
+        <p>&quot;I know, Commander. But that&#x27;s not how the council sees it. I know you, and I&#x27;ve known David for more than twenty years. So I trust your word, even if I&#x27;d rather not. But for the council, your word is just not enough. Yes, you have that recording of Vigil on Illos, and some parts of your conversation with Saren that could be recovered from Vakarian&#x27;s damaged visor. But what is easier to believe? Honestly now? That a sadistic traitor would go out of his way to mess with your head by setting up false information, or that an aeons old race of sentient super dreadnoughts is coming to wipe out civilization?&quot;</p>
+        <p>Jane deflated. She hated it, but the Admiral was right. &quot;Yeah. When you put it like that, it does sound a little far fetched.&quot;</p>
+        <p>&quot;Which is why you need to find more proof. There has to be something out there, undamaged records from the prothean genocide, ruins of these...Innusannon that prove the cycle, something. I suggest you set your associate Dr. T&#x27;Soni on it. You will have the Normandy at your disposal, it is mine to attach and I&#x27;m keeping it with you. I will also try to raise awareness on Arcturus, though I will have to be careful. Depending on how the wind turns out to be blowing within the upper echelons, too overt support of your warnings might see me branded as a nutcase, and that won&#x27;t help our case in the least. In the end, it all depends on you finding definitive proof, Commander.&quot;</p>
+        <p>She laughed humorlessly and shook her head. &quot;More definitive than a literal reaper sitting on the presidium tower? Got it.&quot; She straightened herself. &quot;But if that&#x27;s what it takes, I&#x27;ll find it. We have no alternative.&quot;</p>
+        <p>&quot;No, &quot; Hackett agreed, &quot;...we don&#x27;t.&quot;</p>
+    </div>
+</body>
+</html>

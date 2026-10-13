@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 26</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch25.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html" selected>Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch27.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 26</h1>
+    <div class="chapter-content">
+        <p>Miranda looked out through the huge, tinted windows, observing the constantly shifting color of the star in front of her. It was a different one than the one that had illuminated the large room during the first, and until today only, time she had met the Illusive Man in person when Cerberus had recruited her years ago. In her mind, she pondered possible candidates for which star this might be; but there were dozens of possible candidates in this cluster alone. It was a pointless exercise, as the base was moved after every time anyone from the outside, including even her, the Illusive Man&#x27;s top operative, had visited, which happened exceedingly rarely. Not that she truly wanted to know – the only thing that knowledge could possibly do was to potentially fall into the wrong hands in case she was ever captured. But the human mind was naturally curious.</p>
+        <p>She stopped that train of thought and returned to the topic at hand. The Illusive Man could be very patient, but he was not the kind of person one let sit and wait for a reply for too long.</p>
+        <p>&quot;Shepard did everything right. Saved the Citadel, destroyed the Reaper, and even got the Council themselves through it alive. Thanks to her, the council races finally respect us. Humanity&#x27;s position in the galaxy is stronger than ever. And still, it&#x27;s not enough.&quot;</p>
+        <p>She had turned around as she had been speaking, and was now looking into the cybernetically enhanced eyes of the mid fifties looking man in the armchair at the center of the room, who was currently waving his right hand around his holo display, opening, reading and closing communiques at a pace few could have matched. She stepped through a holo display to stand at his side so she would be able to see what he was looking at. &quot;But they&#x27;re sending her to fight Geth. Geth! While the reapers are still out there!&quot;</p>
+        <p>Her employer took a deep drag and slowly exhaled the smoke. &quot;And it&#x27;s up to us to stop them. With the council denying the reaper&#x27;s existence, Shepard remains our best bet.&quot;</p>
+        <p>&quot;Yes. Even if we found definitive proof of the reapers, the Council would never accept help from Cerberus. But Shepard...she&#x27;s a hero, a bloody icon. They will follow her, if she can convince them. But she&#x27;s just one woman...and from here on out, she&#x27;ll have a target on her back. And she probably doesn&#x27;t even realize.&quot; She had studied Shepard&#x27;s psyche profile and service record extensively. Shepard was a force of nature as a fighter and an inspiring leader – but ultimately she was still a soldier, perhaps an extraordinarily independent one, who relied on the intelligence fed to her by others and would not see the knife in her back coming. The woman certainly wasn&#x27;t stupid or naive by any stretch of the imagination, but she was simply not ready for the machinations that even now were no doubt being set in motion against her – even if, as unlikely as it was, the Reapers should have no further forward elements in the galaxy at the moment, there were more than enough other groups on the galactic stage who had either something to gain by eliminating her, or simply reason to hold a grudge, be it against the Alliance at large, or it&#x27;s golden girl personally. She sighed. &quot;If we lose Shepard, humanity might well follow.&quot;</p>
+        <p>The Illusive Man looked up from the screen and directly into her eyes. &quot;Then see to it that we don&#x27;t lose her.&quot;</p>
+        <p>Miranda gestured towards the screen. &quot;I take it that&#x27;s my new ship?&quot;</p>
+        <p>He took a swig of his drink and nodded. &quot;Yes. It was initially designed to be multi purpose, so it will be a little larger than it would have to be for just you and your crew, but that awards you greater flexibility. I have hand picked a small team of specialists who will serve directly under you from now on.&quot;</p>
+        <p>He pushed a button and her omnitool lit up, confirming the transfer of multiple files. Seven of them personnel dossiers, a quick glance revealed. The Illusive Man continued. &quot;Since our man will only arrive at the Citadel tomorrow, we still don&#x27;t know where Shepard intends to go next. But whatever she chooses, she will not set out until at least the end of the week. Her and her remaining squad are still recuperating, the Normandy is in dry dock for repairs and upgrades, and the crew is being partially swapped out, as is perfectly normal after long tours of duty like the campaign against Saren. Which is where our man comes in. He&#x27;s a distinguished Alliance communications specialist who will make sure the Normandy&#x27;s systems won&#x27;t be compromised by anyone but us. You are his handler, too.&quot;</p>
+        <p>He took another drag before looking up a last time. &quot;With this, you have all the tools you should need. I will continue to at least lay the groundwork for the … failsafe we talked about. However, I think we both agree it&#x27;d be better if we didn&#x27;t have to use it.&quot;</p>
+        <p>Miranda nodded, sensing that the audience was over. &quot;Yes, Sir.&quot;</p>
+        <p>&quot;Good.&quot; The Illusive Man turned back to his screen. &quot;Good luck, Miranda.&quot;</p>
+        <p>I don&#x27;t intend to need it, she though as she strode out of the office.</p>
+        <p>Jane sat at her desk, reading through a data pad concerning some upgrade to the heat sinks currently underway that Adams and Tali had cooked up – not that she understood much of it, but it couldn&#x27;t hurt to at least skim it over, and it was certainly more interesting that most of the other documents currently waiting for her signature. The post-processing of a frigate&#x27;s six month long deployment was no joke, especially if it was one as intense as this one had been; countless parts were being replaced, the most complicated of them being the thermal couplings transferring heat from the drive core to the sinks. They had finally been granted some additional instruments Chakwas had requested for the medbay, a thousand little things she never would have thought of were getting fixed that, with the Normandy being a prototype, had proven themselves in need of improvement over the course of the last half year, and Joker had used the chaos to try – and almost succeed – to requisition a goddamn leather seat. More than half a dozen crewmen were leaving the ship, the oldest among them for retirement, another three for prestigious promotions onto positions on ships of the line throughout the fifth fleet, and the rest either for safer, quieter postings at home or civilian existence, some because they were genuinely done with the navy life, others finally caving in to the year long pleas of their spouses.</p>
+        <p>Putting the pad down, she groaned and massaged her eyeballs for a couple of seconds before looking at the time. She would have to leave soon. Not that she wasn&#x27;t looking forward to the evening, she was.</p>
+        <p>As tedious as the past week had been, the week before that had been one of the nicest for her in recent years. With almost all of the crew including Ashley and Joker on vacation, most of them having gone home to see their families, it had basically just been her, Chakwas, and her three remaining alien friends. And the skeleton crew that the alliance had detached to look after the ship, of course. Putting off the work for when the actual crew would return, she had spent the majority of her time either at physical therapy to get her leg back to full strength or relaxing on the shooting range, most of the time alone with herself and some good music, but towards the end of it Garrus, whose own visit home to Palaven had apparently been a short one, had kept her company. The Turian wasn&#x27;t very inclined to talk about his family, and so they just sat there shooting the shit, both literally (almost) and figuratively. She had gotten Tali to accompany her once, but it was self evident that with the rest of the engineering crew not there, Tali was positively giddy about having the drive core more or less to herself for once, and the fact that while they had been docked in the Alliance bay the core had been burning but the ship wasn&#x27;t actually doing anything apparently only made it better, because it allowed her to try out all kinds of experimental settings she had been wanting to do for months. Jane had given up to try and understand any of it, but she liked to listen to her rambling on about it anyway, and so another significant part of her time had gone by just sitting in engineering or limping after her as she frantically stalked and crawled through the ship, unscrewing coverings and fiddling with wiring in all kinds of places.</p>
+        <p>At times, she had admittedly been a little worried about Tali getting a little too experimental with her ship, but when Adams finally came back, the man was full of nothing but praise for the work their resident Quarian had done, and now she had this datapad with proposed upgrades, both Adams&#x27; and Tali&#x27;s signatures under it, lying in front of her, so she supposed it all checked out in the end. Shouldn&#x27;t have doubted.</p>
+        <p>Liara, not having any family left to go and see, had also stayed close, but she had elected to stay in an expensive hotel on Zakera Ward. Apparently, a maiden needed to treat herself to some luxury every now and then. Jane didn&#x27;t blame her, she&#x27;d probably would have done the same if she didn&#x27;t have a perfectly fine bed right here on the ship. All in all, she hadn&#x27;t seen too much of Liara during the last twelve days, as the asari was apparently quite busy getting her inheritance and other last matters of the late Lady Benezia in order, and when she wasn&#x27;t doing that, she was scouring the Citadel&#x27;s extensive archives and libraries for hints of anything and everything that might help them find more proof of the reapers. She had already provided her with some possible locations to investigate; the latest dossier she had sent Shepard concerning some canyon of which the origin was apparently contentious, the so-called &#x27;Great Rift&#x27; on a planet with the name of Klendagon.</p>
+        <p>Exiting her bathroom after she had given herself a quick once-over, Jane briefly pondered if she should slip into something fancy, but decided against it. She hated her parade uniform; it wasn&#x27;t very comfortable at all, and she felt like a bloody christmas tree whenever some event forced her to put it on. So she just grabbed her N7 jacket and cap, gave her room a quick lookover and got going. Passing by the mess, she extended a nod towards Joker, Garrus and Tali, who were eating at the other side of the room, her favorite Quarian sending her an enthusiastic wave in return. Ascending the stairs to the CIC, she didn&#x27;t fight the big grin that plastered itself on her face. Even if she couldn&#x27;t allow herself to act on her stupid and potentially inappropriate feelings, simply having her around was a joy in and of itself, and she was glad that she would not be deprived of her company after all. Or her capable contributions to the engineering and ground teams, for that matter.</p>
+        <p>The CIC was a mess; half the workstations still lay there gutted, their wiring exposed as their communication software was apparently being upgraded and that necessitated stronger processors in every single computer. She hadn&#x27;t even bothered to read that request, so she had just shot Pressly a questioning glance, and upon receiving a confident nod in return, signed it. Contrary to what was usually the case when the ship was docked in a friendly port, the CIC was bustling with activity; everyone knew that their commander wanted to set out in less than forty-eight hours, and apparently, Pressly would be damned if his own department should end up causing a delay. Shepard&#x27;s executive officer ran his CIC tight, and even now, he was up and about barking orders at his subordinates. After trading a few words with her second, Jane turned to leave, exchanging a quick greeting with Lieutenant Mills,their newest communication specialist, who had arrived two days earlier to replace Lieutenant Elsa Olsson who, under some tears, had left to be the new communications chief on the SSV Tokyo, which had taken casualties during the battle for the Citadel when a round from a Geth dreadnought had broken through her shields and grazed her. Shepard hadn&#x27;t really talked to the new arrival yet, something she intended to remedy before they set out for the Rosetta Nebula, but from what she had read in his file, the man was very good at what he did and would make a worthy replacement for the quick-witted swede.</p>
+        <p>Having left the ship, Jane made her way through the throngs of people working at the drydock, at first exclusively humans, but as soon as she left the part of the facility that was assigned to the Alliance, members of all council species. Incredulous stares followed her the entire way, some subtle, others not so much. She pulled the cap deeper into her face and pretended not to notice, until she finally reached the temporary relief of the auto-piloted cab shuttle. Jane took off the cap, rubbed her face, and sighed. After the battle for the Citadel, the media had turned her into a celebrity. She had pondered wether this might be an opportunity – after all, if the Council didn&#x27;t want to hear the truth, perhaps the common people would, and perhaps that could force their hand. But she had dismissed the idea. All it would possibly do was to create panic, and quite possibly undermine her strained relationship with the council even further, and so she had answered truthfully when asked but for the most part kept herself away from the journalists. No, she would have to convince the powers that be directly. And so her sudden ascendance to the status of galactic celebrity was nothing but a nuisance. Jane forced these thoughts out of her mind; this evening, she didn&#x27;t want to dwell on it too much, for it was one she had been looking forward to for over two weeks, and now that, since the Turian 3rd had arrived to relieve the battered 5th Alliance fleet of guard duty over the Citadel, Hackett had granted his men and women a day of shore leave on the gigantic space station, the day had finally come. She was eating dinner with Hannah and Doctor Chakwas.</p>
+        <p>As soon as she had somewhat collected her thoughts after the battle, she had realized that the fleet that had come to the rescue being the 5th meant that her aunt was around – whom, while they spoke over vid-comm every now and then, she hadn&#x27;t actually met in person in almost two years. Hannah Shepard, her mother&#x27;s sister, was a major part of the reason that she hadn&#x27;t fallen apart after Mindoir. With her mother and stepfather killed, Hannah had taken over custody, and with her aunt being an Alliance officer and Jane not only being more than willing, but also having a glowing letter of recommendation from Anderson , still Commander at the time, to back her up, she had gotten to spend the last two years of her minority on Alliance warships, were she had been given care and direction - and a clear path forward. Looking back, she was glad that she had managed to find more reasons to be a soldier than &quot;I want to kill Batarians&quot; , but for a sixteen year old who had just survived one of the most brutal and devastating slaver raids in the Alliance&#x27;s history it had been more than enough. She had never openly stated that of course. Hannah, Anderson – who had been the one to rescue her and the group of colonial militia she had made her last stand with – and Chakwas, who was a friend of Hannah&#x27;s since the early days of their careers, which was the reason Jane had been sent to the ship Chakwas had been serving on at the time, would have torn her a new one. Those three had practically raised her after Mindoir; and today, she would get to spend time with two of them. She had picked out the location – a steakhouse she had eaten at with Garrus, Liara and Tali a couple of days earlier. Ashley had still been on leave.</p>
+        <p>The cab reached the station closest to her destination, and she jumped out, not before putting the cap back on, pulling it so far down this time that she could barely see where she was walking. But it seemed to work; during the three minute walk to the restaurant, nobody bothered her in any way, and nobody could be heard exclaiming &quot;Hey, wait! Isn&#x27;t that this Shepard woman!?&quot;</p>
+        <p>She reached the place and entered it, removing her makeshift disguise. She could feel at least some pairs of eyes on her, skeptically appraising if that human really was the one who had been all over the news lately, but not letting herself be bothered was made significantly easier by the sight in front of her. In the back of the room, next to the corner stall, sat two women in their fifties, one of whom she considered a friend, the other just short of a mother. Captain Hannah Shepard looked magnificent in her medal-adorned dress uniform, her blond hair tied in an orderly ponytail. They were so deep in conversation that they only noticed her when she already stood next to the table.</p>
+        <p>&quot;Janey!&quot;</p>
+        <p>Before she knew it, her aunt had enveloped Jane in a hug of a strength one wouldn&#x27;t have expected out of the woman, and she wasn&#x27;t exactly a small person. Jane laughed and swept her off her feet.</p>
+        <p>&quot;Hello, auntie.&quot;</p>
+        <p>&quot;Aah! Jane! Put me down at once!&quot;</p>
+        <p>She obliged, and all three of them laughed. If any of the other guests had paid the little show any attention, she was past the point of caring. Commander Shepard loves her aunt. Breaking News.</p>
+        <p>They sat, and Chakwas pushed over a glass of Hefeweizen. &quot;Here, we already ordered one for you. They actually have bavarian style beer here. Just as you like it.&quot;</p>
+        <p>She took a large sip.&quot;What did you think why I picked this place!?&quot;</p>
+        <p>Hannah snorted. &quot;Like her father.&quot; She was speaking of Bernd, Jane knew; Hannah had known Jane&#x27;s biological father, but from what she had told her, the man had wanted nothing to do with Jane or her mother and was probably dead by now. Jane didn&#x27;t even know the name – she had never asked, and stopped caring long ago. Bernd had been everything a girl could have wanted in a father.</p>
+        <p>She turned towards her aunt. &quot;God, is it good to see you. I damn near had a heart attack when I realized you were in the battle, too. Sovereign popping our cruisers like cherries...&quot; She shook her head and they fell silent, Hannah&#x27;s gaze getting lost in her wine glass for a while.</p>
+        <p>When she responded, she did so quietly, her voice betraying genuine terror even now, almost three weeks later. &quot;It was...sobering, that&#x27;s for sure. The casualties...and that was them attacking one of the most well defended places in the galaxy. If they had attacked the Traverse with that fleet...it doesn&#x27;t bear thinking about.&quot; She grabbed her glass and took a large swig. &quot;At least the Geth don&#x27;t seem to have more than one of those monsters. I just hope the big shots get their act together and organize a joint-species campaign into the veil, and soon. The flashlight heads bit off more than they could chew, that&#x27;s it. I wouldn&#x27;t count on them making that mistake twice. With the kind of technology they have...if we don&#x27;t nip this in the bud now, this is gonna be one long war.&quot; She drank again. Jane and Chakwas exchanged an awkward glance.</p>
+        <p>The grey haired doctor cleared her throat. &quot;Well, Hannah...God, how to explain this...I wish it was that easy.&quot;</p>
+        <p>Hannah raised an eyebrow, and from the look on her face, she already had an inkling that she wouldn&#x27;t like what she was about to hear.</p>
+        <p>Oh, how right you are...</p>
+        <p>And so they told her the whole story. Jane did most of the talking, with Chakwas adding details here and there, especially those of the commander&#x27;s wounds and follies. It took upwards of an hour, with them ordering, being served and finishing their meal before the tale drew to an end – the present day. Hannah looked at Jane incredulously. &quot;And the council isn&#x27;t having any of it!?&quot;</p>
+        <p>&quot;No.&quot;</p>
+        <p>A deep sigh. &quot;Politicians...&quot;</p>
+        <p>&quot;Yeah. They insist that Sovereign was a Geth creation - that&#x27;s the version you were told, that&#x27;s the official truth now. I am, to quote the turian councilor , &#x27;paranoid&#x27;. And so that&#x27;s what I&#x27;ll be doing for now. Hunting Geth.&quot;</p>
+        <p>That was a bold faced lie; they weren&#x27;t going to hunt Geth, at least not most of the time, and their first stop would be the Migrant Fleet, currently located in the Rosetta Nebula. But Hannah did not need to know that – as much as she hated lying to her aunt, the Council might have agreed for her to expand her operations into the Terminus, but they had done so with the Geth in mind. She doubted that they&#x27;d be very happy if they found out that she was pursuing her reaper &#x27;paranoia&#x27; instead. Especially not if that meant directly talking to a foreign government the Council had shunned and all but banned from their space about the very Reapers that they had made it clear they never wanted to hear a word about again. The only thing that information would do for Hannah would be potentially forcing her to lie for Jane one day. Jane didn&#x27;t want that. She took a sip from her third beer, trying to mask just how irritated she was with the whole affair. It failed miserably.</p>
+        <p>Hannah gave her a knowing look. &quot;You&#x27;re angry.&quot;</p>
+        <p>&quot;Livid.&quot;</p>
+        <p>&quot;Understandable. But well...at least these &#x27;Reapers&#x27; can&#x27;t get here now. Right?&quot; Questioning eyes.</p>
+        <p>Jane squirmed inwardly. It was important to spread the truth, especially to powerful people – and Hannah, having been promoted to Captain after the battle, had just taken over command of the Tokyo, the same ship Olsson had been reassigned to. It&#x27;s captain and XO had both been among the dead. But to lay the burden of this knowledge upon her still felt like a terrible thing to do.</p>
+        <p>&quot;For now, no. But next year? In two years? In five? No idea. The reapers have been doing this, by their own claims, for millions of years. I&#x27;d be pretty surprised if they didn&#x27;t have a plan B. Even if that means they just fly here in FTL and arrive a hundred years later than they meant to. The reapers have time, and who knows what they&#x27;re capable of. And as long as we&#x27;re not actively preparing for them...it don&#x27;t think it&#x27;ll even matter that much if they arrive some years or decades later.&quot;</p>
+        <p>She sighed. &quot;Yes, I expected you to say something like that.&quot; Silence descended on the three of them. Jane understood only too well what the revelation her aunt had just gotten did to someone. But nonetheless, it was Hannah to break the silence.</p>
+        <p>&quot;Well. That is...something, but let us not think of that now. There is no telling when we&#x27;ll be able to get together again.&quot;</p>
+        <p>She poured herself some more wine.</p>
+        <p>&quot;So, Karin...I already dread the answer, but tell me anyway. Has my niece finally gotten off her lazy bum and at least tried to get herself a nice woman?&quot;</p>
+        <p>Jane groaned. &quot;Hannah...&quot;</p>
+        <p>Chakwas chuckled, and Jane found herself not liking the way in which she did so at all. &quot;I suppose it&#x27;s complicated...&quot;</p>
+        <p>&quot;Doc...&quot;</p>
+        <p>&quot;Come now Janey, you know I don&#x27;t take orders from you.&quot; Yep, she&#x27;s definitively had a brandy more than what she&#x27;s used to. She hasn&#x27;t called me Janey in years.</p>
+        <p>&quot;So, listen. Our Jane has indeed met a nice woman. The problem is...&quot;</p>
+        <p>Oh for Christ&#x27;s sake , of course that blasted woman knows what&#x27;s up again.</p>
+        <p>&quot;Karin,&quot; Jane said, using her first name for what had to be, at most, the fifth time in her life, &quot; if you don&#x27;t shut it right about now, I&#x27;m going to walk out of here.&quot;</p>
+        <p>Chakwas looked at Jane like a moody child. &quot;You know she&#x27;s just going to pester me over text until I tell her anyway.&quot;</p>
+        <p>&quot;Then you can do that, but not with me being right there to suffer.&quot;</p>
+        <p>&quot;Killjoy.&quot;</p>
+        <p>Miranda was just about to start her daily calisthenics routine when her special alarm chimed.</p>
+        <p>The Weasel stood in orbit over Illium, inert and with her stealth systems engaged. This way, she was perfectly invisible for anything but visual detection – which, in space, was highly unlikely to happen. Realistically, the risk of someone seeing them was about as high as the risk of someone accidentally ramming them – practically zero.</p>
+        <p>Illium was as good a place as any to wait for Mills to report in, and it allowed her to exchange directional, and therefore practically impossible to tap, correspondence with the head of local Cerberus operations. After all, while supporting and protecting Shepard, preferably without her noticing, was currently her top priority, she still had many other operations to oversee.</p>
+        <p>Pulling the sleeve she had been in the process of extracting herself from back over her shoulder, she stepped over to her desk and opened the message. She had set this special alarm for incoming texts from Lieutenant Mills. Her workout would have to wait a minute.</p>
+        <p>It was a simple text message – prudent. Miranda did not expect to ever get anything else from the man, really. In the tight confines of a warship, speech was at a high risk of being overheard even if one took precautions.</p>
+        <p>Sent Saturday, 22. Sept. , 18:34</p>
+        <p>Shepard announced next destination. Quarian Migrant Fleet, Rosetta Nebula, for reaper-related talks with admiralty board and quarian legal matters regarding Tali&#x27;Zorah. Last not mentioned by Shepard herself, source: Crew rumors.</p>
+        <p>Departure tomorrow, 09:00 am</p>
+        <p>She sat down and reclined in her chair, putting her feet up on the desk. The Migrant fleet. She had to admit that she hadn&#x27;t seen that one coming at all, but it made sense in a way. The Quarians would know that Sovereign hadn&#x27;t been Geth technology – and while Miranda honestly couldn&#x27;t immediately come up with what the nomads were ever going to do about it, at the end of the day, at least one government recognizing the threat was better than none. It also explained why Shepard hadn&#x27;t informed her crew of the upcoming destination earlier – if she was going to piss off the council, it was better to have them hear of it after the fact, and sailors on shore leave were notorious blabbermouths. Miranda briefly considered if Shepard might after all be aware of the potential peril she might be in, and had kept her next move to herself this long for that reason, but then she dismissed it. The woman had been seen eating with her aunt and the Normandy&#x27;s doctor just yesterday, carrying nothing but a pistol and, from what Miranda had been able to see on the blurry picture that had reached her, not even a light personal shield protector. Shepard had no clue.</p>
+        <p>Perhaps I could set up a failed assassination attempt to make her take more care...</p>
+        <p>She made a notice to think more about the potential risks, benefits and downsides of such an action later. For now, she got up and began to change into her sports clothing. Putting on yoga pants, Miranda found herself wondering just what exactly &#x27;Quarian legal matters&#x27; regarding Tali&#x27;Zorah meant. She was as well versed in quarian culture as she was in the culture of all the other species and had of course studied well researched dossiers of all members of Shepard&#x27;s team, so she knew that Admiral Zorah&#x27;s daughter had been on her pilgrimage when she had gotten embroiled in the events that would lead up to the battle of the Citadel. One would have assumed that after that was done, she would have left, either to continue her pilgrimage, or to return to the fleet if she should have already found a suitable gift during her service under Shepard. But three weeks after the battle, she was still there. With the Quarian not exactly holding any sort of priority in Miranda&#x27;s mind, she had so far not paid that fact any heed; thinking about it now, she figured that perhaps, she had simply stayed to spend some time with friends before catching a ride home – it made sense that Shepard&#x27;s ground team , most likely constituting the bulk of her inner circle, would know of her next steps in advance. The &quot;quarian legal matters&quot; probably simply meant Zorah&#x27;s acceptance to a new ship and her subsequent official ascendance to adulthood.</p>
+        <p>Miranda&#x27;s mind filed that question away as solved and then shifted focus to her mental exercise. Mental acuity under physical stress was a skill to be perfected through practice like any other. Quickly picking up her randomly generated math question from her monitor, she began her burpees.</p>
+        <p>365 / (255/17)</p>
+        <p>She arrived at the answer within three seconds.</p>
+        <p>Vulok Perix stood and watched as his batarian &#x27;partners&#x27; loaded the last of the supplies into the ship. Their stink caught in his nose, almost as irritating as their ugly mugs.</p>
+        <p>Vulok hated pirates. They were unprofessional, cowardly, and unreliable. But they would have to do. And they would. After all, he did not in a thousand years expect these amateurs to get anything done other than dying.</p>
+        <p>Not that he was going to tell them any of that. After all, the best bait for this operation would be one that wasn&#x27;t aware of the role it was playing.</p>
+        <p>AN:</p>
+        <p>Over the last week I remembered that two things from the last chapter actually arent entirely original - the idea of a betting pool on shep&#x27;s LI first popped up, to my knowledge, in the excellent but sadly unfinished &quot;Quarian with a shotgun&quot; , and Gerrel owing Wrex gambling money is basically a trope now, having been done multiple times, but I dont remember where.</p>
+    </div>
+</body>
+</html>

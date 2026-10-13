@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 42</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch41.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html" selected>Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch43.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 42</h1>
+    <div class="chapter-content">
+        <p>Three months after the attack</p>
+        <p>&quot;So you&#x27;re coming?&quot;</p>
+        <p>Tali didn&#x27;t really want to, but she had already skulked off on her own last shift, so she could hardly deny her brother a second time. &quot;Yeah, I&#x27;m coming.&quot;</p>
+        <p>&quot;Great!&quot;</p>
+        <p>He beamed at her through the mask before turning around and enthusiastically striding down the corridor. She stood and looked after him for while. Han had made true on his promise these last weeks; there hadn&#x27;t been a day since he&#x27;d arrived where he hadn&#x27;t reached out to her. At first, she hadn&#x27;t really expected it to do any good, but eventually he had managed to get her to do something else than sit on her bed for a change, and she had actually had some fun.</p>
+        <p>I&#x27;m lucky to have him.</p>
+        <p>For now, she took an elevator three decks downwards to get to the gym. When Han had taken her for a run the other day, she had noticed that while her physique would&#x27;ve still gotten her into the marines with flying colors, she had definitely lost some endurance over her past months of inactivity. Whatever the future held, she would meet it in her best possible state. Jane&#x27;s regime had formed her into a wiry weapon of a woman, and she wouldn&#x27;t let that waste away.</p>
+        <p>The future.</p>
+        <p>The pain the Jane&#x27;s and the Normandy&#x27;s fate caused her had dulled a bit over time, but her hopelessness appeared to be here to stay, and frankly she didn&#x27;t think this was her being overly emotional; quite the contrary, she was being realistic. Some days, she just wanted to scream out at everyone, warn them of what was coming for them. But the admiralty board had made it very clear to her that they expected her to keep the secret, and at the end of the day Tali knew they were right.</p>
+        <p>What&#x27;s the point in warning them of something we are completely powerless to stop anyway.</p>
+        <p>The admirals hadn&#x27;t put it like that obviously, and Tali was sure they had more reasons than that. But to her, it all felt like she was playing, acting as if nothing had changed when in reality it would all end soon, be it in a couple of years or a couple of decades or even centuries.</p>
+        <p>The thought of living life waiting for the day, not knowing if it would arrive within her lifetime or that of her descendants, utterly bewildered her. The other shift, she had woken up in the middle of her sleep cycle, vividly remembering details of a dream where she had married some other engineer and started a family, just for the Reapers to arrive the day their daughter was to receive her first suit.</p>
+        <p>Stepping into the large room that had been created – several walls that hadn&#x27;t been relevant for stability had been torn out and repurposed elsewhere – to house the Neema&#x27;s athletic grounds, she stopped to take in the scene. To her shame that now sat in, she had only been here once in almost three months that she now served on the ship. There were dozens of people running the course that had been painted on the ground along the walls, making their rounds orbiting the various machines and countless different weights taking up about half of the room. The other half was taken up by a large square occupied with migrant fleet marines receiving a thorough workout from an instructor so built that he would&#x27;ve put many of the human lifters she had met on the Normandy to shame – quite the achievement, given that humans were not only taller than Quarians were with the conditions now, but also just of a naturally thicker and wider frame. Tali actually tear herself away from the view of the man, because the fact that he had managed to scrounge enough food to get this big was boggling her mind. Quarians had enough on their plates ever day to be well nourished, but how in the ancestors name anyone could get their hands on enough protein to get this big was beyond her. This and the fact that their suits had been conceptualized from the ground up for normal sized people were the main reasons bodybuilding wasn&#x27;t really popular with Quarians.</p>
+        <p>Keelah, I hope nobody saw me stare like that.</p>
+        <p>She took to the course and got running. Tali had intended to push herself to find out where she was standing at the moment, but she soon had an altogether different motivation. Keeping up a challenging pace that had her continuously overtaking other runners on the track, the strain on her muscles and her heavy breath anchored her firmly in the here and now. It was harder than it should have been, and soon her breaths grew rugged and porrly controlled. This was the pace Jane had dictated them all to configure on the Normandy&#x27;s treadmills for their training. Towards the end, she had been able to keep it for half an hour before having to slow down. Disappointed and somewhat shocked, she had to give in at the eighteen minute mark or she would&#x27;ve fallen over. Angry with herself, she resolved to at least keep moving until the time was up, and so she trod along with everyone else for the rest of the thirty minutes. Even this proved a challenge, but she&#x27;d be damned before she endure the mocking looks of those she had sped past earlier.</p>
+        <p>Finally, the time ran out. There was still half a round to go, but the room wasn&#x27;t that big - they were on a ship after all – so half a round merely took another minute. She reached the end and blissfully slumped on one of the benches bolted to the wall. For a while, there was only her greedy breaths, the fading burn in her legs and the tickling feeling of her suit absorbing the sweat. A surprise to herself, a grin found it&#x27;s way on her lips. She hadn&#x27;t felt this alive in months.</p>
+        <p>Eventually, she straightened her back and flicked her wrist to bring up her omnitools display. During the run, she had gotten a message. When the checked it, she stopped for a second; it was from her father. He had been puzzling her lately; when Tali had arrived on the fleet, her father had hurried to be there, but when they had actually met in person he hadn&#x27;t have much to say. She hadn&#x27;t minded it at the time, and she didn&#x27;t really mind now; given his behavior for the last seven years, she hadn&#x27;t exactly expected him to turn out a counselor all out of a sudden.</p>
+        <p>Still, the fact that he hadn&#x27;t messaged her in a week, and for two weeks before that, was unusual even for him. Tali knew that he was working on something new, but did not know what. Her best bet was that it might have something to do with the Geth data she had gotten from Jane. She opened the message.</p>
+        <p>Tali,</p>
+        <p>I have made sure that Gerrel wouldn&#x27;t have you transferred these last months, because I wanted you to have time to recollect yourself. But my current project has advanced to a point where I can no longer in good conscience do without your contribution, and Gerrel has plans for you too. If you have reservations, let me tell you that in my experience the best thing for you to be doing right now is working at something that will take your mind off it all, though from what Gerrel has told me about your exploits on the Neema, it seems you have found that out by yourself already. But your skills are wasted as just another engineer. Your combat experience, expertise with the Geth and experience with cross cultural relations make you indispensable for me as well as very attractive to what Gerrel is planning. I will leave it to Gerrel to explain your new post to you, you can call me afterwards.</p>
+        <p>For know, just know that these two tasks are not directly connected to each other, but you will be able to do what I require from you on the side while you work for Gerrel.</p>
+        <p>Tali leant back against the wall and blew out her cheeks. She let her gaze wonder over the room and the marines who were still being grilled.</p>
+        <p>She wasn&#x27;t surprised that her father already had plans for her, and this time she wasn&#x27;t bothered in the slightest, to the contrary. Her run had only served to remind her of the fact that no matter what life would or wouldn&#x27;t hold now, she couldn&#x27;t keep slacking around.</p>
+        <p>After sending a quick message to Han&#x27;Gerrels office, she got up to meet her brother and his friends in the mess hall and resolved to try to have a good time today.</p>
+        <p>Much later, god knows where</p>
+        <p>The cool breeze gently blew past her nose, and she closed her eyes to relish the feeling. She knew not when she had last felt this serene. In fact, she now realized, she knew nothing. Confusion settled in, disrupting the calm she had felt before.</p>
+        <p>Where am I? How did I get here and how long have I been here?</p>
+        <p>She realized that the breeze was the first thing she remembered at all and that she had no idea what had been before.</p>
+        <p>I came from...no...where did I even come from? I must&#x27;ve come from somewhere...</p>
+        <p>She tried, but couldn&#x27;t for the life of her remember. All she could come up with was a dreadful certainty that something terrible had happened. She started walking; not that she had any idea where she was going, but she had to move. As she went, her head spun around trying to take in the scenery. She was walking a footpath in the middle of a thick, dark forest. There were all kinds of trees; tall, ones, some of them dark and thin and with needles, others thick and with wide crowns of green and brown leaves, but also shorter ones with roots that completely covered the ground in every direction and gigantic, thick, meaty leaves. She had no idea where she knew this from, but something told her that she should&#x27;ve remembered the names of these specie, and that they did not belong in the same forest at all.</p>
+        <p>She pressed forward, simply following the path. The forest was engulfed in a slight fog that was thick enough to become an impenetrable obstacle to the human eye at about a hundred meters distance, but with all the vegetation around, that hardly made a difference.</p>
+        <p>She walked for what felt like forever. Eventually, she stumbled onto a clearing; to the right of the path, there was a small lake. Following an impulse, she stepped to the waterside and looked down at her reflection in the water.</p>
+        <p>A tall woman wearing blue jeans and a white t-shirt was looking back at her. Black hair kept very short, a prominent scar running from her left forehead onto her scalp, and the broad build of a woman used to physical activity day in and day out. She gasped and fell back, tripping over something and landing on her rear end.</p>
+        <p>&quot;Jane Shepard.&quot;, she croaked out. &quot;I&#x27;m Jane Shepard...&quot;</p>
+        <p>Only now realizing that all this time she not only hadn&#x27;t had a clue who she was, but hadn&#x27;t even noticed that fact, she spent little time dwelling on it – instead, she was getting nearly overwhelmed by all the memories bombarding her. That hiking trip on earth where she had seen all these trees – save for the fleshy ones. They weren&#x27;t from earth, they were bacontrees – a silly name given to them by the colonists of the planet they hailed from – Mindoir. There was no time to wonder how all these trees had ended up in one place, however; the raid was flashing before her eyes. Boot camp. Akuze. Elysium. Eden Prime. Virmire.</p>
+        <p>&quot;Rudimentary creatures of blood and flesh. You touch my mind, fumbling in ignorance...&quot;</p>
+        <p>She trembled. The Reapers...</p>
+        <p>Jane closed her eyes, better memories coming in now. Hannah. Doctor Chakwas. Kaiden Alenko, Ashley Williams. Wrex. Garrus, Liara. Tali. Moreau. She groaned; remembering all these people was a joy, but she couldn&#x27;t shake the feeling she had been having the entire time and that was about to peak. Something terrible had happened, she knew it, and she was about to remember it.</p>
+        <p>Amada.</p>
+        <p>Jane remembered the mission from the council; their entry into the system; the alarm as an unidentified, dreadnought-sized vessel had assaulted the Normandy out of nowhere. Joker had initiated evasive maneuvers, and then...</p>
+        <p>What then? She did not know. The string of her memories ended right before anything was about to happen, and picked back up again here in this forest. She whirled around, trying to make out anything anywhere; she knew not even what she was looking for. Panic flared up in her and made her breath heavier. She cursed under her breath, and soon after, out loud.</p>
+        <p>&quot;Fuck, fuck, fuck...Fuck!&quot;</p>
+        <p>Discipline set in and she forced herself to slow her breathing and think. Not that it helped much. Nothing made sense. Jane had not the faintest idea what this place was supposed to be or how she could&#x27;ve possibly gotten here. She started running; who cared where, just further down the path. There had to be something somewhere that would help her to make sense of any of this.</p>
+        <p>&quot;Commander, wait!&quot;</p>
+        <p>She stopped dead in her tracks and turned, stunned from disbelief. At the bank of the small lake which was all of a sudden populated by a family of ducks that definitely hadn&#x27;t been there before, stood a wooden bench that also hadn&#x27;t been there as she had ran past that spot just a second prior. And on the bench sat Kaidan Alenko.</p>
+        <p>&quot;Alenko.&quot;</p>
+        <p>The man grinned lopsidedly. &quot;Good to see you again, Commander. You look surprised to see me.&quot;</p>
+        <p>Jane took a couple of steps towards the bench before stopping again and struggling for words.</p>
+        <p>&quot;But...you...you died! The bomb...there was no way you could&#x27;ve...&quot;</p>
+        <p>Alenko just shrugged and looked out over the water. &quot;I know, right? Believe me, I don&#x27;t know what to make of it myself.&quot;</p>
+        <p>&quot;B-but...how long have you been here?&quot;</p>
+        <p>Alenko furrowed his brow. &quot;What do you mean, I&#x27;ve been sitting here the entire time. No idea how you managed to miss me...&quot; He slowed down, a skeptic look making it&#x27;s way on his face. &quot;Wait...to be honest, I don&#x27;t know how long I&#x27;ve been here...I thought...&quot; He shook his head. &quot;Listen Commander, I got blown up and now I&#x27;m here. That&#x27;s all I got.&quot;</p>
+        <p>Jane felt the ground give out under her and saved herself by sitting down next to the Lieutenant. She clenched her fists in confusion. This all felt so real, but...</p>
+        <p>&quot;Are we dead, Alenko? Is this...heaven? The afterlife?&quot;</p>
+        <p>The man took a while to answer. &quot;I&#x27;m not sure...I mean, I&#x27;m pretty sure I am dead...&quot; - he snorted humorlessly - &quot;...but I&#x27;m not sure about you. Don&#x27;t you have any idea what happened to you after the attack began?&quot;</p>
+        <p>Jane&#x27;s eyes narrowed. &quot;How do you even know of an attack?&quot;</p>
+        <p>Kaidan looked about as confused as Jane felt. &quot;I...don&#x27;t know. But I don&#x27;t think this is the afterlife. I don&#x27;t believe in that anyway. And even if I did, why is it just the two of us? Makes no sense. No, I...&quot; he stopped for a second and cleared his throat. &quot;I think I&#x27;m dead and you&#x27;re not. I think this is a dream.&quot;</p>
+        <p>&quot;That...would explain a lot. Doesn&#x27;t seem like any dream I&#x27;ve ever had, though.&quot;</p>
+        <p>&quot;How can you know? Maybe you&#x27;ve had countless dreams like this and just don&#x27;t remember.&quot;</p>
+        <p>A small smile tugged at Shepard&#x27;s lips. &quot;Good to see you haven&#x27;t changed, even if it&#x27;s just...whatever this is.&quot;</p>
+        <p>They sat quiet for and watched the ducks for a while.</p>
+        <p>&quot;I don&#x27;t think that attack ended well for us, Alenko.&quot; The man did not reply. &quot;If I&#x27;m really dreaming, I must&#x27;ve gotten knocked out cold or something like that. Why else would I not remember what happened.&quot;</p>
+        <p>&quot;Hm.&quot;</p>
+        <p>Jane looked at Alenko and raised an eyebrow.</p>
+        <p>&quot;You don&#x27;t seem too interested.&quot;</p>
+        <p>A shrug. &quot; We won&#x27;t solve the riddle now anyway. At some point you&#x27;ll wake up, and then you&#x27;ll see.&quot;</p>
+        <p>Jane snorted. &quot;Pragmatic. Can&#x27;t argue with that, I suppose.&quot;</p>
+        <p>Alenko chuckled. &quot;Good. Because there&#x27;s actually something we should talk about.&quot;</p>
+        <p>Jane sighed. &quot;Alenko, I swear, if there had been any way...I...I hated making that decision. But at the end of the day, Ashley had the bomb, so - &quot;</p>
+        <p>The man put a hand on Jane&#x27;s shoulder. When she turned, she found Alenko looking her in the eyes intensely. &quot;Not that. But if it helps you to hear it: You made the right call, and I&#x27;ve got no hard feelings. I told you I don&#x27;t regret a thing, and I meant it.&quot;</p>
+        <p>Shepard nodded and looked down, relieved. &quot;So...what is it then you wanted to talk about?&quot;</p>
+        <p>Alenko leant back and grinned. &quot;You and Tali, of course. This is getting hard to watch. You obviously don&#x27;t realize, so I&#x27;ll give you some good advice: She likes you a lot.&quot;</p>
+        <p>&quot;I know that.&quot;</p>
+        <p>He chuckled. &quot;You know exactly what I mean, you idiot.&quot;</p>
+        <p>Jane raised an eyebrow, surprised. &quot;Now now, Alenko. Didn&#x27;t think I&#x27;d ever hear you talk like that.&quot;</p>
+        <p>&quot;Please. I&#x27;m dead, and probably just a figment of your imagination anyway. Protocol be damned. Don&#x27;t change the topic.&quot;</p>
+        <p>&quot;Jesus Christ, Alenko. I am her captain!&quot;</p>
+        <p>&quot;So what, I think she&#x27;s into that.&quot;</p>
+        <p>&quot;You spent enough time talking to her, you know what being a captain means to the Quarians. It wouldn&#x27;t be - &quot;</p>
+        <p>Uncharacteristically, Alenko straightup interrupted her. &quot; What&#x27;s going on with you? Are you this blind or are you actually looking for excuses? Christ&#x27;s sake Shepard, what do you think how many Quarians call their captain by their first name and get to cry on her shoulder? Sitting on her bed?&quot;</p>
+        <p>Shepard couldn&#x27;t help but laugh. &quot;First you&#x27;re telling me I made the right call on Virmire, now that I&#x27;m not actually mad and should totally try and get with Tali. Sounds like something a figment of my imagination would say.&quot;</p>
+        <p>Alenko laughed with her. &quot;It&#x27;s confirmed, then. Doesn&#x27;t make any of it less true, though.&quot;</p>
+        <p>Jane looked out over the lake. &quot;No...I&#x27;ll...I&#x27;ll have to think about it, I guess...&quot;</p>
+        <p>She trailed off, confused. Hadn&#x27;t that lake been smaller just before? She noticed now that clouds had floated their way; one of them moved in front of the sun and dimmed it&#x27;s light.</p>
+        <p>&quot;Anyway...you&#x27;re sounding like Chakwas right now.&quot;</p>
+        <p>&quot;I certainly do hope so. Please get me under a scanner if I ever don&#x27;t.&quot;</p>
+        <p>She jumped and whirled around. On the bench she had just sat on with Kaidan Alenko was Dr. Karin Chakwas, looking up to her with a somewhat skeptic expression, as if Shepard was behaving unreasonably.</p>
+        <p>&quot;For fuck&#x27;s - &quot;. She ran her fingers over her short hair. &quot;This is some dream alright.&quot;</p>
+        <p>Chakwas shrugged. &quot;Lucid dreams aren&#x27;t uncommon, you know.&quot;</p>
+        <p>&quot;Can you tell me...&quot; she stopped herself. Chakwas obviously couldn&#x27;t. &quot;I just wish I&#x27;d wake up already...&quot;</p>
+        <p>Chakwas opened her mouth to respond, but was cut off by the noise of thunder. It was as loud as if a lightning had hit directly next to them; Jane jerked and looked up at the sky. It had gotten darker rapidly; by now, it was pitch black. A thick raindrop burst on her scalp, and then several others all over her body as the rain quickly increased in intensity.</p>
+        <p>&quot;Dream or not, this is getting unpleasant. We should- &quot;</p>
+        <p>Another roll of thunder, this time announced by a lightning striking somewhere between the forested hills in the distance and not as loud.</p>
+        <p>The weather doesn&#x27;t give a damn about logic either. Where did the damn fog even go so fast!?</p>
+        <p>Jane turned to Chakwas, only to find that neither she nor the bench were still there. She looked over the water and the ducks were gone as well.</p>
+        <p>Am I going insane?</p>
+        <p>Thunder again, this time so loud it hurt her ears; and there was something off about it.</p>
+        <p>She covered her ears, but it helped little. The next cacophony of thunder hit her like a brick wall. Stunned, she fell to the ground; but as she fell, she wondered.</p>
+        <p>Are that voices?</p>
+        <p>Another wave came rolling in, and she was now sure that they were voices, even if she couldn&#x27;t understand a word. She stayed lying on her back in the mud, looking up to the sky. The rain had completely drenched her by now. Light flared up somewhere in the clouds above her, and next thing she knew, it came striking down, accompanied by the loudest round of thunder yet, and engulfed her in perfect white.</p>
+        <p>Beep. Beep.</p>
+        <p>Jane blinked. Glaring light was blinding her.</p>
+        <p>&quot;...-wareness of her surroundings. My god Miranda, I think she&#x27;s waking up.&quot;</p>
+        <p>She was still lying, but not in the mud anymore.</p>
+        <p>&quot;Dammit, Wilson. She is not ready. Give her the sedative.&quot;</p>
+        <p>She wasn&#x27;t alone. Two people. She couldn&#x27;t see very well.</p>
+        <p>&quot;Shepard. Don&#x27;t try to move...&quot;</p>
+        <p>Whatever she said next got lost in the noise of Shepard&#x27;s blood rushing in her ears.</p>
+        <p>Beep. Beep. Beep.</p>
+        <p>The frequency of that sound increased. Somehow, it worried her. Her chest burned. Muffled voices. She couldn&#x27;t have said how much time passed, it could&#x27;ve been several minutes or just a couple of seconds, but eventually the noise in her skull calmed down and the pain in her lungs eased.</p>
+        <p>&quot;...dropping. Stats falling back into normal range. That was too close...we almost lost her.&quot;</p>
+        <p>Jane could see somewhat clearly now, but her entire body was feeling heavier by the moment.</p>
+        <p>I don&#x27;t think...this...is part of the dream anymore.</p>
+        <p>One of the people came into her field of view. A woman, she stared down at Shepard, looking concerned; Shepard had seen her before. But where?</p>
+        <p>&quot;I told you your estimates were off. Run the numbers again.&quot;</p>
+        <p>Vostralska! It&#x27;s the one who killed that salarian.</p>
+        <p>The edges of her vision came creeping inwards. More was said, but it only reached her as muffled noise in the distance, and then the blackness took her back.</p>
+    </div>
+</body>
+</html>

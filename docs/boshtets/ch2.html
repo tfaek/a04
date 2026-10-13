@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch1.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html" selected>Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch3.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 2</h1>
+    <div class="chapter-content">
+        <p>Garrus had had better days. It had started alright, with him going to work on the Mako&#x27;s main gun, which had been in dire need of calibrating; and while there was, as always, still room for improvement, the thing would now shoot straight at least. So he had been in a good mood when Shepard had come by a couple of hours earlier. The commander had been curious about the inner workings of C-Sec, and Garrus had been happy to answer her questions, but couldn&#x27;t keep himself from going off on tangents about all the things that had driven him mad back there. And so he had told Shepard about Dr. Saleon. That particular tale still got his blood boiling every time. And so he had of course ended up butting heads a little with Shepard, who agreed with the decision by his superiors to not shoot Saleon down. He could see her point; but still, Shepard telling him that if he didn&#x27;t care about the hostages, he was just a terrorist with a badge, rubbed him the wrong way.</p>
+        <p>Where does she get the idea that I don&#x27;t care? It&#x27;s just that they were dead anyway...or worse, probably.</p>
+        <p>That had soured his mood for the afternoon, as he went over every detail of that case again in his head, thinking about what he could have done differently. When he, as usual, finally concluded that he&#x27;d do it all the same again and there had simply been nothing he could have done, he hit up some of his contacts, checking for any leads on Saleon, as he did every couple of weeks. And like every time, there was nothing, leaving him in an even worse mood. Which was probably the reason he had been a little bit...blunt with Tali. The Quarian had come by on her way to the elevator and started a chat. When he thought about it, that had probably been not that easy for her, she seemed to be a little awkward.</p>
+        <p>And you kicked her in the teeth for it, great job...</p>
+        <p>She had stormed off angrily and not looked at him when she went back to engineering later. He found himself annoyed with her behavior. He had only meant to tease her a little, and yes, he probably could have worded it better, but what he had said had simply been the truth. It was only natural for people to mistrust homeless nomads, and it really was the Quarian&#x27;s fault that the Geth problem existed. She really didn&#x27;t need to be this offended.</p>
+        <p>Coming up from under the Mako, where he had checked the suspension of the left most forward wheel, he caught a brief glimpse of Williams. He had hardly exchanged a word with the Gunnery Chief so far, but he could tell she didn&#x27;t like him. He had a pretty good idea of why that was, too. The relay 314 incident wasn&#x27;t that far back, it was only logical that on both sides, many still held resentments. Especially in the armed forces. He didn&#x27;t even blame her, perhaps she had lost a grandfather or some such in the fighting. He was just happy most people on the ship seemed to not share her attitude; he had even joined a human card game with some ensigns the evening prior.</p>
+        <p>Sitting down on top of his baby, he took a moment to relax. His gaze wandered around the cargo hold, eventually falling on the Krogan. Urdnot Wrex. Garrus was still not exactly sure what he was doing here. Was he hoping to make a good sum of money? He would have said so, then. Was he just bored? In that case, could they rely on him when the going got rough?</p>
+        <p>&quot;See something you like, Turian?&quot;</p>
+        <p>Ah damn, I stared at him.</p>
+        <p>&quot;No.&quot;</p>
+        <p>That came out wrong...</p>
+        <p>&quot;What is your problem? Mercenaries...or krogan?&quot;</p>
+        <p>&quot;Is there a difference?&quot; Probably not the most diplomatic thing he could have said, but he was still irritated. Surprisingly, the mercenary didn&#x27;t seem offended at all, instead he laughed with his deep, rumbling voice.</p>
+        <p>&quot;Hah! Fair enough. Just don&#x27;t forget why that is.&quot;</p>
+        <p>Because you&#x27;re a bunch of idiots?</p>
+        <p>&quot;Oh? Care to tell me?&quot;</p>
+        <p>&quot;Sure. What exactly is a man to do when he has no future? Our own stupidity and your sterility plague have taken good care of that.&quot;</p>
+        <p>&quot;Well, at least you recognize that you&#x27;ve brought it on yourselves.&quot;</p>
+        <p>Spirits Garrus, what has gotten into you. Antagonize the big Krogan, why not .</p>
+        <p>He laughed again, but it sounded decidedly less amused now.</p>
+        <p>&quot;You&#x27;re a real pyjak,whelp, you know that?&quot;</p>
+        <p>Whelp?</p>
+        <p>&quot;Well I don&#x27;t know what bosh&#x27;tet means, but it&#x27;s probably something like that, so yes, I know.&quot;</p>
+        <p>Wrex looked like he was about to burst into laughter again, but he was beaten to it by Williams, who had put down the rifle she had been cleaning and held a hand in front of her mouth, obviously having a grand time of it.</p>
+        <p>Great, now I&#x27;m an entertainer.</p>
+        <p>&quot;Got something to add, Williams?&quot;</p>
+        <p>&quot;Oh, no, no, Vakarian. Just enjoying the show.&quot;</p>
+        <p>Wrex laughed again, evidently not uncomfortable with the situation at all.</p>
+        <p>&quot;Looks like you&#x27;re a real hit with the ladies today, Turian. The Quarian certainly seemed impressed...&quot;</p>
+        <p>Had to rub that in, huh...</p>
+        <p>&quot;It&#x27;s not my fault she can&#x27;t stand the truth. If her people hadn&#x27;t slipped up, we wouldn&#x27;t be having this problem now.&quot;</p>
+        <p>&quot;Yeah. And since the Quarians on the fleet are older than three hundred years, and where therefore alive back then, it makes sense to blame them for it. See the issue here?&quot;</p>
+        <p>&quot;I didn&#x27;t blame her, I- &quot;</p>
+        <p>&quot;No, just asked her if her people were &#x27;properly contrite&#x27;.&quot;</p>
+        <p>Both Wrex and Ashley were guffawing now. Garrus would have loved nothing more than to shut them up somehow, but for once, he was at a loss for words. Thankfully, the Krogan got himself back under control relatively quickly.</p>
+        <p>&quot;You don&#x27;t know a whole lot about the fleet, do you?&quot;</p>
+        <p>&quot;You do?&quot;</p>
+        <p>&quot;I am over a thousand years old. I&#x27;ve been around.&quot;</p>
+        <p>Damn, I knew they get old, but that...</p>
+        <p>Williams too was visibly astonished at the Krogan&#x27;s casual mention of the fact that he had been around when her people were still waging war with spears and axes.</p>
+        <p>Fine, I&#x27;ll humor you.</p>
+        <p>&quot;Care to share some of your wisdom?&quot;</p>
+        <p>&quot;You saw that fuckup back on the Citadel. This hunt almost ended before it began, because some idiot didn&#x27;t listen to the girl. Because Quarians are all beggars and thieves , just like we Krogan are all violent thugs.&quot; Garrus shifted his weight uncomfortably. That had indeed been a complete disaster, and the part that got him most was that on a particularly bad day, he might have made that mistake himself.</p>
+        <p>&quot;Well, that&#x27;s true, but it&#x27;s not like there is no reason for these stereotypes. It&#x27;s just natural that people are suspicious towards strangers, and when you don&#x27;t have a home, you&#x27;re a stranger no matter where you go. And it&#x27;s no-ones fault but their own that they lost Rannoch. Or their ancestors fault, I guess, but it hardly matters. They should just find some new planet.&quot;</p>
+        <p>&quot;You do realize that the Quarians already tried that, and you Turians bombed them?&quot;</p>
+        <p>&quot;What?&quot;</p>
+        <p>&quot;Yeah. Forgot the name. Some dextro planet, the Quarians found it first. Started colonizing it, asked for permission after they&#x27;d already begun work. Council denied. When some of the Quarians wouldn&#x27;t leave, your people bombed them into submission.&quot;</p>
+        <p>&quot;Well, if they had followed the procedures, that would not have happened...&quot;</p>
+        <p>&quot;True, but also a damn convenient thing to say for a Turian.&quot;</p>
+        <p>Garrus scoffed. Things didn&#x27;t stop being true because of who said them.</p>
+        <p>&quot;Imagine you&#x27;re living on a fleet of old rundown ships, you have to wear a bloody suit because of it even in your own damn home, everyone treats you like trash, and your people have been looking for a planet for hundreds of years. Then you finally find one. And you&#x27;re surprised they didn&#x27;t wait for permission?&quot;</p>
+        <p>He had no answer for that.</p>
+        <p>&quot;When you put it that way...I suppose it is somewhat understandable...&quot;</p>
+        <p>&quot;Hah. I knew you&#x27;re not a lost cause. You&#x27;re quite smart for a Turian.&quot;</p>
+        <p>&quot;For a Turian? The hell that&#x27;s supposed to mean?&quot; He would not be talked down to by this Krogan.</p>
+        <p>&quot;You Turians get your heads screwed on just like the Hierarchy wants it when you do your military service. All nice and the same. Know one Turian,you know all of &#x27;em. At least on most matters.&quot;</p>
+        <p>Again, Garrus found himself with little room for argument. What Wrex was saying was pretty much the same thing he had been saying himself for years...he had never been a good Turian.</p>
+        <p>&quot;Don&#x27;t worry your head, whelp. I&#x27;ll teach you...&quot; the Krogan laughed again, deep and long, and Garrus finally had enough. He climbed down from the Mako and went to check the suspension on the wheels on the other side, away from the others. As he got to it, he felt the gears turn in his head. Maybe he did have some apologizing to do...</p>
+        <p>Tali stood at her terminal in engineering and looked for things to do. Her shift had ended half an hour ago, but she was stretching it out, running some additional diagnostics. They weren&#x27;t strictly necessary, but it allowed her to remain in close proximity to the drive core and marvel at the technological wonder in front of her. It also gave her an excuse to not go up to the CIC and...</p>
+        <p>&quot;Tali, come on. &quot; She turned around, Adams was looking over to her. &quot;Your shift has been over for half an hour, and I know you&#x27;re just going over the emission readouts a third time now.&quot;</p>
+        <p>She tried to put up a counter argument. &quot;Well, you can never be too thorough, can you?&quot;</p>
+        <p>He put a disapproving look on, but his mouth was smirking. Still, he told her off. &quot;Yes, you can. You&#x27;re doing it right now. There&#x27;ll be need for overtime work soon enough. Now go relax. That&#x27;s an order!&quot;</p>
+        <p>&quot;Alright, I&#x27;ll go...&quot; Slumping her shoulders, she trot out of the engineering bay, the eyes of her amused colleagues upon her. Arriving in the cargo bay, she went over her options. She could chat with Ashley...who wasn&#x27;t there. Wrex scared her. Garrus...she was not interested in a conversation with the bosh&#x27;tet after he had asked her yesterday if her people were &quot;properly contrite for setting the Geth loose on the galaxy&quot;.</p>
+        <p>So she got into the elevator. As it rose painfully slowly – the most advanced ship she&#x27;d ever seen, but an elevator one would expect from a poorly kept batarian tugboat – she pondered her other options. It wasn&#x27;t any of the usual mealtimes, but one could always find some people in the mess, perhaps...no. She would do this now.</p>
+        <p>From the first time setting foot aboard the Normandy, she had had this idea. The bulkheads, the deck, it was all so new and...it looked smooth. The second she had realized that the laser – decontamination unit of the ship&#x27;s forward airlock was as state-of-the-art as apparently everything on this ship, she had had this idea.</p>
+        <p>She wanted to take her gloves off.</p>
+        <p>It had not been that long since her last clean room appointment, if she was honest, only three months before the start of her pilgrimage, so now it was four months ; but in a real clean room, one had better things to do than feeling up the walls, and this was the best she was going to get until she returned to the fleet. And it shouldn&#x27;t be an issue...she was not sure which uses clean rooms, or in the case of the airlock, relatively clean rooms, could even have for humans outside of keeping foreign contaminants out of the ship, but she was sure there had to be a place to be found somewhere in whatever schedule existed, if some existed. She had seen that the medbay had a clean room for invasive surgery, so it definitively would not collide with that...</p>
+        <p>The elevator reached the CIC, and she stepped out, her heart pounding with increased frequency. They had left the Citadel for Therum two days ago to secure a Doctor Liara T&#x27;Soni, the daughter of Saren&#x27;s Asari ally, and she had spent most of the time on the lower two decks, alternating between engineering, the cargo bay, the mess hall, and turning around mostly fruitlessly in one of the sleeper pods. So the CIC was, in a way, unknown territory for her. The humans on the Normandy had so far been mostly friendly to her, she had only seen a few stares, and those had lacked the sneer she was used to from Illium or so Citadel. They had probably just wondered how she looked under her suit. Everyone did. She didn&#x27;t blame them. She told anyone who asked. Few did, they seemed to think Quarian physiology was some kind of secret. Where they had gotten that idea was beyond her.</p>
+        <p>Still, she knew barely anyone up here, and Shepard was not at her station next to the galaxy map either, so she was uncomfortable. Instead, the executive officer had the deck. She gulped. The XO was a large man with not a lot of hair on his head, but hair on his face instead – a facet of human physiology that fascinated Tali to no end - , and he was the one person who had looked at her with hostility when she had entered the Normandy together with the rest of the ground team. She knew his name and rank; so she rehearsed them in her head as she slowly, very slowly, made her way up to his station, where he was working on a terminal.</p>
+        <p>She got to a halt in a respectful distance and waited until he seemed to hit a lull in his workflow. Noticing her, he turned his head, and a skeptical expression – one eyebrow raised, it was the same thing Quarians did, just that with humans, you could actually see it, and didn&#x27;t have to extrapolate from body language and tiny changes in the eye&#x27;s form – and inhaled, but she beat him to it.</p>
+        <p>&quot;Excuse me, Navigational Officer Pressly. I was, uh, hoping to use the forward airlock, if that&#x27;s not a problem, and I wanted to ask when that would be possible.&quot;</p>
+        <p>Hey, not so bad...</p>
+        <p>The eyebrow came back down as the man erected himself to his full height and frowned. &quot;Use the airlock? In FTL? What do you want with it?&quot;</p>
+        <p>&quot;Well, I was hoping to...utilize the decontamination unit to achieve a relatively clean environment where I could take my gloves off for a while.&quot;</p>
+        <p>He looked staggered for a moment before catching himself, but his frown did not return. Instead, he looked almost...insecure. &quot;Oh. I see.&quot; He looked away and it seemed like he struggled with himself for a second before continuing. &quot;Look, Miss...&quot;</p>
+        <p>&quot;Zorah. But you can just call me Tali. We Quarians don&#x27;t really use our clan names like that.&quot;</p>
+        <p>&quot;Uhm, right. So, Tali, I don&#x27;t really know anything about your people. Is this... the first time since you left your home that you can take something off?&quot;</p>
+        <p>&quot;Oh no, it&#x27;s actually the first time in four months. I&#x27;ve been away from home for a month now, and before that, my last clean room appointment was three months back, so I would&#x27;ve had my next one just before leaving for my pilgrimage, like it&#x27;s usually done, but that day, there was a malfunction, I didn&#x27;t hear the details, but it was some spare part of the decontamination unit, and I had to leave before it could be repaired, so...&quot;</p>
+        <p>Pressly had listened intently. As she came to a close, he gestured to the chair of the workstation next to his, and sat down. &quot;If you don&#x27;t mind, I&#x27;d like to learn about this pilgrimage. I have heard it mentioned, but I don&#x27;t quite understand what its about, if I am being honest.&quot;</p>
+        <p>Now, Tali was in her element, giddy about how interested and friendly this man she had been afraid of had turned out to be. Accepting the offered chair with a thankful nod, she launched her well practiced speech about the pilgrimage, suitable gifts, and the nature of life on the fleet. Pressly seemed genuinely impressed with it all. Finally, he asked a question. &quot;That seems pretty dangerous. How old are you, Miss?&quot;</p>
+        <p>Somehow, he would not stop calling her that. She didn&#x27;t mind, maybe that was just what he felt was the proper way to respectfully address a young woman. Humans had many differing cultures, after all, and Tali was not at all familiar with the intricacies. &quot;I am...&quot; she quickly had her mask display to the conversion for her &quot;...21 of your years old.&quot;</p>
+        <p>He blew his cheeks up and puffed some air out of his mouth. &quot;That&#x27;s...young. My daughter is 22. I sure wouldn&#x27;t want her being out in the galaxy like that, all alone...what if something happens to you?&quot;</p>
+        <p>She nodded enthusiastically; Shepard had said much the same thing when she had visited Tali in engineering to thoroughly question her about Quarian culture. &quot;Well, you probably didn&#x27;t prepare your daughter for something like this, since you humans have no need for it. We get training before we get sent out, basics of survival and self defense. Additionally, we&#x27;re all required to do all kinds of work alongside to school from the time we get our first suit, that&#x27;s usually around fifteen years old, when most Quarians reach their definitive height. So we know how to take care of ourselves, and how to make ourselves useful.&quot;</p>
+        <p>Pressly actually grinned at her now. &quot;Yes, I have heard about that. Adams sings your praises breakfast, lunch and dinner. According to him, you&#x27;re the second coming of Christ.&quot;</p>
+        <p>The second what? I&#x27;ll have to ask Shepard about that, or Ashley...definitively not Adams, don&#x27;t want him to think I&#x27;m fishing for compliments...</p>
+        <p>&quot;Are all of you that good?&quot;</p>
+        <p>She felt herself blush under her mask, and her fingers started their frantic dance in front of her belly. &quot;I...received additional training. I am actually one year older than most pilgrims...&quot;</p>
+        <p>He looked like he was about to ask her why that was, but then he didn&#x27;t; had he seen how uncomfortable she had become? She really didn&#x27;t want to talk about the fact that her father was an admiral and what that meant...she had barely managed to skirt that topic with Shepard, and as much as she was overjoyed that Pressly seemed to have come around, she&#x27;d rather not speak about this at all, and if she had to, she&#x27;d prefer Shepard.</p>
+        <p>&quot;Well, it&#x27;s been interesting talking to you, thank you. But I need to get back to work. The air lock...we don&#x27;t actually use it for anything else but entering and leaving the ship. So, as far as I&#x27;m concerned, you can have it for as long as you want, whenever you want.&quot;</p>
+        <p>&quot;Oh.&quot; Her mind started to race with the possibilities. &quot;Thank you, Naviga-&quot;</p>
+        <p>&quot;Please, just Pressly, Miss.&quot;</p>
+        <p>She nodded happily and bounced on her toes. This conversation had gone better than she had imagined in her wildest dreams. As Pressly turned back around to his terminal, she got going towards the airlock and opened the door.</p>
+        <p>&quot;Hey, Tali.&quot;</p>
+        <p>&quot;Hey, Joker.&quot;</p>
+        <p>The scrawny man didn&#x27;t turn his chair around, but from the little she&#x27;d seen of him so far, he seemed nice enough, if a little strange. He seemed to always know who was coming up behind him; how he did it, she wasn&#x27;t quite sure. Maybe ask him later. But not right now. Stepping into the airlock, she marveled at how new and smooth it all was. As the decontamination protocol was running, she imagined how it would feel to touch the walls, or the rubber inlay on the floor.</p>
+        <p>How does the air taste here? Maybe...no. It&#x27;s not a real clean room. Would probably not be an issue, but it&#x27;s not worth it.</p>
+        <p>Finally the program was complete, and she opened the seals on her forearms, just underneath the elbow, and pulled the gloves off. Folding them so the opening wouldn&#x27;t touch the outside of the suit, she stowed them away in one of her pockets before just looking at her own hands for a while.</p>
+        <p>Our skin color is really similar to the one most humans I&#x27;ve seen on the ship have...</p>
+        <p>Tali had not known about all the different colors humans came in. It would probably have some evolutionary reason to do with their homeworld, but what the colors meant and why the quarianesque light pink appeared to be most common one, she had no idea.</p>
+        <p>Maybe ask Shepard later.</p>
+        <p>She took her eyes off herself and stepped to the inner door, hesitating for a second before she reverently put both her hands on it. It was cool, and exactly as smooth as it had looked like. She didn&#x27;t recall ever touching something as smooth before, aside from her own skin of course. The surfaces on the fleet were usually worn down and corroded by age, even those of the clean rooms, which did not exactly help with keeping them clean. She moved her fingers up the metal, feeling how little friction there was. An idea formed in her mind, and she bent over to the dispenser on the wall, using her suited left elbow to put some liquid disinfectant in her right hand, and then repeating it with the other half. The liquid bit at her skin, but it didn&#x27;t feel bad, instead she found it exciting, like most new sensations. They had liquid sanitizer on the fleet too, of course, but every brand felt a little different, and she obviously had never had this one before.</p>
+        <p>Returning to the door, she put her wand hands on them, applied pressure, and pulled down. It actually squeaked, just like she had hoped, and she failed to contain a fit of giggles. Then she heard a familiar, if muffled, voice through the door.</p>
+        <p>&quot;Hey Joker, do you know what she&#x27;s doing in there?&quot;</p>
+        <p>&quot;No idea Commander, but she sure seems to be having fun.&quot;</p>
+        <p>Oh keelah, I didn&#x27;t lock it!</p>
+        <p>Panicked, she put her gloves back on in a blur of motion and opened the door, bursting out into the walkway. Shepard had moved up next to Jokers seat, but now both turned towards her. Her eyes got hooked on Shepard&#x27;s blue ones. Again. She had some trouble with human facial expressions, or facial expressions in general, but Shepard&#x27;s eyes were very expressive. She found them fascinating. Then again, the entire woman was fascinating, she was still amazed how angered Shepard had been by what had happened to her and Keenah, and the length she had gone to to make sure there were consequences. And the way she looked...so different from a quarian man, but similar, too...</p>
+        <p>&quot;Hey Tali. What were you doing in there?&quot;</p>
+        <p>&quot;Oh! Shepard! Hey! How are you?&quot;</p>
+        <p>&quot;I&#x27;m well, thank you. I hope I didn&#x27;t interrupt...whatever it is you were doing in the airlock during FTL?&quot;</p>
+        <p>&quot;Oh no you didn&#x27;t I...well actually you kind of did but not really, I was just worried you would, so I stopped on my own before that could happen, I should have locked the door. But I didn&#x27;t want to hack it without asking first, It&#x27;s not supposed to get locked from the inside after all...&quot; she noticed that Shepard was beginning to lose the fight against a grin that was painting itself on its face, while Joker hadn&#x27;t even tried to keep a straight face. &quot;...I&#x27;m babbling again.&quot;</p>
+        <p>&quot;Oh no, It&#x27;s fine Tali. But just what where you actually doing?&quot;</p>
+        <p>&quot;I touched the wall. With my gloves off.&quot;</p>
+        <p>That swept the grins off their faces. &quot;Oh. Sorry for interrupting you then...&quot;</p>
+        <p>&quot;No Shepard, it&#x27;s okay, you don&#x27;t have to be...&quot;</p>
+        <p>&quot;No, but I am. You don&#x27;t get to do that often, do you?&quot;</p>
+        <p>&quot;No. Last time was four months ago.&quot; Joker whistled, whatever that was supposed to convey. &quot;Damn...&quot;</p>
+        <p>Shepard&#x27;s face had gotten thoughtful. &quot;What can you take off in there?&quot;</p>
+        <p>&quot;Well I took my gloves off this time, could probably have taken my shoes and lower leg parts off, too. I thought about taking the mask off, but...it&#x27;s not a real clean room. The risk would not really have been all that high, but it&#x27;s still a risk, and it&#x27;s just not worth it.&quot;</p>
+        <p>She nodded, still thinking. &quot;Could we make a real clean room out of the airlock?&quot;</p>
+        <p>&quot;Oh! You don&#x27;t need to...besides, it isn&#x27;t possible anyway. A real clean room requires regular disinfection with liquid agents, it can&#x27;t have any columns between plates, things like that. The airlock won&#x27;t do it.&quot;</p>
+        <p>&quot;Shame...&quot;</p>
+        <p>Joker cut in. &quot;You seemed to have a grand time of it, touching the wall.&quot;</p>
+        <p>She laughed. &quot;Yes, I made my hands wet with sanitizer to make a squeaking sound with them.&quot;</p>
+        <p>Both chuckled.</p>
+        <p>&quot;It&#x27;s the little things in life, hmm?&quot;</p>
+        <p>&quot;Yes, Shepard.&quot;</p>
+        <p>&quot;Alright, I have to do some paperwork...have fun, you two.&quot;</p>
+        <p>Shepard got going. As she walked past her, Tali turned and looked after her for a second, her eyes traveling down from Shepard&#x27;s broad shoulders to her firm...she snapped her head back...</p>
+        <p>Keelah! Get a hold of yourself!</p>
+        <p>...and flinched. Joker was still looking at her...and appeared to be barely holding it together. When he saw her startle, he finally lost it and turned his chair back around, laughing loudly. Resigned to her shame, she turned away and got going towards the elevator.</p>
+        <p>Ancestors...why...</p>
+    </div>
+</body>
+</html>

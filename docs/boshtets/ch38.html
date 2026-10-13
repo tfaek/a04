@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 38</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch37.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html" selected>Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch39.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 38</h1>
+    <div class="chapter-content">
+        <p>Miranda Lawson stood in the mess hall of the Normandy and contemplated her position.</p>
+        <p>In the medbay, just some glass and bulkhead away, Commander Shepard lay in medically induced sleep. Despite the damage to her right lung, the woman continued to breath on her own; when she had lost consciousness down on Vostralska III, Miranda had genuinely feared for Shepard&#x27;s life for a while – a sentiment most definitely shared by her quarian temporary comrade in arms – but she had performed the puncture well, and it had saved Shepard. But still, she couldn&#x27;t deny the tension had gotten to even her. In the end, she had achieved the objective, as usual. Once more she was more than glad that the Illusive Man, and even her damned father when it had still been up to him, had made sure to provide her with very broad education and training.</p>
+        <p>Miranda got herself going towards the elevator; now that she had put herself out in the open, she&#x27;d have preferred to get a chance to talk to Shepard before Shepard learned about her identity from the Alliance, but since that wasn&#x27;t going to happen with the state she was in there was nothing left for her to do here except get the hell off the ship as long as she still could and bring the corsairs back to Baker&#x27;s Point in that same timeframe. Preliminary reports had already been sent for sure. As much as the AIS had shat themselves over the course of this dumpster fire, someone would connect the dots very soon. She allowed herself a smirk at the thought of the rolling head of whoever had been the traitor&#x27;s supervisor as the elevator doors closed behind her.</p>
+        <p>The mirth ran away from her face awfully quick. She had begun her role as Shepard&#x27;s &#x27;Guardian angel&#x27; wary of the lurking threats, but still confident. Now, she wasn&#x27;t so comfortable anymore. There was no mistake she had made; her mind had been analyzing the incident, including her actions, from every possible angle whenever there had been the tiniest bit of downtime in the last hour, but the simple truth was that she had done everything right and that was the reason Commander Shepard was not only still breathing, but also not a captive.</p>
+        <p>And still, it almost wouldn&#x27;t have been enough. Disaster had been avoided by the intention of the enemy. If that Salarian had shot to kill, Shepard would be dead. A round to the lung is a pretty risky way to incapacitate someone...whoever was behind this might have given order to rather kill Shepard than to let her get away. In that case, Shepard&#x27;s survival is likely due to hesitation on that agents part. Nothing to rely on in the future.</p>
+        <p>Just like all the other factors that had led to this relatively lenient ending. Lenient compared to what could have been, that was. Three corsairs were dead, and so was Gunnery Chief Ashley Williams. The Commander herself would be incapacitated for weeks. Bloody hell.</p>
+        <p>The elevator stopped and released her into the cargo bay. Ignoring the curious looks of the crew around her, Miranda quickly made her way to the Normandy&#x27;s Kodiak standing by to take her back to her ship.</p>
+        <p>If anyone was to blame for the incident, it would be Shepard. Everything she had seen, as well as everything she had gathered about what had taken place before her intervention, further cemented the picture Miranda had of Shepard : An amazing soldier and tactician, sure, but she had no idea of how to navigate the game of cloak and dagger played be the kind of people who&#x27;s attention she had drawn. She&#x27;d have to learn quick – if nothing else, the loss of Williams would certainly serve to make Shepard aware of the risks of trusting too easy, even your supposed own people.</p>
+        <p>Miranda was well aware she was being hard on the woman – she was a soldier, not a secret agent. But the stakes were simply too high for fairness. Not for the first time, and certainly not out of a lack of respect for the commander, she found herself wondering if they weren&#x27;t perhaps putting too much stock in just one person. The Illusive Man doesn&#x27;t think so...he&#x27;ll definitely go through with fully planning out Project Lazarus now.</p>
+        <p>She absentmindedly noticed the shuttle beginning to move, and leaned back in her seat. Her thoughts wandered to Shepard&#x27;s team. The Commander obviously inspired deep loyalty in those Shepard worked with, so while Miranda, as she now remembered, still didn&#x27;t know why the Quarian was still around, her mad rescue attempt wasn&#x27;t surprising per se. Neither was Vakarian&#x27;s impressive proficiency with a rifle. She had known these things beforehand. In fact, she had known so much about every member of Shepard&#x27;s team for a while now, that she probably could have written a passable approximation of their psychology. That just made it all the more interesting to meet them in person and see if she had been on the money and what she had missed.</p>
+        <p>Vakarian seemed exactly like the person she had taken him for – a fighter through and through, but not exactly a military man. Not your stereotypical Turian, that was for sure. Loyal, yes; but not necessarily obedient, and definitely someone with an independent mind.</p>
+        <p>The same seemed to be true for Zorah – she had held up well, even taken the initiative, under high pressure. Only when it had looked like Shepard might die had she come close to losing it. Her competence had never been in question, though Miranda was surprised she had managed to infiltrate a building filled to the brim with Blue Suns all on her own. The only things unclear were why she was still on the Normandy, and what the nature of her relationship to Shepard was. Everything I know points to her being very dutiful, so it is highly unlikely to be the reason she&#x27;s still around, but still...they&#x27;re close, that much is clear. It&#x27;s hard to imagine, but....could it be?</p>
+        <p>After a few seconds of fruitless contemplation she decided that speculation wasn&#x27;t going to get her anywhere, and that it wasn&#x27;t all that important anyway.</p>
+        <p>I&#x27;ll only be able to find out if I can keep my contact on the Normandy...which should be downright impossible. They will find out how I got into their systems...</p>
+        <p>She sighed and rested her face in her hands, trying to grant her mind a minute of rest while she waited for arrival on the Weasel. They got there soon enough. There were some thing to be talked about with Jacob, but he was busy seeing after his men and simply told her they&#x27;d speak later. So she sent a short message to the Normandy, who was still waiting for their shuttle to return, and had Scherer plot a course to silently creep out of the system – the pirate presence was still overwhelming. In fact their attack had been carried out just in time as two hours ago, a heavy Blue Suns cruiser had exited FTL just outside the orbit of the small planetoid marking the system&#x27;s edge. Without their stealth systems, while the Normandy was so fast that she actually might have managed to escape, the Weasel would have been doomed for sure.</p>
+        <p>Scherer&#x27;s answer came promptly; the course had been plotted in advance and he was going to set the ship in motion immediately. Miranda was pleased to hear it and opened the door to her cabin – a shower and some sleep were in order, and she was looking forward to it. But there was one more thing to be done first. She sat down in front of her desk and booted up the program.</p>
+        <p>The new quantum communication system that would have allowed Miranda to speak to her boss without any delay no matter the distance, as well as completely free of any risk of being listened to, hadn&#x27;t been ready when the Weasel had been designed, and the system needed so much space that in her opinion it wouldn&#x27;t have been a good idea anyway. And so she would be reporting to the Illusive Man over an ordinary connection, albeit an extraordinarily well secured one. It didn&#x27;t take long.</p>
+        <p>Miranda had activated her camera, but the Illusive Man had not done her the same courtesy. He never did for anyone when conducting outside communication over anything less secure than a quantum communicator. Paranoia perhaps, but his successful eluding of all the galaxy&#x27;s best intelligence agencies proved him right.</p>
+        <p>“Miranda, it&#x27;s good to see you&#x27;re well. Your report paints quite the messy picture of the operation.”</p>
+        <p>She snorted humorlessly. “That&#x27;s putting it lightly, Sir. It was a near disaster.”</p>
+        <p>Miranda had long since learned that trying to sugarcoat things was an exercise in futility with the Illusive Man, and she had come to enjoy that. There were few people she could talk to as openly and directly as to her employer.</p>
+        <p>Black screen or not, she could practically see him do a tilted nod and wave his cigar.</p>
+        <p>“I disagree, at least somewhat. Your operation was a resounding success. We got off with a couple of knocked out teeth, that is a lot better than the alternative. And it&#x27;s all thanks to your sound judgment and quick actions. This is exactly what I expected from you, and why I trusted you with this task.” The sound of him drawing from the cigarette. “Nevertheless, I see what you mean. Shepard almost died, and she lost a good soldier for her trouble.”</p>
+        <p>“It&#x27;s more than that, Sir. A traitor this high up in the AIS! Whoever orchestrated this is extremely powerful.” She shook her head. “The only good thing to come out of this is that Shepard is going to be much more careful now.”</p>
+        <p>“Whoever? I don&#x27;t think there are too many candidates.”</p>
+        <p>She leaned back and crossed her arms in front of her chest. The Illusive Man was right, there really weren&#x27;t a whole lot of people or organizations powerful enough for something like this. Anyone could hire some Terminus pirates, but Blue Suns heavy cruisers didn&#x27;t come cheap, and neither did biotic Salarians. And while Wells had been a traitor, most of his evidence that had lead to the operation in the first place had been authentic – or faked well enough to not raise suspicion. Everything pointed to somebody with a lot of money and an extensive intelligence network in both the Terminus and Citadel space.</p>
+        <p>The Turians wouldn&#x27;t do this even if they could, the Asari probably couldn&#x27;t either, and the Salarians...they could, but they wouldn&#x27;t. It wouldn&#x27;t make any sense. The Hegemony could never have pulled this off. But why...</p>
+        <p>Miranda realized that she had been silent for several seconds. “But...what would the Shadow Broker get out of this?”</p>
+        <p>There was a long pause from the other end of the connection. “I don&#x27;t know...yet.”</p>
+        <p>“...level 5, I repeat, the next tour begins in ten minutes on level 5...”</p>
+        <p>Announcements like this one blared from speakers, barely rising above the chatter of the masses of people filling up the public levels of Arcturus station. Tali was in awe at the size of it; next to the Citadel it would&#x27;ve looked tiny of course, but in all actuality, Arcturus station was gigantic, a sight to be seen. The hundreds of people walking everywhich way, most of them humans, a lot of whom had brought their children, seemed to agree. At least for those who could afford it, the seat of the alliance parliament was a popular destination for weekend trips, it appeared.</p>
+        <p>She came to stand in front of a large viewport and idly passed some time watching the shuttles fly back and forth; in the distance, every now and then she could actually make out a vessel of the station&#x27;s defense flotilla. Further out in the blackness of space, hidden from the eye, elements of the fifth fleet were standing by, she knew. Hackett&#x27;s ships served as quick reaction forces most of the time, and with the Arcturus system being both supremely important and a good spot to reach every part of the human territories relatively quickly, it had become the fleet&#x27;s base of operations.</p>
+        <p>For some reason, a massive heavy cruiser slowly drifted through the empty space between the two arms of the station. It was an incredibly inefficient maneuver; the vessel had to have decelerated all the way down to this snail&#x27;s pace in order for this to be reasonably safe, and would then have to accelerate again if they intended to ever get to whatever destination before they were all old and grey. Tali was astonished as to why humans would waste such amounts of energy when they could&#x27;ve just made a tiny adjustment to their curse and avoided the station. While she was still wondering, the spot at the viewport got crowded as dozens of fascinated onlookers approached, first of them the gaggles of excited children, laughing, screaming and pointing their little fingers at the warship. Finally, she understood.</p>
+        <p>They&#x27;re just doing this to give these people a show.</p>
+        <p>She shook her head in mild disbelief. Humans were crazy. When the cruiser began to slowly fade away into the darkness, Tali turned away from the window and let her gaze wander across the platform they were standing on; most of the other people were losing interest as well. Already, most of the children had found other things to be excited about. Others were dragged off by their parents to a restaurant close by, and here and there Tali could see one of the tiny humans receive a hushed, but apparently still intimidating telling-off for whatever misdemeanor.</p>
+        <p>Did Ash&#x27;s dad take her here once? Seems like something they would&#x27;ve enjoyed.</p>
+        <p>Tali felt a lump in her throat and turned back to the viewport, staring off into space. She would have to write something to Ashley&#x27;s family, she realized. The mere thought made her knees tremble.</p>
+        <p>When she had somewhat gotten her bearings back, she looked at the time and sighed. The field trip had served it&#x27;s purpose of taking her mind off things for a while, but now the events of the last days forced themselves back to the center of her thinking again. She didn&#x27;t want to admit it, but she was rattled. After that Salarian had beaten her, there had been a brief moment where she had been convinced that she would die. And then shortly after, it had looked like Jane might do so.</p>
+        <p>For me.</p>
+        <p>The woman didn&#x27;t let anything show, so Tali wasn&#x27;t sure, but she believed even Lawson had been afraid for Shepard&#x27;s life when they made their escape. Garrus had carried her, the AIS agent had lead the way, and Tali had brought up the rear. Fortunarely, there hadn&#x27;t been any further shootouts, though - the corsairs had covered them and initiated a swift retreat. The Blue Suns hadn&#x27;t been very decisive in their pursuit. Perhaps the loss of their boss had left them unsure of how to proceed. It didn&#x27;t matter.</p>
+        <p>The entire way up to the Normandy, Tali had been sick with fear. She wasn&#x27;t sure when she had felt like this for the last time. It had to have been around the time of mother&#x27;s death, she supposed. She shuddered.</p>
+        <p>If Garrus and Lawson hadn&#x27;t arrived, we&#x27;d both be dead.</p>
+        <p>Her omnitool beeped; it was a message from Dr. Chakwas that wiped the somber thoughts away in an instant. Jane had woken up again, properly this time. She had been awake shortly nine hours before, but Tali hadn&#x27;t been there, she&#x27;d only been told afterwards – it vexxed her a little bit, but it obviously made sense. Apparently she&#x27;d been very drowsy, which was normal. She had eaten something, asked about Tali, Garrus, Liara and the Normandy and then gone back to sleep, ordinary sleep this time. Tali had initially wanted to stay with her, but Chakwas had quickly shooed her away. No lingering around of friends or family. They&#x27;d be called for when it was time.</p>
+        <p>From what Tali had heard, it had already been more then enough of a fight for Chakwas to even take part in Shepard&#x27;s treatment directly. She was the Normandy&#x27;s doctor after all, not specifically Shepard&#x27;s, and the physicians on Arcturus station didn&#x27;t take kindly to the meddling of a small little ship doctor. Tali wasn&#x27;t sure how Chakwas had gotten her way, but given the reputation of the Normandy and their clout with high command, she wasn&#x27;t surprised.</p>
+        <p>She took a taxi to the hospital, thankful when the vehicle&#x27;s door shut behind her, taking her away from the surprised looks of a gaggle of humans and other people waiting for a cab and obviously not having expected a Quarian, much less one with priority access. She felt a little guilty using it for this, but she just had to get there as soon as possible.</p>
+        <p>She wasn&#x27;t blind nor stupid, she knew full well Jane had taken that bullet for her. She hadn&#x27;t told anyone, not even Garrus; the details of their hand to hand fight in the ditch weren&#x27;t relevant to the mission report after all, and she wasn&#x27;t sure what to make of it. She was incredibly thankful of course, but to know that her best friend had been willing to die in her stead was still a strange feeling.</p>
+        <p>The couple of minutes it took to get there went by in a nervous haze. Tali barely even noticed the surprised faces of the guards in front of the military wing when she flashed them her access card. There was another guard in front of Jane&#x27;s room, but the man seemed to be informed; instead of trying to stop Tali, he opened the door for her. She mumbled a quick word of thanks and burst into the room.</p>
+        <p>Jane was lying in bed, blankets up to her waist, and looked more tired and spent than Tali had ever seen her. She had been looking through the large window, but turned her head when Tali entered. Their eyes met and their was a long, unsure moment, something Tali wasn&#x27;t used to between them. Eventually, Jane broke the silence.</p>
+        <p>“Hey.”</p>
+        <p>Tali cracked a quick smile underneath her mask; even just hearing her speak again was a joy.</p>
+        <p>“Hey.”</p>
+        <p>She slowly and somewhat awkwardly stepped over to the bed and sat down on the chair there. “Keelah, I was so worried about you.” She had wanted to put some levity into it, maybe call her a bosh&#x27;tet or something, but her actual feelings forced their way onto her lips.</p>
+        <p>Jane attempted a smile. “Sorry. I&#x27;ll try to not do give you reason for that in the future.”</p>
+        <p>Tali noticed that Jane spoke slower than usual. “How are you?”</p>
+        <p>Jane furrowed her brow. “Been better. From what Chakwas told me most of what&#x27;s in there a was sown and grown back together the way it should be, but it&#x27;ll take a while for the actual lung tissue to heal...” she shrugged. “I don&#x27;t know exactly. She said I&#x27;ll be back in shape in three weeks. Wonders of modern medicine.”</p>
+        <p>Tali nodded along. “That&#x27;s good, Jane. That&#x27;s good.”</p>
+        <p>Silence fell again; but at least for Tali, it wasn&#x27;t the comfortable silence they had shared so often before. The events of their past mission hung over her like a dark cloud.</p>
+        <p>“Jane, I...what you did...”</p>
+        <p>“Forget about it.”</p>
+        <p>“No Jane, I...”</p>
+        <p>“Tali. I&#x27;m not going to let you get hurt. Period. Just...did what I had to do.”</p>
+        <p>She looked at Jane&#x27;s face for a while, wondering how this had come about. Good friends were one thing, good captains another, and she was blessed with both of those in one and the same person. Still. “Jane, please let me speak.”</p>
+        <p>Jane cast her eyes down and nodded.</p>
+        <p>“I wanted to thank you. I&#x27;d be dead if it wasn&#x27;t for you. I wanted to spell it out, because I want you to know....know that I...” she trailed off. Her gaze had wandered towards the wringing fingers in front of her waist as she had been speaking; now she threw them up in irritation at her own inability to put her feelings into words and looked back up to find Jane staring at her face intensely.</p>
+        <p>“Tali, I told you you&#x27;re my best friend. I wasn&#x27;t going to leave there without you, and that&#x27;s that.”</p>
+        <p>She stared at her lap, her face hot up to her ears. One one hand she felt elated to hear Jane say that, on the other she wasn&#x27;t sure how to react, or how to properly thank her. So she decided to try and make a joke.</p>
+        <p>“But what about Garrus?”</p>
+        <p>Jane snorted. “Garrus is my brother, not my friend. And even if he was, he&#x27;s not as pretty as you.”</p>
+        <p>That comment didn&#x27;t exactly help, and it was all she could do to not yelp. Somehow it had gotten even hotter inside her helmet.</p>
+        <p>She was saved by the sound of the door swinging open and turned around. The doorframe was filled up with the modest, but still imposing presence of Admiral Hackett, shadowed by an adjutant in the background.</p>
+        <p>“Commander. Miss Zorah. It&#x27;s good to see you alive and well.”</p>
+    </div>
+</body>
+</html>

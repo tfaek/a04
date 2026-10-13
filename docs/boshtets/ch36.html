@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 36</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch35.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html" selected>Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch37.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 36</h1>
+    <div class="chapter-content">
+        <p>Tali clung tightly to Jane, trying to hide the trembling of her body as the stress hormones still coursed through her veins.</p>
+        <p>&quot;K-keelah...when I saw Ashley I thought for a moment that...I thought that - &quot;</p>
+        <p>&quot;Shhh.&quot; She rested her head upon Tali&#x27;s shoulder. &quot;I&#x27;m alright.&quot;</p>
+        <p>They stayed like that for a moment that Tali wished could last longer, but the fear of their situation stayed present in the back of her mind, etching her on to get moving. Just a second before she would have done so herself, Jane pulled back and looked her in the eyes; she was all Commander Shepard again.</p>
+        <p>&quot;We cannot think about Ashley now. We need to get out of here.&quot;</p>
+        <p>She nodded and pulled back hastily, then stepped around the chair and knelt down to take a look at Jane&#x27;s shackles. It was simple metal; nothing she wouldn&#x27;t have open in a couple of seconds. Finding calm in the familiar motions, she quickly grabbed her multitool from her belt and started cutting.</p>
+        <p>&quot;It&#x27;s damn good to see you. What&#x27;s the plan?&quot; Jane asked as she was about to open the first one.</p>
+        <p>Tali didn&#x27;t look up when she answered. &quot;I, uh, don&#x27;t precisely know, actually. I just told Garrus to distract them for me...&quot; She shrugged and bent open the cut shackle with a grunt.</p>
+        <p>Pulling out her hand, Jane exhaled sharply. &quot;So you&#x27;re really down here all alone? I was wondering how you knew about Ash.&quot;</p>
+        <p>Tali nodded, keeping her focus on the second shackle. &quot;I let Garrus take Liara to the shuttle without me. He was pretty angry with me...I think he was wishing he&#x27;d get to stay.&quot;</p>
+        <p>&quot;Well, either way one of you would&#x27;ve been disregarding my orders. But I&#x27;m glad you did.&quot;</p>
+        <p>Tali cracked a tiny smile of relief inside her helmet; she had been telling herself that Shepard would see it this way, even scolding herself for even being worried, but hearing it from her was much better.</p>
+        <p>Jane mumbled to herself. &quot;What on earth is Garrus doing out there? It sounds like there&#x27;s an entire platoon with him.&quot;</p>
+        <p>The second shackle came off and Tali stood up; Jane tried the same, but was having visible trouble with it. Her movements were stiff, and the first attempt failed. Tali stepped in to help, but Jane had already had managed herself – on her right leg, the left one hanging almost limp. Tali hurried to support her.</p>
+        <p>&quot;What happened to you!?&quot;</p>
+        <p>Jane looked around, then to the ceiling. &quot; Got shot. It&#x27;s only a flesh wound, but the hamstrings are wasted, and I think the quadrice-&quot; She stopped herself. &quot;Basically, I won&#x27;t be able to walk very well.&quot; Her finger pointed to the ceiling, where she had apparently noticed the duct Tali had come from. &quot;Or jump.&quot;</p>
+        <p>&quot;Frekk. Well, I guess we could...&quot;</p>
+        <p>She grinned. &quot;Tali, don&#x27;t overthink it. Just get in there.&quot;</p>
+        <p>Tali looked at her puzzled, then shrugged and took 2 steps of runup before jumping. Swinging as she was, it wasn&#x27;t entirely easy to pull herself up and into he duct, but she managed. Having done so, she arduously turned around in the tight confines and looked down at Jane. She groaned and palmed her faceplate when she saw Shepard smirk up at her.</p>
+        <p>&quot;The chair...good idea. Yes.&quot;</p>
+        <p>If Jane had any teases on her tongue, she decided to withhold them. She put her good leg on the chair she had placed underneath the hatch and stepped up high enough to comfortably put her elbows inside the duct. A couple moments and some strained grunts later, she was inside and looking at her.</p>
+        <p>&quot;Alright, lead the way. We should hurry.&quot;</p>
+        <p>Tali nodded and, after another round of awkward contortion, she had turned around and got going. She was crawling on all fours now in order to be quick; with the commotion outside, she wasn&#x27;t as concerned about noise as she had been earlier. A memory flashed through her mind, she and Han playing on the floor when they had been children. She slapped the absurdly inappropriate thought away. Behind her, Jane was keeping up well, even though she was dragging her left leg behind her and hopping on her right one.</p>
+        <p>She is a machine, she thought, not for the first time impressed with Shepard&#x27;s physical excellence.</p>
+        <p>With her knowing the way this time and them not trying particularly hard to be quiet, it took a mere seven minutes until they reached the control room. The loosely attached hatch came off with a simple push and Tali turned to reach to the edge a handwidth above the exit. From there, she let herself down gently. Jane followed not nearly as elegant, losing her balance as she tried to catch herself with merely the right foot and when she instinctively shot out the left one, it collapsed under her weight. Tali quickly stepped in to save her from falling, earning herself a thankful look. Supporting Jane on her shoulder, she began dragging her towards the sewage hatch.</p>
+        <p>&quot;Where does that lead?&quot;</p>
+        <p>The quarian cringed. &quot;You&#x27;ll see. You might wanna...brace yourself.&quot;</p>
+        <p>She opened it and while Tali, having preemptively disabled her olfactory filters again, was spared the stench, Jane was not so lucky. For a moment it looked like she was actually going to retch; but she caught herself as quickly as she always did.</p>
+        <p>&quot;Jesus Christ...I guess now I know why you didn&#x27;t bring your realk.&quot;</p>
+        <p>She nodded empathetically and put a hand on the ladder. &quot;Can you...-&quot;</p>
+        <p>&quot;I&#x27;ll manage.&quot; Shepard interrupted. &quot;Let&#x27;s go!&quot;</p>
+        <p>She obliged and began climbing down the ladder, looking up to see how Jane would fare. She did pretty well all things considered, lowering herself down with her arms before taking a hold with her right foot and then sliding her hands down the rails to do it again. They arrived at the bottom in seconds.</p>
+        <p>So far, so good.</p>
+        <p>Tali, her body already halfway in the sewage pipe, turned her head around to Jane.</p>
+        <p>&quot;Okay...you won&#x27;t be able to see in there, but there aren&#x27;t any paths branching off. It&#x27;s just straight ahead. And, uhm...try not to touch the bottom of the pipe, it&#x27;s full of shit.&quot;</p>
+        <p>She said that last part with a pitying look at Jane&#x27;s naked hands. Shepard grimaced and got down on her right knee to follow her inside. &quot;Thanks for the tip.&quot;</p>
+        <p>Tali turned and got going; a moment later, a splashing sound and a grumbled curse indicated that Shepard had not,in fact, managed to stay clear of the bottom.</p>
+        <p>&quot;One thing,&quot; , she grunted, the effort clear to hear in her voice. &quot;You got any idea if it&#x27;s night or day out there?&quot;</p>
+        <p>Tali checked her display. &quot;It, uh...it should be dawning right about now.&quot;</p>
+        <p>Miranda crouched behind Vakarian as they slowly made their way through the undergrowth. The Turian had assumed the leadership position as if it was self explanatory, and she hadn&#x27;t seen a point in making a fuss about it. If he ended up doing something stupid, she could still start and argue with him.</p>
+        <p>They were about two hundred meters from the target building; in this environment, that might as well have been two miles, even if it hadn&#x27;t been almost completely dark – only the uppermost edge of the sun had crept above the horizon so far, and down here below the trees and all the other thick vegetation, very little of it&#x27;s light reached yet.</p>
+        <p>This meant that their chances of finding Shepard and Zorah by simply keeping their eyes open were essentially zero, and with the noise of the firefight close by they probably wouldn&#x27;t hear them either. So they sat and waited for the Quarian to contact Vakarian. Their position was looking, or would have been if the view hadn&#x27;t been obstructed, at the back of the hall; it was the only reasonable direction Zorah and Shepard could be taking. A fact their enemies would definitely understand as well as soon as they found out that their prize had escaped. If she had escaped, that was. The Quarian hadn&#x27;t made a sound so far, and the engagement had already lasted the better part of half an hour. Miranda hadn&#x27;t said anything yet, but if she didn&#x27;t contact Vakarian soon, she saw little alternative but to try and infiltrate themselves. She could that see the Turian had to be thinking along similar lines, his mandibles twitching with visible nervousness.</p>
+        <p>She listened in to the comm chatter of Jacob&#x27;s corsairs, as she had done a number of times by now.</p>
+        <p>&quot;Left side, left side! Four, no, five! They&#x27;ve got an Asa-&quot;</p>
+        <p>&quot;Cover fire on three!&quot;</p>
+        <p>&quot;Enemy sniper in the second window from the le-&quot;</p>
+        <p>&quot;..two, three!&quot;</p>
+        <p>A machine gun started firing off a furious barrage of long bursts. Miranda furrowed her brow; what she was hearing sounded increasingly frantic. She used her special code to speak to Jacob directly.</p>
+        <p>&quot;Jacob, report!&quot;</p>
+        <p>&quot;- to the back! Lee, cover him!I- Dammit! Get to it, now!&quot; A crack in her earpiece, then his voice came through a little clearer, the sounds of battle and the shouts of the men somewhat muffled now.</p>
+        <p>&quot;The enemy has reformed and is starting to bring their numbers to bear! Only one KIA so far, but casualties are mounting! We&#x27;ll give you as long as we can, but if we have to hold this position, that&#x27;ll only be a couple more minutes before we start dying!Over!&quot;</p>
+        <p>Miranda cursed. They were running out of time. She put a hand on Vakarians shoulder.</p>
+        <p>&quot;Taylor&#x27;s men can&#x27;t hold out much longer. We need to-&quot;</p>
+        <p>The Turian motioned her to stop, and she cut herself off.</p>
+        <p>&quot;Yes, I&#x27;m here!&quot; He flicked a finger, and what he&#x27;d been listening to was put on speaker.</p>
+        <p>&quot;...got Shepard. We&#x27;re south of the -&quot;</p>
+        <p>The slightly synthesized voice that had to be Zorah&#x27;s was cut off by gunfire erupting both from the connection and somewhere up ahead between them and the warehouse. Vakarian cursed and lunged forward; Miranda brought up her SMG and followed after him, preparing to unleash her biotics. She did her best to continue to follow Vakarian&#x27;s comms as she ran.</p>
+        <p>&quot; - are you!?&quot;</p>
+        <p>&quot;Running...outh! From...sewage!&quot;</p>
+        <p>The Turian growled as he hurried forward, barely audible over the gunfire.</p>
+    </div>
+</body>
+</html>

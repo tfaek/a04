@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 47</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch46.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html" selected>Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch48.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 47</h1>
+    <div class="chapter-content">
+        <p>&quot;Four seven two six one three three two.&quot;, she whispered. Then, louder now, she said: &quot;See? I&#x27;ve got it down. Stop worrying.&quot;</p>
+        <p>She closed the program and turned off the holo display; it took her a second, for she still wasn&#x27;t used to the omnitool Tali had given her. She had intended to simply buy one once she had access to her account again, but Tali had insisted Shepard would take one of hers – she couldn&#x27;t run around with the Cerberus one spying on her after all. And then there was still the risk that not everything on the Citadel might go as smooth as she hoped.</p>
+        <p>Jane hadn&#x27;t wanted to make use of her generosity, but she&#x27;d had to admit Tali was right, and so here she was with a brand new omnitool – one on which Tali had installed a completely secure connection on. One she had claimed not even the Shadow Broker would be able to tap into. Given the situation, that specifically was damn reassuring.</p>
+        <p>Now If I could get some actual clothes...priorities, but a woman can dream.</p>
+        <p>At this point, she&#x27;d been in this undersuit for four days straight. Not that it bothered her too much, they were made to be worn for prolonged periods of time after all and she&#x27;d actually remained fully geared up much longer than that more than once in the past. Still, she wouldn&#x27;t have minded a shower.</p>
+        <p>&quot;What are you thinking about?&quot; , Tali brought her back to the present.</p>
+        <p>&quot;I reek. But more importantly...I don&#x27;t know yet how I&#x27;ll do it, but I&#x27;ll just have to somehow make the council see sense. I don&#x27;t see another option.&quot;</p>
+        <p>She simply nodded; they had talked the situation through at length on the ten hour flight from Freedom&#x27;s Progress to Masada already. Han would not resume his pilgrimage for at least some time; as much as the pilgrimage meant to the Quarian people, he wasn&#x27;t going to be sent back out with a target on his back. Jane wasn&#x27;t sure how much that would hold true for Tali, but at least she&#x27;d always be in the company of an entire squad of marines.</p>
+        <p>&quot;You know I&#x27;d come with you if I could.&quot;</p>
+        <p>Shepard smiled. &quot;I do. But right now, I wouldn&#x27;t even know where to. I&#x27;ll be messaging you.&quot; She took one step back up the Kaiwotz&#x27; gangway and embraced Tali, enjoying the feel of her body for a moment before separating again.</p>
+        <p>&quot;I should go.&quot;</p>
+        <p>She nodded and let go. &quot;Keelah&#x27;Selai, Jane. Be careful.&quot;</p>
+        <p>&quot;I&#x27;ll try.&quot;</p>
+        <p>The holographic projection around her finished, and Miranda squinted from the light of the green star shining through the windows. She was in the Illusive Man&#x27;s office once more, albeit only virtually this time around.</p>
+        <p>She really couldn&#x27;t claim to be looking forward to this particular conversation, though.</p>
+        <p>&quot;Miranda, you&#x27;re back.&quot; The Illusive Man took a drag from his cigar. &quot;Without Shepard.&quot;</p>
+        <p>&quot;But,&quot; she retorted, &quot;with undeniable evidence that the collectors really are the ones abducting the colonists.&quot;</p>
+        <p>The Illusive Man nodded calmly. &quot;At ease, Miranda. I was already more or less expecting Shepard to bail. I don&#x27;t blame you for it.&quot; Another drag. &quot;Unless you&#x27;re going to give me a reason to?&quot;</p>
+        <p>&quot;No, Sir. It...&quot; Somewhat relaxed, she let out a sigh. &quot;I knew it was going to go that way the moment Shepard&#x27;s quarian showed up. We ran into her fighting off the Blue Suns.&quot;</p>
+        <p>One of her employers eyebrows moved a small distance upwards. &quot;They sent a search party for a pilgrim? The perks of being an admiral&#x27;s son, I suppose. Now what was that about the Blue Suns?&quot;</p>
+        <p>&quot;They were there in force, roughly platoon strength. With a cruiser in system. Nothing on the footage we secured suggests that they were working in direct tandem with the collectors; it rather seems like they showed up later. They ended up getting bogged down by the security mechs, Zorah had activated them. That&#x27;s when the other Quarians arrived, and then us soon after.&quot;</p>
+        <p>The Illusive Man tapped the armrest of his seat for a couple of seconds, speaking low, more to himself when he opened his mouth again. &quot;The Shadow Broker is seriously reaching if he&#x27;s already going after relatives of friends of Shepard...I suppose trying to abduct her aunt from her own cruiser would be a little bold even for them. Or perhaps they know we&#x27;re shadowing her...&quot;</p>
+        <p>He took a sip from his whiskey.</p>
+        <p>&quot;You said Tali&#x27;Zorah was there?&quot;</p>
+        <p>&quot;Yes.&quot; She almost grimaced – Miranda had nothing against the alien personally, but the second she&#x27;d shown up and Shepard had reacted the way she had, it had been clear to her that they&#x27;d lost Shepard. If they&#x27;d ever had her, that was. &quot;She said she&#x27;d hitch a ride with Tali and report to the council. Apparently Shepard still thinks they&#x27;ll listen.&quot; She shook her head. &quot;Hard to believe that she of all people would be so foolish. She should know better by now.&quot;</p>
+        <p>&quot;Or perhaps she&#x27;s simply exhausting all other options before considering a certain other one she cannot be comfortable with.&quot;, the Illusive Man asserted. &quot;Miranda, you need to stop seeing any and all deviation from the plan as a failure. Shepard ditching us was always a distinct possibility.&quot;</p>
+        <p>Which is why I said resurrecting her would be a bad idea, she thought. She did not say it out loud, though; they&#x27;d had that discussion before.</p>
+        <p>He continued. &quot;Shepard has little reason to trust us, and many reasons to hate us. But the fact that you and Jacob made it back unharmed anyway shows me that she recognizes what we&#x27;ve done for her. She was willing to work with us when she had to be quick and there was nobody else. And just like that, she will soon enough be willing to work against the collectors with us. Once she finds that there&#x27;s no one else who&#x27;ll stand with her for this. Which the council and the alliance are going to make very clear to her once she gets there. I&#x27;m not sure if Shepard realizes just how secretly happy certain people were with her demise.&quot; He emptied the glass. &quot;I wonder how she will take it.&quot;</p>
+        <p>Miranda scoffed. &quot;Maybe it will set her head straight. What is our next step then?&quot;</p>
+        <p>The Illusive Man leaned slightly forward in his seat.</p>
+        <p>&quot;There&#x27;s no time to waste. Shepard is going to the Citadel? You&#x27;ll pick her up there once she&#x27;s done with the politicians. Take the Normandy and go. I will have Miss Goto informed that her contract is about to come into effect.&quot;</p>
+        <p>Jane checked the time again, growing increasingly impatient. She had been waiting for an hour at this point.</p>
+        <p>I realize that they&#x27;re busy people, but you&#x27;d think they&#x27;d be a little bit more thrilled to see me, she thought to herself. Well, you&#x27;d be an idiot apparently. They were probably secretly glad when I got blown up.</p>
+        <p>She was sitting on a bench on the presidium, outside the Alliance embassy, still in the armor. She even had all her weapons on her, which she never would&#x27;ve expected – but in the end, entering the Citadel had proven ridiculously easy. Apparently C-Sec were extremely confident in their scanners, and so they had accepted her as Jane Shepard, first human Spectre, without too much of a fuzz. It had probably helped that she was apparently quite popular with the force after her exploits two years prior and so more than one of the officers present had actually recognized her face.</p>
+        <p>Also, Spectres turning up alive and well prolonged periods of time after having been declared dead had turned out not to be unheard of at all. And now she was going to actually speak with the council – on the very same day she&#x27;d arrived on the station. So all in all, things had gone far better than she ever could&#x27;ve hoped for. Unless they ditch me of course.</p>
+        <p>She mentally scolded herself for being this childishly impatient and closed her eyes. If she had to wait, she could just as well try and relax a little.</p>
+        <p>Jane kept it up for about five seconds; then she went back to alertly observing her surroundings. It was a surprise to herself, but now that she was on the Citadel with all her scores of people, she felt somewhat tense at all times; it was as if she could feel the target on her back. The Broker must die, she thought not for the first time. Or I&#x27;ll never have an ounce of peace again.</p>
+        <p>A young woman in uniform stepped out of the embassy and looked around, clearly looking for someone; it didn&#x27;t take her long to notice the heavily armed woman in black armor, and she began walking towards her. Hoping that this was it, Shepard got up and moved to meet her.</p>
+        <p>&quot;Commander Shepard? The Council is read to receive you now.&quot;</p>
+        <p>&quot;Good.&quot;</p>
+        <p>She nodded, a bit too enthusiastic. Nervous perhaps; she looked to be very young.&quot;If you would please follow me.&quot;</p>
+        <p>They walked back and entered the embassy, the adjutant or whatever she was leading the way up the stairs, past a checkpoint that blared when Jane passed it with her guns only to be hastily silenced by one of the guards. Jane knew were they were going; this was the way to Udina&#x27;s office, or at least what had been his office back then. Perhaps he had a new one now that he was councilor.</p>
+        <p>It seemed that he hadn&#x27;t, for when they entered the room she noticed that, to the extent that she remembered these things, the furniture and decorations seemed to be the same. The girl went to fiddle with Udina&#x27;s holo console for a moment before taking a step back and assuming a position in the corner. &quot;If you would please stand right there, Ma&#x27;am. You can enter the conversation now.&quot;</p>
+        <p>&quot;Thanks.&quot;</p>
+        <p>Shepard stepped forward onto the scanner and hovered her hand over the button for a moment, waiting for the assistant to leave, but she showed no inclination to do so. Perhaps she was Udina&#x27;s personal assistant, Shepard figured. And pressed the button.</p>
+        <p>The scanner flared to life, taking just a couple of seconds to assess her, and after a soft chime four familiar faces were looking at her; Udina and Sparatus expressions were downright leery while Valern&#x27;s face was unreadable as ever. The only one who looked to be somewhat pleased to see her was Tevos – who was also the one to speak first.</p>
+        <p>&quot;Commander, it is a joy to see you. We thought you dead.&quot;</p>
+        <p>Shepard grimaced. &quot;You weren&#x27;t too mistaken, believe me.&quot;</p>
+        <p>Sparatus flared his mandibles. &quot;Elaborate. Thoroughly.&quot;</p>
+        <p>And so she recounted the entire story – not that it was that long, she realized as she spoke. For her, all that existed of these two years were a couple of days. The council members reactions when she revealed that her saviours had been none other than Cerberus were about what she was expected – surprise and suspicion. Sparatus, not looking at her very fondly in the first place, made no effort to mask his scorn anymore after that. Eventually, Jane concluded her report.</p>
+        <p>The members, evidently in the same room somewhere, shot each other glances. Or most of them did; Valern seemed to be lost in deep contemplation. It was Udina who eventually broke the silence.</p>
+        <p>&quot;You put us in somewhat of an...awkward position, Shepard.&quot;</p>
+        <p>Jane held back a scoff just barely; collectors, abductions, the Shadow Broker...and this guy only cared about himself again.</p>
+        <p>Sparatus cut in before she could think of a good answer. &quot;Colluding with terrorists.&quot; , he growled. &quot;You never cared about the rules, but this is reckless even for you.&quot;</p>
+        <p>&quot;I did not-&quot;</p>
+        <p>&quot;Shepard did not collude with Cerberus, unless you want to call it collusion to be lying in a coma on their table. &quot; . Udina retorted. The surprise of the human councilor actually being helpful for once threw Shepard off for a moment. And it seemed to work, too; the Turian snorted loudly, but let it be - at least for the moment.</p>
+        <p>&quot;Other than that however, I must agree. You&#x27;re an Alliance officer and a council Spectre, Shepard! Operating in the Terminus alongside Quarians and terrorists!? What do you think would happen if this came to light?&quot;</p>
+        <p>Udina appeared to actually expect an answer, and so Jane gave him one. As the words left her mouth, she regretted them already.</p>
+        <p>&quot;I don&#x27;t give a damn, councilor.&quot;</p>
+        <p>There, it was out now; Udina&#x27;s nostrils flared in anger. Might as well just say it.</p>
+        <p>&quot;Question is, do you give a damn? Tens of thousands of people gone over the span of what, eighteen months? Have you done anything?&quot;</p>
+        <p>&quot;These people lie outside of alliance or council jurisdiction, Shepard.&quot;</p>
+        <p>She blew a mighty gust of air through her nose. &quot;So it&#x27;s true. I figured as much. Tens of thousands, and there&#x27;s barely a report in the news.&quot; She shook her head. &quot;Fine. I&#x27;ll do it myself.&quot;</p>
+        <p>The council were irritated now, even Tevos raising an eyebrow.</p>
+        <p>&quot;Last I checked it was we who gave you your orders.&quot; , Sparatus replied, his calm notably strained.</p>
+        <p>Jane crossed her arms in front of her chest. &quot;So I&#x27;m still a Spectre.&quot;</p>
+        <p>The Turian waved a clawed hand in the air. &quot;Of course you&#x27;re still a Spectre, what kind of question is even that!?&quot;</p>
+        <p>She considered it for a moment; this was a blessing and a curse at the same time. More of a blessing, though, and so she had come into this conversation hoping to achieve precisely this. Still, it would not be enough if she didn&#x27;t intend to waste her time instead of fighting the real enemy. Steeling herself, she went all in.</p>
+        <p>&quot;Good. But I&#x27;m still going after the Collectors, no matter what you say.&quot;</p>
+        <p>The faces of the council members collectively hardened, even Valern looking irritated now, and Sparatus looked just about ready to explode. He had already drawn in the breath when Tevos held up her hands.</p>
+        <p>&quot;Let&#x27;s try and be reasonable, now.&quot; She turned to Shepard. &quot;Commander, you are a soldier, I am sure you are familiar with the chain of command. Are you not?&quot;</p>
+        <p>Shepard straightened; as bold as she had to play this, antagonizing the one council member historically well disposed towards her wouldn&#x27;t help her case at all. &quot;I am.&quot;</p>
+        <p>&quot;So what is this then?&quot;</p>
+        <p>&quot;You leave me no choice. You tell me not to investigate the reapers, because you think they&#x27;re a myth. Now you you tell me not to investigate the collectors, after I just presented you with hard evidence that they are depopulating entire colonies!&quot; She looked at Udina. &quot;You&#x27;re the one I understand the least. Do you really not care at all!?&quot;</p>
+        <p>To Jane&#x27;s surprise, the man actually appeared to be fazed by this – as in angered. &quot;Of course I do! And of course the Alliance is taking action. Just not as bold an action as you may like, and for good reason. I&#x27;ve seen your &#x27;subtlety&#x27;, Commander. All of us have. Which is precisely the reason we cannot send you into the Terminus. The potential fallout...I know that you don&#x27;t respect this line of reasoning Commander, but you certainly will after you&#x27;ve started a small war.&quot;</p>
+        <p>&quot;Oh please!&quot; Jane grimaced. &quot;That is ridiculous. The collectors are an isolated species, they have no allies and no friends. And I know bloody damn well that you have Spectres and other Black Ops forces operating in the Terminus right now. So what is this really about !?&quot;</p>
+        <p>&quot;Those elements, &quot; , Valern answered in Udina&#x27;s stead, &quot; are trained operatives. You, as has been laid out, are a soldier. You&#x27;ve proven highly effective at tracking your targets and destroying them, but councilman Udina is very much correct in pointing out your lack of...&quot; He blinked. &quot;...subtlety in delicate matters. A mission like these will see complications. Always do. Likely to handle such complications in violent manner. Unfit for covert operations.&quot; He averted his gaze to Udina. &quot; Hostilities are an exceedingly unlikely result. However, there are other forms of fallout. We cannot afford a diplomatic incident now.&quot;</p>
+        <p>Jane cursed inwardly; the problem was, they had a point. &quot;I understand what you&#x27;re saying, so what about this.&quot; She paused. &quot;Since I am, as you just told me, still a Spectre, in fact I never stopped being one – correct if I&#x27;m wrong here?&quot; Nobody did. &quot;Since I never stopped being a Spectre, I retain my access to all systems, my rights of passage, everything. Without the council lifting a finger making it so, since it never stopped being that way.&quot; She could tell that she didn&#x27;t have them yet, but at least they were listening. &quot;So if I were to reappear, operating in the Terminus...without having consulted you, of course, completely of my own accord, how would anyone prove that it isn&#x27;t so? Nobody without high clearing knows of this meeting, and it can remain that way. Just leave me my Spectre status so I can move freely, perhaps shoot me some black money no one will be able to trace back, and if something goes south you had nothing to do with it.&quot;</p>
+        <p>Silence; each of the councilors appraising the proposal for themselves first.</p>
+        <p>&quot;This is ridiculous, Shepard! You are a soldier and you will follow orders.&quot; Sparatus, of course.</p>
+        <p>Tevos inclined her head. &quot;The Commander has proven her capacity to be...unruly, but very capable. She has made it clear that she will not be deterred. This...would be compromise. If we do not agree to it, we will win very little and potentially produce a big issue for ourselves.&quot;</p>
+        <p>Sparatus scoffed. &quot;Since when do we bargain with our soldiers?&quot;</p>
+        <p>Valern tapped a finger against something that wasn&#x27;t part of the hologram. &quot;The collector&#x27;s actions are concerning, even if isolated to the Terminus and just one council race – for now, potentially. I&#x27;m familiar with the alliance&#x27;s steps to mitigate the problem. Will not suffice.&quot;</p>
+        <p>Udina cast his fellow councilman a weary glance. The Salarian continued. &quot;Shepard&#x27;s proposal is sensible. I vote in favor.&quot;</p>
+        <p>Jane nodded thankfully towards him. Tevos turned to Sparatus. &quot;So do I.&quot;</p>
+        <p>The Turian groaned. &quot;Fine! But she will not receive any funds. She wants plausible deniability, she can have it.&quot;</p>
+        <p>The Asari raised an eyebrow. &quot;None at all? Please, my friend, That just isn&#x27;t reaso-&quot;</p>
+        <p>&quot;Not reasonable!?&quot; For once, it was Sparatus who shut up Tevos, not the other way around. &quot;We are sending a wrecking ball into a minefield! Shepard want&#x27;s to go off on her own private war? Fine! She can pay for it herself.&quot; The Turian glared at Udina. &quot;And that includes support from the Alliance! You&#x27;re going to make sure Hackett understands that, am I clear!?&quot;</p>
+        <p>Udina looked like he was barely holding back a wide grin. &quot;Oh, I agree completely.&quot; When he turned his face towards Jane, the mirth in his eyes was impossible to miss. &quot;We can&#x27;t have you fly around with an alliance ship and crew and then claim we knew nothing. That goes without saying.&quot;</p>
+        <p>Inside, Jane was fuming; not so much because of what had been said, but because of how much the asshole enjoyed it.</p>
+        <p>Would he do this just to be petty? Probably. Jane had to force herself to not say something stupid. Probably have a point though from where they&#x27;re coming from. Fucking bitches, whole lot of them. Pissing themselves over some Terminus scum.</p>
+        <p>On the outside, she remained reasonably calm. &quot;Of course, councilor.&quot;</p>
+        <p>&quot;Good.&quot; Udina nodded, seeming quite pleased with himself. &quot;So it&#x27;s decided then. Given that this is not an official assignment, you will not be expected to deliver regular reports. However, if actually do learn something new about the collectors, or the colonists, or anything else of interest, we obviously still expect to be informed.&quot;</p>
+        <p>&quot;Understood.&quot;</p>
+        <p>The councilor seemed on the verge of saying more, but then thought better of it. It was Tevos to close the meeting. &quot;You are on your own, Commander, but I have trust in your abilities. I wish you the best of luck. Let us hear from you soon. Councilor Valern is correct, these developments are concerning, and I am glad that you have taken up the task.&quot;</p>
+        <p>The irony of the statement almost had her laughing out loud, but she managed to keep her face steady.</p>
+        <p>&quot;Thank you, ma&#x27;am. Councilors.&quot;</p>
+        <p>Valern blinked. &quot;Good hunting, Commander. Dismissed.&quot;</p>
+        <p>The connection was closed. Jane felt exhausted and leaned forward, supporting herself on the console. She found herself staring nowhere in particular for a moment before the assistant tore her from her thoughts and complimented her out of the office. After that, she simply stood in the lobby for a long while – she had meant to contact Hackett after her talk with the council, but it appeared not everything would work out as well as she&#x27;d hoped. She&#x27;d still call the admiral, if only to try and learn just what exactly had actually been done regarding the Reapers these last two years; but right now, there were other things on her mind.</p>
+        <p>How on earth am I going to investigate the collectors without a goddamn ship!?</p>
+    </div>
+</body>
+</html>

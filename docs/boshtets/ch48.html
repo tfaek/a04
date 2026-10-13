@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 48</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch47.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html" selected>Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch49.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 48</h1>
+    <div class="chapter-content">
+        <p>She was sitting on a park bench in the shade of a large alien tree; with the presidium always tempered to 25 degrees celsius to accommodate, for the most part, the council species – among the planets home to sentient life, earth had turned out to be one of the cooler ones – and Jane still in her armor, she was thankful for the protection against the presidium&#x27;s artificial sunshine. Jane had discarded her gauntlets to at least get some fresh air on her hands – after days in the armor, her palms were sweaty. Her stomach growled, reminding her of the fact that she hadn&#x27;t eaten for a almost half a day; at this point she was probably getting borderline hypoglycaemic if her weak knees and heavy arms were anything to go by. She was nervous, but on the outside she looked calm and ready; not that she was making an effort to appear so, but she had vented her initial frustration by now. In a way, she could even understand the council – they had a point about her lack of subtlety, she supposed. She still thought they were making far too big a deal out of it, but if she was being realistic, she probably had to be thankful they were letting her off the leash at all.</p>
+        <p>She was mad, but she wouldn&#x27;t give up that easy, no.</p>
+        <p>Hackett&#x27;s resources were off limits, something the old man would no doubt be just as dissatisfied with as she was once he learned of the whole ordeal; in fact he probably already had. She was going to have to talk to him anyway – as far as the Alliance was concerned, she was still dead after all. Something she&#x27;d better rectify, Jane realized. And maybe the Admiral could at least point her in the right direction, though Jane had trouble imagining a decent solution coming out of it. Udina would see to it that no Alliance institution was going to provide her with any support worth mentioning, of that she was sure.</p>
+        <p>Her hand was already half way to the omnitool when she remembered that a public park on the presidium was not exactly the right place for that kind of conversation, and let it sink back into her lap. The act of almost calling someone was enough, however, to remind her of some other calls she preferably would&#x27;ve made days ago.</p>
+        <p>Hannah...Chakwas...Anderson!</p>
+        <p>Not that this was the first instance where she&#x27;d thought of them since her awakening, but with this omnitool being brand new – to her at least, Tali had obviously had it for a while – she didn&#x27;t have any of their numbers, and there was no way of knowing where any of them was serving right now with the exception of her aunt, who had taken over command of the Tokyo just days before Jane&#x27;s death. A woman of her talent had probably already caught someone&#x27;s eye for another potential promotion in the not so distant future, but after a mere two years Jane was almost guaranteed to find her just where she&#x27;d left her.</p>
+        <p>Yeah...gonna grab something to eat and then call Hackett. Probably gonna take a while to reach him...good thing I&#x27;m officially still a Spectre after all. See what he can come up with...get Hannah&#x27;s number from him and call her...and then I&#x27;ll get some clothes and a shower.</p>
+        <p>She was just about to get up from the bench when a female form elegantly lowered herself onto it to sit next to her.</p>
+        <p>&quot;Hi Shepard.&quot;</p>
+        <p>Jane turned a bit and skidded into the bench&#x27;s corner, increasing the distance between them by some centimeters. It was pure instinct; the woman – looking at her now, she turned out to be human – didn&#x27;t look particularly dangerous. That didn&#x27;t have to mean much of course, but there remained the simple fact that if she had meant Jane harm, there were about a thousand simpler and safer ways to do it. Jane looked her up and down for a second before answering; she was on the shorter side and thin, wearing a tight, functional grey and brown combination topped off with a hood pulled deep into her face, it&#x27;s shadow shrouding everything upward from the bridge of her nose; regarding the part of her face clear to see, what stood out most was definitely the curious tattoo on her lower lip.</p>
+        <p>&quot;Hello. You obviously know who I am, so you are...?&quot;</p>
+        <p>She leaned in a bit, looking up enough for Shepard to get a good, unobscured view of her face. She was young, her eyes sparkling with mischief.</p>
+        <p>&quot;Kasumi Goto. The galaxy&#x27;s best thief, but not it&#x27;s most famous one. Those two actually do exclude each other.&quot; She smiled. &quot;Not to blow my own horn too much, but you can count yourself lucky. Not many people know that name, let alone the face that goes with it.&quot;</p>
+        <p>Shepard snorted at the unabashed boldness of that introduction. &quot;Well, thanks for gracing me with your presence I suppose. And why exactly would you tell me that? I would imagine an important part of staying &#x27;the best but not the most famous&#x27; is not telling random people your name, let alone a council Spectre. How&#x27;d you know I wouldn&#x27;t just arrest you on the spot?&quot;</p>
+        <p>She giggled. &quot;Because I got an offer for you that you won&#x27;t refuse.&quot; She began fiddling with her omnitool. When she spoke again, the mirth had fled from her voice. &quot;I&#x27;m familiar with your fight, you know. I know what you really did two years ago, and I know what your mission is now.&quot;</p>
+        <p>Shepard straightened at that last bit, tense now. &quot;Aha. And how would you know that?&quot;</p>
+        <p>She leaned back a bit, clearly aware of the edge she had introduced into the conversation. &quot;I was approached by a...mutual acquaintance. As you might imagine, I&#x27;m a freelancer. I pick my own projects. But sometimes, somebody well informed enough to be able to do so contacts me and offers me a contract. Steal this, steal that. Most of the time some rich guy wants me to bag him some priceless piece of art for their personal collection, or this or that megacompany is after their competitor&#x27;s new designs. Not my type of work, really. I like to work alone...or with one or two good partners. And go after things I like. For my own reasons. And so I decline. Usually.&quot;</p>
+        <p>&quot;And this time you didn&#x27;t, I guess? Why?&quot;</p>
+        <p>&quot;Because I want to help you. As I said, I know about the abductions. And I didn&#x27;t get the next briefing yet, but from what I understand you know who&#x27;s behind it now. I&#x27;m going to help you stop them.&quot;</p>
+        <p>The matter – of -fact way she said that had something going for it, Jane had to admit, and she eased a bit. &quot;Well, that&#x27;s...nice of you. But I&#x27;ll have you know that I&#x27;m not exactly in any position to go after anyone right now. And you still haven&#x27;t told me who that mutual acquaintance is supposed to be.&quot;</p>
+        <p>The puzzle pieces were beginning to come together in her head as she said it, and so she finished the sentence with some apprehension.</p>
+        <p>&quot;Come on Shep, you know.&quot;</p>
+        <p>Shepard sighed wearily. &quot;The Illusive Man, is that what you&#x27;re saying.&quot;</p>
+        <p>&quot;Yes, I&#x27;m talking about Timmy. Listen Shep, I&#x27;ve heard you really don&#x27;t like this guy and his people. I&#x27;m not the biggest fan myself going off the little I know. But he&#x27;s got pretty convincing arguments.&quot;</p>
+        <p>&quot;And what would those arguments be?&quot;</p>
+        <p>She skidded closer and leaned over, holding out her hand with the omnitool, the display activated.</p>
+        <p>&quot;In my case it&#x27;s something we can discuss when we&#x27;re in a bit more of a private setting. Let&#x27;s just say someone took something that belongs to me and I need help getting it back. Competent help. Very competent. And with the potential to get rough if things go wrong.&quot;</p>
+        <p>Shepard drew in breath, not happy with this answer, but Kasumi cut her off. &quot;In your case, it&#x27;s this.&quot;</p>
+        <p>She pushed another button and the holographic projection of the Normandy appeared in the air above her hand. At least it was similar enough to appear like that at first glance; upon actually looking at it, Jane immediately noticed how the proportions were enough. The thrusters were far too small...no, the ship was just bigger, much bigger in fact. Her focus shifted towards the bow, but got caught by something else on the way there.</p>
+        <p>SR-2.</p>
+        <p>She raised her eyebrows in surprise. &quot;Well, that is a pretty damn convincing argument.&quot;</p>
+        <p>The holographic simulation finished generating, and Jane found herself in the Illusive Man&#x27;s extravagant office once again. The man was already waiting for her, leaning back in his chair with the ever present cigar in hand and eyeing Jane like a predator. He had to feel tremendously satisfied with himself right now, Jane thought, but if it was so he didn&#x27;t let it show at all.</p>
+        <p>&quot;Shepard. Good to see you again.&quot;</p>
+        <p>Jane paused, pondering a snide answer for a moment, but thought better of it. If they&#x27;d be working together, there was nothing to be gained from a lack of professionalism. The time of reckoning would come eventually.</p>
+        <p>&quot;Impressive ship.&quot;</p>
+        <p>The leader of Cerberus drew from his cigar. &quot;I&#x27;m glad you like her. The Normandy SR-2 is everything the original ship was, just bigger, faster and better. That includes the shields and armaments.&quot;</p>
+        <p>Jane nodded. &quot;I already got a quick rundown from Miranda.&quot;</p>
+        <p>There was a quiet moment between them as both were indecisive about how to tackle the elephant in the room. Eventually, the Illusive Man broke the silence.</p>
+        <p>&quot;So you&#x27;re here after all. I take it your meeting with the council was a disappointment.&quot;</p>
+        <p>Jane failed to fully suppress a grimace. &quot;You could say that...if I&#x27;m being realistic, I should probably be happy with what I got. But you expected that already, didn&#x27;t you?&quot;</p>
+        <p>Her counterpart inclined his head. &quot;Yes. I told you so, too. Not that I blame you for trying. I understand your reservations regarding my organization, I really do. In fact I would&#x27;ve been a little surprised if everything had worked out as smoothly as hoped.&quot; He took a sip from the Whiskey glass deposited nicely in a fitted mold of the chair&#x27;s armrest. &quot;What did you get from them?&quot;</p>
+        <p>&quot;I continue to be a Spectre. It&#x27;s all unofficial and if things go south they&#x27;ll have had nothing to do with it. They also won&#x27;t support me in any way, neither will the Alliance. But I&#x27;m free to operate in the Terminus and go after the Collectors however I see fit.&quot;</p>
+        <p>&quot;We&#x27;ll see about that blank check as soon as they learn about our association. Though I suppose your attitude towards Cerberus might even help you with that when the time comes.&quot;</p>
+        <p>Jane stiffened, and the Illusive Man was wise enough not to dwell on this point.</p>
+        <p>&quot;Be that as it may, let us lay out the details of our own agreement then. I have expended a great deal of money and resources into both you and the Normandy, so you should harbor no doubts about my commitment to this mission. I paid for the ship and crew and will continue to do so, but you&#x27;re the captain. I will share with you any intel I can find, but I haven&#x27;t brought you back just to second guess you at every turn. I&#x27;ll also keep you supplied with any amount of ammunition, weapons and credits you might need. Within reason, of course. Even my resources aren&#x27;t limitless.&quot;</p>
+        <p>Jane nodded.</p>
+        <p>&quot;In exchange,&quot; , the Illusive Man continued, &quot;I expect only two things. First that you give all you have for the mission, but with you I&#x27;m not worried about that in the least. Second, I expect you to lay your personal vendetta against my organization to rest, at least for the duration of our association. You won&#x27;t share any compromising data you might become privy to with the council nor the Alliance, you will treat my employees as if they were Alliance service members, and you naturally will not damage any of our facilities the location&#x27;s of which you might learn of.&quot;</p>
+        <p>Shepard ground her teeth. She had expected this much and accepted the necessity hours ago, but that didn&#x27;t make it taste much better. &quot;Deal.&quot;</p>
+        <p>If the Illusive Man was surprised about or satisfied with how smooth this potential roadblock had been navigated, he once again did not let it show. &quot;Good. I do hope that you will eventually come to see the Cerberus&#x27; worth, but as long as we can work together productively to reach our common objective I&#x27;ll be content.&quot;</p>
+        <p>&quot;So we got that out of the way.&quot;, Jane got in some words of her own at last, &quot; Any suggestion on where I should start?&quot;</p>
+        <p>&quot;Yes. We have no leads about the Collectors whereabouts at this time, even though my people are working on a solution, or at least mitigation, as we speak. In the meantime you should prepare yourself to face them. If that includes any kind of improvement to the Normandy you might have access to that we had not, go ahead and get it done, I&#x27;ll see to the funding. But what&#x27;s more important is your team. You&#x27;ll need a great one for this mission. If you would...?&quot;</p>
+        <p>He hovered his finger over a button, and Jane&#x27;s omnitool reported a request. Wearily, she granted the transfer, praying that Tali&#x27;s antivirus would be up to the job. What she got was a slew of dossiers , apparently of people given that they were all headlined with names, or at least monikers. Lots of them alien, she noticed to her surprise.</p>
+        <p>&quot;I&#x27;m sure they&#x27;re all excellent in their fields, and I&#x27;ll have a good look...I already had a team though. I know where Wrex and Tali are, and that they&#x27;re busy. But what about Garrus Vakarian and Liara T&#x27;Soni? If I&#x27;m putting together a team to jump into hell with, those two are on the list.&quot;</p>
+        <p>&quot;Dr. T&#x27;Soni is currently on Illium. Regrettably our relations aren&#x27;t the best, but I can forward you her contact information. She will be relieved to hear from you, no doubt. Regarding Garrus Vakarian...&quot; The Illusive Man gestured with his free hand, drawing up one of the dossiers on a large holo screen.</p>
+        <p>&quot;Archangel.&quot; , Jane read. &quot;Turian sniper, believed ex military or law enforcement. Vigilante. First spotted 2183...most likely identity...Garrus Vakarian? What the hell is Garrus doing on Omega of all places!?&quot;</p>
+        <p>&quot;If it really is him, &quot; the older man cautioned. &quot;Though it does seem exceedingly likely. He appeared on Omega around the same time Vakarian disappeared on the Citadel. Has never been seen without his helmet, but he wears armor of the same model your friend last fought in when he served under you, with a similar paintjob, excellent tactician, sniper...&quot;</p>
+        <p>&quot;Yes, but what is he doing on Omega?&quot;</p>
+        <p>&quot;Read the file, he&#x27;s been making a name for himself as a vigilante. Though to be fair, that hardly describes the scope of what he&#x27;s been doing. He&#x27;s basically fighting an open war against the organized crime there.&quot;</p>
+        <p>&quot;I&#x27;ve never been to Omega, but doesn&#x27;t that more or less encompass everyone there?&quot;</p>
+        <p>The Illusive Man shrugged. &quot;Not entirely, but you&#x27;re not too far off. God alone knows what he hopes to achieve there. Or perhaps you do, you know him better after all. You might want to get there sooner rather than later. I don&#x27;t think this is the kind of fight anyone could hope to win.&quot;</p>
+        <p>Jane said nothing, but she had to agree. Though now that she gave it some thought, she had little trouble wrapping her head around Garrus&#x27; reasons. With the council acting the way they had, there had probably been little perspective for him on the Citadel even if he&#x27;d been in the mood to appreciate it. Which he probably hadn&#x27;t. How could he after what they&#x27;d seen? So he&#x27;d gone off and found himself someone to vent his frustration at. If it&#x27;s really him, that is. Not that she had substantial doubts; the shoe fit a little too well.</p>
+        <p>&quot;In fact I strongly suggest that you travel to Omega immediately.&quot;, the man continued. &quot;And I have to more good reasons for that.&quot; He brought up another dossier. &quot;Mordin Solus. Brilliant salarian physician and scientist, former STG. He&#x27;d be an excellent addition to any team, but with our mission in mind having him on board would be invaluable. There aren&#x27;t many people alive who I&#x27;d expect to have any reasonable chance of finding a countermeasure to the collector&#x27;s seeker swarms in any kind of acceptable timeframe, and far fewer yet are formidable operatives who might actually be persuaded to work with us.&quot;</p>
+        <p>Jane nodded. &quot;Fair enough. The other?&quot;</p>
+        <p>Another file came up. &quot;Zaeed Massani. You might have heard of him. One of the most renowned mercenaries and headhunters in the galaxy.&quot;</p>
+        <p>Jane raised an eyebrow. &quot;A mercenary? I&#x27;m sure he&#x27;s good, but I prefer the men and women at my side to be loyal to a principle, not money.&quot;</p>
+        <p>&quot;Oh he&#x27;s loyal, believe me. The man hasn&#x27;t broken a contract once.&quot;</p>
+        <p>&quot;That means he just hasn&#x27;t been offered enough money yet.&quot;</p>
+        <p>&quot;I understand why you&#x27;d think that, but I have made the man considerable promises. He will see his contract through.</p>
+        <p>&quot;And what did you offer him to be so sure?&quot;, Jane asked, not bothering to hide the skepticism.</p>
+        <p>&quot;Enough money to retire more than comfortably, of course, and more importantly, your assistance. It&#x27;s probably best if he tells you the details himself, but in essence, he needs help to kill a large number of Blue Suns.&quot;</p>
+        <p>She snorted, despite the company. &quot;I can get behind that.&quot;</p>
+        <p>For the first time, the shadow of a smirk showed on the Illusive Man&#x27;s lips. &quot;I thought you might feel that way. Massani is already waiting for you on Omega.&quot;</p>
+        <p>Jane rubbed her chin, finding no reason to disagree. &quot;Omega it is, then. I&#x27;ll look into the other dossiers on the way. Got anyting else I should hear?&quot;</p>
+        <p>The older man took a swig and slightly shook his head. &quot;No. I will inform you as soon as I learn anything of interest to you. Until then...good hunting. Commander.&quot;</p>
+        <p>Shepard nodded. &quot;Timmy.&quot;</p>
+        <p>She closed the connection immediately after that, but Jane could&#x27;ve sworn that in the half second before the holograph disintegrated, she could see a glint of irritation on the face of Cerberus&#x27; enigmatic leader.</p>
+        <p>She stood there for a moment, coming to grips with the gravity of what she&#x27;d done. &#x27;We&#x27;, &#x27;us&#x27;. With the guys behind Akuze. She felt like retching. This is only for now. The day will come.</p>
+        <p>Still, the reaction from the Alliance and the council once they learned of this didn&#x27;t bear thinking about. Not that she was in any position to contact Hackett right now anyway; Jane couldn&#x27;t be sure that the entire ship, and especially her cabin, wasn&#x27;t being listened in on. She sighed and began walking towards the bridge. What would Tali have to say to this? She&#x27;ll understand. She won&#x27;t like it, but she&#x27;ll understand.</p>
+        <p>At least she&#x27;d gotten Hannah&#x27;s contact from Chakwas. The Doc had been one of the few pleasant surprises today; the other important one the man she was currently on her way to. She passed through the CIC, catching an overly eager glance from her new aide, Chambers. Jane wasn&#x27;t yet sure if Timmy had chosen her because she was easy on the eyes or because she was easy on Jane&#x27;s troubled mind – perhaps both. Putting up a nice front in more than one sense of the word.</p>
+        <p>A couple of moments later her tired body dropped heavily in the co – pilot&#x27;s seat. Joker had noticed her coming and leaned back in his own. &quot;Commander.&quot;</p>
+        <p>&quot;Jeff.&quot; Jane cleared her throat. &quot;Didn&#x27;t have much time to chat earlier. I just wanna say..it&#x27;s damn good to have you here.&quot;</p>
+        <p>Joker grinned. &quot;I...I have to admit I&#x27;m relieved to hear you say it. I was a little scared you might be angry finding me with Cerberus. Not that I&#x27;m with them, I with you – you know what I mean.&quot;</p>
+        <p>&quot;I do. Right now, there are exactly two people on this ship whom I trust.&quot;</p>
+        <p>The man nodded. &quot;Yeah, I get the feeling...truth be told, the crew isn&#x27;t that bad. Most of them are former Alliance. Haven&#x27;t met a single crazy person yet, you know, kill all the aliens and stuff.&quot; He looked over to Jane. &quot;Honestly, Commander, I don&#x27;t think most of these people have any clue who they&#x27;re working for.&quot;</p>
+        <p>Shepard pondered that for a moment; she&#x27;d have to see for herself first, but if this was true, there was potential in it. In the silence, Joker shuffled awkwardly.</p>
+        <p>&quot;Shepard, I...I just wanted to say thank you. And I&#x27;m sorry&quot;</p>
+        <p>She looked up, a little confused.</p>
+        <p>&quot;You saved my life back on the old Normandy. Not everyone would&#x27;ve done that, come back for me. And you...you know. Uhm, obviously. So yeah, I...I&#x27;m sorry for getting you killed.&quot;</p>
+        <p>Jane failed to contain an exasperated gasp. &quot;Jesus Christ Joker, you were stuck! And if you hadn&#x27;t kept steering, we wouldn&#x27;t even have survived the second volley. You did good. And I did my job. What happened...it happened. It ain&#x27;t your fault.&quot;</p>
+        <p>Joker swallowed. &quot;Okay.&quot;</p>
+        <p>&quot;You sure? &#x27;Cuz I mean it.&quot;</p>
+        <p>The man&#x27;s usual underlying sarcasm finally found it&#x27;s way back on his face. &quot;Yes, Commander.&quot;</p>
+        <p>&quot;Excellent. Now. You can actually do your job for once.&quot;</p>
+        <p>The pilot grinned. &quot;Where to?&quot;</p>
+        <p>Jane got up. &quot;Omega. We&#x27;re picking up some new people...and an old friend. I hope.&quot;</p>
+        <p>Joker raised an eyebrow, &quot;And who&#x27;s that?&quot;</p>
+        <p>&quot;Some Turian. I&#x27;m actually pretty sure you still owe him a hundred creds.&quot;</p>
+    </div>
+</body>
+</html>

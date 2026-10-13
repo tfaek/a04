@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 49</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch48.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html" selected>Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch50.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 49</h1>
+    <div class="chapter-content">
+        <p>&quot;...one rule. Don&#x27;t fuck with Aria.&quot;</p>
+        <p>Yeah yeah, you got the biggest cock, I get it.</p>
+        <p>&quot;Nice rule. Easy to remember.&quot;</p>
+        <p>&quot;If you forget, someone will remind you.&quot; , the Asari answered, glancing over to her Batarian henchman standing next to Jane, who grinned and nodded.</p>
+        <p>&quot;And then I toss your sorry ass out the nearest airlock.&quot;</p>
+        <p>Jane turned to look at the alien. &quot;You can try. Wouldn&#x27;t recommend it though. I doubt you&#x27;re anywhere near as strong as you are ugly, squint.&quot;</p>
+        <p>The alien bared his numerous fangs at her but made no move, his master darkly chuckling to herself.</p>
+        <p>&quot;I&#x27;m tempted to let him take a shot at it, Shepard. Would make for decent entertainment, if nothing else.&quot; Jane knew Aria wasn&#x27;t serious, and was proven right, the Batarian retreating on a quick wave from T&#x27;Loak. &quot;But enough with the pleasantries. Take a seat.&quot;</p>
+        <p>Well aware of the danger inherent in the situation, she complied. There was nothing to be gained from antagonizing Aria T&#x27;Loak – she had hoped, in fact, that she wouldn&#x27;t have to deal with her at all. From the little she&#x27;d read about her on the flight to Omega, it was obvious that the ruler of Omega was highly dangerous, absolutely ruthless, and loyal only to herself. But the news of her arrival had somehow preceded her. She supposed a docking frigate wasn&#x27;t exactly subtle- how anyone had known whom it belonged to, or known who she was underneath the helmet she&#x27;d kept on was beyond her however. And so they hadn&#x27;t even been on the station for an hour when, just as they had met up with Massani and were about to proceed to Miranda&#x27;s local contact to fill them in on the status of their recruits, the pirate queen&#x27;s thugs had approached and made it very clear that she was to come and pay her respects, so to speak.</p>
+        <p>Jane had briefly considered blowing them off, but dismissed the idea as unwise at best and suicidal at worst.</p>
+        <p>She lowered herself down into the cushions of the couch, T&#x27;Loak eyeing her like a predator. As she came to rest, T&#x27;Loak flicked a finger and the air around them began to shimmer as if hot. An acoustic shield, she recognized after a moment. It appeared T&#x27;Loak appreciated her privacy – undoubtedly a wise precaution for someone in her position.</p>
+        <p>&quot;Well then, let&#x27;s get to it. I don&#x27;t know what you&#x27;re here for or what has gotten into the council, but you should be thankful that I generally try and maintain good relations. Many others would&#x27;ve cherished the chance to send them a Spectre&#x27;s head on a platter.&quot;</p>
+        <p>She clenched her jaw, biting down on an acidic response she could already feel forming on her tongue. Criminal or not, she had to respect this woman&#x27;s power. &quot;I&#x27;m not here on the council&#x27;s behalf. Actually, I&#x27;m here against their expressed wishes.&quot;</p>
+        <p>The Asari looked at her skeptically. &quot;You&#x27;re telling me...&quot;</p>
+        <p>Jane was pretty sure that she wasn&#x27;t nearly as opposed to believing it as she was pretending to. &quot;Yes. Don&#x27;t you think if the council wanted to take steps against you, they&#x27;d go about it a bit smarter? Instead of having a prominent agent stumble about your market district ?&quot;</p>
+        <p>She raised an eyebrow, or the Asari equivalent at any rate, but said nothing, and so Shepard continued.</p>
+        <p>&quot;How did you even know I was here?&quot;</p>
+        <p>She scoffed. &quot;Please, Shepard, someone in my position has their connections. You were seen on the Citadel, officially registered by C-Sec even. After two years of being presumed dead. Every intelligence agency in the galaxy will know of your reemergence by now, and a whole lot of other people too.&quot; She waved, and a servant fetched her a drink he&#x27;d had prepared and ready in a cooler. She took a sip and turned back to Shepard. &quot;And your ship isn&#x27;t exactly subtle either.&quot; She motioned in Miranda&#x27;s direction, who was standing some meters away with the rest of the &#x27;squad&#x27;. &quot;I&#x27;m inclined to believe you, Shepard. It explains why you&#x27;re with her.&quot;</p>
+        <p>Shepard failed to keep her features completely in check, and the Asari noticed. &quot;Surprised, really? I have to say Shepard, I feel disrespected. What kind of uninformed fool do you take me for!?&quot;</p>
+        <p>Jane did not feel particularly enthusiastic about indulging this crime boss&#x27; coquetry, but again, she could only lose if she didn&#x27;t stay cordial. &quot;I have no idea what you know or don&#x27;t know. Evidently.&quot; She leaned back in the couch. &quot;I&#x27;m a soldier, not a spook.&quot;</p>
+        <p>The Asari threw back her head and laughed heartily and sincerely; as always when one of her kind did so, it felt to Shepard as if she was listening to the ripples of a pure mountain creek. One day she&#x27;d have to ask Liara how on earth they did it, being this enticing to so many different kinds of living things. But even so, with T&#x27;Loak there was a discordant, arrogant undertone to the heavenly sound, a subtle reminder of the fact that this person was not of the same make than the soft, agreeable beauties it was so easy to see most of her race as. Perhaps too simple a view.</p>
+        <p>Not that she shouldn&#x27;t know better by now, having faced more of their deadly commandos in combat then anyone with any sense left could be comfortable with.</p>
+        <p>Aria fixed Shepard with an amused look, breaking her out of her reverie. &quot;Yes, you are. I do believe it.&quot; She shook her head. &quot;And what is this soldier doing on my station that the council expressly told her not to? With Cerberus? You, of all people?&quot;</p>
+        <p>She scowled. &quot;Not my first choice. If you&#x27;ve any doubts left regarding the council, just think about what it&#x27;d take for me to consider working with them. &quot;</p>
+        <p>The Asari nodded, listening with interest.</p>
+        <p>&quot;My mission is extremely important. It&#x27;s a matter of life and death, tenthousandfold. The reason the council isn&#x27;t dealing with it themselves is exactly this, us sitting here. They&#x27;re worried about backlash. Regarding the mission itself...there is no reason for you to care about it. It doesn&#x27;t concern your business in any way.&quot;</p>
+        <p>&quot;Just spit it out already, or get in your ship and fuck off. You want to operate on my station? Then I&#x27;ll hear what you&#x27;re doing here, Spectre, council approved or not.&quot; She remained perfectly calm stating this, but it was more than clear that she meant it just as harshly as she&#x27;d said it.</p>
+        <p>Jane clicked her tongue exasperatedly and bent forward, elbows on her knees. She considered it for a moment; at the end of the day, her enemies would already know what she was doing anyway, and the importance of getting to Garrus and Solus was absolute. She sighed. &quot;Fine. I take it you&#x27;re aware of the abductions of human colonies going on?&quot;</p>
+        <p>&quot;Naturally. I&#x27;m surprised the Hegemony would be this audacious, especially with you humans having a council seat now. I&#x27;m even more surprised the Alliance are letting it slide. You&#x27;d think Karshan would&#x27;ve burned months ago.&quot;</p>
+        <p>No argument there...</p>
+        <p>&quot;As I told you, the council&#x27;s too worried to make a move. They&#x27;re afraid of a war. But it doesn&#x27;t matter anyway, because it isn&#x27;t the Hegemony. It&#x27;s the collectors.&quot;</p>
+        <p>That got a surprised look out of the pirate queen. There was no skepticism in her voice though when she asked: &quot;The collectors? Really? What would they get out of that?&quot;</p>
+        <p>&quot;Don&#x27;t know. But I&#x27;m gonna find out, and I&#x27;m going to stop them.&quot;</p>
+        <p>&quot;You and one ship? Against an entire species, rare or not? How do you plan on doing that, exactly?&quot;</p>
+        <p>She shrugged. &quot;One step at a time.&quot;</p>
+        <p>T&#x27;Loak snorted. &quot;Consider me intrigued. I like your attitude.&quot; She leaned back, swapping her crossed over legs. &quot;Still haven&#x27;t told me what you want here, though.&quot;</p>
+        <p>&quot;I&#x27;m looking for someone.&quot;</p>
+        <p>&quot;Who? Maybe I can help.&quot;</p>
+        <p>Now it was her turn to raise an eyebrow. &quot;And why would you do that?&quot;</p>
+        <p>T&#x27;Loak grinned shamelessly. &quot;Because it&#x27;s not going to cost me anything, and you&#x27;re the kind of woman I want owing me a favor.&quot;</p>
+        <p>Of course.</p>
+        <p>Out loud, she said: &quot;Fair enough. For once, I&#x27;m looking looking to recruit Mordin Solus, a salarian doctor who supposedly has a clinic somewhere here. And the other guy is a well known vigilante going by &#x27;Archangel&#x27;.&quot; She could see recognition flash on Aria&#x27;s face with both names. &quot;I take it you know them?&quot;</p>
+        <p>&quot;I know Mordin, yes. Fascinating man, especially for a Salarian. Humans, Turians, Batarians..you&#x27;re all short lived, but it&#x27;s at least worth memorizing your names. Salarians...&quot; She shrugged. &quot;Not him though. As I said, fascinating man. Troubled past, I assume, not that he talks much about it. His clinic is in the slums. The way I know him, he&#x27;ll jump at an opportunity like this. It&#x27;ll be a shame not to have him around anymore, but it&#x27;s more than worth given what you&#x27;ll have to deal with to get to him.&quot;</p>
+        <p>&quot;Which would be?&quot; Jane didn&#x27;t like the sound of this at all.</p>
+        <p>&quot;There&#x27;s a plague ravaging that entire partition of the station. I&#x27;ve quarantined it off to prevent the spread. I will allow you access...but there&#x27;s no way Mordin will go with you until he&#x27;s found a cure.&quot;</p>
+        <p>There are worse things I could be doing to get someone on board, Jane mused. &quot;Alright. And Archangel?&quot;</p>
+        <p>She smirked. &quot;That lunatic...he&#x27;s in a bit of a pickle right now. Might see to him first, or he might not be there anymore when you come to pick him up.&quot;</p>
+        <p>&quot;What&#x27;s that supposed to mean?&quot;</p>
+        <p>&quot;What do you think? His enemies have caught up to him -and there&#x27;s a lot of them. Archangel has deluded himself into thinking he&#x27;s on the side of good, but there is no good side on Omega. He had enough sense not to meddle in my affairs, but that&#x27;s about it. And so he&#x27;s ended up with most people on this station who have any kind of power out to kill him. He actually made the big three come together to take him out. That&#x27;s almost unprecedented. And now they got him cornered.&quot;</p>
+        <p>Big three...that&#x27;s gotta be the Suns, the Eclipse, and the Blood Pack.</p>
+        <p>&quot;So I&#x27;ll have to fight a small war to get him out. Now that&#x27;s just terrific.&quot; She rubbed her jaw. With this ramshackle, freshly formed team, taking on a large force of well trained and experienced mercenaries would be a challenge, even if they were excellent individually.</p>
+        <p>&quot;You might not have to go to such lengths. They&#x27;re having trouble dealing the killing blow, it seems, and so they&#x27;re hiring every idiot with a gun for cannon fodder. One of their &#x27;offices&#x27; is right back there on the ground floor. You? They&#x27;ll be drooling from the mouth when they lay eyes on you. Just don&#x27;t forget to keep that helmet on.&quot;</p>
+        <p>&quot;And that&#x27;s my way in, &quot; Jane mused. She got up. &quot;That&#x27;ll be a favor well earned, I&#x27;d say. If you&#x27;d excuse me now.&quot;</p>
+        <p>She didn&#x27;t wait for her reply, and Aria did not object nor say any more. Business concluded, it seemed.</p>
+        <p>Jane walked up to the gaggle of people supposed to be some kind of fighting force, meeting their expectant eyes with her best determined face. &quot;I&#x27;ve got news on our recruits. We&#x27;re starting with Garrus, and we don&#x27;t have much time. So if anyone needs to go to the bathroom, do it now.&quot; Jacob grinned and the old warhorse Massani snorted while Miranda simply ignored the jest. &quot;He&#x27;s made a lot of enemies with the crime here, and - Kasumi! I meant after the briefing, of course! So. Garrus is pinned down by the Big Three somewhere on Omega, exact location unknown. But they&#x27;ll lead us right to him.&quot; She pointed in the direction of the recruitment office Aria had alluded to. &quot;They&#x27;re hiring freelancers for cannon fodder over there.&quot;</p>
+        <p>Massani scoffed. &quot;That&#x27;s just like &#x27;em, yeah. Cowards, the whole lot of them.&quot;</p>
+        <p>Jane looked at the man, not bothering to hide her irritation with being mildly interrupted but also unwilling to make a big deal out of it. &quot;I&#x27;m sure your familiarity with these mercenaries is gonna come in handy later. For now, we let ourselves get recruited, and that&#x27;s our way to Garrus.&quot;</p>
+        <p>&quot;And what do we do once we&#x27;re in?&quot;, Miranda asked, looking somewhat skeptic.</p>
+        <p>Jane shrugged. &quot;We&#x27;ll make it up as we go along.&quot; She turned to Kasumi. &quot;And that&#x27;s where you come in. You&#x27;re not going together with us. I want you to follow us without being seen. Should be plenty of good uses for your skills once we get to their FOB.&quot;</p>
+        <p>The younger woman smiled mischievously. &quot;Got it, Shep.&quot;</p>
+        <p>&quot;Good. Any more questions? No? Good, then let&#x27;s go. And now you can go to the bathroom.&quot;</p>
+        <p>She turned and started walking, the rest of them following after her.</p>
+        <p>They&#x27;re eager, that&#x27;s good, but...it might take some of &#x27;em a while to adjust, I suppose.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 13</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch12.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html" selected>Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch14.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 13</h1>
+    <div class="chapter-content">
+        <p>The atmosphere within the Mako was tense as they waited for the drop. It had been four hours now; everyone knew that this mission was not only extraordinarily dangerous, being on a timer and up against an unknown enemy of unknown numbers, but also that more was at stake than ever before – an entire planet&#x27;s worth of life, including four million sentient beings would be exterminated if they failed. There had been none of the usual quips and sassy remarks this time, and while Wrex being silent wasn&#x27;t unusual in any way, even he seemed solemn now rather than disinterested.</p>
+        <p>Tali returned her focus towards the console in front of her, beginning to check the systems for the third time; but after just a few seconds, she stopped herself. It was pointless, everything was in order and she knew it. Abusing her mask&#x27;s ability to somewhat disguise where she was looking, she snuck a peek at Jan - at Shepard. Her first name had slipped into her inner monologue again and again the last couple of days, ever since Shepard had given her her &#x27;room&#x27; ; she was terribly embarassed about it and annoyed with herself. She had hoped not hanging out with her every other night anymore would help her cool down her infatuation, but alas, all that had happened was that while she was happy for her improved sleep, she found herself missing their time with each other. Last night she had actually dreamt of showing Shepard her face.</p>
+        <p>She was terrible.</p>
+        <p>Garrus broke her out of her thoughts by speaking the first word that had sounded through the tank in minutes. &quot;So...any educated guesses on who or what we&#x27;re going to find down there? My guess would be...&quot;</p>
+        <p>&quot;Batarians.&quot; Ashley&#x27;s voice was a hiss filled with barely contained hatred.</p>
+        <p>Shepard let out a grunt, but didn&#x27;t speak up.</p>
+        <p>&quot;Make&#x27;s most sense, I suppose. Nobody really profits from this; so it&#x27;s gotta be spite. I wouldn&#x27;t put it past Saren at all, but...like this? No. He would view this as an unnecessary distraction from his current goal. Leaves random Terminus scum...or the Hegemony.&quot;</p>
+        <p>Ashley snorted. &quot;Is there a difference?&quot;</p>
+        <p>&quot;Cut the chatter, drop in thirty seconds.&quot; Shepard&#x27;s voice was low and gravely as she enforced the discipline in the Mako in a manner quite uncharacteristic for her. Tali could see how tense Shepard was; it was clear that she had already come to the same conclusion as the others, and it was gnawing at her. Tali was worried; Shepard hadn&#x27;t told her much about Mindoir, in fact they had only brushed the topic on accident. But from what Shepard had said, she wasn&#x27;t surprised at all that the prospect of fighting the Batarians put Shepard on edge like this every time. The four-eyed aliens were to Shepard what the Geth were to her – monsters. Shepard didn&#x27;t say it out loud, and if Tali had to guess, the commander probably even was even aware, and ashamed ,of it – for her, the open minded woman she was, to have a deep seated hatred against an entire race . Tali knew her, there was no way Shepard didn&#x27;t see it for what it was. But it didn&#x27;t seem like she could help herself. They had met Batarians more than once by now, and every single time, their calm and professional commander had transformed into a brutal killing machine, taking reckless risks – not with their lives, of course, but definitely with her own – to put the aliens down as quickly as possible. None of them had ever tried to surrender, but even though she had so far experienced Shepard as a merciful victor, Tali wasn&#x27;t sure if there would have been any point in trying.</p>
+        <p>The tank&#x27;s rapid acceleration interrupted her musings as , the hangar bay door having opened, Shepard slammed the gas and the Mako jumped forward and plunged into he depths. The maneuver still made her tense up, and she still hated the fluttering feeling in her stomach, but it didn&#x27;t terrify her anymore, and she certainly didn&#x27;t clamp down on her seat for dear life anymore. Seconds later, Shepard activated the thrusters , the speed of their descent rapidly diminished, and soon after, the vehicle shook as they impacted the ground with a loud thump.</p>
+        <p>&quot;Directions, Tali?&quot;</p>
+        <p>The mission had begun, and the following minutes were dominated by terse questions and answers as they navigated towards their first target. They had intentionally sat down unusually close to the objective, since they simply didn&#x27;t have any time to lose. As of right now, there were a mere three hours left to begin changing the asteroid&#x27;s course before it would be too late to avoid collision with Terra Nova. The worry about the time limit was so severe that they would do something they had barely done so far in this campaign, because Shepard hated it – they would split up. Shepard had visibly - at least to her- struggled with the decision, given the still unknown nature of the opposition, but eventually Kaidan had reasoned that there couldn&#x27;t realistically be too many hostiles around, or there would have been no way for them to slip in undetected, and the commander had agreed. She and Shepard would clear the first objective while Kaidan would command the second squad consisting of himself, Liara, and Ashley. Garrus would steer the Mako to the last torch and then him and Wrex would take care of the enemies there. Neither the Alliance soldiers nor Liara had any confidence issues, but nobody had any doubt that if there was anynone who would manage just fine doing something like this with only one other at their side, it would be Wrex and Shepard. Garrus probably could have done it all on his own if given enough time – as he had not been able to resist pointing out – but time was just the one thing they had not. As for herself, she wasn&#x27;t worried one bit about jumping into the unknown danger first and with only one other person at her side, since after the events of the past months she was, there was no point denying it, quite capable in her own right at this point, and that one person happened to be Commander Jane Shepard. She would be just fine.</p>
+        <p>Shepard stopped the Mako a mere two hundred meters away from the first building – the torches each had an individual control center – hidden from sight behind a ridge. Giving up their seats for Ashley and Kaidan, she and Tali dismounted and seconds later, they stood alone in the dust of X51. Everybody knew their orders and there was no time to waste. After a quick final check of her guns, Tali gave Shepard, who had done the same, a quick announcement over their radio, which at this point was on a private channel. &quot;Ready when you are, Shepard.&quot;</p>
+        <p>Shepard did not answer, opting to instead just rock her head in their target&#x27;s direction before ducking and beginning a hasty advance along a line of jagged rocks. Not surprised by her demeanor, Tali just followed; Shepard was almost always very curt and professional during missions, and the likely nature of their foe only amplified that – until the point when it finally broke out of her that was, and she performed some reckless charge that really couldn&#x27;t be called professional, not that it wasn&#x27;t usually quite effective, mind you. Less than a minute later, Tali found herself crouching behind her captain, scanning the surroundings for hostiles, after they had successfully made their way to a ditch less than thirty meters away from the buildings back entry without being fired on. Looking the other direction, Shepard presumably did the same, since seconds later she announced. &quot;No sentries. They&#x27;re cocky, and they don&#x27;t know we&#x27;re here.. We go together.&quot; Tali turned around and got some good footing under her right before acknowledging. &quot;Ready.&quot;</p>
+        <p>Shepard gave her a quick lookover and nodded. &quot;Go.&quot;</p>
+        <p>They sprinted the short way over to the door, traversing it in just a couple of seconds, pressing themselves into the cover of the building&#x27;s outer wall to each side of the door after getting there. After a moment, Shepard pushed herself off of it and began securing them. Tali was already halfway through the door&#x27;s systems when Shepard&#x27;s order to open it began coming through the radio.</p>
+        <p>A small smirk found it&#x27;s way on her face. &quot;Already at it Shepard, aaand...done.&quot; Shepard&#x27;s hand gave her a quick pat on the shoulder and Tali, knowing what that meant, got up and brought her shotgun to the ready, taking cover behind Shepard&#x27;s heavily armored bulk.</p>
+        <p>&quot;Go.&quot;</p>
+        <p>With a flick of her wrist, she sent the command, and the door opened, admitting them into an airlock. The rushed inside, meeting no resistance as expected, even though they still had prepared for it. As soon as she was in, Tali closed the outer door behind her and began the pressurization progress – she could have simply forced the door in front of them open to save some seconds of time, but that would have triggered a building wide alarm, and that was not in their best interest as they still had no real idea about their enemy&#x27;s disposition other than that it were probably Batarians and that they didn&#x27;t seem to expect retaliation.</p>
+        <p>The lock admitted them into the building proper and they rushed inside, Tali quickly checking the left and then turning to follow Shepard who had done the same thing on the right. The small HUD inside her mask displayed a map of the building the Terra Nova authorities had provided them with during their approach, showing that they were rapidly making their way towards the control room – the building was not very large. As they neared a leftward turn of the corridor behind which the central hall should be located, allowing them access to the stairs up to the control room, Shepard slowed down until she was essentially sneaking. From around the corner, harsh voices could be heard, conversing in a language her translator could only pick up snippets of, but enough to identify it - some obscure dialect of the batarian language. Their prediction had been correct.</p>
+        <p>&quot;Try the drone.&quot; ,came Shepard&#x27;s terse order, whispered order over their channel. The drone was a new toy of Tali&#x27;s; she had essentially equipped a miniature camera with a small, silent mass effect field generator and a wireless connection to her HUD. The idea had been to provide them with silent and inconspicuous reconnaissance, and it seemed the moment of truth for the little device had come.</p>
+        <p>She took the drone out of it&#x27;s pocket on her left hip and activated it, controlling it via her omnitool. With barely a sound, the camera climbed up until it hugged the ceiling, and then slowly crept around the corner. Satisfied with it&#x27;s position, Tali activated the feed and was greeted by a repulsive sight – on the ground lay the body of a human of at this point indiscernable sex, two Varren chewing on it. On the wall to the right leaned two Batarians clad in ragged hardsuits, their helmets taken off. Their guns were not even in their hands, but slung over their back- they were most definitely not expecting any trouble; and the two Varren who might have otherwise sniffed them out had their noses far too deep into their meal&#x27;s blood and meat to notice anything over the scent of that.</p>
+        <p>&quot;Two Batarians and two Varren, about five meters away. They&#x27;re lightly armored and their guns are stowed away. One has a pistol in a hip holster though.&quot;, she reported. There were only a few seconds of silence before Shepard answered, just as she silently and cautiously slid her blade into it&#x27;s sheath and holstered her pistol before just as slowly getting out her assault rifle.</p>
+        <p>&quot;There is no way we can take those out silently, so we won&#x27;t even try. I take the Batarians, you take the Varren. No flashbang, we might need them more later. When they&#x27;re dead, we make a run for the control center, kill anyone there and make a stand. Copy?&quot;</p>
+        <p>&quot;Copy.&quot; She closed her omnitool and gripped her shotgun with both hands again. &quot;Ready, Shepard.&quot;</p>
+        <p>Shepard crouched down and Tali instinctively moved up to stand behind and over her, confirming her readiness again with a light pat on Shepard&#x27;s left shoulder. A second later, just as Tali&#x27;s left found her shotgun again, Shepard gave the command. &quot;Now.&quot; With this word, she shot her right leg forward, moving the right half of her body around the corner. Tali followed suit. By the time she had brought up her shotgun, the closer Batarian&#x27;s shields were already failing under a hail of bullets as being this close to her target, Shepard only had to hold down the trigger – missing was practically impossible. A moment later the man&#x27;s blood splattered over the wall as it was torn up by the projectiles of Shepard&#x27;s new rifle which, at this range and against his subpar armor, simply punched clean through him. It was in the same instant that the maw and head of the forward Varren, both of which had quickly located the source of the noise and started charging, turned into a bloody pulp as Tali nailed him with her shotgun at point blank. The beast went down hard and moved no more, but it&#x27;s conspecific seemed unperturbed – or intelligent enough to know that flight was not a realistic option. It lept over the other one&#x27;s limp form, landing just about three meters away from Tali and Shepard&#x27;s position. Large, full of muscle, and a maw full of long and sharp teeth, it really was self evident why these beasts where apex predators pretty much everywhere but their own home planet of Tuchanka. Only months ago, the sight might have stopped Tali&#x27;s heart with fright – now, it barely sped up it&#x27;s beat since she knew perfectly well that as fast as the thing might be, her hand racking the shotgun was faster, and a split second later all the Varren&#x27;s brawn was rendered null and void as it too had it&#x27;s head peppered with buckshot. She quickly racked again as she raised her head to take stock of the wider situation, but relaxed for now since she found that it had already been resolved, the second Batarian lying in a quickly expanding pool of his own blood that was quickly beginning to intermingle with that of his comrade next to him.</p>
+        <p>&quot;Go go!&quot; Shepard shot out from under her, sprinting down the hallway, past the corpses – not without giving one of them a savage kick – and, after a quick check for any hostile movement from the other doors and corridors convening in the hall, up the stairs. Quickly realigning her drone to watch over the lower end of the stairs, Tali followed after Shepard. Behind her, bullets slammed into the concrete as their enemies scrambled to catch up to the surprise intruders. For the first time since setting down on the asteroid, she felt a hint of worry creep in. Not about their success, but, once more, about Shepard. The mangled and chewed on human corpse of the human in the hall quickly flashed through her mind. This got ugly real quick, and I don&#x27;t think it&#x27;s gonna get any better soon...We just got here and she&#x27;s already kicking corpses.</p>
+    </div>
+</body>
+</html>

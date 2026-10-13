@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 31</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch30.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html" selected>Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch32.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 31</h1>
+    <div class="chapter-content">
+        <p>Jane&#x27;s mind raced trying to make sense of the situation and formulate a plan of action.</p>
+        <p>Garrus fired a shot. “Got one! Shepard,this heap of junk is not defensible! They&#x27;re not too close yet, we can make it to the warehouse!”</p>
+        <p>“No!” She barked the curt response out before even she herself fully understood why, but it only took her another second to finally put the puzzle pieces in her head together. “That&#x27;s what they&#x27;ll expect us to do, and whoever this is probably brought more than enough manpower to whittle us down. We have to get out of here.”</p>
+        <p>Garrus raised a browplate, Liara firing her submachinegun in this background. “We&#x27;re already surrounded, Shepard.”</p>
+        <p>Jane checked her assault rifle, “We&#x27;ll just have to break through before they get settled in.” She hurried over to the backdoor through which they had broken into the building and raised her voice. “Come on ladies, no time to be lost! Liara, give us a barrier if it gets too hot! The rest of us, fire at will and run for it, double time!”</p>
+        <p>Flustered but keeping calm through discipline, her team formed up in less than three seconds.</p>
+        <p>“Go go go!”</p>
+        <p>She burst through the door, the already damaged plank of wood now coming off of it&#x27;s hinges entirely. It was only ten meters to the treeline, but by the time she got there her shields were already down to eighty percent due to fire from various directions. This was bad. Fortunately, the torrent died down the second she got into the cover of the vegetation. She slowed down for a second, and two quick glances confirmed that everyone else had gotten across in one piece as well.</p>
+        <p>“Fan out and keep going!”</p>
+        <p>They pushed forward as fast as the jungle and the prospect of enemies directly ahead of them allowed, and mere seconds later they came under fire. Jane picked up a target and held down the trigger, a Turian in blue and white armor going down, his shields not able to stand up to Shepard&#x27;s Spectre grade rifle. To her sides similar scenarios played out, the enemy squad barely slowing them down. The dead all wore the same colors.</p>
+        <p>Mercenaries? It didn&#x27;t matter now.</p>
+        <p>“We&#x27;re through, now run! RUN!”</p>
+        <p>She headed her own advice and fell into as much of a sprint as she could with all the plants in the way, and her team did the same, the trees soaking up most of the shots aimed at them from behind and both sides. They made good progress for some minutes, the enemy fire dying down and ceasing entirely as they put more and more distance between themselves and their pursuers, and Jane almost began to wonder if this hadn&#x27;t been a little too easy when Garrus shattered her faint relief.</p>
+        <p>“Shepard, heat signatures ten o&#x27;clock! Looks like a whole damn platoon!”</p>
+        <p>She cursed. Of course those fuckers&#x27; reserves just happened to hang out directly in their damn path.</p>
+        <p>“Half right, half right! Don&#x27;t slow down!”</p>
+        <p>They certainly didn&#x27;t want to, but it was little use. Even with all the vegetation shielding them from view, the sheer weight of fire coming in from their left now forced them to cling to cover tighter and keep their heads down as much as possible. The shields held, but were gradually being whittled down. She found herself making unobstructed visual contact with blue and white uniformed mercenaries more than once, exchanging short bursts of fire and netting herself two kills in the process.</p>
+        <p>A drop in the bucket.</p>
+        <p>Their escape slowed down to a dogged fighting retreat. The incoming fire was downright oppressive, making movement without covering fire impossible – at this point, the enemies had closed in to about fifty meters, allowing the more than two dozen of them to place their bursts with enough accuracy to threaten to quickly overcome even the Normandy squad&#x27;s high quality shield generators if they didn&#x27;t take proper care. Tucking her head in to avoid a particularly well aimed burst, Shepard noticed her comm blaring at her.</p>
+        <p>“Commander, what is your situation! Commander!”</p>
+        <p>Pressly. Jane slid deeper into cover and responded. “Pressly, we&#x27;re in a fighting retreat! It&#x27;s bad, but we&#x27;ll manage! Tell the damn shuttle to stand by the extraction point! Out!”</p>
+        <p>That would have to do, the four seconds this conversation had lasted were already too much. She looked around to assess the situation. The fight wasn&#x27;t going too badly; a couple of the mercenaries had died already, mostly by Garrus&#x27; hand probably. Ashley and Liara were returning fire as well, though not nearly as well aimed as the Turian; they were far too busy just trying to get the bastards to keep their heads down for even just a second so the next person might run to the next cover, there was no time for aiming. To her direct left, Tali was kneeling in the mud, furiously working her omnitool. Jamming weapons, probably.</p>
+        <p>We&#x27;ve got no time for this. The rest of them will be here any second.</p>
+        <p>“Garrus, Ash! Smoke! And then we get the fuck out of here!”</p>
+        <p>She leaned around the tree she was hiding behind and used up half the heat sink in one go, causing the incoming fire to briefly diminish considerably; that short moment of respite was enough for the other two to place a smoke grenade each in the two forest aisles that constituted the lines of sight of most of their attackers. Capitalizing on the chaos, Jane got out a frag grenade and threw it underhanded towards a cluster of enemies; fifty meters was a very ambitious throw, but as long as it got close enough to scare them, she was fine with that.</p>
+        <p>“Now! Go go go!”</p>
+        <p>Their smoke screen up and the shots of their enemies now sparse and way off, they once more abandoned tactical protocol and simply made a run for it. Behind them, she could hear the mercenaries&#x27; voices shouting questions and orders, only to be silenced by the explosion of the grenade she had just thrown at them, followed by screams. She grinned grimly in her sprint.</p>
+        <p>That should make them think twice about coming after us.</p>
+        <p>They ran at almost full speed for a straight five minutes, circling around to the left to follow the path they had initial come from the touchdown point of the Kodiak. Through the gaps in the treeline, she could soon see the shallow stream they had crossed – and that they would have to cross again to reach the extraction point, another clearing. Jane held up a hand and everyone stopped, quickly taking up defensive positions. She spared them all a glance; Ashley was soaked in sweat, but her breath was calm if, as was to be expected after the exertions of the past fifteen minutes, deep, her chest heaving. Shepard&#x27;s own was much the same. Garrus and Tali seemed barely affected at all, breathing perhaps a little more intense, but that was it; both of their species being naturally even more affine to running than humans, who were already quite decent runners compared to most races. Liara was taking it the worst, sucking in breath with deep, greedy gasps, the sweat running down her face and pooling in drops at the tip of her delicate nose underneath her half opened helmet; there was some clear to be seen effort in her keeping up her stance as she took a knee and brought up her weapon.</p>
+        <p>Jane tensed; this would be the moment of truth. If they made it past that creek, it would only be one more kilometer to the clearing where they would be exfiltrated, but for the first half of the way, the forest was extremly light, barely qualifying as such – while being just dense enough to not allow the Kodiak to land. If they came under fire on that stretch, things might get dicey.</p>
+        <p>She stepped over to Garrus. “Make out any heat signatures?”</p>
+        <p>The Turian turned and flared his mandibles. “Loads of them behind us, but I can&#x27;t even say if its them or some animals. We lost them for now.” Jane breathed a sigh of relief, and she could hear similar sounds from the other three. Garrus meanwhile stalked over to the other side of their little circle and began appraising the way before them. After a couple of seconds,the Turian began to speak, pensively.</p>
+        <p>“They don&#x27;t know where we went, or they would be directly behind us...but if they&#x27;ve scouted out the area and aren&#x27;t stupid, they&#x27;ll figure that we&#x27;ll get picked up somewhere around here. Now if I were them, I would wait...right over there...”</p>
+        <p>He fixated the forested hill on the other side of the stream, scanning it with both his visor and the scope of his rifle. “Can&#x27;t see anyone...doesn&#x27;t guarantee anything of course, but we&#x27;ll just have to take our chances. I&#x27;m not too keen on a firefight with an entire company of Blue Suns, or however many of these fucks are here.”</p>
+        <p>Jane raised an eyebrow. “Blue Suns, hm? I think I heard of them. Whatever, I agree. We&#x27;ll sneak up to the treeline and then we&#x27;ll make a run for it. Come on people, let&#x27;s go.” She quickly tapped her comm to call Wu, their pilot.</p>
+        <p>“Kodiak, this is Shepard. Get into position.”</p>
+        <p>For a second Jane feared another nasty surprise, but then the Lieutenant&#x27;s curt reply came through the radio. “Copy.”</p>
+        <p>She exhaled, relieved. “Shepard out.”</p>
+        <p>And that was that. As slowly and carefully as the haste of their situation allowed, peaking over their shoulders again and again, half expecting a hailstorm of gunfire to erupt behind them any second, the five of them crept up to the edge of the forest. Half way there, they briefly stopped to make out the best spot for their crossing and found it in a couple of bushes hugging the treeline that would conceal their movement for a little longer before they had to make their mad dash across the meadow, down to the small stream and across it, and then several hundred meters more through the sparse cover of the occasional groups of bushes and trees that dotted the field on the other side of the crook until they would finally reach the protective shroud of the forest again.</p>
+        <p>Still as silent as possible, they inched closer and closer to the edge of the concealment the foliage provided them with, until they were finally in position. Jane had them stop for a second to check their gear one last time and get ready; from here on out, it would be an all out sprint - hopefully. Shepard scanned the surroundings one last time, failing to make out any opposition; in the corner of her eye, she could see Garrus doing much the same. Shepard patted her knee two times and got up, hearing the armor and equipment of her squadmates creak and rustle behind her as they did the same. A second later, the sprint was on.</p>
+        <p>Everything went well – for about four seconds. They made it to shallow spot in the stream they had chosen for their crossing in mere moments, but even the only knee high water here served to slow them down ever so slightly – and made a lot of noise as they splashed through it. In the unlikely case that the enemy about to reveal themselves had actually not noticed them before, that did it. In the end, it didn&#x27;t matter - either way Jane had only just gotten out of the water and briefly turned around to check for the others, barely catching the sight of Liara and Tali climbing up the bank, when the shooting started. No trickling in of one gun after the other, but a coordinated ambush, something upwards of ten assault rifles opening up on them simultaneously.</p>
+        <p>And no poor rifles -or shots – either, Shepard&#x27;s shields falling under eighty percent in the blink of an eye.</p>
+        <p>“Barrier!”</p>
+        <p>She wouldn&#x27;t even really have had to bark the order, a protective biotic shield forming in front of them faster than Liara could have possibly reacted to Shepard&#x27;s shouting. Their next cover was in front of them, less than fourty meters of open field away.</p>
+        <p>“Forward! To the bump!” Even as they got moving, she located the source of the incoming fire roughly one hundred and fifty meters out at about two o&#x27;clock – that bloody hill after all. Jane brought up her gun but Garrus beat her to it, opening up with a savage barrage from his assault rifle. Jane and Ashley fell in, and the torrent of projectiles coming their way died down somewhat.</p>
+        <p>Good. Still got a smoke, there&#x27;s more cover from here on out, it&#x27;ll be fine -</p>
+        <p>Mere meters from the temporary safety of the little bump with some bushes on top, Liara&#x27;s barrier collapsed and the loud crack of a heavy sniper rifle rang drowned out everything else for a fraction of a second. She whirled around to see Liara slumping to the ground. Grabbing her by the strap on her backplate, Jane dragged her into cover. A second later, Tali was on her, and so Jane turned around once again. Ashley was dancing at the edge of overheating, eking out every last bit of firepower that she could. Shepard crouched past her to Garrus, who was aiming down the sight of his marksman rifle.</p>
+        <p>“Garrus! Find that snip-”</p>
+        <p>Jane was interrupted by the booming report of the weapon she had picked and bought for her turian friend, the former detective&#x27;s strong shoulders jerking notably with the recoil. This had been a high calibre shot. Garrus dropped into cover and flared his mandibles at her. “He&#x27;s dead.”</p>
+        <p>Jane just nodded and send a series of short bursts the enemy&#x27;s way before turning back around again, making her way to Tali and Liara; Garrus and Ashley would have to provide most of their firepower for now. She slid behind the large treestump Tali had propped the Asari up against and leaned over the Quarian&#x27;s shoulder.</p>
+        <p>“How is she?”</p>
+        <p>Tali answered without looking up from her work. “Bad. Hit below the collarbone and went clean through. My HUD says the Asari body shouldn&#x27;t have any large blood vessels there, but the lung is hit.” Finishing the application of medigel, Tali turned around and they briefly locked eyes. “We need to get her out of here quick, Jane.”</p>
+        <p>Shepard clenched her teeth. “I know.” Casting another quick glance at Liara who was taking quick, shallow breaths, her face a grimace of pain with her eyes clenched shut, she launched herself over to Garrus. The Turian was methodically lining up shots at the enemy, his scope providing him with the ability to actually place accurate killshots where Jane had so far just been shooting at the enemies general direction – they were just too well concealed on that damned hill.</p>
+        <p>Garrus cursed. “Bastard&#x27;s must have tactical camouflage integrated in their armor. That&#x27;s why I couldn&#x27;t pick up their body heat.” He took another shot, hissing in frustration – missed or failed to punch through, apparently. “Their shields aren&#x27;t half bad, either. I think we might&#x27;ve run into their elites here...”</p>
+        <p>Jane grabbed the Turian&#x27;s shoulder and inched closer to make sure she would be heard clearly. “Doesn&#x27;t matter. That sniper got Liara in the lung, she needs to get out of here. And we don&#x27;t have time to kill these assholes anyway.” As if to underscore her words, the roar of their Kodiaks engines flared up as the small vessel emerged from god knew where and quickly closed in on the extraction point, hidden in the distance behind the dark shape of the jungle against the late afternoon sky.</p>
+        <p>“We can&#x27;t brave their guns, Garrus. We need fire and movement here.” She swallowed. “Garrus, you will pick up Liara and carry her to the shuttle. Tali will go with you to cover you.” She could see the Turians eyes widen at the realization of what was to come next. “Ash and I stay back and give you covering fire. Once you&#x27;ve gotten enough distance between you and here, we&#x27;ll make it out with our last smoke.”</p>
+        <p>Garrus stared her down for a second and Jane already prepared to brush off attempts to argue, but her friend&#x27;s professionalism won out. “Alright.”</p>
+        <p>Leaving Garrus to fill in Tali and pick up Liara, Jane fired some quick rounds towards the enemy before crawling over to Ashley. The stern woman simply nodded when Shepard informed her that she&#x27;d just been ordered into a Hail Mary if there had ever been one. Moments later Garrus, with the blood - soaked Tali&#x27;s help, heaved the groaning Liara onto his shoulders. The Turian spared Shepard a quick nod; Jane barely noticed it, lost for a moment in Tali&#x27;s eyes boring into hers across their muddy, pockmarked shelter. Mask or not, she had rarely seen that much emotion in a simple stare. And then a bullet whizzed past above her and she snapped out of it, returning fire with Garrus&#x27; assault rifle that the Turian had left behind to bolster their rate of fire. She didn&#x27;t stop to look if the two of them had gotten going, but simply kept up the fire, allowing the rifle to eventually overheat to achieve as much suppression as possible. Only when she dropped it into the mud and smoldering gras half a minute later did she throw a quick glance after them – which failed to make them out. They were well on their way. Jane brought up her own rifle that she had kept lying ready on her other side and continued the fight.</p>
+        <p>Keeping her head as low as possible while still remaining vigilant, Tali jumped down into the ditch she had found at the other side of the small group of trees that had been the first target of their run. She cast a quick glance behind her back; Garrus was there, breathing heavily with the exertion of carrying an increasingly limp Asari on his shoulders but keeping up. She had not run too fast. From behind the Turian, she could hear the angry bark of Ashley&#x27;s rifle that somehow still hadn&#x27;t overheated.</p>
+        <p>She pushed down her anguish at leaving Ashley and Jane behind and picked up the pace again, occasionally making sure Garrus was still keeping up until his voice suddenly growled in her internal speakers to “stop looking every five damn steps, if I get problems I&#x27;ll tell you.” . From there on out she just focused on what lay ahead, her shotgun brought halfway up and her eyes systematically scanning their surroundings for the next cover – or enemies.</p>
+        <p>With the care they had to take and the detours forced upon them by the need for sticking to cover, it took them the better part of ten minutes to finally reach the safety of the jungle. In the distance, the firefight was still raging on. Garrus slid behind the gargantuan trunk of a giant tree and briefly leaned against it, taking deep breaths.</p>
+        <p>Tali took a good look around before rushing to his side to look after Liara, who was still draped over the Turian&#x27;s shoulders, eyes closed. She sent a short message to Shepard.</p>
+        <p>“Jane, Tali here. We&#x27;re at the treeline. Get out of there!”</p>
+        <p>Not taking the time to wait for an answer but anxiously asking herself why none was immediately forthcoming, she patted Liara, who seemed to be barely paying attention, on the cheek. The Asari strained her neck to look up at her with unfocused eyes. She looked tired. Tali didn&#x27;t like it at all. She quickly interfaced her omnitool with her friend&#x27;s armor and was informed that her vitals were continuously weakening. A lump formed in the pit of her stomach. “Garrus, we need to-” She stopped mid sentence when suddenly, the noise of the ongoing firefight flared up in intensity by an order of magnitude. The anxiety inside her spiked up further.“Oh no...” she stepped out from behind the tree to get a view of what was happening.</p>
+        <p>A second later, Garrus came to stand next to her. Emitting a flurry of sounds the translator didn&#x27;t puck up, he muttered what had to be savage turian curses. “They&#x27;ll never make it out of there. We need to - “</p>
+        <p>Now it was his time to be interrupted, this time by Lieutenant Wu on the radio.</p>
+        <p>“Commander, Kodiak! Where are you? I have Pressly on the line, we need to go soon or they&#x27;ll catch the Normandy in the upper atmosphere!”</p>
+        <p>“Fre&#x27;eg!” She didn&#x27;t notice Garrus surprised flare of a mandible, too occupied by Shepard&#x27;s answer for their pilot.</p>
+        <p>“Shepard here, understood!” Even with the reply being recorded inside the helmet, the noise of the battle Jane was embroiled in came through as loud static. “We&#x27;re cut off! Wait for T&#x27;Soni, Vakarian and Tali, then take off! They should be with you any minute. Tell the Normandy to be ready for a serious injury, T&#x27;Soni has been shot through the lung.” A short pause. “Williams and me will...uh....go to ground. You&#x27;ll pick us up later. Shepard out!”</p>
+        <p>Tethering on the edge of panic, Tali strained and failed to make out details from the firefight several hundred meters away. She cursed again, her heart feeling just about ready to burst from her chest with anxiety. She had to do something! Without thinking, she took a step forward.</p>
+        <p>A strong hand clamped down on her shoulder. “Where do you think you&#x27;re going?”</p>
+        <p>“What do you mean? I have to help them!” She was practically screaming in Garrus&#x27; face, drops of saliva sullying the inside of her mask.</p>
+        <p>Garrus towered over her even with the heavy weight on his shoulders. “You heard Shepard, they&#x27;ll scramble away and go hiding. You won&#x27;t find them, and then you&#x27;ll be stuck down here for nothing! You-”</p>
+        <p>“That&#x27;s if they make it out of there!”, she interrupted him. “I have to help them!”</p>
+        <p>Garrus flared his mandibles and raised his voice. “Tali, I want the same thing, trust me. But we need to get Liara back to the Normandy! You know that!”</p>
+        <p>Tali wavered for a moment, but her resolve recovered swiftly. “You don&#x27;t need me to get Liara to the shuttle...I...”</p>
+        <p>Garrus shook his head violently, a gesture he had picked up from the humans on the Normandy. “Dammit Tali! We have an order - “</p>
+        <p>“Fuck the order!” She tore herself free from his grasp and quickly took a couple of steps back. As a backdrop to their shouting match, the firefight was still in full swing. Their argument, not so much. Garrus was simply looking at her now, saying no more. Her fingers gripped her shotgun tighter. “Keep an eye on her vitals. If they drop too much, you&#x27;ll have to lay a drainage...but I guess you know that, Turian military and all...”.</p>
+        <p>She caught herself and fought down the panic threatening to overtake her. Then she turned around and sprinted towards her beleaguered friends as swift as her strong quarian legs could take her, clinging to cover not entirely as thoroughly as could usually be expected of someone of her expertise and experience, but right now she didn&#x27;t care.</p>
+        <p>“We&#x27;re cut off! Wait for T&#x27;Soni, Vakarian and Tali, then take off! They should be with you any minute. Tell the Normandy to be ready for a serious injury, T&#x27;Soni has been shot through the lung. Williams and me will...uh....go to ground. You&#x27;ll pick us up later. Shepard out!”</p>
+        <p>Shepard cursed and frantically looked around for an opening. Everything had gone to hell. Shortly after Garrus and Tali had left with Liara, they had come under fire from their left – the bastards had flanked them, probably barely missing the three aliens. That was bad enough, but now the ones who had been chasing them earlier had arrived as well, boxing them in from three sides – and their measly cover barely protected them from the fire pouring in from that direction at all. They were pressed against the ground unable to return fire, and even like this their shields were occasionally hit.</p>
+        <p>She&#x27;d need to make a decision, and fast, or they wouldn&#x27;t have to worry about pickup anymore.</p>
+        <p>She spoke through the comms, not even trying to scream over the noise of about a platoon worth of guns bearing down on their position.</p>
+        <p>“Ash! I&#x27;ll smoke, and then we run!”</p>
+        <p>She just held up a thumb, pressing her head into the dirt. Around them, the small bump they were hiding behind was being chewed up by incoming projectiles, dirt and little rocks flying through the air.</p>
+        <p>Shepard was barely able to even throw the damn thing without taking even more damage to her shields. As the grenade popped and began spewing out it&#x27;s smoke, painfully slowly building up wall of visual cover, she tapped Ashley&#x27;s helmet to get hr attention, and then pointed her towards the first cover they&#x27;d rush to as soon as they could still see it. Four seconds later, the smog engulfed them and they got up and all out sprinting.</p>
+        <p>Even in the smoke, her shields still took damage.</p>
+        <p>They&#x27;re even shooting through the smoke...! She cursed inwardly. But then again, why wouldn&#x27;t they. They certainly had the numbers to afford some overheated rifles. The fog cleared as she ran through and soon the weight of fire was increasing again, the smoke behind them not shielding them very well from the eyes of the enemies across the stream. Her suit was blaring at her.</p>
+        <p>Shields fourty percent.</p>
+        <p>Ash overtook her to the right.</p>
+        <p>Shields thirty percent.</p>
+        <p>Only meters left to the next group of trees. They were going to make it, for now.</p>
+        <p>Shields twenty-</p>
+        <p>The ugly sound of a round punching through armor made itself heard over the noise all around her and Ashley, just as Ashley had stepped into the protection of the closes tree, stiffened and fell forward. Shepard rushed to her side, but she was already half up again; together, she half crawled, Shepard half dragged her deeper into the grove. Not very gently due to the situation, she propped Ashley up against a treetrunk, trying to make both of them as small as possible, projectiles and wood splinters filling the air around them. Her face, even though betraying pain, was as defiant as ever , but it was obvious that Ashley was struggling to support her weight.</p>
+        <p>“They got me in the lower back! My leg&#x27;s giving out! Shit! Shitfuck! Nnngh!”</p>
+        <p>Shepard suppressed a string of curses of her own and threw Ashley&#x27;s arm over her shoulders. “Come on, we need to keep moving.” She bent her knees to get ready to take on her weight. “This won&#x27;t be pleasant, Chief.”</p>
+        <p>“Bite me, Skipper.”</p>
+        <p>Shepard pulled her from the support of the tree, immediately feeling her weakness. Ashley&#x27;s left leg was doing it&#x27;s job, but she was leaning heavily to Shepard on her right, that leg barely able to support it&#x27;s weight. With the actual injury being to her lower back, that spelled nothing good. They got going, but even Ashley&#x27;s grit and bravado could not hide that they were at best going at the pace of a brisk walk – and Jane wasn&#x27;t sure how long she&#x27;d be able to keep it up. The hail of bullets still impacting on the trees around them didn&#x27;t help either.</p>
+        <p>And that didn&#x27;t even take the largest issue into account yet. This was only a small copse and the real forest was about two hundred more meters of almost open field away. This would have been a tall order even if they&#x27;d been sprinting, but now...they reached the other side of the grove and stopped, Jane appraising the terrain. It was an open field, but it ascended to a ridge in the middle of it. If they made it past that...</p>
+        <p>Not like we can stay here either.</p>
+        <p>Jane threw a glance over her shoulder, trying to check if hostiles had already closed in on them – slow as they were like this, it was probably just a matter of time.</p>
+        <p>“Skipper.”</p>
+        <p>She stepped towards the open, dragging Ashley with her. “Not the time for a talk, Ash.”</p>
+        <p>“Skipper, it&#x27;s getting worse. I can barely move it anymore.” Ashley thrust out her left and took hold of a young tree at the edge of the field they were about to step out on, looking at Shepard with a pained expression. She seemed to be barely holding it together, and with a marine as tough as Chief Williams, that said a lot. “We won&#x27;t make it. I won&#x27;t make it. You can still-”</p>
+        <p>“Shut up.”</p>
+        <p>Shepard put more force into her pull on Ashley and dragged them out on the field, bending down and squatting to pull her over her own shoulders. Thankfully, Ashley was still able to do her part for this. Then Shepard stood up and started running, going as fast as humanely possible with the heavy weight on her shoulder now. Which was far too slow. In the back of her mind, she knew that Ashley had been right.</p>
+        <p>But she didn&#x27;t want to accept it.</p>
+        <p>She had just made it up the gentle slope when they came under fire again, precise now, her shields going down fast. She felt an impact in her left hamstrings and suddenly had trouble holding up Ashleys weight. Her leg giving out, Jane threw Ashley flat on the ground as she fell, the high grass and the ridge shielding her from view, and crawled up to the edge trying to pick up a target to return fire. What she saw was dozens of mercenaries in blue and white stepping out of the treeline. Her head, halfway to her optic already, stopped for a second.</p>
+        <p>We&#x27;re dead.</p>
+        <p>She opened fire anyway – somehow prompting all of the opponents to take cover again, a ridiculous overreaction to one riflewoman returning fire. She wanted to curse when she realized why they acted this way – they knew they had them no matter what, and they would take their sweet time as well as absolutely zero risks.</p>
+        <p>One riflewoman, that was the other thing. Ashley wasn&#x27;t firing. Jane could faintly see her moving in the corner of this eye, but she had no time to -</p>
+        <p>Oh fuck it.</p>
+        <p>She was done anyway. Even if she had wanted to run, she no longer could, her left leg moving sluggishly even though thankfully, it didn&#x27;t hurt yet.</p>
+        <p>She&#x27;d take her time to say goodbye properly.</p>
+        <p>Jane got down and crawled over, descending down the slope half a meter to evade the incoming fire that was increasing in intensity again , and found Ashley on her back, looking up into the sky. Her lower torso was draped in blood from an exit wound just below the ribcage. She turned her head to look Shepard in the eye as the commander came to rest next to her. “H-hey, Skipper. S-sucks that it e-e-ends th-thiss way, huh?”</p>
+        <p>She spat blood. Jane didn&#x27;t care. “Sorry for getting you into this mess, Ash.”</p>
+        <p>Not showing fear even now, Ashley shook her head weakly. “Bullshit. T&#x27;s been an honor...Skipper. Just hope that...Hackett...doesn&#x27;t d-drop the ball.”</p>
+        <p>She was getting worse by the second. Shepard put a hand on her shoulder. “I hope you&#x27;re right and I&#x27;ll see you up there.”</p>
+        <p>She grinned. It was a disturbing sight, her teeth and lips red. “S-sure. Crying shame though...T-Tali -” she spat blood again. Jane noticed that the gunfire had ceased; they were moving in for the kill. The thought dispersed the sadness that had flared up inside her when Ashley had mentioned Tali. No more time for reminiscing, it seemed. She laid a hand on her last grenade. “Gonna take some more bastards with me. See you on the other side, Ash!”</p>
+        <p>Shepard barely heard her whispered reply as she primed and lobbed the grenade and then hurled herself up on the ridge to hopefully snap off another burst and kill at least one more of them before they mowed her down. But to her surprise, she wasn&#x27;t met with a hail of bullets, but a dark blue object instead, coming at her like-</p>
+        <p>Jane was knocked back hard, the initial impact pressing most of the air out of her chest already and the fall doing most of the rest. She gasped for air, her vision blurring, and both a loud ringing and a strange moaning in her ears. It took her a couple of seconds to realize that the moaning was her trying to breath. She forced herself up on an elbow. She wouldn&#x27;t die lying down, she -</p>
+        <p>Just as she managed to look up again, a fist smashed into her helmet, knocking her back down. Dazed, she could only struggle weakly as multiple pairs of hands took hold of her and hoisted her up. When Jane could think clearly again some seconds later, she found herself standing in a veritable crowd of Blue Suns . She was still next to Ashley, and Ashley seemed to still be alive; but none of the mercenaries made any move to deliver first aid.</p>
+        <p>Not that Jane would have done it for any of these scum either.</p>
+        <p>Before she could make sense of the situation, a Salarian to her two o&#x27;clock turned around and appraised her – even his amphibian, crude features conveying the satisfaction of a man after a hard day&#x27;s work. He did not wear the blue and white of the Blue Suns.</p>
+        <p>“Commander. Finally meet in person. Big admirer. Operation against Saren phenomenal!” Jane could barely believe what she was hearing. “Even today! Perfect trap, still got more than half of team out! Impressive.” The alien blinked the strange, upward blink of his people. “Prefer this outcome. Your associates quite...illustrious in informed communities. Would&#x27;ve been a shame. Nothing personal, you see?”</p>
+        <p>“No.”, she croaked out. “No, I don&#x27;t. Who the fuck are you and what is this!?”</p>
+        <p>The Salarian nodded vigorously. “Confusion understandable. Will not share name in this company, might later on ship. Deserve some clarity, I think. But not now.”</p>
+        <p>He turned to Ashley, who was still somewhat alive for now, looking up to him from hateful eyes. “A shame, as I said.” He drew a pistol.</p>
+        <p>Shepard tried to move in her captors grips,but it was as futile as she knew her words were. “Please, you&#x27;re talking like this is about just me. You can leave...”</p>
+        <p>The Salarian turned around again, looking like someone just tried to wrongfully accuse him of taking the last milk from the fridge. “Please, Shepard. Understand concern for team on theoretical basis. However. Seen my face, heard my voice. Would be very negatively inclined in the future.” He turned towards Ashley again. “ Dying anyway. Nothing personal, as I said. Last words?”</p>
+        <p>Ashley spat, but this time on purpose and with force. The blood actually made it all the way up to sully his chestplate. “Get it over with, frog bastard.”</p>
+        <p>The Salarian smiled thinly. “As expected. Very well.”</p>
+        <p>Jane could do nothing but watch as the alien aimed his gun and placed a shot directly between Ashley&#x27;s eyes. She didn&#x27;t hear any of the commands he gave to his underlings or that the mercenaries traded between themselves in the moments after this; her world was fixed on Ashley&#x27;s empty eyes looking out from her perforated, rolled to the side head. And then her field of view changed to nothing but grass as she was pushed down and her face hit the ground.</p>
+    </div>
+</body>
+</html>

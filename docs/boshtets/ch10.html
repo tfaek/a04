@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch9.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html" selected>Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch11.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 10</h1>
+    <div class="chapter-content">
+        <p>Greenish ichor splattered against the wall as Wrex finished off the last of the Rachni with his gigantic shotgun. Tali looked herself over; the nasty mix of innards, blood and brains of the nightmarish things was all over her at this point. Most of the others hadn&#x27;t fared any better, particularly Wrex, who had charged forward and engaged the beasts in close combat more than once, while the rest of the team was frantically trying to keep their distance from the things and their deadly tentacles, lest they end up like so many of the Binary Helix scientists and guards they had found dead all over the facility. Last of them had been that chubby man who had given them the access key to the neutron purge. Tearing herself away from the grizzly sight on the floor in front of her, Tali zoned back into what was going on. Shepard was conversing with the hot lab&#x27;s VI, which was just finishing it&#x27;s explanation of the neutron purge – and the fact that not only could it not be activated remotely, they would only have sixty seconds to evacuate the lab once they had done so. Nervous glances were shared, and once more, it was one of those occasions were Tali was actually glad people couldn&#x27;t see her face. She probably appeared much braver as she actually was, she mused – after all, nobody could see the color draining from her face. She had seen her fair share of action since she had joined up with Shepard, but this topped them all. They would have to shoot their way out of here, trough Rachni, of all the things, and with a one minute timer to boot. This bordered on a suicide run. She felt her fingers tremble and tightened her grip on her shotgun to hide it. She could see that Liara was feeling it too, having paled ever so slightly. The rest of the team didn&#x27;t look much better, even Wrex seemed somewhat uneasy. Shepard stood in the center of the room, looking at the ground beneath her feet.</p>
+        <p>&quot;Get to the elevator.&quot;</p>
+        <p>Confused, unsure glances. &quot;Who?&quot;</p>
+        <p>&quot;All of you.&quot;</p>
+        <p>Tali wasn&#x27;t sure if she had heard right, but apparently she had, since judging by his outburst, Wrex was about as perplexed as her. &quot;What!? You wanna die here?&quot;</p>
+        <p>Shepard raised her head back up, steely determination in her face – but her eyes, it seemed to Tali, betraying something else, something she couldn&#x27;t quite place.</p>
+        <p>&quot;You heard me. Get out of here. I&#x27;ll activate the purge and be right behind you.&quot; The big Krogan grumbled and shook his head at the commander, but said nothing; though Tali was pretty sure that was because he was at a loss for words, not because he accepted this. Her own thoughts were racing in her head; what in the name of the ancestors was Shepard playing at!?</p>
+        <p>Ashley seemed to have no problems formulating her thoughts. &quot;What the bloody hell, Skipper!? That&#x27;s a suicide mission!&quot;</p>
+        <p>&quot;It&#x27;s a suicide mission either way!&quot;, Shepard snapped back. &quot;No use to risk all of us when one can do the job.&quot;</p>
+        <p>&quot;Bullshit! ...Ma&#x27;am!&quot;</p>
+        <p>Shepard&#x27;s voice was strained. &quot;Williams...&quot;</p>
+        <p>&quot;With all due respect Ma&#x27;am, she is right. We made our way in here , we&#x27;ll make our way out of here, too.&quot; , Kaidan came to the Gunnery Chief&#x27;s aid, as usual presenting his case in a more agreeable manner than the headstrong woman.</p>
+        <p>&quot;You don&#x27;t know that! I&#x27;m not risking the entire team in this goddamn cellar!&quot;</p>
+        <p>&quot;Shepard...&quot; , Garrus tried chiming in, but was cut off by the woman in question.</p>
+        <p>&quot;Don&#x27;t argue this with me, Garrus. Just go.&quot; Tali had remained quiet, straining her eyes and mind to try and understand what had gotten into the commander. Now she saw it, the thing Shepard was hiding behind her blue eyes. It was something she hadn&#x27;t seen there ever since Edolus, where it had flared up for all of two seconds when the thresher maw had ambushed them.</p>
+        <p>Shepard was afraid. Tali&#x27;s head spun with the revelation. Her captain, after cutting through hordes of Rachni on the way down here, was suddenly scared. But why? Yes it was a really bad situation, but -</p>
+        <p>&quot;...think I&#x27;m going up there without you, you&#x27;ve lost your mind, Shepard.&quot;, Garrus finished, speaking loud, snapping her back to paying attention.</p>
+        <p>Wrex laughed. &quot;Same here.&quot;</p>
+        <p>Shepard slammed her fist into the terminal. &quot;I give the orders here! I order you to get into the damn elevator!&quot; Keelah, she&#x27;s pulling rank. That was the first time since.. that&#x27;s the first time ever. She is desperate.</p>
+        <p>The Turian just shrugged. &quot;I just don&#x27;t get it. You&#x27;re telling us to leave you to almost certain death, when the team as a whole would have a much higher chance...&quot;</p>
+        <p>&quot;I am not taking a goddamn chance!&quot;, Shepard almost yelled. She turned towards her fellow Alliance marines. &quot;You two, I&#x27;m your commanding officer. Move.&quot; Wordlessly, Ashley and Kaidan left the room, stopping to look back more than once. &quot;That goes for the rest of you too.&quot;</p>
+        <p>Wrex stepped up to her, growling. &quot;Have you lost your mind, Shepard? You&#x27;re going to send me away from a fight against the Rachni? For what?&quot;</p>
+        <p>&quot;For the team, &quot; Shepard replied coolly. &quot;And now move. You&#x27;re not on my team to fight Rachni, you&#x27;re on my team to follow orders.&quot;</p>
+        <p>Wrex&#x27; agitated features slowly morphed into an expression of contempt, before he finally scoffed and began to stomp away. &quot;Fine, human. Get yourself killed then.&quot;</p>
+        <p>The giant Krogan having relented, Tali could feel her courage to stand up to her commander&#x27;s insane orders waver. If Shepard wasn&#x27;t taking backtalk from Wrex, who would she take it from? Garrus&#x27; seemed to think among similar lines, his mandibles flairing. He opened his mouth as if to say something, but closed it again not having spoken a word, apparently having thought better of it, and turned away. Seeing him leave, Liara&#x27;s shoulder slumped, her eyes fell to the floor, and she started shuffling after him with small, uncertain steps. In the end, it was only Tali and Shepard in the room, Shepard&#x27;s blue eyes boring into hers, and they still held the same urgency they had had for the entire exchange, even though the features of her jaw and mouth had somewhat softened.</p>
+        <p>&quot;You heard me, Tali.&quot;</p>
+        <p>She held Shepard&#x27;s gaze, taking a moment to find words as she finally understood. She had known that Shepard was a great woman, a good captain, someone who truly cared about those under her command. But only now she understood the true extent of it. The woman looked at her with a fear in her own eyes usually reserved to those desperately fearing for their own life; but it was the lives of others she was this scared for, and her own that she was willing to put in more risk than necessary in return – on short notice, just like that. It awed her and terrified her at the same time. &quot;Please, Shepard. This is a bad idea. Please don&#x27;t make me abandon you.&quot;</p>
+        <p>Shepard shook her head. &quot;No arguments. I&#x27;m not going to ask this one of any of you, even if you want to. Now get to the elevator.&quot;</p>
+        <p>She couldn&#x27;t have said anything to Shepard even if she had come up with something; looking at her, desperate yet determined at the same time, she felt a knot in her throat, and so she turned around, quickly fleeing the scene, fighting down sniffles as she made her way through the corridors, a hot tear flowing down her cheek at the thoughts of Shepard quite possibly being about to die here, and about the anguish there had to be in her to drive her to something like this. Of course she would choose this approach; Tali should have expected it, after what Shepard had told her of Akuze. The woman had seen too many die under her command, and now she was burned. Damn her, she thought; damn her for being so stupid and stubborn and selfless.</p>
+        <p>Still in feverish thought, she reached the elevator and stepped in. Looking down to her large toes, praying to the ancestors to preserve the bloody bosh&#x27;tet of a woman, it took her a while to notice that they weren&#x27;t moving. Finally, she lifted her head up and gave the others, who all had their guns out and taken positions, determined looks on their faces, a series of confused looks. &quot;What&#x27;s going on?&quot;</p>
+        <p>Garrus shrugged and twisted his mandibles in what may or may not have been a turian smirk. &quot;She told us to get to the elevator, and here we are. So what are you waiting for?&quot; She couldn&#x27;t help but let out a short laugh at that, the absurdity of the situation suddenly striking her in force, but she quickly, still shaking her head and chuckling to herself mirthlessly, got out her shotgun and took a knee by the entrance to the platform, using the waist high railing for cover. Garrus nodded and activated his comm. &quot;Alright Shepard, we&#x27;re good. You can start.&quot;</p>
+        <p>&quot;Good. Send me the elevator down, will you? I don&#x27;t intend to die here if I can help it.&quot;</p>
+        <p>&quot;It&#x27;s on it&#x27;s way, commander.&quot; , Garrus lied, and a moment later the hallway was filled with the blare of an alarm, and the voice of the VI.</p>
+        <p>&quot;Neutron Purge activated. Please evacuate, remaining time in seconds, fifty-five...&quot;</p>
+        <p>Several panels in both the floor and ceiling came open, some of them simply being blown out of their fixings, and Rachni of both the worker and the warrior types came spilling into the hall; for a brief moment she wondered if they were intelligent enough to comprehend their impending doom, and if they perhaps sought to escape it, or if they had just been stirred by the noise. A split second later those thoughts had vanished from her mind as the weapons of her shipmates came to life, spitting death and deafening noise towards the insectoid abominations. She shook off her still recurring shock at seeing them scuttle about on their disgustingly numerous legs and joined in, her shotgun penetrating the armor of and maiming a warrior with a prepared carnage shot, the follow up shot finishing it off, the weapon shutting down and beginning to hiss excess heat as she dropped it to the ground unceremoniously, already bringing her pistol to bear on the aliens.</p>
+        <p>The Rachni pressed them hard, but none succeeded in coming closer than a couple of meters; but it took all their firepower and some use of biotics to achieve it, none of them daring to utilize grenades for fear of hitting Shepard if, when, she insisted to herself, Shepard emerged from the door on the other side of the hall.</p>
+        <p>&quot;Thirty-three ...&quot;</p>
+        <p>Keelah, it has only been twenty seconds of this?</p>
+        <p>Wrex deep, bellowing voice carried over the carnage. &quot;We need to get out of here in twenty five!&quot;</p>
+        <p>Keelah! No!</p>
+        <p>She caught a climpse of a number of dark, metallic looking objects sailing through the air, falling on the ground in the middle of the the wall of chitin, flesh and disgusting ichor in front of them. Before she could discern their nature, said wall was, at least for a couple of seconds, torn apart by a series of deafening explosions, shrapnel clattering against the walls and ceiling, the elevator itself, and their shields, making them flare. And there Shepard was, barreling through the reeling swarm like a goddess of war, wielding her assault rifle in her right hand, firing wildly without bothering to aim at all, the signature machete in her left raised over her head, ready to fend off whatever dared coming into range, the blade covered in green liquid.</p>
+        <p>&quot;Twenty – eight ...&quot;</p>
+        <p>Upon seeing their leader, the team narrowed their target area, focusing their fire on her immediate left and right in a maneuver that would have every drill instructor or range sergeant in every military of the galaxy throw a fit over muzzle discipline, but they were not some grunts, they were Shepard&#x27;s team, they were something special, she knew it; under her mask, she was smiling now, Shepard was going to make it, the crazy bosh&#x27;tet, she was still insane, but she was going to live. The only thing missing as Shepard sprinted past the most forward elements of the scurrying mass of beasts was triumphant music.</p>
+        <p>And then her faceplate was rammed into the floor with brutal force as a tentacle wrapped around her ankle and brought her to a fall, her rifle slipping from her grasp as she tried to catch herself.</p>
+        <p>&quot;No! SHEPARD!&quot;</p>
+        <p>Before she knew it, she was storming forward, howling in rage and terror, barely noticing the giant, reddish-brown form of Wrex to her right doing the same, let alone the fact that she was breaking all of her personal records for fire during movement, racking, aiming and firing the shotgun like a perfect machine without slowing down her rush at all, her powerful quarian legs propelling her towards her target faster than the giant lizard could keep up with. By the time she had reached Shepard, who, still on her behind, was somehow continuing to hold on to her blade and had even managed to sever the appendage that had brought her down even though her movements had become sluggish, she had killed another of the beasts that had tried to pounce the downed commander, Wrex&#x27; artillery piece labeled a shotgun claiming two in the same time.</p>
+        <p>&quot;Eighteen...&quot;</p>
+        <p>Having collapsed her shotgun to her back, Tali grabbed the sling at the back of Shepard&#x27;s harness with both hands, not even trying to do this with one, and started to pull. Shooting her arms out in confusion for only a second, her commander quickly caught on and drew her hand cannon, beginning to level shots at the advancing horde, the massive Krogan looming over both of them, laughing and growling like a maniac, his weapon spitting death. A particularly brave warrior leaped at him just as the massive thing finally overheated, just to be battered aside with it, blood and knocked out teeth trailing through the air. But there were already three more jumping, the others back in the elevator blocked from supporting them in the center by the forms of Tali and Wrex in their lines of fire.</p>
+        <p>&quot;Fifteen...&quot;</p>
+        <p>Shepard pumped the head of the leading one full of bullets while it was still mid-air, obviously not stopping it&#x27;s momentum but at least killing it, turning it from a lethal mass of chitin and claws into a mere one hundred fifty kilo flesh projectile. Her gun was overheated now, but Wrex pushed one of the others away with his biotics. The remaining one came ever closer, tentacles and forward legs extended towards her and Shepard . Straining her burning legs to go faster, she frantically looked for a way out as time seemed to grind to a halt, they weren&#x27;t going to make it, they – suddenly, the world lit up in brilliant azure, blinding her before her mask&#x27;s dampeners could react. When she opened eyes again, the Rachni horde was sprawled out on the ground in complete disarray several meters away, limbs and bodies entangled. Before she could comprehend what had happened, the sound of something falling to the ground heavily, followed by someone worriedly shouting &quot;Liara!&quot; answered it for her.</p>
+        <p>&quot;Eleven...&quot;</p>
+        <p>With some help from Wrex, they finally got Shepard into the elevator. Her feet weren&#x27;t even entirely inside yet when someone already slammed the button, the concrete of the shaft coming dangerously close to turning their commander into a cripple as the elevator quickly ascended. Tali slumped against the railing and closed her eyes for a second, her breath coming in deep, greedy inhalations, her chest heaving from the exertion. Nobody spoke; the elevator was filled with the sound of heavy breathing and some silent groaning from Liara. Tali opened her eyes and picked up the pistol she had discarded for her mad dash. Kaidan kneeling down to look after the Asari who was clutching her head, a drop of blood flowing from her left nostril, Tali shook herself from her daze and rushed to Shepard&#x27;s side, joining Ashley, who was already applying medigel to a bleeding wound on the inside of Shepard&#x27;s right forearm. Blinking multiple times, Shepard tore her gaze from her fellow marine and, with some difficulty, looked Tali in the eye, as she always did. &quot;T-Tali. Hi.&quot;</p>
+        <p>She couldn&#x27;t help herself, a burst of laughter escaped her. If only Shepard could have seen the wide grin on her lips at the realization that they had all made it, that Shepard had made it, settling in. &quot;You crazy bosh&#x27;tet.&quot;</p>
+        <p>A shit eating grin appeared on Shepard&#x27;s face, as she replied. &quot;Still didn&#x27;t tell me what that means. I&#x27;m telling you, when we finally get that shore leave, we&#x27;re getting you drunk out of your mind. I&#x27;ll recruit Garrus to brief me over dextro drinks. Right, Garrus?&quot;</p>
+        <p>&quot;Wha ? I mean, sure Shepard, whatever you say.&quot;</p>
+        <p>Shepard laughed, the first genuine one for days. Ancestors, she really was insane. But then her demeanor changed, as she palmed her face, groaning as she rubbed her eyes, before she dropped the hand again and looked around, addressing them almost sheepishly. &quot;Uhm...thank you, people. I never would&#x27;ve made it out of there if you hadn&#x27;t stayed down with me.&quot; She looked unsure, as if she was looking for words that were eluding her; a rare sight, but right now, Tali could have cared less. Standing back up, Tali could only shake her heard at the woman.</p>
+        <p>Garrus rose up to the task. &quot;That would&#x27;ve been much easier if we had just done it as a team, Shepard.&quot; Dropping the flippant tone, he added, &quot;But the...intention is appreciated. Just don&#x27;t pull such a stunt again, okay?&quot;</p>
+        <p>Shepard snorted mirthlessly. &quot;Not making any promises.&quot;</p>
+        <p>Tali simply stared at her. She had known Shepard cared, but what had just transpired here was almost madness. It most definitively wasn&#x27;t healthy. It was, however, a thing a good captain would be prone to do,even if it was not exactly an example of good judgement. Perhaps they couldn&#x27;t make her see reason, but at least she could make sure Shepard knew she was appreciated. &quot;May you stand between your crew and harm as you lead them through the empty void between the stars. Keelah&#x27;Selai, Shepard.&quot;</p>
+        <p>Shepard looked up to her, appearing unsure how to react, perhaps even embarassed. &quot;What was that?&quot;</p>
+        <p>&quot;A quarian captain&#x27;s greeting. It encapsulates what every captain should strive to be. A-and...what you just did.&quot;</p>
+        <p>She cleared her throat, looking at Ashley&#x27;s hands, still working on Shepard&#x27;s right arm. &quot;I try, but...I&#x27;m not actually a captain, Tali.&quot;</p>
+        <p>Yes,&quot; she said. &quot;Yes you are, Captain.&quot;</p>
+        <p>…...</p>
+        <p>&quot;Sour notes? What are you speaking of?&quot;</p>
+        <p>Tali followed the conversation between Shepard and the dying Asari who was being psychically controlled by the Rachni Queen, because her life now was officially completely and utterly insane , with as much attention as she could spare while helping Ashley tend to her wound; the final fight against Benezia, her Asari bodyguards and the last of their Geth had not left the team unscathed. It had been a brutal battle, and the fact that they had already been fighting on and off against Rachni, Geth, Krogan, and even Binary Helix own security personnel for the better part of a day did not help. In the end, they all still drew breath and their enemies did not, but the group was battered. Shepard had been the main focus of Benezia&#x27;s biotics and taken a bad beating, her face, now free of the helmet she had pulled off eagerly after the fighting had finished, coated in blood from a vicious laceration on her forehead, and while she remained disciplined and focused as ever, Tali was sure that she was seeing a certain sluggishness in Shepard&#x27;s movements; no wonder after hitting her head twice in a day, the memories of their clutch escape from the hot labs still fresh in Tali&#x27;s mind. Wrex was a patchwork of cuts and bulletholes, Kaidan was sitting in a corner, groaning from his headaches as the fight had taxed his biotics to the greatest extent, and Garrus was limping. Tali herself was very thankful for her new armor, given the two marks on her chestplate where bullets had pierced her faltering shields, and favoring her left leg since her right ankle appeared to be badly sprained if not broken from a biotic assault that had slammed her into the wall. Ashley had it the worst; not only had she , courtesy of Asari biotics, suffered a strong impact with a hard surface herself – in her case, the floor – she had also sustained a shot clean through her shoulder, and so Tali was now using a syringe from the Alliance soldier&#x27;s personal medkit to apply MediGel directly into the bullet canal, Ashley hissing in pain and gripping Tali&#x27;s knee so hard she feared it might break. Liara, who as of now was cradling her mother&#x27;s broken body in her arms and sobbing uncontrollably, was the only one who hadn&#x27;t suffered anything more than an ineffectual scratch; perhaps even in her ...mind controlled state, Benezia had had some compassion for her own blood left.</p>
+        <p>&quot;A long time ago, our foremothers lived ...in peace. Then the one with the sour... yellow notes came and changed... their song. It turned our singing into..noise. In their agony, our foremothers...lashed out...&quot;</p>
+        <p>Ashley&#x27;s wound taken care of for now, Tali stood up, her mind spinning with what she was hearing. The Rachni had been driven into their mad aggression? But by whom? The queen spoke as if it had been just one being. What could have done such a thing? And why?</p>
+        <p>Shepard appeared to be already ahead of her. &quot;Who did this to your people? Where did they get the means to do so? Prothean beacons?&quot;</p>
+        <p>&quot;The one who tainted our song...is the same who tainted the songs of these who now lie dying.&quot;</p>
+        <p>&quot;Saren!?&quot;, Garrus blurted out. &quot;That makes no sense.&quot;</p>
+        <p>The freakish, dying Asari shuddered in the psychic bond controlling her like a puppet being flung about by a set of clumsily handled strings. &quot;The one this one&#x27;s song describes ….as Saren... is not the singer of the sour yellow notes. It is another. The dying singers call him...Sovereign.&quot;</p>
+        <p>Shepard was squinting now, looking confused, but determined to milk this well of knowledge for all it&#x27;s worth. &quot;Who is Sovereign?&quot;</p>
+        <p>&quot;We do not...know. They do not, either. Not...truly. They do not understand it.&quot;</p>
+        <p>The commander took a step back, her face relaxing, as she seemed to try and digest what she had heard; but the queen pressed forward her own matters now. &quot;You hold our...fate in...your hands. Will you release us? Or will you resign the Rachni to oblivion?&quot;</p>
+        <p>Keelah.</p>
+        <p>The commander seemed to feel the same, for she didn&#x27;t answer, but looked at the ground instead, eyes wide, jaw working. Wrex growled behind her. &quot;What are you waiting for, Shepard. Dissolve the bug!&quot;</p>
+        <p>Garrus nodded and clicked his mandibles. &quot;I&#x27;m with Wrex on this one. The Rachni almost tore the galaxy apart. They&#x27;re too dangerous.&quot; Of course he&#x27;d say that, she thought. But was he wrong? She honestly did not know. Exterminating an entire species felt wrong. Like a sacrilege. But if she could destroy all Geth with a flip of a switch, would she not do it? No, she corrected herself, it&#x27;s not the same. The Geth are guilty, this queen is not.</p>
+        <p>Shepard was still not speaking, and so Ashley, the medigel apparently numbing the pain enough to make it somewhat bearable, stated that she agreed with &#x27;the dinosaurs&#x27;.</p>
+        <p>Shepard acknowledged none of them, instead bringing her head back up to look at the queen, ignoring her puppet still swaying in the corner. &quot;If I let you go, what would you do?&quot;</p>
+        <p>&quot;We would..leave...and hide. Find a place where...we could live in peace...teach our children to sing in ...harmony.&quot;</p>
+        <p>It was completely quiet in the room now, except for Liara&#x27;s occasional sniffles. Until Shepard let out a long sigh, took a few steps forward, and hit the button that would release the queen.</p>
+        <p>&quot;God, I hope I&#x27;m not going to regret this.&quot;</p>
+        <p>….</p>
+        <p>&quot;You did WHAT!? Do you have any idea how many generations until the Rachni overrun the galaxy again!?&quot;</p>
+        <p>Shepard clenched her jaw and had to fight to not look down. She had no problem with facing the music for her decisions – when she was convinced that she had done the right thing. This time? She wasn&#x27;t sure at all. &quot;I understand your reservations, Councilor, and I share them. However, what you would have had me do would have been genocide. A violation of this council&#x27;s own- &quot;</p>
+        <p>&quot;Do not presume to lecture me about the charter, human!&quot; , Sparatus thundered. &quot;I knew your race didn&#x27;t have the guts to make the difficult decisions.&quot; Mandibles and nostrils flaring, the turian councilor cut the connection. Shepard took a deep breath. She had been prepared for a backlash, but this was bad. She forced her focus away from the now empty spot where Sparatus&#x27; hologram had been and faced the remaining two councilors. Valern stood still as usual, with his typical neutral expression on his face, while Tevos, the Asari, actually looked almost sympathetic.</p>
+        <p>&quot;It was a difficult decision, Commander. I understand why you could not do it, I just hope our children won&#x27;t have to pay the price for your mercy.&quot;</p>
+        <p>Shepard sighed and finally, broke eye contact. &quot;So do I, Councilor.&quot;</p>
+        <p>She nodded. &quot;Was there anything else, Shepard?&quot;</p>
+        <p>&quot;As a matter of fact, yes...&quot; Shepard straightened herself and clasped her hands behind her back. &quot;I realize that the validity of this intel is questionable, but some of the things the queen said are potentially groundbreaking – and troubling.&quot; With both councilors just looking at her silent and attentively, she took it as her queue to go on. &quot;As I already reported, Benezia claimed, by my as well as her daughter&#x27;s estimation truthfully, to have been a victim to some form of mind control or indoctrination. The queen further supported this by stating that Benezia&#x27;s &#x27;song&#x27; as well as those of her followers had been &#x27;tainted&#x27;.&quot;</p>
+        <p>Valern stroked his chin and blinked twice. &quot;Interesting. Rachni known psychics. No obvious reason to lie. If true, could hint towards nature of Saren&#x27;s means of control.&quot;</p>
+        <p>Shepard shuffled her feat awkwardly. The real kicker was still coming. &quot;That&#x27;s just it, Sir. The queen said Saren isn&#x27;t the one exerting the control, but his ship, this...super dreadnought the footage of we acquired on Eden Prime you are no doubt familiar with. Apparently the indoctrinated Asari knew it or them as &#x27;Sovereign&#x27;. The queen made no statements about Sovereigns nature, claiming that the Asari themselves did not know either.&quot;</p>
+        <p>Tevos looked very thoughtful know. &quot;That is indeed troubling, Commander...&quot;</p>
+        <p>&quot;There&#x27;s more.&quot;</p>
+        <p>A blue, hairless eyebrow was lifted. &quot;Yet more troubling news?&quot;</p>
+        <p>&quot;I&#x27;m afraid so, ma&#x27;am. The queen claimed that it recognized the &#x27;song&#x27; of this Sovereign from the memories it inhabited from it&#x27;s foremothers. Allegedly, this Sovereign...somehow drove the Rachni into their war on the galaxy.&quot;</p>
+        <p>The Asari&#x27;s eyes widened in shock, but Valern was quick to dissect the new information. &quot;If true, highly troubling. However, queen possibly lying. Survival at stake; diverting responsibility for Rachni wars beneficial in swaying Shepard.&quot; He blinked. &quot;Super dreadnought so far believed to be of Geth origin. Remains most probable hypothesis despite conflict with new intel. Truthfulness of queen&#x27;s statements impossible to discern. Cannot know for sure. Shepard&#x27;s hunt for Saren most likely avenue for gaining new information on this &#x27;Sovereign&#x27;. Sufficient response to existing intelligence...for now.&quot;</p>
+        <p>Tevos nodded at that, before looking back to Shepard. &quot;That settles it. I trust that was the last of the potentially history changing revelations for today, Commander?&quot;</p>
+        <p>Jane nodded tiredly. &quot;Yes. Ma&#x27;am.&quot;</p>
+        <p>&quot;In that case, this debriefing is over. Good hunting, Shepard.&quot;</p>
+        <p>She saluted. &quot;Councilors.&quot;</p>
+        <p>The connection was cut and she slumped, lowering herself into the closest chair and leaning back, allowing herself to look as tired as she felt, at least for a moment. What a day.</p>
+        <p>Later that night, she lay in her bed, thoughts still racing through her mind. Had she done the right thing? Half her team disagreed. The other half either wasn&#x27;t sure or reluctantly agreed; she certainly didn&#x27;t blame them, she half wished she had just ended the creature right then and there herself. If she was wrong, there would be a bloody war somewhere down the line, and it would be her fault alone. She shuddered at the thought, not for the first time since making the call. Should she have listened to her team?</p>
+        <p>Her team. What did they think of her after she had ordered the to leave her alone today? Did they all take her for insane? Tali seemed to be, if anything, impressed by her, as Tali put it, selflessness, which she found surprisingly relieving even if she knew that in truth, it was merely cowardice to face the more unfortunate aspects of military leadership; but she was not so sure about the others. First the mission, then the team, then yourself; so much was true, so much had been her mantra ever since Akuze. But the course of action she had chosen in the hot labs today had not been the rational or smart one, no matter which way she tried to justify it. Had she died down there, the mission would have been severely compromised, if not doomed. She cursed herself for her feelings muddying her judgement again; what on earth was wrong with her? Had the damn incident with Toombs and the revelations about Akuze rattled her more than she had thought? And how had she even gotten this invested in this motley crew of soldiers and aliens? If she was honest to herself, she hadn&#x27;t been this close to anyone she had worked with since...since Akuze. That day had taught her to keep her distance to her fellow soldier, so she could stay objective with her orders, and them dying would be more bearable. It had served her well enough on Elysium, getting her through that bloody day without too many additions to her personal nightmare collection. But this group was something else. Something special.</p>
+        <p>But her choice regarding the queen, her actions in the hot lab, or what her team thought of her were not the only things troubling her, or even the things that troubled her most. The implications of what the queen had said were staggering. Who- or whatever this Sovereign was and who had built it, it or they had lived far too long to be of any species she knew of. Krogan could live for several thousand years, but they had not even been a spacefaring species when the Rachni first appeared on the galactic stage. Perhaps it was an organization? But what kind of organization would have the means to influence the Rachni, and why? None of the races of the galaxy had profited from the Rachni wars, except the Krogan perhaps, and they were out, for the aforementioned reason. There was another race of course, a race whose very modus operandi hinted at them possibly being very long living, or possessing powerful stasis technology – the Reapers. But the Reapers weren&#x27;t here., else Saren wouldn&#x27;t be trying to bring them back. Unless of course, they had a vanguard, or at least formerly hidden assets now in use by Saren already inside the milky way... once more, she shuddered. What kind of lunatic was she dealing with here? Where would this rabbit hole end? Just what were the stakes if she failed?</p>
+        <p>Pondering this over and over again, her thoughts grew slower and slower, until eventually, to her own big surprise when she woke up seven hours later, she actually fell into a deep and dreamless sleep.</p>
+    </div>
+</body>
+</html>

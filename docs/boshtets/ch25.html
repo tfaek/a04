@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 25</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch24.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html" selected>Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch26.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 25</h1>
+    <div class="chapter-content">
+        <p>&quot;Not even a week since the battle and Flux is going again. Priorities, I guess. Not that I&#x27;m complaining.&quot;.</p>
+        <p>Tali ignored Garrus&#x27; quip and continued to focus on her drink. It was just water, but even water could be captivating when you had your head full. And that it had been pretty much ever since she had woken up after that first night in the hospital and eaten her breakfast with Jane sitting by her bed until the staff had finally politely asked her to leave because she was in the way and frankly smelled terribly.</p>
+        <p>The problem was simple: Her pilgrimage was over. She had her gift, had already had in for weeks in fact, and now her obligation to Shepard was over, too. Not that she had stayed because of that, anyway; their mission had been a matter of life or death for everyone. Even her father would have to agree this took precedence over returning to the flotilla. But now that it was done, she had to face the fact that she simply didn&#x27;t want to go back.</p>
+        <p>Tali cared about her people, she really did; but it was duty that pulled her towards them now. Everything else screamed at her to remain here. Friendship, purpose, and as much as she was embarassed to even think it, love too. You&#x27;ve completely fallen for your pilgrimage captain. From another species. Ancestors, this is like it&#x27;s from some bad vid. She could not help but chuckle at herself.</p>
+        <p>&quot;What&#x27;s funny?&quot; Oh crap. Of course Ashley, sitting right next to her, had noticed how lost in her thoughts she was. And now the seemingly random chuckling.</p>
+        <p>&quot;I was just...thinking.&quot;</p>
+        <p>Ashley answered her with a mischievous grin. &quot;About what?&quot; Before Tali could answer, she saw Jane, accompanied by Joker and roughly half of the Normandy crew, limp up the stairs and enter the club, the last one who had been missing from their group. It was clear that her injury was still hindering her, but she already had gone from two crutches down to one, and she did not let any pain show on her face.</p>
+        <p>Always the hero...</p>
+        <p>Ashley had noticed what she had been looking at. &quot;Ah, yes. I should&#x27;ve known.&quot;</p>
+        <p>&quot;I-no! I didn&#x27;t...&quot; Ashley&#x27;s grin just got wider, so Tali sighed and gave up. &quot;Yes. How did you...?&quot;</p>
+        <p>The other woman nudged her in the shoulder. &quot;Big sister secrets. I know things.&quot; Tali turned and looked at her, questioning. &quot;Jesus Tali, it&#x27;s really not hard to see. From what Joker told me, you&#x27;ve been dominating the betting pool by a fair margin for months.&quot;</p>
+        <p>She gasped. &quot;The...what!?&quot;</p>
+        <p>&quot;Yes, the crew has a betting pool. A lot of them actually, but one of them is about the Commander, and who will, to quote Joker, &#x27;snatch&#x27; her.&quot;</p>
+        <p>Tali wasn&#x27;t sure if she was blushing or getting redfaced from anger at the insolence of it all. &quot;This ...this...bosh&#x27;tet!&quot;</p>
+        <p>Ashley laughed. &quot;Before you go and strangle him, let me tell you that Joker didn&#x27;t start it. He was the first one to put his money on you, though. If that makes you feel better.&quot;</p>
+        <p>No, this definetly didn&#x27;t make her feel better. This entire conversation did not. Hushed, as Jane sat down with Wrex and Garrus at the other end of the table, she said: &quot; She- she doesn&#x27;t know, does she?&quot;</p>
+        <p>&quot;No, no. She&#x27;s a real dense one. Don&#x27;t worry Tali. However...why exactly would you worry? Just tell her. I&#x27;m pretty sure she would be overjoyed...&quot;</p>
+        <p>Now this one stunned Tali. &quot;You think? But...she could have you, or Liara, and...&quot; she realized what she had just said. &quot;Oh keelah! Ashley, I didn&#x27;t mean...&quot;</p>
+        <p>Ashley just waved it off. &quot;Calm down, you&#x27;re not that wrong. I&#x27;m not completely sure if I wouldve have rejected her, and I&#x27;m pretty sure Liara wouldn&#x27;t have. But Shepard never said or did anything, and before I might have gotten any ideas of my own, it was pretty clear why.&quot; She leaned in closer and looked Tali in the eyes.&quot;I&#x27;m going to say this very bluntly since apparently, you&#x27;re as dense as she is. You&#x27;ve got that woman wrapped around your finger, Miss Zorah.&quot;</p>
+        <p>Tali was stunned. &quot;But...why would you think that? I mean...I&#x27;m stuck in this suit...and...she never said anything...and...I have to go away anyway...No, you have to be wrong.&quot;</p>
+        <p>Ash just looked at her skeptically. &quot;Tali, I&#x27;m never wrong on these things. And if you don&#x27;t believe me, ask Liara. She&#x27;ll agree with me. I&#x27;m pretty sure she saw more than she was supposed to when she sucked Illos out of Shepard&#x27;s brain.&quot;</p>
+        <p>&quot;I...I don&#x27;t know. I have to think about this...&quot;</p>
+        <p>&quot;You do that, girl.&quot; The marine leaned back in her seat and smiled smugly to herself. Before Tali could get lost in thought again, the woman herself captured everyone&#x27;s attention by pounding the table with the base of a strange looking beer glass she had procured from ancestors knew where, causing the amber liquid inside to swish and foam. The squad, as well as the gathered crewmen and -women on the tables surrounding them got quiet and looked to their commander, ready to listen.</p>
+        <p>&quot;Listen up people. The most important thing first: All drinks are on me!&quot;</p>
+        <p>She had to wait a couple of seconds for the thunderous cheers that followed this announcement to subside.</p>
+        <p>&quot;On a more serious note, I&#x27;m glad about everyone who is here tonight. It&#x27;s been a long and tough road, crew. Six months of running around the galaxy, one fight to the next. None of it would have been possible without each and every one of you.&quot; She raised her glass. &quot;To the absolute badasses who stole the Normandy with me!&quot;</p>
+        <p>Thunderous applause again.</p>
+        <p>&quot;Now. As you can see, I&#x27;m a mess. Same goes for the ship after what we put her through. As a result, we will take some well earned vacation. I for one will spend it at the Normandy to make sure nobody else steals it...&quot;</p>
+        <p>That one got a couple of laughs, but not enough to force her to stop speaking.</p>
+        <p>&quot;...but everybody who wants to is free to get the next shuttle home and visit their families,just li -&quot;</p>
+        <p>She had to stop talking for a full minute, so loud was the overjoyed uproar. When she resumed, she was grinning ear to ear. &quot;Jesus people, what&#x27;s going on? You already knew you&#x27;d get leave, half the crew isn&#x27;t here after all. In fact, I remain convinced the only reason any of you are still here is because you want to spend some time together without being afraid of Pressly&#x27;s whip for once.&quot;</p>
+        <p>The resuming laughter threatened to drown her out again, so Shepard raised her voice as she began to sit down. &quot;Alright, I&#x27;ve been talking to much! Now drink and then clear off, see you Monday the seventeenth!&quot;</p>
+        <p>Ignoring the noise of 17 hollering sailors, Jane finally lowered herself onto her chair, coming to sit next to Wrex,a quick smile of relief flashing over her face when the weight was taken off her legs.</p>
+        <p>&quot;I think you know it already, but I want to say out loud...you guys are the best damn team I&#x27;ve ever worked with. And some of the best friends I&#x27;ve ever had.&quot; In the middle of loud, noisy flux, their table seemed completely silent as they all looked back at her. Jane raised that beer glass again. &quot;To Kaidan!&quot;</p>
+        <p>&quot;To Kaidan!&quot;</p>
+        <p>They drank. Considerably more solemn than before, their commander sat the glass down and looked back up. &quot;Aright, let&#x27;s get it over with...Wrex has something to say to us.&quot;</p>
+        <p>The old Krogan huffed. &quot;Damn you for making me do this, you sappy pyjak. Listen. I&#x27;m leaving first thing in the morning. Passage already booked. I&#x27;m going home to Tuchanka. Someone has to convince these idiots to stop killing each other and prepare for the reapers, and if I don&#x27;t do it, noone will. You&#x27;ve been a good Krannt. We had a good time together, and we did a good thing. You will always be welcome in my halls...once I&#x27;ve taken them back. &quot; He grinned his trademark scary Krogan grin. &quot;Even you, Vakarian.&quot; The Turian chuckled, but Tali could&#x27;ve sworn he was touched.</p>
+        <p>Herself, she was not surprised, Wrex had told her about this beforehand. Still, she felt a pang of sadness. Strangely enough, the Krogan had taken a liking to her, and she had soon learned that underneath the gruff and cynical exterior was a still gruff, but actually caring personality. But her &#x27;Uncle&#x27; was needed elsewhere. A predicament she understood only too well. &quot;I will miss you, Wrex.&quot;</p>
+        <p>He smiled at her without showing any teeth; a rare expression from him. &quot;I&#x27;ll miss you too, pup. By the way...greet Han&#x27;Gerrel from me. Tell him he&#x27;s a pyjak and still owes me two hundred credits.&quot;</p>
+        <p>The next quarter of an hour was filled with Wrex telling the, no doubt heavily embellished, story of how he had met Han&#x27;Gerrel during his pilgrimage and how the two of them had been part of the same mercenary crew for a couple of months. Apparently the later admiral was terrible at Skyllian Five. Finally, Joker having joined the table in the meantime, Jane drew the attention back to herself. &quot;Unfortunately, there is something else serious to discuss before we can all get deservedly wasted. As you might know, there was a council meeting yesterday. Well. The good news is, humanity is getting a seat on the council. The bad news is...it&#x27;s probably Udina.&quot;</p>
+        <p>Outraged comments ensued, Ashley yelling the loudest. &quot;What!? That son of a bitch sold us out! If Anderson hadn&#x27;t decked him, we&#x27;d all be dead now! How on earth is that weasel becoming councilor!?&quot;</p>
+        <p>Jane just shrugged. &quot;Politics. I don&#x27;t like it either, but since when do the powers that be care about the opinions of the people on the ground?&quot; Ashley huffed, but had nothing to say to that. And neither did Tali, this was just how these things went, as big of a bosh&#x27;tet Udina might be. &quot;That&#x27;s not even the actual problem though,&quot; Jane continued. &quot;The problem is that these damned fools still don&#x27;t want to see the truth about the reapers.&quot; Everyone was floored by that one, except for Wrex who simply chuckled. He was probably too old to still be surprised by the council.</p>
+        <p>Garrus regained his ability to speak the fastest. &quot;But...how!? There was an actual reaper sitting on the presidium tower! It tore apart a third of the 5th fleet! Spirits, it rammed a dreadnought!&quot;</p>
+        <p>Jane closed her eyes. She was clearly getting agitated herself just from speaking about it. &quot;They insist that Sovereign was a Geth ship and that all the evidence about Reapers was misinformation planted by Saren to control the Geth and confuse me. And that he succeeded. I am, apparently, paranoid. My new orders are to hunt down the Geth were I can find them. The reapers are just a myth and therefore to be ignored.&quot;</p>
+        <p>Tali couldn&#x27;t hold it any longer. &quot;But that&#x27;s absurd! Even if the Geth were that advanced, the result would be completely different! That thing was not Geth tech! Everyone who&#x27;s ever seen a Geth from the inside could tell that.&quot; Jane sighed. &quot;I know. I tried to explain that to them, believe me. When I offered them to have you explain it, they flat out refused. Nobody close to me is trustworthy. We&#x27;re all paranoid together, it seems.&quot;</p>
+        <p>Wrex bellowed with laughter. &quot;I&#x27;ll drink to that.&quot; They did, shaking their heads, and the Krogan spoke up again. &quot;I am surprised you ever expected anything else from them, Shepard. But I suppose some amount of youthful naivete is to be expected from a woman who hasn&#x27;t even hit thirty, even a woman such as you. What will you do now?&quot;</p>
+        <p>Jane leaned forward. &quot;I still have the Normandy, and I&#x27;m keeping it. Hackett knows what is coming, he will support us any way he can. So if the council wants me to hunt Geth...I&#x27;ll hunt Geth. Now and then. What I&#x27;ll really be doing, is looking for further evidence and clues on the reapers. We have no idea when they will arrive, but I don&#x27;t doubt for a second that eventually, they will. We may have stopped their plan A, but we can be damn sure they have a plan B. We need to convince either the council or the individual governments, or the galaxy will not be ready. Ashley, you&#x27;re still posted under my command. Wrex, as he said, will be leaving. Liara, your expertise would be missed sorely, so...&quot;</p>
+        <p>Liara smiled. &quot;Don&#x27;t worry, Shepard. I will continue this mission with you.&quot;</p>
+        <p>&quot;Thank you, Liara. Couldn&#x27;t do it without you.&quot;</p>
+        <p>Jane hadn&#x27;t even finished turning her head to Garrus when the Turian already preempted her question. &quot;Don&#x27;t even ask. I&#x27;m with you, of course.&quot;</p>
+        <p>Jane laughed. &quot;I wanted to at least keep up the pretense. I&#x27;ve heard relationships deteriorate when you start taking them for granted...&quot; The two guffawed as Garrus punched Shepard&#x27;s shoulder. All eyes came to rest on Tali, who&#x27;s thoughts raced.</p>
+        <p>The reapers are the biggest threat my people ever faced...bigger than the Geth, even...and if the council is not listening...this is more important than whatever I&#x27;d be doing maintaining any ship I might choose, or anything the admirals could ever want from me...this IS my duty...I can stay. I can do what I want and do my duty at the same time for once...</p>
+        <p>&quot;Tali?&quot;</p>
+        <p>&quot;Wh-what?&quot;</p>
+        <p>&quot;I was asking if you knew where the fleet is, so we can drop you off...&quot; Jane looked decidedly uncomfortable. Keelah, she would actually bring me home herself.</p>
+        <p>&quot;No, Jane. I will stay with you. This is bigger than anything I could be doing on the fleet. My duty to my people lies here now, regardless of what my father might think about it. I can get the data to the fleet and be declared an adult in absence...it&#x27;s rare to take an alien vessel as one&#x27;s ship, but I could have myself officially assigned to the Normandy...if you&#x27;d have me...&quot;</p>
+        <p>Jane laughed. She had been grinning widely from the second Tali had said &#x27;I will stay&#x27;. &quot;Are you seriously asking me that?&quot;</p>
+        <p>Now Tali had to giggle herself. &quot;No. And I&#x27;m happy to be staying. I would&#x27;ve missed you terribly. All of you, of course!&quot; She quickly added that last part after realizing what she had just said. Jane seemed to have a sudden pang of pain in her injured leg as she quickly looked down. Joker looked like he was about to explode with laughter, but somehow the death glare Tali gave him managed to shut him up despite her mask being in the way. To her right, she could hear Ashley chuckle. Before she could level a glare at her too, Jane cleared her throat.</p>
+        <p>&quot;Tali, I wouldn&#x27;t have asked for it, but I&#x27;m damn happy you&#x27;re sticking around. It, uh, it just wouldn&#x27;t be the same without you.&quot;, she ended somewhat lamely. The group broke up into smaller chats; Shepard and Wrex discussed something regarding Tuchankan politics, Garrus, Joker and Liara talked about who knew what, and Tali found herself beset by Ashley again. &quot;Jane, hmm?&quot;</p>
+        <p>Tali couldn&#x27;t stop herself from wringing her hands. &quot;I, uh...she, uh, asked me to stop calling her Shepard when we spent the night in the hospital...&quot;</p>
+        <p>The human lifted an eyebrow and smirked. &quot;You did what?&quot;</p>
+        <p>&quot;After the battle. You and Liara could not be visited, so she came to me. But I was asleep, so she sat down at my bed and fell asleep, too...I woke up from her snoring in the middle of the night.&quot;</p>
+        <p>They both laughed. &quot;See, your big sister knows best. You really are as dense as Shepard is. But we&#x27;ll get this thing going, trust me.&quot; Tali wasn&#x27;t sure if she trusted Ashley with this, but she was curious. Could it really be true? Jane said she was happy Tali was staying, but she said that to the others, too. And she wouldn&#x27;t have asked Tali, she did ask Liara...but she knew how important Tali&#x27;s people were to her, so that might just mean...</p>
+        <p>&quot;Hey! Earth to Tali!&quot;</p>
+        <p>&quot;Hmm?&quot;</p>
+        <p>&quot;You&#x27;re overthinking this. Just...damn, you can&#x27;t ask her to dance, not with the leg. Not that she could dance to save her life even when if didn&#x27;t have a broken one, but still...oh well. Just talk to her. Women are stupid, so don&#x27;t be subtle.&quot;</p>
+        <p>Tali wrung her hands. &quot;I...don&#x27;t know how to drop hints.&quot;</p>
+        <p>&quot;Well how do you do it on the flotilla?&quot;</p>
+        <p>&quot;I don&#x27;t know...&quot;</p>
+        <p>Ashley furrowed her brow. &quot;Yeah, should&#x27;ve seen that coming. We taöled about that after all...and you&#x27;re not the type to be experienced with men anyway...&quot; If she even noticed Tali&#x27;s offended gasp, she decided to ignore it completely. &quot;Well, there&#x27;s always one way to get it done...we gotta get you drunk.&quot;</p>
+        <p>&quot;Ashley, I don&#x27;t think- &quot;</p>
+        <p>&quot;Shut up and do as you&#x27;re told. You and the skipper fit each other like a glove, I will drag you there kicking and screaming if I have to. There she comes, by the way.&quot;</p>
+        <p>Before Tali could protest any further, Ashley had already gotten up and made her way towards the bar, leaving her seat for Jane to clumsily lower herself into. Tali shot out of her seat to help Jane, ignoring her weak protests. &quot;Are you sure it is good for you to walk around so much already?&quot;</p>
+        <p>She snorted. &quot;It&#x27;s fine. Hurts a little, but Chakwas says it&#x27;s okay for me to move short distances.&quot;</p>
+        <p>&quot;You spoke with Chakwas?&quot;</p>
+        <p>&quot;Yes, I visited the Normandy this morning. The crew is fine Pressly and all the others who aren&#x27;t here now are already on their way to their homes. Hackett has made sure they won&#x27;t be facing any charges for stealing the Normandy. Saving the day has some perks, after all.&quot; She straightened herself and looked at Tali. &quot;So, you&#x27;re staying with us. I know I&#x27;ve said it already, but I&#x27;m damn glad. But how exactly is this going to work?&quot;</p>
+        <p>&quot;Well, you see, usually, a pilgrim returns home and presents their present to the captain of their chosen ship, and if they accept, they are formally added to that ship&#x27;s crew, becoming vas whatever. With an alien ship...I know it is possible, there are laws regulating this, but I actually don&#x27;t know exactly. I&#x27;ll have to ask auntie Raan...&quot;</p>
+        <p>She furrowed her brow. &quot;Not your father?&quot;</p>
+        <p>Tali grabbed the edge of the table to keep her hands from wringing as the mere thought of defying her father was threatening to compel them to. &quot;No. My father will be livid when he hears about this. He won&#x27;t understand it. He will think that I&#x27;m being selfish, and childish, and that I am choosing what I enjoy over the good of the fleet. I...I&#x27;d rather not face him if I can avoid it.&quot;</p>
+        <p>&quot;Hmm. What if we tried to explain it to him? The admiralty board in general?&quot;</p>
+        <p>She hadn&#x27;t even thought about that possibility, but now that Jane had said it...</p>
+        <p>&quot;That might actually not be the worst idea...&quot;</p>
+        <p>Jane got excited. &quot;It&#x27;s a great idea! Your people will know that Sovereign was not a Geth ship. The other races won&#x27;t give a damn about what the Quarians think, but one species made aware of the threat is better than none...and you can deliver your data personally.&quot;</p>
+        <p>She finally gave in and wrung her fingers at least a little. &quot;I&#x27;m not entirely...comfortable with his, I&#x27;m nervous about facing my father in person. But you&#x27;re right. If there is a chance that we might convince my people about the reapers, we have to try. And you as my chosen Captain showing up personally might actually help to smooth the waters...&quot;</p>
+        <p>Jane leaned over and put a hand on Tali&#x27;s shoulder. &quot;Don&#x27;t worry. It&#x27;ll be fine.&quot;</p>
+        <p>&quot;What will be fine?&quot; Ashley asked, sitting down next to them, the next round in her hands, and this time there was a drink for Tali, too.</p>
+        <p>&quot;We&#x27;ll be visiting the Migrant Fleet to explain the reapers to them and get Tali&#x27;s legal affairs in order.&quot;</p>
+        <p>She grinned. &quot;Sounds like a plan, Skipper. But this isn&#x27;t the time for plans. This is the time for drinks! Here, Tali. You&#x27;re not getting away this time. Triple-filtered turian brandy.&quot;</p>
+        <p>Tali shrugged. &quot;Oh well, I guess I have no choice. Let me get out my emergency induction port...&quot;</p>
+        <p>Some hours and drinks later, Tali was properly wasted. The young woman had rarely tried alcohol before, and had never been properly drunk; so this feeling was a new experience for her. And she actually kind of liked it.</p>
+        <p>&quot;Shepuurd! Wrrex!&quot; She barged in on their conversation, attempting to lay their arms around both of them, failing miserably. Jane gave Ashley a disapproving look. &quot;Jesus Ashley, how much did you give her!?&quot;</p>
+        <p>&quot;Just the first one! She did the rest of that on her own!&quot;</p>
+        <p>&quot;Exactly! Don&#x27;t give her that look, Jane! Burp Keelah...I didn&#x27;t drink that much, only three of the brandys...or four...? And two of those funny yellow ones...&quot; Swaying left to right, she got lost in deep thought over this difficult question.</p>
+        <p>Wrex laughed. &quot;Doesn&#x27;t matter how much you had, it&#x27;s been enough.&quot;</p>
+        <p>She poked a finger in his snout and pouted. &quot;Don&#x27;t ruin my fun! I like this! I...I want to go dancing!&quot;</p>
+        <p>The old Krogan gave her a skeptic look. &quot;You wanna dance? You can&#x27;t even stand.&quot;</p>
+        <p>She had already forgotten about the dancing however, realizing instead that this was going to be their last evening with Wrex. She latched onto him and buried her head in his armor&#x27;s large collar. &quot;I will miss you, Wrex...&quot;</p>
+        <p>&quot;Yeah...you said that already...&quot; The old man replied slightly awkardly. &quot;Come on pup, don&#x27;t be so sappy- &quot;</p>
+        <p>She shot up and angrily looked him in the eye. &quot;Sappy!? I tell you how much I will miss you and you say I&#x27;m sappy? You old bosh&#x27;tet!&quot; She was about to rant on when she felt a hand on her shoulder.</p>
+        <p>&quot;Alright, I think it might be time to get you to bed...&quot;</p>
+        <p>&quot;What!? No! I&#x27;m fine, I -&quot;</p>
+        <p>Jane leaned heavily on her cane. &quot;Tali, I need your help. I&#x27;m so tired. I want to go back to the Normandy and go to sleep. But I have trouble moving around. Will you help me?&quot;</p>
+        <p>&quot;B-but of course! Come Jane, I&#x27;ll take you home. Goodbye, Wrex. I&#x27;ll see the rest of you tomorrow!&quot; Helping Jane towards the door, she wondered what they were all chuckling about. After managing to make it down the stairs with some difficulty on the side of Jane, they slowly made their way towards the public transport that was finally going again.</p>
+        <p>&quot;You know Jjjjane, I&#x27;ve noticed your... hair is...longer than usual..&quot;</p>
+        <p>&quot;It&#x27;s called growing it out, Tali.&quot;</p>
+        <p>&quot;Growing it out. Ah...So your hair, it&#x27;s sooo loong. What ...happened?&quot;</p>
+        <p>&quot;I let it grew out...&quot;</p>
+        <p>&quot;Oh, that makes sense...&quot;</p>
+        <p>&quot;You like it?&quot;</p>
+        <p>&quot;Nah, makes you look chubby...&quot;</p>
+        <p>&quot;What? I don&#x27;t look...I&#x27;ll have to ask Hannah...or Ashley...&quot;</p>
+        <p>&quot;Let me... have... a closer look.&quot; Suddenly, her hands were in Janes hair, poking and prodding and pulling at the strands. She giggled. &quot;It seems...fluffy. I wonder what it f-&quot; Her eyes went wide. &quot;W-we should get back to the ship...&quot; As well as she was able to in her inebriated state, Tali sped up her gait, dragging the limping human with her.</p>
+        <p>Later that night, after Shepard had ushered her onto Tali&#x27;s cot, Tali decided she should probably still send her aunt a message ahead so they wouldn&#x27;t be so surprised when an alliance frigate suddenly showed up at the fleet to bring a pilgrim home, just to take her away again. So she hit the recorder on her omnitool.</p>
+        <p>&quot;Hey, auntie...I&#x27;m coming home. I&#x27;ve got a really good pilgrimage gift. Dad will like it. Maybe he will say something nice...hmm...no. He won&#x27;t, because he won&#x27;t like that I&#x27;m not staying...oh, yes. I&#x27;m staying on the Normandy. I want to be vas Normandy. Shepard said she&#x27;d take me...she&#x27;s not a Captain by Alliance rankings, she&#x27;s a Commander, but she is the commanding officer of the Normandy, so she is a Captain. The Alliance is just silly... Auntie, we will be coming to the fleet to bring my gift and get all the ...adult...things...going. And we need to speak to the board...yes...you see, Sovereign was not a Geth ship. The council won&#x27;t listen, but we know better. Right? Oh yeah, Sovereign...you probably heard about the attack on the Citadel. We stopped it. We killed Saren. But Saren was just a puppet...of Sovereign...you know...? Keelah...I...&quot; she yawned. &quot;I&#x27;ll...call you, auntie. Explain later...&quot; She sent the voicemail and was out less than ten seconds later.</p>
+        <p>Shaala&#x27;Raan let her arm drop onto her desk, baffled by what she had just heard. On one hand, she was relieved – when Tali had sent word that she was serving in the entourage of a Spectre to fight the Geth, she had been worried sick. On the other hand, her niece in everything but blood had just told her that she intended to choose an alien for her captain and...leave the fleet behind, for all intents and purposes. That was so unlike her. Tali was as dutiful and selfless as any Quarian – even more so, most of the time. She had been dedicated to the community from the day she was old enough to have her first suit, going out of her way to tinker around the Rayya and help out even when she had not been assigned for it. That she should suddenly decide to abandon it all...and for what?</p>
+        <p>She was drunk, obviously. Probably for the first time. She and this Spectre and the rest of their group probably went out celebrating their victory, and so she got drunk and carried away...</p>
+        <p>But then the mention of this Sovereign...Shala had seen pictures and vids from the battle, showing among other things the gigantic super-dreadnought that had led the assault. The sight of alliance warships, known to be sturdy and well maintained, being obliterated in a single shot of that thing&#x27;s main gun had chilled her to the core. She had never been very tech-savvy for a Quarian, so she could not claim to be any sort of expert on Geth technology, but even she could see that that thing was definitely not Geth. And this thing had allied itself with them? And what had she meant with the traitorous Spectre Arterius being a puppet? What if there were more of them? Perhaps there was more to this than a simple case of a young girl getting ahead of herself. Perhaps , certainly even, Tali knew something she did not, and which had convinced her that her duty to the fleet lay, at least for now, with this human. Commander Shepard.</p>
+        <p>She sighed and rested her head in her hands. This entire situation was troublesome enough on it&#x27;s own, but the thought of how Rael would react to his daughter deciding to not return to the flotilla...keelah.</p>
+        <p>Hey people! So, that is ME1!</p>
+        <p>I&#x27;d like thank everyone who left a kudos or comment or simply followed the story! Writing is fun and all, but it feels weird when you think that nobody is actually reading it - fortunately, I don&#x27;t have that problem thanks to you folks.</p>
+        <p>Now, ME1 might be over, but the story will go on in the same 1 week intervalls without interruption - aka, next Sunday! And no, it&#x27;s not time to get zapped by the bugs yet. Shep and company will have to tackle something else first...</p>
+    </div>
+</body>
+</html>

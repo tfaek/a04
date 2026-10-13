@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 35</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch34.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html" selected>Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch36.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 35</h1>
+    <div class="chapter-content">
+        <p>Garrus checked his gun for the eleventh time and cast a glance over to Wu, the pilot. Not that he had any concern about the man, but there wasn&#x27;t anything to look at either. Both men were tense; rarely a word had been spoken since the Normandy had dropped them off behind the moon four hours ago.</p>
+        <p>Tali&#x27;s message had set the gears in motion. The plan had been formulated within minutes: The Normandy would take the risk to drop him off behind the moon, after all the pirates had no way of knowing where she was. The risk that they would suddenly get tired of life and attempt a landing was exceedingly low. Once Lawson reached the system with her own stealth ship, she would be instructed to meet up with the shuttle to, in the moon&#x27;s cover, safely take him aboard. Then they would make for the planet&#x27;s surface undetected, land at a safe distance, and attack at the crack of dawn. The planet&#x27;s night lasted for twenty-six hours, making this timetable possible, if pretty tight, as long as Lawson did not run into any delays picking up her corsair reinforcements.</p>
+        <p>And then they&#x27;d just have to rely on Tali to get Shepard out. Garrus&#x27;s plates itched; he could feel this atypical anxiety that had gripped him in his entire body. Again he cursed that it wasn&#x27;t himself down there right now. He respected the girl, he truly did. But this was a damn tall order for anyone – he&#x27;d rather seen it in the hands of someone who had done this kind of thing before.</p>
+        <p>It&#x27;s no use. Focus.</p>
+        <p>Half a silent hour and several checks of the gun later, the radio came to life.</p>
+        <p>&quot;Sierra , you reading?&quot;</p>
+        <p>Wu flicked a switch on his virtual display.</p>
+        <p>&quot;Loud and clear, Normandy.&quot;</p>
+        <p>&quot;Good. Your rendezvous is in system, they&#x27;re informed and will contact you shortly. Callsign is Weasel. Copy?&quot;</p>
+        <p>&quot;Copy.&quot;</p>
+        <p>&quot;Over and out.&quot;</p>
+        <p>Wu turned around in his seat and nodded at Garrus, his features harsh. &quot; Good luck.&quot;</p>
+        <p>Garrus got up, his body yearning for some sort of movement to release at least a little of the tension that was making him want to tear something apart with his claws. &quot;I don&#x27;t need luck.&quot;</p>
+        <p>The human just raised his eyebrows and turned around, probably too experienced with men about to jump into the fire to get irritated by the needlessly abrasive answer, and it was silent again until they were contacted by the Weasel. Garrus paid little attention, focusing on his suit again. It&#x27;s systems had obviously long since informed him that it was airtight, but when you were about to step into open space, this was one of the things most people preferred to check manually. Wu closed off the passenger compartment from the cockpit in the same moment the Turian put on his rarely used helmet. The man&#x27;s voice blared from his comm, slightly distorted.</p>
+        <p>&quot;Pulling up to their airlock now. You ready?&quot;</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>&quot;Good. Pumping the passenger compartment empty, then.&quot;</p>
+        <p>Garrus grimaced as the air was quickly vented from the passenger compartment, not keen on what was coming next. After a few moments, the side door slid open and revealed the blackness of space, broken by a myriad of little lights – and the shape of the Weasel, helpfully lit up by one of the shuttles searchlights. Activating his magboots, which was earlier than needed since the artificial gravity of the shuttle remained in place regardless of whether there was air or not, he stepped to the edge before bending his knees and jumping, eager to get it over with.</p>
+        <p>Garrus had done things like this before, and just like then the eerie feeling of sailing haplessly through the endless vacuum threatened to turn his gut. Fortunately, it only lasted for a couple of seconds before, with an assuring Clonk! , his magboots found purchase on the other vessels surface. He had aimed well and made contact directly next to the opened and waiting airlock. Hastily, he scrambled inside, the bulkhead slamming shut behind him.</p>
+        <p>One venting cycle later, the inner door opened and Garrus found himself looking at the Lawson woman in person for the first time. She was tall for a human woman, and obviously in peak condition, her sleeves filled out by well toned muscle. Then again, that thing was cut skintight, and then some. From what he knew, Garrus figured that the agent was probably considered extremely physically attractive among humans. Insofar the suit&#x27;s emphasis on her &#x27;attributes&#x27; was most definitely a deliberate choice. He made a note to take this person very seriously.</p>
+        <p>&quot;Vakarian..&quot; She nodded at him, her arms crossed in front of her chest and a serious look on her face.</p>
+        <p>&quot;Lawson.&quot; After removing his helmet, he returned the nod and stepped into what had to be the cargo bay, pressing his gun tight against his body for there was absolutely no space. He hadn&#x27;t been able to grasp the Weasel&#x27;s exact outlines with the incomplete lighting outside, but it seemed his estimation of her size had been pretty accurate, and so the roughly to dozen human men were practically sitting on top of each other, their weapons and equipment leaving only a small corridor in the middle of the room. Garrus let his gaze wander over them before turning back around to Lawson. &quot;Looks pretty packed. Good. How many are we now? Twenty something?&quot;</p>
+        <p>&quot;With you and Lawson, twenty nine.&quot; A large, muscular man with dark skin approached from the other side of the room, navigating his way around the multitude of obstacles with some effort. Finally, he stepped up to Garrus and extended a hand.</p>
+        <p>&quot;Jacob Taylor, Alliance corsairs. These are my men.&quot;</p>
+        <p>Garrus shook the hand. &quot;Good to meet you, Taylor. We appreciate the help, believe me.&quot; He motioned over Taylor&#x27;s shoulder with his chin. &quot;Forgive me being blunt, but I haven&#x27;t worked with corsairs before, and what I&#x27;ve heard you&#x27;re not exactly...standardized. I need to know what your men can do.&quot;</p>
+        <p>The Turian could see that his counterpart was a bit taken aback, but the man took it in stride. &quot;With the numbers you&#x27;ve reported, there&#x27;s no way we can beat them in a standup fight. But we&#x27;re more than capable of hitting them hard, and then letting them bleed like stuck pig on the retreat.&quot;</p>
+        <p>Garrus nodded; Taylor didn&#x27;t strike him as a loudmouth, and even if he had, it wasn&#x27;t like he had any choice right now anyway. He took a small step back to form a triangle between him, Taylor and Lawson. &quot;So I take it you&#x27;re familiar with the plan?&quot;</p>
+        <p>&quot;Yes. We&#x27;ll sneak up on them and give them the rudest awakening of their lifetime, so your quarian friend will know it&#x27;s time. Then we fall back slowly, pick them up and get the hell out of here. Simple and straightforward, just like plans should be.&quot;</p>
+        <p>&quot;There&#x27;s something missing though,&quot; Lawson spoke up. &quot;We should send someone out to look for Shepard and Zorah and get them out. Preferably at a safe distance. Shepard will certainly have been stripped of her armor, and I don&#x27;t want this entire operation to fail from a stray bullet.&quot;</p>
+        <p>Garrus nodded; he had been about to propose much the same. &quot;Agreed. I&#x27;ll take care of it.&quot;</p>
+        <p>&quot;I&#x27;ll go with you.&quot; Her tone and face made clear that the AIS agent would not be deterred even if he had been in the mood to decline the offer, but he wasn&#x27;t. Two was a good number for this kind of job, and if he had assessed Lawson correctly she would be a good partner. The Turian checked his visor&#x27;s HUD. &quot;Three and a half hours left until sunrise...it will be tight.&quot;</p>
+        <p>Lawson smirked, the first hint of mirth Garrus had seen from the woman. &quot;Not as tight as you might think. The Weasel can do more than just avoid scanners – she can be very silent. Silent enough to put us down just five kilometers next to the target and not realistically risk being noticed. Only at night, obviously.&quot;</p>
+        <p>An impressed Garrus flared his mandibles. &quot;Convenient.&quot; He turned to Taylor. &quot;Everything is decided then. Let&#x27;s give them hell!&quot;</p>
+        <p>Jane couldn&#x27;t have said how many hours had passed since the Salarian had been there to taunt her, only that if she had to guess, she&#x27;d have said that it had been less then a day – an earth day, that was. On this world, that probably meant that the sun had not yet risen. After the alien had left, Jane had spent some time thinking about who he may actually be working for; but she she couldn&#x27;t find an answer that convinced her and ultimately, it did not matter. And so she had eventually drifted off into a light sleep which she had just woken up from, her neck stiff and hurting from the weight of her head having hung freely for what, to a woman as experienced with episodic sleeping as Shepard, felt like at least two or three hours, if not more.</p>
+        <p>There was commotion in the hallway outside her door. Had this woken her up? Then she made out the sound of gunfire over the fading steps and shouting outside, and any residual sleepiness immediately evaporated.</p>
+        <p>These maniacs are trying to rescue me!</p>
+        <p>From the sound of it, there seemed to be a sizable and furious firefight going on outside. Her frustration with her situation boiled over again, and she angrily – and futilely – pulled at her restraints.</p>
+        <p>The lights went on and the door swung open. A Batarian Blue Sun barged in , his submachinegun pointed squarely at Shepard&#x27;s chest with one hand. &quot;Sounds like your friends are here to get themselves killed, animal.&quot; The ugly creature grinned, baring it&#x27;s sharp teeth. &quot;Don&#x27;t even think about trying anything.. Behind him, the door fell back into it&#x27;s lock.</p>
+        <p>Jane spat at the alien&#x27;s feet, earning herself a savage backhanded strike in return. Then, several things happened at once. The lights went out, the mercenary&#x27;s gun started venting, and a dark shadow dropped from the ceiling. The Batarian&#x27;s eyes were not adjusted to the darkness yet, and so his immediate swing at the noise behind his back missed the nimbly dodging form of his attacker by a wide margin. The blink of an eye later, the sound of metal hitting metal rang out as the backpedaling mercenary stretched backwards just in time for his armored collar to save him from having his throat slit. There was some steps of distance between the combatants now, and so he reached for his pistol; only to have it blown from his grip by a powerful kick immediately.</p>
+        <p>Is that...?</p>
+        <p>The mercenary growled and lunged forward, trying to get a hold of the attacker with a wild bear hug. All he got for his troubles was a kick to the liver as the shadow he was fighting elegantly turned out of the way, giving off a grunt of exertion that was accompanied by a small blue light flaring up at head height. The sliver of light coming from the door reflected off the surface of a face mask, and with that last piece of the puzzle Jane finally realized who she was looking at.</p>
+        <p>The Batarian stumbled and had to catch himself on his right hand; when he swung around to deliver a punch with his left, it was blocked by an elbow just as Tali&#x27;s knife slipped into his skulls through the bottom of his lower jaw. The mercenary twitched, and so did the Quarians knife hand, pulling the weapon back out and splashing a sprinkle of blood across the room. The man clutched his throat and sunk to the ground; four times he tried to breath, an ugly, wet sound, then he lay still. The Batarian&#x27;s killer payed his death throes no heed; she had come to stand in front of Jane instead, her chest rising and falling quickly as she panted. Shepard looked up at her with a mix of relief, bafflement and awe. With her eyes having recovered from the blinding they had taken when the mercenary had entered the room, Shepard could now see that Tali wasn&#x27;t wearing her realk.</p>
+        <p>That&#x27;s why I couldn&#x27;t immediately recognize her.</p>
+        <p>Tali was still breathing heavily, looking at her wide eyed. Despite the situation, Jane couldn&#x27;t help but grin. The next second she pushed Jane back against the shelves as she enveloped her in a crushing hug.</p>
+    </div>
+</body>
+</html>

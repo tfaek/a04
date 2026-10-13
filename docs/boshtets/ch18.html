@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 18</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch17.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html" selected>Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch19.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 18</h1>
+    <div class="chapter-content">
+        <p>Loud voices echoed through the run down corridor as the group approached the little hall where the ExoGeni survivors were holed up. After listening for a couple of seconds, Jane recognized them as Lizbeth&#x27;s mother and that slimy little jerk Jeong. Lizbeth herself , who had been properly contrite and cooperative, but not too helpful, had apparently caught on quicker, because she took off without warning, running towards the commotion. Shepard cursed under her breath and sped up herself.</p>
+        <p>As they entered the room, a jarring scene presented itself. Some of the guards had the scientists standing tightly together at the far wall, while most of them just stood around visibly indecisive. In the center was Baynham, half sprawled, half sitting on the ground she had apparently made close and surprising acquaintance with just a moment prior, Jeong standing over her with a pistol in his hand that was probably the source of the big bruise on Juliana&#x27;s cheek. He whirled around when Lizbeth entered the room with a cry, running straight past two startled guards who now scrambled to react to the new arrivals, quite obviously unsure of wether or not they were supposed to raise their weapons. Willing to give them the benefit of the doubt and intent on avoiding any unnecessary bloodshed, Shepard spared them a glance that expressed clear as day just what she thought of that idea, and they caught the hint. Relaxing a bit, Jane took a couple of steps further into the room. With quiet satisfaction, she noticed in the corner of her eye and by the movement she could hear behind her that her team was already spreading out. Garrus was in the Mako, but if push came to shove, the four of them would manage. She did not expect it, though. These rent-a-cops were not going to throw their lives away for Jeong, especially not after what they were about to hear.</p>
+        <p>&quot;Drop that gun, Jeong. I know everything. How you consciously exposed the colonists to the Thorian, what the Thorian is, it&#x27;s goddamn mind control, even your dirty business with Cerberus. Your entire company is fucked, Jeong, and as the man in charge here, so are you.&quot; She made a pause to let the words have their effect on the room, but while she could see the guards look at each other horrified and the guns of those who had been watching the civilians drop out of their hands and into their slings, as well as Jeong&#x27;s face go pale as expected, there was apparently more fight in the little weasel than Shepard had anticipated.</p>
+        <p>&quot;D-damn you, Shepard! I knew it was too much to hope for the Geth to get rid of you. I told you not to stick your nose into matters that are none of your business! This planet is under corporate jurisdiction!&quot; He paced around frantically. &quot;The...the company won&#x27;t have this. We reestablished contact. All proof is to be...&quot; , he shot a quick glance towards the scientists herded together in the back of the room, &quot;..terminated.&quot;</p>
+        <p>Jane couldn&#x27;t believe what she was hearing - not the content of it, but the fact that this guy was actually telling her this. &quot;You fucking idiot. You just confessed to conspiracy to murder in front of a council Spectre.&quot; Jeong flinched. &quot;You&#x27;re just digging your grave deeper and deeper, Jeong. It doesn&#x27;t matter anymore what ExoGeni wants. As it stands, I am the law on this planet. These guards won&#x27;t lift a finger for you, let alone die for you. Which is all they would achieve anyway.&quot; It couldn&#x27;t hurt to make the balance of power crystal clear for anyone slow on the uptake.</p>
+        <p>Which Jeong apparently was. &quot;We&#x27;ll see. Gotta do everything yourself...&quot; he muttered, and started to raise his pistol. A moment later, it fell from his hand as a single shot made most of the unprotected people in the room jump with it&#x27;s, in this confined place, deafening noise. Jeong fell to the ground, screaming and holding his injured shoulder. A good shot, she decided. A good measure of force.</p>
+        <p>She turned to one of the guards and began to bark orders. &quot;Get some medigel on this fool and tie him up. If he dies or get&#x27;s lost, you&#x27;ll answer to me.&quot; She turned to another one. &quot;The rest of you, set up a fucking perimeter! We just walked in on you and you didn&#x27;t notice us until we were already on top of you, and we weren&#x27;t even trying to sneak up on you! If we had been Geth, you&#x27;d be dead now! Get your heads outta your asses, for christ&#x27;s sake!&quot; Half a dozen pairs of confused and terrified eyes looked back at her. &quot;NOW!&quot;</p>
+        <p>She allowed herself an amused snort as they finally got moving and scrambled to do as they had been told. Wiping the smirk off her face, she walked over to the Baynhams, Lizbeth helping her mother up. &quot;Now to you.&quot; The two women looked back at her cautiously, and so did the rest of the civilians further back. &quot;I know that not all of you knew, and that of those who knew, not all were happy with what was being done here. But you were still a part of it, and that means it is your responsibility.&quot; Juliana nodded, but brought up her hands; wether she was trying to calm Shepard or herself was anyones guess. &quot;Wait a moment, please. What is this...Thorian, and what do you mean they exposed the colonists to it?&quot;</p>
+        <p>Her daughter sighed. &quot;The Thorian is an ancient, plant - based life form ExoGeni discovered in the depths underneath Zue&#x27;s Hope. The problem is that it emits spores that...can parasitically invade the nervous systems of other life forms. We first noticed it in local animals, so naturally we wondered if it could affect intelligent life as well. So we ran tests on the colonists, disguised as a routine medical checkup...and we found that the spores had already taken hold. In all of them.&quot; Seeing the shocked expression on her mother&#x27;s face, the young woman looked to the ground, taking a deep breath. &quot;The company decided to just wait and see what would happen. I complained, but...they didn&#x27;t listen. I...&quot; , she gritted her teeth. &quot;...I didn&#x27;t have the courage to do more.&quot;</p>
+        <p>Juliana turned around, looking at one of the other scientists in the room, a middle aged woman with dark skin. &quot; Deacons! You...I cannot believe this! I recommended your department to my daughter so that she would learn from you, not so that you could play Mengele together! This...&quot;</p>
+        <p>Christina clearly wasn&#x27;t willing to be lambasted. &quot;Don&#x27;t be so dramatic. I know that we...made a mistake, but we do not know how far this control even extends in sapients, and we still have time to-&quot;</p>
+        <p>&quot;No we don&#x27;t.&quot; ,Shepard interrupted her, &quot; And I know pretty damn well how far that control goes. Right now, the Thorian has the entire colony banging and clawing at my ship&#x27;s hull. They tried to kill my soldiers.&quot; Baynham covered her hand with her mouth, a shocked gasp escaping her, and similar sounds could be heard from Christina and the others. Shepard stepped in closer, towering over Christina now. &quot;So you better tell me now that you have some contingency plan to undo this, or I will put in a very, very bad word for all of you with the judge.&quot;</p>
+        <p>It took her a few seconds to respond, clearly struggling for words, and for her composure. Looks like this one has a heart, after all. Would&#x27;ve been better if she remembered that a little earlier, though. &quot;Dr. Deacons, if you can&#x27;t give me something, we&#x27;re looking at a bloodbath. There are kids in that colony. Kids!&quot; She just continued to nod as tears finally welled in her eyes.</p>
+        <p>&quot;M-my god, we never...we didn&#x27;t want this! They...you saw what Jeong was like! The company is ruthless, and they don&#x27;t take lightly to leaks - &quot;</p>
+        <p>&quot;I don&#x27;t care about your sob story! You are not the victim here. Now, since evidently not a single one of you possesses a spine, show me that you at least have brains. Give. Me. Something. Now.&quot;</p>
+        <p>Deacons nodded, straightening her back and managing to hold Shepard&#x27;s stare as she regained her composure. &quot;Yes, yes, we...it wasn&#x27;t really designed as a contingency for this problem, but my department has also been working at...non – lethal chemical weaponry. Our current project is a paralyzing nerve agent. The effects are temporary, and it leaves no lasting effects...at least we haven&#x27;t observed any yet... we...only tested it on Varren so far. It&#x27;s mostly intended for police forces, crowd control and the like, you understand...&quot; she trailed off for a moment. &quot;When we fled, we took some of our stock with us. It was the department&#x27;s main project after all...if we could find a way to deploy it...&quot; She shrugged her shoulders.</p>
+        <p>Shepard, who had taken off her helmet during the talking, rubbed her chin. &quot;Hm...could we maybe fix a detonator to your stockpile and try to blanket the whole settlement with it? We could get it into position with biotics...&quot;</p>
+        <p>Deacons shifted her weight. &quot;I do not think we have enough of the agent for that. We will have to find a way to apply it more precisely.&quot;</p>
+        <p>Silence fell, but only for a couple of seconds until Shepard found Tali stepping up next to her. &quot;Shepard. Our grenades have easily removable mantles. Depending on how they are storing this gas, I think I could turn down the detonator&#x27;s power enough so that it just opens the vials, or canisters or whatever, instead of turning them into shrapnel. So basically, I could rig us makeshift gas grenades.&quot;</p>
+        <p>Shepard gave her a thankful nod and they both looked back towards the scientist in front of them, who was now nodding enthuiastically. &quot;Yes...yes! We store the agent in plastic canisters. The danger for the colonists should be minimal. And the method is precise enough that you might actually manage to get them all!&quot; She looked back at them with visible confidence. &quot;This is the way.&quot;</p>
+        <p>Jane turned towards Tali and pulled her two grenades from their pouches at her hip. &quot;Looks like my favorite Quarian saves the day again.&quot; She grinned and handed them to her, before turning and making her way towards Wrex. &quot;Wrex, please get the rest of the grenades from the Mako. We&#x27;re going to do this nice and clean.&quot;</p>
+        <p>One hour later, Jane leaned on the weathered stone of the Zue&#x27;s Hope spire and peeked through a gap in the wall, trying to get a good look at the settlement. Her team was assembled behind her, keeping watch in every direction - but she expected no more contacts until they actually moved into the colony. There had been two guards as well as roughly a dozen nightmarish creatures – plant-like humanoids with empty eye sockets and long claws instead of fingers, &#x27; Creepers&#x27; , Garrus had named them – up at the skyway entrance, but they had cut through these, presumably thorian in origin, monsters, and then silenced the two wildly, and rather poorly aimed, firing men with a well placed gas grenade.</p>
+        <p>Ever since then, for the entirety of their slow and cautious approach down the stairs towards the settlement, there had been nothing but silence. Shepard had no way of truly knowing just how intelligent this Thorian was, but from what she had seen, she suspected that it was quite smart indeed. The resistance at the skyway had clearly just been a lookout post; the Creepers had most likely been intended to try and get an idea of what they were capable of. If this was true, the real resistance probably awaited them the exact second they stepped through the archway at Zue&#x27;s Hope&#x27;s level of the stairs – there was no better position. If she were in the Thorians position, Jane reasoned, she&#x27;d have the majority of her forces waiting there with their guns aimed right at the exit, ready to fire away, and probably an entire horde of these Creepers standing by to prevent them from breaking out of the killzone.</p>
+        <p>Her ruminations proved correct. From her elevated position, she was able to make out half a dozen colonists occupying the exact same positions they had held against the Geth earlier – but now, their robotic demeanor was even more pronounced, barely a muscle twitching as they stood stock still, guns indeed aimed at the stairs. These people would have some serious soreness when they came to...she frowned. Some pain was going to be the least of everyone&#x27;s worries if she didn&#x27;t find a way to do this cleanly. They couldn&#x27;t just force their way through the door; they would face too much fire at once. Between their strong shields and perhaps a barrier from Liara, they might be able to get a grenade into every significant position before their protection collapsed; but it wouldn&#x27;t be enough. That way, they would be left with nothing but their armor to protect them from the fire of any colonist who might be left standing and who, since they couldn&#x27;t afford to use grenades on a single person, would have to be taken down &#x27;manually&#x27;.</p>
+        <p>And that didn&#x27;t even take the Creepers into account that would no doubt be there, too, even though she couldn&#x27;t see them right now – but that meant nothing. Not only was her field of view from here extremely limited, these things had already proven that they could make themselves quite small and remain unnaturally still.</p>
+        <p>Jane sighed, opening her visor to scratch her itching nose. &quot;Come on people. Let&#x27;s try to find a better position a level down...&quot;</p>
+        <p>They got going and a minute later, she was moving cautiously along the wall again – they were close now, and she had no idea what the auditory capabilities of these &#x27;creepers&#x27; were. Finally, she found another rift in the stone. Keeping a low profile, she crept close to the edge until she could see through the roughly half a meter wide opening. What she found damn near froze the blood in her veins. She was looking in a roughly 90 degrees different direction than she had been from the other hole; this way, she could see what lay to the left of anyone exiting the tower at the point where they too would have to. Hidden behind the corner was not only another gun position held by four mind controlled colonists, but also a solid two dozen – if not more creepers, curled up into a ball the same way they had seen it up at the skyway.</p>
+        <p>Just as I thought...it&#x27;s not stupid. If we try to force our way through that door, the best scenario is being forced to kill some of the civilians. Just as possible that we get torn to pieces. Who knows how many more of them there are.</p>
+        <p>She activated her comm and spoke in a low tone, making sure no sound escaped past the confines of her helmet. &quot;Garrus, get your marksman rifle out and come over here.&quot; Not taking her eyes off the enemy, she waited as the occasional low noise and shuffling announced the closing in of her turian friend. A couple of seconds later, he was at her side.</p>
+        <p>&quot;What&#x27;s the deal, boss?&quot;</p>
+        <p>&quot;Have a look.&quot;</p>
+        <p>Shepard stepped back from the rift, allowing Garrus to see. Evidently, he caught sight of the issue quickly, his mandibles flairing – Shepard had, in the past, expressed her worry about Garrus going without a helmet whenever possible, but the Turian had insisted on doing so as this way, he got the most out of his tactical visor.</p>
+        <p>&quot;I&#x27;ll be damned, this Thorian has layed an ambush.&quot; The Turian looked down, beginning to fiddle with his rifle&#x27;s optic. &quot;I take it you want me to thin their ranks a little?&quot;</p>
+        <p>Jane nodded. &quot;It&#x27;s a good position. Even trained troops would have a hard time silencing you here, and from what we&#x27;ve seen, these mind controlled colonists couldn&#x27;t hit a dreadnought.&quot;</p>
+        <p>&quot;Alright. Say the word when you want me to start.&quot;</p>
+        <p>Jane nodded and began creeping her way back to the others, who had watched her and Garrus&#x27; backs the entire time. &quot;Listen up people. The Thorian has laid an ambush for us – if we go through that archway now, it&#x27;s going to be a tough fight. Creepers and dug in colonists. No way we can manage without shooting back at the civilians. Fortunately, we have a good position to lay waste to these Creepers. That should force the Thorian to pull it&#x27;s forces back into the cover of the buildings.&quot; She sighed. &quot;We will then break out using smoke and make our way to some proper cover ASAP. We&#x27;ll probably get swarmed by Creepers, but as long as we have some decent cover, we should be able to focus on them first and then have all the time in the world to deploy these gas grenades.&quot; She wasn&#x27;t half as calm about this as she was making it look for the others; urban combat was messy at the best of times, and when your goal was to not actually shoot at roughly half of your enemies, it was bound to make it only worse. Their prospects of getting through this day without spilling innocent blood were worsening by the minute.</p>
+        <p>She looked around; Wrex had barely looked over and was already pointing his gun down the stairs again. The old mercenary needed little explaining of anything; and he probably was acutely aware of just how difficult this was about to get. Liara and Tali though were looking at her wide eyed; inwardly, she cringed at the thought of what she was about to put them through. This was an operation of a delicacy that even an N6 team would respect. &quot;Get ready for anything. I won&#x27;t lie to you, this won&#x27;t be easy.&quot; She put one hand on a shoulder of each of them. &quot;But there&#x27;s noone I&#x27;d rather be doing this with. I know you will give it your all, and you will do well.&quot;</p>
+        <p>A final nod, and she gave them a gentle shove, sending them off, back to their positions watching their back, while she and Wrex looked down the stairs, guns at the ready. &quot;Garrus, fire.&quot;</p>
+        <p>After less then a second, the loud report of the turian&#x27;s rifle boomed through the air, and just a moment later, it did so again. The model Shepard had bought for her friend had two independent barrels and ammo blocks, enabling it to shoot particles of substantially different calibre – and substantially different heat generation. This allowed the rifle to keep up a high rate of fire effective against softer targets, as it was doing now – another shot rang out, followed by a cacophony of clattering as the mind controlled colonists began returning fire in Garrus&#x27; general direction - while also having the option of punching through heavy armor and barriers in a single shot when needed.</p>
+        <p>Garrus snarled. &quot;Get ready. They&#x27;re not retreating. They&#x27;re coming in here.&quot;</p>
+        <p>&quot;What!?&quot;</p>
+        <p>&quot;I said they&#x27;re attacking!&quot;</p>
+        <p>A moment later, further talk was cut off by the snarling and moaning of the husk-like Creepers as half a dozen of them brust through the archway at the foot of the stairs in quick succession. Wrex wasted no time, turning one of them into a mess of green goo with his shotgun. Shepard snapped her rifle up and began unloading, firing full auto – against the Creepers, weight of fire was everything, and not only was it hard to miss at this range, even if she did, there were enough of them coming uo behind so that she&#x27;d hit something hostile no matter what. Two down, and then a third one. Already, more of them came pouring into the tower, while the lead one lunged up to steps at a time, only stopping when his head exploded just as he had gotten past about a third of the stairs between the team and the green tide. They&#x27;re closing way too fast.</p>
+        <p>&quot;Tali! Liara! Get over here!&quot;</p>
+        <p>She did not stop to look if they had heard her, and she didn&#x27;t need to as just a moment later, the familiar crack of Tali&#x27;s shotgun went off just to her left, quickly followed by the rapid fire of Liara&#x27;s SMG. The four of them were just standing there now, cover not a concern, blasting away wildly like the heroes in some cheesy action vid – and still, every shot was a hit as more and more of the monsters poured into the room. In the back, Garrus gun went silent. &quot;I&#x27;m overheated!&quot; , the Turian&#x27;s voice blared over the comm. Some seconds later, a blue bur came to a halt at the rightmost corner of Jane&#x27;s vision and became Garrus, assault rifle in hand. &quot;None of them left in my field of fire anyway!&quot;, he shouted, but even at less than a meter distance between them, Shepard heard it purely through her earpiece as the sound of now five guns blazing drowned out everything.</p>
+        <p>Ever since the two women had added their firepower – it could just as well have been ten seconds, or an eternity -, the creepers had made no more headway up the stairs, but now, the abused gun in Jane&#x27;s hands finally, with a pitiful wheeze of hot air, gave in and stopped fring. She unceremoniously dropped it and whipped out the shotgun from the small of her back; as she did so, she noticed that Tali and Liara had already run into the same problem and were now shooting their pistols, their main weapons lying at their feet, cooling down. Even with Garrus here now, their volume of fire had decreased. And the Creepers were closing in, every one that went down in a spray of ichor and torn off body parts having made it one step further, closer to them. Five meters...down. Four and a half- down. She glanced down to her rifle. Seconds to go. The shotgun overheated and she dropped it, pulling out her Spectre Grade hand cannon instead, delivering one headshot after the other, which actually proved more effective than delivering center mass shots with her run of the mill shotgun. She could see Tali shooting her a quick, wide eyed glance as the quarian bent down to pick up her shotgun. The image of what the claws on these monster&#x27;s hands would do to Tali&#x27;s envirosuit flashed through her mind, and she snarled as she killed another one. She glanced down again. Just two seconds more...she holstered the pistol and bent down to retrieve the rifle.</p>
+        <p>We can&#x27;t keep this up. I need to...</p>
+        <p>She began nestling for the grenade at her waist; they had decided to leave three of those as they were, one on her, one on Wrex, and one on Garrus, and now she found herself extraordinarily relieved they had done so. Pulling the pin, she lobbed it over the heads of the creepers who by now had closed to a mere three meters in front of them. A moment later, the entire room was showered in the disgusting green goo that seemed to make up the insides of the creatures. Tali squealed. Wrex laughed.</p>
+        <p>The creepers that had been closer to them kept coming. Suddenly, five of them went down at once; the enormous shell of one of Wrex&#x27;s 20 mm slugs sailing through Shepard&#x27;s view a moment later explaining what had happened. The ones who had been blown up at the foot of the stairs had already been replaced with new ones.</p>
+        <p>How many of these fuckers are there!?</p>
+        <p>Wrex continued to tear rifts through the tide with his slugs and that kept them at the foot of the stairs for another fifteen seconds, but then another large swathe of them burst through the archway. Jane&#x27;s shotgun, which she had in the meantime had to switch back to, overheated again; her rifle was nowhere near cooled down. To her right, she saw Garrus using his pistol, and to her left, Liara and Tali were doing the same. Wrex was cursing at his Claymore which had finally stopped working as well.</p>
+        <p>She crushed the lump that formed in her belly at the thought of what she knew she had to do, and drew her machete. &quot;WREX!&quot;</p>
+        <p>The Krogan snapped his head around to her, grinned the toothy grin of his people, and laughed. &quot;Ha! Show me what you&#x27;re made of, Shepard!&quot; And then he charged down the stairs laughing. Taking a deep breath, Jane followed, paying no heed to the startled looks of the other three. She shot a creeper through the head as she approached. The next one swung his claws at her, but she took them off at the wrist and then shot that one as well. Another cut disposed of a third one. Then there were two at once; she found herself pushed back up the stairs, and one of them got her in the lightly armored inside of her left upper arm, but she eventually killed those too. A quick glance revealed Wrex practically covered in the things, one of them clawing at his leg even as he squashed it under his foot, another one holding on to his armored hump. Jane could just catch a glimpse of one&#x27;s head basically exploding as Wrex used his giant gun as a club before she was beset again. Three of them this time. She shot at one&#x27;s head – and missed. She had banked on hitting, and so the thing was inside her guard immediately, her blade out to the side and her pistol arm swatted aside. Claws scraped against her chestplate, harmless for now. Jane brought back her left, hitting the thing in the skull with the grip of the hand cannon. Dazed as it was, it let up for just long enough for her to sink the machete into the base of it&#x27;s skull.</p>
+        <p>Before she could do anything else, she was knocked to the ground. One of them was on top of her suddenly; she had lost grip of her weapons. Jane caught one clawed hand at the wrist, then another. She felt teeth, or something else sharp, biting into the back of her knee, and failed to suppress a short scream. Gritting her teeth, she headbutted the one sitting on her torso, but that failed to do much; instead, the beast dug it&#x27;s teeth into the thick fabric protecting her neck.</p>
+        <p>The suit was almost impossible to cut in this place, but the pressure alone was enough. Breathing became hard. Jane thrashed in the Creeper&#x27;s grip, but all it did was getting the jaws even better surface area. Her eyesight began to fade, and her limbs felt heavier by the second. She was still frantically trying to decide wether she should let go of the beasts arms to try and wrestle it&#x27;s head away when the point was rendered moot as it simply tore them free of her weakening grip. She punched it, and that finally got it off her neck, but now the clawed hand was coming down on her armpit, she wouldn&#x27;t be able to -</p>
+        <p>Blue light consumed the world, and the pressure on her chest and leg was suddenly gone. Jane tried to rise, but it was hopeless. She was so damn tired. Get yourself togeth,,,</p>
+        <p>The next thing she knew was Tali&#x27;s mask and Liara&#x27;s visibly tired face staring down at hers, muffled sounds quickly becoming louder in her ears. &quot;-pard? Shepard!&quot;</p>
+        <p>&quot;F-fine!&quot; She raised her hands and blinked. &quot;I&#x27;m fine. I think.&quot; She spat blood and found herself noticing that her lip was cut up badly – she had to have bitten it during the fight. &quot;Fuck.&quot;</p>
+        <p>Three fingered hands pushed her back against the wall she was leaning against. &quot;Keelah! You&#x27;re not fine! You&#x27;re -&quot;</p>
+        <p>&quot;I bit my lip, that&#x27;s all. I&#x27;m okay. Really.&quot; Mask or not, Tali, who had crouched down and brought her face directly in front of Shepard&#x27;s, seemed profoundly skeptical as she looked at her, but after a moment she let it go, breaking eye contact and shaking her head. &quot;Bosh&#x27;tet .You scared me.&quot;</p>
+        <p>Jane snorted. &quot;Sorry, maam. Now, are you gonna help me up?&quot;</p>
+        <p>A moment later, she was on her feet again, taking in her surroundings. She was standing at the base of the stairs,the entire room covered in green ichor and the body parts of Creepers. It was silent; neither the shuffling of feet of more Creepers rushing in nor gunfire could be heard. However, she noticed that about a dozen colonists had apparently joined the Creepers in the assault. Wrex stood at the entryway, surveying the area outside.</p>
+        <p>&quot;Looks like we won, but...what the hell happened?&quot;</p>
+        <p>&quot;Biotics.&quot; She turned around to Liara, who was looking at her somewhat sheepishly. &quot;I was about to push them back down the stairs when you and Wrex took off. So I, ahem, waited for an opportunity, but it didn&#x27;t come. You seemed to be having trouble, so I saw no other way, and I...&quot; she trailed off for a moment. &quot;I tried to apply the force around you, but it&#x27;s really difficult when that thing is basically sitting on top of you, so you got pushed around a bit as well. I am sorry.&quot;</p>
+        <p>Jane looked at her dumbfounded before breaking out in laughter. &quot;You&#x27;re sorry? You just saved my dumb arse, Liara.&quot; She shook her head, amazed by her oversight. &quot; Jesus, how didn&#x27;t I think of that ? Could&#x27;ve saved me a lot of trouble. Good job.&quot; She nodded at the Asari, who almost beamed at her for it. Steps could be heard coming down the stairs, and turning towards the sound, she found herself looking at Garrus.</p>
+        <p>&quot;There you are.&quot; She pointed towards the colonists on the floor. &quot;Mind telling me what happened to these?&quot;</p>
+        <p>The Turian shrugged. &quot;I guess your and Wrex&#x27;s fisticuffs convinced the Thorian that we were about to break, but apparently, there aren&#x27;t any Creepers left, or at least not here. So it sent in it&#x27;s new slaves. They came in guns blazing just as Liara had obliterated the Creepers, so all we had to do was pop a gas grenade and it hit them all at once. That probably tought the thing not to bunch them up, and so the ones left outside all retreated.&quot; He flaired his mandibles. &quot;A dozen down, about three more to go, and we still have lots of these grenades. The odds just got a lot better.&quot;</p>
+        <p>Jane nodded and turned around, hissing in pain at the pain in her right knee as she walked over to Wrex and looked out the archway. &quot;Indeed they did. Looks like they&#x27;ve gone to hiding around the buildings. Will be messy, but nothing compared to...this.&quot; She spat blood again. &quot;Fucking hell. I really didn&#x27;t think the Thorian would be so aggressive. Thank god it was though. Imagine if we had tried to force our way through their positions. We&#x27;d be dead.&quot;</p>
+        <p>Jane stared at the pre-fabs in front of them for a while, playing out the possibilities and avenues of attack in her head. &quot;Alright, people. From here on out, it&#x27;s still going to be difficult, but the worst part lies behind is. We will make our way to the Normandy first to pick up Kaidan and Ashley.&quot;</p>
+        <p>She turned around to the three looking at her, while Wrex remained vigilant. &quot;Let&#x27;s go. Anyone got something to add?&quot;</p>
+        <p>She hadn&#x27;t really expected a response, and she certainly hadn&#x27;t expected Tali to step in and grab Shepard&#x27;s arm. &quot;Yes. You&#x27;re bleeding, Shepard.&quot; She looked down and saw the inside of her left arm covered in red. &quot;Oh.&quot;</p>
+        <p>&quot;Sit down. I&#x27;ll take care of it.&quot;</p>
+        <p>She sighed and obliged. &quot;Thanks. I guess we can use a minute of rest anyway.&quot;</p>
+    </div>
+</body>
+</html>

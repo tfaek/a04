@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 53</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch52.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html">Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html" selected>Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch54.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 53</h1>
+    <div class="chapter-content">
+        <p>Jane dropped into her seat with a groan and rested her elbow on the desk, face palmed. Even though she hadn&#x27;t touched a drop of alcohol the day and night before, she felt hungover. A couple of hours of combat could do that to a woman, but ever since her quasi- resurrection, she was something of a special case in that regard - among others. No; instead of the action itself, the weight on her shoulders stemmed from the day&#x27;s implications. And the fact that Horizon had confirmed beyond all doubt that the Collectors were working for the Reapers wasn&#x27;t even what was troubling her most, and neither was the nature of the proof: The abused, misshapen forms of husks and other abominations of formerly human origin that had swelled the Collector&#x27;s ranks. Her real sorrow was what had happened afterwards.</p>
+        <p>Anderson turned and walked a couple of paces away, visibly bristling with anger. &quot;Goddammit, Shepard! Have you lost your mind!?&quot;</p>
+        <p>&quot;Anderson, I-&quot;</p>
+        <p>The older man whirled around. &quot;Do you have any idea what you&#x27;ve done to your car- oh, damn it to hell, you actually do, don&#x27;t you. You just don&#x27;t care.&quot;</p>
+        <p>Jane grimaced, well aware of the spectacle they were enacting for her entire team to see. &quot;I think the Reapers are a bit more important than my career prospects.&quot;</p>
+        <p>&quot;Don&#x27;t give me sass! Do you think this is going to help!? Throwing in with terrorists!?&quot;</p>
+        <p>&quot;I didn&#x27;t fucking &#x27;throw in&#x27; with them. The council left me no choice. Udina didn&#x27;t leave me a choice! If I hadn&#x27;t taken the offer, I&#x27;d be jerking off on Luna right now!&quot; Her own anger reared it&#x27;s head; at herself for doing what she was doing, at the fact that she had to anyway, and at Anderson for not understanding. &quot;What do you think I could be getting done in the Alliance, huh!? What would I do that you and Hackett couldn&#x27;t?&quot;</p>
+        <p>Anderson scoffed. &quot;Not discrediting your entire cause by this association, for example.&quot;</p>
+        <p>&quot;To get what done, exactly ? The council had a Reaper sitting on top of their goddamn meeting hall, and it still wasn&#x27;t enough to open their eyes. Now this&quot;, she gestured around the corpse- littered battlefield - &quot; has been going on for the better part of two years, and they&#x27;ve done fuck all! Udina even tried to prevent me from going after this!&quot;</p>
+        <p>Jane&#x27;s old friend seemed to have shrunk a bit during the younger woman&#x27;s tirade. &quot;Well, they&#x27;ve sent me...&quot;</p>
+        <p>&quot;A rear admiral, no ship, and two marines. To do what?&quot; Jane remembered something and slowed down a little. &quot;Congratulations, by the way.&quot;</p>
+        <p>Anderson looked puzzled for a second before answering. &quot;I&#x27;m here to oversee the installation of these defense turrets. Looks like they came in handy. Damn shame we couldn&#x27;t get them online sooner. Would have saved a lot of lives...&quot;</p>
+        <p>&quot;It was sabotage.&quot; Jane shook her head, still in disbelief over that particular tidbit of information.</p>
+        <p>&quot;What!? Who - oh, for Christ&#x27;s sake. I think I already have an idea.&quot; For a couple of moments, Anderson looked as if he was about to pull his gun and go shoot the man himself, but he eventually thought better of whatever he&#x27;d been contemplating and left the weapon in it&#x27;s holster. &quot;It&#x27;s not important now. What&#x27;s important is that we know who&#x27;s behind the abductions, and that we can stop them.&quot;</p>
+        <p>&quot;What do you mean you know it now? I presented the council with conclusive evidence of the Collector&#x27;s involvement weeks ago.&quot;</p>
+        <p>Anderson sighed and scratched his head. &quot;Well...I never heard any of that. All I heard were the rumors that you&#x27;re up and about again. Didn&#x27;t believe a word, of course. And the abductions...&quot; He shrugged. &quot;We thought Cerberus might be behind it.&quot;</p>
+        <p>Jane cursed. &quot;Now that&#x27;s just beautiful. Can&#x27;t even blame you.&quot; Somewhere in the back, she could hear Miranda draw in a sharp breath. &quot;Well, as you can see, it&#x27;s not Cerberus this time. Even these goddamn lunatics have understood what our actual issue is. While the Council and the Alliance are fucking around. Tell me, what would you&#x27;ve had me d- no, you know what, forget it. It&#x27;s too late anyway. The cat&#x27;s out of the bag now, and they&#x27;re gonna find a way to blame me for all of it, mark my words.&quot;</p>
+        <p>&quot;I&#x27;m not going to bet against that,&quot; , Anderson conceded, massaging the bridge of his nose with a very tired expression on his face. &quot;Oh, what have you done, girl. I can&#x27;t keep this quiet. More people have seen you. It can&#x27;t be contained.&quot;</p>
+        <p>&quot;It was just a matter of time anyway,&quot; Jane shrugged. &quot;I&#x27;m just going to have to hope that the Council doesn&#x27;t actually try and go after me. I&#x27;ve got nothing pressing to do in Council space for now, at least nothing high profile. Unless the Collectors suddenly get a taste for open war,that is. But I don&#x27;t think they&#x27;ve got the strength for that.&quot;</p>
+        <p>Anderson let his eyes wander over Jane&#x27;s assembled team, eventually coming to rest on Garrus. &quot;Well, at least there&#x27;s one person with you I know you can trust.&quot; His features hardened. &quot;Still. You are making a mistake, Shepard. From here on out, I can&#x27;t do anything for you. I would be throwing away what clout Hackett and I still have, and they&#x27;d probably just use it to get to you anyway.&quot;</p>
+        <p>&quot;You think the AIS will try to take me out?&quot;</p>
+        <p>The older man grumbled. &quot;You know Udina, don&#x27;t you? You&#x27;re a terrorist now.&quot; He turned and began walking away, pausing after a couple of paces. &quot;Good luck. You&#x27;ll need it.&quot;</p>
+        <p>Jane swallowed hard. &quot;Anderson.&quot;</p>
+        <p>&quot;Yes?&quot;</p>
+        <p>&quot;Can you talk to Hannah for me? I-&quot;</p>
+        <p>&quot;What!? You didn&#x27;t even - &quot; He stopped himself. &quot;Damn it to hell, Jane!&quot;</p>
+        <p>Shepard didn&#x27;t meet his gaze. &quot;I tried. She wouldn&#x27;t react, so...I guess I figured the less she knew, the better for her when it&#x27;d all go to hell.&quot;</p>
+        <p>Anderson nodded.&quot;Yes...I suppose. One more thing...Chakwas. She&#x27;s with you, isn&#x27;t she?&quot;</p>
+        <p>She shrugged. &quot;You know her.&quot;</p>
+        <p>Anderson cursed and walked away.</p>
+        <p>Jane grunted and grabbed the bottle of water from the desk. She&#x27;d known from the start that her decision to work with Cerberus would eventually have consequences. Still, to know that the dice had fallen in earnest now was decidedly sobering. And as sure as Jane was that she was doing the right thing, reluctantly or not, knowing that Anderson thought she was making a mistake made her question it all once more.</p>
+        <p>Which was entirely useless, now that the cat was out of the bag. She sighed and forced her mind onto other matters.</p>
+        <p>If nothing else, Horizon had demonstrated that the team was coming together relatively nicely – certainly better than she could have reasonably expected. Pairing a Krogan and a Salarian, usually a less than stellar idea, had actually not caused any trouble at all; but the tension between Miranda and their newest recruit, Jack, more than made up for it. Not that Jane even really blamed the girl. Certainly not after what she&#x27;d seen on Pragia. It was a mircale Jack had merely turned poorly adjusted and somewhat prone to violent outbursts, instead of a full blown psychotic killer. Almost as interesting than Jack&#x27;s past had Miranda&#x27;s reaction to it been, though. The files and logs from the Pragia facility had been damning for Cerberus – and while she had demonstrated her ability to rationalize her organization&#x27;s transgressions before, something about Pragia seemed to hit a nerve in her. She&#x27;d actually been almost cordial with Jack these last couple of days.</p>
+        <p>Jack hadn&#x27;t been the only one they&#x27;d run a personal errant for. After all, she&#x27;d still had contractual obligations to both Zaeed and Kasumi to fulfill. Those had gone mostly well, though things had gotten a bit heated with Zaeed in more ways than one – but the old mercenary didn&#x27;t seem to hold a grudge, which was a relief. Massani had quickly become an important part of what Jane considered the team&#x27;s backbone , alongside Grunt, Jacob, Garrus and herself. The specialists and powerful biotics were obviously of immense value, but in Jane&#x27;s opinion the core of any functioning fighting force was made up of sturdy guys with guns who knew how to use them. Regarding Kasumi, the only problem had been talking her out of her ridiculous plan to have Shepard infiltrate her quarry&#x27;s cocktail party in a three piece suit. She had eventually seen sense after Shepard pointed out that using a false identity might turn out a little difficult for a woman who&#x27;s face was still plastered across every other recruitment poster of one of the galaxy&#x27;s major militaries.</p>
+        <p>EDI&#x27;s voice broke her out of her musings. &quot;Garrus is riding the elevator up to your cabin, Commander.&quot;</p>
+        <p>&quot;Open the door.&quot; She took another sip of water and put the bottle back, swinging her feet up onto the desk.</p>
+        <p>Jane could already hear the elevator when she spoke, and a moment later the cage locked in place. Her turian friend stepped into the room, his gaze following Shepard&#x27;s legs up to the woman&#x27;s face.</p>
+        <p>&quot;Morning. Looking quite comfortable.&quot;</p>
+        <p>&quot;Lemme have some peace where I can find it, and if it&#x27;s only in here.&quot;</p>
+        <p>Garrus flared his mandibles and chuckled humorlessly. &quot;Yes. What a damn mess. But let&#x27;s not dwell on it. What&#x27;s our next step?&quot;</p>
+        <p>Jane took a deep breath and exhaled slowly, scratching her chin. &quot;Illium. The team&#x27;s working well enough together to bring in someone new, and I&#x27;ve still got two dossiers from the Illusive Man. And I want to finally catch up with Liara. I feel bad about not doing so earlier, but...Illium isn&#x27;t exactly a backwater. If I&#x27;d gone there, my face would&#x27;ve been news immediately.&quot;</p>
+        <p>&quot;Which doesn&#x27;t matter now, so we&#x27;re going while we still can.&quot;</p>
+        <p>&quot;Exactly.&quot;</p>
+        <p>The Turian nodded and turned to look at the fish. &quot;It&#x27;ll be good to see Liara again. She left shortly after you died. Left us a message that she&#x27;d be on the lookout for you, and for answers. Guess Cerberus beat her to it in one aspect, but maybe she learned something useful.&quot;</p>
+        <p>&quot;Hopefully,&quot; Jane agreed. &quot;According to the Illusive Man, she&#x27;s on a personal vendetta against the Broker. If we&#x27;re lucky, she&#x27;s found a lead.&quot;</p>
+        <p>Garrus turned, a browplate raised. &quot;You want to go after the Broker?&quot;</p>
+        <p>&quot;I have to go after the Broker. They probably work for the Reapers, and even if they don&#x27;t, they&#x27;re after me. And everyone I know, apparently. It&#x27;s us or them, Garrus.&quot;</p>
+        <p>Her friend grinned. &quot;Taking out the Broker...we would be legends. Might make a whole lot of people like us even less, but hey. At this point, what gives.&quot;</p>
+        <p>They spent the next hour and a half going over the footage from Horizon, analyzing both the team and the collectors in detail. While the perpetually reappearing glowing collector was concerning, what worried them most was the hovering crab-like tank they&#x27;d encountered during the final confrontation around the power grid control center. Even just the one had exhausted the few AP rockets Jacob had had on him before finally going down – not all of them appeared to have penetrated, and only the third that did finally managed to put the thing out of commission. They were still discussing possible weakspots and vital areas when EDI interrupted them.</p>
+        <p>&quot;Commander, the Illusive Man requests your immediate presence in the conference room.&quot;</p>
+        <p>&quot;Did he say what it&#x27;s about?&quot;</p>
+        <p>&quot;No, but he flagged the call as an emergency.&quot;</p>
+        <p>Shepard raised an eyebrow and got up. One may say what they wanted about the Illusive Man, and Jane certainly had, but he was not a man of empty words. The only other emergency call so far had been the one for Horizon.</p>
+        <p>&quot;Could the Collectors have hit another target already?&quot;, Garrus asked as he filed into the elevator with her.</p>
+        <p>Jane raised her hand close the doors, but EDI was already doing it for her. &quot;It&#x27;s entirely possible. We&#x27;ve still got no estimate of their numbers.&quot;</p>
+        <p>She spent the short ride down and the walk over to the conference room trying to come up with other possibilities . Could the Alliance already have declared her a traitor and an outlaw? Unlikely. Too fast and too public, and hardly an emergency either way. Passing through the armory, they saluted Jacob, and a couple of seconds later Jane stepped into the holographic simulation.</p>
+        <p>&quot;Put it on the speakers, EDI. Connect.&quot;</p>
+        <p>Her surroundings changed immediately. As always, the illusion was perfect. The Illusive Man was already seated in his chair, cybernetic eyes boring into Jane, the entire scene lit fascinatingly by the same blue-orange star outside the transparent hull as the last couple of times.</p>
+        <p>&quot;Commander. &quot;</p>
+        <p>&quot;Illusive Man. EDI said there&#x27;s an emergency, let&#x27;s hear it. Garrus Vakarian is also in the room. Are the collectors making another move?&quot;</p>
+        <p>The older man shook his head. &quot;Thankfully not. If they had, it would have surprised me, for reasons we can discuss once this crisis is averted. For now, there is a far more personal threat for you to deal with.&quot; He took a drag from his cigar. &quot;Ever since Freedom&#x27;s Progress, I have been keeping an eye out for potential targets of the Broker to the best of my intelligence networks abilities. Which aren&#x27;t unlimited, as was demonstrated yesterday. We actually had no idea where Anderson had gotten to.&quot;</p>
+        <p>&quot;I thought this is an emergency. Who&#x27;s in trouble?&quot;</p>
+        <p>&quot;Your friend Tali&#x27;Zorah.&quot;</p>
+        <p>Jane froze for a second. &quot;Go on.&quot;</p>
+        <p>&quot;I have been trying to locate her for a while now, but naturally our sources on the migrant fleet are very few, and so we remained ignorant of her participation in an infiltration operation into Geth held space.&quot; He exhaled smoke. &quot;Unfortunately, the same can&#x27;t be said for the Broker. One of our double agents – we&#x27;ve been fighting a bloody war behind the scenes against the Broker for years – intercepted a message intended for focussed transmission from one of the Broker&#x27;s own comm beacons. &quot; He made a slight pause. &quot;This particular beacon is located in the Phoenix Massing.&quot;</p>
+        <p>&quot;Are you saying...?&quot;</p>
+        <p>&quot;Yes, and judging by the content of the message there is no doubt. The Geth have been informed of the mission, including it&#x27;s objectives, a number of details on their numbers and equipment, and most importantly the presence of Tali&#x27;Zorah.&quot;</p>
+        <p>Jane grimaced. &quot;First they tried her brother to get to her, now they&#x27;re trying herself to get to me directly. It&#x27;s a miracle they haven&#x27;t gone after my aunt.&quot;</p>
+        <p>The Illusive Man tilted his head. &quot;I&#x27;d wager it might have to do with the fact that she&#x27;s on a heavily fortified Alliance warship full of loyal soldiers. It&#x27;s also the most obvious thing to do, so my people have been paying very close attention, and if anything goes wrong the fallout could be catastrophic, even for someone like the Broker. Miss Zorah instead...it&#x27;s out of the way, nobody they&#x27;re too worried about will care, and it appears they&#x27;ve got good reason to expect the Geth will do their job for them.&quot;</p>
+        <p>&quot;I suppose that settles any doubts about the Broker working for the Reapers, or even directly for them. I just don&#x27;t understand why. If anyone should know better, it&#x27;s them.&quot;</p>
+        <p>The Illusive Man shrugged. &quot;They might be indoctrinated to believe they are doing it for reasons of their own. Or perhaps they really are doing it for their own reasons and we just cannot imagine what those could be.&quot;</p>
+        <p>&quot;It doesn&#x27;t matter now. I&#x27;ll deal with the Broker when I&#x27;ve gotten Tali out of there.&quot; Jane half turned to leave, then paused. &quot;Thanks for the heads up. &quot;</p>
+        <p>The world became a curious blend of TIMs office and the Normandy&#x27;s conference room for a moment as Shepard stepped out of the still running hologram. As soon as she was firmly back in the here and now, she activated her omnitool and began giving her orders. &quot;EDI, assemble the team in the conference room. Do we have coordinates? Good. Pass them through to Joker. Full speed!&quot;</p>
+        <p>The shuttle lurched, and Miranda tightened her grip on the webbing to remain standing. Back in the passenger compartment, Grunt cursed as parts of the meal he was shoving into his maw last minute toppled over and fell to the floor.</p>
+        <p>Heavy steps betrayed Shepard coming to stand next to her, and she turned away from the scanner data she&#x27;d been reading. &quot;Commander?&quot;</p>
+        <p>Jane Shepard was battle ready, safe for the helmet, which remained attached to her belt for now. Ever since the message had come in some four hours ago, the woman had been laser focused, snapping out instructions precisely and speedily. The Normandy had already been lying in wait next to the mass relay, as they usually did when not on their way to their next objective, and since the Dholen system had it&#x27;s own relay as well, getting here had been a trifle. Than they&#x27;d sped through the system in FTL, only slowing down to sublight speeds when even Joker had started to get worried. Accelerating to and decelerating from such speeds this close to stars and planetary bodies was generally considered reckless in the extreme. With Joker and Shepard, this wasn&#x27;t even the first time in these couple of weeks Miranda had been working with them.</p>
+        <p>As of now, Joker was engaging a small flotilla of Geth ships in orbit around the world, and had already managed to cripple a troopship – it had been hanging in the atmosphere when the Normandy&#x27;s surprise attack had hit, practically a sitting duck. As far as the shuttle&#x27;s scanners could tell, it was now shaping up to make a rocky landing way too far north for any Geth still aboard to be able to intervene in the upcoming fight. The rest of the Geth&#x27;s naval element, a frigate equivalent and two destroyers, were off playing catch with Joker. Miranda was pretty sure who&#x27;d eventually win that game.</p>
+        <p>&quot;I&#x27;ve got the plan, it&#x27;s quite simple. I&#x27;ll be spearheading the assault, together with Grunt and Jack. I&#x27;m going to go in hard and fast, and I&#x27;m not stopping for anything until I&#x27;ve made contact with the Quarians. Everybody else follows behind, gives fire support, and keeps an eye on our flanks. &quot;</p>
+        <p>Miranda had to put in some effort to keep her face in check. The strategy was somewhat sound she supposed, and she understood that Shepard had to make an effort to make all members of the team feel appreciated, especially the barely loyal convict, but this went too far. Screw it. At least I&#x27;ll be able to say &#x27;I told you so&#x27; when it goes to hell.</p>
+        <p>&quot;Commander,&quot; she said out loud, though not loud enough that the others back in the passenger compartment would hear it, &quot;do you really think it&#x27;s a good idea to pick Jack as your biotic? She&#x27;s just as likely to obliterate you than she is to hit the enemy. I thought we had built a better rapport than that.&quot;</p>
+        <p>Shepard had a curious look on her face for a moment, as if taken aback by the objection. &quot;We have. And that&#x27;s precisely the reason I&#x27;m putting you back there. You&#x27;re commanding the second team.&quot;</p>
+        <p>Her jaw dropped a bit. &quot;I...what about Garrus?&quot;</p>
+        <p>&quot;I want him to focus on shooting. Same goes for Jacob, the Geth will have armor with them. Zaeed has the experience, but he&#x27;s not a leader. Leaves you. I know it&#x27;s not something you will have done a lot of before, but you&#x27;re a natural in pretty much everything after all, and your understanding of tactics is well enough. You also won&#x27;t have to do much thinking, just come after us and keep our back&#x27;s clear.&quot;</p>
+        <p>Miranda nodded, thrilled but already looking forward to the unexpected task. &quot;You won&#x27;t regret it.&quot;</p>
+        <p>&quot;Good. And now you see why Jack is with me. I don&#x27;t want the two of you anywhere near each other. But we&#x27;ll take care of that later.&quot; She grinned. &quot;Also, I don&#x27;t wanna be between Jack and the enemy. You&#x27;re not all wrong about her accuracy.&quot;</p>
+        <p>&quot;I can see the LZ,&quot; , the pilot spoke up. &quot;Touchdown in one minute!&quot;</p>
+        <p>Miranda and Shepard shared a brief glance, then Shepard put her helmet on and turned around to the rousing team.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 33</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0052a3;
+        }
+        
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .chapter-select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .chapter-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #1a1a1a;
+        }
+        
+        .chapter-content p {
+            margin: 1.2em 0;
+            text-align: justify;
+        }
+        
+        @media (max-width: 600px) {
+            .nav-controls {
+                flex-direction: column;
+            }
+            
+            .chapter-select {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media print {
+            .chapter-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="chapter-nav">
+        <div class="nav-controls">
+            <a href="ch32.html" class="nav-button">← Previous</a>
+            <a href="index.html" class="nav-button">Contents</a>
+            <select class="chapter-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="ch1.html">Chapter 1: Ch1</option>
+                <option value="ch2.html">Chapter 2</option>
+                <option value="ch3.html">Chapter 3</option>
+                <option value="ch4.html">Chapter 4</option>
+                <option value="ch5.html">Chapter 5</option>
+                <option value="ch6.html">Chapter 6</option>
+                <option value="ch7.html">Chapter 7</option>
+                <option value="ch8.html">Chapter 8</option>
+                <option value="ch9.html">Chapter 9</option>
+                <option value="ch10.html">Chapter 10</option>
+                <option value="ch11.html">Chapter 11</option>
+                <option value="ch12.html">Chapter 12</option>
+                <option value="ch13.html">Chapter 13</option>
+                <option value="ch14.html">Chapter 14</option>
+                <option value="ch15.html">Chapter 15</option>
+                <option value="ch16.html">Chapter 16</option>
+                <option value="ch17.html">Chapter 17</option>
+                <option value="ch18.html">Chapter 18</option>
+                <option value="ch19.html">Chapter 19</option>
+                <option value="ch20.html">Chapter 20</option>
+                <option value="ch21.html">Chapter 21</option>
+                <option value="ch22.html">Chapter 22</option>
+                <option value="ch23.html">Chapter 23</option>
+                <option value="ch24.html">Chapter 24</option>
+                <option value="ch25.html">Chapter 25</option>
+                <option value="ch26.html">Chapter 26</option>
+                <option value="ch27.html">Chapter 27</option>
+                <option value="ch28.html">Chapter 28</option>
+                <option value="ch29.html">Chapter 29</option>
+                <option value="ch30.html">Chapter 30</option>
+                <option value="ch31.html">Chapter 31</option>
+                <option value="ch32.html">Chapter 32</option>
+                <option value="ch33.html" selected>Chapter 33</option>
+                <option value="ch34.html">Chapter 34</option>
+                <option value="ch35.html">Chapter 35</option>
+                <option value="ch36.html">Chapter 36</option>
+                <option value="ch37.html">Chapter 37</option>
+                <option value="ch38.html">Chapter 38</option>
+                <option value="ch39.html">Chapter 39</option>
+                <option value="ch40.html">Chapter 40</option>
+                <option value="ch41.html">Chapter 41</option>
+                <option value="ch42.html">Chapter 42</option>
+                <option value="ch43.html">Chapter 43</option>
+                <option value="ch44.html">Chapter 44</option>
+                <option value="ch45.html">Chapter 45</option>
+                <option value="ch46.html">Chapter 46</option>
+                <option value="ch47.html">Chapter 47</option>
+                <option value="ch48.html">Chapter 48</option>
+                <option value="ch49.html">Chapter 49</option>
+                <option value="ch50.html">Chapter 50</option>
+                <option value="ch51.html">Chapter 51</option>
+                <option value="ch52.html">Chapter 52</option>
+                <option value="ch53.html">Chapter 53</option>
+                <option value="ch54.html">Chapter 54</option>
+                <option value="ch55.html">Chapter 55</option>
+                <option value="ch56.html">Chapter 56</option>
+                <option value="ch57.html">Chapter 57</option>
+                <option value="ch58.html">Chapter 58</option>
+                <option value="ch59.html">Chapter 59</option>
+                <option value="ch60.html">Chapter 60</option>
+                <option value="ch61.html">Chapter 61</option>
+                <option value="ch62.html">Chapter 62</option>
+                <option value="ch63.html">Chapter 63</option>
+            </select>
+            <a href="ch34.html" class="nav-button">Next →</a>
+        </div>
+    </nav>
+    
+    <h1 class="chapter-title">Chapter 33</h1>
+    <div class="chapter-content">
+        <p>Miranda&#x27;s face slipped for about half a second.</p>
+        <p>Fucking hell.</p>
+        <p>She had known from the start that this situation was likely to turn out in disaster, but to have it happen before she had at least had the chance to do something about it was a gut punch. At least Shepard was still alive, but that was about the only thing they had going for them at this point. None of the two men seemed to have noticed her temporary loss of pokerface though.</p>
+        <p>&quot;Shepard captured? Wiliams dead!? Christ almighty...&quot; . Pressly was palming his face. &quot;This is a disaster.&quot;</p>
+        <p>Vakarian took a step closer to the older man. &quot;I need to get down there.&quot;</p>
+        <p>&quot;I&#x27;ve already told you why we can&#x27;t -&quot;</p>
+        <p>&quot;Then we&#x27;ll figure something out! Tali is damn good at what she does, but she is not some spirits-damned commando! I need to get down there!&quot;</p>
+        <p>Pressly pursed his lips, but said nothing. Miranda took that as her entrance back into the conversation, the continued presence of the Quarian a surprise to be sure, but a welcome one.</p>
+        <p>;)</p>
+        <p>&quot;Gentlemen. As disastrous as this news is, as far as my course of action is concerned it changes nothing. I will go and get reinforcements.&quot;</p>
+        <p>The Turian raised a browplate. &quot;What kind of reinforcements?&quot;</p>
+        <p>&quot;A platoon of alliance corsairs operating here in the Terminus. We&#x27;ll still be outnumbered, but it&#x27;ll have to do.&quot;</p>
+        <p>Vakarian nodded. &quot;Sounds good. We&#x27;ll make sure there&#x27;s still something left to reinforce when you get here.&quot;</p>
+        <p>&quot;Good. And by the way, I can take you down to the surface with the corsairs tomorrow if you don&#x27;t manage it yourself before.&quot;</p>
+        <p>Pressly looked skeptic. &quot;How are you going to get anyone to the surface? The Normandy can only hold out here thanks to our stealth drive. You&#x27;ll be detected and blocked.&quot;</p>
+        <p>Despite the situation, she allowed herself the shadow of a smirk. &quot;Simple. My ship also has a stealth drive.&quot;</p>
+        <p>Two men of different species looked at Miranda in disbelief. Before they could ask any questions, she cut the connection and immediately addressed her pilot via the Weasel&#x27;s intercomm.</p>
+        <p>&quot;Scherer, full speed for Baker&#x27;s Point. Immediately, gentleman.&quot;</p>
+        <p>&quot;Yes, ma&#x27;am!&quot;</p>
+        <p>Miranda appreciated Scherer. The man was a professional through and through, unlike many other pilots of his calibre who tended to have a certain degree of cockiness.</p>
+        <p>The next step was to make sure the reinforcements she needed to organize would actually be willing to participate in this endeavor. To this end, she quickly brought up Jabob Taylor&#x27;s contact. The alliance corsair had assisted her more than once in the past – as was to be expected of officially nonexistent operatives such as Lieutenant Taylor, he was very much open to the less bureaucratic solutions Cerberus provided for many a problem the Alliance was simply to rigid to handle. Miranda knew he had her contact on priority; she had not yet called him for anything that hadn&#x27;t been important. He did not pick up immediately; she was not surprised. If Jacob was on Baker&#x27;s Point, that meant that the platoon was currently enjoying some R&amp;R. Even if he wasn&#x27;t at least half drunk right now, it would probably take him a minute to find a place where he could speak freely. And indeed, after about two minutes the broad face and muscular neck of Jacob Taylor filled her screen, the unofficial Lieutenant looking at her with rapt attention. Not too drunk, then.</p>
+        <p>&quot;Miranda!&quot; He grinned. &quot; I&#x27;m sure you already know where I am and what I&#x27;ve been doing. So what&#x27;s up?&quot;</p>
+        <p>She hesitated for a second. There was no doubt in her mind that Jacob would immediately jump at the task she was about to lay out to him, but this one time, she would have to actually caution him, as much as she hoped he would still commit to it. But if he did so, he had to do it being fully aware what that meant for his future. She owed him that much.</p>
+        <p>&quot;Hello, Jacob. Unfortunately, this is indeed not a social call. I trust that you cannot be listened to?&quot;</p>
+        <p>He rolled his eyes. &quot;Miranda...&quot;</p>
+        <p>&quot;Very well. There is an immediate and absolutely critical situation unfolding right now. I will need not just you, but your entire platoon, and I&#x27;m on my way to pick you up...&quot; , she glanced on her terminal, quickly finding the estimated time of arrival Scherer had sent. &quot;... one a.m. tonight, Alliance time.&quot;</p>
+        <p>Jacob raised an eyebrow. &quot;Damn... you know my boys and me are down for almost anything, but that&#x27;s a lot on short notice. You&#x27;re gonna have to tell me what the hell&#x27;s going on.&quot;</p>
+        <p>She sighed. &quot;Commander Shepard – yes, the commander Shepard – has been lured onto a remote planet and ambushed by Blue Suns and pirates. As of right now, her team has two casualties, one of them KIA, and the commander herself has been captured. The Normandy is holding the pirate ships in a deadlock over the planet, but there is no telling how long that will last or if the enemy will be reinforced. Hostiles on the ground are estimated to number roughly two platoons. Maybe more.&quot;</p>
+        <p>Jacob had at first looked incredulous, but quickly recovered himself throughout her speech. He came a little closer to the camera. &quot;You had me at &#x27;Commander Shepard&#x27;. Getting the men up for this won&#x27;t be a problem. We&#x27;ll be ready when you get here.&quot;</p>
+        <p>She failed to suppress a faint smile. Jacob was a man of action, a trait she was quite fond of. &quot;There is a caveat. This entire situation is one big intelligence disaster. It involves treason within the AIS. No matter how this ends, after all is said and done there will be a very thorough investigation into every little aspect of this incident. The AIS knows who I am. By being linked to me, you will be suspicious. They will have a close look at you, and they will find out about our previous collaborations.&quot; The eager expression on Jacob&#x27;s face had turned somewhat somber. She continued. &quot;Everything we talked about is still the case, Jacob. I can get you a good position at Cerberus. Hell, you can work for me directly if you&#x27;re okay with that. Or I can help you disappear. But either way, your ties with the Alliance are going to have to be well and truly cut after this. Unless you want to go to jail.&quot;</p>
+        <p>Taylor stared past the camera for some seconds before he slowly, ponderously began to reply. &quot;I...had hoped to end my time with the corsairs the regular way before taking this step. Close the chapter properly before you open a new one, ya know?&quot; He sighed and looked back at her, resolve written on his face now. &quot;Well, this sucks. I&#x27;m not comfortable with your organisation, Miranda. But...I&#x27;ll decide that afterwards. It&#x27;s not important right now. Right now, we have to save a hero. &quot;</p>
+        <p>Miranda blew some air through her nose and nodded. &quot;Thanks, Jacob. I wouldn&#x27;t have known what else to do.&quot; She moved to close the connection, but halted. &quot;It&#x27;ll be good, believe me. Cerberus isn&#x27;t going to waste a man of your talents over some ideological crap.&quot;</p>
+        <p>&quot;Fine, fine. We&#x27;ll talk about that later. Now. One a.m.?&quot;</p>
+        <p>&quot;Yes.&quot;</p>
+        <p>&quot;See you then.&quot; He cut the connection.</p>
+        <p>…..</p>
+        <p>Vulok Perix closed the door behind him and sat down. The room he had elected to bis residence for their short stay here was a tiny one accessible from the elevated walkway on the back wall of the large storehouse which overlooked the main hall. It would probably have been an office, had the building been in proper use. The Salarian rubbed his chin and reflected on the past day.</p>
+        <p>All in all, the operation had been a convincing success. Casualties had been even higher than expected, a dozen and a half of the Blue Suns and even three of the Shadow Broker&#x27;s own contractors he had been provided with being killed, but that was barely worth a footnote. There were always more hired guns to be had. He had Shepard, and he had her alive.</p>
+        <p>Vulok pulled his flask from its pouch and allowed himself a sip, savoring the taste on his tongue. Commander Shepard, taken alive. By him. The payout from the Shadow Broker would be nothing short of royal. But it was the achievement that he truly lived for. Moments like these. A part of him regretted that due to the nature of his plan, there had not been the chance to match himself against the legendary human in single combat; but he would never give in to such vanity. Could he take Shepard? Perhaps, perhaps not. &#x27;Perhaps&#x27; wasn&#x27;t good enough. Perix had not survived and thrived this long by taking fights he could potentially lose.</p>
+        <p>The door opened behind him and he turned around. One of the Broker&#x27;s men, a Batarian going by Grax.</p>
+        <p>&quot;Sir, we just got word from the pirates. They&#x27;re stuck in orbit.&quot;</p>
+        <p>Vulok raised an eyebrow and sighed. &quot;Are they that incompetent!? Really!?&quot;</p>
+        <p>The mercenary shrugged. &quot;Seems so. They got one of their ships destroyed, actually.&quot;</p>
+        <p>Vulok made no effort to hide his irritation. &quot;How did they manage that?&quot;</p>
+        <p>&quot;One of the corvettes raced ahead. Couldn&#x27;t wait to get their hands on Shepard, I&#x27;d guess. The woman&#x27;s not very popular among my people.&quot;</p>
+        <p>Vulok snorted. That was an understatement. The stinking blight that was the Batarian species did not take lightly to those who exposed them as the weak cowards they were, and could no doubt not wait to take it out on a helpless Shepard. He&#x27;d have to squash a few misconceptions about just who&#x27;s prisoner Shepard was, it seemed. He cleared his throat.</p>
+        <p>&quot;It&#x27;s no matter. Let the Normandy play hide and seek with these idiots in orbit. Have you send the message to the Agronux?&quot;</p>
+        <p>&quot;Yes, Sir.&quot;</p>
+        <p>&quot;Good. Then all we have to do is sit here and wait for them to arrive.&quot; He took another sip. &quot;Dismissed.&quot;</p>
+    </div>
+</body>
+</html>
